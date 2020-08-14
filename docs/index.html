@@ -6,18 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  
 </head>
 <body>
   <div id="app"></div>
   <script>
-      window.$docsify = {
-        name: '乐时光-文档中心',
-        repo: 'https://github.com/leshiguang/leshiguang.github.io.git',
-        coverpage: true
+    window.$docsify = {
+      name: '乐时光-客户端开发文档',
+      repo: 'https://github.com/leshiguang/leshiguang.github.io.git',
+      coverpage: false,
+      loadSidebar: true,
+      subMaxLevel : 3,
+      search: {
+        placeholder: "搜索",
+        maxAge: "864000",
+        paths : "auto",
+        noData : "未搜索到文档记录"
       }
-    </script>
+    }
+  </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+
 </body>
 </html>
