@@ -1,0 +1,49 @@
+{"data":[
+    {
+      "listname":"基础产品",
+      "listvalue":[
+            {
+            "name":"体重",
+            "links":"/#/weight/README"
+            },
+            {
+            "name":"血压",
+            "links":"/xueya/README"
+            },
+            {
+            "name":"血糖",
+            "links":"/xueya/README"
+            }
+        ]
+    },
+    {
+        "listname":"解决方案",
+        "listvalue":[
+            {
+             "name":"保健行业解决方案",
+             "links":"/unet/README"
+            }
+        ]
+    }
+],
+"hotprods":[
+    {
+        "url":"http://education.ucloud.cn/modules/resource.php",
+        "title":"新用户指南",
+        "des":"丰富课程、专业培训",
+        "imglinks":"https://static.ucloud.cn/991856a3c3e24a959a575ecf09165b7d.png"
+    },
+    {
+        "url":"/uhost/newuser/briefguide",
+        "title":"产品展现",
+        "des":"通俗易懂，让您轻松选购云主机",
+        "imglinks":"https://static.ucloud.cn/c5f1060a12a949d1b38c0617a0e309b2.png"
+    },
+    {
+        "url":"/uhost/newuser/briefguide",
+        "title":"产品展现",
+        "des":"通俗易懂，让您轻松选购云主机",
+        "imglinks":"https://static.ucloud.cn/c5f1060a12a949d1b38c0617a0e309b2.png"
+    }
+]
+}

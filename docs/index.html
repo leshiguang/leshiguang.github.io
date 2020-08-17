@@ -2,20 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>乐智健康-文档中心</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-
+  <link rel="stylesheet" href="/asserts/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+  <link rel="stylesheet" href="/asserts/css/leshiguang.css">
 </head>
 <body>
   <div id="app"></div>
+  <script src="http://localhost:3000/asserts/js/jquery-1.7.1.min.js"></script>
+  <script src="/asserts/js/common_head.js"></script>
   <script>
       window.$docsify = {
-        name: '乐时光-文档中心',
+        // name: '乐时光-文档中心',
+        // routerMode: 'history',
         repo: 'https://github.com/leshiguang/leshiguang.github.io.git',
-        coverpage: true
+        loadSidebar: true,
+        homepage: 'home.md',
+        basePath:'/',
+        notFoundPage:'404.md',
+        autoHeader: true,
+        noEmoji: true,
+        auto2top: true,
+        topMargin: 120,
+        executeScript: true,
+        requestHeaders:{
+        'cache-control':'no-cache',
+        'pragma':'no-store'
+        },
+        alias: {
+          '/api/(.*\/)(.*\/)(.*\/)_sidebar.md':'/api/$1_sidebar.md',
+          '/api/(.*\/)(.*\/)_sidebar.md':'/api/$1_sidebar.md',
+          '/api/(.*\/)_sidebar.md':'/api/$1_sidebar.md',
+          '/(.*\/)(.*\/)(.*\/)(.*\/)_sidebar.md': '$1_sidebar.md',
+          '/(.*\/)(.*\/)(.*\/)_sidebar.md': '$1_sidebar.md',
+          '/(.*\/)(.*\/)_sidebar.md': '$1_sidebar.md',
+          '/(.*\/)_sidebar.md': '$1_sidebar.md',
+          '/(.*).html': '$1'
+        },
+        copyCode: {
+          buttonText : 'Copy',
+          errorText  : 'Error',
+          successText: 'Success'
+        },
+        plugins: [
+          CommonHeadPlugin.create()
+        ]
       }
     </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
