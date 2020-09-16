@@ -4159,7 +4159,7 @@
 			var linkEl = document.createElement('div');
 			linkEl.classList.add('logo');
 			linkEl.innerHTML =
-				"<a href=\"//www.dcloud.io/\" target=\"__blank\" class=\"dcloud-logo\"></a>\n  <a href=\"/\" class=\"uniapp-logo\"></a>";
+				"<a href=\"/\" class=\"docs-logo\"></a>";
 			return linkEl;
 		};
 

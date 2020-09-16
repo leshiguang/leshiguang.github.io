@@ -1,0 +1,6 @@
+* [保健品行业解决方案](/industry/health)
+    * [功能使用](/)
+* [药店行业解决方案](/industry/drugstore)
+    * [功能使用](/)
+* [社康机构解决方案](/industry/clinic)
+    * [功能使用](/)

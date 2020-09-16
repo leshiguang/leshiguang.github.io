@@ -9,8 +9,8 @@
 		<meta name="keywords" content="乐智健康,健康,小程序,定制APP,血压,体重,乐时光,ODM app,有氧运动,睡眠管理,睡眠改善,智能硬件,体脂秤,步数,保健品行业,RPM,药店,SaaS">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="//cdn.leshiguang.com/leshiguang/favicon.ico">
-		<link rel="stylesheet" href="/static/vue.css">
-		<link rel="stylesheet" href="/static/index.min.css?v=1586316635415">
+		<link rel="stylesheet" href="/static/leshiguang.css">
+		<link rel="stylesheet" href="/static/index.css?v=1586316635415">
 	</head>
 
 	<body>
@@ -21,12 +21,17 @@
 				alias: {
 					'/.*/_navbar.md': '/_navbar.md',
 					'/(.*)/.*/_sidebar.md': '/$1/_sidebar.md',
-					'/product/_sidebar.md': '/_sidebar.md',
+					// '/product/_sidebar.md': '/_sidebar.md',
+					// '/(.*\/)(.*\/)(.*\/)(.*\/)_sidebar.md': '/$1/_sidebar.md',
+					// '/(.*\/)(.*\/)(.*\/)_sidebar.md': '/$1/_sidebar.md',
+					// '/(.*\/)(.*\/)_sidebar.md': '/$1/_sidebar.md',
+					// '/(.*\/)_sidebar.md': '/$1/_sidebar.md',
 				},
-				name: 'docs-center',
+				name: '乐智云-文档中心',
 				// TODO 如需提交,必须改为 history 模式
-				routerMode: 'history',
-				//routerMode: 'hash',
+				// routerMode: 'history',
+				routerMode: 'hash',
+				homepage:"README.md",
 				repo: false,
 				coverpage: false,
 				loadSidebar: true,
@@ -35,13 +40,14 @@
 				mdCache: 7200000,
 				search: {
 					maxAge: 7200000,
-					paths: ['/AppDocs/README','/AppDocs/download/android','/AppDocs/download/ios','/AppDocs/importfeproject/android','/AppDocs/importfeproject/ios','/AppDocs/package/android','/AppDocs/package/ios','/AppDocs/usemodule/android','/AppDocs/usemodule/ios','/AppDocs/usesdk/android','/AppDocs/usesdk/ios','/','/UniMPDocs/Extension/android','/UniMPDocs/Extension/ios','/UniMPDocs/FAQ/android','/UniMPDocs/FAQ/ios','/UniMPDocs/README','/UniMPDocs/SDKDownload/android','/UniMPDocs/SDKDownload/ios','/UniMPDocs/SDKDownload/opensource','/UniMPDocs/Sample/close','/UniMPDocs/Sample/event','/UniMPDocs/Sample/menubutton','/UniMPDocs/Sample/start','/UniMPDocs/UseModule/android','/UniMPDocs/UseModule/ios','/UniMPDocs/UseSdk/android','/UniMPDocs/UseSdk/ios','/zh-cn/guide'],
+					paths: [
+					'/aboutus/introdcue'],
 					placeholder: '搜索',
 					noData: '没有结果',
 					depth: 6
 				},
 				maxLevel: 2,
-				subMaxLevel: 2,
+				subMaxLevel: 4,
 				banner: ['/case'],
 				plugins: [
 					function(hook, vm) {
@@ -62,7 +68,7 @@
 							}
 						})
 						hook.afterEach(function(html) {
-							var url = '//github.com/dcloudio/native-docs/tree/master/' + vm.route.file
+							var url = '//github.com/leshiguang/leshiguang.github.io/tree/master/docs/' + vm.route.file
 							return html + '<hr align=center color=#987cb9 size=1>发现错误？想参与编辑？<a href=' + url + ' target=_blank>在 GitHub 上编辑此页面！</a>'
 						})
 					},
@@ -70,7 +76,7 @@
 			}
 			// docsify config end
 		</script>
-		<script src="/static/docsify.min.js?v=1586316635415"></script>
+		<script src="/static/docsify.js?v=1586316635415"></script>
 		<script src="/static/search.min.js?v=1586316635415"></script>
 		<script src="/static/preview.min.js?v=1586316635415"></script>
 		<script src="/static/emoji.js"></script>

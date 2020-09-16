@@ -701,7 +701,7 @@ a.contact-item {
   justify-content: space-between;
 }
 
-.logo:after {
+/* .logo:after {
   width: 1px;
   height: 32px;
   content: "";
@@ -709,9 +709,9 @@ a.contact-item {
   position: absolute;
   top: 0;
   left: 108px;
-}
+} */
 
-.dcloud-logo {
+/* .dcloud-logo {
   width: 91px;
   height: 30px;
   background-repeat: no-repeat;
@@ -726,7 +726,7 @@ a.contact-item {
   background-repeat: no-repeat;
   background-size: 135px 33px;
   background-image: url(//img.cdn.aliyun.dcloud.net.cn/nativedocs/nativesupport@2x.png);
-}
+} */
 
 
 [data-page="/casecode.md"] .markdown-section li>a,

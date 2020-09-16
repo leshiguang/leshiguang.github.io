@@ -1,0 +1,2 @@
+# init
+bangwei.mo

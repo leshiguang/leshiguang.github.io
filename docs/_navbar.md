@@ -1,8 +1,8 @@
-* [产品介绍](README.md)
-* [行业解决方案介绍](AppDocs/README.md)
-* [接入模式介绍](NativePlugin/README.md)
-* [开发文档](NativePlugin/README.md)
-* [帮助文档](NativePlugin/README.md)
+* [首页](README.md)
+* [产品](product/README.md)
+* [解决方案](solution/README.md)
+* [开发](develop/README.md)
+* [帮助](help/README.md)
 
 <!-- <ul class="nav-href">
 	<li><a href="//dev.dcloud.net.cn/wish/?channel=native_sdk" target="__blank">需求墙</a></li>

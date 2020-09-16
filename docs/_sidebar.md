@@ -1,74 +1,41 @@
-* [概述](README.md)
+* [概述](README)
 * 了解乐智健康
-  * [乐智健康介绍](/)
-  * [乐智健康云平台介绍](/)
-  * [乐智健康IoT平台介绍](/)
-* 平台功能使用指南
+    * [乐智健康介绍](/aboutus/introduce)
+    * [乐智健康云平台介绍](/aboutus/introduce-cloud)
+    * [乐智健康IoT平台介绍](/aboutus/introduce-iot)
 * 产品简介
-  * 智能硬件产品
-    * [血压计](/product/hardware/sphygmomanometer)
-    * [手环](/product/hardware/wristbrand)
-    * [智能体脂秤](/product/hardware/scale)
-    * [手表](/product/hardware/watch)
-  * 数字化健康产品
-    * [体重产品介绍](/product/health/weight)
-    * [睡眠产品介绍](/product/health/sleep)
-    * [血压产品介绍](/product/health/bloodpressure)
-    * [步数产品介绍](/product/health/step)
-    * [心率产品介绍](/product/health/heartrate)
-    * [饮食产品介绍](/product/health/food)
+    * 智能硬件产品
+      * [血压计](/product/hardware/sphygmomanometer)
+      * [手环](/product/hardware/wristbrand)
+      * [智能体脂秤](/product/hardware/scale)
+      * [手表](/product/hardware/watch)
+    * 数字化健康产品
+      * [体重产品介绍](/product/health/weight)
+      * [睡眠产品介绍](/product/health/sleep)
+      * [血压产品介绍](/product/health/bloodpressure)
+      * [步数产品介绍](/product/health/step)
+      * [心率产品介绍](/product/health/heartrate)
+      * [饮食产品介绍](/product/health/food)
     * 运动产品介绍
-      * [有氧能力](/product/health/aerobic)
-    * [PPG产品介绍](/product/health/ppg)
-    * [ECG产品介绍](/product/health/ecg)
+      * [有氧能力](/product/sport/aerobic)
+      * [PPG产品介绍](/product/sport/ppg)
+      * [ECG产品介绍](/product/sport/ecg)
     * 上手体验
-      * [微信小程序](/product/wxMiniProgram)
-      * [Android应用程序](/product/android)
-      * [iOS应用程序](/product/iOS)
+      * [微信小程序](/product/play/wxMiniProgram)
+      * [Android应用程序](/product/play//android)
+      * [iOS应用程序](/product/play/iOS)
 * 行业解决方案
-  * [保健品行业解决方案](/industry/health)
-    * [功能使用](/)
-  * [药店行业解决方案](/industry/drugstore)
-    * [功能使用](/)
-  * [社康机构解决方案](/industry/clinic)
-    * [功能使用](/)
+    * [保健品行业解决方案](/solution//health-products)
+      * [功能使用](/solution//health-products/usage)
+    * [药店行业解决方案](/solution/drugstore)
+      * [功能使用](/)
+    * [社康机构解决方案](/solution/clinic)
+      * [功能使用](/)
 * 乐智健康IoT
-  * [能力介绍](/IoT/introduction)
-  * [认证服务](/IoT/auth)
-  * [设备接入](/IoT/device)
-    * [在线调试](/IoT/debug)
-* 开发对接
-  * [开发模式介绍](/develop/mode)
-  * 客户端
-    * [微信小程序](/develop/wxMiniProgram)
-    * 公版APP
-      * [Android OEM App](/develop/app/diyandroid)
-      * [iOS OEM App](/develop/app/diyios)
-    * SDK
-      * 配网
-        * [蓝牙配网](/develop/sdk/bleConfigWifi)
-        * [SmartLink配网](/develop/sdk/smartLinkConfigWifi)
-      * 蓝牙SDK
-        * iOS
-          * [纯体脂秤SDK](/develop/sdk/slimIOSSDK/scale)
-          * [完整SDK接入方案](/develop/sdk/fullIOSSDK)
-        * [小程序](/develop/sdk/miniProgramSDK)
-        * android
-          * [纯体脂秤SDK](/develop/sdk/slimAndroidSDK/scale)
-          * [完整SDK接入方案](/develop/sdk/fullAndroidSDK)
-      * 页面UI集成SDK
-        * [设备UI](/develop/sdk/device)
-          * Android
-          * iOS
-        * [主题](/develop/sdk/smartLinkConfigWifi)
-        * [集成](/develop/sdk/smartLinkConfigWifi)
-  * 云平台开发
-    * [API文档](/develop/cloud/api)
-* 功能示例
-  * [Android 平台](demo/Sample/android.md)
-  * [iOS 平台](demo/Sample/ios.md)
-  * [小程序平台](demo/Sample/ios.md)
-
+    * [能力介绍](/AIoT/introduction)
+    * [认证服务](/AIoT/auth)
+    * [设备接入](/AIoT/device)
+      * [在线调试](/AIoT/debug)
 * 下载
   * [Android SDK 下载](download/SDKDownload/android.md)
   * [iOS SDK 下载](download/SDKDownload/ios.md)
