@@ -1,8 +1,14 @@
+<div class="logo">
+	<a href="/" class="docs-logo"></a>
+</div>
+
 * [首页](README.md)
 * [产品](product/README.md)
 * [解决方案](solution/README.md)
 * [开发](develop/README.md)
-* [帮助](help/README.md)
+* [Iot](AIoT/README.md)
+* [下载](download/README.md)
+* [帮助](FAQ/README.md)
 
 <!-- <ul class="nav-href">
 	<li><a href="//dev.dcloud.net.cn/wish/?channel=native_sdk" target="__blank">需求墙</a></li>

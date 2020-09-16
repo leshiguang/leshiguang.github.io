@@ -73,7 +73,7 @@ body.close .app-nav.no-badge {
 }
 
 .app-nav.no-badge {
-  width: calc(100% - 300px);
+  width: calc(100%);
   text-align: center;
   margin-right: 0;
 }
@@ -84,13 +84,28 @@ body.close .app-nav.no-badge {
 
 .sidebar-toggle,
 body.close .sidebar-toggle {
-  left: 310px;
+  /* left: 310px;
   top: 15px;
   width: auto;
   bottom: auto;
   padding: 0;
   transition: transform .25s ease-out;
-  -webkit-transition: -webkit-transform .25s ease-out;
+  -webkit-transition: -webkit-transform .25s ease-out; */
+  background-color: transparent;
+  background-color: hsla(0, 0%, 100%, 0);
+  border: 0;
+  outline: none;
+  padding: 10px;
+  position: absolute;
+  top: 86px;
+  left: calc((100% - 1184px)/2 + 274px);
+  text-align: center;
+  transition: opacity .3s;
+  width: 42px;
+  z-index: 4;
+  animation: sidebar-toggle-left2 0.3s;
+  -webkit-animation: sidebar-toggle-left2 0.3s;
+  cursor: pointer;
 }
 
 body.close .sidebar-toggle {
@@ -550,10 +565,10 @@ div.github img {
   margin-top: -7px;
 }
 
-.sidebar-toggle,
+/* .sidebar-toggle,
 body.close .sidebar-toggle {
   top: 20px;
-}
+} */
 
 .app-nav.no-badge {
   padding: 14px 0;

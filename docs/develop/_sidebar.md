@@ -1,4 +1,5 @@
-* [简介](/develop/README)
+<div class="sidebar_title "><i class="fa fa-home fa-fw"></i> 接入指南</div>
+
 * [SDK](/develop/sdk/README)
 * 配网
     * [蓝牙配网](/develop/sdk/net/bluetooth)
@@ -20,4 +21,4 @@
     * [iOS OEM App](/develop/app/diyios)
 * [主题](/develop/sdk/smartLinkConfigWifi)
 * [集成](/develop/sdk/smartLinkConfigWifi)
-* [API](/develop/cloud/README)
+* [API](/develop/api/README)
