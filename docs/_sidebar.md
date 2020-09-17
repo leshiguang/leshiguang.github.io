@@ -17,5 +17,5 @@
 - [下载](/download/README)
 - [常见问题](/FAQ/README)
 
-<div class="contact-box"><br />  <div class="contact-item"><br />    <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/qq@2x.png" width="20" height="20"/><br />    <div class="contact-smg"><br />       <div>乐智健康SaaS平台使用交流群</div><br />    <div>群1：1142112809 &nbsp;<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=fafdasfas">点此加入</a></div><br />    </div><br />  </div><br /></div>
+<div class="contact-box">  <div class="contact-item">    <img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/qq@2x.png" width="20" height="20"/>    <div class="contact-smg">       <div>乐智健康SaaS平台使用交流群</div>    <div>群1：1142112809 &nbsp;<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=fafdasfas">点此加入</a></div>    </div>  </div></div>
 
