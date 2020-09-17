@@ -11,7 +11,9 @@
 - [产品](/product/README)
 - [行业解决方案](/solution/README)
 - [AIoT](/AIoT/README)
-- [开发](/develop/README)
+- 开发
+   - [服务端开发指南](/develop-cloud/README)
+   - [客户端开发指南](/develop-native/README)
 - [下载](/download/README)
 - [常见问题](/FAQ/README)
 
