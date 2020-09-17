@@ -919,6 +919,7 @@ pre:after {
     transition: transform .25s ease-out;
     width: calc((100% - 1184px)/2 + 250px);
     min-width: 300px;
+    max-width: 380px;
     z-index: 3;
     animation: sidebarWidthBig 0.3s;
     -webkit-animation: sidebarWidthBig 0.3s;
@@ -1013,7 +1014,7 @@ pre:after {
     padding: 10px;
     position: absolute;
     top: 86px;
-    left: calc((100% - 1184px)/2 + 274px);
+    left: calc((100% - 1184px)/2 + 0px);
     text-align: center;
     transition: opacity .3s;
     width: 42px;
@@ -1028,7 +1029,7 @@ pre:after {
         left: calc(50% - 480px);
     }
     to {
-        left: calc((100% - 1184px)/2 + 274px);
+        left: calc((100% - 1184px)/2 + 0px);
     }
 }
 
@@ -1202,6 +1203,7 @@ body.close .sidebar {
 }
 
 body.close .sidebar-toggle {
+    position: fixed;
     width: auto;
     left: calc(50% - 480px);
     animation: sidebar-toggle-left 0.3s;
@@ -1210,7 +1212,7 @@ body.close .sidebar-toggle {
 
 @keyframes sidebar-toggle-left {
     from {
-        left: calc((100% - 1184px)/2 + 274px);
+        left: calc((100% - 1184px)/2 + 0px);
     }
     to {
         left: calc(50% - 480px);
@@ -2632,7 +2634,7 @@ input[type=search]::-webkit-search-cancel-button {
     }
     @keyframes sidebar-left-mobile {
         from {
-            left: -300px;
+            left: -500px;
         }
         to {
             left: 0px;

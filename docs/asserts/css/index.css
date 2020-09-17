@@ -98,7 +98,7 @@ body.close .sidebar-toggle {
   padding: 10px;
   position: absolute;
   top: 86px;
-  left: calc((100% - 1184px)/2 + 274px);
+  left: 450px;
   text-align: center;
   transition: opacity .3s;
   width: 42px;
@@ -109,8 +109,9 @@ body.close .sidebar-toggle {
 }
 
 body.close .sidebar-toggle {
-  transform: translateX(-300px);
-  -webkit-transform: translateX(-300px);
+  position: fixed;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
 }
 
 .app-nav.no-badge {
