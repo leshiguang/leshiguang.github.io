@@ -1,6 +1,13 @@
 - 通用接口
-   - [体重](/develop/cloud/health/weight)
+   - [体重](/develop-cloud/health/weight)
 - 设备
-   - [体重](/develop/cloud/health/weight)
+   - [体重](/develop-cloud/health/weight)
 - 健康数据
-   - [体重](/develop/cloud/health/weight)
+   - [公共参数](/develop-cloud/health/common)
+   - [体重](/develop-cloud/health/weight)
+   - [睡眠](/develop-cloud/health/sleep)
+   - [血压](/develop-cloud/health/bloodpressure)
+   - [步数](/develop-cloud/health/step)
+   - [血糖](/develop-cloud/health/bloodsugar)
+   - [心率](/develop-cloud/health/heartrate)
+
