@@ -1094,25 +1094,26 @@ a.contact-item {
     overflow-y: hidden;
   }
 
-  body.close .app-nav.no-badge {
+  /* body.close .app-nav.no-badge {
     transform: translateX(300px);
     -webkit-transform: translateX(300px);
-  }
+  } */
 
   .content {
     padding-top: 30px;
   }
-
   .sidebar-toggle {
-    left: 0px;
-    top: 18px;
-    transform: translateX(10px);
-    -webkit-transform: translateX(10px);
+      background-color: transparent;
+      width: auto;
+      top: 50px;
+      left: 10px;
+      animation: sidebar-toggle-left-mobile 0.3s;
+      -webkit-animation: sidebar-toggle-left-mobile 0.3s;
   }
 
   body.close .sidebar-toggle {
     left: 0px;
-    top: 18px;
+    top: 52px;
     transform: translateX(310px);
     -webkit-transform: translateX(310px);
   }
