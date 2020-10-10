@@ -1,19 +1,21 @@
-- [SDK](/develop-native/sdk/README)
-   - 配网
-      - [蓝牙配网](/develop-native/sdk/net/bluetooth)
-      - [SmartLink 配网](/develop-native/sdk/smartLinkConfigWifi)
-   - 蓝牙
-      - [纯体脂秤 SDK](/develop-native/sdk/bluetooth/scale/README)
-         - [Android](/develop-native/sdk/bluetooth/scale/andorid/scale)
-         - [ios](/develop-native/sdk/bluetooth/scale/ios/scale)
-         - [小程序](/develop-native/sdk/bluetooth/scale/mini/scale)
-      - [完整 SDK 接入方案](/develop-native/sdk/full/README)
-   - 页面 UI
-      - [设备 UI](/develop-native/sdk/device)
-         - Android
-         - iOS
+<a name="98862a0f"></a>
+# 菜单栏
+
+
+- [SDK对接](/develop-native/sdk/README)
+   - Android开发指南
+      - [蓝牙SDK对接文档](/develop-native/android/bluetooth)
+      - [IoT平台SDK对接文档](/develop-native/android/IoT)
+      - [UI级SDK对接文档](/develop-native/android/ui)
+   - iOS开发指南
+      - [蓝牙SDK对接文档](/develop-native/ios/bluetooth)
+      - [IoT平台SDK对接文档](/develop-native/ios/IoT)
+      - [UI级SDK对接文档](/develop-native/ios/ui)
+   - 微信小程序开发指南
+      - [蓝牙SDK对接文档](/develop-native/wx-mini/bluetooth)
 - [OEM APP](/develop-native/oem/README)
    - [微信小程序](/develop-native/wxMiniProgram)
    - [公版](/develop-native/README)
    - [Android OEM App](/develop-native/app/diyandroid)
    - [iOS OEM App](/develop-native/app/diyios)
+
