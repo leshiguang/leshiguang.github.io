@@ -19,7 +19,7 @@
 将准备好的材料以邮件的方式发送：
 
 - 接收者：lu.zheng@lifesense.com
-- 抄送: yong.wu@lifesense.com, zhicheng.liu@lifesense.com,chixiang.cai@lifesense.com,jianhua.liu@lifesense.com,chengze.wu@lifesense.com
+- 抄送: yong.wu@lifesense.com, zhicheng.liu@lifesense.com,chixiang.cai@lifesense.com,jianhua.liu@lifesense.com,chengze.wu@lifesense.com,zhihui.xiao@lifesense.com,bangwei.mo@lifesense.com
 - 主题：【蓝牙SDK接入申请】（企业/组织/个人）-申请接入
 - 邮件内容参考：
 
@@ -70,13 +70,21 @@ repositories {
 自此，依赖配置完成<br />
 
 <a name="7xg5U"></a>
-## 2.4、权限声明
-
-
+## 2.3、权限声明
+```xml
+<!-- Android6.0 ble-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+```
 <a name="VdHj5"></a>
-## 2.3 初始化SDK
+## 2.4、接入demo
+[https://github.com/leshiguang/LSBluetoothDemo-Android](https://github.com/leshiguang/LSBluetoothDemo-Android)
+<a name="NXgnl"></a>
+## 2.5、初始化SDK
 <a name="5acbt"></a>
-### 2.3.1 初始化
+### 2.5.1、初始化
 
 - 功能描述：首次使用 LsBleManager 这个对象实例时，必须先执行初始化，否则其他接口将不可用
 - 接口：com.lifesense.ble.LsBleManager#initialize
@@ -108,7 +116,7 @@ appContext：Application上下文<br />appId：[1.2.2](#lnH19)接入申请时获
 LsBleManager.getInstance().initialize(getApplicationContext(), "com.leshiguang.saas.rbac.demo.appid");
 ```
 <a name="61QXx"></a>
-### 2.3.2 判断SDK是否完成初始化
+### 2.5.2、判断SDK是否完成初始化
 
 - 功能描述：判断SDK是否完成初始化
 - 接口：com.lifesense.ble.LsBleManager#hasInitialized
@@ -125,7 +133,7 @@ LsBleManager.getInstance().initialize(getApplicationContext(), "com.leshiguang.s
 
 - 返回值：boolean，true 表示已完成初始化，false 表示未完成初始化
 <a name="WmqSi"></a>
-### 2.3.3、注册消息监听服务
+### 2.5.3、注册消息监听服务
 
 - 功能描述：注册消息提醒服务，在使用支持消息提醒功能的设备时，如短信提醒 、微信消息提醒，需要在
 
@@ -138,7 +146,7 @@ void registerMessageService ()
 
 
 <a name="pLJFr"></a>
-### 2.3.4、取消注册消息监听服务
+### 2.5.4、取消注册消息监听服务
 
 - 接口：com.lifesense.ble.LsBleManager#registerMessageService
 <a name="TtGTp"></a>
@@ -361,7 +369,7 @@ void setProductUserInfo(WeightUserInfo weightUserInfo)
 ### 5.1.2、设置体脂秤声音震动强度
 
 - 功能：更新设备（互联秤）的设置信息，如修改测量单位、修改体重目标等
-- 接口：com.lifesense.ble.LsBleInterface#updateWeightScaleSetting
+- 接口：com.lifesense.ble.LsBleInterface#setVibrationVoice
 ```java
 void setVibrationVoice(VibrationVoice vibrationVoice)
 ```
@@ -407,7 +415,7 @@ void setPedometerUserInfo(PedometerUserInfo peUserInfo)
 ### 5.2.2、设置闹钟
 
 - 功能：设置闹钟到手环
-- 接口：com.lifesense.ble.LsBleInterface#setPedometerUserInfo
+- 接口：com.lifesense.ble.LsBleInterface#setPedometerAlarmClock
 ```java
 void setPedometerAlarmClock(PedometerAlarmClock alarmClock)
 ```
@@ -430,7 +438,7 @@ void updateHeartRateDetection(String,boolean,String,String,OnSettingListener)
 ### 5.2.4、防丢失设置
 
 - 功能：更新手环的断开提醒设置信息（防丢设置）
-- 接口：com.lifesense.ble.LsBleInterface#setPedometerUserInfo
+- 接口：com.lifesense.ble.LsBleInterface#updatePedometerAntiLostInfo
 ```java
 void updatePedometerAntiLostInfo(String,PedometerAntiLostInfo,OnSettingListener settingListener)
 ```
@@ -468,9 +476,9 @@ void updatePedometerStepGoal(String,boolean,int,OnSettingListener)
 ### 5.2.7、心率区间设置
 
 - 功能：根据用户年龄，更新手环的心率检测区间设置信息
-- 接口：com.lifesense.ble.LsBleInterface#updatePedometerStepGoal
+- 接口：com.lifesense.ble.LsBleInterface#updateHeartRateRange
 ```java
-void updatePedometerStepGoal(String,boolean,int,OnSettingListener)
+void updateHeartRateRange(String,boolean,int,OnSettingListener)
 ```
 
 - 参数：
@@ -492,9 +500,9 @@ void updateMessageRemind (String, boolean, MessageType, OnSettingListener)
 ### 5.2.9、心率区间设置
 
 - 功能：根据用户年龄，更新手环的心率检测区间设置信息
-- 接口：com.lifesense.ble.LsBleInterface#updatePedometerStepGoal
+- 接口：com.lifesense.ble.LsBleInterface#updateHeartRateRange
 ```java
-void updatePedometerStepGoal(String,boolean,int,OnSettingListener)
+void updateHeartRateRange(String,boolean,int,OnSettingListener)
 ```
 
 - 参数：
@@ -529,7 +537,7 @@ void updatePedometerNightMode(String,boolean,PedometerNightMode,OnSettingListene
 ### 5.2.12、佩戴方式设置
 
 - 功能：更新手环的佩戴方式
-- 接口：com.lifesense.ble.LsBleInterface#updatePedometerWearingStyles    
+- 接口：com.lifesense.ble.LsBleInterface#updatePedometerWearingStyles    
 ```java
 void updatePedometerWearingStyles(String,PedometerWearingStyles,OnSettingListener)
 ```
