@@ -55,7 +55,7 @@
 ## 2.2、项目依赖配置
 1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNDBManager.framework         数据缓存处理<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
 <br />2、三方依赖库，可用pod导入
-```java
+```objectivec
 pod 'WCDB'
 pod 'Protobuf'
 pod 'YYModel'
@@ -74,14 +74,14 @@ pod 'MBProgressHUD', '0.9.2'
 <a name="5acbt"></a>
 ### 2.3.1 初始化
 1、引入头文件
-```java
+```objectivec
 #import <LSDeviceManagerFramework/LSDeviceManager.h>
 #import <LSAuthorization/LSAuthorization.h>
 ```
 2、设置代理
 
 - 功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调
-```java
+```objectivec
 //在需要实现代理方法的文件添加 LSDeviceComponentDelegate
 @interface ViewController () <LSDeviceComponentDelegate>
 
@@ -95,14 +95,14 @@ pod 'MBProgressHUD', '0.9.2'
 3、开启调试模式
 
 - 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
-```java
+```objectivec
 [[LSDeviceManager shareInstance] openDebug];
 ```
 4、登录
 
 - 功能描述：三方登录鉴权
 - 接口：
-```java
+```objectivec
 /// 第三方账号授权登录
 /// @param tenantId 租户ID
 /// @param subscriptionId 订阅ID
@@ -114,20 +114,20 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：设置用户Id到LSDeviceManager
 - 接口：
-```java
+```objectivec
 - (void)loginWithUserId:(NSString *)userId;
 ```
 <br />
 <a name="ulaUM"></a>
 ### 2.3.3、开启自动接收数据的服务
-```java
+```objectivec
 [[LSDeviceManager shareInstance] startDataReceiveService];
 ```
 
 
 <a name="pLJFr"></a>
 ### 2.3.4、停止数据接收服务
-```java
+```objectivec
 [[LSBLEDeviceManager defaultLsBleManager] stopDataReceiveService];
 ```
 <a name="TtGTp"></a>
@@ -142,7 +142,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 
-```java
+```objectivec
 /// 搜索设备,在结束配对流程后需要调用调用startDataReceiveService
 /// @param productInfo 设备信息
 /// @param searchBlock 回调
@@ -164,7 +164,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：中断正在进行中的搜索，一般在离开搜索页面或搜索结束时调用
 - 接口：
-```java
+```objectivec
 /// 停止搜索设备
 /// @param stopSearchBlock 停止收缩回调
 - (void)stopSearchDevice:(LSEStopSearchBlock)stopSearchBlock;
@@ -176,7 +176,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：开始绑定用户从搜索到的设备列表中（来自[3.2.1](#d4d1c408)）选择的设备
 - 接口：
-```java
+```objectivec
 /// 绑定手环
 /// @param deviceInfo 设备信息
 - (void)pairDevice:(LSEDeviceInfo *)deviceInfo;
@@ -188,7 +188,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：回调绑定设备的相关信息，根据返回的状态码进制下一步操作；在收到设备绑定成功的回调后需要调用3.2.1（设备连接方法）重新进行设备连接，这样才能打开设备未被开启的使能通道
 - 接口：
-```java
+```objectivec
 /**
  绑定状态回调接口, device和deviceUsers只有在LSEBindStatusSuccessful时才有值
 
@@ -206,7 +206,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：绑定手环需要输入随机码，随机码会在3.1.3.1（绑定设备回调中返回）
 - 接口：
-```java
+```objectivec
 /// 用户绑定手环校验码
 /// @param code 校验码
 /// @param deviceInfo 设备信息
@@ -217,7 +217,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能：取消正在执行的配对或绑定操作
 - 接口：
-```java
+```objectivec
 /// 取消绑定
 /// @param deviceInfo 设备信息
 /// @param completion
@@ -225,7 +225,7 @@ pod 'MBProgressHUD', '0.9.2'
 ```
 
 - 调用示例
-```java
+```objectivec
 [[LSDeviceManager shareInstance] cancelPair:deviceInfo completionBlock:^(SettingCode code) {
     if (code == SettingCodeSuccess) {
         //绑定成功
@@ -237,7 +237,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：获取已绑定的设备列表，可以从这里获取到当前用户已经绑定的设备，然后筛选出自己的目标设备进行重新连接的操作
 - 接口：
-```java
+```objectivec
 /// 获取已绑定的设备列表
 /// @param userId 用户id
 /// @param completion 已绑定的设备列表回调
@@ -245,7 +245,7 @@ pod 'MBProgressHUD', '0.9.2'
 ```
 
 - 调用示例：
-```java
+```objectivec
 [[LSDeviceManager shareInstance] getBoundDevices:@([self.lzUserId integerValue]) Completion:^(int code, NSString *msg, NSArray<Device *> *deviceList) {
     if (code != 200) return;
     if (deviceList.count == 0) {
@@ -270,7 +270,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能：连接已经被绑定过的设备
 - 接口：
-```java
+```objectivec
 /// 连接设备
 /// @param deviceInfo 设备信息
 - (void)connectDeviceWithDeviceInfo:(Device *)deviceInfo;
@@ -280,7 +280,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能：断开当前已经连接的设备
 - 接口：
-```java
+```objectivec
 /// 断开设备连接
 /// @param broadcastId 设备信息
 - (void)disConnectWithDeviceInfo:(NSString *)broadcastId;
@@ -290,7 +290,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能：检查设备当前的连接状态
 - 接口：
-```java
+```objectivec
 /// 检测蓝牙设备连接状态
 /// @param broadcastId 设备广播id
 - (BOOL)checkDeviceConnectionStateWithBroadcastId:(NSString *)broadcastId;
@@ -300,7 +300,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能：接触用户和设备的绑定关系
 - 接口：
-```java
+```objectivec
 /// 解除绑定 (非血压计调用)
 /// @param deviceId 设备id
 /// @param userId 用户id
