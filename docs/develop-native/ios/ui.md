@@ -1,46 +1,30 @@
-
-
-<a name="1d2be86b"></a>
+<a name="BXDra"></a>
 # 一、合作方式
-
-<br />
-
-<a name="974b0860"></a>
+<a name="z8LKC"></a>
 ## 1.1 合作模式介绍
-
-<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1600939459266-546e3488-92ca-4555-b104-8c30556365b6.png#align=left&display=inline&height=247&margin=%5Bobject%20Object%5D&name=image.png&originHeight=419&originWidth=893&size=44163&status=done&style=none&width=526#align=left&display=inline&height=419&margin=%5Bobject%20Object%5D&originHeight=419&originWidth=893&status=done&style=none&width=893)<br />1、设备通过乐心提供的蓝牙SDK绑定设备、上传数据<br />2、数据经过SDK初步处理后， 以回调的方式给到客户APP<br />3、客户APP上传数据到自己的云平台进行数据存储<br />4、客户可在APP或云平台调用乐心开放平台提供的API进行数据分析（睡眠、体重等场景）<br />
-
-<a name="1540c326"></a>
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1600939459266-546e3488-92ca-4555-b104-8c30556365b6.png#align=left&display=inline&height=247&margin=%5Bobject%20Object%5D&name=image.png&originHeight=419&originWidth=893&size=44163&status=done&style=none&width=526)<br />1、设备通过乐心提供的蓝牙SDK绑定设备、上传数据<br />2、数据经过SDK初步处理后， 以回调的方式给到客户APP<br />3、客户APP上传数据到自己的云平台进行数据存储<br />4、客户可在APP或云平台调用乐心开放平台提供的API进行数据分析（睡眠、体重等场景）
+<a name="ZSQgF"></a>
 ## 1.2、接入申请
-
-<br />
-
-<a name="c26f467a"></a>
+<a name="CCJzr"></a>
 ### 1.2.1、接入声明
-
-<br />我司做接入控制的目的是为了控制设备的去处、了解出售设备的活跃状态及客户采买设备的使用场景。接入过程中， 仅存储设备和接入公司、组织的关联关系， 我司不会以任何方式存储用户身份信息及用户使用设备过程中产生的数据<br />
-
-<a name="a3701fc4"></a>
+我司做接入控制的目的是为了控制设备的去处、了解出售设备的活跃状态及客户采买设备的使用场景。接入过程中， 仅存储设备和接入公司、组织的关联关系， 我司不会以任何方式存储用户身份信息及用户使用设备过程中产生的数据
+<a name="lnH19"></a>
 ### 1.2.2、申请应用 ID
+准备材料如下：<br />
 
-<br />准备材料如下：<br />
-
-- 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级
-- 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息)
+- 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级 
+- 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息) 
 - 准备一个接入者公司的 github 账号(可选，用于gradle依赖管理下载aar)
 
+将准备好的材料以邮件的方式发送：
 
-<br />将准备好的材料以邮件的方式发送：<br />
-
-- 接收者：lu.zheng[@lifesense.com ](/lifesense.com )
-- 抄送: [yong.wu@lifesense.com](mailto:yong.wu@lifesense.com), [zhicheng.liu@lifesense.com](mailto:zhicheng.liu@lifesense.com)[,chixiang.cai@lifesense.com](mailto:,chixiang.cai@lifesense.com)[,jianhua.liu@lifesense.com](mailto:,jianhua.liu@lifesense.com)[,chengze.wu@lifesense.com](mailto:,chengze.wu@lifesense.com)
+- 接收者：lu.zheng@lifesense.com
+- 抄送: yong.wu@lifesense.com, zhicheng.liu@lifesense.com,chixiang.cai@lifesense.com,jianhua.liu@lifesense.com,chengze.wu@lifesense.com
 - 主题：【蓝牙SDK接入申请】（企业/组织/个人）-申请接入
 - 邮件内容参考：
 
-
-<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1600952638602-0253cac6-c486-4f20-a64a-adf5c7ebf72e.png#align=left&display=inline&height=444&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=2034&size=237021&status=done&style=none&width=2034#align=left&display=inline&height=444&margin=%5Bobject%20Object%5D&originHeight=444&originWidth=2034&status=done&style=none&width=2034)<br />邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId通过邮件的形式回复给您<br />
-
-<a name="694292ee"></a>
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1600952638602-0253cac6-c486-4f20-a64a-adf5c7ebf72e.png#align=left&display=inline&height=444&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=2034&size=237021&status=done&style=none&width=2034)<br />邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId通过邮件的形式回复给您
+<a name="jTuaD"></a>
 ## 1.3、SDK支持接入的设备
 | 设备类型 | 型号 |
 | --- | --- |
@@ -59,31 +43,19 @@
 |  | A1-F |
 | 血压计 | i7蓝牙版 |
 
-
-<br />
-
-<a name="49b9f02f"></a>
+<a name="ysJ7W"></a>
 # 二、快速集成
-
-<br />
-
-<a name="250a1dc2"></a>
+<a name="iazCZ"></a>
 ## 2.1、蓝牙SDK下载
 | 版本 | 下载地址 | 版本更新日志 |
 | --- | --- | --- |
 | 1.8.0 | [lifesense_ble_module_ios_1.0](http://qi4q5rivb.hn-bkt.clouddn.com/LS_UI_IoT_Bluetooth-SDK.zip) | 初始版本 |
 
-
-<br />
-
-<a name="64f6bfd9"></a>
+<a name="LVJNh"></a>
 ## 2.2、项目依赖配置
-
-<br />1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNDBManager.framework         数据缓存处理<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
-<br />
-<br />2、三方依赖库，可用pod导入<br />
-
-```java
+1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNDBManager.framework         数据缓存处理<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
+<br />2、三方依赖库，可用pod导入
+```objectivec
 pod 'WCDB'
 pod 'Protobuf'
 pod 'YYModel'
@@ -92,86 +64,53 @@ pod 'IQKeyboardManager', '5.0.8'
 pod 'SDWebImage', '4.2.3'
 pod 'MBProgressHUD', '0.9.2'
 ```
-
-<br />3、在项目的build.gradle中添加依赖：<br />
-
-```java
+3、在项目的build.gradle中添加依赖：
+```objectivec
 在Build Phases 中添加framework
 ```
-
-<br />![截屏2020-10-13 下午2.31.25.png](https://cdn.nlark.com/yuque/0/2020/png/304678/1602570752301-87647211-24fe-4916-a7c3-2d2ddf9c99ad.png#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2020-10-13%20%E4%B8%8B%E5%8D%882.31.25.png&originHeight=621&originWidth=788&size=62488&status=done&style=none&width=788#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&originHeight=621&originWidth=788&status=done&style=none&width=788)<br />自此，依赖配置完成<br />
-
-<a name="d0dbd0c5"></a>
+![截屏2020-10-13 下午2.31.25.png](https://cdn.nlark.com/yuque/0/2020/png/304678/1602570752301-87647211-24fe-4916-a7c3-2d2ddf9c99ad.png#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2020-10-13%20%E4%B8%8B%E5%8D%882.31.25.png&originHeight=621&originWidth=788&size=62488&status=done&style=none&width=788)<br />自此，依赖配置完成
+<a name="VdHj5"></a>
 ## 2.3 初始化SDK
-
-<br />
-
-<a name="c219d5c1"></a>
+<a name="5acbt"></a>
 ### 2.3.1 初始化
-
-<br />1、引入头文件<br />
-
-```java
+1、引入头文件
+```objectivec
 #import <LSDeviceManagerFramework/LSDeviceManager.h>
 #import <LSAuthorization/LSAuthorization.h>
 ```
-
-<br />2、设置代理<br />
+2、设置代理
 
 - 功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调
-
-
-
 ```java
 //在需要实现代理方法的文件添加 LSDeviceComponentDelegate
 @interface ViewController () <LSDeviceComponentDelegate>
-
-[[LSDeviceManager shareInstance] addDelegate:self];
-
-//实现代理方法
--(void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object {}
-
--(void)onDeviceConnectStateChange:(BluetoothConnectState)connectState broadcastId:(NSString *)broadcastId {}
 ```
-
-<br />3、开启调试模式<br />
+3、开启调试模式
 
 - 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
-
-
-
 ```java
 [[LSDeviceManager shareInstance] openDebug];
 ```
-
-<br />4、登录<br />
+4、登录
 
 - 功能描述：三方登录鉴权
 - 接口：
-
-
-
 ```java
-// 第三方账号授权登录
-// @param tenantId 租户ID
-// @param subscriptionId 订阅ID
-// @param associatedId 第三方账号
-// @param complete 授权信息
+/// 第三方账号授权登录
+/// @param tenantId 租户ID
+/// @param subscriptionId 订阅ID
+/// @param associatedId 第三方账号
+/// @param complete 授权信息
 - (void)authorize:(NSInteger)tenantId andSubscribe:(NSInteger)subscriptionId andThirdUserId:(NSString *)associatedId callback:(void (^)(LSAccountAuthorizeResponse *)) complete;
 ```
-
-<br />5、设置LSDeviceManager登录态<br />
+5、设置LSDeviceManager登录态
 
 - 功能描述：设置用户Id到LSDeviceManager
 - 接口：
-
-
-
 ```java
 - (void)loginWithUserId:(NSString *)userId;
 ```
-
-<br />6、调用乐智UI初始化<br />
+6、调用乐智UI初始化<br />
 
 - 功能描述：初始化乐智UI,设置用户信息
 - 接口：
@@ -183,49 +122,33 @@ pod 'MBProgressHUD', '0.9.2'
 /// @param accuountInfo 账号信息
 - (void)initBluetoothUISDK:(LSBluetoothUIAccountInfo *)accuountInfo;
 ```
-
-<br />
-
-<a name="bb1d84b6"></a>
-### 2.3.2、开启自动接收数据的服务
-
-
+<a name="3wW15"></a>
+### 
+<a name="ulaUM"></a>
+### 2.3.3、开启自动接收数据的服务
 ```java
 [[LSDeviceManager shareInstance] startDataReceiveService];
 ```
 
-<br />
 
-<a name="cd5ef291"></a>
-### 2.3.3、停止数据接收服务
-
-
+<a name="pLJFr"></a>
+### 2.3.4、停止数据接收服务
 ```java
 [[LSBLEDeviceManager defaultLsBleManager] stopDataReceiveService];
 ```
-
-<br />
-
-<a name="44fe50fc"></a>
+<a name="TtGTp"></a>
 # 三、绑定设备
-
-<br />
-
-<a name="4be09ac6"></a>
+<a name="dtlnJ"></a>
 ## 3.1、搜索绑定设备
-
-<br />
-
-<a name="c80a2389"></a>
+<a name="d4d1c408"></a>
 ### 3.1.1、搜索设备
-
 
 - 功能描述：_根据设备类型列表、设备的广播类型搜索附近的乐心设备_
 - 接口:
 
 
 
-```java
+```objectivec
 /// 搜索设备,在结束配对流程后需要调用调用startDataReceiveService
 /// @param productInfo 设备信息
 /// @param searchBlock 回调
@@ -233,55 +156,45 @@ pod 'MBProgressHUD', '0.9.2'
 ```
 
 
-- 参数定义：<br />| 类型 | Name | 说明 |<br />| --- | --- | --- |<br />| LSEProductInfo | productInfo | 在数据结构中查看详细参数 |<br />| LSESearchBlock | searchBlock | /**<br /> 搜索设备回调<br /> [@param ](/param ) info 设备信息 <br /> [@param ](/param ) rssi 信号强度，越小越强 <br /> _/ <br />typedef void(^LSESearchBlock)(LSEDeviceInfo _info, NSInteger rssi); |
+- 参数定义：
+| 类型 | Name | 说明 |
+| --- | --- | --- |
+| LSEProductInfo | productInfo | 在数据结构中查看详细参数 |
+| LSESearchBlock | searchBlock | /**<br /> 搜索设备回调<br /> @param info 设备信息<br /> @param rssi 信号强度，越小越强<br /> */ <br />typedef void(^LSESearchBlock)(LSEDeviceInfo *info, NSInteger rssi); |
 
 
-<br />
 
-<a name="de1d09c4"></a>
+<a name="juvi2"></a>
 ### 3.1.2、停止搜索设备
 
 
 - 功能描述：中断正在进行中的搜索，一般在离开搜索页面或搜索结束时调用
 - 接口：
-
-
-
-```java
+```objectivec
 /// 停止搜索设备
 /// @param stopSearchBlock 停止收缩回调
 - (void)stopSearchDevice:(LSEStopSearchBlock)stopSearchBlock;
 ```
 
-<br />
 
-<a name="d3d249e6"></a>
+<a name="20d28fc9"></a>
 ### 3.1.3、 配对或绑定设备
-
 
 - 功能描述：开始绑定用户从搜索到的设备列表中（来自[3.2.1](#d4d1c408)）选择的设备
 - 接口：
-
-
-
-```java
+```objectivec
 /// 绑定手环
 /// @param deviceInfo 设备信息
 - (void)pairDevice:(LSEDeviceInfo *)deviceInfo;
 ```
 
-<br />
 
-<a name="c43d5a7d"></a>
+<a name="uPQSS"></a>
 #### 3.1.3.1、绑定设备的回调
-
 
 - 功能描述：回调绑定设备的相关信息，根据返回的状态码进制下一步操作；在收到设备绑定成功的回调后需要调用3.2.1（设备连接方法）重新进行设备连接，这样才能打开设备未被开启的使能通道
 - 接口：
-
-
-
-```java
+```objectivec
 /**
  绑定状态回调接口, device和deviceUsers只有在LSEBindStatusSuccessful时才有值
 
@@ -294,80 +207,51 @@ pod 'MBProgressHUD', '0.9.2'
  */
 - (void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object;
 ```
-
-<br />
-
-<a name="d3111400"></a>
+<a name="OaGjl"></a>
 #### 3.1.3.2、绑定手环校验码
-
 
 - 功能描述：绑定手环需要输入随机码，随机码会在3.1.3.1（绑定设备回调中返回）
 - 接口：
-
-
-
-```java
+```objectivec
 /// 用户绑定手环校验码
 /// @param code 校验码
 /// @param deviceInfo 设备信息
 - (void)inputCode:(NSString *)code deviceInfo:(LSEDeviceInfo *)deviceInfo;
 ```
-
-<br />
-
-<a name="f99f6ecc"></a>
+<a name="3O2qV"></a>
 #### 3.1.3.3、取消配对
-
 
 - 功能：取消正在执行的配对或绑定操作
 - 接口：
-
-
-
-```java
+```objectivec
 /// 取消绑定
 /// @param deviceInfo 设备信息
 /// @param completion
 - (void)cancelPair:(LSEDeviceInfo *)deviceInfo completionBlock:(Completion)completion;
 ```
 
-
 - 调用示例
-
-
-
-```java
+```objectivec
 [[LSDeviceManager shareInstance] cancelPair:deviceInfo completionBlock:^(SettingCode code) {
     if (code == SettingCodeSuccess) {
         //绑定成功
     }
 }];
 ```
-
-<br />
-
-<a name="b27e1a63"></a>
+<a name="ASb8P"></a>
 ### 3.1.4、绑定的设备列表
-
 
 - 功能描述：获取已绑定的设备列表，可以从这里获取到当前用户已经绑定的设备，然后筛选出自己的目标设备进行重新连接的操作
 - 接口：
-
-
-
-```java
+```objectivec
 /// 获取已绑定的设备列表
 /// @param userId 用户id
 /// @param completion 已绑定的设备列表回调
 - (void)getBoundDevices:(NSNumber *)userId Completion:(void(^)(int code,NSString *msg,NSArray <Device *>*deviceList))completion;
 ```
 
-
 - 调用示例：
-
-
-
-```java
+```objectivec
 [[LSDeviceManager shareInstance] getBoundDevices:@([self.lzUserId integerValue]) Completion:^(int code, NSString *msg, NSArray<Device *> *deviceList) {
     if (code != 200) return;
     if (deviceList.count == 0) {
@@ -385,75 +269,44 @@ pod 'MBProgressHUD', '0.9.2'
     } 
 }];
 ```
-
-<br />
-
-<a name="6715a901"></a>
+<a name="OCQnc"></a>
 ## 3.2、设备连接
-
-<br />
-
-<a name="cd6a2ed9"></a>
+<a name="ZPHaK"></a>
 ### 3.2.1、连接设备
-
 
 - 功能：连接已经被绑定过的设备
 - 接口：
-
-
-
-```java
+```objectivec
 /// 连接设备
 /// @param deviceInfo 设备信息
 - (void)connectDeviceWithDeviceInfo:(Device *)deviceInfo;
 ```
-
-<br />
-
-<a name="4bd56ee5"></a>
+<a name="dPxG0"></a>
 ### 3.2.2、断开连接
-
 
 - 功能：断开当前已经连接的设备
 - 接口：
-
-
-
-```java
+```objectivec
 /// 断开设备连接
 /// @param broadcastId 设备信息
 - (void)disConnectWithDeviceInfo:(NSString *)broadcastId;
 ```
-
-<br />
-
-<a name="c3919250"></a>
+<a name="hVjmf"></a>
 ### 3.3.3、检查设备的链接状态
-
 
 - 功能：检查设备当前的连接状态
 - 接口：
-
-
-
-```java
+```objectivec
 /// 检测蓝牙设备连接状态
 /// @param broadcastId 设备广播id
 - (BOOL)checkDeviceConnectionStateWithBroadcastId:(NSString *)broadcastId;
 ```
-
-<br />
-
-<a name="5e6dea99"></a>
+<a name="K1Ofz"></a>
 ## 3.3、解除绑定
-
 
 - 功能：接触用户和设备的绑定关系
 - 接口：
-
-
-
-```java
+```objectivec
 /// 解除绑定 (非血压计调用)
 /// @param deviceId 设备id
 /// @param userId 用户id
@@ -466,73 +319,42 @@ pod 'MBProgressHUD', '0.9.2'
 /// @param completion 回调
 - (void)unBindingDeviceAndDeleteAllUsers:(NSString *)deviceId userId:(NSNumber *)userId Completion:(void(^)(int code,NSString *msg))completion;
 ```
-
-<br />
-
-<a name="520ded5e"></a>
+<a name="cowfJ"></a>
 # 四、数据同步和回调
-
-<br />
-
-<a name="600c743f"></a>
+<a name="vRF27"></a>
 ## 4.1、开启数据同步
-
 
 - 功能：启动测量数据自动同步服务，服务启动后，会自动连接设备、收发设备上传的测量数据
 - 接口：
-
-
-
-```java
+```objectivec
 /// 开启数据同步
 - (BOOL)startDataReceiveService;
 ```
-
-<br />
-
-<a name="7a712a30"></a>
+<a name="z1LvW"></a>
 ## 4.2、结束（停止）数据同步
-
 
 - 功能：停止测量数据的自动同步服务（建议退出登录时必须调用）
 - 接口：
-
-
-
-```java
+```objectivec
 /// 停止测量数据接收服务
 - (BOOL)stopDataReceiveService;
 ```
-
-<br />
-
-<a name="e929c43e"></a>
+<a name="HRZD8"></a>
 ## 4.3、设备数据回调
-
-<br />
-
-<a name="6d3e11a3"></a>
+<a name="Z7TTf"></a>
 ### 4.3.1、手环测量数据回调
-
 
 - 功能：返回手环测量的相关数据，具体数据类型根据BraceletReceiveDataType枚举来判断，详细参数请在数据结构中查看
 - 接口：
-
-
-
-```java
+```objectivec
 /// 手环测量数据
 /// @param data 数据model
 /// @param type 数据枚举类型
 - (void)onReceiveBraceletData:(id)data dataType:(BraceletReceiveDataType)type;
 ```
 
-
 - 调用示例
-
-
-
-```java
+```objectivec
 //设置代理
 [LSDeviceManager shareInstance].braceletDataDelegate = self;
 
@@ -556,33 +378,48 @@ pod 'MBProgressHUD', '0.9.2'
 }
 ```
 
+- 参数：根据BraceletReceiveDataType匹配对用的数据model
+| BraceletReceiveDataType 枚举 | 数据model | 说明 |
+| --- | --- | --- |
+| WalkingDataType | WalkingData | 步数数据 |
+| HeartRateDataType | HeartRateData | 日常心率 |
+| SportHeartRateDataType | SportHeartRateData | 运动心率 |
+| SleepingDataType | SleepingData | 睡眠 |
+| UWalkingDataType | UWalkingData | 健走 |
+| SportStateDataType | SportStateData | 手环通知手机进入运动模式数据 |
+| SwimmingDataType | SwimmingData | 游泳 |
+| RunningDataType | RunningData | 跑步数据 |
+| LSCyclingDataType | LSBaseSportData | 骑行 |
+| LSYogaDataType | LSBaseSportData | 瑜伽 |
+| LSFitnessDataType | LSBaseSportData | 健身 |
+| LSBasketballDataType | LSBaseSportData | 篮球 |
+| LSFootballDataType | LSBaseSportData | 足球 |
+| LSBadmintonDataType | LSBaseSportData | 羽毛球 |
+| LSVolleyballDataType | LSBaseSportData | 排球 |
+| LSTableTennisDataType | LSBaseSportData | 乒乓球 |
+| ExsportDataType | LSBaseSportData | 电竞 |
+| LSTaiJiDataType | LSBaseSportData | 太极 |
+| IndoorRunSportDataType | UWalkingData | 室内跑 |
+| EllipticalTrainerSportDataType | LSBaseSportData | 椭圆机 |
+| OxSportDataType | LSBaseSportData | 有氧运动 |
+| GymDanceType | LSBaseSportData | 健身舞 |
+| RunningCaloriesDataType | RunningCaloriesData | 步数卡路里数据 |
 
-- 参数：根据BraceletReceiveDataType匹配对用的数据model<br />| BraceletReceiveDataType 枚举 | 数据model | 说明 |<br />| --- | --- | --- |<br />| WalkingDataType | WalkingData | 步数数据 |<br />| HeartRateDataType | HeartRateData | 日常心率 |<br />| SportHeartRateDataType | SportHeartRateData | 运动心率 |<br />| SleepingDataType | SleepingData | 睡眠 |<br />| UWalkingDataType | UWalkingData | 健走 |<br />| SportStateDataType | SportStateData | 手环通知手机进入运动模式数据 |<br />| SwimmingDataType | SwimmingData | 游泳 |<br />| RunningDataType | RunningData | 跑步数据 |<br />| LSCyclingDataType | LSBaseSportData | 骑行 |<br />| LSYogaDataType | LSBaseSportData | 瑜伽 |<br />| LSFitnessDataType | LSBaseSportData | 健身 |<br />| LSBasketballDataType | LSBaseSportData | 篮球 |<br />| LSFootballDataType | LSBaseSportData | 足球 |<br />| LSBadmintonDataType | LSBaseSportData | 羽毛球 |<br />| LSVolleyballDataType | LSBaseSportData | 排球 |<br />| LSTableTennisDataType | LSBaseSportData | 乒乓球 |<br />| ExsportDataType | LSBaseSportData | 电竞 |<br />| LSTaiJiDataType | LSBaseSportData | 太极 |<br />| IndoorRunSportDataType | UWalkingData | 室内跑 |<br />| EllipticalTrainerSportDataType | LSBaseSportData | 椭圆机 |<br />| OxSportDataType | LSBaseSportData | 有氧运动 |<br />| GymDanceType | LSBaseSportData | 健身舞 |<br />| RunningCaloriesDataType | RunningCaloriesData | 步数卡路里数据 |
 
 
-<br />
-
-<a name="f758bcd5"></a>
+<a name="Bv62a"></a>
 ### 4.3.2、血压测量数据回调
-
 
 - 功能：返回血压测量数据，详细参数请在数据结构中查看
 - 接口：
-
-
-
-```java
+```objectivec
 /// 血压测量数据
 /// @param bloodPressureData model
 - (void)onReceiveBloodPressureMeasureData:(LSSphygmometerData *)bloodPressureData;
 ```
 
-
 - 调用示例
-
-
-
-```java
+```objectivec
 //设置代理
 [LSDeviceManager shareInstance].braceletDataDelegate = self;
 
@@ -591,30 +428,19 @@ pod 'MBProgressHUD', '0.9.2'
 
 }
 ```
-
-<br />
-
-<a name="20d50261"></a>
+<a name="GL3Pl"></a>
 ### 4.3.2、体重数据回调
-
 
 - 功能：返回体重测量数据，详细参数请在数据结构中查看
 - 接口：
-
-
-
-```java
+```objectivec
 /// 体重数据
 /// @param weightData model
 - (void)onReceiveScalesWeightData:(WeightData *)weightData;
 ```
 
-
 - 调用示例
-
-
-
-```java
+```objectivec
 //设置代理
 [LSDeviceManager shareInstance].braceletDataDelegate = self;
 
@@ -623,142 +449,84 @@ pod 'MBProgressHUD', '0.9.2'
    
 }
 ```
-
-<br />
-
-<a name="9bce8647"></a>
+<a name="Zw4e0"></a>
 ### 4.3.3、wifi扫描结果回调
-
 
 - 功能：通过蓝牙方式配网的秤调用，获取到当前设备扫描到的wifi信息
 - 接口：
-
-
-
-```java
+```objectivec
 /// wifi扫描结果回调
 /// @param ssidNameAry model
 - (void)onReceiveSaclesSsidName:(LSScaleWifiModel *)wifiMode;
 ```
-
-<br />
-
-<a name="ec37f47a"></a>
+<a name="P4Ycv"></a>
 ### 4..3.4、wifi连接状态回调
-
 
 - 功能：通过蓝牙方式配网的秤调用，获取当前wifi配网状态
 - 接口
-
-
-
-```java
+```objectivec
 /// 接收wifi连接状态回调
 /// @param state 0成功 1失败
 - (void)onReceiveScalesWifiConnectState:(NSInteger *)state;
 ```
-
-<br />
-
-<a name="0145f167"></a>
+<a name="3iqfp"></a>
 # 五、下发设置
-
-<br />
-
-<a name="41d2c629"></a>
+<a name="R10Rw"></a>
 ## 5.1、体脂(体重)秤设置
-
-<br />
-
-<a name="1db56970"></a>
+<a name="ZM1BA"></a>
 ### 5.1.1、设置秤的用户信息
-
 
 - 功能：设备脂肪秤或体重秤的用户信息
 - 接口：
-
-
-
-```java
+```objectivec
 /// 设置A6体重秤的用户信息
 /// @param deviceId 设备id
 /// @param userInfo 用户信息
 /// @param completion 回调
 - (void)setScaleUserInfo:(NSString *)deviceId userInfo:(LSEScaleUserInfoCfg *)userInfo completion:(Completion)completion;
 ```
-
-<br />
-
-<a name="39171e2d"></a>
+<a name="iYerA"></a>
 ### 5.1.2、设置重量单位
-
 
 - 功能：更新设备（互联秤）的体重单位
 - 接口：
-
-
-
-```java
+```objectivec
 /// 设置体重单位
 /// @param deviceId deviceId
 /// @param unitType 体重单位
 /// @param completion 回调
 -(void)setWeightUnit:(NSString *)deviceId unitType:(UnitType)unitType completion:(Completion)completion;
 ```
-
-<br />
-
-<a name="45b28ed1"></a>
+<a name="aQzsh"></a>
 ### 5.1.3、扫描wifi
-
 
 - 功能：支持通过蓝牙进行wifi配网的设备调用
 - 接口：
-
-
-
-```java
+```objectivec
 /// 扫描wifi
 /// @param deviceId 设备id
 - (void)scanWifiWith:(NSString *)deviceId;
 ```
-
-<br />
-
-<a name="f9c4ae72"></a>
+<a name="7wvhB"></a>
 ### 5.1.4、蓝牙wifi配网
-
 
 - 功能：连接wifi配网能力
 - 接口：
-
-
-
-```java
+```objectivec
 /// 连接wifi
 /// @param bssid bssid
 /// @param pwd wifi密码
 /// @param deviceId 设备id
 - (void)connectWifi:(NSString *)bssid password:(NSString *)pwd deviceId:(NSString *)deviceId;
 ```
-
-<br />
-
-<a name="3dc43200"></a>
+<a name="6petd"></a>
 ## 5.2、手环设置
-
-<br />
-
-<a name="f5e8c9c9"></a>
+<a name="jMF5v"></a>
 ### 5.2.1、设置手环用户信息
-
 
 - 功能：设置手环相关信息
 - 接口：
-
-
-
-```java
+```objectivec
 /// 设置手环设置项
 /// @param data 设置数据model
 /// @param deviceId 设备Id
@@ -767,76 +535,69 @@ pod 'MBProgressHUD', '0.9.2'
 - (void)setBraceletWithData:(id)data deviceId:(NSString *)deviceId setType:(LSBraceletSettingStateType)setType completion:(Completion)completion;
 ```
 
+- 参数：根据手环设置项LSBraceletSettingStateType枚举来匹配对应的数据model
+| LSBraceletSettingStateType 枚举 | 设置项数据model类 | 说明 |
+| --- | --- | --- |
+| LSSwimmingLenghtSetType | LSESwimmingInfoCfg | 设置游泳池长度 |
+| LSSportPagesSetType | LSSportItemSwitch | 运动项设置 |
+| LSStepTargetSetType | StepTargetCfg | 设置步数目标 |
+| LSHeartRateMeatureSetType | HeartrateSwitchCfg | 心率监测设置 |
+| LSEncourageSetType | EncourageCfg | 步数、卡路里、距离目标设置 |
+| LSSedentaryInfoType | SedentaryCfg | 久坐提醒设置 |
+| LSHeartRateRemindSetType | LSEHRRemindCfg | 心率预警 |
+| LSNightModeSetType | NightModeCfg | 夜间模式设置 |
+| LSMsgReminderSetType | MessageReminderCfg | 消息提醒 |
+| LSNoDisturbModeSetType | NoDisturbModeCfg | 勿扰模式 |
+| LSTimeTypeSetType | TimeFormatCfg | 时间制式 |
+| LSWristStateSettype | WearStateCfg | 佩戴习惯 |
+| LSScreenDirectionSetType | ScreenDirectionCfg | 设置屏幕方向 |
+| LSScreenContentSetType | ScreenContentSwitch | 自定义屏幕 |
+| LSAutomaticSportsSetType | LSEAutomaticSportstypeCfg | 自动识别多运动类型 |
+| LSDialTypeSetType | LSEDialModelCfg | 设置手环表盘 |
+| LSWeatherDataSetType | LSEWeatherData | 设置天气 |
+| LSSportInfoSetType | LSESportsInfoCfg | 设置运动信息 |
+| LSAlarmClockSetType | AlarmClockCfg | 设置闹铃 |
 
-- 参数：根据手环设置项LSBraceletSettingStateType枚举来匹配对应的数据model<br />| LSBraceletSettingStateType 枚举 | 设置项数据model类 | 说明 |<br />| --- | --- | --- |<br />| LSSwimmingLenghtSetType | LSESwimmingInfoCfg | 设置游泳池长度 |<br />| LSSportPagesSetType | LSSportItemSwitch | 运动项设置 |<br />| LSStepTargetSetType | StepTargetCfg | 设置步数目标 |<br />| LSHeartRateMeatureSetType | HeartrateSwitchCfg | 心率监测设置 |<br />| LSEncourageSetType | EncourageCfg | 步数、卡路里、距离目标设置 |<br />| LSSedentaryInfoType | SedentaryCfg | 久坐提醒设置 |<br />| LSHeartRateRemindSetType | LSEHRRemindCfg | 心率预警 |<br />| LSNightModeSetType | NightModeCfg | 夜间模式设置 |<br />| LSMsgReminderSetType | MessageReminderCfg | 消息提醒 |<br />| LSNoDisturbModeSetType | NoDisturbModeCfg | 勿扰模式 |<br />| LSTimeTypeSetType | TimeFormatCfg | 时间制式 |<br />| LSWristStateSettype | WearStateCfg | 佩戴习惯 |<br />| LSScreenDirectionSetType | ScreenDirectionCfg | 设置屏幕方向 |<br />| LSScreenContentSetType | ScreenContentSwitch | 自定义屏幕 |<br />| LSAutomaticSportsSetType | LSEAutomaticSportstypeCfg | 自动识别多运动类型 |<br />| LSDialTypeSetType | LSEDialModelCfg | 设置手环表盘 |<br />| LSWeatherDataSetType | LSEWeatherData | 设置天气 |<br />| LSSportInfoSetType | LSESportsInfoCfg | 设置运动信息 |<br />| LSAlarmClockSetType | AlarmClockCfg | 设置闹铃 |
-
-
-<br />
-
-<a name="e4ac3b29"></a>
+<a name="1QfWa"></a>
 ### 5.2.2、获取手环设置项
-
 
 - 功能：获取手环相关设置项
 - 接口：
-
-
-
-```java
+```objectivec
 /// 获取手环设置项
 /// @param deviceId 设备Id
 /// @param setType 设置项类型
 - (id)redBraceletWithDeviceId:(NSString *)deviceId setType:(LSBraceletSettingStateType)setType;
 ```
-
-<br />
-
-<a name="d2ed841b"></a>
+<a name="9NHYD"></a>
 ### 5.2.3、开启获取实时心率
-
 
 - 功能：获取手环实时心率
 - 接口：
-
-
-
-```java
+```objectivec
 /// 开启获取实时心率
 /// @param device 设备信息
 /// @param completeHandler 开启实时心率结果状态，查看枚举LSRealTimeResultStatus
 - (void)enableRealTimeHeartRateAcquisition:(Device *)device completeHandler:(RealTimeHRStatusBlock)completeHandler;
+
 ```
-
-<br />
-
-<a name="f560eef1"></a>
+<a name="NkHIQ"></a>
 ### 5.2.4、关闭获取实时心率
-
 
 - 功能：关闭手环实时心率
 - 接口
-
-
-
-```java
+```objectivec
 /// 关闭获取实时心率
 /// @param device 设备信息
 /// @param completeHandler 关闭实时心率结果状态，查看枚举LSRealTimeResultStatus
 - (void)disableRealTimeHeartRateAcquisition:(Device *)device completeHandler:(RealTimeHRStatusBlock)completeHandler;
 ```
-
-<br />
-
-<a name="369551e0"></a>
+<a name="CrFSs"></a>
 ### 5.2.5、读取设备电量
-
 
 - 功能：读取设备电量
 - 接口：
-
-
-
-```java
+```objectivec
 /**
  *  获取电量信息
  *  @param deviceId 设备Id
@@ -844,43 +605,26 @@ pod 'MBProgressHUD', '0.9.2'
  */
 - (NSNumber *)getDeviceBatteryWithDeviceId:(NSString *)deviceId;
 ```
-
-<br />
-
-<a name="110f7541"></a>
+<a name="aGOwk"></a>
 ### 5.2.6、更新手机GPS状态到手环显示界面
-
 
 - 功能：设置手机GPS状态到手环
 - 接口：
-
-
-
-```java
+```objectivec
 /**
  设置GPS状态到手环（手环界面显示）
  @param enable GPS是否可用
  */
 - (void)setGPSState:(NSString *)deviceId enable:(BOOL)enable completion:(Completion)completion;
 ```
-
-<br />
-
-<a name="a1f7391e"></a>
+<a name="63VsC"></a>
 # 六、配网
-
-<br />
-
-<a name="464efaaa"></a>
+<a name="PP8WZ"></a>
 ## 6.1、获取wifi配置状态
-
 
 - 功能：获取wifi配置状态，已配置会返回当前ssid，未配置会返回nil
 - 接口：
-
-
-
-```java
+```objectivec
 /**
  *  获取WiFi配置状态
  *
@@ -889,19 +633,12 @@ pod 'MBProgressHUD', '0.9.2'
  */
 - (void)getDevWiFiStatusWithDeviceId:(NSString *)deviceId Completion:(void(^)(WiFiCfg *cfg))completion;
 ```
-
-<br />
-
-<a name="4bff18ec"></a>
+<a name="fssEE"></a>
 ## 6.2、配置wifi设备密码
-
 
 - 功能：配置wifi设备密码
 - 接口：
-
-
-
-```java
+```objectivec
 /**
  *  配置wifi设备密码
  *
@@ -912,80 +649,48 @@ pod 'MBProgressHUD', '0.9.2'
  */
 - (void)configWifiDevice:(NSString *)deviceId ssid:(NSString *)ssid passWord:(NSString *)passWord Completion:(void(^)(AirKissCode code, LSEWifiConfigType type, NSUInteger time))completion;
 ```
-
-<br />
-
-<a name="73aa3f10"></a>
+<a name="XIFSi"></a>
 ## 6.3、中断wifi设备密码配置
-
 
 - 功能：断开当前设备wifi密码配置
 - 接口
-
-
-
-```java
+```objectivec
 /**
  *  中断wifi设备密码配置
  */
 - (void)interruptConfigWifiDevice;
 ```
-
-<br />
-
-<a name="d36c104b"></a>
+<a name="3xw1l"></a>
 # 七、固件升级
-
-<br />
-
-<a name="330e6a38"></a>
+<a name="q4hNW"></a>
 ## 7.1、开始升级固件
-
 
 - 功能：升级设备固件
 - 接口：
-
-
-
-```java
+```objectivec
 /// 升级设备固件（ota）
 /// @param deviceId 设备id
 /// @param hexFile 升级包
 - (void)upgradeDevice:(NSString *)deviceId hexFile:(NSString *)hexFile;
 ```
-
-<br />
-
-<a name="31d7c502"></a>
+<a name="SDLUO"></a>
 ## 7.2、中断固件升级
-
 
 - 功能：取消当前设备的固件升级操作；设备屏幕当前显示的内容是“Update Mode”表示设备已进入升级模
 
-
-<br />式，“Updating……”表示升级过程中。<br />
+式，“Updating……”表示升级过程中。
 
 - 接口：
-
-
-
-```java
+```objectivec
 /// 取消升级设备(ota)
 - (void)cancelUpgradeDevice;
 ```
-
-<br />
-
-<a name="a8a09d44"></a>
+<a name="s79v3"></a>
 # 八、数据结构
-
-<br />SDK 接口使用的实体类<br />
-
-<a name="58fd3b38"></a>
+SDK 接口使用的实体类
+<a name="fLpXa"></a>
 ### 8.1.1、BraceletReceiveData （手环数据父类，包含基本设备信息和用户信息）
-
-
-```java
+```objectivec
 /// 数据唯一id UUID
 @property (nonatomic, copy) NSString *dataId;
 /// 用户id
@@ -997,14 +702,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 设备型号
 @property (nonatomic, copy) NSString *model;
 ```
-
-<br />
-
-<a name="dce798bb"></a>
+<a name="VnxQQ"></a>
 ### 8.1.2、LSEDeviceInfo（设备厂商信息）
-
-
-```java
+```objectivec
 /// 设备展示名称
 @property (nonatomic, copy) NSString *displayName;
 /// 设备广播名
@@ -1026,14 +726,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 设备类型
 @property (nonatomic, assign) int deviceType;
 ```
-
-<br />
-
-<a name="d65b55f8"></a>
+<a name="AiWKf"></a>
 ### 8.1.3、WalkingData（步数数据）
-
-
-```java
+```objectivec
 /// 步数
 @property (nonatomic, copy) NSNumber *step;
 /// 卡路里
@@ -1047,14 +742,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 测量时间
 @property (nonatomic, copy) NSNumber *measurementTime;
 ```
-
-<br />
-
-<a name="285ef855"></a>
+<a name="MuY0O"></a>
 ### 8.1.4、HeartRateData （日常心率）
-
-
-```java
+```objectivec
 /// 测量开始时间
 @property (nonatomic, copy) NSNumber *measurementDate;
 /// utc偏移量
@@ -1064,14 +754,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 原始数据
 @property (nonatomic, strong)NSData *srcData;
 ```
-
-<br />
-
-<a name="96cae547"></a>
+<a name="VPdlr"></a>
 ### 8.1.5、SportHeartRateData （运动心率）
-
-
-```java
+```objectivec
 /// 偏移量
 @property(nonatomic,assign)int utcoffset;
 /// 心率数据列表
@@ -1083,14 +768,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 测量开始时间
 @property (nonatomic,strong) NSNumber *measurementTime;
 ```
-
-<br />
-
-<a name="d3570c11"></a>
+<a name="SGCJb"></a>
 ### 8.1.6、SleepingData （睡眠）
-
-
-```java
+```objectivec
 /// 原始数据唯一ID uuid
 @property (nonatomic, copy) NSString *id;
 /// 设备剩余多少条数据
@@ -1108,27 +788,17 @@ pod 'MBProgressHUD', '0.9.2'
 /// 创建时间
 @property (nonatomic, copy) NSNumber *createTime;
 ```
-
-<br />
-
-<a name="14b36425"></a>
+<a name="rgrtI"></a>
 ### 8.1.7、UWalkingData （健走）
-
-
-```java
+```objectivec
 /// 健走总步数
 @property (nonatomic, assign)  int step;
 /// 获取健走频率信息(只读)
 @property (nonatomic, strong)  NSArray<LSDMWalkingFreqInfo *> *walkFreqList;
 ```
-
-<br />
-
-<a name="ffe3e2c8"></a>
+<a name="xb46E"></a>
 ### 8.1.8、SportStateData （手环通知手机进入运动模式数据）
-
-
-```java
+```objectivec
 /// 功能检测
 @property (nonatomic,assign) LSEFunctionTestType functionTest;
 /// 开关状态
@@ -1136,38 +806,23 @@ pod 'MBProgressHUD', '0.9.2'
 // 运动类型，0x00：预留,0x01：跑步,0x02：健走,0x03：骑行,0x04：游泳,0x05：健身
 @property (nonatomic, assign) LSESportModeType type;
 ```
-
-<br />
-
-<a name="dfb0049e"></a>
+<a name="AhVZb"></a>
 ### 8.1.9、SwimmingData （游泳）
-
-
-```java
+```objectivec
 /// 游泳圈数
 @property (nonatomic, assign) NSUInteger laps;
 ```
-
-<br />
-
-<a name="09d20efc"></a>
+<a name="BqLIU"></a>
 ### 8.2.0、RunningData （跑步数据）
-
-
-```java
+```objectivec
 /// 跑步总步数
 @property(nonatomic,assign)int totalStep;
 /// 运动频率数据
 @property(nonatomic,strong)NSArray <RunningState *> *runningStates;
 ```
-
-<br />
-
-<a name="9b6f5d37"></a>
+<a name="L76nb"></a>
 ### 8.2.1、LSBaseSportData （骑行、瑜伽、健身、篮球、足球、羽毛球、排球、乒乓球、电竞、太极、椭圆机、有氧运动、健身舞）
-
-
-```java
+```objectivec
 /// 上传服务器锻炼类型 (1,"跑步"),(2,"健走"),(3,"骑行"),(4,"游泳"),(5,"健身"),(6,"篮球"),(7,"足球"),(8,"羽毛球"),(9,"排球"),(10,"乒乓球"),(11,"瑜伽"),(12,"电竞"),(15,"室内跑"),(16,"椭圆机"),(19,"健身操"),(20,"打太极"),(21,"力量训练")
 @property (nonatomic, assign) NSInteger exerciseType;
 /// 子运动模式
@@ -1197,27 +852,17 @@ pod 'MBProgressHUD', '0.9.2'
 /// 距离
 @property (nonatomic, copy) NSNumber *distance;
 ```
-
-<br />
-
-<a name="138475f7"></a>
+<a name="D4EJa"></a>
 ### 8.2.2、UWalkingData （室内跑）
-
-
-```java
+```objectivec
 /// 健走总步数
 @property (nonatomic, assign)  int step;
 /// 获取健走频率信息(只读)
 @property (nonatomic, strong)  NSArray<LSDMWalkingFreqInfo *> *walkFreqList;
 ```
-
-<br />
-
-<a name="dd8909e4"></a>
+<a name="srCX2"></a>
 ### 8.2.3、RunningCaloriesData （步数卡路里数据）
-
-
-```java
+```objectivec
 /// 卡路里数据类型，新或旧，如果是新的，则sportMode和subMode的值有意义。 如果是旧的，则sportMode和subMode无意义，不要使用
 @property (nonatomic, assign) LSDMSportCaloriesDataType type;
 /// 产生卡路里的运动类型
@@ -1235,60 +880,35 @@ pod 'MBProgressHUD', '0.9.2'
 /// 测量时间
 @property (nonatomic, assign) long long *measurementTime;
 ```
-
-<br />
-
-<a name="7fcb87e8"></a>
+<a name="zMeBl"></a>
 ### 8.2.4、LSESwimmingInfoCfg （设置游泳池长度）
-
-
-```java
+```objectivec
 /// 泳池长度
 @property(nonatomic, assign) NSUInteger poolLength;
 ```
-
-<br />
-
-<a name="904e81df"></a>
+<a name="E3z6v"></a>
 ### 8.2.5、LSSportItemSwitch （运动项设置）
-
-
-```java
+```objectivec
 /// 类型
 @property (nonatomic, assign) LSSportItemType type;
 /// 开/关
 @property (nonatomic, assign) BOOL state;
 ```
-
-<br />
-
-<a name="ff127e68"></a>
+<a name="jjPBM"></a>
 ### 8.2.6、StepTargetCfg （设置步数目标）
-
-
-```java
+```objectivec
 /// 步数
 @property(nonatomic,assign)int step;
 ```
-
-<br />
-
-<a name="8c826495"></a>
+<a name="DYKRX"></a>
 ### 8.2.7、HeartrateSwitchCfg （心率监测设置）
-
-
-```java
+```objectivec
 /// 设置类型
 @property (nonatomic, assign) HeartrateSwitchType type;
 ```
-
-<br />
-
-<a name="e152adab"></a>
+<a name="7hcc0"></a>
 ### 8.2.8、EncourageCfg （步数、卡路里、距离目标设置）
-
-
-```java
+```objectivec
 /// 目标值,已抛弃,切勿使用
 @property(nonatomic,assign) int steps;
 /// 鼓励类型
@@ -1304,14 +924,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 距离 （A6 H1_watch）
 @property(nonatomic,assign) float distanceNum;
 ```
-
-<br />
-
-<a name="c55ed5ac"></a>
+<a name="enZGQ"></a>
 ### 8.2.9、SedentaryCfg （久坐提醒设置）
-
-
-```java
+```objectivec
 /// 是否打开闹钟
 @property(nonatomic,assign)BOOL enable;
 /// 闹钟开始时间（时）
@@ -1327,14 +942,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 重复时间
 @property(nonatomic,copy) NSString *weeks;
 ```
-
-<br />
-
-<a name="5de0ac3b"></a>
+<a name="mPrUx"></a>
 ### 8.3.0、LSEHRRemindCfg （心率预警）
-
-
-```java
+```objectivec
 /// 心率上限
 @property (nonatomic ,assign) NSInteger heartRateMax;
 /// 心率下限
@@ -1342,14 +952,9 @@ pod 'MBProgressHUD', '0.9.2'
 /// 心率提醒开关
 @property (nonatomic ,assign) BOOL isOpen;
 ```
-
-<br />
-
-<a name="c5fd4523"></a>
+<a name="wveMa"></a>
 ### 8.3.1、NightModeCfg （夜间模式设置）
-
-
-```java
+```objectivec
 /// 是否打开夜间模式
 @property (nonatomic, assign) BOOL isOpen;
 /// 与isOpen一样，不用设置该值，这里只是为了兼容android的json序列化与UI不需要更改而加的值
@@ -1363,25 +968,15 @@ pod 'MBProgressHUD', '0.9.2'
 /// 结束时间（分）
 @property (nonatomic, assign) NSUInteger endMinute;
 ```
-
-<br />
-
-<a name="8ef356d1"></a>
+<a name="CjmW0"></a>
 ### 8.3.2、MessageReminderCfg （消息提醒）
-
-
-```java
+```objectivec
 /// 设置的运动项
 @property(nonatomic, strong) NSArray<MessageReminderCfg *> *items;
 ```
-
-<br />
-
-<a name="a470c9b1"></a>
+<a name="43FOc"></a>
 ### 8.3.3、NoDisturbModeCfg （勿扰模式）
-
-
-```java
+```objectivec
 /// 是否打开勿扰模式
 @property (nonatomic, assign) BOOL isOpen;
 /// 勿扰模式下是否抬手亮屏
@@ -1395,117 +990,72 @@ pod 'MBProgressHUD', '0.9.2'
 /// 结束时间（分）
 @property (nonatomic, assign) NSUInteger endMinute;
 ```
-
-<br />
-
-<a name="24e59fc2"></a>
+<a name="dYuLp"></a>
 ### 8.3.4、TimeFormatCfg （时间制式）
-
-
-```java
+```objectivec
 /// 手环时间显示类型（时制）
 @property (nonatomic, assign) TimeType type;
 ```
-
-<br />
-
-<a name="56f82cef"></a>
+<a name="45l5d"></a>
 ### 8.3.5、WearStateCfg （佩戴习惯）
-
-
-```java
+```objectivec
 /// 穿戴习惯设置类
 @interface WearStateCfg : NSObject
 /// 穿戴类型
 @property (nonatomic, assign) WearStateType type;
 ```
-
-<br />
-
-<a name="e955cacc"></a>
+<a name="Au3qS"></a>
 ### 8.3.6、ScreenDirectionCfg （设置屏幕方向）
-
-
-```java
+```objectivec
 /// 手环显示方向设置类
 @interface ScreenDirectionCfg : NSObject
 /// 显示方向
 @property (nonatomic, assign) ScreenDirectionType type;
 ```
-
-<br />
-
-<a name="d813e122"></a>
+<a name="l8KS3"></a>
 ### 8.3.7、ScreenContentSwitch （自定义屏幕）
-
-
-```java
+```objectivec
 /// 类型
 @property (nonatomic, assign) ScreenContentType type;
 /// 开/关
 @property (nonatomic, assign) BOOL state;
 ```
-
-<br />
-
-<a name="dfd60efc"></a>
+<a name="q9UcV"></a>
 ### 8.3.8、LSEAutomaticSportstypeCfg（自动识别多运动类型）
-
-
-```java
+```objectivec
 /// 运动类型
 @property (nonatomic, assign) LSEAutomaticSportstype automaticSportstype;
 /// 自动识别开关
 @property (nonatomic, assign) BOOL isOpen;
 ```
-
-<br />
-
-<a name="3d933581"></a>
+<a name="gKQqe"></a>
 ### 8.3.9、LSEDialModelCfg（设置手环表盘）
-
-
-```java
+```objectivec
 /// 表盘模式
 @property (nonatomic, assign) LSEDialModelType type;
 ```
-
-<br />
-
-<a name="d7d69db9"></a>
+<a name="yjyGL"></a>
 ### 8.4.0、LSEWeatherData（设置天气）
-
-
-```java
+```objectivec
 /// 天气更新的时间utc(天气获取时刻的时间，不是手机系统的时间)
 @property (nonatomic, assign) long long updateTime;
 @property (nonatomic, strong) NSString *where;
 /// 查看已经添加的未来天气信息对象
 @property (nonatomic, strong) NSArray<LSEFutureWeatherModel*> *weatherModels;
 ```
-
-<br />
-
-<a name="7b48531b"></a>
+<a name="wXmkz"></a>
 ### 8.4.1、LSESportsInfoCfg（设置运动信息）
-
-
-```java
+```objectivec
 /// 配速(单位：s)
 @property(nonatomic, assign) NSUInteger speed;
 /// 距离(单位：m)
 @property(nonatomic, assign) NSUInteger distance;
 ```
-
-<br />
-
-<a name="76528c28"></a>
+<a name="u3d5m"></a>
 ### 8.4.2、AlarmClockCfg（设置闹铃）
-
-<br />
-<br />
-
-```java
+<a name="Udskf"></a>
+### 
+```objectivec
 /// 事件提醒序号
 @property (nonatomic, assign) int index;
 /// 是否打开闹钟
@@ -1526,132 +1076,54 @@ pod 'MBProgressHUD', '0.9.2'
 @property (nonatomic ,strong) NSString *clockUuid;
 /// 闹钟类型
 @property (nonatomic ,assign) LSEClockType clockType;
+
 ```
-
-<br />
-
 <a name="dcf8f063"></a>
 # 九、乐智UI
-
-<br />
-
 <a name="f18377ec"></a>
 ## 9.1、更新用户信息
 
-
 - 功能描述：如果用户信息未设置，可以用这个接口设置用户信息
 - 接口：
-
-
-
-```java
+```objectivec
 /// 更新用户信息
 /// @param userInfo 用户信息
 - (void)updateUserInfo:(LSBluetoothUIUserInfo *)userInfo completion:(void(^)(LSBluetoothResultType resultType))completion;
 ```
-
-<br />
-
 <a name="b1887611"></a>
 ## 9.2、调用UI页面
-
-<br />
-
 <a name="ed4ccbcf"></a>
 ### 9.2.1、获取设备列表页
-
-
-```java
+```objectivec
 /// 设备列表页面
 - (UIViewController *)lsPageDeviceList;
 ```
-
-<br />
-
 <a name="8c0b700f"></a>
 ### 9.2.2、获取我的设备页面
-
-
-```java
+```objectivec
 /// 我的设备页面
 - (UIViewController *)lsPageBindDeviceList;
 ```
-
-<br />
-
 <a name="64f59ce3"></a>
 ### 9.2.3、打开体重页面
-
-
-```java
+```objectivec
 /// 打开体重页面
 - (void)lsOpenWeightPage;
 ```
-
-<br />
-
 <a name="872e220c"></a>
 ### 9.2.4、打开血压页面
-
-
-```java
+```objectivec
 /// 血压页面
 - (void)lsBloodpressurePage;
 ```
 
-<br />
 
-<a name="09f88fda"></a>
-### 9.2.5、打开心率页面
-
-
-```java
-/// 心率页面
-- (void)lsHeartRatePage;
-```
-
-<br />
-
-<a name="670f6ad7"></a>
-### 9.2.6、打开有氧能力页面
+<a name="867sn"></a>
+# 九、Q&A
 
 
-```java
-/// 有氧能力
-- (void)lsAerobicRatePage;
-```
+<a name="CPIGK"></a>
+# 十、技术支持群
+扫码添加后会收到邀请入群信息<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1601043310118-c90f3ed4-b022-487b-a784-d945ac0f3091.png#align=left&display=inline&height=1398&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1398&originWidth=1080&size=538697&status=done&style=none&width=1080)<br />
 
-<br />
-
-<a name="ed559002"></a>
-### 9.2.7、打开睡眠页面
-
-
-```java
-/// 睡眠
-- (void)lsSleepRatePage;
-```
-
-<br />
-
-<a name="fb28c050"></a>
-### 9.2.8、打开步数页面
-
-
-```java
-/// 步数
-- (void)lsStepPage;
-```
-
-<br />
-
-<a name="5f91a8d4"></a>
-# 十、Q&A
-
-<br />
-
-<a name="eecaf9b7"></a>
-# 十一、技术支持群
-
-<br />扫码添加后会收到邀请入群信息<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1601043310118-c90f3ed4-b022-487b-a784-d945ac0f3091.png#align=left&display=inline&height=1398&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1398&originWidth=1080&size=538697&status=done&style=none&width=1080#align=left&display=inline&height=1398&margin=%5Bobject%20Object%5D&originHeight=1398&originWidth=1080&status=done&style=none&width=1080)
 
