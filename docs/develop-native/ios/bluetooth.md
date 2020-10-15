@@ -52,6 +52,7 @@
 ## 2.1、蓝牙SDK下载
 | 版本 | 下载地址 | 版本更新日志 |
 | --- | --- | --- |
+| 1.4.9 | [LSDeviceBluetooth-1.4.9](http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceFramework-1.4.9.zip?e=1602749788&attname=&token=fCj0mxPVEsXXpyTOBQ32smvgMng0P-pLEc6rpY94:zCTUd22fpNnNXnhRlNogaqOi7HI=) | iOS DeploymentTarget 更改为11.0 |
 | 1.4.8 | [LSDeviceBluetooth-1.4.8](http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceBluetooth-V1.4.8.zip) | IoT平台时区接入 |
 
 
