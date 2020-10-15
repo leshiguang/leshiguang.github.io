@@ -74,7 +74,18 @@ void login(Context context, int tenantId, int subscriptionId, String association
 1. 确定应用需要接入的设备型号列表（如果是进行设备鉴权的话必须填写）
 1. 确定应用需要接入的服务（设备、算法、软件服务包）名称（用于获得服务ID和服务版本）
 
-材料确定后，发送申请接入邮件模板如下(前期以这种流程走， 后续sass平台将实现流程化接入)：<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1585813939926-3f95cfee-0f04-4bd4-aa81-c23b0c5b1b59.png#align=left&display=inline&height=305&margin=%5Bobject%20Object%5D&name=image.png&originHeight=356&originWidth=857&size=47422&status=done&style=none&width=734)<br />申请成功将会收到乐心的回复，回复内容中会包含一下信息：<br />1.tenantId （对应一个应用）<br />2.subscriptionId列表 （对应授权的服务ID和服务版本）
+材料确定后，发送申请接入邮件模板如下：
+```
+收件人：zhihui.xiao@lifesense.com,zheng.lu@lifesense.com
+抄送：chengze.wu@lifesense.com,yong.wu@lifesense.com,zhicheng.liu@lifesense.com,chuang.liu@lifesense.com,bangwei.mo@lifesense.com
+主题：【健康解决方案接入申请】（企业/组织/个人名称）
+邮件内容需要包含：
+1、接入目的：
+2、接入的设备类型和型号：
+3、接入的产品服务：
+4、bundleID：（ios和android的包ID， 用于备案）
+```
+申请成功将会收到乐心的回复，回复内容中会包含一下信息：<br />1.tenantId （对应一个应用）<br />2.subscriptionId列表 （对应授权的服务ID和服务版本）
 <a name="HdRE2"></a>
 #### 2.1.1.2、初始化（登录后调用）
 描述：初始化SDK<br />接口：com.lifesense.device.scale.application.interfaces.ILZDeviceService#init
