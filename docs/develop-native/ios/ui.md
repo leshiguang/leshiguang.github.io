@@ -78,11 +78,7 @@ pod 'MBProgressHUD', '0.9.2'
 #import <LSDeviceManagerFramework/LSDeviceManager.h>
 #import <LSAuthorization/LSAuthorization.h>
 ```
-2、设置代理
-
-- 功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调
-
-
+2、设置代理<br />功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调<br />
 
 ```objectivec
 //在需要实现代理方法的文件添加 LSDeviceComponentDelegate
@@ -96,8 +92,6 @@ pod 'MBProgressHUD', '0.9.2'
 - (void)onDeviceConnectStateChange:(BluetoothConnectState)connectState broadcastId:(NSString *)broadcastId {}
 ```
 
-<br />
-<br />
 <br />3、开启调试模式
 
 - 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
