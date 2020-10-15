@@ -18,12 +18,19 @@
 
 将准备好的材料以邮件的方式发送：
 
-- 接收者：lu.zheng@lifesense.com
-- 抄送: yong.wu@lifesense.com, zhicheng.liu@lifesense.com,chixiang.cai@lifesense.com,jianhua.liu@lifesense.com,chengze.wu@lifesense.com,zhihui.xiao@lifesense.com,bangwei.mo@lifesense.com
-- 主题：【蓝牙SDK接入申请】（企业/组织/个人）-申请接入
-- 邮件内容参考：
-
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1600952638602-0253cac6-c486-4f20-a64a-adf5c7ebf72e.png#align=left&display=inline&height=444&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=2034&size=237021&status=done&style=none&width=2034)<br />邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId通过邮件的形式回复给您
+- 邮件内容如下：
+```java
+收件人：zhihui.xiao@lifesense.com,zheng.lu@lifesense.com
+抄送：chengze.wu@lifesense.com,yong.wu@lifesense.com,zhicheng.liu@lifesense.com,chuang.liu@lifesense.com,bangwei.mo@lifesense.com
+主题：【蓝牙SDK准入申请】（企业/组织/个人名称）
+邮件内容需要包含：
+1、接入目的：
+2、接入的设备类型和型号：
+3、接入的产品服务：
+4、本次期望采购的硬件设备数量（多款设备分别陈述）：
+4、bundleID：（ios和android的包ID， 用于备案）
+```
+邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId通过邮件的形式回复给您
 <a name="jTuaD"></a>
 ## 1.3、SDK支持接入的设备
 | 设备类型 | 型号 |
