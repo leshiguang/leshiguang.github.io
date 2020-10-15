@@ -87,17 +87,18 @@ pod 'MBProgressHUD', '0.9.2'
 ```objectivec
 //在需要实现代理方法的文件添加 LSDeviceComponentDelegate
 @interface ViewController () <LSDeviceComponentDelegate>
-```
-```objectivec
+
 [[LSDeviceManager shareInstance] addDelegate:self];
-```
-```objectivec
+
 //实现代理方法
 - (void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object {}
 
 - (void)onDeviceConnectStateChange:(BluetoothConnectState)connectState broadcastId:(NSString *)broadcastId {}
 ```
-3、开启调试模式
+
+<br />
+<br />
+<br />3、开启调试模式
 
 - 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
 ```objectivec
@@ -132,14 +133,14 @@ pod 'MBProgressHUD', '0.9.2'
 - (void)initBluetoothUISDK:(LSBluetoothUIAccountInfo *)accuountInfo;
 ```
 <a name="3wW15"></a>
-### 2.3.3、开启自动接收数据的服务
+### 2.3.2、开启自动接收数据的服务
 ```objectivec
 [[LSDeviceManager shareInstance] startDataReceiveService];
 ```
 
 
 <a name="pLJFr"></a>
-### 2.3.4、停止数据接收服务
+### 2.3.3、停止数据接收服务
 ```objectivec
 [[LSBLEDeviceManager defaultLsBleManager] stopDataReceiveService];
 ```
