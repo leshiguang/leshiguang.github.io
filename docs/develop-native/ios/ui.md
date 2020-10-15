@@ -81,12 +81,17 @@ pod 'MBProgressHUD', '0.9.2'
 2、设置代理
 
 - 功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调
+
+
+
 ```objectivec
 //在需要实现代理方法的文件添加 LSDeviceComponentDelegate
 @interface ViewController () <LSDeviceComponentDelegate>
-
+```
+```objectivec
 [[LSDeviceManager shareInstance] addDelegate:self];
-
+```
+```objectivec
 //实现代理方法
 - (void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object {}
 
@@ -103,11 +108,11 @@ pod 'MBProgressHUD', '0.9.2'
 - 功能描述：三方登录鉴权
 - 接口：
 ```objectivec
-/// 第三方账号授权登录
-/// @param tenantId 租户ID
-/// @param subscriptionId 订阅ID
-/// @param associatedId 第三方账号
-/// @param complete 授权信息
+// 第三方账号授权登录
+// @param tenantId 租户ID
+// @param subscriptionId 订阅ID
+// @param associatedId 第三方账号
+// @param complete 授权信息
 - (void)authorize:(NSInteger)tenantId andSubscribe:(NSInteger)subscriptionId andThirdUserId:(NSString *)associatedId callback:(void (^)(LSAccountAuthorizeResponse *)) complete;
 ```
 5、设置LSDeviceManager登录态
@@ -169,9 +174,11 @@ pod 'MBProgressHUD', '0.9.2'
 <a name="juvi2"></a>
 ### 3.1.2、停止搜索设备
 
-
 - 功能描述：中断正在进行中的搜索，一般在离开搜索页面或搜索结束时调用
 - 接口：
+
+
+
 ```objectivec
 /// 停止搜索设备
 /// @param stopSearchBlock 停止收缩回调
