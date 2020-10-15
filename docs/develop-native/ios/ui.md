@@ -81,21 +81,28 @@ pod 'MBProgressHUD', '0.9.2'
 2、设置代理
 
 - 功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调
-```java
+```objectivec
 //在需要实现代理方法的文件添加 LSDeviceComponentDelegate
 @interface ViewController () <LSDeviceComponentDelegate>
+
+[[LSDeviceManager shareInstance] addDelegate:self];
+
+//实现代理方法
+- (void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object {}
+
+- (void)onDeviceConnectStateChange:(BluetoothConnectState)connectState broadcastId:(NSString *)broadcastId {}
 ```
 3、开启调试模式
 
 - 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
-```java
+```objectivec
 [[LSDeviceManager shareInstance] openDebug];
 ```
 4、登录
 
 - 功能描述：三方登录鉴权
 - 接口：
-```java
+```objectivec
 /// 第三方账号授权登录
 /// @param tenantId 租户ID
 /// @param subscriptionId 订阅ID
@@ -107,7 +114,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：设置用户Id到LSDeviceManager
 - 接口：
-```java
+```objectivec
 - (void)loginWithUserId:(NSString *)userId;
 ```
 6、调用乐智UI初始化<br />
@@ -117,7 +124,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 
-```java
+```objectivec
 /// 初始化
 /// @param accuountInfo 账号信息
 - (void)initBluetoothUISDK:(LSBluetoothUIAccountInfo *)accuountInfo;
@@ -126,14 +133,14 @@ pod 'MBProgressHUD', '0.9.2'
 ### 
 <a name="ulaUM"></a>
 ### 2.3.3、开启自动接收数据的服务
-```java
+```objectivec
 [[LSDeviceManager shareInstance] startDataReceiveService];
 ```
 
 
 <a name="pLJFr"></a>
 ### 2.3.4、停止数据接收服务
-```java
+```objectivec
 [[LSBLEDeviceManager defaultLsBleManager] stopDataReceiveService];
 ```
 <a name="TtGTp"></a>
