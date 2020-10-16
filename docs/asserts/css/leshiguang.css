@@ -928,7 +928,7 @@ pre:after {
 
 .sidebar .sidebar-nav {
     float: right;
-    width: 320px;
+    width: 350px;
     line-height: 2em;
     padding-bottom: 40px;
     padding-left: 50px;
@@ -958,9 +958,9 @@ pre:after {
     display: block
 }
 
-.sidebar ul li ul {
+/* .sidebar ul li ul {
     padding-left: 20px
-}
+} */
 
 /*.sidebar::-webkit-scrollbar {
 	width:4px
@@ -2042,7 +2042,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .sidebar-nav>ul {
     margin-left: 3.5714rem;
-    width: 17.8571rem;
+    width: 350px;
 }
 
 .sidebar-nav ul li {
@@ -2071,7 +2071,7 @@ input[type=search]::-webkit-search-cancel-button {
 /*涓€绾�*/
 
 .sidebar-nav>ul {
-    padding: 0.8571rem 0 2.8571rem 0;
+    padding: 0.8571rem 0 0 0;
     margin-left: 0;
 }
 
@@ -2139,7 +2139,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .sidebar-nav>ul>li>ul>li>ul {
     margin-left: 0;
-    padding-left: 1.1429rem;
+    /* padding-left: 1.1429rem; */
     border-left: 0.0714rem solid #E1E6EF;
 }
 
@@ -2563,9 +2563,6 @@ input[type=search]::-webkit-search-cancel-button {
     .sidebar {
         left: -300px;
         transition: transform .25s ease-out
-    }
-    .sidebar .sidebar-nav{
-        width: 280px;
     }
     .docs-header .search-input-wrapper {
         height: 40px;
