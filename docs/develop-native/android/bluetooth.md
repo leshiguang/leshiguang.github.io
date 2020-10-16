@@ -12,8 +12,8 @@
 ### 1.2.2、申请应用 ID
 准备材料如下：<br />
 
-- 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级 
-- 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息) 
+- 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级
+- 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息)
 - 准备一个接入者公司的 github 账号(可选，用于gradle依赖管理下载aar)
 
 将准备好的材料以邮件的方式发送：
@@ -100,7 +100,7 @@ repositories {
 	/**
 	 * <div class="en">init LSBleManager instance with Application Context</div>
 	 * <div class="zh">对象实例初始化</div>
-	 * 
+	 *
 	 * @since v1.0.0
 	 * @param appContext Application Context
 	 * @param appId identifierId for  tenants, apply this id from leshiguang portal
@@ -131,7 +131,7 @@ LsBleManager.getInstance().initialize(getApplicationContext(), "com.leshiguang.s
 	/**
 	 * <div class="en">Get LSBleManager instance init status</div>
 	 * <div class="zh">判断对象实例是否已初始化</div>
-	 * 
+	 *
 	 * @since v1.0.0
 	 * @return
 	 */
@@ -175,7 +175,7 @@ void registerMessageService ()
 	/**
 	 * <div class="en">Search Bluetooth device with device type or broadcast type.</div>
 	 * <div class="zh">根据设备类型列表、设备的广播类型搜索附近的乐心设备</div>
-	 * 
+	 *
 	 * @since V1.0.0
 	 * @param scanCallback scan resutls callback handler that will receive asynchronous callbacks.
 	 * @param typelist lifesense devices type list
@@ -906,25 +906,25 @@ com.lifesense.ble.OnDeviceReadListener是一个接口类，在调用接口readDe
 # 九、数据结构
 <a name="HcWL7"></a>
 ## 9.1、常量&枚举
-SDK 接口所用到的常量定义在 com.lifesense.ble.bean.constant 包里，使用这些枚举常量的时候可 以在项目里导入这个包，如 import com.lifesense.ble.bean.constant.*;或者指定导入某个常量。 
+SDK 接口所用到的常量定义在 com.lifesense.ble.bean.constant 包里，使用这些枚举常量的时候可 以在项目里导入这个包，如 import com.lifesense.ble.bean.constant.*;或者指定导入某个常量。
 <a name="1ny2l"></a>
 ### 9.1.1、DeviceType（设备类型}
- UNKNOWN 表示未知类型的设备 <br /> WEIGHT_SCALE 体重秤 <br /> PEDOMETER 手环或手表 <br /> SPHYGMOMANOMETER 血压计 <br /> KITCHEN_SCALE 厨房秤 <br /> HEIGHT_RULER 身高测量仪 <br /> FAT_SCALE 脂肪秤 
+ UNKNOWN 表示未知类型的设备 <br /> WEIGHT_SCALE 体重秤 <br /> PEDOMETER 手环或手表 <br /> SPHYGMOMANOMETER 血压计 <br /> KITCHEN_SCALE 厨房秤 <br /> HEIGHT_RULER 身高测量仪 <br /> FAT_SCALE 脂肪秤
 <a name="JgPki"></a>
 ### 9.1.2、BroadacstType(广播模式）
- ALL 全广播，包括正常与配对广播 <br /> NORMAL 正常广播信号 <br /> PAIR 配对广播信号 
+ ALL 全广播，包括正常与配对广播 <br /> NORMAL 正常广播信号 <br /> PAIR 配对广播信号
 <a name="lSAPl"></a>
 ### 9.1.3、SexType（性别）
-MALE 男性 <br />FEMALE 女性 
+MALE 男性 <br />FEMALE 女性
 <a name="FcS3q"></a>
 ### 9.1.4、UnitType（重量单位）
-UNIT_KG 以 kg 为计量单位 <br />UNIT_LB 以 lb 为计量单位 <br />UNIT_ST 以 st 为计量单位 
+UNIT_KG 以 kg 为计量单位 <br />UNIT_LB 以 lb 为计量单位 <br />UNIT_ST 以 st 为计量单位
 <a name="UnSui"></a>
 ### 9.1.5、HourSystem（时间制式）
-HOUR_24 24 小时制 <br />HOUR_12 12 小时制 
+HOUR_24 24 小时制 <br />HOUR_12 12 小时制
 <a name="wmi3J"></a>
 ### 9.1.6、LengthUnit（长度单位）
-KILOMETER 表示所用的计量单位为公里 <br />MILE 表示所用的计量单位为英里 
+KILOMETER 表示所用的计量单位为公里 <br />MILE 表示所用的计量单位为英里
 <a name="iy5Ws"></a>
 ### 9.1.7、DeviceConnectState（连接状态）
 CONNECTED_SUCCESS 表示连接成功 <br />CONNECTED_FAILED 表示连接失败 <br />DISCONNECTED 表示连接断开 <br />UNKNOWN 未知
@@ -978,75 +978,75 @@ SDK 接口使用的实体类定义在 com.lifesense.ble.bean 包里，使用这�
 String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String deviceName 设备名称 <br />String broadcastID 广播 ID，随机数 <br />String password 密码 <br />String deviceType 设备类型 <br />String modelNumber 设备型号 <br />String softwareVersion 软件版本 <br />String hardwareVersion 硬件版本 <br />String firmwareVersion 固件版本 <br />String manufactureName 制造商名称 <br />int deviceUserNumber 设备用户编号 <br />int pairStatus 配对状态标记 <br />int maxUserQuantity 最大用户数 <br />String protocolType 协议类型 <br />String macAddress 设备硬件地址 <br />String manufactureData 厂商自定义数据 V1.3.1 Int heartRate 当前测量的心率数据<br />Boolean delayDisconnect 延时断开状态<br />boolean autoRegister 自动注册标记
 <a name="AiWKf"></a>
 ### 9.2.2、PedometerInfo（手环基础信息）
-String macAddress 表示手环的 mac 地址 <br />String modelNumber 表示手环的型号 <br />String softwareVersion 表示手环的软件版本 <br />String hardwareVersion 表示手环的硬件版本 <br />int currentTimeZone 表示手环的当前时区 <br />boolean enableHeartRateDetection 心率检测开关 <br />String disableDetectionStartTime 表示手环的心率检测关闭起始时间 <br />String disableDetectionEndTime 表示手环的心率检测关闭结束时间 
+String macAddress 表示手环的 mac 地址 <br />String modelNumber 表示手环的型号 <br />String softwareVersion 表示手环的软件版本 <br />String hardwareVersion 表示手环的硬件版本 <br />int currentTimeZone 表示手环的当前时区 <br />boolean enableHeartRateDetection 心率检测开关 <br />String disableDetectionStartTime 表示手环的心率检测关闭起始时间 <br />String disableDetectionEndTime 表示手环的心率检测关闭结束时间
 <a name="SGCJb"></a>
 ### 9.2.3、DeviceUserInfo（设备用户数据）
-int userNumber 设备的用户编号 <br />String userName 设备的用户名 <br />String deviceId 设备 ID 
+int userNumber 设备的用户编号 <br />String userName 设备的用户名 <br />String deviceId 设备 ID
 <a name="1ajQs"></a>
 ### 9.2.4、HeightData（升高数据）
-类型 名称 注释 启动版本<br />String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double height 身高测量值 <br />String unit 测量单位 <br />int battery 设备电池电量级别 <br />int heightStatus 身高状态，0 表示未锁定，1 表示锁定 
+类型 名称 注释 启动版本<br />String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double height 身高测量值 <br />String unit 测量单位 <br />int battery 设备电池电量级别 <br />int heightStatus 身高状态，0 表示未锁定，1 表示锁定
 <a name="febu4"></a>
 ### 9.2.5、KitchenScaleData（厨房秤重量）
-String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />double weight 物体重量 <br />String unit 测量单位 <br />int battery 电池电量 <br />int sectionWeight 单位为 LB 和 ST 时前段的数值 <br />int countDownSeconds 倒数秒数 
+String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />double weight 物体重量 <br />String unit 测量单位 <br />int battery 电池电量 <br />int sectionWeight 单位为 LB 和 ST 时前段的数值 <br />int countDownSeconds 倒数秒数
 <a name="GIbvw"></a>
 ### 9.2.6、BloodPressureData（血压数据）
-String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />float systolic 收缩压（计算单位:mmHg） <br />float diastolic 舒张压（计算单位:mmHg） <br />float meanArterialPressure 平均血压 <br />long utc utc 时间 <br />float pulseRate 心率 <br />int userId 用户编号 <br />int battery 设备电池电量级别 <br />String bodyMovementDetectionFlag 身体运动检测标记 <br />String cuffFitDetectionFlag 袖带检测标记 <br />String irregularPulseDetectionFlag 不规则脉冲检测标记 <br />String pulseRateRangeDetectionFlags 脉率范围检测标记 <br />String measurementPositionDetectionFlag 测量位置标记 <br />String deviceSelectedUnit 设备的测量单位 
+String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />float systolic 收缩压（计算单位:mmHg） <br />float diastolic 舒张压（计算单位:mmHg） <br />float meanArterialPressure 平均血压 <br />long utc utc 时间 <br />float pulseRate 心率 <br />int userId 用户编号 <br />int battery 设备电池电量级别 <br />String bodyMovementDetectionFlag 身体运动检测标记 <br />String cuffFitDetectionFlag 袖带检测标记 <br />String irregularPulseDetectionFlag 不规则脉冲检测标记 <br />String pulseRateRangeDetectionFlags 脉率范围检测标记 <br />String measurementPositionDetectionFlag 测量位置标记 <br />String deviceSelectedUnit 设备的测量单位
 <a name="VHQa0"></a>
 ### 9.2.7、WeightAppendData（体重分析数据）
 
-<br />double basalMetabolism 基础代谢 <br />double bodyFatRatio 脂肪率 <br />double bodyWaterRatio 身体水分含量 <br />double muscleMassRatio 肌肉重量比 <br />double boneDensity 骨质密度 
+<br />double basalMetabolism 基础代谢 <br />double bodyFatRatio 脂肪率 <br />double bodyWaterRatio 身体水分含量 <br />double muscleMassRatio 肌肉重量比 <br />double boneDensity 骨质密度
 <a name="pg080"></a>
 ### 9.2.8、WeightData_A2（体重数据A2）
 
-<br />String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />double pbf 脂肪率 <br />double resistance_1 电阻值 1 <br />double resistance_2 电阻值 2 <br />String deviceSelectedUnit 当前测量单位 <br />int flag 标志位，1 表示脂肪秤，0 表示体重秤 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 体脂率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />byte battery 电池电量共有 7 个等级 <br />int weightStatus 测量状态，0 表示不稳定，1 表示稳定 <br />int impedanceStatus 电阻状态 <br />boolean hasAppendMeasurement 是否有脂肪相关数据标志位 <br />double voltageData 电压值 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位） 
+<br />String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />double pbf 脂肪率 <br />double resistance_1 电阻值 1 <br />double resistance_2 电阻值 2 <br />String deviceSelectedUnit 当前测量单位 <br />int flag 标志位，1 表示脂肪秤，0 表示体重秤 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 体脂率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />byte battery 电池电量共有 7 个等级 <br />int weightStatus 测量状态，0 表示不稳定，1 表示稳定 <br />int impedanceStatus 电阻状态 <br />boolean hasAppendMeasurement 是否有脂肪相关数据标志位 <br />double voltageData 电压值 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位）
 <a name="qoKyo"></a>
 ### 9.2.9、WeightData_A3（体重数据）
-String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />String weightDifferenceValue 体重差值 <br />double impedance 阻抗 <br />String deviceSelectedUnit 当前测量单位 <br />String accuracyStatus 测量数据准确性状态 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 脂肪率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />int battery 电池电量共有 7 个等级 <br />String weightStatus 体重测量值状态 <br />String impedanceStatus 电阻状态 <br />boolean appendMeasurement 是否有脂肪数据的标志位 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位） 
+String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />String weightDifferenceValue 体重差值 <br />double impedance 阻抗 <br />String deviceSelectedUnit 当前测量单位 <br />String accuracyStatus 测量数据准确性状态 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 脂肪率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />int battery 电池电量共有 7 个等级 <br />String weightStatus 体重测量值状态 <br />String impedanceStatus 电阻状态 <br />boolean appendMeasurement 是否有脂肪数据的标志位 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位）
 <a name="wCzUF"></a>
 ### 9.2.10、SleepData（睡眠分析数据）
-long startTime 入睡时间 <br />long endTime 起床时间 <br />int deepSleep 深睡时长（分钟） <br />int somnolence 浅睡时长（分钟） <br />int wakeUp 清醒时长（分钟） <br />int timeWakeUp 清醒次数 <br />int avgLevel 睡眠等级 <br />String SleepStatus 具体睡眠状态（每 5 分钟一个状态） 
+long startTime 入睡时间 <br />long endTime 起床时间 <br />int deepSleep 深睡时长（分钟） <br />int somnolence 浅睡时长（分钟） <br />int wakeUp 清醒时长（分钟） <br />int timeWakeUp 清醒次数 <br />int avgLevel 睡眠等级 <br />String SleepStatus 具体睡眠状态（每 5 分钟一个状态）
 <a name="umb17"></a>
 ### 9.2.11、PedometerData（日统计数据）
 String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />int walkSteps 步行步数 <br />int runSteps 跑步步数 <br />double examount 运动量 <br />double calories 卡路里 <br />int exerciseTime 运动时间 <br />int distance 距离 <br />int battery 电池电压等级 <br />int sleepStatus 睡眠状态 <br />int intensityLevel 等级 <br />long utc Utc 时间 <br />float batteryVoltage 电压值 <br />int batteryPercent 电量百分比 V1.2.3
 <a name="5TQFg"></a>
 ### 9.2.12、PedometerHeartRateData（心率数据）
-String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />int sendingPeriod 表示发送周期(0：日常； 1：每小时) <br />long utc 表示第一笔心率数据的测量 utc 时间 <br />Int remainCount 表示剩下未发送的心率数据数目 <br />int deltaUtc 表示每一笔心率数据间隔的秒数 <br />List<Integer> heartRates 表示心率数据的集合 <br />Date measureTime 测量时间 
+String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />int sendingPeriod 表示发送周期(0：日常； 1：每小时) <br />long utc 表示第一笔心率数据的测量 utc 时间 <br />Int remainCount 表示剩下未发送的心率数据数目 <br />int deltaUtc 表示每一笔心率数据间隔的秒数 <br />List<Integer> heartRates 表示心率数据的集合 <br />Date measureTime 测量时间
 <a name="XRCAf"></a>
 ### 9.2.13、PedometerSleepData（睡眠原始数据）
-类型 属性 注释 版本<br />String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />int sendingPeriod 表示发送周期(0：日常； 1：每小时) <br />long utc 表示第一笔心率数据的测量 utc 时间 <br />int remainCount 表示剩下未发送的睡眠数据数目 <br />int deltaUtc 表示每一笔睡眠数据间隔的秒数 <br />List<Integer> sleeps 表示睡眠数据的集合 <br />Date measureTime 测量时间 
+类型 属性 注释 版本<br />String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />int sendingPeriod 表示发送周期(0：日常； 1：每小时) <br />long utc 表示第一笔心率数据的测量 utc 时间 <br />int remainCount 表示剩下未发送的睡眠数据数目 <br />int deltaUtc 表示每一笔睡眠数据间隔的秒数 <br />List<Integer> sleeps 表示睡眠数据的集合 <br />Date measureTime 测量时间
 <a name="cEluh"></a>
 ### 9.2.14、PedometerRunningStatus（运动状态数据）
 String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />List<RunningStat> stateList 跑步状态，包含状态（跑步或暂停），开始 utc，结束 utc<br />int runningTime 跑步时间 <br />int totalSteps 跑步总步数 <br />double maxCalories 最大卡路里 <br />int maxHeartRate 最大心率 <br />int avgHeartRate 平均心率 <br />int maxPitch 最大步频 <br />int avgPitch 平均步频 <br />int dataType数据类型0:watch 跑步数据,1:自动识别跑步数据,2:轨迹跑手环连接 GPS 成功产生的 跑步数据,3:轨迹跑手环连接 GPS 失败产生的跑步数据<br />Int sportsMode 运动模式 跑步 0x01
 <a name="4xZ2G"></a>
 ### 9.2.15、PedometerHeartRateStatisticsData（心率状态数据）
-String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc 表示心率区间统计起始 UTC <br />int heartRateRange1 心率区间 I，累计时间，单位为：s(秒) <br />int heartRateRange2 心率区间 II，累计时间，单位为：s(秒) <br />int heartRateRange3 心率区间 III，累计时间，单位为：s(秒) <br />Date measureTime 表示心率区间统计起始的时间 
+String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc 表示心率区间统计起始 UTC <br />int heartRateRange1 心率区间 I，累计时间，单位为：s(秒) <br />int heartRateRange2 心率区间 II，累计时间，单位为：s(秒) <br />int heartRateRange3 心率区间 III，累计时间，单位为：s(秒) <br />Date measureTime 表示心率区间统计起始的时间
 <a name="0eVMp"></a>
 ### 9.2.16、PedometerRunningCalorieData（运动卡路里数据）
-String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc 测量起始 UTC <br />int deltaUtc UTC 偏移量,每个单位值代表 5s <br />int remainCount 手环中卡路里数据剩余条数 <br />int currentUploadingCount 当前上传卡路里数据起始条数 <br />List<Float> calories 表示卡路里数据的集合 <br />Date measureTime 测量时间 
+String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc 测量起始 UTC <br />int deltaUtc UTC 偏移量,每个单位值代表 5s <br />int remainCount 手环中卡路里数据剩余条数 <br />int currentUploadingCount 当前上传卡路里数据起始条数 <br />List<Float> calories 表示卡路里数据的集合 <br />Date measureTime 测量时间
 <a name="IHsMG"></a>
 ### 9.2.17、DeviceFilterInfo（设备过滤信息）
 String broadcastName 设备广播名称<br />BroadcastNameMatchWay broadcastId 广播名匹配方式
 <a name="NDQII"></a>
 ### 9.2.18、PedometerHeartRateAlert（心率预警设置）
-boolean enable 是否打开运动心率预警 <br />int minHeartRate 最小心率 <br />int maxHeartRate 最大心率 
+boolean enable 是否打开运动心率预警 <br />int minHeartRate 最小心率 <br />int maxHeartRate 最大心率
 <a name="Udskf"></a>
 ### 9.2.19、PedometerSwimmingInfo（游泳数据）
-int poolLength 泳池长度 
+int poolLength 泳池长度
 <a name="Cc9hZ"></a>
 ### 9.2.20、PedometerSportsInfo
-类型 属性 注释 版本<br />short speed 配速 <br />int distance 距离 
+类型 属性 注释 版本<br />short speed 配速 <br />int distance 距离
 <a name="m5vdr"></a>
 ### 9.2.21、PedometerEventReminder（时间提醒）
-类型 属性 注释 版本<br />int index 事件序号，1~5 <br />String reminderContent 提醒内容  boolean enable 是否打开 <br />Int hour 提醒时间，小时 <br />Int Minute 提醒时间，分钟 <br />List<WeekDay> repeatDay 重复星期 <br />VibrationMode vibrationMode 振动方式 <br />int vibrationDuration 振动时间 <br />int vibrationIntensity1 振动等级 1，0~9 <br />Int vibrationIntensity2 振动等级 2，0~9 <br />9.2.22、DeviceFunctionInfo<br />DeviceFunctionType type 设备功能类型  boolean enable 功能开关 
+类型 属性 注释 版本<br />int index 事件序号，1~5 <br />String reminderContent 提醒内容  boolean enable 是否打开 <br />Int hour 提醒时间，小时 <br />Int Minute 提醒时间，分钟 <br />List<WeekDay> repeatDay 重复星期 <br />VibrationMode vibrationMode 振动方式 <br />int vibrationDuration 振动时间 <br />int vibrationIntensity1 振动等级 1，0~9 <br />Int vibrationIntensity2 振动等级 2，0~9 <br />9.2.22、DeviceFunctionInfo<br />DeviceFunctionType type 设备功能类型  boolean enable 功能开关
 <a name="WyI5t"></a>
 ### 9.2.23、HeartbeatData
-int offset 时间偏移量 <br />int value G-Sensor Data 
+int offset 时间偏移量 <br />int value G-Sensor Data
 <a name="WNXzG"></a>
 ### 9.2.24、PedometerHeartbeatData（心率数据）
-String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc UTC 单位秒<br />int remainCount 剩余条数 <br />int currentUploadingCount 当前上传条数 <br />List<HeartbeatData> heartBeats 表示心跳数据采集内容集合 
+String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc UTC 单位秒<br />int remainCount 剩余条数 <br />int currentUploadingCount 当前上传条数 <br />List<HeartbeatData> heartBeats 表示心跳数据采集内容集合
 <a name="CkKY7"></a>
 ### 9.2.25、WeightUserInfo（用户体重信息）
-int productUserNumber 绑定过程中对应的用户编号<br />Int age 用户年龄 <br />float height 用户身高，单位 M <br />float weight 用户体重，单位 kg <br />SexType sex 用户性别 <br />Boolean isAthlete 是否是运动员 <br />Int athleteLevel 运动员等级 
+int productUserNumber 绑定过程中对应的用户编号<br />Int age 用户年龄 <br />float height 用户身高，单位 M <br />float weight 用户体重，单位 kg <br />SexType sex 用户性别 <br />Boolean isAthlete 是否是运动员 <br />Int athleteLevel 运动员等级
 <a name="qjb80"></a>
 # 十、算法分析
 <a name="oIq11"></a>
@@ -1165,5 +1165,3 @@ List<SleepData> analysisSleep(List<PedometerData> dataList)
 <a name="WyTC6"></a>
 # 十三、技术支持群
 扫码添加后会收到邀请入群信息<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1601043310118-c90f3ed4-b022-487b-a784-d945ac0f3091.png#align=left&display=inline&height=1398&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1398&originWidth=1080&size=538697&status=done&style=none&width=1080)<br />
-
-
