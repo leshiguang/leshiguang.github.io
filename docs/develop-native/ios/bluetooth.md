@@ -93,6 +93,7 @@ SDK目前支持的CPU架构为X86_64、arm64，新版本的xcode中，已经不�
 - 接口：LSBluetoothManager#initManagerWithDispatch
 - 参数说明：dispatch_queue_t： dispatchQueue
 - 调用示例：
+
 ```objectivec
     dispatch_queue_t dispatchQueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     [[LSBluetoothManager defaultManager] initManagerWithDispatch:dispatchQueue];
@@ -189,6 +190,7 @@ void stopSearch();
 
 - 功能：SDK不会持久化绑定的设备信息，故需要接入者将设备信息设置到SDK，在内存中临时存储（app退出时会被清除， 需要在下次进入app时设置）
 - 接口LSBluetoothManager#addMeasureDevice
+
 ```objectivec
 -(BOOL)addMeasureDevice:(NSString *) appId andDevice:(LSDeviceInfo *)lsDevice result:(void (^)(NSUInteger)) result;
 ```

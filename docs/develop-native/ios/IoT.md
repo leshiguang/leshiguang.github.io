@@ -8,23 +8,7 @@
 ### 1.2.1、接入声明
 我司做接入控制的目的是为了控制设备的去处、了解出售设备的活跃状态及客户采买设备的使用场景。接入过程中， 仅存储设备和接入公司、组织的关联关系， 我司不会以任何方式存储用户身份信息及用户使用设备过程中产生的数据
 
-### 1.2.2、申请应用 ID
-准备材料如下：<br />
-
-- 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级 
-- 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息) 
-- 准备一个接入者公司的 github 账号(可选，用于gradle依赖管理下载aar)
-
-将准备好的材料以邮件的方式发送：
-
-- 接收者：lu.zheng@lifesense.com
-- 抄送: yong.wu@lifesense.com, zhicheng.liu@lifesense.com,chixiang.cai@lifesense.com,jianhua.liu@lifesense.com,chengze.wu@lifesense.com
-- 主题：【蓝牙SDK接入申请】（企业/组织/个人）-申请接入
-- 邮件内容参考：
-
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1600952638602-0253cac6-c486-4f20-a64a-adf5c7ebf72e.png#align=left&display=inline&height=444&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=2034&size=237021&status=done&style=none&width=2034)<br />邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId通过邮件的形式回复给您
-
-## 1.3、SDK支持接入的设备
+## 1.2、SDK支持接入的设备
 | 设备类型 | 型号 |
 | --- | --- |
 | 手环 | 乐心手环5S |
@@ -111,6 +95,28 @@ pod 'MBProgressHUD', '0.9.2'
 /// @param associatedId 第三方账号
 /// @param complete 授权信息
 - (void)authorize:(NSInteger)tenantId andSubscribe:(NSInteger)subscriptionId andThirdUserId:(NSString *)associatedId callback:(void (^)(LSAccountAuthorizeResponse *)) complete;
+```
+
+* 参数：
+
+tenantId， subscriptionId需要走申请流程（测试接入两个值可以固定为1、6）<br />
+申请接入需要的材料 <br />
+准备申请材料：<br />
+1. 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级 <br />
+2. 确定应用的bundle identifier（appid会对使用的app进行合法性校验）<br />
+3. 确定应用需要接入的设备型号列表（如果是进行设备鉴权的话必须填写）<br />
+4. 确定应用需要接入的服务（设备、算法、软件服务包）名称（用于获得服务ID和服务版本）<br />
+材料确定后，发送申请接入邮件模板如下(前期以这种流程走， 后续sass平台将实现流程化接入)：<br />
+
+```
+收件人：zhihui.xiao@lifesense.com
+抄送：zheng.lu@lifesense.com,yong.wu@lifesense.com,zhicheng.liu@lifesense.com,chuang.liu@lifesense.com,bangwei.mo@lifesense.com
+主题：【健康解决方案接入申请】（企业/组织/个人名称）
+邮件内容需要包含：
+1、接入目的：
+2、接入的设备类型和型号：
+3、接入的产品服务：
+4、bundleID：（ios和android的包ID， 用于备案）
 ```
 5、设置LSDeviceManager登录态
 
@@ -201,6 +207,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 - 功能描述：绑定手环需要输入随机码，随机码会在3.1.3.1（绑定设备回调中返回）
 - 接口：
+
 ```objectivec
 /// 用户绑定手环校验码
 /// @param code 校验码
