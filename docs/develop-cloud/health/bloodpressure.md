@@ -143,7 +143,7 @@
 
 <a name="i7jHB"></a>
 ## 1.2 查询血压分析信息
-**Url：域名+**/****/api/bp/v1.0/getBpAnalyzeAndCompareInfo**<br />请求方式：GET<br />
+**Url：域名+**/**soa_bloodpressure/api/bp/v1.0/getBpAnalyzeAndCompareInfo**<br />请求方式：GET<br />
 <br />入参（URL参数）：
 
 | 字段 | 类型 | 描述 | 其他 |
@@ -327,7 +327,7 @@
 
 <a name="DOvCg"></a>
 ## 1.3 查询历史血压接口
-**Url：域名+**/****/api/bp/v1.0/getBpListOfWeek**<br />请求方式：GET<br />入参（URL参数）：
+**Url：域名+**/**soa_bloodpressure/api/bp/v1.0/getBpListOfWeek**<br />请求方式：GET<br />入参（URL参数）：
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
@@ -433,5 +433,175 @@ bpList：
 }
 
 
+```
+
+
+<a name="0ije3"></a>
+## 1.4 查询用户最近一条血压信息
+**Url：域名+**/**soa_bloodpressure/api/bp/v1.0/getLastRecord**<br />请求方式：GET<br />
+<br />入参（URL参数）：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| associatedId | String | 第三方Id | <br /> |
+
+
+<br />出参：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| id | String | 当前数据唯一标识 |  |
+| userId | Long | 用户id |  |
+| measurementDate | Long | 测量时间(毫秒值) |  |
+| systolicPressure | Integer | _收缩压（高压）_ |  |
+| diastolicPressure | Integer | _舒张压（低压）_ |  |
+| heartRate | Integer | _心率_ |  |
+| level | Integer | _血压等级_ |  |
+| irregularHeartbeat | Integer | _心率不齐标示（0为正常，1为不齐）_ |  |
+| movementError | Integer | _抖动标示（0为正常，1为抖动）_ |  |
+| remark | String | _备注_ |  |
+| source | Integer | _数据来源（0:设备采集;1:手工添加）_ |  |
+
+
+<br />示例报文：<br />
+
+```json
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "id": "399d1bb213dc494a97d5f99637015fc3",
+        "userId": 23341064,
+        "measurementDate": 1597066295000,
+        "systolicPressure": 137,
+        "diastolicPressure": 89,
+        "heartRate": 65,
+        "level": 3,
+        "irregularHeartbeat": 0,
+        "movementError": 0,
+        "remark": "",
+        "source": 1
+    }
+}
+```
+
+
+<a name="Csa7S"></a>
+## 1.5 _查询用户时间范围内血压记录_
+**Url：域名+**/**soa_bloodpressure/api/bp/v1.0/getBpListByTime**<br />请求方式：GET<br />
+<br />入参（URL参数）：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| associatedId | String | 第三方Id | <br /> |
+| startTime | Long | 开始时间(毫秒值) |  |
+| endTime | Long | 结束时间(毫秒值) |  |
+
+
+<br />出参(list集合)：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| id | String | 当前数据唯一标识 |  |
+| userId | Long | 用户id |  |
+| measurementDate | Long | 测量时间(毫秒值) |  |
+| systolicPressure | Integer | _收缩压（高压）_ |  |
+| diastolicPressure | Integer | _舒张压（低压）_ |  |
+| heartRate | Integer | _心率_ |  |
+| level | Integer | _血压等级_ |  |
+| irregularHeartbeat | Integer | _心率不齐标示（0为正常，1为不齐）_ |  |
+| movementError | Integer | _抖动标示（0为正常，1为抖动）_ |  |
+| remark | String | _备注_ |  |
+| source | Integer | _数据来源（0:设备采集;1:手工添加）_ |  |
+
+
+<br />示例报文：<br />
+
+```json
+{
+    "code": 200,
+    "msg": "成功",
+    "data": [
+        {
+            "id": "b3c5818f12754b7d8a5733393c6546a4",
+            "userId": 23341064,
+            "measurementDate": 1596448680000,
+            "systolicPressure": 128,
+            "diastolicPressure": 60,
+            "heartRate": 65,
+            "level": 3,
+            "irregularHeartbeat": 0,
+            "movementError": 0,
+            "remark": "",
+            "source": 1
+          
+        },
+        {
+            "id": "13029f0c48014c5495183cceb30605bf",
+            "userId": 23341064,
+            "measurementDate": 1596509940000,
+            "systolicPressure": 161,
+            "diastolicPressure": 120,
+            "heartRate": 65,
+            "level": 6,
+            "irregularHeartbeat": 0,
+            "movementError": 0,
+            "remark": "",
+            "source": 1
+        },
+        {
+            "id": "5dbec320cba149c1a5aff4738bc9af8c",
+            "userId": 23341064,
+            "measurementDate": 1596534960000,
+            "systolicPressure": 136,
+            "diastolicPressure": 60,
+            "heartRate": 73,
+            "level": 3,
+            "irregularHeartbeat": 0,
+            "movementError": 0,
+            "remark": "",
+            "source": 1
+        },
+        {
+            "id": "16164e43f6cb44f68e4ef8b8575d8598",
+            "userId": 23341064,
+            "measurementDate": 1596535098000,
+            "systolicPressure": 90,
+            "diastolicPressure": 60,
+            "heartRate": 65,
+            "level": 2,
+            "irregularHeartbeat": 0,
+            "movementError": 0,
+            "remark": "",
+            "source": 1
+        },
+        {
+            "id": "ffdaa1b9522440f6bf04d091dc46ba3a",
+            "userId": 23341064,
+            "measurementDate": 1596701728000,
+            "systolicPressure": 166,
+            "diastolicPressure": 98,
+            "heartRate": 69,
+            "level": 5,
+            "irregularHeartbeat": 0,
+            "movementError": 0,
+            "remark": "eeee99999",
+            "source": 1
+        },
+        {
+            "id": "399d1bb213dc494a97d5f99637015fc3",
+            "userId": 23341064,
+            "measurementDate": 1597066295000,
+            "systolicPressure": 137,
+            "diastolicPressure": 89,
+            "heartRate": 65,
+            "level": 3,
+            "irregularHeartbeat": 0,
+            "movementError": 0,
+            "remark": "",
+            "source": 1
+        }
+    ]
+}
 ```
 
