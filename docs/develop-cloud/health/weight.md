@@ -270,9 +270,14 @@ singleRecordInfo：
 ```
 <a name="kjEqt"></a>
 # 2. 查询分析对比数据接口
-url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo<br />method: POST
+url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo<br />method: POST<br />**header参数或者url参数**<br />**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
+
 <a name="rH4mg"></a>
-##### 入参：
+##### post报文入参：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
@@ -285,7 +290,6 @@ url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo<br />
 ###### 示例入参：
 ```json
 {
-	"associatedId":"66104c5623342312",
 	"queryDateType":"1",
 	"startTime":"1591891200000",
 	"endTime":"1599642344721",
@@ -525,17 +529,24 @@ indexInfoList：
 # 3. 体重历史列表页查询
 ur: 域名 +  /weight-rest/weightRecord/getWeightListForWeek<br />method: post<br />说明：查询queryTime时间前的50条记录
 <a name="kfcfp"></a>
-##### 入参:
+##### **header参数或者url参数**
+**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
+
+<a name="NqHhl"></a>
+##### post报文入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | queryTime | Long | 查询时间戳 | 如查当前时间之前的最新一条，可不传 |
-| associatedId | String | 关联账号id |  |
 
 <a name="S3JdT"></a>
 ###### 示例:
 ```json
 {
-	"associatedId":"66104c5623342312"
+	"queryTime":"1603266355689"
 }
 ```
 **出参(List):**
