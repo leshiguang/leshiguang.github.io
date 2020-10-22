@@ -5,8 +5,6 @@
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| tenantId | Integer | 第三方来源id | 乐智健康提供 |
-| subscriptionId | Integer | 第三方应用类型 | 乐智健康提供 |
 | associatedId | String | 关联账号id | 标识对接用户，双方约定字段 |
 | notCreate | boolean | 未查询到关联账号时，是否不做账号新增 | 默认false，即关联id无映射的用户时自动创建 |
 
