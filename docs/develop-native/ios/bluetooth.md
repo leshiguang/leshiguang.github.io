@@ -185,40 +185,6 @@ void stopSearch();
 
 
 
-<a name="FVSlJ"></a>
-## 3.3、蓝牙wifi双模秤配网
-<a name="vVrpq"></a>
-### 3.3.1、开启wifi扫描
-
-- 功能：秤开启扫描周围的wifi的能力
-- 接口：LSBluetootthManager#scanScalesWifi
-- 参数：deviceMac，设备广播 ID
-
-
-
-<a name="u9WR0"></a>
-### 3.3.2、通过蓝牙进行wifi配网
-
-- 功能：输入bssid和wifi密码进行配网
-- 接口：LSBluetootthManager#connectWifi:bssid:password
-- 参数：
-
-① broadcastId 设备广播 ID<br />② bssid bssid设置搜索wifi返回，和ssid对应<br />③ password wifi密码<br />
-
-<a name="ilzRa"></a>
-### 3.3.3、重置wifi
-
-- 功能：重置秤wifi配置
-- 接口：LSBluetootthManager#restConnectRequest
-- 参数：broadcastId，设备广播 ID
-
-<br />
-<a name="oWk65"></a>
-### 3.3.4、获取wifi连接状态
-
-- 功能：获取wifi连接状态
-- 接口：LSBluetootthManager#wifiStatusRequest
-- 参数：broadcastId，设备广播 ID
 <a name="bd0a064d"></a>
 # 四、数据同步
 <a name="5a8c76bd"></a>
@@ -457,8 +423,8 @@ appId: [1.2.2](#lnH19)中申请得到的appid<br />lsDevice：参考 LsDeviceInf
 - 参数：
 
 ①isWorking BOOL,YES 表示手机已开启 gps 功能，NO 表示手机 gps 功能不可用
-<a name="a1f7391e"></a>
-## 六、配网
+<a name="0auG1"></a>
+# 六、配网
 <a name="680b67c6"></a>
 ## 6.1、开始配网
 
@@ -469,6 +435,44 @@ appId: [1.2.2](#lnH19)中申请得到的appid<br />lsDevice：参考 LsDeviceInf
 ① NSString _password, wifi password <br />② NSString _networksName,net works name(SSID) '<br />③ LSDeviceInfo *lsDevice, 设备信息对象,参考 LSDeviceInfo 的定义 <br />④ id configDelegate,配置结果回调对象<br />
 
 - 返回值：BOOL,YES 表示接口功能可用，NO 表示接口功能不可用
+
+
+
+<a name="FVSlJ"></a>
+## 6.2、蓝牙wifi双模秤配网
+<a name="vVrpq"></a>
+### 6.2.1、开启wifi扫描
+
+- 功能：秤开启扫描周围的wifi的能力
+- 接口：LSBluetootthManager#scanScalesWifi
+- 参数：deviceMac，设备广播 ID
+
+
+
+<a name="u9WR0"></a>
+### 6.2.2、通过蓝牙进行wifi配网
+
+- 功能：输入bssid和wifi密码进行配网
+- 接口：LSBluetootthManager#connectWifi:bssid:password
+- 参数：
+
+① broadcastId 设备广播 ID<br />② bssid bssid设置搜索wifi返回，和ssid对应<br />③ password wifi密码<br />
+
+<a name="ilzRa"></a>
+### 6.2.3、重置wifi
+
+- 功能：重置秤wifi配置
+- 接口：LSBluetootthManager#restConnectRequest
+- 参数：broadcastId，设备广播 ID
+
+
+
+<a name="oWk65"></a>
+### 6.2.4、获取wifi连接状态
+
+- 功能：获取wifi连接状态
+- 接口：LSBluetootthManager#wifiStatusRequest
+- 参数：broadcastId，设备广播 ID
 <a name="d36c104b"></a>
 # 七、固件升级
 <a name="330e6a38"></a>
