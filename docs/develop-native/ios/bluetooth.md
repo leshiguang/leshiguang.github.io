@@ -192,7 +192,7 @@ void stopSearch();
 
 - 功能：秤开启扫描周围的wifi的能力
 - 接口：LSBluetootthManager#scanScalesWifi
-- 参数：deviceMac，设备mac地址
+- 参数：deviceMac，设备广播 ID
 
 
 
@@ -203,7 +203,22 @@ void stopSearch();
 - 接口：LSBluetootthManager#connectWifi:bssid:password
 - 参数：
 
-① broadcastId mac地址<br />② bssid bssid设置搜索wifi返回，和ssid对应<br />③ password wifi密码
+① broadcastId 设备广播 ID<br />② bssid bssid设置搜索wifi返回，和ssid对应<br />③ password wifi密码<br />
+
+<a name="ilzRa"></a>
+### 3.3.3、重置wifi
+
+- 功能：重置秤wifi配置
+- 接口：LSBluetootthManager#restConnectRequest
+- 参数：broadcastId，设备广播 ID
+
+<br />
+<a name="oWk65"></a>
+### 3.3.4、获取wifi连接状态
+
+- 功能：获取wifi连接状态
+- 接口：LSBluetootthManager#wifiStatusRequest
+- 参数：broadcastId，设备广播 ID
 <a name="bd0a064d"></a>
 # 四、数据同步
 <a name="5a8c76bd"></a>
@@ -611,9 +626,31 @@ appId: [1.2.2](#lnH19)中申请得到的appid<br />lsDevice：参考 LsDeviceInf
 
 - 参数
 
-① LSDeviceInfo _lsDevice, 设备对象信息, 参考 LSDeviceInfo 的定义 <br />      ② _LSScaleConnectWifiResult, 爆款秤配置wifi结果的回调，参考LSScaleConnectWifiResult的定义
+① LSDeviceInfo _lsDevice, 设备对象信息, 参考 LSDeviceInfo 的定义 <br />      ② _LSScaleConnectWifiResult, 配置wifi结果的回调，参考LSScaleConnectWifiResult的定义
 
 - 详细说明：调用爆款秤wifi配网的回调
+
+
+
+<a name="QVKQS"></a>
+### 8.2.14、didReconnectWifiResult （蓝牙wifi双模秤重置结果回调）
+
+- 参数：
+
+① LSDeviceInfo _lsDevice, 设备对象信息, 参考 LSDeviceInfo 的定义 <br />      ② _LSScaleRestConnectWifiResult, 重置wifi信息的数据model，参考LSScaleRestConnectWifiResult 的定义
+
+- 详细说明：调用重置wifi接口回调
+
+
+
+<a name="elDev"></a>
+### 8.2.15、didWifiState （蓝牙wifi双模秤重置结果回调）
+
+- 参数：
+
+① LSDeviceInfo _lsDevice, 设备对象信息, 参考 LSDeviceInfo 的定义 <br />      ② _LSScaleWifiStateModel, 秤wifi连接信息的数据model，参考LSScaleWifiStateModel 的定义
+
+- 详细说明：调用获取wifi连接状态接口回调
 <a name="a0d75d02"></a>
 ## 8.3、LSDeviceUpgradingDelegate（升级回调）
 LSDeviceUpgradingDelegate是一个接口类，当调用upgradingWithDevice接口时，必须实现这个接口的两个回调方法，所有与设备升级状态相关的提示将以异步的方式通过回调接口返回，如升级进度、升级结果等
@@ -771,6 +808,14 @@ NSArray <LSScaleWifiModelItem *> *wifiModelAry;   <br />LSScaleWifiModelItem sid
 <a name="U7ooh"></a>
 ### 9.2.25、LSScaleConnectWifiResult （蓝牙wifi双模秤wifi连接结果回调）
 BOOL connectState; 成功YES 失败NO
+
+<a name="BjLc5"></a>
+### 9.2.26、LSScaleRestConnectWifiResult （蓝牙wifi双模秤wifi连接结果回调）
+BOOL restConnectState; 成功YES 失败NO
+
+<a name="hrbsO"></a>
+### 9.2.25、LSScaleWifiStateModel （蓝牙wifi双模秤wifi连接结果回调）
+BOOL connectState; 成功YES 失败NO<br />NSString *ssidName; WiFi名称<br />NSString *bssid
 <a name="1dfd4007"></a>
 # 十、算法分析
 <a name="5aacebc3"></a>
