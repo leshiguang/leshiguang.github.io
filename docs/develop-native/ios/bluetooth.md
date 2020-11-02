@@ -58,8 +58,9 @@
 # 二、快速集成
 <a name="250a1dc2"></a>
 ## 2.1、蓝牙SDK下载
-| 版本 | 下载地址 | 版本更新日志 |
+| 版本 | 下载地址 | 更新日志 |
 | --- | --- | --- |
+| 1.5.0 | [LSDeviceBluetooth-1.5.0](http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceBluetooth-1.5.0.zip) | wifi蓝牙双模秤接入配网能力 |
 | 1.4.9 | [LSDeviceBluetooth-1.4.9](http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceFramework-1.4.9.zip?e=1602749788&attname=&token=fCj0mxPVEsXXpyTOBQ32smvgMng0P-pLEc6rpY94:zCTUd22fpNnNXnhRlNogaqOi7HI=) | iOS DeploymentTarget 更改为11.0 |
 | 1.4.8 | [LSDeviceBluetooth-1.4.8](http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceBluetooth-V1.4.8.zip) | IoT平台时区接入 |
 
