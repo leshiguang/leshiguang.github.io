@@ -335,4 +335,47 @@ url :  域名 +   /sport-rest/step/query/getMonthStepInfo<br />method: GET
 	}
 }
 ```
+<a name="1BWk4"></a>
+## 4. 设置步数目标
+url :  域名 +   /sport-rest/miniProgram/setTargetStep<br />method: POST
+<a name="3wmPH"></a>
+##### 入参:
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| targetStep | Integer | 步数目标值 |  |
+
+<a name="ou5CG"></a>
+##### 出参:
+无
+<a name="hLpbt"></a>
+###### 示例入参：
+```json
+{
+	"targetStep":3301
+}
+```
+<a name="PhuZw"></a>
+## 5. 查询步数目标
+url :  域名 +   /sport-rest/miniProgram/getTargetStep<br />method: GET
+<a name="gbYmr"></a>
+##### 入参:
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+<a name="oTNfs"></a>
+##### 出参:
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| data | Integer | 目标值 | 公共参数 |
+
+
+<br />示例出参:
+```json
+{
+	"code":200,
+	"msg":"成功",
+	"data":3200
+}
+```
 
