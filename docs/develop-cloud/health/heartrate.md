@@ -1,6 +1,5 @@
-<a name="zoAnm"></a>
-# UI级接口
-所谓UI级接口，指的是该接口是我们的UI页面直接使用的接口，调用方使用时需注意是否满足要求。
+
+
 <a name="8JcUz"></a>
 ## 1. 查询日全天心率 
   url： 域名 + heartrate-rest/dailyQuery/getDailyHeartRate<br />method：GET<br />  描述：查询用户在queryTimeStamp之前或之后（包含queryTimeStamp）一天的心率数据，如果查询当天没有会一直往前查找，直到找到有数据的一天。
@@ -403,9 +402,8 @@
 }
 ```
 
+<br />
 
-<a name="8qcRb"></a>
-# 其他接口
 <a name="8kESs"></a>
 ## 4. 获取用户某一天的心率数据
 url： 域名 + heartrate-rest/dailyQuery/**getDailyHeartRateGivenSomeDay**<br />method：GET
