@@ -1,5 +1,5 @@
 <a name="KKCJ2"></a>
-## 1. 首页查询健康年龄数据
+## 1.1 首页查询健康年龄数据
   url：域名 +  /hai-rest/eva/query/getBriefInfo
 
   method：get
@@ -99,4 +99,658 @@
 
 <a name="uVhpD"></a>
 ###### 示例返回报文：
+<a name="UhTCD"></a>
+## 1.3 提交问卷
+  url：域名 +  /hai-rest/eva/questionnaire/submitGetResult<br />  method：post<br />  描述：提交问卷
+<a name="lpo8B"></a>
+##### 入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| serialNo | String | 问卷序列号 | 固定：<br />20200715AAAAAAA |
+| questionSubmitList | List<Object> | 问题提交记录 |  |
+
+<a name="0nETi"></a>
+###### 问题提交记录:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| questionId | Long | 题目ID |  |
+| submitted | List<Object> | 用户提交的值 |  |
+
+<a name="Hk8Up"></a>
+###### 用户提交的值:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| key | String | optionKey |  |
+| value | Object | 对应的值 选择题时同key一致，填空题时为用户提交的值 |  |
+| content | Object | 选择题时为key对应的内容，填空题时为用户提交的值 | 可为空 |
+
+<a name="4wCup"></a>
+##### 出参:
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| evaResult | Object | 评估结果信息 |  |
+| evaResultItemDetailList | List<Object> | 评估结果项集合 |  |
+
+<a name="we37g"></a>
+###### 评估结果信息：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| id | Long | 主键id |  |
+| userId | Long | 用户id |  |
+| age | Integer | 年龄 |  |
+| evaluateAge | BigDecimal | 评估年龄 |  |
+| perfectAge | BigDecimal | 理想年龄 |  |
+| healthScore | BigDecimal | 健康分 |  |
+| sourceType | Integer | 数据来源 |  |
+| evaluateDate | Date | 评估时间 |  |
+| healthCondition | String | 健康状况 | 良好<br />及格<br />不及格 |
+| createTime | Date | 创建时间 |  |
+| updateTime | Date | 更新时间 |  |
+
+<a name="tuoCu"></a>
+###### 评估结果项(List)：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| id | Long | 主键id |  |
+| userId | Long | 用户id |  |
+| scoreItemKey | String | 记分项key |  |
+| scoreItemVal | BigDecimal | 记分项分值 |  |
+| threeLevelLabelKey | String | 三级标签key |  |
+| moduleKey | String | 所属模块 |  |
+| evaluateDate | Date | 评估时间 |  |
+| measurementDate | Date | 测量时间 |  |
+| sourceType | Integer | 数据来源 |  |
+| createTime | Date | 创建时间 |  |
+| updateTime | Date | 更新时间 |  |
+| secondLevelLabelKey | String | 二级标签key |  |
+| firstLevelLabelKey | String | 一级标签key |  |
+| threeLevelLabelMsg | String | 三级标签文本 |  |
+| secondLevelLabelMsg | String | 二级标签文本 |  |
+| firstLevelLabelMsg | String | 一级标签文本 |  |
+| suggest | String | 建议 |  |
+| refValue | String | 引用值 |  |
+
+<a name="FW4JL"></a>
+###### 入参示例报文：
+```json
+
+{
+	"serialNo":"20200715AAAAAAA",
+	"questionSubmitList":[
+		{
+			"questionId":69001,
+			"submitted":[
+				{
+					"key":"A",
+					"value":1,
+					"content":"男"
+				}
+			]
+		},
+		{
+			"questionId":69002,
+			"submitted":[
+				{
+					"key":"A",
+					"value":"1994-12-31T16:00:00.000Z",
+					"content":"Sun Jan 01 1995 00:00:00 GMT+0800 (中国标准时间)"
+				}
+			]
+		},
+		{
+			"questionId":69003,
+			"submitted":[
+				{
+					"key":"A",
+					"value":170,
+					"content":"170cm"
+				}
+			]
+		},
+		{
+			"questionId":69004,
+			"submitted":[
+				{
+					"key":"A",
+					"value":60,
+					"content":"60kg"
+				}
+			]
+		},
+		{
+			"questionId":70001,
+			"submitted":[
+				{
+					"key":"B",
+					"value":"B",
+					"content":"糖尿病"
+				}
+			]
+		},
+		{
+			"questionId":70002,
+			"submitted":[
+				{
+					"key":"B",
+					"value":"B",
+					"content":"吸烟"
+				}
+			]
+		},
+		{
+			"questionId":70003,
+			"submitted":[
+				{
+					"key":"B",
+					"value":"B",
+					"content":"少于100克"
+				}
+			]
+		},
+		{
+			"questionId":70004,
+			"submitted":[
+				{
+					"key":"C",
+					"value":"C",
+					"content":"100-200克"
+				}
+			]
+		},
+		{
+			"questionId":70005,
+			"submitted":[
+				{
+					"key":"C",
+					"value":"C",
+					"content":"50-75克"
+				}
+			]
+		},
+		{
+			"questionId":70006,
+			"submitted":[
+				{
+					"key":"B",
+					"value":"B",
+					"content":"否"
+				}
+			]
+		},
+		{
+			"questionId":70007,
+			"submitted":[
+				{
+					"key":"B",
+					"value":"B",
+					"content":"1-4次"
+				}
+			]
+		},
+		{
+			"questionId":70008,
+			"submitted":[
+				{
+					"key":"C",
+					"value":"C",
+					"content":"5-7次"
+				}
+			]
+		},
+		{
+			"questionId":70009,
+			"submitted":[
+				{
+					"key":"C",
+					"value":"C",
+					"content":"5-7次"
+				}
+			]
+		},
+		{
+			"questionId":70010,
+			"submitted":[
+				{
+					"key":"A",
+					"value":"A",
+					"content":"是（请继续回答第9题）"
+				}
+			]
+		},
+		{
+			"questionId":70011,
+			"submitted":[
+				{
+					"key":"A",
+					"value":0,
+					"content":"0杯"
+				},
+				{
+					"key":"B",
+					"value":1,
+					"content":"10瓶以下"
+				},
+				{
+					"key":"C",
+					"value":0,
+					"content":"0瓶"
+				}
+			]
+		},
+		{
+			"questionId":70012,
+			"submitted":[
+				{
+					"key":"A",
+					"value":2,
+					"content":"2次"
+				}
+			]
+		},
+		{
+			"questionId":70013,
+			"submitted":[
+				{
+					"key":"C",
+					"value":"C",
+					"content":"低强度（散步、瑜伽、太极）"
+				}
+			]
+		},
+		{
+			"questionId":70014,
+			"submitted":[
+				{
+					"key":"A",
+					"value":30,
+					"content":"30分钟"
+				}
+			]
+		},
+		{
+			"questionId":70015,
+			"submitted":[
+				{
+					"key":"B",
+					"value":"B",
+					"content":"6-8小时"
+				}
+			]
+		},
+		{
+			"questionId":70016,
+			"submitted":[
+				{
+					"key":"D",
+					"value":"D",
+					"content":"非常差"
+				}
+			]
+		},
+		{
+			"questionId":70017,
+			"submitted":[
+				{
+					"key":"A",
+					"value":"A",
+					"content":"没有"
+				}
+			]
+		},
+		{
+			"questionId":70018,
+			"submitted":[
+				{
+					"key":"C",
+					"value":"C",
+					"content":"6.1-7.0mmol/L"
+				}
+			]
+		},
+		{
+			"questionId":70019,
+			"submitted":[
+				{
+					"key":"A",
+					"value":3,
+					"content":"120-139mmHg"
+				},
+				{
+					"key":"B",
+					"value":3,
+					"content":"80-89mmHg"
+				}
+			]
+		},
+		{
+			"questionId":70020,
+			"submitted":[
+				{
+					"key":"A",
+					"value":2,
+					"content":"偏高"
+				},
+				{
+					"key":"B",
+					"value":3,
+					"content":"不知道"
+				},
+				{
+					"key":"C",
+					"value":3,
+					"content":"不知道"
+				},
+				{
+					"key":"D",
+					"value":3,
+					"content":"不知道"
+				}
+			]
+		}
+	]
+}
+
+
+```
+<a name="igxTc"></a>
+###### 出参报文示例：
+```json
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":{
+		"evaResult":{
+			"id":169,
+			"userId":23342312,
+			"age":25,
+			"evaluateAge":25.6,
+			"perfectAge":22.4,
+			"healthScore":49,
+			"sourceType":1,
+			"evaluateDate":1604548992000,
+			"healthCondition":"不及格",
+			"createTime":1604548992000,
+			"updateTime":1604548992000
+		},
+		"evaResultItemDetailList":[
+			{
+				"id":2400,
+				"userId":23342312,
+				"scoreItemKey":"stress",
+				"scoreItemVal":10,
+				"threeLevelLabelKey":"stress_normal",
+				"moduleKey":"sleepStress",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_stress",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"压力正常",
+				"secondLevelLabelMsg":"压力正常",
+				"firstLevelLabelMsg":"健康"
+			},
+			{
+				"id":2401,
+				"userId":23342312,
+				"scoreItemKey":"salt",
+				"scoreItemVal":0,
+				"threeLevelLabelKey":"salt_normal",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_salt",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"盐摄入适量",
+				"secondLevelLabelMsg":"饮食合理",
+				"firstLevelLabelMsg":"健康"
+			},
+			{
+				"id":2402,
+				"userId":23342312,
+				"scoreItemKey":"fruit",
+				"scoreItemVal":0,
+				"threeLevelLabelKey":"fruit_seriousLack",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_fruit",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"水果摄入严重不足",
+				"secondLevelLabelMsg":"饮食不合理",
+				"firstLevelLabelMsg":"亚健康",
+				"suggest":"您当前的水果摄入量严重不足。如果长期水果摄入不足，心血管病、糖尿病甚至是部分肿瘤的患病风险有可能增加，所以建议您逐渐增加水果摄入量，逐渐增加到4两至7两。",
+				"refValue":"每天水果摄入350克以上"
+			},
+			{
+				"id":2403,
+				"userId":23342312,
+				"scoreItemKey":"sleeptime",
+				"scoreItemVal":2,
+				"threeLevelLabelKey":"sleeptime_enough",
+				"moduleKey":"sleepStress",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_sleeptime",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"睡眠时长充足",
+				"secondLevelLabelMsg":"睡眠良好",
+				"firstLevelLabelMsg":"健康"
+			},
+			{
+				"id":2404,
+				"userId":23342312,
+				"scoreItemKey":"fry",
+				"scoreItemVal":0,
+				"threeLevelLabelKey":"fry_excessive",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_fry",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"油炸摄入过多",
+				"secondLevelLabelMsg":"饮食不合理",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2405,
+				"userId":23342312,
+				"scoreItemKey":"vegetable",
+				"scoreItemVal":1,
+				"threeLevelLabelKey":"vegetable_seriousLack",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_vegetable",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"蔬菜摄入严重不足",
+				"secondLevelLabelMsg":"饮食不合理",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2406,
+				"userId":23342312,
+				"scoreItemKey":"liquor",
+				"scoreItemVal":5,
+				"threeLevelLabelKey":"drink_moderate",
+				"moduleKey":"tobaccoWine",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_drink",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"适量",
+				"secondLevelLabelMsg":"饮酒",
+				"firstLevelLabelMsg":"健康"
+			},
+			{
+				"id":2407,
+				"userId":23342312,
+				"scoreItemKey":"sweetmeat",
+				"scoreItemVal":0,
+				"threeLevelLabelKey":"sweetmeat_excessive",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_sweetmeat",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"甜食摄入过多",
+				"secondLevelLabelMsg":"饮食不合理",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2408,
+				"userId":23342312,
+				"scoreItemKey":"pickles",
+				"scoreItemVal":1,
+				"threeLevelLabelKey":"pickles_more",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_pickles",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"腌制品摄入较多",
+				"secondLevelLabelMsg":"饮食合理",
+				"firstLevelLabelMsg":"健康"
+			},
+			{
+				"id":2410,
+				"userId":23342312,
+				"scoreItemKey":"smoking",
+				"scoreItemVal":0,
+				"threeLevelLabelKey":"smoking",
+				"moduleKey":"tobaccoWine",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_smokeing",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"抽烟",
+				"secondLevelLabelMsg":"抽烟",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2411,
+				"userId":23342312,
+				"scoreItemKey":"meat",
+				"scoreItemVal":2,
+				"threeLevelLabelKey":"meat_normal",
+				"moduleKey":"food",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_meat",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"肉类摄入适量",
+				"secondLevelLabelMsg":"饮食合理",
+				"firstLevelLabelMsg":"健康"
+			},
+			{
+				"id":2412,
+				"userId":23342312,
+				"scoreItemKey":"bloodpressure",
+				"scoreItemVal":5,
+				"threeLevelLabelKey":"bp_normalHigh",
+				"moduleKey":"threeHigh",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_bloodpressure",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"正常血压高值",
+				"secondLevelLabelMsg":"血压异常",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2413,
+				"userId":23342312,
+				"scoreItemKey":"sport",
+				"scoreItemVal":3,
+				"threeLevelLabelKey":"sport_lack",
+				"moduleKey":"sport",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_sport",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"体力活动水平不足",
+				"secondLevelLabelMsg":"运动不足",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2414,
+				"userId":23342312,
+				"scoreItemKey":"bloodsugar",
+				"scoreItemVal":5,
+				"threeLevelLabelKey":"bs_diabetes",
+				"moduleKey":"threeHigh",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"illness_bloodsugar",
+				"firstLevelLabelKey":"illness",
+				"threeLevelLabelMsg":"糖尿病",
+				"secondLevelLabelMsg":"血糖异常",
+				"firstLevelLabelMsg":"疾病"
+			},
+			{
+				"id":2415,
+				"userId":23342312,
+				"scoreItemKey":"sleepquality",
+				"scoreItemVal":0,
+				"threeLevelLabelKey":"sleep_veryPoor",
+				"moduleKey":"sleepStress",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"subhealth_sleepquality",
+				"firstLevelLabelKey":"subhealth",
+				"threeLevelLabelMsg":"睡眠质量差",
+				"secondLevelLabelMsg":"睡眠不好",
+				"firstLevelLabelMsg":"亚健康"
+			},
+			{
+				"id":2416,
+				"userId":23342312,
+				"scoreItemKey":"bmi",
+				"scoreItemVal":10,
+				"threeLevelLabelKey":"weight_normal",
+				"moduleKey":"weight",
+				"evaluateDate":1604548992000,
+				"sourceType":1,
+				"createTime":1604548992000,
+				"updateTime":1604548992000,
+				"secondLevelLabelKey":"health_weight",
+				"firstLevelLabelKey":"health",
+				"threeLevelLabelMsg":"体重正常",
+				"secondLevelLabelMsg":"体重正常",
+				"firstLevelLabelMsg":"健康"
+			}
+		]
+	}
+}
+
+```
 
