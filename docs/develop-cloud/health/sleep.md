@@ -1,6 +1,4 @@
-<a name="zoAnm"></a>
-# UI级接口
-所谓UI级接口，指的是该接口是我们的UI页面直接使用的接口，调用方使用时需注意是否满足要求。
+<br />
 <a name="lIr8B"></a>
 ## 1. 面板数据
 描述：获取指定时间（包含）最近2天睡眠数据<br />URL：域名 + /sleep-soa/sleepResult/boardInfo<br />请求方式：GET<br />**入参：**<br />
@@ -834,10 +832,6 @@ url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicUpload**<br />请求方�
 
 
 ```
-
-
-<a name="XqfOR"></a>
-# 其他接口
 <br />
 <a name="JGDYw"></a>
 ## 10. 获取用户某一天的睡眠数据
