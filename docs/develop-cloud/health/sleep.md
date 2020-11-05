@@ -1,4 +1,7 @@
-<a name="wRFOF"></a>
+<a name="zoAnm"></a>
+# UI级接口
+所谓UI级接口，指的是该接口是我们的UI页面直接使用的接口，调用方使用时需注意是否满足要求。
+<a name="lIr8B"></a>
 ## 1. 面板数据
 描述：获取指定时间（包含）最近2天睡眠数据<br />URL：域名 + /sleep-soa/sleepResult/boardInfo<br />请求方式：GET<br />**入参：**<br />
 
@@ -615,6 +618,272 @@ URL：域名 + /sleep-soa/sleepCommon/getNearSevenSilentHeartRate<br />请求方
 }
 ```
 
+<br />
 
+<a name="ypFgD"></a>
+## 7. 助眠音乐信息下拉
+接口描述：获取助眠音乐列表<br />url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicPull**<br />请求方式: GET<br />
+<br />出参:<br />
+
+```json
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":{
+		"helpMusic":[
+			{
+				"musicId":4,
+				"musicName":"海滩",
+				"simpleDesc":"海滩声音",
+				"detailDesc":"海滩声音",
+				"icon":"https://files.lifesense.com/other/20200115/9520fb0ab0794c0e89947193ebde2e14.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/f3fb0a4f695d4064ab322f3a58c87d9b.png",
+				"color":"#E8AD68",
+				"backgroundImg":"https://files.lifesense.com/other/20200120/53376e9aae7449cc946c5d0c4e63196e.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/beach.wav"
+			},
+			{
+				"musicId":3,
+				"musicName":"火炉",
+				"simpleDesc":"火炉声音",
+				"detailDesc":"海浪好猛啊",
+				"icon":"https://files.lifesense.com/other/20200115/19f9b68b635e4df2969285654169fd3f.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/afe2b2c9cc8e45048347fa17b1ff8af3.png",
+				"color":"#E66D5F",
+				"backgroundImg":"https://files.lifesense.com/other/20200109/69ed6754b9b5480ca764f49f9f83d66d.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/burner.wav"
+			},
+			{
+				"musicId":5,
+				"musicName":"细雨",
+				"simpleDesc":"细雨声音",
+				"detailDesc":"细雨声音",
+				"icon":"https://files.lifesense.com/other/20200115/e15fa4b79aa44a0e8e7604dd93bf0082.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/eb2f93d8399c45968e42e9408301ce39.png",
+				"color":"#505EAF",
+				"backgroundImg":"https://files.lifesense.com/other/20200109/bc2b3c816bcd46eb87b405235c9575f3.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/rain.wav"
+			},
+			{
+				"musicId":6,
+				"musicName":"八音盒",
+				"simpleDesc":"八音盒",
+				"detailDesc":"八音盒",
+				"icon":"https://files.lifesense.com/other/20200115/e4da3261a2b346eaad8b7333217caa53.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/df210b59509c4607abf1638bb629c3f3.png",
+				"color":"#E8AD68",
+				"backgroundImg":"https://files.lifesense.com/other/20200115/2f49af6b0fec47558ffcd27ae7e55619.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/box.wav"
+			},
+			{
+				"musicId":7,
+				"musicName":"沸腾",
+				"simpleDesc":"沸腾声音",
+				"detailDesc":"沸腾",
+				"icon":"https://files.lifesense.com/other/20200115/9cbef0f34a2a40929ba3a0b35725161d.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/23bd4f768cb8403a82c331d59e5eafba.png",
+				"color":"#E66D5F",
+				"backgroundImg":"https://files.lifesense.com/other/20200115/49903742e0d24ad2a7ce759a427e6f57.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/boil.wav"
+			},
+			{
+				"musicId":8,
+				"musicName":"风铃",
+				"simpleDesc":"风铃声音",
+				"detailDesc":"风铃声音",
+				"icon":"https://files.lifesense.com/other/20200115/1b9d94af8daa49baaa17c1727e61b2f4.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/d46caa0339c0464c9ca5c057812863d3.png",
+				"color":"#529F6D",
+				"backgroundImg":"https://files.lifesense.com/other/20200115/90f4b96725ee43e2bcc5989db41eeec9.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/bell.wav"
+			},
+			{
+				"musicId":9,
+				"musicName":"翻书",
+				"simpleDesc":"翻书声音",
+				"detailDesc":"翻书声音",
+				"icon":"https://files.lifesense.com/other/20200115/4b8ffa97acb54f4d93c8e659ad0a7350.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/654a0f5338334c58a2f717264704639c.png",
+				"color":"#505EAF",
+				"backgroundImg":"https://files.lifesense.com/other/20200115/28d8b78124a349bc87d0fc0b550de8ec.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/book.wav"
+			},
+			{
+				"musicId":10,
+				"musicName":"写字",
+				"simpleDesc":"写字声音",
+				"detailDesc":"写字声音",
+				"icon":"https://files.lifesense.com/other/20200115/a3a90d1b9ca5488daa53d358ead604f9.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/5ed657bba45c4ddd98ba428602d1b961.png",
+				"color":"#E8AD68",
+				"backgroundImg":"https://files.lifesense.com/other/20200115/c798aad90d954453b2959133bd5934ac.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/writing.wav"
+			},
+			{
+				"musicId":0,
+				"musicName":"咀嚼",
+				"simpleDesc":"咀嚼声音",
+				"detailDesc":"咀嚼声音",
+				"icon":"https://files.lifesense.com/other/20200115/f3d14fff240b4cb080e0dbedcaf23c3e.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/8f86f76c80d8448c8a2f0673b545a0fc.png",
+				"color":"#E8AD68",
+				"gradient":"#E66D5F",
+				"backgroundImg":"https://files.lifesense.com/other/20200109/829ae3ffae924d25a5291a144853c452.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/chew.wav"
+			}
+		]
+	}
+}
+
+
+```
+
+<br />
+
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| musicId | Long | 音乐标识 | _ |
+| musicName | String | 音乐名 |  |
+| simpleDesc | String | 音乐简述 |  |
+| detailDesc | String | 音乐详细介绍 |  |
+| icon | String | 图标 |  |
+| color | String | 颜色 |  |
+| backgroundImg | String | 背景图片 |  |
+| downloadUrl | String | 下载地址 |  |
+
+
+
+<a name="XluPX"></a>
+## 8. 助眠音乐上报
+url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicUpload**<br />请求方式: POST<br />**<br />**header参数：**<br />
+
+
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| associatedId | String | 关联账号ID |  |
+
+**<br />**post参数:**<br />**
+```javascript
+{
+  "uploadType" : 1,
+	"startSleepTimeStamp" : 12154546541,
+	"helpSleepMusicLogVOS" : [
+		{
+			"musicId" : 4,
+			"order" : 1
+		},
+		{
+			"musicId" :2 ,
+			"order" : 2
+		},
+		{
+			"musicId" : 6,
+			"order" : 3
+		}
+	]
+}
+```
+
+
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| uploadType | Integer | 上传类型 | 1、保存助眠音乐,<br />2、记录开始入睡时间, <br />3、取消开始入睡时间, <br />4、记录用户拖拽时间 |
+| startSleepTimeStamp | Long | 开始入睡时间(毫秒) | 仅当uploadType为2、3时取该值 |
+|  |  |  |  |
+| helpSleepMusicLogVOS |  | 助眠音乐播放历史 | 仅当uploadType为1时取该值 |
+| musicId | Long |  |  |
+| order | Integer | 顺序 |  |
+
+
+
+<a name="ZJ5Gb"></a>
+## 9. 助眠音乐播放历史
+接口描述：获取助眠音乐播放历史，返回最新的三条<br />url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicPlayLog**<br />请求方式: GET<br />**入参：**<br />
+
+
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| associatedId | String | 关联账号ID |  |
+
+
+<br />出参示例
+```json
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":{
+		"playLog":[
+			{
+				"musicId":1,
+				"musicName":"水流",
+				"simpleDesc":"水流",
+				"detailDesc":"水流湍急，礁石在水下闪闪发亮",
+				"icon":"https://files.lifesense.com/other/20200115/40c869241cdd4ee98d9562fb1d607c71.png",
+				"selectIcon":"https://files.lifesense.com/other/20200304/2433534e936d4a408b391de76e489b33.png",
+				"color":"#4193D1",
+				"backgroundImg":"https://files.lifesense.com/other/20200311/0f6af522d2cb40fdafa1e1528f942f92.png",
+				"downloadUrl":"https://files.lifesense.com/sleep/music/water.wav"
+			}
+		]
+	}
+}
+
+
+```
+
+
+<a name="XqfOR"></a>
+# 其他接口
+<br />
+<a name="JGDYw"></a>
+## 10. 获取用户某一天的睡眠数据
+描述：获取用户某一天的睡眠数据<br />URL：域名 + /sleep-soa/sleepResult/**getBoardInfoGivenSomeday**<br />请求方式：GET<br />**入参：**<br />
+
+
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| queryDate | String | 查询时间 | 格式: YYYY-MM-dd |
+| associatedId | String | 关联账号ID |  |
+
+
+<br />**出参：List<BoardInfoResponse>**<br />**BoardInfoResponse：**
+
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| belongDay | Date | 数据属于哪天 |  |
+| boardInfoList | List<BoardInfoDto> | 面板数据 |  |
+
+
+<br />**BoardInfoDto：**
+
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| sleepStateDetailModelList | List<SleepStateDetailDto> | 睡眠段详细数据 |  |
+| sleepId | String | 唯一标识 |  |
+| sleepTime | Date | 入睡时间 |  |
+| awakeningTime | Date | 起床时间 |  |
+| sleepDurationMinute | Integer | 睡眠时长分钟数 |  |
+| isNightSleep | boolean | 是否是夜间睡眠 | true:夜间睡眠 |
+| heartRateList | List<Integer> | 心率集合 | 每一个数字代表5分钟的心率 |
+| averageHeartRate | Integer | 平均心率 |  |
+| standardHeartRate | Integer | 基准心率 |  |
+| minHeartRate | Integer | 最小心率 |  |
+| maxHeartRate | Integer | 最大心率 |  |
+| hasRem | boolean | 是否有眼动 |  |
+| belongDay | Date | 属于哪天 |  |
+
+
+<br />**SleepStateDetailDto：**
+
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| status | Integer | 类型 | 0:快速眼动;1:清醒;2:浅睡;3:深睡 |
+| startTime | Date | 开始时间 |  |
+| endTime | Date | 结束时间 |  |
+| duration | Integer | 持续时长 |  |
 
 
