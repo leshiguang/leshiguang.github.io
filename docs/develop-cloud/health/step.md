@@ -1,7 +1,7 @@
-<a name="U3xVX"></a>
+<a name="X1iSl"></a>
 ## 1. 查询日步数批量接口
 url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
-<a name="9ODzF"></a>
+<a name="1ZQB6"></a>
 ##### 入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -9,7 +9,7 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 | size | int | 数据条数 | >= 1 && <= 50 |
 | associatedId | String | 关联账号id |  |
 
-<a name="RsOn8"></a>
+<a name="QzxAa"></a>
 ##### 出参（List）:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -19,7 +19,7 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 | stepStatisticsInfo | Object | 步数统计信息 |  |
 |  |  |  |  |
 
-<a name="hn9Jq"></a>
+<a name="oVnfn"></a>
 ###### 步数信息：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 | bandStep | Integer | 手环步数 |  |
 | dataSource | Integer | 数据来源 | 1-手环<br />2-手机<br />3-微信 |
 
-<a name="Gds5a"></a>
+<a name="1fBlS"></a>
 ###### 步数目标信息：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 | ~~combo~~ | ~~Integer~~ | ~~连击达标天数~~ |  |
 | targetState | Integer | 是否达标 | 达标状态：0未达标，1达标 |
 
-<a name="hXPLA"></a>
+<a name="vkK3e"></a>
 ###### 卡路里距离信息:
 | 字段 | 类型 | 描述 |  |
 | :--- | :--- | :--- | :--- |
@@ -46,7 +46,7 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 | distance | Double | 距离 | 单位：千米 |
 | distanceText | String | 距离文案 |  |
 
-<a name="pQU9e"></a>
+<a name="PzkWR"></a>
 ###### 步数统计信息:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 | avgStep | Integer | 平均步数 |  |
 | reachCount | Integer | 达标数 |  |
 
-<a name="Yx4Jf"></a>
+<a name="aNU6T"></a>
 ###### 示例报文：
 ```json
 
@@ -190,17 +190,17 @@ url :  域名 +  /sport-rest/step/query/getDayStepInfoList<br />method: GET
 	]
 }
 ```
-<a name="ef1Ua"></a>
+<a name="vU5vU"></a>
 ## 2. 查询周步数接口
 url :  域名 +   /sport-rest/step/query/getWeekStepInfo<br />method: GET
-<a name="nk59w"></a>
+<a name="rNh44"></a>
 ##### 入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | measurementDate | long | 测量时间 | 时间戳 |
 | associatedId | String | 关联账号id |  |
 
-<a name="NHwXO"></a>
+<a name="aAsMD"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -266,17 +266,17 @@ url :  域名 +   /sport-rest/step/query/getWeekStepInfo<br />method: GET
 	}
 }
 ```
-<a name="PTWjD"></a>
+<a name="Bvdms"></a>
 ## 3. 查询月步数接口
 url :  域名 +   /sport-rest/step/query/getMonthStepInfo<br />method: GET
-<a name="Z9vNU"></a>
+<a name="PAU0d"></a>
 ##### 入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | measurementDate | long | 测量时间 | 时间戳 |
 | associatedId | String | 关联账号id |  |
 
-<a name="MbDc1"></a>
+<a name="mQhZU"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -335,35 +335,46 @@ url :  域名 +   /sport-rest/step/query/getMonthStepInfo<br />method: GET
 	}
 }
 ```
-<a name="1BWk4"></a>
+<a name="pl5mS"></a>
 ## 4. 设置步数目标
-url :  域名 +   /sport-rest/miniProgram/setTargetStep<br />method: POST
-<a name="3wmPH"></a>
-##### 入参:
+url :  域名 +   /sport-rest/miniProgram/setTargetStep<br />method: POST<br />
+<br />**header参数或者url参数**<br />**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 关联账号id | 关联账号id<br /> |
+
+<a name="eNnyj"></a>
+##### post入参:
+
+
+
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | targetStep | Integer | 步数目标值 |  |
 
-<a name="ou5CG"></a>
+<a name="ZAwOG"></a>
 ##### 出参:
 无
-<a name="hLpbt"></a>
+<a name="YxXLq"></a>
 ###### 示例入参：
 ```json
 {
 	"targetStep":3301
 }
 ```
-<a name="PhuZw"></a>
+<a name="7E9gk"></a>
 ## 5. 查询步数目标
 url :  域名 +   /sport-rest/miniProgram/getTargetStep<br />method: GET
-<a name="gbYmr"></a>
-##### 入参:
+<a name="4L43E"></a>
+##### **header参数或者url参数**
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| associatedId | string | 关联账号id | 关联账号id<br /> |
 
-<a name="oTNfs"></a>
+<a name="naiwr"></a>
+##### 
+<a name="8nhd1"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -378,4 +389,6 @@ url :  域名 +   /sport-rest/miniProgram/getTargetStep<br />method: GET
 	"data":3200
 }
 ```
+
+
 
