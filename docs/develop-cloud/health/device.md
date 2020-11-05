@@ -288,7 +288,7 @@
 ```
 <a name="alNzx"></a>
 # 3.获取设备信息
-**url :  域名 +  /device-rest/baseinfo/getDeviceBaseInfo**<br />**method: post**<br />**<br />**post入参 **
+**url :  域名 +  /device-rest/**baseinfo/getDeviceBaseInfo**<br />**method: post**<br />**<br />**post入参 **
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
