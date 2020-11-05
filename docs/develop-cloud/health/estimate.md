@@ -1,15 +1,15 @@
-<a name="KKCJ2"></a>
+<a name="ffCxd"></a>
 ## 1.1 首页查询健康年龄数据
   url：域名 +  /hai-rest/eva/query/getBriefInfo
 
   method：get
-<a name="RLn2W"></a>
+<a name="oYuP8"></a>
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
-<a name="pRpTT"></a>
+<a name="7jtzA"></a>
 ##### 出参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -40,16 +40,16 @@
 }
 
 ```
-<a name="oMUD3"></a>
+<a name="ztOXs"></a>
 ## 1.2 查询健康评估结果数据
   url：域名 +  /hai-rest/eva/query/getDetailInfo**<br />  method：get<br />**  **描述：健康评估首页查询评估详情信息
-<a name="UBjw1"></a>
+<a name="D2kyy"></a>
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
-<a name="PYv6C"></a>
+<a name="W2TUC"></a>
 ##### 出参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@
 | userInfo | Object | 用户信息 | 见[风险数据集合](#VvmPl) |
 | moduleInfos | List<Object> | 模块数据集合 | 见[风险数据集合](#ouCMc) |
 
-<a name="JA2nS"></a>
+<a name="y5BgI"></a>
 ###### 评估信息:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -67,7 +67,7 @@
 | healthCondition | String | 健康状况 | 良好<br />及格<br />不及格 |
 | evaluateAgeDiffValue | String | 评估年龄与实际年龄差值 |  |
 
-<a name="VvmPl"></a>
+<a name="sA1jt"></a>
 ###### 用户信息：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@
 | headImg | String | 用户头像 |  |
 | height | String | 身高 | cm |
 
-<a name="ouCMc"></a>
+<a name="lRilV"></a>
 ###### 模块数据集合(List)：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -87,7 +87,7 @@
 | risk | boolean | 是否有风险 |  |
 | riskLabelInfos | List<Object> | 风险标签信息 | 见[标签信息](#vKrwN)<br />risk为true时，才会有风险标签信息 |
 
-<a name="vKrwN"></a>
+<a name="lYicl"></a>
 ###### 标签信息(List):
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -97,26 +97,33 @@
 | suggest | String | 建议 |  |
 |  |  |  |  |
 
-<a name="uVhpD"></a>
+<a name="QSDEc"></a>
 ###### 示例返回报文：
-<a name="UhTCD"></a>
+<a name="DAp0z"></a>
 ## 1.3 提交问卷
   url：域名 +  /hai-rest/eva/questionnaire/submitGetResult<br />  method：post<br />  描述：提交问卷
-<a name="lpo8B"></a>
-##### 入参:
+
+**header参数或者url参数**<br />**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 关联账号id | 关联账号id<br /> |
+
+<a name="vkEi7"></a>
+##### post入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | serialNo | String | 问卷序列号 | 固定：<br />20200715AAAAAAA |
 | questionSubmitList | List<Object> | 问题提交记录 |  |
 
-<a name="0nETi"></a>
+<a name="CF0J7"></a>
 ###### 问题提交记录:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | questionId | Long | 题目ID |  |
 | submitted | List<Object> | 用户提交的值 |  |
 
-<a name="Hk8Up"></a>
+<a name="kZssU"></a>
 ###### 用户提交的值:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -124,14 +131,14 @@
 | value | Object | 对应的值 选择题时同key一致，填空题时为用户提交的值 |  |
 | content | Object | 选择题时为key对应的内容，填空题时为用户提交的值 | 可为空 |
 
-<a name="4wCup"></a>
+<a name="SHuiH"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | evaResult | Object | 评估结果信息 |  |
 | evaResultItemDetailList | List<Object> | 评估结果项集合 |  |
 
-<a name="we37g"></a>
+<a name="BW1XA"></a>
 ###### 评估结果信息：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -147,7 +154,7 @@
 | createTime | Date | 创建时间 |  |
 | updateTime | Date | 更新时间 |  |
 
-<a name="tuoCu"></a>
+<a name="FURDf"></a>
 ###### 评估结果项(List)：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -170,7 +177,7 @@
 | suggest | String | 建议 |  |
 | refValue | String | 引用值 |  |
 
-<a name="FW4JL"></a>
+<a name="mrInX"></a>
 ###### 入参示例报文：
 ```json
 
@@ -452,7 +459,7 @@
 
 
 ```
-<a name="igxTc"></a>
+<a name="x9A5T"></a>
 ###### 出参报文示例：
 ```json
 
@@ -753,4 +760,6 @@
 }
 
 ```
+
+
 
