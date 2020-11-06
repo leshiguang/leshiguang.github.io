@@ -32,17 +32,24 @@
 <a name="49b9f02f"></a>
 # 二、快速集成
 <a name="250a1dc2"></a>
-## 2.1、蓝牙SDK下载（[Demo](https://github.com/leshiguang/lz_bluetooth_demo_ios)）
+## 2.1、接入DEMO
+
+<br />接入DEMO：[https://github.com/leshiguang/lz_bluetooth_demo_ios](https://github.com/leshiguang/lz_bluetooth_demo_ios)
+<a name="64f6bfd9"></a>
+## 2.2、Pod依赖方式
+1、在podfile中添加source： [https://github.com/leshiguang/cocoapods.git](https://github.com/leshiguang/cocoapods.git)<br />2、添加依赖：pod 'LZUISDK'<br />
+
+<a name="MG44S"></a>
+## 2.3、Framework依赖方式
+1、SDK下载
+
 | 版本 | 下载地址 | 版本更新日志 |
 | --- | --- | --- |
 | 1.0 | [LZ_UI_Framework-1.0](http://qi4q5rivb.hn-bkt.clouddn.com/LZ_UI_framework_1.0.zip) | 初始版本 |
 
 
-
-<a name="64f6bfd9"></a>
-## 2.2、项目依赖配置
-1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
-<br />2、三方依赖库，可用pod导入<br />
+<br />2、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
+<br />3、三方依赖库，可用pod导入<br />
 
 ```objectivec
 pod 'YYModel'
@@ -52,7 +59,7 @@ pod 'SDWebImage', '4.2.3'
 pod 'MBProgressHUD', '0.9.2'
 ```
 
-<br />3、引入头文件<br />
+<br />4、引入头文件<br />
 
 ```objectivec
 #import <LSDeviceManagerFramework/LSDeviceManager.h>
@@ -61,9 +68,9 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="d0dbd0c5"></a>
-## 2.3 初始化SDK
+## 2.4 初始化SDK
 <a name="c219d5c1"></a>
-### 2.3.1 登录
+### 2.4.1 登录
 
 - 功能描述：三方登录鉴权
 - 接口：
@@ -120,33 +127,11 @@ pod 'MBProgressHUD', '0.9.2'
 ```
 
 
-<a name="cf2f1d46"></a>
-### 2.3.3、开启自动接收数据的服务
+<a name="LbljQ"></a>
+# 三、更新用户信息
 
 
-```objectivec
-[[LSDeviceManager shareInstance] startDataReceiveService];
-```
-
-
-<a name="5738faa5"></a>
-### 2.3.4、停止数据接收服务
-
-
-```objectivec
-[[LSBLEDeviceManager defaultLsBleManager] stopDataReceiveService];
-```
-
-
-<a name="6trn3"></a>
-# 三、乐智UI
-
-
-<a name="f18377ec"></a>
-## 3.1、更新用户信息
-
-
-- 功能描述：如果用户信息未设置，可以用这个接口设置用户信息
+- 功能描述：如果用户信息未设置，可以用这个接口设置用户信息（设置用户信息后， 算法更精确）
 - 接口：
 
 
@@ -158,12 +143,32 @@ pod 'MBProgressHUD', '0.9.2'
 ```
 
 
-<a name="b1887611"></a>
-## 3.2、调用UI页面
+<a name="dl0pF"></a>
+# 四、数据同步
+<a name="cEY4R"></a>
+### 4.1、开启自动接收数据的服务
+
+
+```objectivec
+[[LSDeviceManager shareInstance] startDataReceiveService];
+```
+
+
+<a name="5738faa5"></a>
+### 4.2、停止数据接收服务
+
+
+```objectivec
+[[LSDeviceManager shareInstance] stopDataReceiveService];
+```
+
+
+<a name="6trn3"></a>
+# 五、集成UI
 
 
 <a name="ed4ccbcf"></a>
-### 3.2.1、获取设备列表页
+### 5.1、获取设备列表页
 
 
 ```objectivec
@@ -173,7 +178,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="8c0b700f"></a>
-### 3.2.2、获取我的设备页面
+### 5.2、获取我的设备页面
 
 
 ```objectivec
@@ -183,7 +188,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="64f59ce3"></a>
-### 3.2.3、打开体重页面
+### 5.3、打开体重页面
 
 
 ```objectivec
@@ -193,7 +198,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="872e220c"></a>
-### 3.2.4、打开血压页面
+### 5.4、打开血压页面
 
 
 ```objectivec
@@ -203,7 +208,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="09f88fda"></a>
-### 3.2.5、打开心率页面
+### 5.5、打开心率页面
 
 
 ```objectivec
@@ -213,7 +218,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="670f6ad7"></a>
-### 3.2.6、打开有氧能力页面
+### 5.6、打开有氧能力页面
 
 
 ```objectivec
@@ -223,7 +228,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="ed559002"></a>
-### 3.2.7、打开睡眠页面
+### 5.7、打开睡眠页面
 
 
 ```objectivec
@@ -233,7 +238,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="1b8a4d49"></a>
-### 3.2.5、打开步数页面
+### 5.8、打开步数页面
 
 
 ```objectivec
