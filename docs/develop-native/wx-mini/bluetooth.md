@@ -23,7 +23,7 @@
 ```
 <a name="o72tb"></a>
 ### 2.2 申请配额
-      请准备需要接入的**设备型号**和**设备数量、小程序名字**信息等，发送申请邮件至以下邮箱:<br />发送： [jason.sheng@lifesense.com](mailto:jason.sheng@lifesense.com) [zheng.lu@lifesense.com](mailto:zheng.lu@lifesense.com)<br />抄送： [zhicheng.liu@lifesense.com](mailto:zhicheng.liu@lifesense.com) [yong.wu@lifesense.com](mailto:yong.wu@lifesense.com) [xinyi.liu@lifesense.com](mailto:xinyi.liu@lifesense.com) [pengfei.yu@lifesense.com](mailto:pengfei.yu@lifesense.com) [chengze.wu@lifesense.com](mailto:chengze.wu@lifesense.com)<br />     我们会根据你的需求和小程序信息给你分配一个鉴权appId，获取到鉴权appId后，请通过插件api进行初始化，代码如下：
+      请准备需要接入的**设备型号**和**设备数量、小程序名字**信息等，发送申请邮件至以下邮箱:<br />发送： [zhihui.xiao@lifesense.com](zhihui.xiao@lifesense.com) [zheng.lu@lifesense.com](mailto:zheng.lu@lifesense.com)<br />抄送： [zhicheng.liu@lifesense.com](mailto:zhicheng.liu@lifesense.com) [yong.wu@lifesense.com](mailto:yong.wu@lifesense.com) [xinyi.liu@lifesense.com](mailto:xinyi.liu@lifesense.com) [pengfei.yu@lifesense.com](mailto:pengfei.yu@lifesense.com) [chengze.wu@lifesense.com](mailto:chengze.wu@lifesense.com)<br />     我们会根据你的需求和小程序信息给你分配一个鉴权appId，获取到鉴权appId后，请通过插件api进行初始化，代码如下：
 ```javascript
 const lsPlugin = requirePlugin("LSDevicePlugin")
 lsPlugin.initAuthorization({
