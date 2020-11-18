@@ -42,19 +42,33 @@
 
 
 <a name="250a1dc2"></a>
-## 2.1、蓝牙SDK下载
+## 2.1、SDK集成
+
+
+<a name="EHBeY"></a>
+### 2.1.1、framework 方式集成
+
+
+<a name="OMIVC"></a>
+#### 1、framework下载
+
+
+
 | 版本 | 下载地址 | 版本更新日志 |
 | --- | --- | --- |
 | 1.8.0 | [lifesense_ble_module_ios_1.0](http://qi4q5rivb.hn-bkt.clouddn.com/LS_UI_IoT_Bluetooth-SDK.zip) | 初始版本 |
 
 
 
-<a name="64f6bfd9"></a>
-## 2.2、项目依赖配置
+<a name="9lwlZ"></a>
+#### 2、项目依赖配置
 
 <br />1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
 <br />
-<br />2、三方依赖库，可用pod导入<br />
+
+<a name="FOnmM"></a>
+#### 3、三方依赖库，可用pod导入
+
 
 ```objectivec
 pod 'YYModel'
@@ -64,10 +78,22 @@ pod 'SDWebImage', '4.2.3'
 pod 'MBProgressHUD', '0.9.2'
 ```
 
-<br />3、在Build Phases 中添加framework
 
-![截屏2020-10-13 下午2.31.25.png](https://cdn.nlark.com/yuque/0/2020/png/304678/1602570752301-87647211-24fe-4916-a7c3-2d2ddf9c99ad.png#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2020-10-13%20%E4%B8%8B%E5%8D%882.31.25.png&originHeight=621&originWidth=788&size=62488&status=done&style=none&width=788#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&originHeight=621&originWidth=788&status=done&style=none&width=788)<br />自此，依赖配置完成<br />
+<a name="VkV3h"></a>
+#### 4、在Build Phases 中添加framework
 
+<br />![截屏2020-10-13 下午2.31.25.png](https://cdn.nlark.com/yuque/0/2020/png/304678/1602570752301-87647211-24fe-4916-a7c3-2d2ddf9c99ad.png#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2020-10-13%20%E4%B8%8B%E5%8D%882.31.25.png&originHeight=621&originWidth=788&size=62488&status=done&style=none&width=788#align=left&display=inline&height=621&margin=%5Bobject%20Object%5D&originHeight=621&originWidth=788&status=done&style=none&width=788)<br />自此，依赖配置完成<br />
+
+<a name="TfSWf"></a>
+### 2.1.2、Pod方式集成
+
+<br />1、在podfile中添加source： [https://github.com/leshiguang/cocoapods.git](https://github.com/leshiguang/cocoapods.git)<br />2、添加依赖：pod 'LZUISDK'<br />
+
+<a name="nIV1e"></a>
+### 2.1.3、Demo下载
+
+
+接入DEMO：[https://github.com/leshiguang/lz_bluetooth_demo_ios](https://github.com/leshiguang/lz_bluetooth_demo_ios)
 <a name="d0dbd0c5"></a>
 ## 2.3 初始化SDK
 
@@ -75,49 +101,117 @@ pod 'MBProgressHUD', '0.9.2'
 <a name="c219d5c1"></a>
 ### 2.3.1 初始化
 
-<br />1、引入头文件<br />
+
+<a name="8K0CJ"></a>
+#### 1、引入头文件
+
 
 ```objectivec
 #import <LSDeviceManagerFramework/LSDeviceManager.h>
 #import <LSAuthorization/LSAuthorization.h>
+#import <LSDeviceManagerFramework/LSDeviceManager+Sync.h>
 ```
 
-<br />2、设置代理<br />
 
-- 功能描述： LSDeviceComponentDelegate 设备连接绑定相关回调
+<a name="mVA7i"></a>
+#### 2、设置代理
+
+
+- 功能描述： LSDeviceComponentDelegate(设备连接绑定相关回调)
+
+   ScalesReceiveDataDelegate(秤数据回调)<br />   BloodPressureReceiveDataDelegate(血压计数据回调)<br />   BraceletReceiveDataDelegate(手环数据回调）<br />
+
+- 遵循协议，设置代理
 
 
 
 ```objectivec
-//在需要实现代理方法的文件添加 LSDeviceComponentDelegate
-@interface ViewController () <LSDeviceComponentDelegate>
+#import <LSDeviceManagerFramework/LSDeviceManager.h>
 
-[[LSDeviceManager shareInstance] addDelegate:self];
+@interface LSViewController () <BraceletReceiveDataDelegate,ScalesReceiveDataDelegate,BloodPressureReceiveDataDelegate,LSDeviceComponentDelegate
 
-//实现代理方法
-- (void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object {}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self initSDK];
+}
 
-- (void)onDeviceConnectStateChange:(BluetoothConnectState)connectState broadcastId:(NSString *)broadcastId {}
+- (void)initSDK {
+	[[LSDeviceManager shareInstance] addDelegate:self];
+    [LSDeviceManager shareInstance].braceletDataDelegate = self;
+    [LSDeviceManager shareInstance].scalesDataDelegate = self;
+    [LSDeviceManager shareInstance].bloodPressureDataDelegate = self;
+}
+
+@end
 ```
 
-<br />3、开启调试模式<br />
 
-- 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
+- 实现代理方法
 
 
 
 ```objectivec
-[[LSDeviceManager shareInstance] openDebug];
+#pragma mark - LSDeviceComponentDelegate
+- (void)onBindStatusChange:(LSEBindStatusCode)bindCode device:(Device *)device deviceUsers:(NSArray<DeviceUser *> *)deviceUsers netCode:(NSInteger)netCode netMsg:(NSString *)netMsg object:(NSObject *)object {
+}
+
+- (void)onDeviceConnectStateChange:(BluetoothConnectState)connectState broadcastId:(NSString *)broadcastId {
+    NSLog(@"蓝牙连接状态改变----connectState:%ld broadcastId:%@",(long)connectState,broadcastId);
+}
+
+#pragma mark - BloodPressureReceiveDataDelegate
+- (void)onReceiveBraceletData:(id)data dataType:(BraceletReceiveDataType)type {
+    NSString *className = NSStringFromTransactionState(type);
+    NSLog(@"数据回调------%@",data);
+    Class cls = NSClassFromString(className);
+    if (![data isKindOfClass:cls]) {
+        return;
+    }
+    switch (type) {
+        case WalkingDataType: {
+            WalkingData *walkingData = [[cls alloc] init];
+            walkingData = (WalkingData *)data;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark - ScalesReceiveDataDelegate
+- (void)onReceiveScalesWeightData:(WeightData *)weightData {}
+
+- (void)onReceiveSaclesSsidName:(LSScaleWifiModel *)wifiMode {}
+
+- (void)onReceiveScalesWifiConnectState:(NSInteger *)state {}
+
+#pragma mark - BloodPressureReceiveDataDelegate
+- (void)onReceiveBloodPressureMeasureData:(LSSphygmometerData *)bloodPressureData {}
 ```
 
-<br />4、登录<br />
+
+<a name="TPstq"></a>
+#### 3 、三方登录鉴权
+
 
 - 功能描述：三方登录鉴权
+- 依赖头文件
+
+
+
+```objectivec
+#import <LSAuthorization/LSAuthorization.h>
+```
+
+
 - 接口：
 
 
 
 ```objectivec
+#import <LSAuthorization/LSAuthorization.h>
+
 /// 第三方账号授权登录
 /// @param appKey appkey
 /// @param appSecret appSecret
@@ -126,11 +220,65 @@ pod 'MBProgressHUD', '0.9.2'
 - (void)authorizeDevice:(NSString *)appKey appSecret:(NSString *)appSecret associatedId:(NSString *)associatedId callback:(nonnull void(^)(NSUInteger userId, NSString *accessToken))callback;
 ```
 
+<br />
+
+- 调用示例
+
+
+
+```objectivec
+- (void)initSDK {
+    
+    [[LSAuthorization sharedInstance] authorizeDevice:@"appKey" appSecret:@"appSecret" associatedId:@"userId" callback:^(NSUInteger userId, NSString * _Nonnull accessToken) {
+        weakSelf.lzUserId = [NSString stringWithFormat:@"%ld",(long)userId];
+        weakSelf.accessToken = accessToken;
+        
+        //登录成功后需要进行蓝牙SDK登录
+        [[LSDeviceManager shareInstance] loginWithUserId:weakSelf.lzUserId];
+        
+		//如果需要使用乐智UI,需要进行下面初始化操作
+        LSBluetoothUIAccountInfo *accountInfo = [[LSBluetoothUIAccountInfo alloc] init];
+        accountInfo.userId = weakSelf.lzUserId;
+        accountInfo.accessToken = weakSelf.accessToken;
+        [[LSBluetoothUIManager shareInstance] initBluetoothUISDK:accountInfo];
+        
+        // 同步服务端数据，在同步成功后，可进行设备连接操作
+        [[LSDeviceManager shareInstance] syncFromServerCompletion:^(int code, NSString *msg) {
+            // TODO 获取已绑定设备
+            if (code == 200) {
+               [self connectDevice];
+            } else {
+                NSLog(@"同步服务端数据 ---- %@ code: %d",msg,code);
+            }
+
+        }];
+    }];
+}
+
+- (void)connectDevice {
+    [[LSDeviceManager shareInstance] getBoundDevices:@([self.lzUserId integerValue]) Completion:^(int code, NSString *msg, NSArray<Device *> *deviceList) {
+        if (code != 200) return;
+        if (deviceList.count == 0) {
+            NSLog(@"---------没有绑定设备");
+        }
+        for (Device *device in deviceList) {
+            if ([device.isActive intValue] == 1) {
+                NSLog(@"连接设备-----------%@",device.model);
+                NSLog(@"communicationType ---- %@",device.communicationType);
+                self.deviceId = device.broadcastId;
+                [[LSDeviceManager shareInstance] connectDeviceWithDeviceInfo:device];
+            }
+        }
+        
+    }];
+}
+```
+
 
 - 参数：
 
 
-<br />tenantId， subscriptionId需要走申请流程（测试接入两个值可以固定为1、6）<br />
+<br />appKey， appSecret需要走申请流程<br />
 <br />申请接入需要的材料 <br />
 <br />准备申请材料：<br />
 
@@ -154,20 +302,128 @@ pod 'MBProgressHUD', '0.9.2'
 4、bundleID：（ios和android的包ID， 用于备案）
 ```
 
-<br />5、设置LSDeviceManager登录态<br />
 
-- 功能描述：设置用户Id到LSDeviceManager
+<a name="oagJy"></a>
+#### 4、设置设备登录态
+
+
+- 功能描述：设置设备登录态，根据userId执行当前用户的设备绑定连接操作
+
+
+
+- 依赖头文件
+
+
+
+```objectivec
+#import <LSDeviceManagerFramework/LSDeviceManager.h>
+```
+
+
 - 接口：
 
 
 
 ```objectivec
+/// 登录成功后调用
+/// @param userId userId
 - (void)loginWithUserId:(NSString *)userId;
 ```
 
 
+- 调用示例
+
+
+
+```objectivec
+[[LSDeviceManager shareInstance] loginWithUserId:weakSelf.lzUserId];
+```
+
+
+<a name="EQKFe"></a>
+#### 5、同步服务端设备状态
+
+- 功能描述：当本地设备状态丢失后需要从服务端同步，否则无法获取到当前已绑定的设备
+- 依赖头文件
+
+
+
+```objectivec
+#import <LSDeviceManagerFramework/LSDeviceManager+Sync.h>
+```
+
+
+- 接口：
+
+
+
+```objectivec
+/// 从服务器同步设备信息
+/// @param completion 同步结果回调
+-(void)syncToServerCompletion:(void(^)(int code,NSString *msg))completion;
+```
+
+
+- 调用示例
+
+
+
+```objectivec
+[[LSDeviceManager shareInstance] syncFromServerCompletion:^(int code, NSString *msg) {
+            // TODO 获取已绑定设备
+            if (code == 200) {
+
+            } else {
+                NSLog(@"同步服务端数据 ---- %@ code: %d",msg,code);
+            }
+        }];
+```
+
+
+<a name="qqrm6"></a>
+#### 6、开启调试模式
+
+
+- 功能描述：开启调试模式后所有账号鉴权，IOT平台数据同步均为开发环境
+
+
+
+```objectivec
+[[LSDeviceManager shareInstance] openDebug];
+```
 <a name="cf2f1d46"></a>
-### 2.3.3、开启自动接收数据的服务
+### 
+<a name="v9xH7"></a>
+#### 7、日志上报
+
+- 功能描述：日志上报
+- 依赖头文件
+
+
+
+```objectivec
+#import <LSDeviceManagerFramework/LSDeviceManager.h>
+```
+<a name="sTBDc"></a>
+### 
+
+- 接口
+
+
+
+```objectivec
+/// 日志上报 在loginWithUserId后调用
+- (void)uploadFile;
+
+/// 日志上报设置项
+/// @param enablePrint YES允许在控制台输出log
+/// @param enableWrite YES允许写入日志文件
+- (void)enablePrint:(BOOL)enablePrint enableWriteToFile:(BOOL)enableWrite;
+```
+
+
+<a name="y2lsD"></a>
+### 2.3.2、开启自动接收数据的服务
 
 
 ```objectivec
@@ -176,7 +432,7 @@ pod 'MBProgressHUD', '0.9.2'
 
 
 <a name="5738faa5"></a>
-### 2.3.4、停止数据接收服务
+### 2.3.3、停止数据接收服务
 
 
 ```objectivec
@@ -184,6 +440,36 @@ pod 'MBProgressHUD', '0.9.2'
 ```
 
 
+<a name="3WWwn"></a>
+### 2.3.4、切换账号/退出登录
+
+- 功能描述：切换账号/退出登录的操作后，需要重置sdk，这里需要调用logout
+- 依赖头文件
+
+
+
+```objectivec
+#import <LSDeviceManagerFramework/LSDeviceManager.h>
+```
+
+
+- 接口
+
+
+
+```objectivec
+/// 退出登录时/切换账号时调用一次
+- (void)logout;
+```
+
+
+- 示例
+
+
+
+```objectivec
+[[LSDeviceManager shareInstance] logout];
+```
 <a name="44fe50fc"></a>
 # 三、绑定设备
 
@@ -203,9 +489,8 @@ pod 'MBProgressHUD', '0.9.2'
 
 ```objectivec
 /// 搜索设备,在结束配对流程后需要调用调用startDataReceiveService
-/// @param productInfo 设备信息
-/// @param searchBlock 回调
-- (void)searchDevice:(LSEProductInfo *)productInfo searchBlock:(LSESearchBlock)searchBlock;
+/// @param searchBlock 设备信息回调
+- (void)searchDeviceBlock:(LSESearchBlock)searchBlock;
 ```
 
 
@@ -763,7 +1048,7 @@ pod 'MBProgressHUD', '0.9.2'
 | LSTimeTypeSetType | TimeFormatCfg | 时间制式 |
 | LSWristStateSettype | WearStateCfg | 佩戴习惯 |
 | LSScreenDirectionSetType | ScreenDirectionCfg | 设置屏幕方向 |
-| LSScreenContentSetType | ScreenContentSwitch | 自定义屏幕 |
+| LSScreenContentSetType | ScreenContentCfg | 自定义屏幕 |
 | LSAutomaticSportsSetType | LSEAutomaticSportstypeCfg | 自动识别多运动类型 |
 | LSDialTypeSetType | LSEDialModelCfg | 设置手环表盘 |
 | LSWeatherDataSetType | LSEWeatherData | 设置天气 |
