@@ -5,7 +5,7 @@
 ## 2.接入
 <a name="Ces1t"></a>
 ### 2.1 申请插件(小程序插件AppId:wx43b1ab446b5db1e0)   
-    插件地址[https://mp.weixin.qq.com/wxopen/pluginbasicprofile?action=intro&appid=wxcffaa8476ea5be91](https://mp.weixin.qq.com/wxopen/pluginbasicprofile?action=intro&appid=wxcffaa8476ea5be91)
+    插件地址[https://mp.weixin.qq.com/wxopen/pluginbasicprofile?action=intro&appid=wx43b1ab446b5db1e0](https://mp.weixin.qq.com/wxopen/pluginbasicprofile?action=intro&appid=wx43b1ab446b5db1e0)
 <a name="oXG96"></a>
 ####   1). 添加插件
 在使用插件前，首先要在小程序管理后台的“设置-第三方服务-插件管理”中添加插件。为了防止滥用，请等待审核通过后方可使用。(_发送申请配额邮件后，处理完毕会给予通过_)
