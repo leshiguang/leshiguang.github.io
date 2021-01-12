@@ -605,3 +605,54 @@ bpList：
 }
 ```
 
+
+<a name="DWunC"></a>
+## 1.6 上传血压记录
+**Url：域名+**/**soa_bloodpressure/api/bp/v1.0/uploadBpRecord**<br />请求方式：POST<br />
+<br />入参（URL参数）：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| associatedId | String | 第三方Id | <br /> |
+
+
+<br />入参（JSON参数）：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| systolicPressure | Integer | 高压(收缩压) | <br /> |
+| diastolicPressure | Integer | 低压(舒张压) |  |
+| heartRate | Integer | 脉搏 |  |
+| measurementDate | Long | 时间戳，13位毫秒值 |  |
+| remark | String | 备注 |  |
+| deviceId | String | 设备id |  |
+
+
+<br />出参(list集合)：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+
+
+<br />示例请求JSON:
+```json
+
+    {
+        "systolicPressure":138,
+        "diastolicPressure":89,
+        "heartRate":90,
+        "measurementDate":1610453086000,
+        "remark":"有一点点心慌",
+        "deviceId":"asd1232asd"
+    }
+```
+
+<br />示例响应报文：
+```json
+{
+    "code": 200,
+    "msg": "成功",
+    "data": true
+}
+```
+
