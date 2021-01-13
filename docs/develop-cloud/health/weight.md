@@ -1289,7 +1289,7 @@ url :  域名 +  /weight-rest/bulletinBoard/getWeightRoundDetail<br />method: 
 
 <a name="Mo8Kz"></a>
 # 5.上传用户的设备测量数据（数据来源于外部）
-url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty<br />method: POST<br />**header参数或者url参数**<br />**
+url：域名 +  /weight-rest/upload/uploadWeightFromThirdParty<br />method: POST<br />**header参数或者url参数**<br />**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
