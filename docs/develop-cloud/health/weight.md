@@ -1286,3 +1286,33 @@ url :  域名 +  /weight-rest/bulletinBoard/getWeightRoundDetail<br />method: 
 }
 ```
 
+
+<a name="Mo8Kz"></a>
+# 5.上传用户的设备测量数据（数据来源于外部）
+url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty<br />method: POST<br />**header参数或者url参数**<br />**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 第三方关联账户id | 关联账号id<br /> |
+
+<a name="TGCUU"></a>
+##### post报文入参：
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| recordList | List<Object> | 设备测量记录 |  |
+
+
+
+<a name="WHRQH"></a>
+###### 设备测量记录：
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| deviceId | string | 设备标识id |  |
+| measurementTime | Date | 测量时间 |  |
+| weight | Double | 体重 |  |
+| resistance50k | Double | 50k电阻值 |  |
+| heartRate | Integer | 心率 |  |
+
+
+
+
