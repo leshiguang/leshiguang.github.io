@@ -212,7 +212,8 @@ ws.setDomStorageEnabled(true);
 ```
 <a name="7UaTb"></a>
 ### 2.2.4、页面跳转
-通过webview的loadUrl进行跳转
+通过webview的loadUrl进行跳转<br />
+
 
 | 页面功能 | 链接 | 参数 |
 | --- | --- | --- |
@@ -222,5 +223,7 @@ ws.setDomStorageEnabled(true);
 | 血压首页 | [https://h5.leshiguang.com/bloodpressure/0.0.1/analysis.html?tn=](https://h5.leshiguang.com/bloodpressure/0.0.1/analysis.html?tn=zhongyizhijia) | tn:租户名称 |
 
 
+<br />
+<br />
 
 
