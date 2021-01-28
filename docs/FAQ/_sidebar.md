@@ -1,18 +1,3 @@
-<div class="sidebar_title "><i class="fa fa-home fa-fw"></i>常见问题</div>
+- [帮助中心](/FAQ/README)
+   - [蓝牙设备相关问题答疑](/FAQ/bluetooth)
 
-* 智能硬件
-  * [血压计](/product/hardware/sphygmomanometer)
-  * [手环](/product/hardware/wristbrand)
-  * [智能体脂秤](/product/hardware/scale)
-  * [手表](/product/hardware/watch)
-* 健康产品
-    * [体重产品介绍](/product/health/weight)
-    * [睡眠产品介绍](/product/health/sleep)
-    * [血压产品介绍](/product/health/bloodpressure)
-    * [步数产品介绍](/product/health/step)
-    * [心率产品介绍](/product/health/heartrate)
-    * [饮食产品介绍](/product/health/food)
-    * [运动产品介绍](/product/health/sports)
-    * [有氧能力](/product/health/aerobic)
-        * [PPG产品介绍](/product/health/ppg)
-        * [ECG产品介绍](/product/health/ecg)
