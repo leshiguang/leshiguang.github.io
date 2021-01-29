@@ -1,19 +1,12 @@
 - [SDK对接](/develop-native/sdk/README)
    - Android开发指南
       - [蓝牙SDK对接文档](/develop-native/android/bluetooth)
-      - [IoT平台SDK对接文档](/develop-native/android/IoT)
       - [UI级SDK对接文档](/develop-native/android/ui)
       - [轻量级UI SDK](/develop-native/android/simpleui)
    - iOS开发指南
       - [蓝牙SDK对接文档](/develop-native/ios/bluetooth)
-      - [IoT平台SDK对接文档](/develop-native/ios/IoT)
       - [UI级SDK对接文档](/develop-native/ios/ui)
       - [轻量级UI SDK](/develop-native/ios/simpleui)
    - 微信小程序开发指南
       - [蓝牙SDK对接文档](/develop-native/wx-mini/bluetooth)
-- [OEM APP](/develop-native/oem/README)
-   - [微信小程序](/develop-native/wxMiniProgram)
-   - [公版](/develop-native/README)
-   - [Android OEM App](/develop-native/app/diyandroid)
-   - [iOS OEM App](/develop-native/app/diyios)
 
