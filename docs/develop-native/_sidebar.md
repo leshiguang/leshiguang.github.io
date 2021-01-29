@@ -1,13 +1,12 @@
 - [接入申请](/develop-native/apply)
-- [SDK对接](/develop-native/sdk/README)
-   - Android开发指南
-      - [蓝牙SDK对接文档](/develop-native/android/bluetooth)
-      - [UI级SDK对接文档](/develop-native/android/ui)
-      - [轻量级UI SDK](/develop-native/android/simpleui)
-   - iOS开发指南
-      - [蓝牙SDK对接文档](/develop-native/ios/bluetooth)
-      - [UI级SDK对接文档](/develop-native/ios/ui)
-      - [轻量级UI SDK](/develop-native/ios/simpleui)
-   - 微信小程序开发指南
-      - [蓝牙SDK对接文档](/develop-native/wx-mini/bluetooth)
+- Android开发指南
+   - [蓝牙](/develop-native/android/bluetooth)
+   - [健康页面集成](/develop-native/android/ui)
+   - [H5页面集成](/develop-native/android/simpleui)
+- iOS开发指南
+   - [蓝牙](/develop-native/ios/bluetooth)
+   - [健康页面集成](/develop-native/ios/ui)
+   - [H5页面集成](/develop-native/ios/simpleui)
+- 微信小程序开发指南
+   - [蓝牙](/develop-native/wx-mini/bluetooth)
 
