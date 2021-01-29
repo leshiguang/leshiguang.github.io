@@ -1,3 +1,4 @@
+- [接入申请](/develop-native/apply)
 - [SDK对接](/develop-native/sdk/README)
    - Android开发指南
       - [蓝牙SDK对接文档](/develop-native/android/bluetooth)
