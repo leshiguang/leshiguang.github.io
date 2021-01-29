@@ -28,7 +28,7 @@
 
 <a name="YPSRN"></a>
 ### 接入文档
-android蓝牙SDK文档： [https://docs.leshiguang.com/#/develop-native/android/bluetooth](https://docs.leshiguang.com/#/develop-native/android/bluetooth)<br />iOS蓝牙SDK文档：[https://docs.leshiguang.com/#/develop-native/ios/bluetooth](https://docs.leshiguang.com/#/develop-native/ios/bluetooth)<br />微信小程序SDK文档：[https://docs.leshiguang.com/#/develop-native/wx-mini/bluetooth](https://docs.leshiguang.com/#/develop-native/wx-mini/bluetooth)<br />如您需要uniapp sdk， 请联系开发者或商务同学
+android蓝牙SDK文档：[https://leshiguang.github.io/#/develop-native/android/bluetooth](https://leshiguang.github.io/#/develop-native/android/bluetooth)<br />iOS蓝牙SDK文档：[https://leshiguang.github.io/#/develop-native/ios/bluetooth](https://leshiguang.github.io/#/develop-native/ios/bluetooth)<br />微信小程序SDK文档：[https://leshiguang.github.io/#/develop-native/wx-mini/bluetooth](https://leshiguang.github.io/#/develop-native/wx-mini/bluetooth)<br />如您需要uniapp sdk， 请联系开发者或商务同学
 <a name="0JJiE"></a>
 # UI级SDK接入申请
 <a name="9szwe"></a>
@@ -50,7 +50,7 @@ UI级SDK将会采集用户使用设备的测量数据、用户的身高、体重
 申请成功将会收到乐心的回复，回复内容中会包含一下信息：<br />1.appKey:对应一个应用<br />2.appSecret:私钥<br />3.tenantName：租户名缩写（用于h5页面版本管理）<br />4.tenantId: 租户ID<br />5.subscription：订阅ID
 <a name="2kRBz"></a>
 ### 接入文档
-android UI级sdk接入文档： [https://docs.leshiguang.com/#/develop-native/android/ui](https://docs.leshiguang.com/#/develop-native/android/ui)<br />iOS UI级sdk接入文档：[https://docs.leshiguang.com/#/develop-native/ios/ui](https://docs.leshiguang.com/#/develop-native/ios/ui)<br />
+android UI级sdk接入文档： [https://leshiguang.github.io/#/develop-native/android/ui](https://leshiguang.github.io/#/develop-native/android/ui)<br />iOS UI级sdk接入文档：[https://leshiguang.github.io/#/develop-native/ios/ui](https://leshiguang.github.io/#/develop-native/ios/ui)<br />
 
 <a name="TyEeX"></a>
 # 支持设备
