@@ -6,7 +6,7 @@
 # 快速集成
 <a name="oZOVP"></a>
 ## SDK下载
-下载地址： [https://leshiguang.github.io/#/download/README](https://leshiguang.github.io/#/download/README)
+下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
 <a name="250a1dc2"></a>
 ## 项目依赖配置
 1、解压缩下载的压缩文件，您将看到三个Framework
@@ -136,7 +136,7 @@ void stopSearch();
 
 - 参数：
 
-appId: 申请地址： [https://leshiguang.github.io/#/develop-native/apply](https://leshiguang.github.io/#/develop-native/apply)<br />lsDevice：参考 LsDeviceInfo 的定义<br />result：添加状态码：<br />UN_KNOWN = -1<br />SUCCESS = 200<br />SERVER_ERROR = 500<br />UNCERFIFIED_BUNDLE = 20001<br />PARAMETER_ERROR = 20002<br />UNCERFIFIED_MODEL = 20003<br />ACTIVATION_EXCEED = 20004<br />INVALID_SERVICE = 20005<br />INVALID_DEVICE = 20006<br />INVALID_APPID = 20007
+appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)<br />lsDevice：参考 LsDeviceInfo 的定义<br />result：添加状态码：<br />UN_KNOWN = -1<br />SUCCESS = 200<br />SERVER_ERROR = 500<br />UNCERFIFIED_BUNDLE = 20001<br />PARAMETER_ERROR = 20002<br />UNCERFIFIED_MODEL = 20003<br />ACTIVATION_EXCEED = 20004<br />INVALID_SERVICE = 20005<br />INVALID_DEVICE = 20006<br />INVALID_APPID = 20007
 <a name="28fe29f7"></a>
 ## 开启数据同步
 
