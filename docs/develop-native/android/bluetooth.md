@@ -5,7 +5,7 @@
 # 快速集成
 <a name="iazCZ"></a>
 ## 蓝牙SDK下载
-下载地址： [https://leshiguang.github.io/#/download/README](https://leshiguang.github.io/#/download/README)
+下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
 <a name="LVJNh"></a>
 ## 项目依赖配置
 1、拷贝下载的SDK到项目的libs文件夹中<br />2、在module的build.gradle中添加本地仓库地址：
@@ -48,7 +48,7 @@ repositories {
 
 - 参数说明：
 
-appContext：Application上下文<br />appId：申请方法： [https://leshiguang.github.io/#/develop-native/apply](https://leshiguang.github.io/#/develop-native/apply)
+appContext：Application上下文<br />appId：申请方法： [https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
 
 - 返回值：boolean，true 表示初始化成功，false 表示初始化失败
 - 调用示例：
