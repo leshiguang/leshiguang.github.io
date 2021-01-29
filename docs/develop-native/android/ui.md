@@ -5,7 +5,7 @@
 # 快速集成
 <a name="LvlIQ"></a>
 ## SDK下载
-下载地址： [https://leshiguang.github.io/#/download/README](https://leshiguang.github.io/#/download/README)
+下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
 <a name="wAasu"></a>
 ## 添加依赖
 拷贝所需的aar包到libs目录下：
@@ -66,7 +66,7 @@ login(String appKey, String appSecret, String associatedId, final String tn, fin
 | String | tn |  |
 
 
-<br />appKey， appSecret需要申请获取：[https://leshiguang.github.io/#/develop-native/apply](https://leshiguang.github.io/#/develop-native/apply)
+<br />appKey， appSecret需要申请获取：[https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
 <a name="bOaRr"></a>
 ### 设备管理初始化（登录后调用）
 描述：初始化SDK<br />接口：com.lifesense.device.scale.application.interfaces.ILZDeviceService#init
