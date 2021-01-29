@@ -23,7 +23,7 @@
 ```
 
 
-- 参数：appKey，appSecret申请地址： [https://leshiguang.github.io/#/develop-native/apply](https://leshiguang.github.io/#/develop-native/apply)
+- 参数：appKey，appSecret申请地址： [https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
 
 
 
