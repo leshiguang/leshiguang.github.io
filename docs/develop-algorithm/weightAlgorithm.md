@@ -2,7 +2,7 @@
 # 1.国内
 <a name="IbV2j"></a>
 ## 1.1 体脂18项计算
-url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateAndAnalysisResult**<br />method: post<br />
+url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<br />method: post<br />
 
 <a name="2e29u"></a>
 ### 入参：
@@ -100,7 +100,8 @@ url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateAndAnalys
 ```
 <a name="QvKrf"></a>
 ## 1.2.体重指标数据分析
-url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<br />method: post
+
+<br />url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateAndAnalysisResult**<br />method: post
 <a name="im2O8"></a>
 ### 入参：
 同1.1入参
