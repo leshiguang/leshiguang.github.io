@@ -1,9 +1,7 @@
-<a name="98862a0f"></a>
-# 菜单栏
 
 
 - [Api签名](/develop-cloud/api/sign)
-- Api接口文档
+- 乐智云API(商业版)
    - [登录](/develop-cloud/health/login)
    - [设备](/develop-cloud/health/device)
    - [体重](/develop-cloud/health/weight)
@@ -13,4 +11,10 @@
    - [血糖](/develop-cloud/health/bloodsugar)
    - [心率](/develop-cloud/health/heartrate)
    - [健康评估](/develop-cloud/health/estimate)
+- 乐智云算法
+   - [体脂](/develop-cloud/algorithm/fat)
+   - [睡眠分析](/develop-cloud/algorithm/sleep)
+
+
+
 
