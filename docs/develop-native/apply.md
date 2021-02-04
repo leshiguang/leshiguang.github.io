@@ -53,7 +53,7 @@
 
 乐智云算法：
 
-- 算法对接文档：[https://docs.leshiguang.com/develop-algorithm/README](https://docs.leshiguang.com/develop-algorithm/README)
+- 算法对接文档：[https://docs.leshiguang.com/develop-cloud/algorithm/fat](https://docs.leshiguang.com/develop-cloud/algorithm/fat)
 <a name="TyEeX"></a>
 # 支持设备
 | 设备类型 | 型号 |
