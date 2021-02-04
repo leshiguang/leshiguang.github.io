@@ -7,7 +7,7 @@
 * [解决方案](solution/README.md)
 * [乐智云Api](develop-cloud/README.md)
 * [客户端SDK](develop-native/README.md)
-* [乐智云算法](develop-algorithm/README.md)
+* [乐智云算法](develop-cloud/algorithm/fat.md)
 * [下载](download/README.md)
 * [帮助](FAQ/README.md)
 
