@@ -642,10 +642,14 @@ section.cover blockquote>p>a:hover {
 .sidebar ul li a:hover {
     text-decoration: underline
 }
-
-.sidebar ul li ul {
-    padding: 0
-}
+/* .sidebar-nav>ul>li>ul{
+    border-left: 0.1px solid #E1E6EF;
+} */
+/* .sidebar ::before {
+    content: "-";
+    padding-right: 4px;
+    float: left;
+} */
 
 .sidebar ul li.active>a {
     border-right: 2px solid;
@@ -1356,9 +1360,9 @@ section.cover blockquote>p>a:hover {
 	text-decoration:underline
 }*/
 
-.sidebar ul li ul {
+/* .sidebar ul li ul {
     padding: 0
-}
+} */
 
 /*.sidebar ul li.active>a {
 	border-right:2px solid;
@@ -2103,17 +2107,15 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*浜岀骇*/
 
-.sidebar-nav>ul>li>ul {
+/* .sidebar-nav>ul>li>ul {
     margin-left: 0;
     padding-left: 14px;
-}
-
+} */
 .sidebar-nav>ul>li>ul>li, .sidebar-nav>ul>li>ul>li a {
     color: #142655;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: normal;
 }
-
 .sidebar-nav>ul>li>ul>li a {
     position: relative;
     line-height: 1.375em;
@@ -2137,22 +2139,15 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*涓夌骇*/
 
-.sidebar-nav>ul>li>ul>li>ul {
-    margin-left: 0;
-    /* padding-left: 1.1429rem; */
-    border-left: 0.0714rem solid #E1E6EF;
-}
 
-.sidebar-nav>ul>li>ul>li>ul>li, .sidebar-nav>ul>li>ul>li>ul>li a {
-    color: #24292e;
-}
 
-.sidebar-nav>ul>li>ul>li>ul>li a {
+
+/* .sidebar-nav>ul>li>ul>li>ul>li a {
     line-height: 1.375em;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
     white-space: normal;
-}
+} */
 
 /*a hover 鏍峰紡*/
 
@@ -2172,6 +2167,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 .sidebar ul li.active>a:after, .sidebar ul li.actives>a:after {
     border: 0.0714rem solid #298596;
+    background: #298596;
 }
 
 .sidebar-nav>ul>li.active a:after, .sidebar-nav>ul>li.actives a:after {
@@ -2179,6 +2175,7 @@ input[type=search]::-webkit-search-cancel-button {
     border-bottom: 0.1429rem solid #298596;
     border-right: none;
     border-top: none;
+    background: #fff;
 }
 
 /*鑷畾涔変晶杈规爮 --- end*/
@@ -2954,4 +2951,14 @@ input[type=search]::-webkit-search-cancel-button {
 
 .markdown-section a.glossary:hover, .markdown-section a.glossary:hover+sup {
     color: #298596;
+}
+
+.app-nav.no-badge>ul>li>a {
+    border: 0;
+    color: #34495e
+}
+
+[data-page^="home"] .app-nav.no-badge>ul>li:nth-child(1)>a,[data-page^="product"] .app-nav.no-badge>ul>li:nth-child(2)>a,[data-page^="solution"] .app-nav.no-badge>ul>li:nth-child(3)>a,[data-page^="develop-cloud"] .app-nav.no-badge>ul>li:nth-child(4)>a,[data-page^="develop-native"] .app-nav.no-badge>ul>li:nth-child(5)>a,[data-page^="develop-algorithm"] .app-nav.no-badge>ul>li:nth-child(6)>a,[data-page^="download"] .app-nav.no-badge>ul>li:nth-child(7)>a,[data-page^="FAQ"] .app-nav.no-badge>ul>li:nth-child(8)>a  {
+    border-bottom: 2px solid #42b983;
+    color: #42b983
 }

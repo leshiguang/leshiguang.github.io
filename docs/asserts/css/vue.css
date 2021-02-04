@@ -889,7 +889,20 @@ code .token {
     -webkit-font-smoothing: initial;
     min-height: 1.5rem
 }
+.app-nav.no-badge>ul>li:nth-child(1)>a {
+    border-bottom: 2px solid #42b983;
+    color: #42b983
+}
 
+[data-page^="solution"] .app-nav.no-badge>ul>li>a {
+    border: 0;
+    color: #34495e
+}
+
+[data-page^="solution"] .app-nav.no-badge>ul>li:nth-child(3)>a {
+    border-bottom: 2px solid #42b983;
+    color: #42b983
+}
 pre:after {
     color: #ccc;
     content: attr(data-lang);
