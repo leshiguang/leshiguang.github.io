@@ -1,2 +1,2 @@
-体脂算法接口
+[体脂算法接口](/develop-algorithm/weightAlgorithm)
 
