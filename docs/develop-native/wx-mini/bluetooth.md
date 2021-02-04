@@ -23,7 +23,7 @@
 ```
 <a name="o72tb"></a>
 ### 2.2 申请配额
-      请准备需要接入的**设备型号**和**设备数量、小程序名字**信息等，发送申请邮件至以下邮箱:<br />发送： [zhihui.xiao@lifesense.com](zhihui.xiao@lifesense.com) [zheng.lu@lifesense.com](mailto:zheng.lu@lifesense.com)<br />抄送： [zhicheng.liu@lifesense.com](mailto:zhicheng.liu@lifesense.com) [yong.wu@lifesense.com](mailto:yong.wu@lifesense.com) [xinyi.liu@lifesense.com](mailto:xinyi.liu@lifesense.com) [pengfei.yu@lifesense.com](mailto:pengfei.yu@lifesense.com) [chengze.wu@lifesense.com](mailto:chengze.wu@lifesense.com)<br />     我们会根据你的需求和小程序信息给你分配一个鉴权appId，获取到鉴权appId后，请通过插件api进行初始化，代码如下：
+     申请方式：[https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)<br />     我们会根据你的需求和小程序信息给你分配一个鉴权appId，获取到鉴权appId后，请通过插件api进行初始化，代码如下：
 ```javascript
 const lsPlugin = requirePlugin("LSDevicePlugin")
 lsPlugin.initAuthorization({
@@ -205,7 +205,7 @@ lsPlugin.bindDevice(scanResult, onBindingListener)
        在佩戴中，会自动采集用户的心率数据，数据是每**5分钟**一笔，如果未佩戴，也会产生一笔为0的数据，详情数据结构可以查看:[https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-2-](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-2-)<br />      该心率数据可以直接用于展示。
 <a name="oOFSw"></a>
 ####    4.1.3 睡眠数据(需要算法加工展示)  
-      在佩戴中，会自动采集用户的睡眠等级值，数据是每**5分钟**一笔，是基于用户佩戴运动状态并结合心率产生一个睡眠等级值，如果未佩戴，也会产生一笔为FF的数据，数据结构查看文档:<br />[https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-3-](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-3-)<br />**需要通过后端api算法接口，根据睡眠等级值，得出用户某段时间的睡眠数据，详情查看开放平台api**<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/222356/1594808627318-f72dc3ca-3785-403c-aba7-af683dba303f.png#align=left&display=inline&height=571&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1142&originWidth=2204&size=240567&status=done&style=none&width=1102)<br />
+      在佩戴中，会自动采集用户的睡眠等级值，数据是每**5分钟**一笔，是基于用户佩戴运动状态并结合心率产生一个睡眠等级值，如果未佩戴，也会产生一笔为FF的数据，数据结构查看文档:<br />[https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-3-](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-3-)<br />**需要通过后端api算法接口，根据睡眠等级值，得出用户某段时间的睡眠数据，详情查看：**[https://docs.leshiguang.com/develop-algorithm/README](https://docs.leshiguang.com/develop-algorithm/README)<br />
 
 <a name="mnAFF"></a>
 ####    4.1.4 步数数据   
@@ -215,7 +215,7 @@ lsPlugin.bindDevice(scanResult, onBindingListener)
         该数据是通过用户主动在手环上发起运动和用户在佩戴手环状态下自动识别的运动(健走/跑步/游泳)<br />        1) 运动总结数据：包含当前运动开始运动结束时间和一些平均值。 <br />        2) 运动心率数据:  运动中每分钟的运动心率，一次运动时间太长会有多笔运动心率数据，需要根据时间拼接<br />        3) 运动卡路里数据 运动中每分钟的运动消耗，一次运动时间太长会有多笔运动消耗数据，需要根据时间拼接<br />        查看文档：[https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-4-](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxcffaa8476ea5be91&lang=zh_CN#6-4-)
 <a name="zUhhO"></a>
 ####    4.1.6 体重数据(身体18项数据需要算法实现)
-       上秤测量后，数据会包含基础体重，如果是体脂秤并赤脚上秤产生的，则会有一个额外的电阻值。<br />       可以对接后端api算法接口，支持传入体重+电阻值(50k)+用户基础数据，计算出身体多项指标。<br />      详见:[https://hezuo.lifesense.com/eopen/index.html](https://hezuo.lifesense.com/eopen/index.html)<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/222356/1594807701477-9db64506-8ca0-4d87-9d7e-c0045e7a12e4.png#align=left&display=inline&height=635&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1270&originWidth=3118&size=283260&status=done&style=none&width=1559)
+      上秤测量后，数据会包含基础体重，如果是体脂秤并赤脚上秤产生的，则会有一个额外的电阻值。<br />      可以对接后端api算法接口，支持传入体重+电阻值(50k)+用户基础数据，计算出身体多项指标。<br />      算法接入地址：[https://docs.leshiguang.com/develop-algorithm/README](https://docs.leshiguang.com/develop-algorithm/README)
 <a name="mXlFg"></a>
 ####  4.1.7 血压数据
      待定<br />
