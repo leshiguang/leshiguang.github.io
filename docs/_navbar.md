@@ -5,9 +5,9 @@
 * [首页](README.md)
 * [产品](product/README.md)
 * [解决方案](solution/README.md)
-* [服务端开发指南](develop-cloud/README.md)
-* [客户端开发指南](develop-native/README.md)
-* [Iot](AIoT/README.md)
+* [乐智云Api](develop-cloud/README.md)
+* [客户端SDK](develop-native/README.md)
+* [乐智云算法](develop-algorithm/README.md)
 * [下载](download/README.md)
 * [帮助](FAQ/README.md)
 
