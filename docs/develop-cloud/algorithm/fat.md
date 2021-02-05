@@ -489,7 +489,7 @@ url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<
 ## 体脂海外FDA算法计算
 
 
-url :  域名 +  **/api/weight/algorithm/v1.0/getforeignWeightAlgorithmResult**<br />method: post<br />**<br />入参：<br />同1.2入参
+url :  域名 +  **/api/weight/algorithm/v1.0/getforeignWeightAlgorithmResult**<br />method: post<br />**<br />入参：<br />同"指标解读"入参
 
 出参：
 
