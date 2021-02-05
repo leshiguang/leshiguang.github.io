@@ -7,21 +7,17 @@ url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<
 
 | **字段** | **类型** | **描述** | **是否必传** | **备注** |
 | --- | --- | --- | --- | --- |
-| weight | BIgDecimal | 体重 | 是 |  |
+| weight | BIgDecimal | 体重 | 是 | 单位 kg |
 | age | int | 年龄 | 是 | 必传 |
 | sex | int | 性别 | 是 | 1-男<br />2-女 |
 | height | BIgDecimal | 身高 | 是 | 单位：米 |
 | resistance | BIgDecimal | 抗阻 | 否 | 不传，只会计算bmi值 |
-| weightUnit | int | 单位 | 否 | 1-kg<br />2-斤<br />3-磅<br />4-英石
-
-不传默认为1 |
 
 入参示例
 ```json
 {
     "age":21,
     "sex":1,
-    "weightUnit":1,
     "weight":74.2,
     "height":1.76,
     "resistance":566.2
@@ -98,7 +94,32 @@ url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<
 <a name="QvKrf"></a>
 ## 指标解读
 
-<br />url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateAndAnalysisResult**<br />method: post<br />入参：<br />同1.1入参<br />出参：
+<br />url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateAndAnalysisResult**<br />method: post<br />入参：
+
+| **字段** | **类型** | **描述** | **是否必传** | **备注** |
+| --- | --- | --- | --- | --- |
+| weight | BIgDecimal | 体重 | 是 | 根据体重单位传值 |
+| age | int | 年龄 | 是 | 必传 |
+| sex | int | 性别 | 是 | 1-男<br />2-女 |
+| height | BIgDecimal | 身高 | 是 | 单位：米 |
+| resistance | BIgDecimal | 抗阻 | 否 | 不传，只会计算bmi值 |
+| weightUnit | int | 单位 | 否 | 1-kg<br />2-斤<br />3-磅<br />4-英石
+
+不传默认为1 |
+
+入参示例
+```json
+{
+    "age":21,
+    "sex":1,
+    "weightUnit":1,
+    "weight":74.2,
+    "height":1.76,
+    "resistance":566.2
+}
+```
+
+<br />出参：
 
 | **字段** | **类型** | **描述** | **备注** |
 | --- | --- | --- | --- |
@@ -468,7 +489,7 @@ url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<
 ## 体脂海外FDA算法计算
 
 
-url :  域名 +  **/api/weight/algorithm/v1.0/getforeignWeightAlgorithmResult**<br />method: post<br />**<br />入参：<br />同1.1入参
+url :  域名 +  **/api/weight/algorithm/v1.0/getforeignWeightAlgorithmResult**<br />method: post<br />**<br />入参：<br />同1.2入参
 
 出参：
 
