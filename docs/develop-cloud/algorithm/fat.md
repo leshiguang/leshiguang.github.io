@@ -11,7 +11,7 @@ url :  域名 +  **/api/weight/algorithm/v1.0/getWeightIndexCalculateResult**<
 | age | int | 年龄 | 是 | 必传 |
 | sex | int | 性别 | 是 | 1-男<br />2-女 |
 | height | BIgDecimal | 身高 | 是 | 单位：米 |
-| resistance | BIgDecimal | 抗阻 | 否 | 不传，只会计算bmi值 |
+| resistance | BIgDecimal | 抗阻 | 是 |  |
 
 入参示例
 ```json
