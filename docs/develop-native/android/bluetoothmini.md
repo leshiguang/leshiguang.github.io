@@ -19,9 +19,7 @@ mini版本是从 [android蓝牙SDK](https://docs.leshiguang.com/develop-native/a
 | 版本 | 下载地址 | 更新日志 |
 | --- | --- | --- |
 | 1.0.0 | [bluetooth-mini-1.0.0.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 初始版本 |
-| 1.0.6 | [bluetooth-mini-1.0.6.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 新增功能<br />1.  电量读取<br />1.  退出登录释放资源<br />1. 自定义消息提醒<br />
-依赖删除<br />1. guava<br />1. fastjson<br />
-双端对齐<br />1. 对齐iOS的api功能<br />1. 对齐iOS的字段名称<br /> |
+| 1.0.6 | [bluetooth-mini-1.0.6.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 新增功能: 电量读取,退出登录释放资源, 自定义消息提醒<br />依赖删除:guava, fastjson<br />双端对齐:对齐iOS的api功能, 对齐iOS的字段名称 |
 | 1.0.7 | [bluetooth-mini-1.0.7.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 新增功能<br />增加天气信息获取接口 |
 | 1.0.8 | [bluetooth-mini-1.0.8.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复已知bug |
 | 1.0.9 | [bluetooth-mini-1.0.9.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 获取天气接口增加adCode参数<br />测量数据增加DeviceInfo对象<br />修复已知bug |
@@ -31,7 +29,7 @@ mini版本是从 [android蓝牙SDK](https://docs.leshiguang.com/develop-native/a
 
 <a name="LVJNh"></a>
 ## 项目依赖配置
-1、拷贝[3.1](#RHFUx)中下载的SDK到项目的libs文件夹中<br />2、在module的build.gradle中添加本地仓库地址：
+1、拷贝下载的SDK到项目的libs文件夹中<br />2、在module的build.gradle中添加本地仓库地址：
 ```groovy
 repositories {
     flatDir {
