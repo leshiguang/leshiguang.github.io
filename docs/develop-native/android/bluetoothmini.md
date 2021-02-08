@@ -5,55 +5,13 @@
 mini版本是从 [android蓝牙SDK](https://docs.leshiguang.com/develop-native/android/bluetooth) 中演变过来的新版本， 是我们对代码进行了重新设计和优化后的版本，新版本删除了老版本中多种不再生产和维护的设备协议代码，降低了开发者的维护和对接成本，同时对设备的连接速度和稳定性层面有较大提升。目前mini版本仅支持A5、A6协议的设备，其它协议正在陆续支持中
 <a name="fXbDw"></a>
 ## 支持的设备
-| 体脂秤 | A1-F |
-| --- | --- |
-|  | Melody秤（部分） |
-|  | S5 Nana |
-|  | S9 |
-|  | S11 |
-|  | S12 |
-|  | S20 |
-|  | S30 |
-|  | A20 |
-| 血压计 | i7 |
-|  | i9 |
-| 手环 | M5S |
-|  | Mambo HR2 |
-|  | M5 |
-|  | M3 |
-|  | Mambo HR3 |
-
+支持设备清单：[https://docs.leshiguang.com/develop-native/apply?id=%e6%94%af%e6%8c%81%e8%ae%be%e5%a4%87](https://docs.leshiguang.com/develop-native/apply?id=%e6%94%af%e6%8c%81%e8%ae%be%e5%a4%87)
 <a name="zHJbS"></a>
 ## 支持的功能
 硬件支持功能清单： [https://docs.leshiguang.com/FAQ/devicefeature](https://docs.leshiguang.com/FAQ/devicefeature)<br />请开发者参考自身接入的设备类型进行开发，勿使用设备不支持的功能
 <a name="i9Pmn"></a>
 # 接入申请
-<a name="r6AVu"></a>
-## 接入声明
-我司做接入控制的目的是为了控制设备的去处、了解出售设备的活跃状态及客户采买设备的使用场景。接入过程中， 仅存储设备和接入公司、组织的关联关系， 我司不会以任何方式存储用户身份信息及用户使用设备过程中产生的数据
-<a name="Gkl5i"></a>
-## 申请应用 ID
-准备材料如下：<br />
-
-- 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级 
-- 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息) 
-- 准备一个接入者公司的 github 账号(可选，用于gradle依赖管理下载aar)
-
-将准备好的材料以邮件的方式发送：
-
-- 邮件内容如下：
-```java
-收件人：zhihui.xiao@lifesense.com,zheng.lu@lifesense.com
-抄送：chengze.wu@lifesense.com,yong.wu@lifesense.com,zhicheng.liu@lifesense.com,chuang.liu@lifesense.com,bangwei.mo@lifesense.com
-主题：【蓝牙SDK准入申请】（企业/组织/个人名称）
-邮件内容需要包含：
-1、接入目的：
-2、接入的设备类型和型号：
-3、接入的产品服务：
-4、本次期望采购的硬件设备数量（多款设备分别陈述）：
-4、bundleID：（ios和android的包ID， 用于备案）
-```
-邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId通过邮件的形式回复给您
+接入申请方式：[https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
 <a name="njsPz"></a>
 # 快速集成
 <a name="RHFUx"></a>
