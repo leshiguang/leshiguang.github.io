@@ -1,167 +1,104 @@
-<a name="1d2be86b"></a>
-# 合作模式介绍
-1、设备通过乐心提供的蓝牙SDK绑定设备、上传数据<br />2、数据经过SDK初步处理后， 以回调的方式给到客户APP<br />3、客户APP上传数据到自己的云平台进行数据存储<br />4、客户可在APP或云平台调用乐心开放平台提供的API进行数据分析（睡眠、体重等场景）<br />
+<a name="7bc4c412"></a>
+# 一、接入模式介绍
+1、账号信息通过乐心提供的SDK打通<br />2、客户应用和乐心SDK对接，嵌入SDK中的页面
+<a name="eBqBc"></a>
+# 二、快速集成
+<a name="Oh5Ip"></a>
+### 2.1 、pod导入
+```ruby
+source 'https://github.com/leshiguang/cocoapods.git'
 
-<a name="49b9f02f"></a>
-# 快速集成
-<a name="250a1dc2"></a>
-## 接入DEMO
-[https://github.com/leshiguang/lz_bluetooth_demo_ios](https://github.com/leshiguang/lz_bluetooth_demo_ios)
-<a name="64f6bfd9"></a>
-## Pod依赖
-1、在podfile中添加source： [https://github.com/leshiguang/cocoapods.git](https://github.com/leshiguang/cocoapods.git)<br />2、添加依赖：pod 'LZUISDK'<br />
-
-<a name="d0dbd0c5"></a>
-## 初始化SDK
-<a name="c219d5c1"></a>
-### 授权登录
-
-- 功能描述：三方登录鉴权
-- 接口：
+pod 'LSBluetoothUI_iOS'
+```
+<a name="OK7td"></a>
+### 2.2、初始化SDK(登陆前调用)
+描述：初始化SDK一些基础信息和功能，应尽早的调用（建议在AppDelegate didFinishLaunchingWithOptions中调用）<br />调用示例：
 ```objectivec
-- (void)authorize:(NSString*)appkey andSubscribe:(NSString*)appSecret andThirdUserId:(NSString *)associatedId callback:(void (^)(LSAccountAuthorizeResponse *)) complete;
+#import "AppDelegate.h"
+#import <LSBluetoothUI_iOS/LSBluetoothUI.h>
+
+- (void)initSDK {
+    LSBluetoothUIConfig *config = [[LSBluetoothUIConfig alloc] init];
+    config.appKey = @"xxx";
+    config.appSecret = @"xxxxx";
+    config.tn = @"xxxx";
+    config.debug = YES;
+    [LSBluetoothUI initWithConfig:config];
+}
+
 ```
 
 
-- 参数：appKey，appSecret申请地址： [https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
+- 参数说明：
+| 类型 | Names | 说明 |
+| --- | --- | --- |
+| String | appKey | 租户ID，用来隔离数据和服务，公司唯一 |
+| String | appSecret | 订阅ID，标识订阅的服务和隔离数据，应用唯一 |
+| String | tn | 渠道 |
+| BOOL | debug | 是否打印日志 |
 
 
+<br />appKey， appSecret需要走申请流程：<br />• 申请接入需要的材料<br />准备申请材料：<br />
 
-<a name="w0Oqs"></a>
-### 初始化设备管理类
-
-- 功能描述：设置用户Id到LSDeviceManager
-- 接口：
-
-
+1. 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级
+1. 确定应用的bundle identifier（appid会对使用的app进行合法性校验）
+1. 确定应用需要接入的设备型号列表（如果是进行设备鉴权的话必须填写）
+1. 确定应用需要接入的服务（设备、算法、软件服务包）名称（用于获得服务ID和服务版本）<br />材料确定后，发送申请接入邮件模板如下(前期以这种流程走， 后续sass平台将实现流程化接入)：<br />收件人：zhihui.xiao[@lifesense.com ](/lifesense.com ) <br />抄送：zheng.lu@lifesense.com,yong.wu@lifesense.com,zhicheng.liu@lifesense.com,chuang.liu@lifesense.com,bangwei.mo[@lifesense.com ](/lifesense.com ) <br />主题：【健康解决方案接入申请】（企业/组织/个人名称）<br />邮件内容需要包含：<br />1、接入目的：<br />2、接入的设备类型和型号：<br />3、接入的产品服务：<br />4、bundleID：（ios和android的包ID， 用于备案）<br />申请成功将会收到乐心的回复，回复内容中会包含一下信息：<br />1.appKey:对应一个应用<br />2.appSecret:私钥
+<a name="614nX"></a>
+#### 
+<a name="wx4cp"></a>
+### 2.3 登录登出
+描述：第三方账号和乐心账号静默打通， 获取默认的用户ID和token信息<br />调用示例：<br />
 
 ```objectivec
-- (void)loginWithUserId:(NSString *)userId;
+#import "ViewController.h"
+#import <LSBluetoothUI_iOS/LSBluetoothUI.h>
+
+/// 登陆用户id（主要作用是标示用户的）
+/// @param associatedId 用户id
+/// @param completion 回调
++ (void)loginWithAssociatedId:(NSString *)associatedId completion:(void(^)(BOOL result))completion;
+
+/// 用户退出的时候调用
++ (void)logout;
+
+
 ```
 
 
-<a name="I10ti"></a>
-### 乐智UI管理类初始化
-
-- 功能描述：初始化乐智UI,设置用户信息
-- 接口：
+- 参数说明：
 
 
 
+
+| 类型 | Names | 说明 |
+| --- | --- | --- |
+| String | associatedId | 第三方用户唯一标识，用来做账号打通和静默登录 |
+| BOOL | result | 登录结果回调，YES登录成功，NO失败 |
+
+
+
+
+<a name="HdRE2"></a>
+#### 
+<a name="AYGQ5"></a>
+### 2.4 内置页面打开方式
 ```objectivec
-/// 初始化
-/// @param accuountInfo 账号信息
-- (void)initBluetoothUISDK:(LSBluetoothUIAccountInfo *)accuountInfo;
+/// 直接跳转某页面，会获取到最近的navigationController push
+/// @param page 页面类型
++ (void)openPage:(LSPage)page;
+
+/// 通过页面类型获取到对应的viewController
+/// @param page 页面类型
++ (UIViewController *)viewControllerWithPage:(LSPage)page;
 ```
 
+- 参数
+| 类型 | Names | 说明 |
+| --- | --- | --- |
+| LSPage | page | /// 步数页面<br />    LSPageStep,<br />    /// 血压页面<br />    LSPageBloodPressure,<br />    /// 心率<br />    LSPageHr,<br />    /// 体重<br />    LSPageWeight,<br />    /// 睡眠<br />    LSPageSleep,<br />    /// 设备列表<br />    LSPageDeviceList |
 
-<a name="LbljQ"></a>
-# 更新用户信息
-
-
-- 功能描述：如果用户信息未设置，可以用这个接口设置用户信息（设置用户信息后， 算法更精确）
-- 接口：
-
-
-
-```objectivec
-/// 更新用户信息
-/// @param userInfo 用户信息
-- (void)updateUserInfo:(LSBluetoothUIUserInfo *)userInfo completion:(void(^)(LSBluetoothResultType resultType))completion;
-```
-
-
-<a name="dl0pF"></a>
-# 数据同步
-<a name="cEY4R"></a>
-### 开启自动接收数据的服务
-
-
-```objectivec
-[[LSDeviceManager shareInstance] startDataReceiveService];
-```
-
-
-<a name="5738faa5"></a>
-### 停止数据接收服务
-
-
-```objectivec
-[[LSDeviceManager shareInstance] stopDataReceiveService];
-```
-<a name="6trn3"></a>
-# 集成UI
-
-
-<a name="8c0b700f"></a>
-### 设备列表
-
-
-```objectivec
-/// 我的设备页面
-- (UIViewController *)lsPageBindDeviceList;
-```
-
-
-<a name="64f59ce3"></a>
-### 体重
-
-
-```objectivec
-/// 打开体重页面
-- (void)lsOpenWeightPage;
-```
-
-
-<a name="872e220c"></a>
-### 血压
-
-
-```objectivec
-/// 血压页面
-- (void)lsBloodpressurePage;
-```
-
-
-<a name="09f88fda"></a>
-### 心率
-
-
-```objectivec
-/// 心率页面
-- (void)lsHeartRatePage;
-```
-
-
-<a name="670f6ad7"></a>
-### 有氧能力
-
-
-```objectivec
-/// 有氧能力
-- (void)lsAerobicRatePage;
-```
-
-
-<a name="ed559002"></a>
-### 睡眠
-
-
-```objectivec
-/// 睡眠
-- (void)lsSleepRatePage;
-```
-
-
-<a name="1b8a4d49"></a>
-### 步数
-
-
-```objectivec
-/// 步数
-- (void)lsStepPage;
-```
-
-<br />
-
+<a name="QE8d4"></a>
+### 2.5 demo
+[https://github.com/leshiguang/lz_bluetooth_demo_ios.git](https://github.com/leshiguang/lz_bluetooth_demo_ios.git)
 
