@@ -10,7 +10,7 @@
 | associatedId | String | 关联账号ID |  |
 
 
-<br />**出参：List<BoardInfoResponse>**<br />**BoardInfoResponse：**
+<br />**出参：List(BoardInfoResponse)**<br />**BoardInfoResponse：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
@@ -27,7 +27,7 @@
 | sleepTime | Date | 入睡时间 |  |
 | awakeningTime | Date | 起床时间 |  |
 | sleepDurationMinute | Integer | 睡眠时长分钟数 |  |
-| isNightSleep | boolean | 是否是夜间睡眠 | true:夜间睡眠 |
+| isNightSleep | boolean | 是否是夜间睡眠 | true：夜间睡眠 |
 | heartRateList | List<Integer> | 心率集合 | 每一个数字代表5分钟的心率 |
 | averageHeartRate | Integer | 平均心率 |  |
 | standardHeartRate | Integer | 基准心率 |  |
@@ -41,7 +41,7 @@
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
-| status | Integer | 类型 | 0:快速眼动;1:清醒;2:浅睡;3:深睡 |
+| status | Integer | 类型 | 0：快速眼动; 1：清醒; 2：浅睡; 3：深睡 |
 | startTime | Date | 开始时间 |  |
 | endTime | Date | 结束时间 |  |
 | duration | Integer | 持续时长 |  |
@@ -142,7 +142,7 @@
 | sleepDurationResponse | SleepDurationResponse | 睡眠时长数据 |  |
 | SleepRegularResponse | SleepRegularResponse | 睡眠规律数据 |  |
 | sleepBreatheResponse | SleepBreatheResponse | 睡眠呼吸数据 |  |
-| productsRecommended | List<KnowledgeArticleDto> | 推荐产品 |  |
+| productsRecommended | List(KnowledgeArticleDto) | 推荐产品 |  |
 | abnormalRemindResponse | AbnormalRemindResponse | 异常提醒 |  |
 
 **SleepLevelResponse：**
@@ -169,9 +169,9 @@
 | :---: | :---: | :---: | :---: |
 | beatPeopelPercent | Double | 击败人数百分比 |  |
 | userFeedback | Integer | 用户反馈 |  |
-| beforeSleepStatusDTOS | List<BeforeSleepStatusDTO> | 用户睡前状态 |  |
-| beforeSleepStatusAnalysisDTOS | List<BeforeSleepStatusAnalysisDTO> | 睡前状态文案 |  |
-| sleepScoreChart | List<Long> | 睡眠分图表 |  |
+| beforeSleepStatusDTOS | List(BeforeSleepStatusDTO) | 用户睡前状态 |  |
+| beforeSleepStatusAnalysisDTOS | List(BeforeSleepStatusAnalysisDTO) | 睡前状态文案 |  |
+| sleepScoreChart | List(Long) | 睡眠分图表 |  |
 | sleepScore | Integer | 睡眠分 |  |
 
 **BeforeSleepStatusDTO：**
@@ -232,14 +232,14 @@
 | aveAwakeningTimeStr | String | 醒来时间和近期平均时间相比 |  |
 | silentHeartRateStr | String | 晨脉 |  |
 | silentHeartRateSuggest | String | 建议文案 |  |
-| regularType | Integer | 1: 早睡星人 2:晚睡星人, 没有则未完成测试 |  |
+| regularType | Integer | 1: 早睡星人; 2: 晚睡星人, 没有则未完成测试 |  |
 
 **AbnormalRemindResponse：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
 | userId |  |  |  |
-| abnormalRemindLabelDTOS | List<AbnormalRemindLabelDTO> |  |  |
+| abnormalRemindLabelDTOS | List(AbnormalRemindLabelDTO) |  |  |
 
 **AbnormalRemindLabelDTO：**
 
@@ -488,8 +488,8 @@ URL：域名 + /sleep-rest/statistical/week<br />请求方式：GET<br />
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
-| nightSleepInfoList | List<SleepWeekDetail> | 本周夜间睡眠详细信息 |  |
-| daySleepInfoList | List<SleepWeekDetail> | 本周日间睡眠详细信息 |  |
+| nightSleepInfoList | List(SleepWeekDetail) | 本周夜间睡眠详细信息 |  |
+| daySleepInfoList | List(SleepWeekDetail) | 本周日间睡眠详细信息 |  |
 | startDate | Date | 本周开始时间 |  |
 | endDate | Date | 本周结束时间 |  |
 | idealSleepCount | Integer | 理想睡眠次数 |  |
@@ -502,7 +502,7 @@ URL：域名 + /sleep-rest/statistical/week<br />请求方式：GET<br />
 | latestNightSleepTimeSleepId | String | 最晚夜间入睡id |  |
 | latestNightAwakeningTimeSleepId | String | 最晚夜间起床id |  |
 
-**<br />**SleepWeekDetail：**
+**SleepWeekDetail:**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
@@ -584,9 +584,9 @@ URL：域名 + /sleep-rest/sleepCommon/getNearSevenSilentHeartRate<br />请求�
 | :---: | :---: | :---: | :---: |
 | label | String | 标签 |  |
 | suggestion | String | 建议 |  |
-| dtoList | List<HeartRateModel> | 数据列表 |  |
+| dtoList | List(HeartRateModel) | 数据列表 |  |
 
-**<br />**HeartRateModel：**
+**HeartRateModel:**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
@@ -618,7 +618,7 @@ URL：域名 + /sleep-rest/sleepCommon/getNearSevenSilentHeartRate<br />请求�
 
 <a name="5fjsq"></a>
 ## 7、助眠音乐信息
-接口描述：获取助眠音乐列表<br />url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicPull**<br />请求方式: GET<br />
+接口描述：获取助眠音乐列表<br />url: 域名 + /sleep-rest/helpMusic/helpSleepMusicPull<br />请求方式: GET<br />
 <br />出参:<br />
 
 ```json
@@ -752,14 +752,13 @@ URL：域名 + /sleep-rest/sleepCommon/getNearSevenSilentHeartRate<br />请求�
 
 <a name="eTO5a"></a>
 ## 8、助眠音乐上报
-url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicUpload**<br />请求方式: POST<br />**<br />**header参数：**<br />
-
+url: 域名 + /sleep-rest/helpMusic/helpSleepMusicUpload<br />请求方式: POST**<br />**header参数：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
 | associatedId | String | 关联账号ID |  |
 
-**<br />**post参数:**<br />**
+**post参数：**
 ```javascript
 {
   "uploadType" : 1,
@@ -796,17 +795,15 @@ url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicUpload**<br />请求方�
 
 <a name="Wq8Pa"></a>
 ## 9、助眠音乐播放历史
-接口描述：获取助眠音乐播放历史，返回最新的三条<br />url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicPlayLog**<br />请求方式: GET<br />**入参：**<br />
+接口描述：获取助眠音乐播放历史，返回最新的三条<br />url: 域名 + /sleep-rest/helpMusic/helpSleepMusicPlayLog<br />请求方式: GET<br />**入参：**<br />
 
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
 | associatedId | String | 关联账号ID |  |
 
-
-<br />出参示例
+**出参示例：**
 ```json
-
 {
 	"code":200,
 	"msg":"成功",
@@ -826,8 +823,6 @@ url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicUpload**<br />请求方�
 		]
 	}
 }
-
-
 ```
 
 
@@ -841,16 +836,14 @@ URL：域名 + /sleep-rest/sleepResult/getBoardInfoGivenSomeday<br />请求方�
 | queryDate | String | 查询时间 | 格式: YYYY-MM-dd |
 | associatedId | String | 关联账号ID |  |
 
-
-<br />**出参：List<BoardInfoResponse>**<br />**BoardInfoResponse：**
+**出参：List(BoardInfoResponse)**<br />**BoardInfoResponse：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
 | belongDay | Date | 数据属于哪天 |  |
-| boardInfoList | List<BoardInfoDto> | 面板数据 |  |
+| boardInfoList | List(BoardInfoDto) | 面板数据 |  |
 
-
-<br />**BoardInfoDto：**
+**BoardInfoDto：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
@@ -859,7 +852,7 @@ URL：域名 + /sleep-rest/sleepResult/getBoardInfoGivenSomeday<br />请求方�
 | sleepTime | Date | 入睡时间 |  |
 | awakeningTime | Date | 起床时间 |  |
 | sleepDurationMinute | Integer | 睡眠时长分钟数 |  |
-| isNightSleep | boolean | 是否是夜间睡眠 | true:夜间睡眠 |
+| isNightSleep | boolean | 是否是夜间睡眠 | true: 夜间睡眠 |
 | heartRateList | List<Integer> | 心率集合 | 每一个数字代表5分钟的心率 |
 | averageHeartRate | Integer | 平均心率 |  |
 | standardHeartRate | Integer | 基准心率 |  |
@@ -873,7 +866,7 @@ URL：域名 + /sleep-rest/sleepResult/getBoardInfoGivenSomeday<br />请求方�
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
-| status | Integer | 类型 | 0:快速眼动;1:清醒;2:浅睡;3:深睡 |
+| status | Integer | 类型 | 0: 快速眼动; 1: 清醒; 2: 浅睡; 3: 深睡 |
 | startTime | Date | 开始时间 |  |
 | endTime | Date | 结束时间 |  |
 | duration | Integer | 持续时长 |  |
@@ -884,7 +877,7 @@ URL：域名 + /sleep-rest/sleepResult/getBoardInfoGivenSomeday<br />请求方�
 <a name="IbV2j"></a>
 ## 11、客户云推送数据至乐智云
 url :  域名 +  /api/sleep/v1.0/upload/bracelet/sleep<br />method: post<br />
-<br />入参：<br />Request：
+<br />**入参：**<br />Request：
 
 | **字段** | **类型** | **描述** | **是否必传** | **备注** |
 | :---: | :---: | :---: | :---: | :---: |
@@ -907,7 +900,7 @@ BraceletOriginDTO：
 | model | String | 设备型号 | 是 |  |
 | softwareVersion | String | 固件版本号 | 是 |  |
 
-入参示例
+**入参示例：**
 ```json
 [
     {
