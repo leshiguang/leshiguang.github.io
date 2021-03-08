@@ -401,7 +401,7 @@ url：域名 +  /sport-rest/api/step/v1.0/upload/uploadPedometerFromThirdparty<
 ##### post报文入参：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| list | List<Object> | 设备测量记录 |  |
+| list | List | 设备测量记录 |  |
 
 
 
@@ -409,7 +409,7 @@ url：域名 +  /sport-rest/api/step/v1.0/upload/uploadPedometerFromThirdparty<
 ###### 设备测量记录：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| deviceId | string | 设备标识id |  |
+| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | step | Integer | 步数 |  |
 | calories | Double | 卡路里 |  |
