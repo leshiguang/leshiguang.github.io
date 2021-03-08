@@ -391,7 +391,7 @@ url :  域名 +   /sport-rest/miniProgram/getTargetStep<br />method: GET
 ```
 <a name="toZJP"></a>
 ## 6. 上传用户的设备步数记录（数据来源于外部）
-url：域名 +  /sport-rest/api/step/v1.0/upload/uploadPedometerFromThirdparty<br />method: POST<br />**header参数或者url参数**<br />**
+url：域名 +  /api/step/v1.0/upload/uploadPedometerFromThirdparty<br />method: POST<br />**header参数或者url参数**<br />**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
