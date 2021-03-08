@@ -1,7 +1,6 @@
-<br />
-<a name="lIr8B"></a>
-## 1. 面板数据
-描述：获取指定时间（包含）最近2天睡眠数据<br />URL：域名 + /sleep-soa/sleepResult/boardInfo<br />请求方式：GET<br />**入参：**<br />
+<a name="TPDP0"></a>
+## 1、面板数据
+描述：获取指定时间（包含）最近2天睡眠数据<br />URL：域名 + /sleep-rest/sleepResult/boardInfo<br />请求方式：GET<br />**入参：**<br />
 
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -123,9 +122,9 @@
 ```
 
 
-<a name="GIRvY"></a>
-## 2. 夜间睡眠数据**
-描述：获取夜间睡眠的详细信息<br />URL：域名 + /sleep-soa/sleepResult/sleepInfo<br />请求方式：GET<br />**入参：**
+<a name="Xp4ZC"></a>
+## 2、夜间睡眠数据
+描述：获取夜间睡眠的详细信息<br />URL：域名 + /sleep-rest/sleepResult/sleepInfo<br />请求方式：GET<br />**入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
@@ -392,9 +391,9 @@
 ```
 说明:<br />所有带 "&" 符号的返回, &前表示数据, &后表示对应的标签, 例如晨脉返回“74&一般” , 表示晨脉74, 标签为一般<br />
 
-<a name="bmb5p"></a>
-## 3. 日间睡眠数据
-描述：获取日间睡眠的详细信息<br />URL：域名 + /sleep-soa/sleepResult/sleepDayInfo<br />请求方式：GET<br />
+<a name="EIq1J"></a>
+## 3、日间睡眠数据
+描述：获取日间睡眠的详细信息<br />URL：域名 + /sleep-rest/sleepResult/sleepDayInfo<br />请求方式：GET<br />
 <br />**入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -421,9 +420,9 @@
 
 
 
-<a name="S5jMY"></a>
-## 4. 获取用户最近一次睡眠数据**
-描述：如果该用户不存在睡眠信息，则返回示例用户的数据<br />URL：域名 + /sleep-soa/sleepResult/getLastSleepInfo<br />请求方式：GET<br />
+<a name="J1Sdf"></a>
+## 4、获取用户最近一次睡眠数据
+描述：如果该用户不存在睡眠信息，则返回示例用户的数据<br />URL：域名 + /sleep-rest/sleepResult/getLastSleepInfo<br />请求方式：GET<br />
 <br />**入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -474,9 +473,9 @@
 ```
 
 
-<a name="WxXFn"></a>
-## 5. 获取周统计数据
-URL：域名 + /sleep-soa/statistical/week<br />请求方式：GET<br />
+<a name="dAuOb"></a>
+## 5、获取周统计数据
+URL：域名 + /sleep-rest/statistical/week<br />请求方式：GET<br />
 <br />**入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -569,9 +568,9 @@ URL：域名 + /sleep-soa/statistical/week<br />请求方式：GET<br />
 ```
 
 
-<a name="0D9Qc"></a>
-## 6. 获取最近七次晨脉
-URL：域名 + /sleep-soa/sleepCommon/getNearSevenSilentHeartRate<br />请求方式：GET<br />
+<a name="jpIkV"></a>
+## 6、获取最近7次晨脉
+URL：域名 + /sleep-rest/sleepCommon/getNearSevenSilentHeartRate<br />请求方式：GET<br />
 <br />**入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -616,11 +615,10 @@ URL：域名 + /sleep-soa/sleepCommon/getNearSevenSilentHeartRate<br />请求方
 }
 ```
 
-<br />
 
-<a name="ypFgD"></a>
-## 7. 助眠音乐信息下拉
-接口描述：获取助眠音乐列表<br />url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicPull**<br />请求方式: GET<br />
+<a name="5fjsq"></a>
+## 7、助眠音乐信息
+接口描述：获取助眠音乐列表<br />url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicPull**<br />请求方式: GET<br />
 <br />出参:<br />
 
 ```json
@@ -737,12 +735,11 @@ URL：域名 + /sleep-soa/sleepCommon/getNearSevenSilentHeartRate<br />请求方
 
 ```
 
-<br />
 
 
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| musicId | Long | 音乐标识 | _ |
+| 字段 | 类型 | 描述 | 备注 |
+| :---: | :---: | :---: | :---: |
+| musicId | Long | 音乐标识 |  |
 | musicName | String | 音乐名 |  |
 | simpleDesc | String | 音乐简述 |  |
 | detailDesc | String | 音乐详细介绍 |  |
@@ -753,9 +750,9 @@ URL：域名 + /sleep-soa/sleepCommon/getNearSevenSilentHeartRate<br />请求方
 
 
 
-<a name="XluPX"></a>
-## 8. 助眠音乐上报
-url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicUpload**<br />请求方式: POST<br />**<br />**header参数：**<br />
+<a name="eTO5a"></a>
+## 8、助眠音乐上报
+url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicUpload**<br />请求方式: POST<br />**<br />**header参数：**<br />
 
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -797,9 +794,9 @@ url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicUpload**<br />请求方�
 
 
 
-<a name="ZJ5Gb"></a>
-## 9. 助眠音乐播放历史
-接口描述：获取助眠音乐播放历史，返回最新的三条<br />url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicPlayLog**<br />请求方式: GET<br />**入参：**<br />
+<a name="Wq8Pa"></a>
+## 9、助眠音乐播放历史
+接口描述：获取助眠音乐播放历史，返回最新的三条<br />url: 域名 + /sleep-rest/**helpMusic**/**helpSleepMusicPlayLog**<br />请求方式: GET<br />**入参：**<br />
 
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -832,10 +829,11 @@ url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicUpload**<br />请求方�
 
 
 ```
-<br />
-<a name="JGDYw"></a>
-## 10. 获取用户某一天的睡眠数据
-描述：获取用户某一天的睡眠数据<br />URL：域名 + /sleep-soa/sleepResult/**getBoardInfoGivenSomeday**<br />请求方式：GET<br />**入参：**<br />
+
+
+<a name="2FOD3"></a>
+## 10、获取用户某一天的睡眠数据
+URL：域名 + /sleep-rest/sleepResult/getBoardInfoGivenSomeday<br />请求方式：GET<br />**入参：**<br />
 
 
 | 字段 | 类型 | 描述 | 备注 |
@@ -879,5 +877,65 @@ url: 域名 + /sleep-soa/**helpMusic**/**helpSleepMusicUpload**<br />请求方�
 | startTime | Date | 开始时间 |  |
 | endTime | Date | 结束时间 |  |
 | duration | Integer | 持续时长 |  |
+
+
+<br />
+
+<a name="IbV2j"></a>
+## 11、客户云推送数据至乐智云
+url :  域名 +  /api/sleep/v1.0/upload/bracelet/sleep<br />method: post<br />
+<br />入参：<br />Request：
+
+| **字段** | **类型** | **描述** | **是否必传** | **备注** |
+| :---: | :---: | :---: | :---: | :---: |
+| braceletOriginDTOS | List<BraceletOriginDTO> | 手环睡眠原始数据列表 | 是 |  |
+
+BraceletOriginDTO：
+
+| **字段** | **类型** | **描述** | **是否必传** | **备注** |
+| :---: | :---: | :---: | :---: | :---: |
+| id | String | 32位随机ID，如：4268c5f5df185a4fe2a5469386de370824 | 是 |  |
+| userId | Long | 用户ID | 是 |  |
+| deviceId | String | 设备ID | 是 |  |
+| uploadChanel | Integer | 数据上传通道：1-ios；2-android | 是 |  |
+| measurementDate | Long | 测量时间戳，单位毫秒 | 是 |  |
+| levelSet | String | 睡眠数据，16进制字符串，5分钟两位 | 是 |  |
+| timeUnit | Integer | 时长单位，分钟；5分钟填5 | 是 |  |
+| uploadNum | Integer | 一次上传的数量，两位代表5分钟；等于levelSet长度/2 | 是 |  |
+| uploaded | Integer | 是否推送(0:未推送;1:已推送) | 是 |  |
+| created | Long | 客户端创建时间（单位毫秒） | 是 |  |
+| model | String | 设备型号 | 是 |  |
+| softwareVersion | String | 固件版本号 | 是 |  |
+
+入参示例
+```json
+[
+    {
+        "id":"4268c5f5df185a4fe2a5469386de370824",
+        "userId":23340810,
+        "deviceId":"cb0404005e99",
+        "uploadChanel":1,
+        "measurementDate":1578229559000,
+        "levelSet":"6363562f3a4b634c4659576349192f6356635e2019281000170009200000000000000b150017081b1c00001425001c05090007000000161607002753130013191700170d002a00291800000b281500051b00000d0f000f002215000f",
+        "timeUnit":5,
+        "uploadNum":92,
+        "uploaded":1,
+        "model":"LS431-B3",
+        "softwareVersion":"T302",
+        "created":"2019-11-16 16:26:30"
+    }
+]
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
