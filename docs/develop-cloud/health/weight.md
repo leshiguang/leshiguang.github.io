@@ -1307,7 +1307,7 @@ url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty<br />method: POS
 ###### 设备测量记录：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| deviceId | string | 设备标识id |  |
+| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | weight | Double | 体重 |  |
 | resistance50k | Double | 50k电阻值 |  |
