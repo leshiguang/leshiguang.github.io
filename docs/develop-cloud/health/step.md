@@ -389,6 +389,30 @@ url :  域名 +   /sport-rest/miniProgram/getTargetStep<br />method: GET
 	"data":3200
 }
 ```
+<a name="toZJP"></a>
+## 6. 上传用户的设备步数记录（数据来源于外部）
+url：域名 +  /sport-rest/step/upload/uploadPedometerFromThirdparty<br />method: POST<br />**header参数或者url参数**<br />**
 
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 第三方关联账户id | 关联账号id<br /> |
+
+<a name="TGCUU"></a>
+##### post报文入参：
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| list | List<Object> | 设备测量记录 |  |
+
+
+
+<a name="WHRQH"></a>
+###### 设备测量记录：
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| deviceId | string | 设备标识id |  |
+| measurementTime | Date | 测量时间 |  |
+| step | Integer | 步数 |  |
+| calories | Double | 卡路里 |  |
+| distance | Double | 距离 |  |
 
 
