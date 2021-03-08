@@ -343,4 +343,56 @@ method: post
 	}
 }
 ```
+<a name="JyqfC"></a>
+# 4.获取乐心设备id
+**
+```bash
+url :  域名 +  /device-rest/api/device/apply/v1.0/applyDeviceId
+method: post
+```
+**<br />**<br />**post入参 **
+
+| 字段 | 类型 | 描述 | 是否必传 | 备注 |
+| --- | --- | --- | --- | --- |
+| **model** | String | 设备型号 | 是 | 必须是乐心云已注册的设备型号，比如：LS431-B3 |
+| **mac** | String | mac地址 | 否 | 如果是蓝牙设备，必传 |
+| **thirdDeviceId** | String | _第三方设备唯一标识_ | 是 | 如果是乐心的设备，就是乐心烧码的deviceId |
+| **hardwareVersion** | String | _硬件版本号_ | 否 |  |
+| **softwareVersion** | String | _固件版本号_ | 否 |  |
+|  |  |  |  |  |
+
+**示例 **<br />
+
+```json
+{
+    "mac": "087CBED2D27D",
+    "hardwareVersion": "A002",
+    "softwareVersion": "A09",
+    "model": "LS109",
+    "thirdDeviceId": "087CBED2D27D"
+}
+```
+
+<br />**出参<br />**<br />
+
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| **deviceId** | string | 乐心设备id |  |
+| **sn** | String | 乐心设备sn |  |
+
+
+<br />输出示例
+```json
+
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "deviceId": "000100000111",
+        "mac": "087CBED2D27D",
+        "sn": "0000025600000273"
+    }
+}
+```
 
