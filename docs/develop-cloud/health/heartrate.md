@@ -893,6 +893,7 @@ url： 域名 + heartrate-rest/dailyQuery/**getDailyHeartRateGivenSomeDay**<br 
 | associatedId | String | 关联账号id |  |
 
 
+<br />
 <br />原始心率列表:
 
 | **字段** | **类型** | **描述** | **其他** |
