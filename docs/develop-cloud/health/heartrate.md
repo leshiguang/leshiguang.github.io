@@ -887,13 +887,12 @@ url： 域名 + heartrate-rest/dailyQuery/**getDailyHeartRateGivenSomeDay**<br 
   url：域名 + heartrate-rest/api/heart/v1.0/upload/uploadHeartRate<br />  method：POST<br />
 <br />**入参:**
 
-| 字段 | 类型 | 描述 | 其他 |
+| **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | list | List<Object> | 原始心率列表 |  |
 | associatedId | String | 关联账号id |  |
 
 
-<br />
 <br />原始心率列表:
 
 | **字段** | **类型** | **描述** | **其他** |
