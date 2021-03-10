@@ -752,7 +752,7 @@ URL：域名 + /sleep-rest/sleepCommon/getNearSevenSilentHeartRate<br />请求�
 
 <a name="eTO5a"></a>
 ## 8、助眠音乐上报
-url: 域名 + /sleep-rest/helpMusic/helpSleepMusicUpload<br />请求方式: POST**<br />**header参数：**
+url: 域名 + /sleep-rest/helpMusic/helpSleepMusicUpload<br />请求方式：POST<br />**header参数：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | :---: | :---: | :---: | :---: |
@@ -786,7 +786,6 @@ url: 域名 + /sleep-rest/helpMusic/helpSleepMusicUpload<br />请求方式: POST
 | --- | --- | --- | --- |
 | uploadType | Integer | 上传类型 | 1、保存助眠音乐,<br />2、记录开始入睡时间, <br />3、取消开始入睡时间, <br />4、记录用户拖拽时间 |
 | startSleepTimeStamp | Long | 开始入睡时间(毫秒) | 仅当uploadType为2、3时取该值 |
-|  |  |  |  |
 | helpSleepMusicLogVOS |  | 助眠音乐播放历史 | 仅当uploadType为1时取该值 |
 | musicId | Long |  |  |
 | order | Integer | 顺序 |  |
@@ -888,7 +887,7 @@ BraceletOriginDTO：
 | **字段** | **类型** | **描述** | **是否必传** | **备注** |
 | :---: | :---: | :---: | :---: | :---: |
 | id | String | 32位随机ID，如：4268c5f5df185a4fe2a5469386de370824 | 是 |  |
-| userId | Long | 用户ID | 是 |  |
+| associatedId | String | 关联账号ID |  |  |
 | deviceId | String | 设备ID | 是 |  |
 | uploadChanel | Integer | 数据上传通道：1-ios；2-android | 是 |  |
 | measurementDate | Long | 测量时间戳，单位毫秒 | 是 |  |
@@ -905,7 +904,7 @@ BraceletOriginDTO：
 [
     {
         "id":"4268c5f5df185a4fe2a5469386de370824",
-        "userId":23340810,
+        "associatedId":23340810,
         "deviceId":"cb0404005e99",
         "uploadChanel":1,
         "measurementDate":1578229559000,
