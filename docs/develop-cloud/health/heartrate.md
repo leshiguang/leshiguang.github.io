@@ -882,3 +882,6 @@ url： 域名 + heartrate-rest/dailyQuery/**getDailyHeartRateGivenSomeDay**<br 
 
 
 ```
+<a name="1mPxe"></a>
+## 
+
