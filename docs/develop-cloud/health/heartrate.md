@@ -882,39 +882,3 @@ url： 域名 + heartrate-rest/dailyQuery/**getDailyHeartRateGivenSomeDay**<br 
 
 
 ```
-<a name="1mPxe"></a>
-## 5. 常规心率上传
-  url：域名 + heartrate-rest/api/heart/v1.0/upload/uploadHeartRate<br />  method：POST<br />
-<br />**入参:**
-
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| list | List (Object)<br /> | 原始心率列表 |  |
-| associatedId | String | 关联账号id |  |
-
-
-<br />原始心率列表:
-
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| deviceId | String | 设备id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
-| quantityOfHeartRate | Integer | 当前上传心率数据条数 |  |
-| heartRates | String | 心率数据集合 | 16进制<br />5分钟一笔 |
-| measurementDate | Long | 测量开始时间 |  |
-
-<a name="tPdvX"></a>
-###### 示例报文：
-```json
-
-{
-	"list":[
-		{
-			"deviceId":"test",
-			"quantityOfHeartRate":288,
-			"heartRates":"4143453f3d383838383b3f3d403e3a3b3b3c3c3d3d3e3d3b3d3c3f3e3f3c3d3d3d3d3d3d3e3f40403f3d3d3e3e3e3e3f3e3f42403b3a3a3d3d3f3c3b3b3e3f403f4040403f3f403f4040413d3e3f3d3e3d3e3d3b3d3d3c3a3e3e3e3d403e413c3d3e3e3f3d3d3d3d3e3e3f3f464646403e404042414043464043434040414449526c7174455144565c5c6f696666676e6d666b6e5a41414349006c00656b69594a607163604344637170694a443b3a43504d3e434a5661646969504b4b494d666664686f71736a733f3e3a4442604140424266666b51434242424244494c4b494b58585a63656c69656a756c6c7073767700564d514d354c4f3b394b4f4c5c554c4d4b4b4b4b4b524f5259594c626664674f4e524953494c5b66544746464645",
-			"measurementDate":1604802120000
-		}
-	]
-}
-```
-
