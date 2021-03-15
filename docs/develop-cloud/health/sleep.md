@@ -873,61 +873,6 @@ URL：域名 + /sleep-rest/sleepResult/getBoardInfoGivenSomeday<br />请求方�
 
 <br />
 
-<a name="IbV2j"></a>
-## 11、客户云推送数据至乐智云
-url :  域名 +  /api/sleep/v1.0/upload/bracelet/sleep<br />method: post<br />
-<br />**入参：**<br />Request：
 
-| **字段** | **类型** | **描述** | **是否必传** | **备注** |
-| :---: | :---: | :---: | :---: | :---: |
-| braceletOriginDTOS | List<BraceletOriginDTO> | 手环睡眠原始数据列表 | 是 |  |
-
-BraceletOriginDTO：
-
-| **字段** | **类型** | **描述** | **是否必传** | **备注** |
-| :---: | :---: | :---: | :---: | :---: |
-| id | String | 32位随机ID，如：4268c5f5df185a4fe2a5469386de370824 | 是 |  |
-| associatedId | String | 关联账号ID |  |  |
-| deviceId | String | 设备ID | 是 |  |
-| uploadChanel | Integer | 数据上传通道：1-ios；2-android | 是 |  |
-| measurementDate | Long | 测量时间戳，单位毫秒 | 是 |  |
-| levelSet | String | 睡眠数据，16进制字符串，5分钟两位 | 是 |  |
-| timeUnit | Integer | 时长单位，分钟；5分钟填5 | 是 |  |
-| uploadNum | Integer | 一次上传的数量，两位代表5分钟；等于levelSet长度/2 | 是 |  |
-| uploaded | Integer | 是否推送(0:未推送;1:已推送) | 是 |  |
-| created | Long | 客户端创建时间（单位毫秒） | 是 |  |
-| model | String | 设备型号 | 是 |  |
-| softwareVersion | String | 固件版本号 | 是 |  |
-
-**入参示例：**
-```json
-[
-    {
-        "id":"4268c5f5df185a4fe2a5469386de370824",
-        "associatedId":23340810,
-        "deviceId":"cb0404005e99",
-        "uploadChanel":1,
-        "measurementDate":1578229559000,
-        "levelSet":"6363562f3a4b634c4659576349192f6356635e2019281000170009200000000000000b150017081b1c00001425001c05090007000000161607002753130013191700170d002a00291800000b281500051b00000d0f000f002215000f",
-        "timeUnit":5,
-        "uploadNum":92,
-        "uploaded":1,
-        "model":"LS431-B3",
-        "softwareVersion":"T302",
-        "created":"2019-11-16 16:26:30"
-    }
-]
-```
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
 
