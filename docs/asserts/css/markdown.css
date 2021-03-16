@@ -1,15 +1,20 @@
 .markdown-section {
-  padding: 50px 40px 10px;
+  padding: 14px 40px;
   max-width: 1060px !important;
   min-height: calc(100vh - 60px);
   position: relative;
   font-size: 15px;
-  max-width: 800px;
+  width: 100%;
   margin: 0;
 }
 .markdown-section > * {
   box-sizing: border-box;
   font-size: inherit;
+}
+.markdown-section h1:first-of-type {
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 0.3px solid;
 }
 .markdown-section.hide {
   display: none;
@@ -18,13 +23,8 @@
   line-height: 2;
   word-spacing: 0.05rem;
   color: #526075;
-  font-size: 15px;
+  font-size: 13px;
 }
-.markdown-section > :first-child .anchor {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
 .markdown-section hr {
   border: none;
   border-bottom: 1px solid #eee;
@@ -142,30 +142,27 @@
   color: #2c3e50;
   font-weight: 600;
 }
+.markdown-section h1 a,
+.markdown-section h2 a,
+.markdown-section h3 a,
+.markdown-section h4 a,
+.markdown-section strong a {
+}
 
 .markdown-section a {
   color: var(--theme-color, #42b983);
   font-weight: 600;
 }
 .markdown-section h1 {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 48px;
   margin: 0 0 16px;
-}
-
-.markdown-section h1 a.anchor {
-  font-weight: 500;
-}
-
-.markdown-section h1 a.anchor span {
-  color: #24292e;
+  border-bottom: 0.2px solid var(--theme-color, #42b983);
 }
 
 .markdown-section h2 {
-  font-size: 24px;
-  margin: 48px 0 24px;
-  padding: 0 0 24px 0;
-  border-bottom: 1px solid #e1e6f0;
+  font-size: 20px;
+  padding: 0 0 24px 0px;
 }
 
 .markdown-section h2 a.anchor {
@@ -177,9 +174,9 @@
 }
 
 .markdown-section h3 {
-  margin: 24px 0 12px;
+  padding: 0 0 12px 0;
   color: #24292e;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .markdown-section h3 a.anchor {
@@ -192,7 +189,6 @@
 
 .markdown-section h4 {
   font-size: 15px;
-  margin: 24px 0 12px;
 }
 
 .markdown-section h4 a.anchor {
@@ -226,7 +222,7 @@
 
 .markdown-section ol,
 .markdown-section ul {
-  padding-left: 1.5rem;
+  padding-left: 40px;
 }
 
 .markdown-section ul {
@@ -355,4 +351,99 @@ body.close .markdown-section {
 .markdown-section code:after,
 .markdown-section code:before {
   letter-spacing: 0.05rem;
+}
+
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: #8e908c;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.boolean,
+.token.number {
+  color: #c76b29;
+}
+
+.token.punctuation {
+  color: #525252;
+}
+
+.token.property {
+  color: #c08b30;
+}
+
+.token.tag {
+  color: #2973b7;
+}
+
+.token.string {
+  color: var(--theme-color, #42b983);
+}
+
+.token.selector {
+  color: #6679cc;
+}
+
+.token.attr-name {
+  color: #2973b7;
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.url {
+  color: #22a2c9;
+}
+
+.token.attr-value,
+.token.control,
+.token.directive,
+.token.unit {
+  color: var(--theme-color, #42b983);
+}
+
+.token.keyword {
+  color: #e96900;
+}
+
+.token.atrule,
+.token.regex,
+.token.statement {
+  color: #22a2c9;
+}
+
+.token.placeholder,
+.token.variable {
+  color: #3d8fd1;
+}
+
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.inserted {
+  border-bottom: 1px dotted #202746;
+  text-decoration: none;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.bold,
+.token.important {
+  font-weight: 700;
+}
+
+.token.important {
+  color: #c94922;
+}
+
+.token.entity {
+  cursor: help;
 }

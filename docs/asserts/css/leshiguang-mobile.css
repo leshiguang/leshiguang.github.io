@@ -1,0 +1,81 @@
+/*移动设备*/
+@media screen and (max-width: 768px) {
+  .content {
+    left: 0;
+    top: 50px;
+    max-width: 100vw;
+    position: relative;
+    padding-top: 20px;
+    transition: transform 0.25s ease;
+  }
+  .app-nav {
+    margin-top: 16px;
+  }
+  .app-nav li ul {
+    top: 30px;
+  }
+  main {
+    height: auto;
+    overflow-x: hidden;
+  }
+  .markdown-section h1:first-of-type {
+    text-align: start;
+  }
+  .app-nav.no-badge .nav-header {
+    float: left;
+    min-width: 150px;
+    min-height: 50px;
+    justify-content: space-between;
+  }
+
+  .app-nav.no-badge .nav-header .docs-logo {
+    position: fixed;
+    width: 90px;
+    height: 60px;
+    left: 40px;
+    top: -6px;
+    background: url(https://cdn.leshiguang.com/leshiguang/chaosconsole/assets/img/logo.ff1db55.ff1db55b.png)
+      center center no-repeat;
+    background-size: 100%;
+  }
+  .app-nav.no-badge .nav-menu {
+    display: none;
+  }
+  .app-nav.no-badge .nav-menu.collapsed {
+    background: aliceblue;
+    display: block;
+    position: fixed;
+    top: 50px;
+    height: 250px;
+    width: 100%;
+  }
+  .app-nav.no-badge .nav-right .nav-menu-collapse {
+    display: block;
+  }
+  .app-nav.no-badge .nav-right .nav-menu-collapse button {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 5px 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: #ffffff;
+    background-color: var(--theme-color, #42b983);
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .app-nav.no-badge .nav-menu > ul {
+    text-align: start;
+  }
+  .app-nav.no-badge .nav-menu > ul > li {
+    display: grid;
+  }
+  .app-nav.no-badge .nav-menu > ul > li > ul {
+    z-index: 200;
+  }
+
+  .app-nav.no-badge .nav-right i {
+    color: #ffffff;
+  }
+}

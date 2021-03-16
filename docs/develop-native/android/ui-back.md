@@ -1,8 +1,8 @@
 <a name="7bc4c412"></a>
-## 合作模式介绍
+# 合作模式介绍
 1、设备通过乐心提供的蓝牙SDK上传数据到乐心服务器<br />2、账号信息通过乐心提供的SDK打通<br />3、基于蓝牙SDK之上，通过乐心的SDK将数据上报给乐心IoT平台，同时将数据回调给客户APP<br />4、客户应用和乐心SDK对接，嵌入SDK中的页面
 <a name="eBqBc"></a>
-## 快速集成
+# 快速集成
 <a name="LvlIQ"></a>
 ## SDK下载
 下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
@@ -181,7 +181,7 @@ public interface OnDeviceConnectStateListener {
 
 
 <a name="3nY56"></a>
-## 接入demo
+# 接入demo
 [https://github.com/leshiguang/lifesense-android-ui-integrate-demo](https://github.com/leshiguang/lifesense-android-ui-integrate-demo)<br />
 
 

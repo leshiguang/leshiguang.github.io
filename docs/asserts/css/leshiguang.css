@@ -461,20 +461,14 @@ i {
   background: #e4edf7;
 }
 
-[data-page^='/hardware'] .app-nav.no-badge .nav-menu > ul > li:nth-child(1) > a,
-[data-page^='/product'] .app-nav.no-badge .nav-menu > ul > li:nth-child(2) > a,
-[data-page^='/develop-native']
+[data-page*='hardware'] .app-nav.no-badge .nav-menu > ul > li:nth-child(1) > a,
+[data-page*='product'] .app-nav.no-badge .nav-menu > ul > li:nth-child(2) > a,
+[data-page*='develop-native']
   .app-nav.no-badge
   .nav-menu
   > ul
   > li:nth-child(3)
-  > a,
-[data-page^='/develop-cloud']
-  .app-nav.no-badge
-  .nav-menu
-  > ul
-  > li:nth-child(4)
-  > a {
+  > a{
   color: var(--theme-color, #42b983);
   border-bottom: 2px solid var(--theme-color, #42b983);
 }
@@ -569,17 +563,23 @@ i {
 .content .search-results.show .matching-post .search-keyword {
   color: red;
 }
-.content footer {
-  position: relative;
-}
-.content .page-footer-copyright {
-  border-top: 1px solid;
+footer {
+  color: #fff;
+  bottom: 0;
+  left: 250px;
+  vertical-align: baseline;
+  transition: left 0.4s ease-in;
+  font-weight: 300;
   width: 100%;
-  text-align: center;
-  bottom: 2.2857rem;
-  left: 0;
 }
-.content .page-footer-copyright a {
+footer .page-footer-copyright {
+  border-top: 1px solid;
+  text-align: center;
+  background: transparent;
+  border-top: 1px solid #e5e5e5;
+  color: #666;
+}
+footer .page-footer-copyright a {
   font-size: 0.8571rem;
   color: rgba(52, 73, 94, 0.3);
   line-height: 55px;
@@ -588,92 +588,14 @@ i {
   margin-right: 10px;
 }
 
-.content .page-footer-copyright p {
+footer .page-footer-copyright p {
   margin: 0;
 }
 
-.content .page-footer-copyright > p:first-child {
+footer .page-footer-copyright > p:first-child {
   margin-bottom: 0.5714rem;
 }
 
-.content .page-footer-copyright > p:last-child a {
+footer .page-footer-copyright > p:last-child a {
   color: var(--theme-color, #42b983);
-}
-/*移动设备*/
-@media screen and (max-width: 768px) {
-  .content {
-    left: 0;
-    top: 50px;
-    max-width: 100vw;
-    position: relative;
-    padding-top: 20px;
-    transition: transform 0.25s ease;
-  }
-  .app-nav {
-    margin-top: 16px;
-  }
-  .app-nav li ul {
-    top: 30px;
-  }
-  main {
-    height: auto;
-    overflow-x: hidden;
-  }
-  .app-nav.no-badge .nav-header {
-    float: left;
-    min-width: 150px;
-    min-height: 50px;
-    justify-content: space-between;
-  }
-
-  .app-nav.no-badge .nav-header .docs-logo {
-    position: fixed;
-    width: 90px;
-    height: 60px;
-    left: 40px;
-    top: -6px;
-    background: url(https://cdn.leshiguang.com/leshiguang/chaosconsole/assets/img/logo.ff1db55.ff1db55b.png)
-      center center no-repeat;
-    background-size: 100%;
-  }
-  .app-nav.no-badge .nav-menu {
-    display: none;
-  }
-  .app-nav.no-badge .nav-menu.collapsed {
-    background: aliceblue;
-    display: block;
-    position: fixed;
-    top: 50px;
-    height: 250px;
-    width: 100%;
-  }
-  .app-nav.no-badge .nav-right .nav-menu-collapse {
-    display: block;
-  }
-  .app-nav.no-badge .nav-right .nav-menu-collapse button {
-    position: relative;
-    float: right;
-    margin-right: 15px;
-    padding: 5px 12px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    color: #ffffff;
-    background-color: var(--theme-color, #42b983);
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-  }
-  .app-nav.no-badge .nav-menu > ul {
-    text-align: start;
-  }
-  .app-nav.no-badge .nav-menu > ul > li {
-    display: grid;
-  }
-  .app-nav.no-badge .nav-menu > ul > li > ul {
-    z-index: 200;
-  }
-
-  .app-nav.no-badge .nav-right i {
-    color: #ffffff;
-  }
 }

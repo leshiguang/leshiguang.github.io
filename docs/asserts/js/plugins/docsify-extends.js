@@ -139,8 +139,6 @@
                     let parentLi = $lia.parentNode;
                     if (!parentLi.classList.contains("active")) {
                         that.active(parentLi, true);
-                    } else {
-                        that.disActive(parentLi, true);
                     }
                 });
             });
@@ -182,7 +180,7 @@
     }
     let MarkdownMenuOpts = {
         $init: function (vm) {
-            let html = this.subSidebar(vm.compiler, vm.router, 1);
+            let html = this.subSidebar(vm.compiler, vm.router, 2);
             let el = Docsify.dom.create("div", html);
             Docsify.dom.toggleClass(el, "content-anchors");
             let $liList = Docsify.dom.findAll(el, "li");
