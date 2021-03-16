@@ -481,7 +481,7 @@ i {
 .content {
   transition: margin-left 0.4s ease-in;
   display: flex;
-  left: 300px;
+  left: 250px;
 }
 .content .content-anchors ul {
   padding-left: 8px;
@@ -569,30 +569,8 @@ i {
 .content .search-results.show .matching-post .search-keyword {
   color: red;
 }
-.content .markdown-section {
-  padding: 20px 20px 50px 20px;
-  min-height: calc(100vh - 60px);
-  position: relative;
-  font-size: 15px;
-}
-.content .markdown-section.hide {
-  display: none;
-}
-.content .markdown-section p {
-  line-height: 2;
-  word-spacing: 0.05rem;
-  color: #526075;
-  font-size: 15px;
-}
 .content footer {
   position: relative;
-}
-.markdown-section h1 .anchor {
-  padding-top: 60px;
-}
-.markdown-section > :first-child .anchor {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
 }
 .content .page-footer-copyright {
   border-top: 1px solid;
@@ -620,13 +598,6 @@ i {
 
 .content .page-footer-copyright > p:last-child a {
   color: var(--theme-color, #42b983);
-}
-@media screen and (min-width: 1068px) {
-  .markdown-section {
-    right: 5%;
-    min-width: 960px;
-    max-width: 1060px;
-  }
 }
 /*移动设备*/
 @media screen and (max-width: 768px) {
