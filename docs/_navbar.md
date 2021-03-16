@@ -9,7 +9,7 @@
   - [智能手环](/hardware/wristbrand/)
   - [智能手表](/hardware/watch/)
 * <a href="javascript:;">产品&服务<i class="fa fa-angle-down"></i></a>
-  - [健康产品](/product/health/introduce)
+  - [健康产品](/product/health/weight)
 * <a href="javascript:;">SDK&工具<i class="fa fa-angle-down"></i></a>
   - [SDK集成](/develop-native/apply)
   - [SDK下载](/develop-native/download/README.md)
