@@ -256,6 +256,7 @@ body {
   background: url(https://cdn.leshiguang.com/leshiguang/chaosconsole/assets/img/logo.ff1db55.ff1db55b.png)
     center center no-repeat;
   background-size: 100%;
+  border-bottom: none;
 }
 
 .app-nav.no-badge .nav-menu {
@@ -460,15 +461,15 @@ i {
   background: #e4edf7;
 }
 
-[data-page^='hardware'] .app-nav.no-badge .nav-menu > ul > li:nth-child(1) > a,
-[data-page^='product'] .app-nav.no-badge .nav-menu > ul > li:nth-child(2) > a,
-[data-page^='develop-native']
+[data-page^='/hardware'] .app-nav.no-badge .nav-menu > ul > li:nth-child(1) > a,
+[data-page^='/product'] .app-nav.no-badge .nav-menu > ul > li:nth-child(2) > a,
+[data-page^='/develop-native']
   .app-nav.no-badge
   .nav-menu
   > ul
   > li:nth-child(3)
   > a,
-[data-page^='develop-cloud']
+[data-page^='/develop-cloud']
   .app-nav.no-badge
   .nav-menu
   > ul
