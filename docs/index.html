@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐智云-文档中心</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="乐智健康-SaaS服务-产品介绍-体重、睡眠、血压、健康解决方案、步数、心电图、PPG、保健品、RPM">
+    <meta name="keywords" content="乐智健康,健康,小程序,定制APP,血压,体重,乐时光,ODM app,有氧运动,睡眠管理,睡眠改善,智能硬件,体脂秤,步数,保健品行业,RPM,药店,SaaS">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.04, maximum-scale=1.04, minimum-scale=1.04">
+    <link rel="shortcut icon" type="image/x-icon" href="//cdn.leshiguang.com/leshiguang/favicon.ico">
+    <link rel="stylesheet" href="/asserts/css/font-awesome.min.css?v=1.04">
+    <link rel="stylesheet" href="/asserts/css/vue.min.css?v=1.04">
+    <link rel="stylesheet" href="/asserts/css/leshiguang.min.css?v=1.04">
+</head>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>乐智云-文档中心</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="description" content="乐智健康-SaaS服务-产品介绍-体重、睡眠、血压、健康解决方案、步数、心电图、PPG、保健品、RPM">
-		<meta name="keywords" content="乐智健康,健康,小程序,定制APP,血压,体重,乐时光,ODM app,有氧运动,睡眠管理,睡眠改善,智能硬件,体脂秤,步数,保健品行业,RPM,药店,SaaS">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.03, maximum-scale=1.03, minimum-scale=1.03">
-		<link rel="shortcut icon" type="image/x-icon" href="//cdn.leshiguang.com/leshiguang/favicon.ico">
-		<link rel="stylesheet" href="/asserts/css/leshiguang.css?v=1.03">
-		<link rel="stylesheet" href="/asserts/css/index.css?v=1.03">
-	</head>
+<body>
+<div id="app"><div class="lzc-loading"></div></div>
+<script src="/asserts/js/plugins/docsify.min.js?v=1.04"></script>
+<script src="/asserts/js/plugins/docsify-copyright.min.js?v=1.04"></script>
+<script src="/asserts/js/plugins/docsify-extends.min.js?v=1.04"></script>
 
-	<body>
-		<div id="app">Please wait...</div>
-		<script src="/asserts/js/plugins/edit-in-github.js?v=1.03"></script>
-		<script src="/asserts/js/plugins/copyright.js?v=1.03"></script>
-    <script src="/asserts/js/plugins/docsify.min.js?v=1.03"></script>
-
-		<script>
-			// docsify config start
-			window.$docsify = {
-				alias: {
-					'/#/': '/',
-					'/.*/_navbar.md': '/_navbar.md',
-					'/home/_sidebar.md': '/_sidebar.md',
-					'/(.*)/.*/_sidebar.md': '/$1/_sidebar.md'
-				},
-				// name: '乐智云-文档中心',
-				// TODO 如需提交,必须改为 history 模式
-				routerMode: 'history',
-				// routerMode: 'hash',
-				notFoundPage:'404.md',
-				repo: false,
-				coverpage: false,
-				loadSidebar: true,
-				loadNavbar: true,
-				auto2top: true,
-				mdCache: 7200000,
-				executeScript:true,
-				mergeNavbar: true,
-				search: {
-					maxAge: 7200000,
-					paths: 'auto',
-					placeholder: '搜索',
-					noData: '没有结果',
-					hideOtherSidebarContent: true,
-					pathNamespaces:[
-						'/',
-						'/AIoT',
-						'/develop/',
-						'/download',
-						'/FAQ',
-						'/product',
-						'/solution'
-					],
-					depth: 6
-				},
-				requestHeaders:{
-				'cache-control':'no-cache',
-				'pragma':'no-store'
-				},
-				maxLevel: 4,
-				subMaxLevel: 3,
-				banner: ['/case'],
-				copyCode: {
-				buttonText : 'Copy',
-				errorText  : 'Error',
-				successText: 'Success'
-				},
-				plugins: [
-					EditInGithubPlugin.create(),
-					CopyrightPlugin.create()
-				]
-			}
-		</script>
-		  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js?v=1.03"></script> -->
-		  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js?v=1.03"></script>
-		  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js?v=1.03"></script>
-		  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js?v=1.03"></script>
-		  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js?v=1.03"></script>
-		  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code?v=1.03"></script>
-			<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-objectivec.min.js"></script>
-	</body>
+<script>
+    // docsify config start
+    window.$docsify = {
+        externalLinkTarget:"_self",
+        cornerExternalLinkTarget:"_self",
+        externalLinkRel:'',
+        alias: {
+            '/#/': '/',
+            '/.*/_navbar.md': '/_navbar.md',
+            // '/home/_sidebar.md': '/_sidebar.md'
+        },
+        // name: '乐智云-文档中心',
+        // TODO 如需提交,必须改为 history 模式
+        routerMode: 'history',
+        // routerMode: 'hash',
+        notFoundPage: '404.md',
+        repo: false,
+        coverpage: false,
+        loadSidebar: true,
+        loadNavbar: true,
+        mergeNavbar: false,
+        auto2top: true,
+        mdCache: 7200000,
+        executeScript: true,
+        themeColor: "#155bd4",
+        autoHeader: true,
+        search: {
+            maxAge: 7200000,
+            paths: 'auto',
+            placeholder: '搜索',
+            noData: '没有结果',
+            depth: 4
+        },
+        requestHeaders: {
+            'cache-control': 'no-cache',
+            'pragma': 'no-store'
+        },
+        maxLevel: 4,
+        subMaxLevel:0,
+        banner: ['/case'],
+        externalLinkTarget:"",
+        copyCode: {
+            buttonText: 'Copy',
+            errorText: 'Error',
+            successText: 'Success'
+        },
+        plugins: [
+            CopyrightPlugin.$init(),
+            DocsifyExtendsPlugin.$init()
+        ]
+    }
+</script>
+<script src="/asserts/js/plugins/docsify-search.min.js?v=1.04"></script>
+<script src="https://unpkg.com/docsify-vuepress-theme/dist/index.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js?v=1.04"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js?v=1.04"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js?v=1.04"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code?v=1.04"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-objectivec.min.js?v=1.04"></script> -->
+</body>
+>>>>>>> origin/newversion
 
 </html>
