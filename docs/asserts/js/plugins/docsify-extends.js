@@ -249,7 +249,9 @@
             if (!toc) {
                 toc = compiler.cacheTOC[currentFile];
             }
-
+            if (!toc) {
+                return;
+            }
             toc[0] && toc[0].ignoreAllSubs && toc.splice(0);
             toc[0] && toc[0].level === 1 && toc.shift();
 
