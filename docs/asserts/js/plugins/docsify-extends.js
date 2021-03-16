@@ -137,6 +137,13 @@
                 let that = this;
                 Docsify.dom.on($lia, "click", function (e) {
                     let parentLi = $lia.parentNode;
+                    let brothers = Docsify.dom.findAll(parentLi.parentNode, 'li .active');
+                    console.info(brothers);
+                    if (brothers) {
+                        brothers.forEach(item => {
+                            that.disActive(item, false);
+                        })
+                    }
                     if (!parentLi.classList.contains("active")) {
                         that.active(parentLi, true);
                     }

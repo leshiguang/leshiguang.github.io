@@ -7,14 +7,23 @@
   width: 100%;
   margin: 0;
 }
+.markdown-section .toptool {
+  position: static;
+  float: right;
+  font-size: 14px;
+}
+.markdown-section .toptool a {
+  color: #526075;
+}
 .markdown-section > * {
   box-sizing: border-box;
   font-size: inherit;
 }
-.markdown-section h1:first-of-type {
+.markdown-section > h1:first-of-type {
+  font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
-  border-bottom: 0.3px solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 .markdown-section.hide {
   display: none;
@@ -157,7 +166,6 @@
   font-size: 25px;
   line-height: 48px;
   margin: 0 0 16px;
-  border-bottom: 0.2px solid var(--theme-color, #42b983);
 }
 
 .markdown-section h2 {

@@ -166,37 +166,31 @@ body {
 }
 .app-nav.no-badge .nav-search {
   margin-right: 20px;
-}
-.app-nav.no-badge .nav-search .search {
-  margin-bottom: 20px;
+  background-color: #fafbff;
 }
 .app-nav.no-badge .nav-search .search .input-wrap {
   display: flex;
   align-items: center;
-  background-color: #fafbff;
   width: 200px;
-  height: 50px;
+  transition: width 0.15s ease;
+  margin-top: 7px;
+  top: 10px;
+  height: 36px;
+  padding: 5px;
+  background-color: aliceblue;
+}
+.app-nav.no-badge .nav-search .search .input-wrap i {
+  padding-right: 5px;
+  color: #505d6b;
 }
 .app-nav.no-badge .nav-search .search input {
   outline: none;
   border: none;
-  height: 40px;
   width: 100%;
   padding: 0 7px;
-  line-height: 36px;
+  line-height: 30px;
   font-size: 14px;
-  border: 1px solid transparent;
-  outline: none;
-  border: none;
-  width: 100%;
   padding: 0 7px;
-  line-height: 36px;
-  font-size: 14px;
-  border: 1px solid transparent;
-}
-.app-nav.no-badge .nav-search .search input:focus {
-  box-shadow: 0 0 5px var(--theme-color, #42b983);
-  border: 1px solid var(--theme-color, #42b983);
 }
 .app-nav.no-badge .nav-search .search input::-webkit-search-decoration,
 .app-nav.no-badge .nav-search .search input::-webkit-search-cancel-button,
@@ -204,7 +198,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: #fafbff;
+  background-color: aliceblue;
 }
 .app-nav.no-badge .nav-search .search .clear-button {
   cursor: pointer;
@@ -468,7 +462,7 @@ i {
   .nav-menu
   > ul
   > li:nth-child(3)
-  > a{
+  > a {
   color: var(--theme-color, #42b983);
   border-bottom: 2px solid var(--theme-color, #42b983);
 }
