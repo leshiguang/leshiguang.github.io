@@ -8,8 +8,9 @@
   margin: 0;
 }
 .markdown-section .toptool {
-  position: static;
-  float: right;
+  position: absolute;
+  right: 140px;
+  top: 35px;
   font-size: 14px;
 }
 .markdown-section .toptool a {
