@@ -1,4 +1,4 @@
-<div class="sidebar_title "><i class="fa fa-home fa-fw"></i> 产品</div>
+<div class="sidebar-title "><i class="fa fa-home"></i>产品&服务</div>
 
 * 智能硬件
   * [血压计](/product/hardware/sphygmomanometer)

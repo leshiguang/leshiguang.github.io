@@ -1,23 +1,27 @@
-<div class="logo">
+<div class="nav-header">
 	<a href="/" class="docs-logo"></a>
 </div>
+<div class="nav-menu">
 
-* [首页](README.md)
-* [产品](product/README.md)
+* <a href="javascript:;">智能硬件<i class="fa fa-angle-down"></i></a>
+  - [血压计](/hardware/sphygmomanometer/)
+  - [体脂秤](/hardware/scale/)
+  - [智能手环](/hardware/wristbrand/)
+  - [智能手表](/hardware/watch/)
+* <a href="javascript:;">产品&服务<i class="fa fa-angle-down"></i></a>
+  - [健康产品](/product/health/introduce)
+* <a href="javascript:;">SDK&工具<i class="fa fa-angle-down"></i></a>
+  - [SDK集成](/develop-native/apply)
+  - [SDK下载](/develop-native/download/README.md)
+* [API文档](develop-cloud/api/sign)
 * [解决方案](solution/README.md)
-* [乐智云Api](develop-cloud/README.md)
-* [客户端SDK](develop-native/README.md)
-* [乐智云算法](develop-cloud/algorithm/fat.md)
-* [下载](download/README.md)
 * [帮助](FAQ/README.md)
 
-<!-- <ul class="nav-href">
-	<li><a href="//dev.dcloud.net.cn/wish/?channel=native_sdk" target="__blank">需求墙</a></li>
-	<li><a href="//dev.dcloud.net.cn/sponsor/?channel=uniapp" target="__blank" style="color:#FF6600!important;"><img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/heart.png" class="heart">赞助我们</a></li>
-</ul>
-
-<div class="github">
-	<a href="//github.com/dcloudio/native-docs" target="_blank">
-		<img src="//img-cdn-qiniu.dcloud.net.cn/uniapp/doc/github.svg">
-	</a>
-</div> -->
+</div>
+<div class="nav-right">
+<div class='nav-search'>
+</div>
+<div class='nav-menu-collapse'>
+  <button type="button" class="nav-menu-toggle" ><i class="fa fa-align-justify"></i></button>
+</div>
+</div>
