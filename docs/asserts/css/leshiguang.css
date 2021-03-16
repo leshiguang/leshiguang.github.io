@@ -593,3 +593,44 @@ footer .page-footer-copyright > p:first-child {
 footer .page-footer-copyright > p:last-child a {
   color: var(--theme-color, #42b983);
 }
+.homepage .homepage-docs {
+  max-width: 1200px;
+  min-width: 952px;
+  display: flex;
+  margin: 0 auto;
+  padding: 36px 24px;
+  background: #fff;
+}
+.homepage .homepage-docs .appList {
+  position: relative;
+  display: flex;
+  width: 270px;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.homepage .homepage-docs .appList ul,
+.homepage .homepage-docs .appList li {
+  list-style: none;
+}
+.homepage .homepage-docs .appList a {
+  text-decoration: none;
+  color: #142655;
+}
+.homepage .homepage-docs .appList > ul > li > a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+  font-size: 24px;
+  padding-left: 20px;
+  border-left: 4px solid var(--theme-color, #42b983);
+}
+.homepage .homepage-docs .appList > ul > li > ul > li a {
+  color: #646566;
+  font-size: 16px;
+}

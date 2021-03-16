@@ -146,6 +146,8 @@
                     }
                     if (!parentLi.classList.contains("active")) {
                         that.active(parentLi, true);
+                    } else {
+                        that.disActive(parentLi, false);
                     }
                 });
             });
