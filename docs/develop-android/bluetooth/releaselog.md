@@ -1,0 +1,19 @@
+<a name="too6o"></a>
+# SDK下载&变更历史
+
+
+
+| 变更时间 | 版本 | 下载地址 | 更新日志 |
+| --- | --- | --- | --- |
+| 2020-12-31 | 1.0.0 | [bluetooth-mini-1.0.0.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 初始版本 |
+| 2021-01-06 | 1.0.6 | [bluetooth-mini-1.0.6.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 新增功能: 电量读取,退出登录释放资源, 自定义消息提醒<br />依赖删除:guava, fastjson<br />双端对齐:对齐iOS的api功能, 对齐iOS的字段名称 |
+| 2021-01-15 | 1.0.7 | [bluetooth-mini-1.0.7.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 新增功能<br />增加天气信息获取接口 |
+| 2021-01-22 | 1.0.8 | [bluetooth-mini-1.0.8.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复已知bug |
+| 2021-01-29 | 1.0.9 | [bluetooth-mini-1.0.9.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 获取天气接口增加adCode参数<br />测量数据增加DeviceInfo对象<br />修复已知bug |
+| 2021-02-05 | 1.1.0 | [bluetooth-mini-1.1.0.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 增加双模秤蓝牙配网接口能力 |
+| 2021-02-12 | 1.1.1 | [bluetooth-mini-1.1.1.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复刚绑定的设备无法收到数据回调问题 |
+| 2021-02-19 | 1.1.2 | [bluetooth-mini-1.1.2.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修改随机码错误能重复输入 |
+| 2021-02-26 | 1.1.3 | [bluetooth-mini-1.1.3.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复重新打开蓝牙无法重连问题，统一utcoffset单位为s |
+| 2021-03-06 | 1.1.4 | [bluetooth-mini-1.1.4.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 优化扫描、连接速度<br />增加sdk资源销毁接口<br />修复已知问题 |
+
+
