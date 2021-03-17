@@ -13,6 +13,7 @@
     }
     let SidebarOpts = {
         active (node, forParent) {
+            console.info(node)
             if (node && node.nodeName === 'LI') {
                 if (!node.classList.contains("active")) {
                     Docsify.dom.toggleClass(node, "add", "active");
@@ -22,7 +23,7 @@
                     this.toggleIcon(Docsify.dom.find(node, "a i"), true)
                 }
                 if (forParent) {
-                    this.active(node.parentNode.parentNode);
+                    this.active(node.parentNode.parentNode, forParent);
                 }
             }
         },
@@ -36,7 +37,7 @@
                     this.toggleIcon(Docsify.dom.find(node, "a i"), false)
                 }
                 if (forParent) {
-                    this.disActive(node.parentNode.parentNode)
+                    this.disActive(node.parentNode.parentNode, forParent);
                 }
             }
         },
@@ -46,7 +47,6 @@
             if (el !== null && el !== undefined) {
                 links = Docsify.dom.findAll(el, 'a');
             }
-
             var hash = decodeURI(router.toURL(router.getCurrentPath()));
             var target;
             let that = this;
@@ -55,7 +55,6 @@
                 .forEach(function (a) {
                     var href = decodeURI(a.getAttribute('href'));
                     var node = isParent ? a.parentNode : a;
-
                     a.title = a.title || a.innerText;
                     if (hash.indexOf(href) === 0) {
                         that.active(node, true);
@@ -129,9 +128,11 @@
                  * 如果ul存在,表示为非根节点,1.修改为a标签,添加icon
                  */
                 if ($ul) {
-                    var innerText = li.innerText;
-                    var $a = this.createA(innerText);
-                    li.firstChild.replaceWith($a);
+                    var innerText = li.firstChild;
+                    if (innerText.nodeName === '#text') {
+                        var $a = this.createA(innerText.wholeText);
+                        li.firstChild.replaceWith($a);
+                    }
                 }
                 var $lia = li.firstChild;
                 let that = this;

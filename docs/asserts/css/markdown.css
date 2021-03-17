@@ -5,7 +5,7 @@
   position: relative;
   font-size: 15px;
   width: 100%;
-  margin: 0;
+  margin: auto;
 }
 .markdown-section .toptool {
   position: absolute;
@@ -455,4 +455,10 @@ body.close .markdown-section {
 
 .token.entity {
   cursor: help;
+}
+
+@media screen and (max-width: 1500px) {
+  .markdown-section {
+    margin: 0px;
+  }
 }

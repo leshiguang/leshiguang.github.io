@@ -105,5 +105,8 @@
   }
   .markdown-section table {
     display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
   }
 }
