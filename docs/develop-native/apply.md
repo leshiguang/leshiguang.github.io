@@ -35,10 +35,9 @@
 ### 接入文档
 蓝牙SDK：
 
-- android蓝牙SDK文档：[https://docs.leshiguang.com/develop-native/android/bluetooth](https://docs.leshiguang.com/develop-native/android/bluetooth)
+- android蓝牙SDK文档：[https://docs.leshiguang.com/dev-android/bluetooth/summary](https://docs.leshiguang.com/dev-android/bluetooth/summary)
 - iOS蓝牙SDK文档：[https://docs.leshiguang.com/develop-native/ios/bluetooth](https://docs.leshiguang.com/develop-native/ios/bluetooth)
 - 微信小程序SDK文档：[https://docs.leshiguang.com/develop-native/wx-mini/bluetooth](https://docs.leshiguang.com/develop-native/wx-mini/bluetooth)
-- 如您需要uniapp sdk， 请联系开发者或商务同学
 
 
 <br />UI级SDK：<br />
