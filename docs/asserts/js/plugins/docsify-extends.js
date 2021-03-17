@@ -237,7 +237,6 @@
 
                 last[level] = headline;
             });
-
             return headlines;
         },
         subSidebar: function (compiler, router, level) {
@@ -262,7 +261,7 @@
                 return;
             }
             toc[0] && toc[0].ignoreAllSubs && toc.splice(0);
-            toc[0] && toc[0].level === 1 && toc.shift();
+            toc[0] && toc[0].level === 1 &&  toc.shift();
 
             for (var i = 0; i < toc.length; i++) {
                 toc[i].ignoreSubHeading && toc.splice(i, 1) && i--;
@@ -295,12 +294,11 @@
     function $init () {
         return function (hook, vm) {
             hook.doneEach(function (_) {
-                MarkdownMenuOpts.$init(vm);
                 NavMenuOpts.$init(vm);
                 MarkdwonOpts.$init(vm);
                 SidebarOpts.$init(vm);
+                MarkdownMenuOpts.$init(vm);
             });
-
         };
     }
     win.DocsifyExtendsPlugin.$init = $init;

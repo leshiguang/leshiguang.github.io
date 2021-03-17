@@ -14,7 +14,7 @@
   - [SDK集成](/develop-native/apply)
   - [SDK下载](/develop-native/download/README.md)
 * [API文档](develop-cloud/api/sign)
-* [解决方案](solution/README.md)
+* [解决方案](solution/drugstore/)
 * [帮助](FAQ/README.md)
 
 </div>

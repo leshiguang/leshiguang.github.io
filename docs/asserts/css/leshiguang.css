@@ -463,7 +463,15 @@ i {
   .nav-menu
   > ul
   > li:nth-child(3)
-  > a {
+  > a,
+[data-page*='develop-cloud']
+  .app-nav.no-badge
+  .nav-menu
+  > ul
+  > li:nth-child(4)
+  > a,
+[data-page*='solution'] .app-nav.no-badge .nav-menu > ul > li:nth-child(5) > a,
+[data-page*='FAQ'] .app-nav.no-badge .nav-menu > ul > li:nth-child(6) > a {
   color: var(--theme-color, #42b983);
   border-bottom: 2px solid var(--theme-color, #42b983);
 }
