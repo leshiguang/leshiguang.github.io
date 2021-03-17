@@ -357,13 +357,22 @@
     var NO_DATA_TEXT = '';
     var options;
 
-    function tpl (defaultValue) {
+    function tpl (vm, defaultValue) {
         if (defaultValue === void 0) defaultValue = '';
         var html = "<div class=\"input-wrap\">\n   <i class=\"fa fa-search\" ></i>\n <input type=\"search\" value=\"" + defaultValue + "\" placeholder=\"搜索\" aria-label=\"Search text\" />\n      <div class=\"clear-button\">\n        <svg width=\"26\" height=\"24\">\n          <circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#ccc\" />\n          <path stroke=\"white\" stroke-width=\"2\" d=\"M8.25,8.25,15.75,15.75\" />\n          <path stroke=\"white\" stroke-width=\"2\"d=\"M8.25,15.75,15.75,8.25\" />\n        </svg>\n      </div>\n    </div>\n    </div>";
         var el = Docsify.dom.create('div', html);
         var nav = Docsify.dom.find('nav .nav-search');
         Docsify.dom.toggleClass(el, 'search');
         Docsify.dom.before(nav, el);
+
+        if (vm.route.path === '/') {
+            var homeSearch = Docsify.dom.find(".homepage-search");
+            if (homeSearch) {
+                var elHome = Docsify.dom.create('div', html);
+                Docsify.dom.toggleClass(elHome, 'search');
+                Docsify.dom.appendTo(homeSearch, elHome);
+            }
+        }
         var $content = Docsify.dom.find(".content");
         var $panel = Docsify.dom.find($content, '.search-results');
         if ($panel) {
@@ -490,7 +499,7 @@
 
     function update (opts, vm) {
         var keywords = vm.router.parse().query.s;
-        tpl(keywords);
+        tpl(vm, keywords);
         bindEvents();
         updateOptions(opts);
         updatePlaceholder(opts.placeholder, vm.route.path);

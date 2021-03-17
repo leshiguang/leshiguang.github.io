@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/asserts/css/vue.min.css?v=1.04">
     <link rel="stylesheet" href="/asserts/css/leshiguang.min.css?v=1.04">
     <link rel="stylesheet" href="/asserts/css/markdown.min.css?v=1.04">
+    <link rel="stylesheet" href="/asserts/css/leshiguang-home.min.css?v=1.04">
     <link rel="stylesheet" href="/asserts/css/leshiguang-mobile.min.css?v=1.04">
 </head>
 
@@ -26,8 +27,6 @@
 <script>
     // docsify config start
     window.$docsify = {
-        externalLinkTarget:"_self",
-        cornerExternalLinkTarget:"_self",
         externalLinkRel:'',
         alias: {
             '/(hardware)/(.*\/)(.*\/)(.*\/)_sidebar.md': '/$1/$2_sidebar.md',
@@ -51,6 +50,7 @@
         repo: false,
         topMargin:60,
         coverpage: false,
+        homepage: "/home/index.md",
         loadSidebar: true,
         loadNavbar: true,
         mergeNavbar: false,
@@ -87,10 +87,10 @@
     }
 </script>
 <script src="/asserts/js/plugins/docsify-search.min.js?v=1.04"></script>
+<script src="/asserts/js/plugins/docsify-pagination.min.js?v=1.04"></script>
 <script src="/asserts/js/plugins/others/plugins/docsify-vuepress-theme.min.js?v=1.04"></script>
 <script src="/asserts/js/plugins/others/plugins/emoji.min.js?v=1.04"></script>
 <script src="/asserts/js/plugins/others/plugins/external-script.min.js?v=1.04"></script>
-<script src="/asserts/js/plugins/others/plugins/docsify-pagination.min.js?v=1.04"></script>
 <script src="/asserts/js/plugins/others/plugins/docsify-copy-code.min.js?v=1.04"></script>
 </body>
 </html>

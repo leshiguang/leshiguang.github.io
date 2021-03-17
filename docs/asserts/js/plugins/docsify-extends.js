@@ -183,6 +183,9 @@
                 Docsify.dom.on(menuTaggle, "click", function () {
                     Docsify.dom.toggleClass(menuTaggle, "collapsed");
                     Docsify.dom.toggleClass(menu, "collapsed");
+                    var $icon = Docsify.dom.find(menuTaggle, "i");
+                    Docsify.dom.toggleClass($icon, "fa-align-justify");
+                    Docsify.dom.toggleClass($icon, "fa-close");
                 })
             }
         }

@@ -1,6 +1,6 @@
 .markdown-section {
   padding: 14px 40px;
-  max-width: 1060px !important;
+  max-width: 1060px;
   min-height: calc(100vh - 60px);
   position: relative;
   font-size: 15px;

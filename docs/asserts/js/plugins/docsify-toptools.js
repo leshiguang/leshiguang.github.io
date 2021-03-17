@@ -4,6 +4,9 @@
   function $init () {
     return function (hook, vm) {
       hook.doneEach(function () {
+        if (vm.route.path === '/') {
+          return;
+        }
         var $markdownSection = Docsify.dom.find(".markdown-section");
         var url =
           '//github.com/leshiguang/leshiguang.github.io/tree/preview/docs/' +

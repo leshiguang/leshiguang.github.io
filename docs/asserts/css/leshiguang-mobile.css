@@ -21,6 +21,9 @@
   .markdown-section h1:first-of-type {
     text-align: start;
   }
+  .app-nav.no-badge {
+    background-color: #fafbff;
+  }
   .app-nav.no-badge .nav-header {
     float: left;
     min-width: 150px;
@@ -42,28 +45,40 @@
     display: none;
   }
   .app-nav.no-badge .nav-menu.collapsed {
-    background: aliceblue;
+    background: #fafbff;
     display: block;
     position: fixed;
     top: 50px;
     height: 250px;
     width: 100%;
+    border-left: 0.5px solid #efefef;
+    border-bottom: 0.5px solid #efefef;
+    border-right: 0.5px solid #efefef;
   }
   .app-nav.no-badge .nav-right .nav-menu-collapse {
     display: block;
   }
-  .app-nav.no-badge .nav-right .nav-menu-collapse button {
+  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-collapse {
+    background-color: transparent;
+    width: auto;
+    padding: 30px 30px 10px 10px;
+  }
+  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-toggle-button {
     position: relative;
     float: right;
-    margin-right: 15px;
-    padding: 5px 12px;
-    margin-top: 7px;
-    margin-bottom: 4px;
-    color: #ffffff;
-    background-color: var(--theme-color, #42b983);
-    background-image: none;
+    padding: 15px 15px;
     border: 1px solid transparent;
     border-radius: 4px;
+  }
+  .app-nav.no-badge
+    .nav-right
+    .nav-menu-collapse
+    .nav-menu-toggle
+    .nav-menu-toggle-button
+    .fa {
+    color: var(--theme-color, #42b983);
+    font-weight: lighter;
+    width: 20px;
   }
   .app-nav.no-badge .nav-menu > ul {
     text-align: start;
@@ -74,8 +89,21 @@
   .app-nav.no-badge .nav-menu > ul > li > ul {
     z-index: 200;
   }
-
-  .app-nav.no-badge .nav-right i {
-    color: #ffffff;
+  .markdown-section .homepage .homepage-docs {
+    display: contents;
+  }
+  .markdown-section .homepage .homepage-docs .appList {
+    width: auto;
+  }
+  .markdown-section {
+    padding: 14px 20px;
+    max-width: 760px;
+  }
+  [data-page*='home'] .content .markdown-section {
+    max-width: 100%;
+    margin: auto;
+  }
+  .markdown-section table {
+    display: block;
   }
 }
