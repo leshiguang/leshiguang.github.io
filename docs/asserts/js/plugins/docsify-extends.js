@@ -13,7 +13,6 @@
     }
     let SidebarOpts = {
         active (node, forParent) {
-            console.info(node)
             if (node && node.nodeName === 'LI') {
                 if (!node.classList.contains("active")) {
                     Docsify.dom.toggleClass(node, "add", "active");
