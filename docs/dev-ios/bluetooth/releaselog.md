@@ -1,0 +1,25 @@
+<a name="article-title"></a>
+# SDK下载&变更记录
+| 更新日期 | 版本 | 下载地址 | 更新日志 |
+| --- | --- | --- | --- |
+| 2020-12-02 | 1.0.0 | [LZBluetooth](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.0.0/LZBluetooth.framework.zip) | 初始版本 |
+| 2020-12-02 | 1.1 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.1/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.1/LZBluetooth.framework.zip) | 1、增加 device的属性 sn<br />2、解决闹钟设置失效的问题<br />3、增加sleep calories heartrate的数据的属性 srcData |
+| 2020-12-09 | 1.2.1 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.2.1/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.2.1/LZBluetooth.framework.zip) | 1、优化已经处于配对过程中的设备的绑定流程<br />2、优化消息提醒，增加自定义<br />3、优化闹钟，目前只能支持一个闹钟一个闹钟的设置 |
+| 2020-12-16 | 1.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3/LZBluetooth.framework.zip) | 1、测量数据模型与安卓对其 |
+| 2020-12-23 | 1.3.1 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3.1/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3.1/LZBluetooth.framework.zip) | 1、添加请求天气的接口<br />2、优化设置type的命名 |
+| 2020-12-30 | 1.3.2 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3.2/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3.2/LZBluetooth.framework.zip) | 1、解决天气时间戳的问题<br />2、去除一个方法 confirmSuccess:macString:deviceType |
+| 2021-01-10 | 1.3.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.3.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4/LZBluetooth.framework.zip) | 1、替换旧的天气接口，换成新的天气接口<br /> |
+| 2021-01-20 | 1.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4/LZBluetooth.framework.zip) | 1、解决睡眠解析问题<br />2、修改LZA5SettingEventRemindData数据结构<br />3、修改 LZSendDataCompletion的数据结构 |
+| 2021-01-27 | 1.4.1 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.1/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.1/LZBluetooth.framework.zip) | 1、增加一个绑定状态 <br />/// 输入随机码错误 (报这个错误是可以继续输入正确的随机码)<br />    LZBindStateInputRandomNumberError = 7<br /> |
+| 2021-02-03 | 1.4.2 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.2/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.2/LZBluetooth.framework.zip) | 1、解决设置消息提醒无效的问题 |
+| 2021-02-10 | 1.4.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.3/LZBluetooth.framework.zip) | 1、解决勿扰模式下的是否允许抬手亮屏开关失效的问题 |
+| 2021-02-19 | 1.4.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.4/LZBluetooth.framework.zip) | 1、解决 椭圆机，篮球，足球，羽毛球，排球，乒乓球，瑜伽，健身舞，太极的运动数据解析问题 |
+| 2021-02-26 | 1.4.5 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.5/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.5/LZBluetooth.framework.zip) | 1、解决蓝牙开关断开的时候没有扫描服务特征导致的无响应问题 |
+| 2021-03-04 | 1.5.2 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.2/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.2/LZBluetooth.framework.zip) | 1、增加支持体重与血压，<br />2、增加一个删除鉴权缓存的接口 |
+| 2021-03-11 | 1.5.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.3/LZBluetooth.framework.zip) | 1、解决 椭圆机，篮球，足球，羽毛球，排球，乒乓球，瑜伽，健身舞，太极的运动数据解析问题 |
+| 2021-03-17 | 1.5.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.4/LZBluetooth.framework.zip) | 1、解决蓝牙开关断开的时候没有扫描服务特征导致的无响应问题 |
+| 2021-03-18 | 1.6.0 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.0/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.0/LZBluetooth.framework.zip) | 1、增加实时心率api |
+
+
+
+
