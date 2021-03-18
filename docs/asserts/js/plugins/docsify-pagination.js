@@ -327,7 +327,6 @@
         });
         hook.doneEach(function () {
             if (vm.route.path === '/') {
-                return;
             }
             return render();
         });

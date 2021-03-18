@@ -95,8 +95,16 @@
   .markdown-section .homepage .homepage-docs .appList {
     width: auto;
   }
+  .homepage
+    .homepage-suggest
+    .homepage-suggest-container
+    .homepage-suggest-wrap
+    .suggest-prod {
+    width: 90%;
+    margin: 20px;
+  }
   .markdown-section {
-    padding: 14px 20px;
+    padding: 14px 0px;
     max-width: 760px;
   }
   [data-page*='home'] .content .markdown-section {

@@ -17,8 +17,10 @@
                     '<a class="xpath_not">' +
                     copy_right +
                     '</a>' +
+                    "</p>" +
+                    '<p>' +
                     '<a class="xpath_not" target="_blank" href="' + beian_gongan_add + '">' +
-                    '<img src="' + beian_gongan_img + '" ></img>' +
+                    '<img src="' + beian_gongan_img + '" style=\"height:14px;\" ></img>' +
                     beian_gongan_code +
                     '</a>' +
                     '<a class="xpath_not" target="_blank" href="' + beian_add + '">' +

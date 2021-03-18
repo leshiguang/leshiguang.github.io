@@ -5,12 +5,77 @@
   left: 0px;
 }
 [data-page*='home'] .content .markdown-section {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
 }
+.homepage .homepage-suggest .homepage-suggest-container {
+  margin-bottom: 32px;
+  background: #f5f7f9;
+  text-align: left;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.homepage .homepage-suggest .homepage-suggest-container .homepage-suggest-wrap {
+  padding: 2rem 0 1.5rem;
+}
+.homepage
+  .homepage-suggest
+  .homepage-suggest-container
+  .homepage-suggest-wrap
+  .suggest-prod {
+  position: relative;
+  width: 31%;
+  height: 6.8571rem;
+  background: #fff;
+  box-shadow: 0rem 0.1429rem 0.2857rem -0.1429rem rgb(122 139 170 / 48%),
+    0rem 0rem 0.0714rem 0rem rgb(122 139 170 / 30%);
+  border-radius: 0.2857rem;
+  margin: 0px 1%;
+  line-height: 1.5714rem;
+  color: #34495e;
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+}
+.homepage
+  .homepage-suggest
+  .homepage-suggest-container
+  .homepage-suggest-wrap
+  .suggest-prod
+  .img {
+  position: absolute;
+  display: inline-block;
+  top: 1.7143rem;
+  left: 2.2857rem;
+  width: 3.4286rem;
+  height: 3.4286rem;
+}
+.homepage
+  .homepage-suggest
+  .homepage-suggest-container
+  .homepage-suggest-wrap
+  .suggest-prod
+  .title {
+  display: block;
+  padding-left: 7.7143rem;
+  color: #142655;
+  font-weight: bold;
+  text-align: left;
+}
+.homepage
+  .homepage-suggest
+  .homepage-suggest-container
+  .homepage-suggest-wrap
+  .suggest-prod
+  .des {
+  display: block;
+  padding-left: 7.7143rem;
+  text-align: left;
+}
 .homepage .homepage-docs {
-  max-width: 1200px;
-  min-width: 952px;
   display: flex;
   margin: 0 auto;
   padding: 36px 24px;
@@ -32,6 +97,7 @@
 .homepage .homepage-docs .appList ul,
 .homepage .homepage-docs .appList li {
   list-style: none;
+  padding-left: 30px;
 }
 .homepage .homepage-docs .appList li {
   padding: 0px 0px 20px;
@@ -54,7 +120,7 @@
 }
 
 .homepage-top {
-  height: 385px;
+  height: 285px;
   margin-top: -65px;
   text-align: center;
   background: #fafbff;
@@ -78,7 +144,7 @@
 }
 
 .homepage-top .container h2 {
-  margin: 50px auto;
+  margin: 25px auto;
   font-weight: 400;
   color: var(--theme-color, #42b983);
   text-shadow: 0 2px 3px rgb(0 0 0 / 50%);
