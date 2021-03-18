@@ -494,6 +494,7 @@ i {
   opacity: 0.7;
   float: right;
   right: 0;
+  max-width: 200px;
 }
 .content .content-anchors.hide {
   display: none;
