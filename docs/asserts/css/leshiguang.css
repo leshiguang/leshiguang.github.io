@@ -163,8 +163,6 @@ body {
 .app-nav.no-badge .nav-right {
   float: right;
   display: inline-flex;
-}
- {
   margin-right: 20px;
 }
 .search .input-wrap {
