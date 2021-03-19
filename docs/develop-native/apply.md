@@ -13,8 +13,8 @@
 
 - 邮件内容如下：
 ```java
-收件人：zheng.lu@lifesense.com；xuan.zhang@lifesense.com
-抄送：mengfei.li@lifesense.com,chengze.wu@lifesense.com,yong.wu@lifesense.com,zhicheng.liu@lifesense.com,chuang.liu@lifesense.com,jun.gong@lifesense.com
+收件人：zheng.lu@leshiguang.com；xuan.zhang@leshiguang.com
+抄送：mengfei.li@leshiguang.com,chengze.wu@leshiguang.com,yong.wu@leshiguang.com,zhicheng.liu@leshiguang.com,chuang.liu@leshiguang.com,jun.gong@leshiguang.com
 主题：【乐智健康服务准入申请】-（xx 企业/组织/个人）
 邮件正文：
 1、接入目的：（示例：（xx企业/组织/个人）-申请接入乐心服务，目的是借助xx（硬件型号）的数据能力帮助（xx企业/组织/个人）的用户完成健康管理）
@@ -36,7 +36,7 @@
 蓝牙SDK：
 
 - android蓝牙SDK文档：[https://docs.leshiguang.com/dev-android/bluetooth/summary](https://docs.leshiguang.com/dev-android/bluetooth/summary)
-- iOS蓝牙SDK文档：[https://docs.leshiguang.com/develop-native/ios/bluetooth](https://docs.leshiguang.com/develop-native/ios/bluetooth)
+- iOS蓝牙SDK文档：[https://docs.leshiguang.com/dev-ios/bluetooth/summary](https://docs.leshiguang.com/dev-ios/bluetooth/summary)
 - 微信小程序SDK文档：[https://docs.leshiguang.com/develop-native/wx-mini/bluetooth](https://docs.leshiguang.com/develop-native/wx-mini/bluetooth)
 
 
