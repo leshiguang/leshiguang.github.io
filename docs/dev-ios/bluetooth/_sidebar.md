@@ -5,6 +5,7 @@
 - 接口参考
    - [设备管理](/dev-ios/bluetooth/reference/device)
    - [电量信息](/dev-ios/bluetooth/reference/battery)
+   - [实时心率](/dev-ios/bluetooth/reference/realtimeheartrate)
    - 设置项
       - [天气](/dev-ios/bluetooth/reference/settings/weather)
       - [时间制式](/dev-ios/bluetooth/reference/settings/timeformat)
@@ -31,7 +32,6 @@
       - [屏幕方向](/dev-ios/bluetooth/reference/settings/direction)
       - [佩戴习惯](/dev-ios/bluetooth/reference/settings/wearing)
       - [语言](/dev-ios/bluetooth/reference/settings/language)
-
 - [数据接收](/dev-ios/bluetooth/receive)
    - [体重](/dev-ios/bluetooth/receive/weight)
    - [血压](/dev-ios/bluetooth/receive/bloodpressure)
@@ -44,3 +44,4 @@
    - [运动报告](/dev-ios/bluetooth/receive/sportreport)
    - [运动状态](/dev-ios/bluetooth/receive/sportstatus)
 - [常见问题](/dev-ios/bluetooth/help)
+
