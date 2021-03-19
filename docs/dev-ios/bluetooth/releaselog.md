@@ -19,6 +19,7 @@
 | 2021-03-11 | 1.5.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.3/LZBluetooth.framework.zip) | 1、解决 椭圆机，篮球，足球，羽毛球，排球，乒乓球，瑜伽，健身舞，太极的运动数据解析问题 |
 | 2021-03-17 | 1.5.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.4/LZBluetooth.framework.zip) | 1、解决蓝牙开关断开的时候没有扫描服务特征导致的无响应问题 |
 | 2021-03-18 | 1.6.0 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.0/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.0/LZBluetooth.framework.zip) | 1、增加实时心率api |
+| 2021-03-18 | 1.6.1 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.1/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.1/LZBluetooth.framework.zip) | 1、去掉实时心率api 将其转移至设置项 |
 
 
 
