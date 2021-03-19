@@ -15,5 +15,10 @@
 | 2021-02-19 | 1.1.2 | [bluetooth-mini-1.1.2.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修改随机码错误能重复输入 |
 | 2021-02-26 | 1.1.3 | [bluetooth-mini-1.1.3.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复重新打开蓝牙无法重连问题，统一utcoffset单位为s |
 | 2021-03-06 | 1.1.4 | [bluetooth-mini-1.1.4.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 优化扫描、连接速度<br />增加sdk资源销毁接口<br />修复已知问题 |
+| 2021-03-16 | 1.1.5 | [bluetooth-mini-1.1.5.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 增加血压计设备绑定、数据上传功能 |
+| 2021-03-18 | 1.1.6 | [bluetooth-mini-1.1.6.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复已知问题，优化蓝牙连接 |
+| 2021-03-19 | 1.1.7 | [bluetooth-mini-1.1.7.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 增加实时心率开关 |
+
+
 
 
