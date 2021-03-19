@@ -32,6 +32,11 @@
       - [佩戴习惯](/dev-ios/bluetooth/reference/settings/wearing)
       - [语言](/dev-ios/bluetooth/reference/settings/language)
       - [实时心率](/dev-ios/bluetooth/reference/settings/realtimeheartrate)
+      - 蓝牙配网
+         - [扫描Wifi](/dev-ios/bluetooth/reference/wifi/scan)
+         - [获取配网状态](/dev-ios/bluetooth/reference/wifi/status)
+         - [重置网络](/dev-ios/bluetooth/reference/wifi/reset)
+         - [配置网络](/dev-ios/bluetooth/reference/wifi/config)
 - [数据接收](/dev-ios/bluetooth/receive)
    - [体重](/dev-ios/bluetooth/receive/weight)
    - [血压](/dev-ios/bluetooth/receive/bloodpressure)
