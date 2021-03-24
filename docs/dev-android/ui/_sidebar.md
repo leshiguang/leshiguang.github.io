@@ -1,6 +1,6 @@
-- [概述](/dev-android/ui/summary)
-- [SDK下载&更新记录](/dev-android/ui/releaselog)
-- [接入Demo](/dev-android/ui/demo)
-- [快速集成](/dev-android/ui/integrate)
-- [接口使用](/dev-android/ui/interfaces)
+- [概述](/dev-ios/ui/summary)
+- [SDK下载&变更历史](/dev-ios/ui/releaselog)
+- [接入Demo](/dev-ios/ui/demo)
+- [快速集成](/dev-ios/ui/demo)
+- [接口使用](/dev-ios/ui/interfaces)
 
