@@ -1,22 +1,13 @@
-<a name="Yb1Si"></a>
-# 蓝牙SDK下载
-<a name="Hdjtv"></a>
-## iOS: [iOS蓝牙SDK](/dev-ios/bluetooth/releaselog)
+<a name="dWOCY"></a>
+## 蓝牙SDK下载
 
+<br />iOS: [iOS蓝牙SDK](/dev-ios/bluetooth/releaselog)<br />
+<br />Android：[android蓝牙SDK](/dev-android/bluetooth/releaselog)
 
-<a name="k0HAE"></a>
-## Android：[android蓝牙SDK](/dev-android/bluetooth/releaselog)
-<br />
-<a name="FOGK8"></a>
-# UI级SDK下载
+<a name="zTzkn"></a>
+## UI级SDK下载
 
-
-<a name="4eUGG"></a>
-## iOS: [iOS UI SDK](/dev-ios/ui/releaselog)
-
-
-<a name="Dwh1l"></a>
-## androi: [android UI SDK](/dev-android/ui/releaselog)
-
+<br />iOS: [iOS UI SDK](/dev-ios/ui/releaselog)<br />
+<br />android: [android UI SDK](/dev-android/ui/releaselog)<br />
 
 
