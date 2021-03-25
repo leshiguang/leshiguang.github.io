@@ -19,7 +19,8 @@
 ## 设置心率预警
 
 <br />
-<br />调用示例：
+<br />调用示例：<br />
+
 ```objectivec
 [self.deviceManager sendDataModel:LZA5SettingCustomSportHRSectionReminderData macString:self.device.mac completion:^(LZBluetoothErrorCode result, id resp) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -35,6 +36,7 @@
     }];
 ```
 
+<br />
 
 <a name="JJPdQ"></a>
 ## 实现方案示例
