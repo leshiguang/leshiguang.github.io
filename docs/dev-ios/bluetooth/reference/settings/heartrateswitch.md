@@ -1,6 +1,3 @@
-<a name="hRC3V"></a>
-## 默认选项
-默认开启
 <a name="Fdu08"></a>
 ## 数据类型
 设置日常心率监测的开关及开启的时间段，开启时，手环背部会亮起持续闪烁的绿灯。<br />**LZA5SettingHeartrateDetectionData**
