@@ -46,7 +46,7 @@
 | rssi | NSNumber | 蓝牙强度 |
 | identifier | NSString | 设备标识码 |
 
-**![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616659723420-57e6ea45-0ed7-44ea-b95f-637545da9e43.png#align=left&display=inline&height=584&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&size=203679&status=done&style=shadow&width=270)**
+**![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616660555263-73ccbc0a-be59-4f3c-9af5-4d3d86229d24.png#align=left&display=inline&height=457&margin=%5Bobject%20Object%5D&name=image.png&originHeight=457&originWidth=227&size=42922&status=done&style=none&width=227)**
 <a name="ZSNur"></a>
 ## 停止搜索
 强制中断蓝牙搜索，执行搜索过程中中断搜索或页面销毁时，请务必调用停止搜索接口，否则会影响正常的连接流程：
@@ -109,7 +109,7 @@
 | device | id<LZDeviceProtocol>)device | 搜索到的设备信息 |
 | bindState | LZBindState | 绑定回调，包括绑定过程和绑定结果的回调 |
 
-**![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616659767100-f3a3ca32-f062-4188-b6af-59e683a2b1d6.png#align=left&display=inline&height=584&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&size=216208&status=done&style=shadow&width=270)**
+**![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616660602208-3db6d605-283e-4939-823f-6820c84d0e2b.png#align=left&display=inline&height=479&margin=%5Bobject%20Object%5D&name=image.png&originHeight=479&originWidth=238&size=15829&status=done&style=none&width=238)**
 <a name="ltPmF"></a>
 ### 输入随机数
 手环在收到绑定请求时， 会触发随机数绑定流程，在收到绑定流程回调onReceiveRadomNumberRequest时， 向用户显示6位数的数字输入框，输入确认后，调用该接口，进行随机数的正确性验证，验证结果将回馈到onReceiveBindState回调中，调用示例：
@@ -126,7 +126,7 @@
 | deviceType | LZDeviceType | 设备类型 |
 
 <a name="ytm6G"></a>
-### ![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616659836385-ba83d70f-c56b-4018-8c2a-9c0c97cc06c8.png#align=left&display=inline&height=584&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&size=235437&status=done&style=shadow&width=270)
+### ![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616660636849-ee4793d3-4e64-403d-a617-df9848f6853a.png#align=left&display=inline&height=462&margin=%5Bobject%20Object%5D&name=image.png&originHeight=462&originWidth=238&size=20382&status=done&style=none&width=238)
 <a name="ht7MX"></a>
 ### [写入deviceId](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e5%86%99%e5%85%a5deviceid)
 体脂秤或血压仪在收到绑定请求时，若设备上没有deviceId，则会触发deviceId写入流程，以生成设备唯一标识号，我们建议您直接使用mac地址作为唯一标识，不必重新生成一个唯一ID。若设备上已经写入过deviceId，则无需调用该方法（您将不会收到onReceiveDeviceIdRequest回调）, 调用示例：
