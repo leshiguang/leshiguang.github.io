@@ -5,7 +5,7 @@
 - 接口参考
    - [设备管理](/dev-ios/bluetooth/reference/device)
    - [电量信息](/dev-ios/bluetooth/reference/battery)
-   - 设置项
+   - [设置项](/dev-ios/bluetooth/reference/settings)
       - [实时心率](/dev-ios/bluetooth/reference/settings/realtimeheartrate)
       - [运动心率区间](/dev-ios/bluetooth/reference/settings/sphrange)
       - [心率开关](/dev-ios/bluetooth/reference/settings/heartrateswitch)
