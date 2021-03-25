@@ -39,5 +39,5 @@
 - 结合实时心率，实时显示用户当前所处的运动区间，控制运动的有效性
 - 结合心率计算运动强度，给出疲劳度和恢复时间
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616051296229-f193263c-ec10-42f0-b851-2e2c6a2266a9.png#align=left&display=inline&height=501&margin=%5Bobject%20Object%5D&name=image.png&originHeight=587&originWidth=535&size=57600&status=done&style=none&width=457)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616672206675-0d4fee14-3fd5-4ba7-b19b-3c0023abb78b.png#align=left&display=inline&height=522&margin=%5Bobject%20Object%5D&name=image.png&originHeight=522&originWidth=859&size=68948&status=done&style=none&width=859)
 
