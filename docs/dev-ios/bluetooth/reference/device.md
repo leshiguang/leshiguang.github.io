@@ -13,7 +13,7 @@
 
 
 ![](https://cdn.nlark.com/yuque/__puml/a7c3776598267626d1ae185f131f785a.svg#lake_card_v2=eyJjb2RlIjoiQHN0YXJ0dW1sXG5cbmF1dG9udW1iZXJcblxuYWN0b3IgXCLnlKjmiLdcIiBhcyBVc2VyXG5wYXJ0aWNpcGFudCBcIkFwcFwiIGFzIEFwcFxucGFydGljaXBhbnQgXCJTREtcIiBhcyBTREtcbnBhcnRpY2lwYW50IFwi6K6-5aSHXCIgYXMgRGV2aWNlICNvcmFuZ2VcblxuYWN0aXZhdGUgQXBwXG5BcHAgLT4gU0RLOiDliJ3lp4vljJZTREvvvJrosIPnlKhpbml0V2l0aEFwcElk5Yid5aeL5YyWXG5cbmFjdGl2YXRlIFVzZXJcblxuVXNlciAtPiBBcHA6IOmAieaLqeiuvuWkh-WPkei1t-e7keWumua1geeoi1xuYWN0aXZhdGUgQXBwXG5cbkFwcCAtPiBTREs6IOWPkei1t-aQnOe0ouivt-axgu-8mnNlYXJjaERldmljZVdpdGhEZXZpY2VUeXBlc1xuYWN0aXZhdGUgU0RLXG5cblNESyAtLT4gQXBwOiDov5Tlm57mkJzntKLnu5Pmnpxcbm5vdGUgcmlnaHQgb2YgU0RLOiDmr4_mrKHov5Tlm57ljZXkuKrorr7lpIfvvIzkuI3lpITnkIbph43lpI3nu5PmnpxcblxuYWN0aXZhdGUgQXBwXG5BcHAgLT4gQXBwOiDogZrlkIjmkJzntKLnu5PmnpzvvIzmjInnhafkv6Hlj7flvLrluqbmjpLluo9cblxuQXBwIC0tPiBVc2VyOiDlkJHnlKjmiLflsZXnpLrmkJzntKLliLDnmoTorr7lpIfliJfooahcblxuVXNlciAtPiBBcHA6IOmAieaLqeS4gOS4quaQnOe0ouWIsOeahOiuvuWkh-i_m-ihjOe7keWumlxuXG5BcHAgLT4gU0RLOiDosIPnlKhiaW5kV2l0aERldmljZVxuXG5TREsgLT4gRGV2aWNlOiDov57mjqXorr7lpIdcblNESyAtPiBTREs66K-75Y-W6K6-5aSH5L-h5oGv77yM5Yik5pat5piv5ZCm6ZyA6KaB55Sf5oiQRGV2aWNlSWRcblNESyAtLT4gQXBwOiDlm57osINiaW5kU3RhdGVDaGFuZ2VkLOWRiuefpemcgOimgeWGmeWFpURldmljZUlkXG5BcHAgLT4gU0RLOiDosIPnlKhyZWdpc3RXaXRoRGV2aWNlSWTlhpnlhaVEZXZpY2VJRFxuU0RLIC0-IERldmljZTog5YaZ5YWlRGV2aWNlSURcblNESyAtLT4gQXBwOiDlm57osINiaW5kU3RhdGVDaGFuZ2VkLOWRiuefpemcgOimgeWGmeWFpeeUqOaIt-e8luWPt1xuQXBwIC0-IFNESzog6LCD55SoaW5wdXRVc2VyTnVtYmVy5YaZ5YWl55So5oi357yW5Y-3XG5TREsgLS0-IEFwcDog5Zue6LCDYmluZFN0YXRlQ2hhbmdlZCzlkYrnn6Xnu5Hlrprnu5PmnpxcblNESyAtPiBTREs6IOW8gOWni-aOpeaUtuaVsOaNrlxuQGVuZHVtbCIsInR5cGUiOiJwdW1sIiwibWFyZ2luIjp0cnVlLCJpZCI6ImR4eWluIiwidXJsIjoiaHR0cHM6Ly9jZG4ubmxhcmsuY29tL3l1cXVlL19fcHVtbC9hN2MzNzc2NTk4MjY3NjI2ZDFhZTE4NWYxMzFmNzg1YS5zdmciLCJjYXJkIjoiZGlhZ3JhbSJ9)<a name="SzYQV"></a>
-## [搜索&发现设备](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e6%90%9c%e7%b4%a2amp%e5%8f%91%e7%8e%b0%e8%ae%be%e5%a4%87)
+## 搜索&发现设备
 蓝牙设备在绑定前，需要先通过扫描获得需要绑定的设备信息，首先需要调用search接口获取DeviceInfo对象，您可能需要自己去判断释放有重复的蓝牙设备信号上报并做过滤，在实际应用过程中，您可能需要经过多个扫描周期才能获得蓝牙搜索结果，调用示例：
 ```
 /// 搜索设备
@@ -46,16 +46,16 @@
 | rssi | NSNumber | 蓝牙强度 |
 | identifier | NSString | 设备标识码 |
 
-**
+**![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616659723420-57e6ea45-0ed7-44ea-b95f-637545da9e43.png#align=left&display=inline&height=729&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&size=203679&status=done&style=none&width=337)**
 <a name="ZSNur"></a>
-## [停止搜索](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e5%81%9c%e6%ad%a2%e6%90%9c%e7%b4%a2)
+## 停止搜索
 强制中断蓝牙搜索，执行搜索过程中中断搜索或页面销毁时，请务必调用停止搜索接口，否则会影响正常的连接流程：
 ```
 /// 停止搜索
 - (void)stopSearch;
 ```
 <a name="qAuSv"></a>
-## [绑定设备](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e7%bb%91%e5%ae%9a%e8%ae%be%e5%a4%87)
+## 绑定设备
 搜索完成后， 向用户展示搜索到的设备列表信息， 用户选择目标设备后， 进行设备绑定操作（搜索不是必须的，如果您知道用户当前使用的设备信息， 可以不经过搜索直接调用该api进行绑定），绑定结果将通过bindReceiver接收，绑定成功后，您需要将设备信息和用户的绑定关系持久化在您的云端，再次打开App时，只需调用addMonitorDeviceWithMacString添加mac地址就可以进行连接，无需再次绑定，调用示例：
 ```
 #pragma mark - 配对设备
@@ -109,9 +109,9 @@
 | device | id<LZDeviceProtocol>)device | 搜索到的设备信息 |
 | bindState | LZBindState | 绑定回调，包括绑定过程和绑定结果的回调 |
 
-**
+**![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616659767100-f3a3ca32-f062-4188-b6af-59e683a2b1d6.png#align=left&display=inline&height=539&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&size=216208&status=done&style=none&width=249)**
 <a name="ltPmF"></a>
-### [输入随机数](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e8%be%93%e5%85%a5%e9%9a%8f%e6%9c%ba%e6%95%b0)
+### 输入随机数
 手环在收到绑定请求时， 会触发随机数绑定流程，在收到绑定流程回调onReceiveRadomNumberRequest时， 向用户显示6位数的数字输入框，输入确认后，调用该接口，进行随机数的正确性验证，验证结果将回馈到onReceiveBindState回调中，调用示例：
 ```
 [self.deviceManager inputRandomCode:code macString:self.device.mac deviceType:self.device.deviceType];
@@ -126,6 +126,8 @@
 | deviceType | LZDeviceType | 设备类型 |
 
 <a name="ytm6G"></a>
+### ![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616659836385-ba83d70f-c56b-4018-8c2a-9c0c97cc06c8.png#align=left&display=inline&height=532&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&size=235437&status=done&style=none&width=246)
+<a name="ht7MX"></a>
 ### [写入deviceId](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e5%86%99%e5%85%a5deviceid)
 体脂秤或血压仪在收到绑定请求时，若设备上没有deviceId，则会触发deviceId写入流程，以生成设备唯一标识号，我们建议您直接使用mac地址作为唯一标识，不必重新生成一个唯一ID。若设备上已经写入过deviceId，则无需调用该方法（您将不会收到onReceiveDeviceIdRequest回调）, 调用示例：
 ```
@@ -139,8 +141,9 @@
 | deviceId | NSString | 设备的唯一标识号，格式必须是长度为12的字符串 |
 | deviceType | LZDeviceType | 设备类型 |
 
-<a name="Iqc1D"></a>
-## [解绑设备](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e8%a7%a3%e7%bb%91%e8%ae%be%e5%a4%87)
+<br />
+<a name="no1Ja"></a>
+## 解绑设备
 当用户需要解除绑定或正在绑定中断绑定时， 需要调用unbind方法，解绑后会删除SDK中的缓存的设备信息并断开蓝牙连接，建议您在解绑成功后，清除您App本地或者云端存储的设备信息，并删除和用户的绑定关系， 调用示例：
 ```
     [self.deviceManager deleteMonitorDeviceWithMacString:self.device.mac];
