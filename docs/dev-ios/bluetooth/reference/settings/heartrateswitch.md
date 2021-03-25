@@ -1,6 +1,9 @@
 <a name="hRC3V"></a>
+## 默认选项
+默认开启
+<a name="Fdu08"></a>
 ## 数据类型
-设置心率监测的时间，开启时，手环背部将亮起绿灯<br />**LZA5SettingHeartrateDetectionData**
+设置日常心率监测的开关及开启的时间段，开启时，手环背部会亮起持续闪烁的绿灯。<br />**LZA5SettingHeartrateDetectionData**
 
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
@@ -10,7 +13,7 @@
 | endHour | UInt8 |  结束时间小时 |
 | endMinute | UInt8 | 结束时间分钟 |
 
-<br />
+开启可关闭情况下的手环显示状态如下图：<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616670939743-55cd2898-31aa-4131-ac2c-a0a9fa8763eb.png#align=left&display=inline&height=338&margin=%5Bobject%20Object%5D&name=image.png&originHeight=338&originWidth=866&size=308277&status=done&style=none&width=866) 
 <a name="NCJAa"></a>
 ## 设置心率开关
 
@@ -30,6 +33,10 @@
     }];
 ```
 
+
+<a name="oa0mX"></a>
+## 实现方案示例
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616671050917-b4927f36-66ef-495a-9b48-81b1209cb024.png#align=left&display=inline&height=284&margin=%5Bobject%20Object%5D&name=image.png&originHeight=284&originWidth=866&size=13076&status=done&style=none&width=866)<br />
 
 
 
