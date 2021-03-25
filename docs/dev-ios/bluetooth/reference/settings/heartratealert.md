@@ -1,4 +1,9 @@
 <a name="hwKJQ"></a>
+## 关于运动心率预警
+运动心率预警是用户在开启运动后，若心率超过设置的上限或下限， 手环震动提醒，并显示预警的心率值，默认关闭<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616672674902-1bdad7b4-b28c-44b4-a711-8648b566a0bd.png#align=left&display=inline&height=375&margin=%5Bobject%20Object%5D&name=image.png&originHeight=375&originWidth=850&size=449236&status=done&style=none&width=850)
+<a name="t25e9"></a>
+## 
+<a name="3X7CV"></a>
 ## 数据类型
 设置心率区间后， 在运动时若心率超过最大值或小于最小值，手环都将发出震动提醒<br />**LZA5SettingCustomSportHRSectionReminderData**
 
@@ -29,5 +34,7 @@
 ```
 
 
-
+<a name="JJPdQ"></a>
+## 实现方案示例
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616673981571-f6c64351-48f1-45e8-b129-11fd7c870961.png#align=left&display=inline&height=486&margin=%5Bobject%20Object%5D&name=image.png&originHeight=486&originWidth=863&size=23626&status=done&style=none&width=863)
 
