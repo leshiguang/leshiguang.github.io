@@ -1,4 +1,7 @@
 <a name="OWHa7"></a>
+## 关于闹钟提醒
+用户设置闹钟后，手环通过震动以提醒用户；在app端设置时，可设置重复周期（周一至周日，任意一天或多天），时长（5秒、15秒、30秒、60秒），在app端，支持最多可设置5组闹钟；
+<a name="nMneP"></a>
 ## 数据类型
 一次只能设置一个闹钟， 删除闹钟意为将指定index的闹钟的enable属性设置为NO，若您想要在手环中显示闹钟的名称，您可以直接使用事件提醒设置（如喝水、吃药、早起等）<br />
 <br />**LZA5SettingAlarmClockData**
@@ -43,7 +46,8 @@
         });
     }];
 ```
-
-
+<a name="tsGuB"></a>
+## 实现方案示例
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616744769908-1f9e68cd-f501-4dee-8261-06f9976684b1.png#align=left&display=inline&height=302&margin=%5Bobject%20Object%5D&name=image.png&originHeight=302&originWidth=843&size=24737&status=done&style=none&width=843)
 
 
