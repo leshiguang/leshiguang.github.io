@@ -1,4 +1,7 @@
 <a name="ibER6"></a>
+## 关于自定义页面
+通过app自定义（开启或关闭）手环显示页面，默认［表盘］、［步数］、［心率］、［运动1］、［运动2］、[ 运动3 ]、［天气］显示页面开启，用户可以自己勾选和更改页面显示的顺序<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616738750389-70983743-fd9a-463d-b0a3-abcad7075b82.png#align=left&display=inline&height=232&margin=%5Bobject%20Object%5D&name=image.png&originHeight=232&originWidth=1092&size=63450&status=done&style=none&width=1092)<br />您至少需要保证其中的一项为开启状态， 否则设置不成功
+<a name="nmbg3"></a>
 ## 数据类型
 **LZA5SettingCustomScreenData**
 
@@ -69,4 +72,7 @@
 
 
 
+<a name="sSubG"></a>
+## 实现方案示例
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616738885553-78991b34-9cd6-4b40-977a-64b526e0fdff.png#align=left&display=inline&height=544&margin=%5Bobject%20Object%5D&name=image.png&originHeight=544&originWidth=855&size=60418&status=done&style=none&width=855)
 
