@@ -32,6 +32,7 @@
       - [心率区间](/dev-android/bluetooth/reference/settings/heartraterange)
       - [心率开关](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/heartrateswitch)
       - [智能心率开关](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/smartheartrateswitch)
+   - [蓝牙配网](/dev-android/bluetooth/reference/wifi)
 - [数据接收](/dev-android/bluetooth/receive)
    - [心率统计](/dev-android/bluetooth/receive/heartratestatistics)
    - [体重](/dev-android/bluetooth/receive/weight)
