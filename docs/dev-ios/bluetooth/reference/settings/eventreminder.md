@@ -1,4 +1,7 @@
 <a name="D2WIh"></a>
+## 关于事件提醒
+事件提醒是闹钟功能的扩展， 解决了闹钟提醒功能中缺少事件名称的问题，用户可以自定义事件名称（如：喝水、吃药、睡觉）， 达到事件提醒时间点，手环通过震动并显示事件信息以提醒用户；在app端设置事件时，可设置重复周期（周一至周日，任意一天或多天），时长（5秒、15秒、30秒、60秒），在app端，支持最多可设置5组事件；标签内容为一行1-4个汉字（即8个英文字符）；内容支持汉字＼英文＼数字，不支持表情输入。
+<a name="rzEm1"></a>
 ## 数据类型
 **LZA5SettingEventRemindData**
 
@@ -15,8 +18,8 @@
 | vibrationLevel1 | UInt8 | 震动等级1（0～9） |
 | vibrationLevel2 | UInt8 | 震动等级2（0～9 |
 
-<a name="wTIhS"></a>
-#### 
+
+
 <a name="NCJAa"></a>
 ## 设置事件提醒
 
@@ -37,5 +40,9 @@
 ```
 
 
+<a name="tyQKl"></a>
+## 实现方案示例
+
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616743205084-040fe98e-571a-44f3-a7f9-467c7809dfe2.png#align=left&display=inline&height=397&margin=%5Bobject%20Object%5D&name=image.png&originHeight=397&originWidth=858&size=30746&status=done&style=none&width=858)
 
 
