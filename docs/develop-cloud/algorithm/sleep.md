@@ -103,6 +103,10 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 
 <a name="GtUvY"></a>
 ## 二、夜间/日间睡眠逻辑
+[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
+<br />
+
+
 | 
 
 入睡时间判断 | 入睡时间<br />00:00～06:00 | 定义为前一天的夜间睡眠 |  |  |
@@ -115,8 +119,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 |  |  |  |  |  |
 |  | 入睡时间<br />06:00～18:00 | 定义为日间睡眠 |  |  |
 
-
-<br />
+![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616749572290-e3e8df34-fd78-49e5-a70c-1928a3122647.jpeg)
 <br />
 <br />
 <br />
