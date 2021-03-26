@@ -103,11 +103,18 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 
 <a name="GtUvY"></a>
 ## 二、夜间/日间睡眠逻辑
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616749839158-ace25dd0-116f-40a6-954e-d01712baea27.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
-<br />
-<br />
-<br />
-<br />
+![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616751249306-0d70b8cb-bf96-4f2f-96de-47cb8de55a30.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
+
+<a name="oVTFi"></a>
+## 三、参数组装逻辑
+手环每**5**分钟监测用户睡眠状态生成一个10进制数值，传入睡眠分析接口的levelSetStr参数为16进制，转换如下：
+
+| 时间 | 18:00 | 18:05 | 18:10 | 18:15 | 18:20 | 18:25 | 18:30 | 18:35 | 18:40 | 18:45 | 18:50 | 18:55 | 19:00 | 19:05 | 19:10 | 19:15 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 10进制 | 99 | 69 | 59 | 35 | 0 | 27 | 48 | 13 | 42 | 18 | 13 | 24 | 40 | 25 | 91 | 92 |
+| 16进制 | 63 | 45 | 3b | 23 | **00** | 1b | 30 | **0d** | 2a | 12 | 0d | 18 | 28 | 19 | 5b | 5c |
+
+
 <br />
 
 
