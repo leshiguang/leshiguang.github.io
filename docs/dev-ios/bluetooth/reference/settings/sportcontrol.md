@@ -1,17 +1,18 @@
 <a name="qyyy3"></a>
+## 关于运动控制
+运动控制指从手机侧控制手环运动的开始与结束状态。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616722774653-039ef6b2-1570-4298-aacd-e676cd0c6472.png#align=left&display=inline&height=305&margin=%5Bobject%20Object%5D&name=image.png&originHeight=305&originWidth=868&size=70654&status=done&style=none&width=868)
+<a name="Wi4fM"></a>
 ## 数据类型
 控制手环运动状态<br />**LZA5SettingSportControlData**
 
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
-| sportMode | LZA5SportMode | 参考运动模式 LZA5SportMode
-
- |
+| sportMode | LZA5SportMode | 参考运动模式 LZA5SportMode |
 | start | BOOL | 开始（true）结束（false） |
 
-<a name="NCJAa"></a>
-## 
-**LZA5SportMode**
+
+<br />
+<br />**LZA5SportMode**
 
 | 含义 | 名称 | 值 |
 | --- | --- | --- |
