@@ -103,7 +103,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 
 <a name="GtUvY"></a>
 ## 二、夜间/日间睡眠逻辑
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616756207572-2f9b53e4-8f51-470f-a54b-3f0a92254e7c.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
+![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616756570952-20b40473-2d64-41dc-801b-e47c81bc7bcb.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
 
 <a name="oVTFi"></a>
 ## 三、参数组装逻辑
@@ -121,8 +121,9 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 因区分日间/夜间睡眠的时间点为18:00点，18:00～18:00定义为一个周期，因此levelSetStr一般从18:00开始分析，开始时间startTime为当天的18:00，可视具体情况而定。<br />
 <br />当传入levelSetStr为18:00到次日18:00的手环监测数据，睡眠算法对监测数据进行分析，分析结果可为如下几种情况：
 
-| 1、 | 未监测到睡眠 | data.size = 0 |
+| 序号 | 睡眠情况 | 返回结果 |
 | --- | --- | --- |
+| 1、 | 未监测到睡眠 | data.size = 0 |
 | 2、 | 仅有夜间睡眠（segmentType = 1） | data.size = 1 |
 | 3、 | 仅有日间睡眠（segmentType = 0） | data.size = 1 |
 | 4、 | 既有日间也有夜间睡眠 | data.size > 1 |
