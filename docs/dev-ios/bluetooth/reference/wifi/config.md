@@ -1,4 +1,9 @@
 <a name="739DD"></a>
+# 功能描述
+App发送Wifi SSID和密码到设备， 设备自动进行Wifi的连接过程， 并将连接结果回调给APP<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616762378242-3feb035e-edbf-4254-a312-a7f02468ff03.png#align=left&display=inline&height=545&margin=%5Bobject%20Object%5D&name=image.png&originHeight=545&originWidth=895&size=70878&status=done&style=none&width=895)
+<a name="plVHU"></a>
+# 
+<a name="Vllul"></a>
 # 数据类型
 LZWifiData 配置网络
 
