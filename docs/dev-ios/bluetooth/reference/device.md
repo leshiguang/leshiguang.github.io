@@ -157,11 +157,9 @@
 | mac | NSString | 设备mac地址 |
 
 <br />
-<a name="EGGHI"></a>
+<a name="WBJuP"></a>
 ## 添加用户已经绑定的设备
-
-
-用户打开app时， 若之前已经绑定过设备， 需要将已经绑定的设备的mac地址添加到sdk， sdk会自动连接设备，建议您将用户和设备的绑定关系持久化在云端， sdk初始化成功之后立即添加mac地址到sdk， 调用示例：
+<br />用户打开app时， 若之前已经绑定过设备， 需要将已经绑定的设备的mac地址添加到sdk， sdk会自动连接设备，建议您将用户和设备的绑定关系持久化在云端， sdk初始化成功之后立即添加mac地址到sdk， 调用示例：
 
 ```objectivec
 [deviceManager addMonitorDeviceWithMacString:mac.uppercaseString deviceType:LZDeviceTypeBracelet];
