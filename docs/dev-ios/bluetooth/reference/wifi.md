@@ -1,0 +1,18 @@
+<a name="avW90"></a>
+## 蓝牙配网时序图
+
+
+![](https://cdn.nlark.com/yuque/__puml/950b4cef0d25432e191aba847eb0dead.svg#lake_card_v2=eyJjb2RlIjoiQHN0YXJ0dW1sXG5cbmF1dG9udW1iZXJcblxuYWN0b3IgXCLnlKjmiLdcIiBhcyBVc2VyXG5wYXJ0aWNpcGFudCBcIuWuv-S4u0FwcFwiIGFzIEFwcFxucGFydGljaXBhbnQgXCJTREtcIiBhcyBTREsgI29yYW5nZVxucGFydGljaXBhbnQgXCLorr7lpIdcIiBhcyBEZXZpY2VcblxuYWN0aXZhdGUgQXBwXG5cbkFwcCAtPiBTREs66LCD55SoaW5pdFdpdGhBcHBJZOi_m-ihjOWIneWni-WMllxuYWN0aXZhdGUgU0RLXG5cblNESyAtPiBEZXZpY2U66Ieq5Yqo6L-e5o6l6K6-5aSHXG5hY3RpdmF0ZSBVc2VyXG5cblVzZXIgLT4gQXBwOiDngrnlh7vlj5HotbfphY3nvZHmtYHnqItcblxuQXBwIC0-IFNESzog6LCD55Soc2VuZERhdGFNb2RlbDpMWldpZmlTY2FuRGF0Yei_m-ihjOaJq-aPj1xuXG5TREsgLT4gRGV2aWNlOiDlj5HpgIHmiavmj4_mjIfku6RcbmFjdGl2YXRlIERldmljZVxuXG5EZXZpY2UgLT4gRGV2aWNlOiDoh6rliqjmiavmj4_lhbzlrrnnmoRXaWZp5L-h5oGvXG5cbkRldmljZSAtLT4gU0RLOuWPkemAgeaJq-aPj-e7k-aenFxuXG5TREsgLS0-IEFwcDrlm57osIPnu5Pmnpznu5lBcHBcblxuQXBwIC0tPiBVc2VyOuWRiOeOsHdpZmnliJfooajkv6Hmga9cblxuVXNlciAtPiBBcHA66YCJ5oup5LiA5LiqV2lmaeS_oeaBr--8jOi-k-WFpeWvhueggVxuXG5BcHAgLT5TREs66LCD55Soc2VuZERhdGFNb2RlbDpMWldpZmlEYXRh6L-b6KGM6YWN572RXG5cblNESyAtPiBEZXZpY2U65Y-R6YCBc3NpZOWSjOWvhueggeiuvue9ruaMh-S7pFxuXG5EZXZpY2UgLT4gRGV2aWNlOuiHquWKqOmFjee9kVxuXG5EZXZpY2UgLS0-IFNESzrkuIrmiqXphY3nvZHnirbmgIFcblxuU0RLIC0tPiBBcHA65Zue6LCD6YWN572R57uT5p6c5YiwQVBQXG5cbkFwcCAtLT4gVXNlcjrmmL7npLrphY3nvZHnu5PmnpxcblxuQGVuZHVtbCIsInR5cGUiOiJwdW1sIiwibWFyZ2luIjp0cnVlLCJpZCI6Im9KNldvIiwidXJsIjoiaHR0cHM6Ly9jZG4ubmxhcmsuY29tL3l1cXVlL19fcHVtbC85NTBiNGNlZjBkMjU0MzJlMTkxYWJhODQ3ZWIwZGVhZC5zdmciLCJoZWlnaHQiOjQ4MCwiY2FyZCI6ImRpYWdyYW0ifQ==)
+
+<a name="JAqSM"></a>
+## C端方案参考
+
+
+<a name="79oj9"></a>
+### 扫描
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616761991909-c4fd62a6-104f-4978-b184-f0db01529f25.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=642&originWidth=728&size=71904&status=done&style=none&width=508)<br />
+
+<a name="3H79A"></a>
+### 配置
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616762059152-bb8a8614-7e86-46b1-9dd0-d6c32a480ce7.png#align=left&display=inline&height=626&margin=%5Bobject%20Object%5D&name=image.png&originHeight=626&originWidth=1536&size=132179&status=done&style=none&width=1536)
+
