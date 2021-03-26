@@ -1,4 +1,8 @@
 <a name="739DD"></a>
+# 功能描述
+在蓝牙连接成功的前提下， App发起体脂秤配网状态检查指令，查询体脂秤是否配置过网络，体脂秤返回配置状态给到App。<br />
+
+<a name="sYt78"></a>
 # 数据类型
 LZWifiStatus （没有参数）<br />
 
@@ -11,7 +15,6 @@ LZWifiStatus （没有参数）<br />
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf hideActivityIndicatorHUD];
             if (result == LZBluetoothErrorCodeSuccess) {
-                [weakSelf saveSettingData:settingData];
                 LZWifiData *wifiData = resp;
                 /// 获取当前的配置，
                 [weakSelf showHintMessage:@"设置成功" duration:1];
