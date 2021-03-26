@@ -1,4 +1,7 @@
 <a name="739DD"></a>
+# 关于运动参数设置
+运动参数设置指在运动前，设定运动的配速和距离，控制运动水平的稳定性
+<a name="bteRh"></a>
 # 数据类型
 **LZA5SettingPaceAndDistanceData**
 
@@ -10,7 +13,7 @@
 
 
 <a name="NCJAa"></a>
-## 设置运动设置
+## 设置运动参数
 
 <br />调用示例：
 ```objectivec
