@@ -103,7 +103,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 
 <a name="GtUvY"></a>
 ## 二、夜间/日间睡眠逻辑
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616751249306-0d70b8cb-bf96-4f2f-96de-47cb8de55a30.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
+![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616756207572-2f9b53e4-8f51-470f-a54b-3f0a92254e7c.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
 
 <a name="oVTFi"></a>
 ## 三、参数组装逻辑
@@ -114,7 +114,24 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 | 10进制 | 99 | 69 | 59 | 35 | 0 | 27 | 48 | 13 | 42 | 18 | 13 | 24 | 40 | 25 | 91 | 92 |
 | 16进制 | 63 | 45 | 3b | 23 | **00** | 1b | 30 | **0d** | 2a | 12 | 0d | 18 | 28 | 19 | 5b | 5c |
 
+则参数levelSetStr=63453b23001b300d2a120d1828195b5c<br />**注意10进制转成16进制不足两位时一定要补0，如：0 -> 00；13 -> 0d**<br />
 
+<a name="SrEiv"></a>
+## 四、睡眠段逻辑
+因区分日间/夜间睡眠的时间点为18:00点，18:00～18:00定义为一个周期，因此levelSetStr一般从18:00开始分析，开始时间startTime为当天的18:00，可视具体情况而定。<br />
+<br />当传入levelSetStr为18:00到次日18:00的手环监测数据，睡眠算法对监测数据进行分析，分析结果可为如下几种情况：
+
+| 1、 | 未监测到睡眠 | data.size = 0 |
+| --- | --- | --- |
+| 2、 | 仅有夜间睡眠（segmentType = 1） | data.size = 1 |
+| 3、 | 仅有日间睡眠（segmentType = 0） | data.size = 1 |
+| 4、 | 既有日间也有夜间睡眠 | data.size > 1 |
+
+
+<br />
+<br />
+<br />
+<br />
 <br />
 
 
