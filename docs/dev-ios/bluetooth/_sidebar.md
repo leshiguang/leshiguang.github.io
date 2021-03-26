@@ -1,52 +1,28 @@
-- [概述](/dev-ios/bluetooth/summary)
-- [SDK下载&变更历史](/dev-ios/bluetooth/releaselog)
-- [快速集成](/dev-ios/bluetooth/integrate)
-- [接入Demo](/dev-ios/bluetooth/demo)
-- 接口参考
-   - [设备管理](/dev-ios/bluetooth/reference/device)
-   - [电量信息](/dev-ios/bluetooth/reference/battery)
-   - [设置项](/dev-ios/bluetooth/reference/settings)
-      - [实时心率](/dev-ios/bluetooth/reference/settings/realtimeheartrate)
-      - [运动心率区间](/dev-ios/bluetooth/reference/settings/sphrange)
-      - [心率区间](/dev-ios/bluetooth/reference/settings/heartraterange)
-      - [心率开关](/dev-ios/bluetooth/reference/settings/heartrateswitch)
-      - [智能心率开关](/dev-ios/bluetooth/reference/settings/smartheartrateswitch)
-      - [运动心率预警](/dev-ios/bluetooth/reference/settings/heartratealert)
-      - [天气](/dev-ios/bluetooth/reference/settings/weather)
-      - [时间制式](/dev-ios/bluetooth/reference/settings/timeformat)
-      - [游泳泳道长度](/dev-ios/bluetooth/reference/settings/swim)
-      - [多类型目标](/dev-ios/bluetooth/reference/settings/target)
-      - [步数目标](/dev-ios/bluetooth/reference/settings/steptarget)
-      - [运动设置](/dev-ios/bluetooth/reference/settings/sport)
-      - [运动控制](/dev-ios/bluetooth/reference/settings/sportcontrol)
-      - [勿扰模式](/dev-ios/bluetooth/reference/settings/slience)
-      - [防丢](/dev-ios/bluetooth/reference/settings/lost)
-      - [夜间模式](/dev-ios/bluetooth/reference/settings/nightmode)
-      - [久坐提醒](/dev-ios/bluetooth/reference/settings/longsit)
-      - [自动识别](/dev-ios/bluetooth/reference/settings/autoregonize)
-      - [事件提醒](/dev-ios/bluetooth/reference/settings/eventreminder)
-      - [闹钟](/dev-ios/bluetooth/reference/settings/clock)
-      - [消息提醒](/dev-ios/bluetooth/reference/settings/message)
-      - [自定义屏幕](/dev-ios/bluetooth/reference/settings/page)
-      - [表盘](/dev-ios/bluetooth/reference/settings/dialplate)
-      - [屏幕方向](/dev-ios/bluetooth/reference/settings/direction)
-      - [佩戴习惯](/dev-ios/bluetooth/reference/settings/wearing)
-      - [语言](/dev-ios/bluetooth/reference/settings/language)
-   - [蓝牙配网](/dev-ios/bluetooth/reference/wifi)
-      - [扫描Wifi](/dev-ios/bluetooth/reference/wifi/scan)
-      - [获取配网状态](/dev-ios/bluetooth/reference/wifi/status)
-      - [重置网络](/dev-ios/bluetooth/reference/wifi/reset)
-      - [配置网络](/dev-ios/bluetooth/reference/wifi/config)
-- [数据接收](/dev-ios/bluetooth/receive)
-   - [体重](/dev-ios/bluetooth/receive/weight)
-   - [血压](/dev-ios/bluetooth/receive/bloodpressure)
-   - [睡眠](/dev-ios/bluetooth/receive/sleep)
-   - [步数](/dev-ios/bluetooth/receive/step)
-   - [心率](/dev-ios/bluetooth/receive/heartrate)
-   - [心率统计](/dev-ios/bluetooth/receive/heartratestatistics)
-   - [运动配速](/dev-ios/bluetooth/receive/speed)
-   - [运动卡路里](/dev-ios/bluetooth/receive/calories)
-   - [运动报告](/dev-ios/bluetooth/receive/sportreport)
-   - [运动状态](/dev-ios/bluetooth/receive/sportstatus)
-- [常见问题](/dev-ios/bluetooth/help)
+<a name="739DD"></a>
+# 功能描述
+在蓝牙连接成功的前提下， App发起体脂秤配网状态检查指令，查询体脂秤是否配置过网络，体脂秤返回配置状态给到App。<br />
+
+<a name="sYt78"></a>
+# 数据类型
+LZWifiStatus （没有参数）<br />
+
+<a name="NCJAa"></a>
+## 获取配网状态
+
+<br />调用示例：
+```objectivec
+[self.deviceManager sendDataModel:LZWifiStatus macString:self.device.mac completion:^(LZBluetoothErrorCode result, id resp) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf hideActivityIndicatorHUD];
+            if (result == LZBluetoothErrorCodeSuccess) {
+                LZWifiData *wifiData = resp;
+                /// 获取当前的配置，
+                [weakSelf showHintMessage:@"设置成功" duration:1];
+            } else {
+                [weakSelf showHintMessage:@"设置失败" duration:1];
+            }
+            [weakSelf updateUIWithResult:result];
+        });
+    }];
+```
 
