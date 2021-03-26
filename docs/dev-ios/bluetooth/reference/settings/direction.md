@@ -1,4 +1,7 @@
 <a name="mXyXg"></a>
+## 关于屏幕方向
+设置手环屏幕显示的方向<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616746709218-ba5b7c97-ee24-40a8-a5b5-6020334cf764.png#align=left&display=inline&height=301&margin=%5Bobject%20Object%5D&name=image.png&originHeight=301&originWidth=863&size=34848&status=done&style=none&width=863)
+<a name="1rsps"></a>
 ## 数据类型
 **LZA5SettingScreenDirectionData**
 
