@@ -32,7 +32,7 @@
       - [屏幕方向](/dev-ios/bluetooth/reference/settings/direction)
       - [佩戴习惯](/dev-ios/bluetooth/reference/settings/wearing)
       - [语言](/dev-ios/bluetooth/reference/settings/language)
-   - 蓝牙配网
+   - [蓝牙配网](/dev-ios/bluetooth/reference/wifi)
       - [扫描Wifi](/dev-ios/bluetooth/reference/wifi/scan)
       - [获取配网状态](/dev-ios/bluetooth/reference/wifi/status)
       - [重置网络](/dev-ios/bluetooth/reference/wifi/reset)
