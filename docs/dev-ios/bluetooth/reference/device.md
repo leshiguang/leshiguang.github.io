@@ -128,7 +128,7 @@
 <a name="ytm6G"></a>
 ### ![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616661592332-b90f1f43-71e5-4795-b948-eb5460c7e15f.png#align=left&display=inline&height=474&margin=%5Bobject%20Object%5D&name=image.png&originHeight=474&originWidth=869&size=31643&status=done&style=none&width=869)
 <a name="ht7MX"></a>
-### [写入deviceId](https://docs.leshiguang.com/dev-android/bluetooth/reference/device?id=%e5%86%99%e5%85%a5deviceid)
+### 写入deviceId
 体脂秤或血压仪在收到绑定请求时，若设备上没有deviceId，则会触发deviceId写入流程，以生成设备唯一标识号，我们建议您直接使用mac地址作为唯一标识，不必重新生成一个唯一ID。若设备上已经写入过deviceId，则无需调用该方法（您将不会收到onReceiveDeviceIdRequest回调）, 调用示例：
 ```
 [self.deviceManager registWithDeviceId:device.mac macString:device.mac deviceType:device.deviceType];
@@ -144,11 +144,13 @@
 <br />
 <a name="no1Ja"></a>
 ## 解绑设备
-当用户需要解除绑定或正在绑定中断绑定时， 需要调用unbind方法，解绑后会删除SDK中的缓存的设备信息并断开蓝牙连接，建议您在解绑成功后，清除您App本地或者云端存储的设备信息，并删除和用户的绑定关系， 调用示例：
+当用户需要解除绑定或正在绑定中断绑定时， 需要调用unbind方法，解绑后会删除SDK中的缓存的设备信息并断开蓝牙连接，建议您在解绑成功后，清除您App本地或者云端存储的设备信息，并删除和用户的绑定关系， 调用示例：<br />
+
 ```
     [self.deviceManager deleteMonitorDeviceWithMacString:self.device.mac];
 ```
-请求参数:
+
+<br />请求参数:
 
 | 参数名称 | 类型 | 含义 |
 | --- | --- | --- |
@@ -158,8 +160,10 @@
 <a name="EGGHI"></a>
 ## 添加用户已经绑定的设备
 用户打开app时， 若之前已经绑定过设备， 需要将已经绑定的设备的mac地址添加到sdk， sdk会自动连接设备，建议您将用户和设备的绑定关系持久化在云端， sdk初始化成功之后立即添加mac地址到sdk， 调用示例：
+
 ```objectivec
 [deviceManager addMonitorDeviceWithMacString:mac.uppercaseString deviceType:LZDeviceTypeBracelet];
 ```
-**
+
+
 
