@@ -1,4 +1,7 @@
 <a name="FZdZs"></a>
+## 关于夜间模式
+在18:00-06:00时间段，手环自动以较暗亮度显示。不需要App设置。若向控制夜间模式的显示时间， 需要调用该API进行设置。
+<a name="hWp7n"></a>
 ## 数据类型
 
 <br />**LZA5SettingNightModeData**
@@ -34,5 +37,7 @@
 ```
 
 
-
+<a name="inRiC"></a>
+## 实现方案示例
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616741283029-3e3dd0ef-edff-4209-8a59-122b6e704278.png#align=left&display=inline&height=116&margin=%5Bobject%20Object%5D&name=image.png&originHeight=116&originWidth=552&size=12447&status=done&style=none&width=552)
 
