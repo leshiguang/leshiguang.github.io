@@ -1,5 +1,6 @@
-<a name="fAKuE"></a>
-# 天气
+<a name="xVxQM"></a>
+## 关于天气设置
+天气设置是通过app给手环下发天气相关信息，方便用户在手环上查看天气信息
 <a name="RuRpg"></a>
 ## 获取天气
 从云端获取天气信息，可设置到手环(天气信息是由 "和风天气" 提供的付费接口, 超过调用次数需要收费, 请合理调用)
@@ -75,7 +76,9 @@ WeatherState
 | TORNADO | 龙卷风 |
 
 
-<br />调用示例：
+<br />不同的天气类型在手环上有不同的图标呈现：<br />                  ![image.png](https://cdn.nlark.com/yuque/0/2021/png/354855/1616725576313-dd609b19-1bf2-4ede-904f-ef23d9db06a4.png#align=left&display=inline&height=285&margin=%5Bobject%20Object%5D&name=image.png&originHeight=285&originWidth=485&size=31010&status=done&style=none&width=485)
+<a name="Z45MA"></a>
+## 调用示例
 ```java
 BleDeviceManager.getDefaultManager().updateConfig(deviceInfo.getValue().getMac(), dialPlate, new Consumer<ConfigStatus>() {
             @Override
