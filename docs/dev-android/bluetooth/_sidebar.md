@@ -1,48 +1,32 @@
-- [概述](/dev-android/bluetooth/summary)
-- [SDK下载&变更历史](/dev-android/bluetooth/releaselog)
-- [快速集成](/dev-android/bluetooth/integrate)
-- [接入Demo](/dev-android/bluetooth/demo)
-- 接口参考
-   - [设备管理](/dev-android/bluetooth/reference/device)
-   - [电量信息](/dev-android/bluetooth/reference/battery)
-   - [设置项](/dev-android/bluetooth/reference/settings)
-      - [天气](/dev-android/bluetooth/reference/settings/weather)
-      - [游泳](/dev-android/bluetooth/reference/settings/swim)
-      - [运动设置](/dev-android/bluetooth/reference/settings/sport)
-      - [多类型目标](/dev-android/bluetooth/reference/settings/target)
-      - [步数目标](/dev-android/bluetooth/reference/settings/steptarget)
-      - [运动心率区间](/dev-android/bluetooth/reference/settings/sphrange)
-      - [运动控制](/dev-android/bluetooth/reference/settings/sportcontrol)
-      - [自动识别](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/autoregonize)
-      - [自定义屏幕](/dev-android/bluetooth/reference/settings/page)
-      - [屏幕方向](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/direction)
-      - [时间制式](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/timeformat)
-      - [佩戴习惯](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/wearing)
-      - [勿扰模式](/dev-android/bluetooth/reference/settings/slience)
-      - [防丢](/dev-android/bluetooth/reference/settings/lost)
-      - [夜间模式](/dev-android/bluetooth/reference/settings/nightmode)
-      - [久坐提醒](/dev-android/bluetooth/reference/settings/longsit)
-      - [语言](/dev-android/bluetooth/reference/settings/language)
-      - [事件提醒](/dev-android/bluetooth/reference/settings/eventreminder)
-      - [闹钟](/dev-android/bluetooth/reference/settings/clock)
-      - [消息提醒](/dev-android/bluetooth/reference/settings/message)
-      - [表盘](/dev-android/bluetooth/reference/settings/dialplate)
-      - [实时心率](/dev-android/bluetooth/reference/settings/realtimeheartrate)
-      - [心率预警](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/heartratealert)
-      - [心率区间](/dev-android/bluetooth/reference/settings/heartraterange)
-      - [心率开关](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/heartrateswitch)
-      - [智能心率开关](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/smartheartrateswitch)
-   - [蓝牙配网](/dev-android/bluetooth/reference/wifi)
-- [数据接收](/dev-android/bluetooth/receive)
-   - [心率统计](/dev-android/bluetooth/receive/heartratestatistics)
-   - [体重](/dev-android/bluetooth/receive/weight)
-   - [血压](/dev-android/bluetooth/receive/bloodpressure)
-   - [睡眠](/dev-android/bluetooth/receive/sleep)
-   - [步数](/dev-android/bluetooth/receive/step)
-   - [心率](/dev-android/bluetooth/receive/heartrate)
-   - [配速](/dev-android/bluetooth/receive/speed)
-   - [卡路里](/dev-android/bluetooth/receive/calories)
-   - [运动报告](/dev-android/bluetooth/receive/sportreport)
-   - [运动状态](/dev-android/bluetooth/receive/sportstatus)
-- [常见问题](/dev-android/bluetooth/help)
+<a name="fXayc"></a>
+# 设置项
+<a name="pQU7g"></a>
+## 通用的设置接口
+手环出厂会有默认的设置，如果需要修改默认的设置项，您可以调用以下接口：
+```java
+public void updateConfig(String mac, AbstractConfig config, Consumer<ConfigStatus> configStatusConsumer)
+```
+
+<br />请求参数：
+
+| 参数 | 字段类型 | 描述 |
+| --- | --- | --- |
+| mac | String | 设备的mac地址 |
+| config | AbstractConfig | 设置信息抽象类，具体实现需要参考不同设置项的定义 |
+| configStatusConsumer | Consumer<ConfigStatus> | 设置状态的回调 |
+
+
+<br />**ConfigStatus**
+
+| DEEVICE_NOT_CONNECTED | 设备未连接 |
+| --- | --- |
+| DEVICEE_NOT_FOND | 设备未找到 |
+| SETTING_TIMEOUT | 设置超时 |
+| FAILED | 设置异常 |
+| REEJCT_BY_PREEVIOUS | 已经有一个正在设置的设置项 |
+| SUCCESS | 设置成功 |
+
+_注意：由于蓝牙写数据通道的限制无法并发设置，每次只能更新单个设置项，回调成功后才能更新下一设置，您可能需要单独维护一份设置队列，并在收到设置成功信息后进行出队入队的操作_<br />_
+<a name="pqpEW"></a>
+## 
 
