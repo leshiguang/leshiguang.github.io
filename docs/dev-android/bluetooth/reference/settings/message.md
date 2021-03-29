@@ -1,5 +1,8 @@
-<a name="YrRbU"></a>
-# 消息提醒
+<a name="D2WIh"></a>
+## 关于消息提醒
+手机来消息时，手环通过震动并显示消息符号和消息内容以提醒用户；手环支持短信和微信等社交媒体的消息提醒；用户通过app选取开启短信或微信提醒，默认均为关闭。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616738152372-68d1f04c-77ea-45fd-a812-df6d5d47b478.png#align=left&display=inline&height=430&margin=%5Bobject%20Object%5D&name=image.png&originHeight=430&originWidth=1552&size=149232&status=done&style=none&width=1552)<br />           
+<a name="VlbMD"></a>
+## 数据类型
 类名：com.lifesense.android.ble.core.application.model.config.Call
 
 | 字段 | 类型 | 描述 |
@@ -31,7 +34,8 @@ ReminderType
 | SEWELLNESS | sewellness |
 | CUSTOM | 自定义应用 |
 
-调用示例：
+<a name="L3zIE"></a>
+## 调用示例
 ```java
 Call call = new Call();
 call.setEnable(false);
@@ -50,4 +54,16 @@ BleDeviceManager.getDefaultManager().updateConfig(deviceInfo.getValue().getMac()
             }
         });
 ```
+<a name="1J9HU"></a>
+## 实现方案示例
+
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616738469724-5ff02b72-db70-43b8-9306-f689f9f75a4b.png#align=left&display=inline&height=426&margin=%5Bobject%20Object%5D&name=image.png&originHeight=426&originWidth=863&size=53293&status=done&style=none&width=863)
+<a name="P6E16"></a>
+## 消息不提醒的原因
+
+- 未连接
+- app端未开启信息提醒
+- 手机->蓝牙->未设置通知允许
+- 手机设置为在屏幕锁定情况下提醒，不在锁屏情况下没有消息提醒
+- 手机中通知过多，需要清理后才会有消息提醒
 
