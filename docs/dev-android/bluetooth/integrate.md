@@ -102,13 +102,16 @@ private void initSDK() {
 | context | Context（Application） | 当前应用的Context |
 | receiver | Consumer<List<AbstractMeasureData>> | 数据接收对象， 用于接受硬件上报上来的数据 |
 
-<br />
+
+
 <a name="qZsIj"></a>
 ## 销毁SDK资源
-_应用程序退出或App切换用户时释放资源，典型的应用场景为退出登录或直接切换账号，释放资源后需要重新初始化SDK，调用示例：_
+_应用程序退出或App切换用户时释放资源，典型的应用场景为退出登录或直接切换账号，释放资源后需要重新初始化SDK，调用示例：_<br />_
 ```java
 BleDeviceManager.getDefaultManager().releaseResource()
 ```
 
+<br />
+<br />
 
 
