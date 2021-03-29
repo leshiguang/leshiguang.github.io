@@ -5,10 +5,10 @@
 - 接口参考
    - [设备管理](/dev-android/bluetooth/reference/device)
    - [电量信息](/dev-android/bluetooth/reference/battery)
-   - 设置项
+   - [设置项](/dev-android/bluetooth/reference/settings)
       - [天气](/dev-android/bluetooth/reference/settings/weather)
       - [游泳](/dev-android/bluetooth/reference/settings/swim)
-      - [运动设置](https://lifesense.yuque.com/dev-android/bluetooth/reference/settings/sport)
+      - [运动设置](/dev-android/bluetooth/reference/settings/sport)
       - [多类型目标](/dev-android/bluetooth/reference/settings/target)
       - [步数目标](/dev-android/bluetooth/reference/settings/steptarget)
       - [运动心率区间](/dev-android/bluetooth/reference/settings/sphrange)
