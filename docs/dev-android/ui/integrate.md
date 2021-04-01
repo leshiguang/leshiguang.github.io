@@ -25,7 +25,14 @@ repositories {
 	api 'com.contrarywind:Android-PickerView:4.1.9'
     api 'com.annimon:stream:1.2.1'
     api 'io.reactivex.rxjava2:rxjava:2.2.8'
-    api 'io.reactivex.rxjava2:rxandroid:2.1.1'	
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api "androidx.recyclerview:recyclerview:$version_recyclerview"
+ 	api 'com.hannesdorfmann.fragmentargs:annotation:4.0.0-RC1'
+	api "androidx.room:room-runtime:2.2.2"
+    annotationProcessor "androidx.room:room-compiler:2.2.2"
+	compileOnly "org.projectlombok:lombok:1.16.18"
+    annotationProcessor "org.projectlombok:lombok:1.16.18"
+    compile 'javax.annotation:javax.annotation-api:1.3.1'
 ```
 <a name="NaSja"></a>
 ## 初始化
@@ -57,5 +64,14 @@ public void login(String associatedId, Consumer<LoginState> consumer)
 
 - 参数说明：
 
-associatedId：用户的唯一标识号（通常指userId）<br />consumer：登陆状态
+associatedId：用户的唯一标识号（通常指userId）<br />consumer：登陆状态<br />
+
+<a name="rHTss"></a>
+## 登出
+描述：登出会断开所有设备的连接，如果需要恢复需要再次调用登陆接口
+```java
+public void logout()
+```
+
+
 
