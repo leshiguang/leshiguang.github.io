@@ -1997,8 +1997,7 @@
         var node = isParent ? a.parentNode : a;
 
         a.title = a.title || a.innerText;
-
-        if (hash.indexOf(href) === 0 && !target) {
+        if (hash.indexOf(href) === 0 && !target&&href!='/'&& href!='#/') {
           target = a;
           toggleClass(node, 'add', 'active');
         } else {

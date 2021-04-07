@@ -3,11 +3,12 @@
 </div>
 <div class="nav-menu">
 
+* [首页](/)
 * <a href="javascript:void(0);">智能硬件<i class="fa fa-angle-down"></i></a>
-  - [血压计](/hardware/sphygmomanometer/)
+  <!-- - [血压计](/hardware/sphygmomanometer/) -->
   - [体脂秤](/hardware/scale/)
-  - [智能手环](/hardware/wristbrand/)
-  - [智能手表](/hardware/watch/)
+  <!-- - [智能手环](/hardware/wristbrand/) -->
+  <!-- - [智能手表](/hardware/watch/) -->
 * <a href="javascript:void(0);">产品&服务<i class="fa fa-angle-down"></i></a>
   - [健康产品](/product/health/weight)
 * <a href="javascript:void(0);">SDK&工具<i class="fa fa-angle-down"></i></a>

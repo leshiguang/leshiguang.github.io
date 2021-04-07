@@ -22,6 +22,7 @@
     text-align: start;
   }
   .app-nav.no-badge {
+    display: inline-flex;
     background-color: #fafbff;
   }
   .app-nav.no-badge .nav-header {
@@ -35,7 +36,7 @@
     position: fixed;
     width: 90px;
     height: 60px;
-    left: 40px;
+    left: 10px;
     top: -6px;
     background: url(https://cdn.leshiguang.com/leshiguang/chaosconsole/assets/img/logo.ff1db55.ff1db55b.png)
       center center no-repeat;
@@ -49,7 +50,7 @@
     display: block;
     position: fixed;
     top: 50px;
-    height: 250px;
+    height: 350px;
     width: 100%;
     border-left: 0.5px solid #efefef;
     border-bottom: 0.5px solid #efefef;
@@ -76,7 +77,7 @@
     .nav-menu-toggle
     .nav-menu-toggle-button
     .fa {
-    color: var(--theme-color, #42b983);
+    color: var(--theme-color, #155bd4);
     font-weight: lighter;
     width: 20px;
   }
@@ -104,8 +105,8 @@
     margin: 20px;
   }
   .markdown-section {
-    padding: 14px 0px;
-    max-width: 760px;
+    padding: 14px;
+    max-width: calc(100vw - 20px);
   }
   [data-page*='home'] .content .markdown-section {
     max-width: 100%;

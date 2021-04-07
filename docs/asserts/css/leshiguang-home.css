@@ -112,7 +112,7 @@
   margin-bottom: 36px;
   font-size: 24px;
   padding-left: 20px;
-  border-left: 4px solid var(--theme-color, #42b983);
+  border-left: 4px solid var(--theme-color, #155bd4);
 }
 .homepage .homepage-docs .appList > ul > li > ul > li a {
   color: #646566;
@@ -146,7 +146,7 @@
 .homepage-top .container h2 {
   margin: 25px auto;
   font-weight: 400;
-  color: var(--theme-color, #42b983);
+  color: var(--theme-color, #155bd4);
   text-shadow: 0 2px 3px rgb(0 0 0 / 50%);
 }
 .homepage-top .container .search .input-wrap {

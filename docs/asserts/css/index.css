@@ -56,7 +56,7 @@ pre:after {
 
 /* [data-page="/README.md"] .sidebar-nav a[href="/README"] {
 	border-right: 2px solid;
-	color: var(--theme-color, #42b983);
+	color: var(--theme-color, #155bd4);
 	font-weight: 600;
 } */
 
@@ -64,8 +64,8 @@ pre:after {
 [data-page*="UniMPDocs/"] .app-nav.no-badge>ul>li:nth-child(1)>a,
 [data-page*="AppDocs/"] .app-nav.no-badge>ul>li:nth-child(2)>a,
 [data-page*="NativePlugin/"] .app-nav.no-badge>ul>li:nth-child(3)>a {
-  border-bottom: 2px solid #42b983;
-  color: #42b983;
+  border-bottom: 2px solid #155bd4;
+  color: #155bd4;
 }
 
 body.close .app-nav.no-badge {
@@ -196,19 +196,19 @@ body.close .sidebar-toggle {
 /* 修复css3变量var不生效导致华为手机tab颜色不能显示的问题 */
 
 .sidebar-toggle span {
-  background-color: #42b983;
+  background-color: #155bd4;
 }
 
 .sidebar-toggle span {
-  background-color: #42b983;
+  background-color: #155bd4;
 }
 
 .sidebar ul li.active>a {
-  color: #42b983;
+  color: #155bd4;
 }
 
 [data-page="/README.md"] .sidebar-nav a[href="/README"] {
-  color: #42b983;
+  color: #155bd4;
 }
 
 .nav-href {
@@ -600,7 +600,7 @@ body.close .sidebar-toggle {
 
 .sidebar ul li.active>a {
   border-right: 0;
-  border-left: 2px solid #42b983;
+  border-left: 2px solid #155bd4;
 }
 
 .hide {
@@ -638,7 +638,7 @@ h1 .anchor:hover,
 h2 .anchor:hover,
 h3 .anchor:hover {
   text-decoration: none;
-  border-bottom-color: #42b983;
+  border-bottom-color: #155bd4;
 }
 
 h4 .anchor,
@@ -651,7 +651,7 @@ h4 .anchor:hover,
 h5 .anchor:hover,
 h6 .anchor:hover {
   text-decoration: none;
-  border-bottom-color: #42b983;
+  border-bottom-color: #155bd4;
 }
 
 /*将左侧nav居中一点*/
@@ -673,7 +673,7 @@ h6 .anchor:hover {
 }
 
 .contact-box a {
-  color: #42b983;
+  color: #155bd4;
 }
 
 .contact-item {
@@ -1182,7 +1182,7 @@ a.contact-item {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #42b983;
+  background: #155bd4;
 }
 
 @media screen and (max-width: 800px) {
