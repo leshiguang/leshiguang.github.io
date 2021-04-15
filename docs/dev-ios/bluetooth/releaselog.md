@@ -26,6 +26,7 @@
 | 2021-03-26 | 1.6.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.3/LZBluetooth.framework.zip) | 1、增加 LZDeviceProtocol 的属性macAddress |
 | 2021-04-12 | 1.6.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.4/LZBluetooth.framework.zip) | 1、缩减体重绑定的流程，如果遇到未注册的设备，sdk内部去注册该设备。 |
 | 2021-04-12 | 1.6.5 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式 |
+| 2021-04-15 | 1.6.6 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.6/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式，兼容一些新版的秤 |
 
 
 
