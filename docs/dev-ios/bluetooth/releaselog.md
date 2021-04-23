@@ -17,6 +17,7 @@
 | 2021-02-26 | 1.4.5 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.5/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.5/LZBluetooth.framework.zip) | 1、解决蓝牙开关断开的时候没有扫描服务特征导致的无响应问题 |
 | 2021-03-29 | 1.4.6 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.6/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.6/LZBluetooth.framework.zip) | 1.4.x版本只有手环的代码、将1.6.x版本的手环部分修改同步到1.4.6， |
 | 2021-04-08 | 1.4.7 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.7/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.7/LZBluetooth.framework.zip) | 1、解决鉴权首次会出现多次失败的情况 |
+| 2021-04-21 | 1.4.8 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.8/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.4.8/LZBluetooth.framework.zip) |  |
 | 2021-03-04 | 1.5.2 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.2/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.2/LZBluetooth.framework.zip) | 1、增加支持体重与血压，<br />2、增加一个删除鉴权缓存的接口 |
 | 2021-03-11 | 1.5.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.3/LZBluetooth.framework.zip) | 1、解决 椭圆机，篮球，足球，羽毛球，排球，乒乓球，瑜伽，健身舞，太极的运动数据解析问题 |
 | 2021-03-17 | 1.5.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.5.4/LZBluetooth.framework.zip) | 1、解决蓝牙开关断开的时候没有扫描服务特征导致的无响应问题 |
@@ -26,7 +27,8 @@
 | 2021-03-26 | 1.6.3 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.3/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.3/LZBluetooth.framework.zip) | 1、增加 LZDeviceProtocol 的属性macAddress |
 | 2021-04-12 | 1.6.4 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.4/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.4/LZBluetooth.framework.zip) | 1、缩减体重绑定的流程，如果遇到未注册的设备，sdk内部去注册该设备。 |
 | 2021-04-12 | 1.6.5 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式 |
-| 2021-04-15 | 1.6.6 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.6/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式，兼容一些新版的秤 |
+| 2021-04-15 | 1.6.6 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.6/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.6/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式，兼容一些新版的秤 |
+| 2021-04-21 | 1.6.7 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.7/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.7/LZBluetooth.framework.zip) | 1、解决运动心率与运动卡路里的sportMode取值错误的问题<br />2、修改运动卡路里的单位，由cal 变为kcal |
 
 
 
