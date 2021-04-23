@@ -253,38 +253,47 @@ body {
 }
 
 .app-nav.no-badge .nav-right {
-  float: right;
   display: inline-flex;
-  margin-right: 20px;
+  float: right;
+  margin-right: 40px;
+  height: 50px;
 }
 .search .input-wrap {
   display: flex;
   align-items: center;
-  width: 160px;
-  line-height: 36px;
-  margin-top: 5px;
+  width: 240px;
+  line-height: 40px;
+  margin: 5px 0px;
   transition: width 0.15s ease;
   background-color: #fafbff;
-  border: 0.5px solid #e5e5e5;
+  /* border: 0.5px solid #e5e5e5; */
 }
-.search .input-wrap:focus-within {
+/* .search .input-wrap:focus-within {
   border: 0.5px solid var(--theme-color, #155bd4);
-}
+} */
 .search .input-wrap i {
   color: #505d6b;
-  padding: 0 10px;
+  padding: 12.5px;
 }
 .search input {
   outline: none;
   border: none;
   width: 100%;
   background-color: #fafbff;
-  line-height: 36px;
+  line-height: 40px;
   font-size: 14px;
-  padding: 0 10px;
+  padding: 0 5px;
 }
-.search input::-webkit-search-decoration,
-.search input::-webkit-search-cancel-button,
+.app-nav.no-badge
+  .nav-right
+  .nav-search
+  .search
+  input::-webkit-search-decoration,
+.app-nav.no-badge
+  .nav-right
+  .nav-search
+  .search
+  input::-webkit-search-cancel-button,
 .search input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -335,9 +344,8 @@ body {
 .app-nav.no-badge .nav-header .docs-logo {
   position: fixed;
   width: 140px;
-  height: 60px;
+  height: 50px;
   left: 40px;
-  top: -6px;
   background: url(https://cdn.leshiguang.com/leshiguang/chaosconsole/assets/img/logo.ff1db55.ff1db55b.png)
     center center no-repeat;
   background-size: 100%;
@@ -346,7 +354,7 @@ body {
 
 .app-nav.no-badge .nav-menu {
   float: left;
-  height: 60px;
+  height: 50px;
 }
 .app-nav.no-badge .nav-right .nav-menu-collapse {
   display: none;
@@ -484,7 +492,7 @@ i {
 .sidebar .sidebar-nav > ul > li {
   color: #142655;
   font-weight: bold;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
 }
 .sidebar .sidebar-nav > ul > li a:hover {
   text-decoration: none;
@@ -555,12 +563,7 @@ i {
   > ul
   > li:nth-child(4)
   > a,
-[data-page*='dev-']
-  .app-nav.no-badge
-  .nav-menu
-  > ul
-  > li:nth-child(4)
-  > a,
+[data-page*='dev-'] .app-nav.no-badge .nav-menu > ul > li:nth-child(4) > a,
 [data-page*='develop-cloud']
   .app-nav.no-badge
   .nav-menu
@@ -576,6 +579,7 @@ i {
   transition: margin-left 0.4s ease-in;
   display: flex;
   left: 250px;
+  padding-top: 50px;
 }
 .content .content-anchors ul {
   padding-left: 8px;
@@ -644,7 +648,7 @@ i {
 .content .search-results.show {
   margin: auto;
   padding: 20px 20px 50px 20px;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 50px);
   position: relative;
   font-size: 15px;
   max-width: 80%;
@@ -670,12 +674,16 @@ i {
 }
 footer {
   color: #fff;
-  bottom: 0;
-  left: 250px;
   vertical-align: baseline;
   transition: left 0.4s ease-in;
   font-weight: 300;
   width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3rem 0;
 }
 footer .page-footer-copyright {
   border-top: 1px solid;

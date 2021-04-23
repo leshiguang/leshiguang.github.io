@@ -31,7 +31,11 @@
     min-height: 50px;
     justify-content: space-between;
   }
-
+  .search .input-wrap {
+    width: 160px;
+    border-radius: 3px;
+    border: 0.5px solid var(--theme-color, #155bd4);
+  }
   .app-nav.no-badge .nav-header .docs-logo {
     position: fixed;
     width: 90px;

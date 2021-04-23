@@ -7338,6 +7338,7 @@
         if (href === compilerClass.config.homepage) {
           href = 'README';
         }
+        
 
         href = router.toURL(href, null, router.getCurrentPath());
       } else {

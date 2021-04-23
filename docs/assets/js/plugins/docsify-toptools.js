@@ -4,7 +4,7 @@
   function $init () {
     return function (hook, vm) {
       hook.doneEach(function () {
-        if (vm.route.path === '/') {
+        if (vm.route.path === '/' || vm.route.path === '/search') {
           return;
         }
         var $markdownSection = Docsify.dom.find(".markdown-section");

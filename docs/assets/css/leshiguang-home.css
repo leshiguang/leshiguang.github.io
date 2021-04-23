@@ -7,6 +7,14 @@
 [data-page*='home'] .content .markdown-section {
   max-width: 100%;
   margin: auto;
+  padding: 0px;
+}
+[data-page*='home'] .sidebar-toggle {
+  display: none;
+}
+
+[data-page*='home'] .content .markdown-section h2 {
+  font-size: 30px;
 }
 .homepage .homepage-suggest .homepage-suggest-container {
   margin-bottom: 32px;
@@ -44,14 +52,30 @@
   .homepage-suggest
   .homepage-suggest-container
   .homepage-suggest-wrap
+  .suggest-prod:hover{
+    border: 1px solid #155bd4;
+  }
+.homepage
+  .homepage-suggest
+  .homepage-suggest-container
+  .homepage-suggest-wrap
   .suggest-prod
-  .img {
+.fa-logo {
   position: absolute;
   display: inline-block;
   top: 1.7143rem;
   left: 2.2857rem;
   width: 3.4286rem;
   height: 3.4286rem;
+  font-size: 40px;
+}
+.homepage
+  .homepage-suggest
+  .homepage-suggest-container
+  .homepage-suggest-wrap
+  .suggest-prod
+.fa-logo i{
+  color: #155bd4;
 }
 .homepage
   .homepage-suggest
@@ -83,7 +107,6 @@
 }
 .homepage .homepage-docs .appList {
   position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: #fff;
@@ -120,11 +143,11 @@
 }
 
 .homepage-top {
-  height: 285px;
+  height: 450px;
   margin-top: -65px;
   text-align: center;
-  background: #fafbff;
-  /* background-image: url(/assets/banner4-c5be9d9….jpg); */
+  /* background: #fafbff; */
+  background-image: url(/assets/images/home-bg.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -136,7 +159,7 @@
 
 .homepage-top .container {
   max-width: 750px;
-  padding-top: 55px;
+  padding-top: 130px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -145,8 +168,7 @@
 
 .homepage-top .container h2 {
   margin: 25px auto;
-  font-weight: 400;
-  color: var(--theme-color, #155bd4);
+  color: #fff;
   text-shadow: 0 2px 3px rgb(0 0 0 / 50%);
 }
 .homepage-top .container .search .input-wrap {
