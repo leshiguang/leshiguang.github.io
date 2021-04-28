@@ -2,12 +2,17 @@
 ## 1. 获取用户登录TOKEN
  url：域名 +  /sessions-rest/associatedBusiness/loginTenant<br /> method：post
 <a name="RLn2W"></a>
-##### 入参:
+##### POST报文入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id | 标识对接用户，双方约定字段 |
 | notCreate | boolean | 未查询到关联账号时，是否不做账号新增 | 默认false，即关联id无映射的用户时自动创建 |
-| softLogin | boolean | 是否软登录，软登录先尝试获取当前token,获取失败则创建新的token | 默认false，即每次重新获取token，之前请求的token会失效 |
+| softLogin | boolean | 是否软登录，软登录先尝试获取用户当前<br />accessToken,获取失败则创建新的<br />accessToken | 默认false，即每次重新获取<br />accessToken，之前请求的<br />accessToken会失效 |
+| userName | String | 用户昵称，首次创建关联账号时初始化信息 | 可空 |
+| sex | Integer | 性别，1-男 2-女，首次创建关联账号时初始化信息 | 可空 |
+| birthday | Long | 生日，毫秒时间戳，首次创建关联账号时初始化信息 | 可空 |
+| height | Integer | 身高，单位cm | 可空 |
+| waist | Integer | 腰围，单位cm | 可空 |
 
 <a name="pRpTT"></a>
 ##### 出参:
@@ -15,7 +20,7 @@
 | --- | --- | --- | --- |
 | userId | Long | 用户id |  |
 | accessToken | String | 用户登录TOKEN |  |
-| needInfo | boolean | 是否为新用户 |  |
+| needInfo | boolean | 是否为新用户，即之前未创建关联 |  |
 | associatedId | String | 同入参associatedId |  |
 
 
@@ -36,12 +41,17 @@
 <a name="NDiDY"></a>
 ## 2. 修改用户手机号
  url：域名 +  /user-rest/action/changeMobileByTenant<br /> method：post
+<a name="yuFFu"></a>
+##### URL入参：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id | URL参数，标识对接用户，双方约定字段 |
+
 <a name="3jtNd"></a>
-##### 入参:
+##### POST报文入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | mobile | String | 修改后的手机号 | post数据 |
-| associatedId | String | 关联账号id | URL参数，标识对接用户，双方约定字段 |
 
 <a name="Uf3qT"></a>
 ##### 出参:
@@ -55,17 +65,23 @@
 ```
 <a name="TTkXu"></a>
 ## 3. 更新用户信息
- url：域名 +  /user-rest/userInfo/updateUserDetail<br /> method：post<br />入参：
-
+ url：域名 +  /user-rest/userInfo/updateUserDetail<br /> method：post
+<a name="W7dqb"></a>
+##### URL入参：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id | URL参数，标识对接用户，双方约定字段 |
-| name | String | 用户昵称 | POST数据，仅传更新字段即可 |
-| headImg | String | 用户头像 |  |
-| sex | Integer | 性别,1-男；2-女  |  |
-| birthday | Long | 毫秒时间戳，默认上海时区 |  |
-| height | Integer | 身高，cm |  |
-| waist | Integer | 腰围，cm |  |
+
+<a name="zGWE5"></a>
+##### POST报文入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| name | String | 用户昵称 | 仅传更新字段即可 |
+| headImg | String | 用户头像 | 同上 |
+| sex | Integer | 性别，1-男；2-女  | 同上 |
+| birthday | Long | 毫秒时间戳 | 同上 |
+| height | Integer | 身高，单位cm | 同上 |
+| waist | Integer | 腰围，单位cm | 同上 |
 
 示例返回报文：
 ```json
