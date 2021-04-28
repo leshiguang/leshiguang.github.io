@@ -1,12 +1,13 @@
 <a name="KKCJ2"></a>
 ## 1. 获取用户登录TOKEN
-  url：域名 +  /sessions-rest/associatedBusiness/loginTenant<br />  method：post
+ url：域名 +  /sessions-rest/associatedBusiness/loginTenant<br /> method：post
 <a name="RLn2W"></a>
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id | 标识对接用户，双方约定字段 |
 | notCreate | boolean | 未查询到关联账号时，是否不做账号新增 | 默认false，即关联id无映射的用户时自动创建 |
+| softLogin | boolean | 是否软登录，软登录先尝试获取当前token,获取失败则创建新的token | 默认false，即每次重新获取token，之前请求的token会失效 |
 
 <a name="pRpTT"></a>
 ##### 出参:
@@ -50,6 +51,28 @@
 {
 	"code":200, 
 	"msg":"成功"
+}
+```
+<a name="TTkXu"></a>
+## 3. 更新用户信息
+ url：域名 +  /user-rest/userInfo/updateUserDetail<br /> method：post<br />入参：
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id | URL参数，标识对接用户，双方约定字段 |
+| name | String | 用户昵称 | POST数据，仅传更新字段即可 |
+| headImg | String | 用户头像 |  |
+| sex | Integer | 性别,1-男；2-女  |  |
+| birthday | Long | 毫秒时间戳，默认上海时区 |  |
+| height | Integer | 身高，cm |  |
+| waist | Integer | 腰围，cm |  |
+
+示例返回报文：
+```json
+{
+	"code":200, 
+	"msg":"成功",
+  "data":true    //true-更新成功 false-无可更新内容或更新失败
 }
 ```
 
