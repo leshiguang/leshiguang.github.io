@@ -14,6 +14,8 @@
       - [血糖](/develop-cloud/health/bloodsugar)
       - [心率](/develop-cloud/health/heartrate)
       - [健康评估](/develop-cloud/health/estimate)
+      - 免疫力评估
+         - V1
    - 客户对接
       - [小程序access_token查询](/develop-cloud/dock/token)
 - 乐智云数据推送（商业版）
