@@ -3,7 +3,7 @@
 我司做接入控制的目的是为了控制设备的去处、了解出售设备的活跃状态及客户采买设备的使用场景。接入过程中， 仅存储设备和接入公司/组织的关联关系，用于辅助分析客户的库存、销售情况，帮助客户做后续运营， SDK不会以任何方式存储用户身份信息及用户使用设备过程中产生的数据
 <a name="lnH19"></a>
 ### 申请应用 ID
-准备材料如下：<br />
+准备材料如下：
 
 - 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级 
 - 确定应用需要接入的设备型号列表(用于控制型号滥用、标识采买设备信息) 
@@ -13,8 +13,7 @@
 
 - 邮件内容如下：
 ```java
-收件人：zheng.lu@leshiguang.com；xuan.zhang@leshiguang.com
-抄送：mengfei.li@leshiguang.com,chengze.wu@leshiguang.com,yong.wu@leshiguang.com,zhicheng.liu@leshiguang.com,chuang.liu@leshiguang.com,jun.gong@leshiguang.com
+收件人：hezuo@leshiguang.com
 主题：【乐智健康服务准入申请】-（xx 企业/组织/个人）
 邮件正文：
 1、接入目的：（示例：（xx企业/组织/个人）-申请接入乐心服务，目的是借助xx（硬件型号）的数据能力帮助（xx企业/组织/个人）的用户完成健康管理）
@@ -42,8 +41,8 @@
 
 <br />UI级SDK：<br />
 
-- android UI级sdk接入文档： [https://docs.leshiguang.com/develop-native/android/ui](https://docs.leshiguang.com/develop-native/android/ui)
-- iOS UI级sdk接入文档：[https://docs.leshiguang.com/develop-native/ios/ui](https://docs.leshiguang.com/develop-native/ios/ui)
+- android UI级sdk接入文档： [https://docs.leshiguang.com/dev-android/ui/summary](https://docs.leshiguang.com/dev-android/ui/summary)
+- iOS UI级sdk接入文档：[https://docs.leshiguang.com/dev-ios/ui/summary](https://docs.leshiguang.com/dev-ios/ui/summary)
 
 
 <br />乐智云api：
@@ -76,5 +75,6 @@
 |  | A1-F |
 | 血压计 | i7蓝牙版 |
 
-<br />
+
+
 
