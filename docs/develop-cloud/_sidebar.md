@@ -16,6 +16,8 @@
       - [健康评估](/develop-cloud/health/estimate)
       - [免疫力评估](/develop-cloud/v1/health/immune)
       - [营养均衡评估](/develop-cloud/v1/health/nutritionEval)
+   - 健康服务V2
+      - [健康评估V2](/develop-cloud/v2/health/estimate)
    - 客户对接
       - [小程序access_token查询](/develop-cloud/dock/token)
 - 乐智云数据订阅（商业版）
