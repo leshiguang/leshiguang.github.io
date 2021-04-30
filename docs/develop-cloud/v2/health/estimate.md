@@ -7,9 +7,9 @@
 <a name="yOLGu"></a>
 # 1.获取评估问卷题目
 ```bash
-GET /api/healthRiskEval/v1/loadQuestions
+GET /api/healthRiskEval/v2/loadQuestions
 ```
-<a name="sKQYY"></a>
+<a name="835e629fab6cc2fe77cbd2832a6be1ed"></a>
 ##### 入参：
 同：免疫力评估<br />
 <br />**出参**：<br />同：免疫力评估<br />
@@ -19,11 +19,11 @@ GET /api/healthRiskEval/v1/loadQuestions
 
 
 ```bash
-POST /api/healthRiskEval/v1/submitQuestions
+POST /api/healthRiskEval/v2/submitQuestions
 ```
 
 
-<a name="uaHGw"></a>
+<a name="MjLBu"></a>
 ##### 入参：
 同：免疫力评估<br />
 <br />**出参**：<br />同：免疫力评估
@@ -32,7 +32,7 @@ POST /api/healthRiskEval/v1/submitQuestions
 
 
 ```bash
-GET /api/healthRiskEval/v1/getOneEvaluateResult
+GET /api/healthRiskEval/v2/getOneEvaluateResult
 ```
 
 <br />**入参**
@@ -41,11 +41,11 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | --- | --- | --- | --- |
 | evalId | String | 评估id |  |
 
-<a name="gGIAS"></a>
+<a name="4d04866a6b9edcd847978932d37166cb"></a>
 ##### 出参：
 
 
-<a name="Dsjw9"></a>
+<a name="ed3353d7e8e2a106111486ff2a340e73"></a>
 ##### 出参：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 
 
 
-<a name="QQhwf"></a>
+<a name="1d437cff5a6f33e8cd5929a8a4426d3c"></a>
 ###### 评估信息：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | evaluateDate | Date | 评估时间 |  |
 | evaScene | String | 评估场景 | first 首次评测<br />no_first 非首次评测<br />risk_change 14天风险变更评测<br />longtime 长时间未测 |
 
-<a name="u2g9V"></a>
+<a name="7e2019db57047448ddf1951c216da633"></a>
 ###### 用户信息：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | headImg | String | 用户头像 |  |
 | height | String | 身高 | cm |
 
-<a name="uKgat"></a>
+<a name="6e6c39b54ec15eff687d9b5d9378f0da"></a>
 ###### 模块数据：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | score | Double | 模块分 | 满分10分 |
 | risk | boolean | 是否有风险 |  |
 
-<a name="cx4qP"></a>
+<a name="d9c6250412974a81eea274ba4bb08820"></a>
 ###### 风险标签：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | threeLevelLabelKey | String | 三级标签key |  |
 | threeLevelLabelMsg | Double | 三级标签文本 |  |
 
-<a name="uNxr0"></a>
+<a name="8b4028492b96c8f1f0c603341f6377a1"></a>
 ###### 风险建议：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -112,7 +112,7 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | jumpUrl | String | 跳转链接 |  |
 | productList | List<Object> | 商品信息 |  |
 
-<a name="KRApq"></a>
+<a name="d1e7aaa54bb381acb09c5f735da27911"></a>
 ###### 建议集合：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -121,6 +121,6 @@ GET /api/healthRiskEval/v1/getOneEvaluateResult
 | guestSuggest | String | 客态 |  |
 | copySuggest | String | 复制 |  |
 
-<a name="GFLuc"></a>
+<a name="1473194cfefc08d3994e6eb6ab5e78e3"></a>
 ###### 
 
