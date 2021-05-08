@@ -12,6 +12,8 @@
 
 main {
   z-index: auto;
+  min-height: calc(100vh - 50px);
+  height: auto;
 }
 
 .search input {
@@ -1049,7 +1051,7 @@ a.contact-item {
   }
 }
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width:1210px) {
   .app-nav ul.nav-href {
     display: none
   }

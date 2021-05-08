@@ -7619,8 +7619,10 @@
       var slug = slugify(config.id || str);
       var url = router.toURL(router.getCurrentPath(), { id: slug });
       nextToc.slug = url;
-      _self.toc.push(nextToc);
-
+      if(level>0){
+        _self.toc.push(nextToc);
+      }
+      level=level>0?level:1;
       return ("<h" + level + " id=\"" + slug + "\"><a href=\"" + url + "\" data-id=\"" + slug + "\" class=\"anchor\"><span>" + str + "</span></a></h" + level + ">");
     };
 
@@ -7713,7 +7715,7 @@
   };
 
   Compiler.prototype.header = function header (text, level) {
-    return this.heading(text, level);
+    return this.heading(text, -1);
   };
 
   Compiler.prototype.article = function article (text) {

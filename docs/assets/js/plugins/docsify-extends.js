@@ -6,9 +6,9 @@
         },
         replaceSvgs: function () {
             var allSvgs = Docsify.dom.findAll(".markdown-section a svg");
-            allSvgs.forEach(svg => {
-                svg.replaceWith('');
-            })
+            // allSvgs.forEach(svg => {
+            //     svg.replaceWith('');
+            // })
         }
     }
     let SidebarOpts = {
@@ -137,13 +137,15 @@
                 let that = this;
                 Docsify.dom.on($lia, "click", function (e) {
                     let parentLi = $lia.parentNode;
+                    let isActive=parentLi.classList.contains("active");
                     let brothers = Docsify.dom.findAll(parentLi.parentNode, 'li .active');
                     if (brothers) {
                         brothers.forEach(item => {
+                            if(item)
                             that.disActive(item, false);
                         })
                     }
-                    if (!parentLi.classList.contains("active")) {
+                    if (!isActive) {
                         that.active(parentLi, true);
                     } else {
                         that.disActive(parentLi, false);
@@ -261,14 +263,13 @@
                 return;
             }
             toc[0] && toc[0].ignoreAllSubs && toc.splice(0);
-            toc[0] && toc[0].level === 1 &&  toc.shift();
+            // toc[0] && toc[0].level === 1 &&  toc.shift();
 
             for (var i = 0; i < toc.length; i++) {
                 toc[i].ignoreSubHeading && toc.splice(i, 1) && i--;
             }
 
             var tree$1 = cacheTree[currentPath] || this.genTree(toc, level);
-
             cacheTree[currentPath] = tree$1;
             return this.tree(tree$1);
         },

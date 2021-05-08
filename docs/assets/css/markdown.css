@@ -174,7 +174,7 @@
   padding: 0 0 24px 0px;
 }
 
-.markdown-section .anchor{
+.markdown-section .anchor {
   transition: none;
 }
 
@@ -458,7 +458,8 @@ body.close .markdown-section {
 }
 
 @media screen and (max-width: 1500px) {
-  .markdown-section {
+  .markdown-section,
+  .search-results.show {
     margin: 0px;
   }
 }

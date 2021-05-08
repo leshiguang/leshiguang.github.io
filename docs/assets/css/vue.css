@@ -209,8 +209,9 @@ main {
     display: block;
     position: relative;
     width: 100vw;
-    height: 100%;
-    z-index: 0
+    z-index: 0;
+    min-height: calc(100vh - 50px);
+    height: auto;
 }
 
 main.hidden {
@@ -342,15 +343,6 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
     position: fixed
 }
 
-.content {
-    padding-top: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 300px;
-    transition: left .25s ease
-}
 
 .markdown-section {
     margin: 0 auto;
@@ -509,7 +501,7 @@ body.close .content {
         padding: 30px 30px 10px 10px
     }
 
-    body.close .sidebar {
+    /* body.close .sidebar {
         transform: translateX(300px)
     }
 
@@ -518,15 +510,15 @@ body.close .content {
         transition: background-color 1s;
         width: 284px;
         padding: 10px
-    }
+    } */
 
-    body.close .content {
+    /* body.close .content {
         transform: translateX(300px)
-    }
+    } */
 
-    body.close .app-nav, body.close .github-corner {
+    /* body.close .app-nav, body.close .github-corner {
         display: none
-    }
+    } */
 
     .github-corner:hover .octo-arm {
         -webkit-animation: none;

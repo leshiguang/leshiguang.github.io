@@ -384,7 +384,7 @@
         var $search = Docsify.dom.find('div.search');
         var $content = Docsify.dom.find(".content");
         var $clearBtn = Docsify.dom.find($search, '.clear-button');
-        var $sidebarNav = Docsify.dom.find('.sidebar-nav');
+        var $body = Docsify.dom.find('body');
         var $appName = Docsify.dom.find('.app-name');
         var $panel = Docsify.dom.find($content, '.search-results');
         var $markdownSection = Docsify.dom.find($content, '.markdown-section');
@@ -397,7 +397,7 @@
             $panel.innerHTML = '';
 
             if (options.hideOtherSidebarContent) {
-                $sidebarNav.classList.remove('hide');
+                $body.classList.remove('close');
                 $appName.classList.remove('hide');
             }
             return;
@@ -415,7 +415,7 @@
         $contentAnchors.classList.add("hide");
         $panel.innerHTML = html || ("<p class=\"empty\">" + NO_DATA_TEXT + "</p>");
         if (options.hideOtherSidebarContent) {
-            $sidebarNav.classList.add('hide');
+            $body.classList.add('close');
             $appName.classList.add('hide');
         }
     }
@@ -424,11 +424,13 @@
         var $search = Docsify.dom.find('div.search');
         var $input = Docsify.dom.find($search, 'input');
         var $inputWrap = Docsify.dom.find($search, '.input-wrap');
+        var $searchButton = Docsify.dom.find(".search-button");
+        var $clearBtn = Docsify.dom.find(".clear-button");
 
         var timeId;
 
         /**
-          Prevent to Fold sidebar.
+          Prevent to Fold sidebar.d
     
           When searching on the mobile end,
           the sidebar is collapsed when you click the INPUT box,
@@ -442,16 +444,19 @@
                     e.stopPropagation();
             }
         );
-        Docsify.dom.on($input, 'input', function (e) {
-            clearTimeout(timeId);
-            timeId = setTimeout(function (_) { return doSearch(e.target.value.trim()); }, 100);
-        });
-        Docsify.dom.on($inputWrap, 'click', function (e) {
-            // Click input outside
-            if (e.target.tagName !== 'INPUT') {
-                $input.value = '';
-                doSearch();
-            }
+        // Docsify.dom.on($input, 'input', function (e) {
+        //     clearTimeout(timeId);
+        //     timeId = setTimeout(function (_) { return doSearch(e.target.value.trim()); }, 100);
+        // });
+
+
+        Docsify.dom.on($searchButton, "click", function (_) {
+            var searchText = Docsify.dom.find($search, 'input').value;
+            doSearch(searchText.trim());
+        })
+        Docsify.dom.on($clearBtn, 'click', function (e) {
+            $input.value = '';
+            doSearch();
         });
     }
 
@@ -505,7 +510,7 @@
         paths: 'auto',
         depth: 2,
         maxAge: 86400000, // 1 day
-        hideOtherSidebarContent: false,
+        hideOtherSidebarContent: true,
         namespace: undefined,
         pathNamespaces: undefined,
     };
