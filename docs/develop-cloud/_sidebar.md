@@ -25,8 +25,9 @@
       - [小程序access_token查询](/develop-cloud/dock/token)
 - 乐智云数据订阅（商业版）
    - [数据推送对接流程](/develop-cloud/datapush/common)
-   - [健康数据推送](/develop-cloud/datapush/healthdata)
-   - [问卷测评推送](/develop-cloud/datapush/questionnaire)
+   - [设备维度数据推送](/develop-cloud/datapush/device/healthdata)
+   - [用户健康数据推送](/develop-cloud/datapush/user/healthdata)
+   - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
 - 乐智云算法
    - [体脂](/develop-cloud/algorithm/fat)
    - [睡眠分析](/develop-cloud/algorithm/sleep)
