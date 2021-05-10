@@ -17,6 +17,7 @@
       - [免疫力评估](/develop-cloud/v1/health/immune)
       - [营养均衡评估](/develop-cloud/v1/health/nutritionEval)
    - 健康服务V2
+      - [步数V2](/develop-cloud/v2/health/step)
       - [健康评估V2](/develop-cloud/v2/health/estimate)
    - 顾问服务
       - [顾问管理](/develop-cloud/counselor/manage)
@@ -25,8 +26,9 @@
       - [小程序access_token查询](/develop-cloud/dock/token)
 - 乐智云数据订阅（商业版）
    - [数据推送对接流程](/develop-cloud/datapush/common)
-   - [健康数据推送](/develop-cloud/datapush/healthdata)
-   - [问卷测评推送](/develop-cloud/datapush/questionnaire)
+   - [设备维度数据推送](/develop-cloud/datapush/device/healthdata)
+   - [用户健康数据推送](/develop-cloud/datapush/user/healthdata)
+   - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
 - 乐智云算法
    - [体脂](/develop-cloud/algorithm/fat)
    - [睡眠分析](/develop-cloud/algorithm/sleep)
