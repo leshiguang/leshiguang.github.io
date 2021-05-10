@@ -29,6 +29,7 @@
 | 2021-04-12 | 1.6.5 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.5/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式 |
 | 2021-04-15 | 1.6.6 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.6/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.6/LZBluetooth.framework.zip) | 1、修改获取体脂秤model的方式，兼容一些新版的秤 |
 | 2021-04-21 | 1.6.7 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.7/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.7/LZBluetooth.framework.zip) | 1、解决运动心率与运动卡路里的sportMode取值错误的问题<br />2、修改运动卡路里的单位，由cal 变为kcal |
+| 2021-04-28 | 1.6.8 | [https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.8/LZBluetooth.framework.zip](https://raw.githubusercontent.com/leshiguang/Framework/main/LZBluetooth/1.6.8/LZBluetooth.framework.zip) | 1、修正未注册的血压设备 体重设备deviceId的获取方式 |
 
 
 
