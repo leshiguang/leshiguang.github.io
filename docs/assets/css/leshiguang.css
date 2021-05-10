@@ -569,6 +569,7 @@ i {
 .content {
   transition: margin-left 0.4s ease-in;
   display: flex;
+  position: relative;
   left: 250px;
   right: 200px;
   padding-top: 50px;
