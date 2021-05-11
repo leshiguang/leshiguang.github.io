@@ -1,4 +1,54 @@
 (function () {
+
+    var NO_DATA_TEXT = '';
+    var options;
+    function doFresh ($searchField, value) {
+        var $search = Docsify.dom.find($searchField, '.search');
+        var $clearBtn = Docsify.dom.find($search, '.clear-button');
+        if (!value) {
+            $clearBtn.classList.remove('show');
+            return;
+        } else {
+            $clearBtn.classList.add('show')
+        }
+    }
+    function tplHTML ($searchField, keyword) {
+        keyword = keyword ? keyword : '';
+        var html = "<div class=\"input-wrap\">\n <input type=\"text\" class=\"input-search\" value=\"" + keyword + "\" placeholder=\"搜索\" aria-label=\"Search text\" />\n     <div class=\"clear-button\">\n        <svg width=\"26\" height=\"24\">\n          <circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#ccc\" />\n          <path stroke=\"white\" stroke-width=\"2\" d=\"M8.25,8.25,15.75,15.75\" />\n          <path stroke=\"white\" stroke-width=\"2\"d=\"M8.25,15.75,15.75,8.25\" />\n        </svg>\n      </div>\n  <button class=\"search-button\"><i class=\"fa fa-search\" ></i>\n</button>   </div>\n    </div>";
+        var el = Docsify.dom.create('div', html);
+        Docsify.dom.toggleClass(el, 'add', 'search');
+        Docsify.dom.before($searchField, el);
+    }
+    function bindEvents ($searchField, vm) {
+        var searchButton = Docsify.dom.find($searchField, ".fa-search");
+        $search = Docsify.dom.find($searchField, '.search');
+        var $input = Docsify.dom.find($search, 'input');
+        var $clearBtn = Docsify.dom.find($search, '.clear-button');
+        Docsify.dom.on(searchButton, "click", function () {
+            var searchText = $input.value;
+            window.location.href = (vm.router.mode === 'hash' ? '#/' : '/') + "search?keyword=" + searchText;
+        })
+
+        var timeId;
+        Docsify.dom.on($input, 'input', function (e) {
+            clearTimeout(timeId);
+            timeId = setTimeout(function (_) { return doFresh($searchField, e.target.value.trim()); }, 100);
+        });
+
+        Docsify.dom.on($clearBtn, 'click', function (e) {
+            $input.value = '';
+            doFresh($searchField);
+        });
+    }
+    function init ($searchField, vm, keyword, jumpEvent) {
+        var $search = Docsify.dom.find($searchField, '.search');
+        if (!$search) {
+            tplHTML($searchField, keyword)
+        }
+        if (jumpEvent) {
+            bindEvents($searchField, vm)
+        }
+    }
     /**
      * Converts a colon formatted string to a object with properties.
      *
@@ -77,7 +127,6 @@
 
     function getAllPaths (router) {
         var paths = [];
-
         Docsify.dom
             .findAll('.sidebar-nav a:not(.section-link):not([data-nosearch])')
             .forEach(function (node) {
@@ -211,6 +260,7 @@
             keywords = [].concat(query, keywords);
         }
 
+
         var loop = function (i) {
             var post = data[i];
             var matchesScore = 0;
@@ -291,12 +341,33 @@
         return matchingResults.sort(function (r1, r2) { return r2.score - r1.score; });
     }
 
-    function init (config, vm) {
+
+    function doSearch (value) {
+        var $search = Docsify.dom.find('div.search');
+        var $clearBtn = Docsify.dom.find($search, '.clear-button');
+        var $body = Docsify.dom.find('body');
+        var $panel = Docsify.dom.find('.search-results');
+        if (!value) {
+            $panel.classList.remove('show');
+            $clearBtn.classList.remove('show');
+            $panel.innerHTML = '';
+            return;
+        }
+        var matchs = search(value);
+
+        var html = '';
+        matchs.forEach(function (post) {
+            html += "<div class=\"matching-post\">\n<a href=\"" + (post.url) + "\">\n<h2>" + (post.title) + "</h2>\n<p>" + (post.content) + "</p>\n</a>\n</div>";
+        });
+
+        $panel.classList.add('show');
+        $clearBtn.classList.add('show');
+        $panel.innerHTML = html || ("<p class=\"empty\">" + NO_DATA_TEXT + "</p>");
+    }
+    function searchInit (config, vm) {
         var isAuto = config.paths === 'auto';
         var paths = isAuto ? getAllPaths(vm.router) : config.paths;
-
         var namespaceSuffix = '';
-
         // only in auto mode
         if (paths.length && isAuto && config.pathNamespaces) {
             var path = paths[0];
@@ -331,8 +402,6 @@
 
         if (isExpired) {
             INDEXS = {};
-        } else if (!isAuto) {
-            return;
         }
 
         var len = paths.length;
@@ -351,79 +420,9 @@
             );
         });
     }
-
-    /* eslint-disable no-unused-vars */
-
-    var NO_DATA_TEXT = '';
-    var options;
-
-    function tpl (defaultValue) {
-        // if (defaultValue === void 0) defaultValue = '';
-        // var html = "<div class=\"input-wrap\">\n   <i class=\"fa fa-search\" ></i>\n <input type=\"search\" value=\"" + defaultValue + "\" placeholder=\"搜索\" aria-label=\"Search text\" />\n      <div class=\"clear-button\">\n        <svg width=\"26\" height=\"24\">\n          <circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"#ccc\" />\n          <path stroke=\"white\" stroke-width=\"2\" d=\"M8.25,8.25,15.75,15.75\" />\n          <path stroke=\"white\" stroke-width=\"2\"d=\"M8.25,15.75,15.75,8.25\" />\n        </svg>\n      </div>\n    </div>\n    </div>";
-        // var el = Docsify.dom.create('div', html);
-        // var nav = Docsify.dom.find('nav .nav-search');
-        // Docsify.dom.toggleClass(el, 'add', 'search');
-        // Docsify.dom.before(nav, el);
-        var $content = Docsify.dom.find(".content");
-        var $panel = Docsify.dom.find($content, '.search-results');
-        if ($panel) {
-            $panel.classList.remove("show");
-            $panel.innerHTML = '';
-            var $markdownSection = Docsify.dom.find($content, '.markdown-section');
-            $markdownSection.classList.remove("hide");
-        }
-    }
-    function tplSearchResult () {
-        var $content = Docsify.dom.find(".content");
-        var $panel = Docsify.dom.create("div");
-        Docsify.dom.toggleClass($panel, "add", "search-results");
-        Docsify.dom.appendTo($content, $panel);
-    }
-
-    function doSearch (value) {
-        var $search = Docsify.dom.find('div.search');
-        var $content = Docsify.dom.find(".content");
-        var $clearBtn = Docsify.dom.find($search, '.clear-button');
-        var $body = Docsify.dom.find('body');
-        var $appName = Docsify.dom.find('.app-name');
-        var $panel = Docsify.dom.find($content, '.search-results');
-        var $markdownSection = Docsify.dom.find($content, '.markdown-section');
-        var $contentAnchors = Docsify.dom.find($content, ".content-anchors");
-        if (!value) {
-            $panel.classList.remove('show');
-            $clearBtn.classList.remove('show');
-            $markdownSection.classList.remove("hide");
-            $contentAnchors.classList.remove("hide");
-            $panel.innerHTML = '';
-
-            if (options.hideOtherSidebarContent) {
-                $body.classList.remove('close');
-                $appName.classList.remove('hide');
-            }
-            return;
-        }
-        var matchs = search(value);
-
-        var html = '';
-        matchs.forEach(function (post) {
-            html += "<div class=\"matching-post\">\n<a href=\"" + (post.url) + "\">\n<h2>" + (post.title) + "</h2>\n<p>" + (post.content) + "</p>\n</a>\n</div>";
-        });
-
-        $panel.classList.add('show');
-        $clearBtn.classList.add('show');
-        $markdownSection.classList.add("hide");
-        $contentAnchors.classList.add("hide");
-        $panel.innerHTML = html || ("<p class=\"empty\">" + NO_DATA_TEXT + "</p>");
-        if (options.hideOtherSidebarContent) {
-            $body.classList.add('close');
-            $appName.classList.add('hide');
-        }
-    }
-
-    function bindEvents () {
+    function bindSearchEvents () {
         var $search = Docsify.dom.find('div.search');
         var $input = Docsify.dom.find($search, 'input');
-        var $inputWrap = Docsify.dom.find($search, '.input-wrap');
         var $searchButton = Docsify.dom.find(".search-button");
         var $clearBtn = Docsify.dom.find(".clear-button");
 
@@ -444,11 +443,6 @@
                     e.stopPropagation();
             }
         );
-        // Docsify.dom.on($input, 'input', function (e) {
-        //     clearTimeout(timeId);
-        //     timeId = setTimeout(function (_) { return doSearch(e.target.value.trim()); }, 100);
-        // });
-
 
         Docsify.dom.on($searchButton, "click", function (_) {
             var searchText = Docsify.dom.find($search, 'input').value;
@@ -459,7 +453,9 @@
             doSearch();
         });
     }
-
+    function updateOptions (opts) {
+        options = opts;
+    }
     function updatePlaceholder (text, path) {
         var $input = Docsify.dom.getNode('.search input[type="search"]');
 
@@ -483,25 +479,15 @@
             NO_DATA_TEXT = text[match];
         }
     }
-
-    function updateOptions (opts) {
-        options = opts;
-    }
-
     function init$1 (opts, vm) {
-        tplSearchResult();
         updateOptions(opts);
     }
-
     function update (opts, vm) {
-        var keywords = vm.router.parse().query.s;
-        tpl(keywords);
-        bindEvents();
         updateOptions(opts);
         updatePlaceholder(opts.placeholder, vm.route.path);
         updateNoData(opts.noData, vm.route.path);
+        bindSearchEvents();
     }
-
     /* eslint-disable no-unused-vars */
 
     var CONFIG = {
@@ -510,12 +496,11 @@
         paths: 'auto',
         depth: 2,
         maxAge: 86400000, // 1 day
-        hideOtherSidebarContent: true,
-        namespace: undefined,
-        pathNamespaces: undefined,
+        namespace: 'develop-native',
+        pathNamespaces: ['/devlop-native', '/develop-cloud'],
     };
+    var $init = function (hook, vm) {
 
-    var install = function (hook, vm) {
         var util = Docsify.util;
         var opts = vm.config.search || CONFIG;
 
@@ -527,23 +512,39 @@
             CONFIG.placeholder = opts.placeholder || CONFIG.placeholder;
             CONFIG.noData = opts.noData || CONFIG.noData;
             CONFIG.depth = opts.depth || CONFIG.depth;
-            CONFIG.hideOtherSidebarContent =
-                opts.hideOtherSidebarContent || CONFIG.hideOtherSidebarContent;
             CONFIG.namespace = opts.namespace || CONFIG.namespace;
             CONFIG.pathNamespaces = opts.pathNamespaces || CONFIG.pathNamespaces;
         }
 
-        var isAuto = CONFIG.paths === 'auto';
         hook.ready(function (_) {
             init$1(CONFIG, vm);
-            isAuto && init(CONFIG, vm);
+            searchInit(CONFIG, vm);
         })
-        hook.doneEach(function (_) {
-            update(CONFIG, vm);
-            isAuto && init(CONFIG, vm);
+        hook.doneEach(function () {
+            var keyword = vm.router.parse().query.keyword;
+            if (vm.route.path === '/') {
+                var $homeSearch = Docsify.dom.find('.homepage-search');
+                if ($homeSearch) {
+                    init($homeSearch, vm, keyword, true);
+                }
+            } else {
+                if (vm.route.path === '/search') {
+                    var $searchPageSearch = Docsify.dom.find('.search-page-search');
+                    if ($searchPageSearch) {
+                        init($searchPageSearch, vm, keyword, true)
+                        update(CONFIG, vm);
+                        var $search = Docsify.dom.find('div.search');
+                        var searchText = Docsify.dom.find($search, 'input').value;
+                        doSearch(searchText.trim());
+                    }
+                } else {
+                    var $navSearch = Docsify.dom.find('.nav-search');
+                    if ($navSearch) {
+                        init($navSearch, vm, keyword, true);
+                    }
+                }
+            }
         });
-    };
-
-    $docsify.plugins = [].concat($docsify.plugins, install);
-
-}());
+    }
+    $docsify.plugins = [].concat($docsify.plugins, $init);
+})();

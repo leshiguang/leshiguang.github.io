@@ -21,7 +21,7 @@
 </div>
 <div class="nav-right">
   <div class='nav-menu-collapse'>
-    <div class="nav-menu-toggle"><div class="nav-menu-toggle-button"><i class="fa fa-align-justify fa-lg"></i></div></div>
+    <div class="nav-menu-toggle"><div class="nav-menu-toggle-button"><i class="fa fa-align-justify"></i></div></div>
   </div>
   <div class='nav-search'>
   </div>

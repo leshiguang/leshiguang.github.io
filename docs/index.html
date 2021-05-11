@@ -46,35 +46,16 @@
       </div>
     </div>
 
-    <script src="/assets/js/plugins/docsify.js?v=1.04"></script>
+    <script src="/assets/js/plugins/docsify.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-copyright.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-extends.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-toptools.min.js?v=1.04"></script>
-    <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <script>
       // docsify config start
       window.$docsify = {
         plantuml: {
           skin: 'classic'
-        },
-        vueMounts: {
-          '#searchPage': {
-            data() {
-              return {
-                keyword: '',
-                namespaces: []
-              };
-            },
-            watch: {
-              $docsify() {
-                this.keyword = this.$docsify.route.query.keyword;
-              }
-            },
-            mounted() {
-              this.keyword = this.$docsify.route.query.keyword;
-            }
-          }
         },
         externalLinkRel: '',
         alias: {
@@ -164,11 +145,10 @@
       };
     </script>
     <script src="/assets/js/plugins/docsify-pagination.min.js?v=1.04"></script>
-    <!-- <script src="/assets/js/plugins/others/plugins/docsify-vuepress-theme.min.js?v=1.04"></script> -->
     <script src="/assets/js/plugins/others/plugins/emoji.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/others/plugins/external-script.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/others/plugins/docsify-copy-code.min.js?v=1.04"></script>
     <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
-    <script src="/assets/js/plugins/docsify-search2.js?v=1.04"></script>
+    <script src="/assets/js/plugins/docsify-search.min.js?v=1.04"></script>
   </body>
 </html>

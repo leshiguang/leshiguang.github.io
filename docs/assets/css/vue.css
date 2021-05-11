@@ -451,7 +451,7 @@ body.close .sidebar-toggle {
 }
 
 body.close .content {
-    left: 0
+    margin-left: 0px;
 }
 
 @media print {

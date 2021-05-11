@@ -1,53 +1,3 @@
-@media screen and (max-width: 1210px) {
-  .app-nav.no-badge .nav-menu {
-    display: none;
-  }
-  .app-nav.no-badge .nav-menu.collapsed {
-    background: #fafbff;
-    display: block;
-    position: fixed;
-    top: 50px;
-    height: 350px;
-    width: 100%;
-    border-left: 0.5px solid #efefef;
-    border-bottom: 0.5px solid #efefef;
-    border-right: 0.5px solid #efefef;
-  }
-  .app-nav.no-badge .nav-right .nav-menu-collapse {
-    display: block;
-  }
-  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-collapse {
-    background-color: transparent;
-    width: auto;
-    padding: 30px 30px 10px 10px;
-  }
-  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-toggle-button {
-    position: relative;
-    float: right;
-    padding: 15px 15px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-  }
-  .app-nav.no-badge
-    .nav-right
-    .nav-menu-collapse
-    .nav-menu-toggle
-    .nav-menu-toggle-button
-    .fa {
-    color: var(--theme-color, #155bd4);
-    font-weight: lighter;
-    width: 20px;
-  }
-  .app-nav.no-badge .nav-menu > ul {
-    text-align: start;
-  }
-  .app-nav.no-badge .nav-menu > ul > li {
-    display: grid;
-  }
-  .app-nav.no-badge .nav-menu > ul > li > ul {
-    z-index: 200;
-  }
-}
 /*移动设备*/
 @media screen and (max-width: 768px) {
   .content {
@@ -61,8 +11,64 @@
   .app-nav {
     margin-top: 16px;
   }
-  .app-nav li ul {
-    top: 30px;
+  .app-nav.no-badge .nav-menu > ul > li > ul {
+    top: 0px;
+    right: 0px;
+    position: relative;
+  }
+  .app-nav.no-badge .nav-menu {
+    display: none;
+  }
+  .app-nav.no-badge .nav-menu.collapsed {
+    background: #fafbff;
+    display: block;
+    position: fixed;
+    top: 50px;
+    height: 450px;
+    width: 100%;
+    border-left: 0.5px solid #efefef;
+    border-bottom: 0.5px solid #efefef;
+    border-right: 0.5px solid #efefef;
+  }
+  .app-nav.no-badge .nav-right .nav-menu-collapse {
+    display: block;
+    margin-right: 5px;
+  }
+  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-collapse {
+    background-color: transparent;
+    width: auto;
+    padding: 30px 30px 10px 10px;
+  }
+  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-toggle-button {
+    position: relative;
+    float: right;   
+    height: 45px;
+    text-align: center;
+    width: 50px;
+    line-height: 45px;
+    margin: 5px 0px;
+    background-color: var(--theme-color, #155bd4);
+    cursor: pointer;
+  }
+  .app-nav.no-badge
+    .nav-right
+    .nav-menu-collapse
+    .nav-menu-toggle
+    .nav-menu-toggle-button
+    .fa {
+    color: #fff;
+    font-weight: lighter;
+    width: 20px;
+  }
+  .app-nav.no-badge .nav-menu>ul>li a:hover{
+    border-bottom: 0px;
+  }
+  .app-nav.no-badge .nav-menu > ul {
+    text-align: start;
+    width: 100%;
+  }
+  .app-nav.no-badge .nav-menu > ul > li {
+    display: grid;
   }
   main {
     height: auto;

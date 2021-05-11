@@ -115,7 +115,9 @@ body.close .sidebar-toggle {
   transform: translateX(0px);
   -webkit-transform: translateX(0px);
 }
-
+body.close .sidebar {
+  transform: translateX(-300px)
+}
 .app-nav.no-badge {
   border-bottom: 1px solid #eee;
   position: fixed;
