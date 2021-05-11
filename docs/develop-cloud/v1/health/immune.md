@@ -7,9 +7,15 @@
 <a name="V980U"></a>
 # 1.查询免疫评估问卷题目
 ```bash
-GET /api/immune/v1/loadQuestions
+POST /api/immune/v1/loadQuestions
 ```
-**入参**<br />无<br />**出参**<br />出参示例：
+**入参**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| **serialNo** | String | 问卷编号，固定为：20210208X1EQKUB |  |
+
+**出参**<br />出参示例：
 ```json
 {
 
@@ -296,9 +302,9 @@ GET /api/immune/v1/getOneEvaluateResult
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| evalId | String | 评估id |  |
+| queryEvaId | Long | 评估id |  |
 
-<a name="RVxP2"></a>
+<a name="4d04866a6b9edcd847978932d37166cb"></a>
 ##### 出参：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -309,9 +315,9 @@ GET /api/immune/v1/getOneEvaluateResult
 
 
 
-<a name="SQD9W"></a>
+<a name="7f16d4b682239c67d5d558c602143af8"></a>
 ###### 评估信息：
-<a name="K8J5v"></a>
+<a name="9cc202ef32d3f014d0da7d13c6c60427"></a>
 ###### 用户信息：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -321,7 +327,7 @@ GET /api/immune/v1/getOneEvaluateResult
 | headImg | String | 用户头像 |  |
 | height | String | 身高 | cm |
 
-<a name="yaErB"></a>
+<a name="99cba74654d399aa865e4e27d3487de8"></a>
 ###### 模块数据：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -330,7 +336,7 @@ GET /api/immune/v1/getOneEvaluateResult
 | score | Double | 模块分 | 满分10分 |
 | ~~risk~~ | ~~boolean~~ | ~~是否有风险~~ |  |
 
-<a name="ssEZz"></a>
+<a name="7d12a8ed93cf24035f0f656a2ae55080"></a>
 ###### 风险标签：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -339,7 +345,7 @@ GET /api/immune/v1/getOneEvaluateResult
 | threeLevelLabelKey | String | 三级标签key |  |
 | threeLevelLabelMsg | Double | 三级标签文本 |  |
 
-<a name="eERzK"></a>
+<a name="722ae7de8cfad6ae1587dad96b805810"></a>
 ###### 风险建议：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -351,7 +357,7 @@ GET /api/immune/v1/getOneEvaluateResult
 | jumpUrl | String | 跳转链接 |  |
 | productList | List<Object> | 商品信息 |  |
 
-<a name="fvz2o"></a>
+<a name="867d029935ad9611017e3ea8dcd1abc4"></a>
 ###### 建议集合：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
