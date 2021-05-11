@@ -443,7 +443,7 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 }
 
 body.close .sidebar {
-    transform: translateX(300px)
+    transform: translateX(-300px)
 }
 
 body.close .sidebar-toggle {

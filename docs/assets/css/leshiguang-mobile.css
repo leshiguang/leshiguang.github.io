@@ -11,6 +11,10 @@
   .app-nav {
     margin-top: 16px;
   }
+
+  body.close .sidebar {
+    transform: translateX(300px);
+  }
   .app-nav.no-badge .nav-menu > ul > li > ul {
     top: 0px;
     right: 0px;
@@ -41,7 +45,7 @@
   }
   .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-toggle-button {
     position: relative;
-    float: right;   
+    float: right;
     height: 45px;
     text-align: center;
     width: 50px;
@@ -60,7 +64,7 @@
     font-weight: lighter;
     width: 20px;
   }
-  .app-nav.no-badge .nav-menu>ul>li a:hover{
+  .app-nav.no-badge .nav-menu > ul > li a:hover {
     border-bottom: 0px;
   }
   .app-nav.no-badge .nav-menu > ul {
