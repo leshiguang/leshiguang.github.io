@@ -27,7 +27,11 @@
     <link rel="stylesheet" href="/assets/css/leshiguang.min.css?v=1.04" />
     <link rel="stylesheet" href="/assets/css/markdown.min.css?v=1.04" />
     <link rel="stylesheet" href="/assets/css/leshiguang-home.min.css?v=1.04" />
-    <link rel="stylesheet" href="/assets/css/leshiguang-search.min.css?v=1.04" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/vuep/dist/vuep.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/leshiguang-search.min.css?v=1.04"
+    />
     <link
       rel="stylesheet"
       href="/assets/css/leshiguang-mobile.min.css?v=1.04"
@@ -41,17 +45,36 @@
         <div class="lzc-loading-img"></div>
       </div>
     </div>
-    
+
     <script src="/assets/js/plugins/docsify.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-copyright.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-extends.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-toptools.min.js?v=1.04"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <script>
       // docsify config start
       window.$docsify = {
         plantuml: {
           skin: 'classic'
+        },
+        vueMounts: {
+          '#searchPage': {
+            data() {
+              return {
+                keyword: '',
+                namespaces: []
+              };
+            },
+            watch: {
+              $docsify() {
+                this.keyword = this.$docsify.route.query.keyword;
+              }
+            },
+            mounted() {
+              this.keyword = this.$docsify.route.query.keyword;
+            }
+          }
         },
         externalLinkRel: '',
         alias: {
@@ -91,7 +114,32 @@
         autoHeader: true,
         search: {
           maxAge: 7200000,
-          paths: 'auto',
+          paths: [
+            '/develop-cloud/api/sign',
+            '/develop-cloud/user/login',
+            '/develop-cloud/health/device',
+            '/develop-cloud/health/weight',
+            '/develop-cloud/health/sleep',
+            '/develop-cloud/health/bloodpressure',
+            '/develop-cloud/health/step',
+            '/develop-cloud/health/bloodsugar',
+            '/develop-cloud/health/heartrate',
+            '/develop-cloud/health/estimate',
+            '/develop-cloud/health/immune',
+            '/develop-cloud/health/nutritionEval',
+            '/develop-cloud/v2/health/step',
+            '/develop-cloud/counselor/manage',
+            '/develop-cloud/counselor/relation',
+            '/develop-cloud/dock/token',
+            '/develop-cloud/datapush/common',
+            '/develop-cloud/datapush/device/healthdata',
+            '/develop-cloud/datapush/user/healthdata',
+            '/develop-cloud/datapush/questionnaire',
+            '/develop-cloud/algorithm/fat',
+            '/develop-cloud/algorithm/sleep'
+          ],
+          namespace: 'develop-native',
+          pathNamespaces: ['/devlop-native', '/develop-cloud'],
           placeholder: '搜索',
           noData: '没有结果',
           depth: 4
@@ -115,13 +163,12 @@
         ]
       };
     </script>
-    <script src="/assets/js/plugins/docsify-homepage.js?v=1.04"></script>
-    <script src="/assets/js/plugins/docsify-search.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/docsify-pagination.min.js?v=1.04"></script>
     <!-- <script src="/assets/js/plugins/others/plugins/docsify-vuepress-theme.min.js?v=1.04"></script> -->
     <script src="/assets/js/plugins/others/plugins/emoji.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/others/plugins/external-script.min.js?v=1.04"></script>
     <script src="/assets/js/plugins/others/plugins/docsify-copy-code.min.js?v=1.04"></script>
     <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+    <script src="/assets/js/plugins/docsify-search2.js?v=1.04"></script>
   </body>
 </html>

@@ -93,20 +93,23 @@
         titleToggle: function () {
             var $sidebarTitle = Docsify.dom.find(".sidebar-title");
             if ($sidebarTitle) {
-                var $a = this.createA()
-                Docsify.dom.appendTo($sidebarTitle, $a);
-                let that = this;
-                Docsify.dom.on($a, "click", function (e) {
-                    Docsify.dom.toggleClass($a, "active");
-                    let $icon = Docsify.dom.find($a, "i");
-                    if ($a.classList.contains("active")) {
-                        that.toggleIcon($icon, true);
-                        that.toggleAllSidebar(true);
-                    } else {
-                        that.toggleIcon($icon, false);
-                        that.toggleAllSidebar(false);
-                    }
-                })
+                var $faRight = Docsify.dom.find($sidebarTitle, '.fa-angle-right')
+                if(!$faRight){
+                    var $a = this.createA()
+                    Docsify.dom.appendTo($sidebarTitle, $a);
+                    let that = this;
+                    Docsify.dom.on($a, "click", function (e) {
+                        Docsify.dom.toggleClass($a, "active");
+                        let $icon = Docsify.dom.find($a, "i");
+                        if ($a.classList.contains("active")) {
+                            that.toggleIcon($icon, true);
+                            that.toggleAllSidebar(true);
+                        } else {
+                            that.toggleIcon($icon, false);
+                            that.toggleAllSidebar(false);
+                        }
+                    })
+                }
             }
         },
         toggleIcon ($icon, active) {
@@ -137,12 +140,12 @@
                 let that = this;
                 Docsify.dom.on($lia, "click", function (e) {
                     let parentLi = $lia.parentNode;
-                    let isActive=parentLi.classList.contains("active");
+                    let isActive = parentLi.classList.contains("active");
                     let brothers = Docsify.dom.findAll(parentLi.parentNode, 'li .active');
                     if (brothers) {
                         brothers.forEach(item => {
-                            if(item)
-                            that.disActive(item, false);
+                            if (item)
+                                that.disActive(item, false);
                         })
                     }
                     if (!isActive) {

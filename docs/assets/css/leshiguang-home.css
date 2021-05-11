@@ -2,7 +2,7 @@
   display: none;
 }
 [data-page*='home'] .content {
-  left: 0px;
+  margin-left: 0px;
 }
 [data-page*='home'] .content .markdown-section {
   max-width: 100%;

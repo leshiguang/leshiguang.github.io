@@ -7462,7 +7462,7 @@
     }
 
     this._marked = compile;
-    this.compile = function (text) {
+    this.compile = function (text,hasCache) {
       var isCached = true;
       // eslint-disable-next-line no-unused-vars
       var result = cached(function (_) {
@@ -7486,11 +7486,12 @@
       })(text);
 
       var curFileName = this$1.router.parse().file;
-
       if (isCached) {
         this$1.toc = this$1.cacheTOC[curFileName];
       } else {
-        this$1.cacheTOC[curFileName] = [].concat( this$1.toc );
+        if(this$1.toc&&this$1.toc.length>0&&!hasCache){
+          this$1.cacheTOC[curFileName] = [].concat( this$1.toc );
+        }
       }
 
       return result;
@@ -8217,7 +8218,7 @@
     };
 
     proto._renderNav = function(text) {
-      text && this._renderTo('nav', this.compiler.compile(text));
+      text && this._renderTo('nav', this.compiler.compile(text,true));
       if (this.config.loadNavbar) {
         getAndActive(this.router, 'nav');
       }
@@ -8842,28 +8843,39 @@
         // Current page is html
         this.isHTML = /\.html$/g.test(file);
 
+        let _callback = function () {
+          let f_loadSidebar = function (callback) {
+            return this$1._loadSideAndNav(path, qs, loadSidebar, callback);
+          };
+          let f_loadNavbar = function (callback) {
+            var fn=function (text) {
+              let result = this$1._renderNav(text);
+              callback()
+              return result;
+            }
+            return function () {
+              loadNavbar && loadNested(
+                path,
+                qs,
+                loadNavbar,fn,
+                this$1,
+                true
+              );
+            }
+          }
+          return f_loadSidebar(f_loadNavbar(cb));
+        }
         // Load main content
         req.then(
           function (text, opt) { return this$1._renderMain(
               text,
               opt,
-              this$1._loadSideAndNav(path, qs, loadSidebar, cb)
+              _callback()
             ); },
           function (_) {
-            this$1._fetchFallbackPage(path, qs, cb) || this$1._fetch404(file, qs, cb);
+            this$1._fetchFallbackPage(path, qs, _callback()) || this$1._fetch404(file, qs, _callback());
           }
         );
-
-        // Load nav
-        loadNavbar &&
-          loadNested(
-            path,
-            qs,
-            loadNavbar,
-            function (text) { return this$1._renderNav(text); },
-            this,
-            true
-          );
       }
     };
 
@@ -8882,6 +8894,7 @@
         if (typeof coverpage === 'string') {
           if (routePath === '/') {
             path = coverpage;
+            3
           }
         } else if (Array.isArray(coverpage)) {
           path = coverpage.indexOf(routePath) > -1 && '_coverpage';
@@ -8979,7 +8992,10 @@
     proto._fetch404 = function(path, qs, cb) {
       var this$1 = this;
       if ( cb === void 0 ) cb = noop;
-
+      body.setAttribute('data-page', 'home');
+      this.route.meta={
+        error:true
+      }
       var ref = this.config;
       var loadSidebar = ref.loadSidebar;
       var requestHeaders = ref.requestHeaders;

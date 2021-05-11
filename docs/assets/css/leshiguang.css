@@ -364,7 +364,8 @@ body {
 }
 
 .app-nav.no-badge .nav-menu {
-  float: left;
+  position: fixed;
+  width: 100%;
   height: 50px;
 }
 .app-nav.no-badge .nav-right .nav-menu-collapse {
@@ -567,11 +568,9 @@ i {
   border-bottom: 2px solid var(--theme-color, #155bd4);
 }
 .content {
-  transition: margin-left 0.4s ease-in;
   display: flex;
   position: relative;
-  left: 250px;
-  right: 200px;
+  margin-left: 250px;
   padding-top: 50px;
 }
 .content .content-anchors ul {
@@ -643,7 +642,6 @@ i {
   content: '';
 }
 .content .search-results.show {
-  padding: 30px 30px 215px 40px;
   min-height: calc(100vh - 60px);
   position: relative;
   font-size: 15px;

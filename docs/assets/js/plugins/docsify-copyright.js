@@ -5,7 +5,6 @@
         return function (hook, vm) {
             hook.doneEach(function () {
                 var exist = Docsify.dom.find("footer");
-                console.info(exist)
                 if (!exist) {
                     var copy_right = "Copyright © 2020 乐歌信息科技（上海）有限公司 版权所有"
                     var beian_add = "https://beian.miit.gov.cn/"
