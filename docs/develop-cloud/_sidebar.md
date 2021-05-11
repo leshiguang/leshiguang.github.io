@@ -4,6 +4,7 @@
 - 乐智云API(商业版)
    - 用户服务
       - [登录](/develop-cloud/user/login)
+      - [风险标签](/develop-cloud/user/label)
    - 设备服务
       - [设备](/develop-cloud/health/device)
    - 健康服务
