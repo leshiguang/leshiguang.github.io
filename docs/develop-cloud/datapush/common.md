@@ -3,10 +3,7 @@
 主要包含如下两种数据。
 <a name="iFQtN"></a>
 ## 0.1  用户数据推送流程
-用户数据推送的前提是与乐智云有用户层面的合作。
-<a name="jRLoM"></a>
-# ![用户数据推送.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1620457966570-99c0f816-ff72-46f3-8c1f-276f88a00225.png#clientId=u6e86d312-81f8-4&from=ui&id=u28c6073a&margin=%5Bobject%20Object%5D&name=%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81.png&originHeight=872&originWidth=2434&originalType=binary&size=138481&status=done&style=none&taskId=uc8211ed3-ec5a-4ac0-ac65-c2e5168b385)
-
+用户数据推送的前提是与乐智云有用户层面的合作。<br />![用户数据推送.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1620457966570-99c0f816-ff72-46f3-8c1f-276f88a00225.png#clientId=u6e86d312-81f8-4&from=ui&id=cU1tH&margin=%5Bobject%20Object%5D&name=%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81.png&originHeight=872&originWidth=2434&originalType=binary&size=138481&status=done&style=none&taskId=uc8211ed3-ec5a-4ac0-ac65-c2e5168b385)<br />
 
 <a name="QHTy9"></a>
 ## 0.2 设备数据推送
