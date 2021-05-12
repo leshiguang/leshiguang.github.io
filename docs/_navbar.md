@@ -5,18 +5,20 @@
 
 - [首页](/)
 - <a href="javascript:void(0);">智能硬件<i class="fa fa-angle-down"></i></a>
-  <!-- - [血压计](/hardware/sphygmomanometer/) -->
-  - [体脂秤](/hardware/scale/)
-    <!-- - [智能手环](/hardware/wristbrand/) -->
-    <!-- - [智能手表](/hardware/watch/) -->
+  - [血压计](/hardware/sphygmomanometer/README)
+  - [智能手环](/hardware/wristbrand/README)
+  - [体脂秤](/hardware/scale/README)
+  - [智能手表](/hardware/watch/README)
 - <a href="javascript:void(0);">产品&服务<i class="fa fa-angle-down"></i></a>
-  - [健康产品](/product/health/weight)
+  - [健康产品](/product/health/README)
+  - [运营产品](/product/operation/README)
+  - [技术服务](/product/tech/README)
 - <a href="javascript:void(0);">SDK&工具<i class="fa fa-angle-down"></i></a>
   - [SDK 集成](/develop-native/apply)
-  - [SDK 下载](/develop-native/download/README.md)
+  - [SDK 下载](/develop-native/download/README)
 - [API 文档](develop-cloud/api/sign)
 - [解决方案](solution/drugstore/README)
-- [帮助](FAQ/README.md)
+- [帮助](FAQ/README)
 
 </div>
 <div class="nav-right">
