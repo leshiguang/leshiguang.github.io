@@ -11,8 +11,8 @@
 | userName | String | 用户昵称，首次创建关联账号时初始化信息 | 可空 |
 | sex | Integer | 性别，1-男 2-女，首次创建关联账号时初始化信息 | 可空 |
 | birthday | Long | 生日，毫秒时间戳，首次创建关联账号时初始化信息 | 可空 |
-| height | Integer | 身高，单位cm | 可空 |
-| waist | Integer | 腰围，单位cm | 可空 |
+| height | Integer | 身高，单位cm，首次创建关联账号时初始化信息 | 可空 |
+| waist | Integer | 腰围，单位cm，首次创建关联账号时初始化信息 | 可空 |
 
 <a name="3fd73ccede4e2569a39f1ee4756dcec4"></a>
 ##### 出参:
