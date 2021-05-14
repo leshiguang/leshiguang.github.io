@@ -3,7 +3,8 @@
 - [API签名](/develop-cloud/api/sign)
 - 乐智云API(商业版)
    - 用户服务
-      - [登录](/develop-cloud/user/login)
+      - [静默登录](/develop-cloud/user/login)
+      - [用户信息](/develop-cloud/user/info)
       - [风险标签](/develop-cloud/user/label)
    - 设备服务
       - [设备](/develop-cloud/health/device)
