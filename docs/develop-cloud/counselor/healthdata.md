@@ -52,7 +52,7 @@ URL：域名 +  /api/family/v1.0/customerData/getCustomerDetailWeightDataV2<br 
 | --- | --- | --- | --- |
 | counselorAuth | Boolean | 是否授权顾问查询 |  |
 | dataAnalyzeText | String | 数据解读文案 |  |
-| recommendProductList | List<[ProductInfo](qac6er#yyUNB)> | 推荐商品 |  |
+| recommendProductList | List<ProductInfo> | 推荐商品 |  |
 | weight | String | 体重 |  |
 | pbf | String | 脂肪率 |  |
 | muscle | String | 肌肉量 |  |
@@ -123,7 +123,7 @@ URL：域名 +  /api/family/v1.0/customerData/getCustomerDetailSleepDataV2<br /
 | --- | --- | --- | --- |
 | counselorAuth | Boolean | 是否授权顾问查询 |  |
 | dataAnalyzeText | String | 数据解读文案 |  |
-| recommendProductList | List<[ProductInfo](qac6er#yyUNB)> | 推荐商品 |  |
+| recommendProductList | List<ProductInfo> | 推荐商品 | 字段同接口2 |
 | sleepTotalDuration | Integer | 睡眠总时长(分钟) |  |
 | sleepScore | Integer | 睡眠得分 |  |
 | sleepLevel | String | 睡眠等级 1:优 2:良 3:中 4:差 |  |
@@ -176,7 +176,7 @@ URL：域名 +  /api/family/v1.0/customerData/getCustomerDetailStepDataV2<br />
 | --- | --- | --- | --- |
 | counselorAuth | Boolean | 是否授权顾问查询 |  |
 | dataAnalyzeText | String | 数据解读文案 |  |
-| recommendProductList | List<[ProductInfo](qac6er#yyUNB)> | 推荐商品 |  |
+| recommendProductList | List<ProductInfo> | 推荐商品 | 字段同接口2 |
 | measurementDate | Long | 测量时间 时间戳 |  |
 | step | Integer | 步数 |  |
 | calories | BigDecimal | 卡路里 |  |
@@ -235,7 +235,7 @@ URL：域名 +  /api/family/v1.0/customerData/getCustomerBloodPressureDataV2<br
 | --- | --- | --- | --- |
 | counselorAuth | Boolean | 是否授权顾问查询 |  |
 | dataAnalyzeText | String | 数据解读文案 |  |
-| recommendProductList | List<[ProductInfo](qac6er#yyUNB)> | 推荐商品 |  |
+| recommendProductList | List<ProductInfo> | 推荐商品 | 字段同接口2 |
 | measurementDate | Long | 测量时间 时间戳 |  |
 | systolicPressure | Integer | 收缩压（高压） |  |
 | diastolicPressure | Integer | 舒张压（低压） |  |
@@ -306,7 +306,7 @@ URL：域名 +  /api/family/v1.0/customerData/getCustomerBloodSugarData<br />�
 | --- | --- | --- | --- |
 | counselorAuth | Boolean | 是否授权顾问查询 |  |
 | dataAnalyzeText | String | 数据解读文案 |  |
-| recommendProductList | List<[ProductInfo](qac6er#yyUNB)> | 推荐商品 |  |
+| recommendProductList | List<ProductInfo> | 推荐商品 | 字段同接口2 |
 | measurementDate | Long | 测量时间 时间戳 |  |
 | weeHours | BloodSugarData | 凌晨 |  |
 | beforeBreakfast | BloodSugarData | 早餐前 |  |
@@ -392,7 +392,7 @@ URL：域名 +  /api/family/v1.0/customerData/getCustomerDietData<br />类型�
 | --- | --- | --- | --- |
 | counselorAuth | Boolean | 是否授权顾问查询 |  |
 | dataAnalyzeText | String | 数据解读文案 |  |
-| recommendProductList | List<[ProductInfo](qac6er#yyUNB)> | 推荐商品 |  |
+| recommendProductList | List<ProductInfo> | 推荐商品 | 字段同接口2 |
 | belongDate | Long | 测量时间 时间戳 |  |
 | breakfast | DietData | 早餐 |  |
 | lunch | DietData | 午餐 |  |
