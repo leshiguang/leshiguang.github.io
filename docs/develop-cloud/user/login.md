@@ -1,7 +1,7 @@
-<a name="KKCJ2"></a>
+<a name="9f012e3b51b9f444092e5e22f3c6893d"></a>
 ## 1. 获取用户登录TOKEN
- url：域名 +  /sessions-rest/associatedBusiness/loginTenant<br /> method：post
-<a name="RLn2W"></a>
+**URL**：域名 +  /api/sessions/v1.0/associatedBusiness/loginTenant<br />**Method**：POST<br />**接口说明**：针对模块嵌入的对接方式，调用本接口进行账号对接，获取登录态accessToken，跳转页面时带上该参数作为用户身份标识
+<a name="443ae06dca469a8b9bc7320964449594"></a>
 ##### POST报文入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@
 | height | Integer | 身高，单位cm | 可空 |
 | waist | Integer | 腰围，单位cm | 可空 |
 
-<a name="pRpTT"></a>
+<a name="3fd73ccede4e2569a39f1ee4756dcec4"></a>
 ##### 出参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -37,58 +37,5 @@
 	}
 }
 
-```
-<a name="NDiDY"></a>
-## 2. 修改用户手机号
- url：域名 +  /user-rest/action/changeMobileByTenant<br /> method：post
-<a name="yuFFu"></a>
-##### URL入参：
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| associatedId | String | 关联账号id | URL参数，标识对接用户，双方约定字段 |
-
-<a name="3jtNd"></a>
-##### POST报文入参:
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| mobile | String | 修改后的手机号 |  |
-
-<a name="Uf3qT"></a>
-##### 出参:
-无，修改失败时返回非200code<br />
-<br />示例返回报文：
-```json
-{
-	"code":200, 
-	"msg":"成功"
-}
-```
-<a name="TTkXu"></a>
-## 3. 更新用户信息
- url：域名 +  /user-rest/userInfo/updateUserDetail<br /> method：post
-<a name="W7dqb"></a>
-##### URL入参：
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| associatedId | String | 关联账号id | URL参数，标识对接用户，双方约定字段 |
-
-<a name="zGWE5"></a>
-##### POST报文入参:
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| name | String | 用户昵称 | 仅传更新字段即可 |
-| headImg | String | 用户头像 | 同上 |
-| sex | Integer | 性别，1-男；2-女  | 同上 |
-| birthday | Long | 毫秒时间戳 | 同上 |
-| height | Integer | 身高，单位cm | 同上 |
-| waist | Integer | 腰围，单位cm | 同上 |
-
-示例返回报文：
-```json
-{
-  "code":200, 
-  "msg":"成功",
-  "data":true    //true-更新成功 false-无可更新内容或更新失败
-}
 ```
 
