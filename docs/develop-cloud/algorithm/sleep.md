@@ -4,7 +4,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 <br />入参：
 
 | **字段** | **类型** | **描述** | **是否必传** | **备注** |
-| :---: | :---: | :---: | :---: | :---: |
+| --- | --- | --- | --- | --- |
 | levelSetStr | String | 睡眠数据，16进制字符串，5分钟两位 | 是 |  |
 | startTime | Date | 分析开始时间（毫秒值） | 是 |  |
 | model | String | 设备型号 | 是 |  |
@@ -22,7 +22,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 出参：
 
 | **字段** | **字段类型** | **字段描述** |
-| :---: | :---: | :---: |
+| --- | --- | --- |
 | summary | SleepSummary | 整体总结数据 |
 | first90Summary | SleepFirst90Summary | 前90分钟的总结数据 |
 | statusDetails | List<SleepStateDetail> | 睡眠状态详细数据 |
@@ -30,7 +30,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 返回参数SleepSummary：
 
 | **字段** | **字段类型** | **字段描述** |
-| :---: | :---: | :---: |
+| --- | --- | --- |
 | beginSleepTimeUTC | Long | 开始入睡时间(单位毫秒) |
 | sleepTimeSecond | Long | 入睡时间,unix时间戳(单位秒) |
 | getupTimeSecond | Long | 起床时间,unix时间戳(单位秒) |
@@ -44,7 +44,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 返回参数SleepFirst90Summary：
 
 | **字段** | **字段类型** | **字段描述** |
-| :---: | :---: | :---: |
+| --- | --- | --- |
 | deepSleepDurationFirst90 | Integer | 深睡时长（分钟） |
 | shallowSleepDurationFirst90 | Integer | 浅睡时长（分钟） |
 | awakingDurationFirst90 | Integer | 清醒时长（分钟） |
@@ -54,7 +54,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 返回参数SleepStateDetail：
 
 | **字段** | **字段类型** | **字段描述** |
-| :---: | :---: | :---: |
+| --- | --- | --- |
 | sleepStatus | Integer | 0-快速眼动；1-清醒；2-浅睡；3-深睡 |
 | startTime | Long | 区间开始时间（秒） |
 | endTime | Long | 区间结束时间（秒） |
@@ -114,7 +114,7 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 | 10进制 | 99 | 69 | 59 | 35 | 0 | 27 | 48 | 13 | 42 | 18 | 13 | 24 | 40 | 25 | 91 | 92 |
 | 16进制 | 63 | 45 | 3b | 23 | **00** | 1b | 30 | **0d** | 2a | 12 | 0d | 18 | 28 | 19 | 5b | 5c |
 
-则参数levelSetStr=63453b23001b300d2a120d1828195b5c<br />**注意10进制转成16进制不足两位时一定要补0，如：0 -> 00；13 -> 0d**<br />
+则参数levelSetStr=63453b23001b300d2a120d1828195b5c<br />**注意10进制转成16进制不足两位时一定要补0，如：0 -> 00；13 -> 0d**<br />**如遇到中间时段缺失，则每5分钟补FF。**<br />
 
 <a name="SrEiv"></a>
 ## 四、睡眠段逻辑
