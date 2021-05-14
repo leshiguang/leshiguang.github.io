@@ -1,6 +1,6 @@
 <a name="WrQCS"></a>
 ## 1. 查询用户当前健康风险标签
-**URL**：域名 +  /hai-rest/label/getUserRiskLabel<br />**类型**：GET
+**URL**：域名 +  /api/hai/v1.0/label/getUserRiskLabel<br />**类型**：GET
 <a name="UaupU"></a>
 ##### URL入参:
 | **字段** | **类型** | **描述** | **其他** |
