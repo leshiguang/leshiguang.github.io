@@ -24,6 +24,11 @@
    - 顾问服务
       - [顾问管理](/develop-cloud/counselor/manage)
       - [顾问会员关联](/develop-cloud/counselor/relation)
+      - [会员列表查询](/develop-cloud/counselor/list)
+      - [会员数据统计](/develop-cloud/counselor/data)
+      - [会员分布统计](/develop-cloud/counselor/distribute)
+      - [会员评估状况](/develop-cloud/counselor/evaluation)
+      - [会员健康数据](/develop-cloud/counselor/healthdata)
    - 客户对接
       - [小程序access_token查询](/develop-cloud/dock/token)
 - 乐智云数据订阅（商业版）
