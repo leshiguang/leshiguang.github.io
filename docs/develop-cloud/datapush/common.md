@@ -31,7 +31,7 @@
 | userId | - | Long | 当前数据对应乐心用户id(非必须返回) |  |
 | associatedId | - | String | 当前数据第三方客户唯一标识(非必须返回) |  |
 | eventKey | - | String | 业务数据推送 or 业务事件推送<br />"dataPush":**实际数据推送**<br />"eventPush"：**数据变更事件推送** |  |
-| dataTypeKey | - | String | 推送的数据标识，举例：<br />"dBp":**设备血压数据(只包含设备测量原始数据)**<br />"dBs":**设备血糖数据(只包含设备测量原始数据)**<br />**...** |  |
+| dataTypeKey | - | String | 推送的数据标识，举例：<br />"BP":**设备血压数据(只包含设备测量原始数据)**<br />"BS":**设备血糖数据(只包含设备测量原始数据)**<br />**...** |  |
 | pushStatus | - | Integer | _推送状态(1:正常推送，2:重试机制补偿推送)_ |  |
 | data | - | Object | 字段具体解释见具体业务（data参数解释） |  |
 
