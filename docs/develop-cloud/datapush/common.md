@@ -37,10 +37,6 @@
 
 ```json
 {
-  "api_appKey":"xxxxxxx",
-  "api_version":"1.0",
-  "api_timestamp":1111111,
-  "api_sign":"xxxxxxx",
   "userId": 23341064,
   "associatedId": "66104c5623342apsasad",
   "dataTypeKey": "BP",
