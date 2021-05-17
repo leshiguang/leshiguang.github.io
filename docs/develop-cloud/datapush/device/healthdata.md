@@ -13,7 +13,7 @@
 
 | eventKey | **dataPush** |
 | --- | --- |
-| dataTypeKey | **dBp** |
+| dataTypeKey | **BP** |
 
 1.推送data
 
@@ -33,7 +33,7 @@
 2.推送data示例
 ```json
 {
-  "dataTypeKey": "dBp",
+  "dataTypeKey": "BP",
   "eventKey": "dataPush",
   "pushStatus": 1,
   "data": {
