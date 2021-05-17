@@ -1,8 +1,7 @@
 <a name="XS3wZ"></a>
 # 1.WIFI体脂称
 
-
-待补充
+<br />待补充<br />
 
 <a name="yvcMW"></a>
 # 2.WIFI/NB/GPRS血压计
@@ -34,10 +33,6 @@
 2.推送data示例
 ```json
 {
-  "api_appKey":"xxxxxxx",
-  "api_version":"1.0",
-  "api_timestamp":1111111,
-  "api_sign":"xxxxxxx",
   "dataTypeKey": "dBp",
   "eventKey": "dataPush",
   "pushStatus": 1,
