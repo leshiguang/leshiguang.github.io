@@ -23,11 +23,6 @@
 # 3、统一推送数据格式定义
 | 参数 | parent | 字段类型 | 字段说明 | 备注 |
 | --- | --- | --- | --- | --- |
-| api_appKey | - | String | 应用ID （通过申请业务接入时获得） (非必须返回) | 这四个参数用于标识请求来自乐智云，<br />客户可以选择进行校验，防止接口被非法调用。 |
-| api_version | - | String | API协议版本，当前值：1.0(非必须返回) |  |
-| api_timestamp | - | Long | 请求时间戳（毫秒级）(非必须返回) |  |
-| api_sign | - | String | 加密校验字符串，加密方式见[API签名](https://docs.leshiguang.com/develop-cloud/api/sign)文档(非必须返回) |  |
-|  |  |  |  |  |
 | userId | - | Long | 当前数据对应乐心用户id(非必须返回) |  |
 | associatedId | - | String | 当前数据第三方客户唯一标识(非必须返回) |  |
 | eventKey | - | String | 业务数据推送 or 业务事件推送<br />"dataPush":**实际数据推送**<br />"eventPush"：**数据变更事件推送** |  |
