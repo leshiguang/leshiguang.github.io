@@ -1,6 +1,6 @@
 <a name="Uh5A2"></a>
 ## 1. 顾问身份开通
-**URL**：域名 +  /family-rest/counselorModification/tenantRegister<br />**类型**：POST
+**URL**：域名 +  /api/family/v1.0/counselorModification/tenantRegister<br />**类型**：POST
 <a name="C1pB9"></a>
 ##### URL入参:
 | **字段** | **类型** | **描述** | **其他** |
