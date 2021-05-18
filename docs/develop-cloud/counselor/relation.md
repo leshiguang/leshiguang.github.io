@@ -1,6 +1,6 @@
 <a name="yaQKa"></a>
 ## 1. 会员绑定顾问
-**URL**：域名 +  /family-rest/counselorModification/bindTenantCounselor<br />**类型**：POST
+**URL**：域名 +  /api/family/v1.0/counselorModification/bindTenantCounselor<br />**类型**：POST
 <a name="uP7qO"></a>
 ##### URL入参:
 | **字段** | **类型** | **描述** | **其他** |
