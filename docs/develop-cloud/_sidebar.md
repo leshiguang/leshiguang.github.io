@@ -20,6 +20,9 @@
       - [营养均衡评估](/develop-cloud/v1/health/nutritionEval)
    - 健康服务V2
       - [步数V2](/develop-cloud/v2/health/step)
+      - [体重V2](/develop-cloud/v2/health/weight)
+      - [睡眠V2](/develop-cloud/v2/health/sleep)
+      - [饮食]()
       - [健康评估V2](/develop-cloud/v2/health/estimate)
    - 顾问服务
       - [顾问管理](/develop-cloud/counselor/manage)
