@@ -34,6 +34,10 @@
       - [会员健康数据](/develop-cloud/counselor/healthdata)
    - 客户对接
       - [小程序access_token查询](/develop-cloud/dock/token)
+   - 数据服务
+      - [接口说明](/develop-cloud/data/explain)
+      - [访问留存](/develop-cloud/data/retention)
+      - [健康数据](/develop-cloud/data/health)
 - 乐智云数据订阅（商业版）
    - [数据推送对接流程](/develop-cloud/datapush/common)
    - [设备维度数据推送](/develop-cloud/datapush/device/healthdata)
