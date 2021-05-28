@@ -1,1318 +1,415 @@
-<a name="HFnwp"></a>
-# 1. 新体重首页接口
-url :  域名 +  /weight-rest/weightRecord/getHomeRecord<br />method: get
-<a name="fKMqT"></a>
-##### 入参：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| associatedId | String | 关联账号id |  |
+<a name="I4rAM"></a>
+# 核心价值点
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622018803469-604c29bf-9fa9-4b5b-b9c2-a9f06efd41b7.png#clientId=uee54efd6-1eed-4&from=paste&height=1434&id=ue9d1e731&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1434&originWidth=2551&originalType=binary&size=1026564&status=done&style=none&taskId=u7f15082b-9f50-4aa4-adea-d2a41e82e3d&width=2551)<br />
 
-<a name="WjtLg"></a>
-##### 出参:
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| userInfo | Object | 用户信息 |  |
-| bindBodyFatScale | boolean | 是否绑定体脂秤 |  |
-| sampleData | boolean | 是否示例数据 |  |
-| haveNewWeightRecord | boolean | 家人是否有新数据未读 |  |
-| lastWeightRecord | Object | 最新一条体重数据 | 详情见：[链接](#we37g) |
-| lineChartsRecords | Object | 趋势图数据 | 详情见：[链接](#dJHg3) |
-| weightTargetInfo | Object | 目标体重数据 | 详情见：[链接](#22dDT) |
-| healthLabelList | List<Object> | 风险解读标签 | 详情见：[链接](#dN1MO) |
-|  |  |  |  |
+<a name="wtQE5"></a>
+## 专业背书
 
-<a name="we37g"></a>
-###### 用户信息：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| userName | String | 用户名称 |  |
-| headImg | String | 用户头像 |  |
-| unit | Integer | 单位 | 1-kg;<br />2-斤;<br />3-磅;<br />4-英石 |
-
-<a name="LyuD0"></a>
-###### lastWeightRecord(最新体重数据)
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | String | 主键id |  |
-| measurementDate | Date | 测量时间 |  |
-| bmiInfo | Object | bmi数据信息 | 见：indexInfo |
-| weightInfo | Object | 体重数据信息 |  |
-| pbfInfo | Object | 脂肪率数据信息 |  |
-
-indexInfo:
-
-| 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| indexName | String | 标签名称 |
-| indexValue | Double | 标签值 |
-| indexUnit | String | 单位名称 |
-| indexLevelName | String | 等级名称 |
-
-<a name="dJHg3"></a>
-###### lineChartsRecords(趋势图数据)：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| weightList | List<Obj> | 体重列表 | 见SingleRecordInfo |
-| pbfList | List<Obj> | 脂肪率列表 |  |
-| bodyRoundList | List<Obj> | 体围列表 |  |
-| lastBodyRoundRecord | Object | 最新一条体围数据 | 见体围信息 |
-
-singleRecordInfo：
-
-| 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| value | String | 标签值 |
-| unitName | string | 单位 |
-| measurementDate | Date | 测量时间 |
-
-体围信息：
-
-| 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| waistHipRate | String | 腰臀比 |
-| scoreContent | string | 得分文案 |
-| measurementDate | Date | 测量时间 |
-
-<a name="22dDT"></a>
-###### weightTargetInfo(体重目标)：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| targetWeight | Double | 体重目标 |  |
-| targetText | String | 目标文案 |  |
-| percent | Double | 完成百分比 |  |
-| percentLevel | Integer | 完成百分比等级 | **1-**( 0, 1),<br />**2-**(1, 29),<br />**3-**(30, 80),<br />**4-**(81, 99),<br />**5-**(100, 100) |
-| targetType | Integer | 目标类型 | 1-减肥<br />2-增肥 |
-| startTime | Date | 目标开始时间 |  |
-
-<a name="Guqwq"></a>
-###### healthLabelList(风险解读标签)
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| healthLabelName | String | 健康风险标签名 |  |
-| healthContent | String | 健康风险解读 |  |
-| indexList | List<Object> | 风险对应标签对象 |  |
-
-<a name="dN1MO"></a>
-###### indexList(风险对应标签对象)
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexName | String | 标签名称 |  |
-| indexValue | BigDecimal | 标签值 |  |
-| indexUnit | String | 单位 |  |
-| indexLevel | String | 指标等级 |  |
-
-<a name="8sj7A"></a>
-###### 示例报文：
-```json
-
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"lastWeightRecord":{
-			"id":"3a46098572724f62b1b49e813078e61f",
-			"measurementDate":1599638918000,
-			"bmiInfo":{
-				"indexName":"BMI",
-				"indexValue":23.6,
-				"indexUnit":"",
-				"indexLevelName":"理想"
-			},
-			"weightInfo":{
-				"indexName":"体重",
-				"indexValue":66.6,
-				"indexUnit":"kg"
-			},
-			"pbfInfo":{
-				"indexName":"体脂率",
-				"indexValue":17.2,
-				"indexUnit":"%",
-				"indexLevelName":"理想"
-			}
-		},
-		"lineChartsRecords":{
-			"weightList":[
-				{
-					"value":66.8,
-					"unitName":"kg",
-					"measurementDate":1596070685000
-				},
-				{
-					"value":66,
-					"unitName":"kg",
-					"measurementDate":1596157756000
-				},
-				{
-					"value":65.7,
-					"unitName":"kg",
-					"measurementDate":1596762501000
-				},
-				{
-					"value":62.8,
-					"unitName":"kg",
-					"measurementDate":1598956071000
-				},
-				{
-					"value":66.4,
-					"unitName":"kg",
-					"measurementDate":1599009230000
-				},
-				{
-					"value":67,
-					"unitName":"kg",
-					"measurementDate":1599445006000
-				},
-				{
-					"value":66.6,
-					"unitName":"kg",
-					"measurementDate":1599638918000
-				}
-			],
-			"pbfList":[
-				{
-					"value":16.9,
-					"unitName":"%",
-					"measurementDate":1592403940000
-				},
-				{
-					"value":17.2,
-					"unitName":"%",
-					"measurementDate":1592873845000
-				},
-				{
-					"value":19.9,
-					"unitName":"%",
-					"measurementDate":1594913938000
-				},
-				{
-					"value":14.7,
-					"unitName":"%",
-					"measurementDate":1595764697000
-				},
-				{
-					"value":14.7,
-					"unitName":"%",
-					"measurementDate":1595865058000
-				},
-				{
-					"value":17.3,
-					"unitName":"%",
-					"measurementDate":1595865738000
-				},
-				{
-					"value":17.2,
-					"unitName":"%",
-					"measurementDate":1599638918000
-				}
-			],
-			"bodyRoundList":[
-			],
-			"lastBodyRoundRecord":{
-				"id":303326,
-				"userId":23412531,
-				"calInfo":"24,1,1.68",
-				"measurementDate":1599639940000,
-				"deleted":0,
-				"waistHipRate":1.01,
-				"waistCircumference":80.2,
-				"hipCircumference":79.1,
-				"chestCircumference":81.6,
-				"armCircumference":24.2,
-				"thighCircumference":49.2,
-				"calfCircumference":32.1,
-				"score":0,
-				"scoreContent":"差",
-				"beatPercent":0,
-				"age":0,
-				"sex":0,
-				"height":0
-			}
-		},
-		"weightTargetInfo":{
-			"targetWeight":62.7,
-			"targetText":"加油，别松懈哦",
-			"percent":0,
-			"percentLevel":1,
-			"targetType":1,
-			"startTime":1596470400000
-		},
-		"healthLabelList":[
-			{
-				"healthLabelName":"中心型肥胖",
-				"healthContent":"肥胖不止影响体型，还会影响您的健康！世界卫生组织已将肥胖列为导致疾病负担的十大危险因素之一。\n\n若脂肪主要在腹壁和腹腔内蓄积过多，则被称为\"中心型肥胖\"，具有更高的疾病风险。一般成人达到以下任一标准即可推断为中心型肥胖。\n1.腰围：男性≥85cm，女性≥80cm；\n2.腰臀比（腰围/臀围）:男性>0.9，女性>0.8；\n\n对肥胖人群而言：\n1.出现2型糖尿病、心血管病、高血压、中风和多种癌症的风险概率远高于一般健康人群；\n2.由于过多的脂肪在肝细胞内沉积，易形成脂肪肝；\n3.易出现睡眠中重度打鼾，可能引发睡眠呼吸暂停综合征；\n4.同时还易出现骨关节病、胆囊疾病等多种疾病。",
-				"indexList":[
-					{
-						"indexName":"腰臀比",
-						"indexValue":1
-					},
-					{
-						"indexName":"腰围",
-						"indexValue":80.2,
-						"indexUnit":"cm"
-					}
-				]
-			}
-		],
-		"sampleData":false,
-		"bindBodyFatScale":true,
-		"haveNewWeightRecord":false,
-		"userInfo":{
-			"userId":23412531,
-			"headImg":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLdjibSZBoU4bsB2g6qdM8nSbD4Y05uNyLkAJaoToFzsribYAvrbcauWtDztdeRwhicZicpQFWW5ftd2w/132",
-			"userName":"test.",
-			"sex":1,
-			"birthday":816537600000,
-			"height":168,
-			"unit":1
-		}
-	}
-}
-```
-<a name="kjEqt"></a>
-# 2. 查询分析对比数据接口
-url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo<br />method: POST<br />**header参数或者url参数**<br />**
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
-
-<a name="rH4mg"></a>
-##### post报文入参：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| associatedId | String | 关联账号id |  |
-| queryDateType | Integer | 查询时间类型 | 1-按日查<br />2-按周查 |
-| startTime | Date | 开始时间 |  |
-| endTime | Date | 结束时间 |  |
-| queryIndexType | Integer | 是否只查询有体脂率的数据 | 1-查询体重<br />2-查询体脂 |
-
-<a name="o3re0"></a>
-###### 示例入参：
-```json
-{
-	"queryDateType":"1",
-	"startTime":"1591891200000",
-	"endTime":"1599642344721",
-	"queryIndexType":"2"
-}
-```
-<a name="GB13a"></a>
-##### 出参:
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexInfoList | List<Object> | 指标信息趋势图数据集合 | 按时间顺序 |
-| compareExplainList | List<Object> | 重要属性对比及文案 |  |
-| indexCompareList | List<Object> | 首尾数据对比 |  |
-| targetType | Integer | 目标类型 | 1-减肥<br />2-增肥<br />3-保持 |
-
-indexInfoList：
-
-| 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| value | String | 标签值 |
-| unitName | string | 单位 |
-| measurementDate | Date | 测量时间 |
-| measurementDateText | String | 测量时间文本描述 |
-
-<a name="LWD22"></a>
-###### compareExplainList(重要属性对比及文案)：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexCompareList | List<Object> | 指标差值对象 |  |
-| title | String | 标题 |  |
-| text | String | 文案 |  |
-
-<a name="SgQuI"></a>
-###### indexCompareList(首尾数据对比)：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| label | String | 标签名称 |  |
-| labelStartValue | Double | 开始值 |  |
-| labelEndValue | Double | 结束值 |  |
-| labelUnit | String | 单位 |  |
-| labelDValue | Double | 差值 |  |
-
-<a name="oDVgs"></a>
-###### 出参报文示例：
-```json
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"indexInfoList":[
-			{
-				"value":17.3,
-				"unitName":"%",
-				"measurementDate":1592320246000,
-				"measurementDateText":"06.16"
-			},
-			{
-				"value":16.9,
-				"unitName":"%",
-				"measurementDate":1592323200000,
-				"measurementDateText":"06.17"
-			},
-			{
-				"value":17.2,
-				"unitName":"%",
-				"measurementDate":1592841600000,
-				"measurementDateText":"06.23"
-			},
-			{
-				"value":19.9,
-				"unitName":"%",
-				"measurementDate":1594828800000,
-				"measurementDateText":"07.16"
-			},
-			{
-				"value":14.7,
-				"unitName":"%",
-				"measurementDate":1595692800000,
-				"measurementDateText":"07.26"
-			},
-			{
-				"value":14.7,
-				"unitName":"%",
-				"measurementDate":1595779200000,
-				"measurementDateText":"07.27"
-			},
-			{
-				"value":17.3,
-				"unitName":"%",
-				"measurementDate":1595865600000,
-				"measurementDateText":"07.28"
-			},
-			{
-				"value":17.2,
-				"unitName":"%",
-				"measurementDate":1599638918000,
-				"measurementDateText":"09.09"
-			}
-		],
-		"compareExplainList":[
-			{
-				"differenceValueList":[
-					{
-						"label":"体重",
-						"labelUnit":"kg",
-						"labelDValue":-0.1
-					},
-					{
-						"label":"体脂率",
-						"labelUnit":"%",
-						"labelDValue":-0.1
-					}
-				],
-				"title":"体重尚无明显变化",
-				"text":"这段时间体重变化不大，继续努力哦！减重需重点关注体脂率的变化，减脂是减重的核心哦~"
-			},
-			{
-				"differenceValueList":[
-					{
-						"label":"脂肪量",
-						"labelUnit":"kg",
-						"labelDValue":0
-					},
-					{
-						"label":"肌肉量",
-						"labelUnit":"kg",
-						"labelDValue":0
-					},
-					{
-						"label":"水分",
-						"labelUnit":"kg",
-						"labelDValue":0
-					}
-				],
-				"title":"体重虽下降，但去脂体重丢失较多",
-				"text":"去脂体重（含水分/肌肉等）丢失，可能导致基础代谢下降，影响减重效果。减脂才是减重的核心，多多运动来减脂吧！"
-			}
-		],
-		"indexCompareList":[
-			{
-				"label":"BMI",
-				"labelStartValue":23.6,
-				"labelEndValue":23.6,
-				"labelUnit":"",
-				"labelDValue":0
-			},
-			{
-				"label":"体脂率",
-				"labelStartValue":17.3,
-				"labelEndValue":17.2,
-				"labelUnit":"%",
-				"labelDValue":-0.1
-			},
-			{
-				"label":"肌肉量",
-				"labelStartValue":52.3,
-				"labelEndValue":52.3,
-				"labelUnit":"kg",
-				"labelDValue":0
-			},
-			{
-				"label":"身体年龄",
-				"labelStartValue":22,
-				"labelEndValue":22,
-				"labelUnit":"岁",
-				"labelDValue":0
-			},
-			{
-				"label":"脂肪量",
-				"labelStartValue":11.5,
-				"labelEndValue":11.5,
-				"labelUnit":"kg",
-				"labelDValue":0
-			},
-			{
-				"label":"内脏脂肪等级",
-				"labelStartValue":6,
-				"labelEndValue":6,
-				"labelUnit":"等级",
-				"labelDValue":0
-			},
-			{
-				"label":"基础代谢量",
-				"labelStartValue":1561,
-				"labelEndValue":1561,
-				"labelUnit":"大卡",
-				"labelDValue":0
-			},
-			{
-				"label":"去脂体重",
-				"labelStartValue":55.2,
-				"labelEndValue":55.1,
-				"labelUnit":"kg",
-				"labelDValue":-0.1
-			},
-			{
-				"label":"肌肉率",
-				"labelStartValue":78.4,
-				"labelEndValue":78.5,
-				"labelUnit":"%",
-				"labelDValue":0.1
-			},
-			{
-				"label":"水分率",
-				"labelStartValue":56.6,
-				"labelEndValue":56.7,
-				"labelUnit":"%",
-				"labelDValue":0.1
-			},
-			{
-				"label":"骨量",
-				"labelStartValue":2.9,
-				"labelEndValue":2.9,
-				"labelUnit":"kg",
-				"labelDValue":0
-			},
-			{
-				"label":"蛋白质",
-				"labelStartValue":21.8,
-				"labelEndValue":21.7,
-				"labelUnit":"%",
-				"labelDValue":-0.1
-			},
-			{
-				"label":"骨骼肌",
-				"labelStartValue":28.9,
-				"labelEndValue":28.9,
-				"labelUnit":"kg",
-				"labelDValue":0
-			}
-		],
-		"targetType":1
-	}
-}
-```
-<a name="DsXnv"></a>
-# 3. 体重历史列表页查询
-ur: 域名 +  /weight-rest/weightRecord/getWeightListForWeek<br />method: post<br />说明：查询queryTime时间前的50条记录
-<a name="kfcfp"></a>
-##### **header参数或者url参数**
-**
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
-
-<a name="NqHhl"></a>
-##### post报文入参:
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| queryTime | Long | 查询时间戳 | 如查当前时间之前的最新一条，可不传 |
-
-<a name="S3JdT"></a>
-###### 示例:
-```json
-{
-	"queryTime":"1603266355689"
-}
-```
-**出参(List):**
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| weekValue | String | 周名称 | 例：本周，2019年09月23日2019年09月29日 |
-| avgWeight | Double | 周平均体重 |  |
-| unit | Integer | 单位 | 1-kg;2-斤;3-磅;4-英石 |
-| weightList | List<Object> | 本周详细体重列表 |  |
-
-<a name="sTiXN"></a>
-###### 体重详细信息：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | String | 体重主键id |  |
-| weight | Double | 体重 |  |
-| bmi | Double | 体质指数 |  |
-| measurementDate | Date | 测量时间 |  |
-| sourceType | Integer | 数据类型 | 0-正常数据,2-手动 |
-
-<a name="SLSwd"></a>
-###### 示例报文：
-```json
-
-{
-	"code":200,
-	"msg":"成功",
-	"data":[
-		{
-			"weekValue":"06月15日-06月21日",
-			"avgWeight":67.9,
-			"unit":1,
-			"weightList":[
-				{
-					"id":"c62c31a7175e4c98915b55ab38cab299",
-					"userId":23342312,
-					"weight":65.8,
-					"bmi":22.8,
-					"measurementDate":1592366523000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"8c580eb3965b45b2b1b731fc7d5774ef",
-					"userId":23342312,
-					"weight":66.1,
-					"bmi":22.9,
-					"measurementDate":1592366429000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				}
-			]
-		},
-		{
-			"weekValue":"06月08日-06月14日",
-			"avgWeight":66.8,
-			"unit":1,
-			"weightList":[
-				{
-					"id":"3ac825a700614bfea28ab594011f61a0",
-					"userId":23342312,
-					"weight":67.7,
-					"bmi":23.4,
-					"measurementDate":1591956243000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"e2118878f1fe4f2286f309f37bb2136b",
-					"userId":23342312,
-					"weight":67.3,
-					"bmi":23.3,
-					"measurementDate":1591953372000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"2fae05c0e7be4681b85ba04211660df4",
-					"userId":23342312,
-					"weight":67.6,
-					"bmi":23.4,
-					"measurementDate":1591949731000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"81d6d9e860344378a80cfa15c991279a",
-					"userId":23342312,
-					"weight":67.4,
-					"bmi":23.3,
-					"measurementDate":1591945604000,
-					"sourceType":0,
-					"pbf":14.1,
-					"muscle":54.9,
-					"water":59.9,
-					"bone":3,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"9e19d8713955401e833774ad97940708",
-					"userId":23342312,
-					"weight":67.2,
-					"bmi":23.3,
-					"measurementDate":1591944997000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"b6808908f83f44a8a7236949fabc9192",
-					"userId":23342312,
-					"weight":66,
-					"bmi":22.8,
-					"measurementDate":1591944932000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"330937eb417e4f5486e370501f48e3f6",
-					"userId":23342312,
-					"weight":66.1,
-					"bmi":22.9,
-					"measurementDate":1591944922000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"4b64d7bfaf444e2a8e7b42bba4ec70c5",
-					"userId":23342312,
-					"weight":65.4,
-					"bmi":22.63,
-					"measurementDate":1591777009000,
-					"sourceType":0,
-					"pbf":19.8,
-					"weightStatus":0,
-					"height":0
-				}
-			]
-		},
-		{
-			"weekValue":"06月01日-06月07日",
-			"avgWeight":67.2,
-			"unit":1,
-			"weightList":[
-				{
-					"id":"95e361c0b2944b9caf1a89952f8384fd",
-					"userId":23342312,
-					"weight":67,
-					"bmi":23.18,
-					"measurementDate":1591261683000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"42b52a92754d4478a9bb933d85b9abb3",
-					"userId":23342312,
-					"weight":67.4,
-					"bmi":23.32,
-					"measurementDate":1591160030000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"6e450d99a18e4217bf69ef90b27a54f8",
-					"userId":23342312,
-					"weight":66.7,
-					"bmi":23.08,
-					"measurementDate":1591160002000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"7ead2750eb624deaba3d2cf447183b27",
-					"userId":23342312,
-					"weight":67.2,
-					"bmi":23.25,
-					"measurementDate":1591159580000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"200bcfbce9e740c6b0ce5374cd9a4dcc",
-					"userId":23342312,
-					"weight":67.3,
-					"bmi":23.29,
-					"measurementDate":1591159505000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"4c6160ca81d247fb982f1ea6af34c256",
-					"userId":23342312,
-					"weight":67.3,
-					"bmi":23.29,
-					"measurementDate":1591157001000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				}
-			]
-		},
-		{
-			"weekValue":"05月25日-05月31日",
-			"avgWeight":68.3,
-			"unit":1,
-			"weightList":[
-				{
-					"id":"fbfd019022e447f2a279f7306db8d9e9",
-					"userId":23342312,
-					"weight":68.7,
-					"bmi":23.77,
-					"measurementDate":1590488473000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				},
-				{
-					"id":"af2338ac9cf74956884248f891413702",
-					"userId":23342312,
-					"weight":67.9,
-					"bmi":23.49,
-					"measurementDate":1590401880000,
-					"sourceType":0,
-					"weightStatus":0,
-					"height":0
-				}
-			]
-		}
-	
-	]
-}
-```
-<a name="oKTBG"></a>
-# 4. 体重详情页
-url :  域名 +  /weight-rest/bulletinBoard/getWeightRoundDetail<br />method: get
-<a name="arEuR"></a>
-##### 入参:
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | Long | 体重记录id | 必传 |
-| associatedId | String | 关联账号id |  |
-
-<a name="lixr0"></a>
-##### 出参:
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| userName | String | 用户名称 |  |
-| headImg | String | 用户头像 |  |
-| unit | Integer | 单位 | 1-kg;2-斤;3-磅;4-英石 |
-| bindBodyFatScale | boolean | 是否绑定体脂秤 |  |
-| weightList | List<Object> | 体重数据List |  |
-| healthLabelList | List<Object> | 风险解读标签 |  |
-
-<a name="SAaQd"></a>
-###### 
-<a name="in01j"></a>
-###### 体重数据：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | String | 体重主键id |  |
-| weight | Double | 体重 |  |
-| sourceType | int | 数据类型 | 0-正常,1-异常数据,2-手动,3-体重数据 |
-| bmi | Double | 体质指数 |  |
-| bmiLevelName | String | bmi等级名称 |  |
-| measurementDate | Date | 测量时间 |  |
-| bodyStyle | String | 体型 |  |
-| bodyScore | String | 身材得分名称 |  |
-| topContent | String | 整体解读 |  |
-| bmiLabelDto | Object | bmi标签对象 | 见标签数据 |
-| labelList | List<Object> | 标签List |  |
-| moodDto | Object | 心情 |  |
-
-<a name="96ThS"></a>
-###### 心情数据:
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| mood | String | 心情文字 |  |
-| images | String | 图片地址 | 多张图片，使用英文逗号分隔图片地址，多张图片，使用英文逗号分隔 |
-
-<a name="pHFv4"></a>
-###### 标签数据：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| label | String | 标签名称 |  |
-| labelValue | Double | 标签值 |  |
-| labelUnit | String | 单位 |  |
-| labelDValue | Double | 差值 |  |
-| labelDContent | String | 差值文案 |  |
-| labelLevelName | String | 等级名称 |  |
-| labelContent | String | 解读 |  |
-| labelDietaryAdvice | String | 饮食建议 |  |
-| labelSportsAdvice | String | 运动建议建议 |  |
-| levelIntervalList | List<Object> | 等级区间 |  |
-
-等级区间：
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| levelIntervalName | String | 等级区间名称 |  |
-| startValue | BigDecimal | 区间开始值 | 最左及最右无返回 |
-| endValue | BigDecimal | 区间结束值 |  |
-
-<a name="pO9hf"></a>
-###### healthLabelList(风险解读标签)
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| healthLabelName | String | 健康风险标签名 |  |
-| healthContent | String | 健康风险解读 |  |
-| indexList | List<Object> | 风险对应标签对象 |  |
-
-<a name="He2FY"></a>
-###### indexList(风险对应标签对象)
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexName | String | 标签名称 |  |
-| indexValue | BigDecimal | 标签值 |  |
-| indexUnit | String | 单位 |  |
-| indexLevel | String | 指标等级 |  |
-
-<a name="xd6Xc"></a>
-###### 示例报文：
-```json
-
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"userId":23412531,
-		"userName":"..test..",
-		"headImg":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLdjibSZBoU4bsB2g6qdM8nSbD4Y05uNyLkAJaoToFzsribYAvrbcauWtDztdeRwhicZicpQFWW5ftd2w/132",
-		"unit":1,
-		"bindBodyFatScale":false,
-		"sampleData":false,
-		"haveNewWeightRecord":false,
-		"weightList":[
-			{
-				"id":"3a46098572724f62b1b49e813078e61f",
-				"weight":66.6,
-				"sourceType":0,
-				"bmi":23.6,
-				"bmiLevelName":"理想",
-				"measurementDate":1599638918000,
-				"bodyStyle":"标准型",
-				"bodyScore":"优",
-				"topContent":"你拥有标准的健康体型。体脂率很理想；均衡膳食多运动，维持良好的肌肉量吧！",
-				"bmiLabelDto":{
-					"label":"BMI",
-					"labelValue":23.6,
-					"labelUnit":"",
-					"labelDValue":-0.1,
-					"labelDContent":"较2天前减少了0.1",
-					"labelLevelName":"理想",
-					"labelContent":"你的BMI在理想范围内。很棒，建议继续保持！记得每天均衡饮食、适量运动。",
-					"labelDietaryAdvice":"建议保持饮食均衡，保证每天热量摄入稳定，维持当前体重。",
-					"labelSportsAdvice":"建议坚持日常活动，平均每天6000步；尽量减少久坐时间，每小时起来动一动。",
-					"levelIntervalList":[
-						{
-							"levelIntervalName":"偏瘦",
-							"endValue":18.5
-						},
-						{
-							"levelIntervalName":"理想",
-							"startValue":18.5,
-							"endValue":24
-						},
-						{
-							"levelIntervalName":"偏胖",
-							"startValue":24,
-							"endValue":28
-						},
-						{
-							"levelIntervalName":"肥胖",
-							"startValue":28
-						}
-					]
-				},
-				"labelList":[
-					{
-						"label":"体脂率",
-						"labelValue":17.2,
-						"labelUnit":"%",
-						"labelDValue":-0.1,
-						"labelDContent":"较43天前减少了0.1%",
-						"labelLevelName":"理想",
-						"labelContent":"你的体脂率理想。很棒，建议继续保持！记得每天均衡饮食、适量运动。",
-						"labelDietaryAdvice":"建议保持饮食均衡，保证每天热量摄入稳定，维持当前状态。",
-						"labelSportsAdvice":"每周保持适量的有氧运动，配合力量练习，有利于将体脂率保持在理想范围内。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":10
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":10,
-								"endValue":22
-							},
-							{
-								"levelIntervalName":"偏高",
-								"startValue":22,
-								"endValue":28
-							},
-							{
-								"levelIntervalName":"超高",
-								"startValue":28
-							}
-						]
-					},
-					{
-						"label":"肌肉量",
-						"labelValue":52.3,
-						"labelUnit":"kg",
-						"labelDValue":-0.2,
-						"labelDContent":"较43天前减少了0.2kg",
-						"labelLevelName":"标准",
-						"labelContent":"你的肌肉量标准。很棒！建议继续保持。",
-						"labelDietaryAdvice":"建议继续保持碳水和优质蛋白质的摄入平衡，多食用富含蛋白质较多的食物，保证每天热量摄入稳定。",
-						"labelSportsAdvice":"力量训练（如深蹲、硬拉、俯卧撑、引体向上等）和有氧运动相结合的形式，辅以拉伸放松，增肌训练效果会更好。规律的运动训练应该至少每周3次，每次45分钟以上；但应注意预防运动损伤。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":44
-							},
-							{
-								"levelIntervalName":"标准",
-								"startValue":44,
-								"endValue":52.5
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":52.5
-							}
-						]
-					},
-					{
-						"label":"身体年龄",
-						"labelValue":22,
-						"labelUnit":"岁",
-						"labelDValue":0,
-						"labelDContent":"较43天前无变化",
-						"labelLevelName":"年轻",
-						"labelContent":"你的身体年龄比真实年龄年轻。",
-						"labelDietaryAdvice":"随着年龄的增长，身体水分和基础代谢会逐渐下降。保持健康饮食和生活方式，可以使身体看起来更年轻。",
-						"labelSportsAdvice":"推荐每天至少行走6000步，每周进行不低于150分钟中等强度的有氧运动。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"年轻",
-								"endValue":24
-							},
-							{
-								"levelIntervalName":"偏大",
-								"startValue":24
-							}
-						]
-					},
-					{
-						"label":"脂肪量",
-						"labelValue":11.5,
-						"labelUnit":"kg",
-						"labelDValue":-0.1,
-						"labelDContent":"较43天前减少了0.1kg",
-						"labelLevelName":"理想",
-						"labelContent":"你的脂肪量理想，很棒，建议继续保持！记得每天均衡饮食、适量运动哦。",
-						"labelDietaryAdvice":"建议保持饮食平衡，保证每天热量摄入稳定，维持当前状态。",
-						"labelSportsAdvice":"每周保持适量的有氧运动，配合力量练习，有利于将脂肪量保持在理想范围内。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":6.7
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":6.7,
-								"endValue":14.7
-							},
-							{
-								"levelIntervalName":"偏高",
-								"startValue":14.7,
-								"endValue":18.6
-							},
-							{
-								"levelIntervalName":"超高",
-								"startValue":18.6
-							}
-						]
-					},
-					{
-						"label":"内脏脂肪等级",
-						"labelValue":6,
-						"labelUnit":"等级",
-						"labelDValue":0,
-						"labelDContent":"较43天前无变化",
-						"labelLevelName":"理想",
-						"labelContent":"你的内脏脂肪等级理想。保持理想的内脏脂肪水平，有助于降低脂肪肝、高血压、高血脂、2型糖尿病等慢性疾病的患病风险。",
-						"labelDietaryAdvice":"推荐每日均衡摄入：适量优质蛋白质、适量碳水化合物（增加全谷物、杂豆类）、低脂肪；增加新鲜蔬菜和水果。",
-						"labelSportsAdvice":"推荐每天至少行走6000步，每周进行不低于150分钟中等强度的有氧运动。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"理想",
-								"endValue":10
-							},
-							{
-								"levelIntervalName":"偏高",
-								"startValue":10,
-								"endValue":15
-							},
-							{
-								"levelIntervalName":"较高",
-								"startValue":15,
-								"endValue":30
-							},
-							{
-								"levelIntervalName":"超高",
-								"startValue":30
-							}
-						]
-					},
-					{
-						"label":"基础代谢量",
-						"labelValue":1561,
-						"labelUnit":"大卡",
-						"labelDValue":-6,
-						"labelDContent":"较43天前减少了6.0大卡",
-						"labelLevelName":"理想",
-						"labelContent":"你的基础代谢理想，很棒！可继续保持。",
-						"labelDietaryAdvice":"建议多喝白开水，保证蛋白质和膳食纤维的摄入量。",
-						"labelSportsAdvice":"每周进行力量训练，结合有氧运动，可以刺激肌肉生长。增加身体的肌肉含量，是提升基础代谢的秘密武器。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":1550
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":1550
-							}
-						]
-					},
-					{
-						"label":"去脂体重",
-						"labelValue":55.1,
-						"labelUnit":"kg",
-						"labelDValue":-0.3,
-						"labelDContent":"较43天前减少了0.3kg",
-						"labelLevelName":"理想",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"超低",
-								"endValue":48
-							},
-							{
-								"levelIntervalName":"偏低",
-								"startValue":48,
-								"endValue":51.9
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":51.9,
-								"endValue":59.9
-							},
-							{
-								"levelIntervalName":"偏高",
-								"startValue":59.9
-							}
-						]
-					},
-					{
-						"label":"肌肉率",
-						"labelValue":78.5,
-						"labelUnit":"%",
-						"labelDValue":0.1,
-						"labelDContent":"较43天前增加了0.1%",
-						"labelLevelName":"标准",
-						"labelContent":"你的肌肉量标准。很棒！建议继续保持。",
-						"labelDietaryAdvice":"建议继续保持碳水和优质蛋白质的摄入平衡，多食用富含蛋白质较多的食物，保证每天热量摄入稳定。",
-						"labelSportsAdvice":"力量训练（如深蹲、硬拉、俯卧撑、引体向上等）和有氧运动相结合的形式，辅以拉伸放松，增肌训练效果会更好。规律的运动训练应该至少每周3次，每次45分钟以上；但应注意预防运动损伤。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":66.1
-							},
-							{
-								"levelIntervalName":"标准",
-								"startValue":66.1,
-								"endValue":78.8
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":78.8
-							}
-						]
-					},
-					{
-						"label":"水分率",
-						"labelValue":56.7,
-						"labelUnit":"%",
-						"labelDValue":0,
-						"labelDContent":"较43天前无变化",
-						"labelLevelName":"标准",
-						"labelContent":"你的水分率标准，规律的饮食和每天八杯水就可以继续保持理想的身体水分含量啦。",
-						"labelDietaryAdvice":"充足的水分可以促进新陈代谢，保持皮肤年轻，喝水时注意少量、多次地及时补充水分和电解质。",
-						"labelSportsAdvice":"推荐每天至少行走6000步，每周进行不低于150分钟中等强度的有氧运动，有利于促进身体代谢。同时需及时补充水分。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":55
-							},
-							{
-								"levelIntervalName":"标准",
-								"startValue":55,
-								"endValue":65
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":65
-							}
-						]
-					},
-					{
-						"label":"骨量",
-						"labelValue":2.9,
-						"labelUnit":"kg",
-						"labelDValue":0,
-						"labelDContent":"较43天前无变化",
-						"labelLevelName":"理想",
-						"labelContent":"你的骨量含量理想，很棒！建议继续保持。",
-						"labelDietaryAdvice":"预防骨量减少，需摄入足量的钙、蛋白质和维生素D；过量饮用酒、碳酸饮料、茶或咖啡，都可能导致钙流失或影响钙吸收，从而降低骨质量。需注意适度。",
-						"labelSportsAdvice":"预防骨量减少，需减少久坐，多活动；推荐依据自身情况增加运动量尤其是力量训练，如深蹲、俯卧撑等。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":2.9
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":2.9
-							}
-						]
-					},
-					{
-						"label":"蛋白质",
-						"labelValue":21.7,
-						"labelUnit":"%",
-						"labelDValue":0,
-						"labelDContent":"较43天前无变化",
-						"labelLevelName":"偏高",
-						"labelContent":"你的蛋白质含量偏高，摄取过量会造成体内脂肪堆积，加大肾脏排泄负担。",
-						"labelDietaryAdvice":"建议控制高蛋白食物的摄入量，适当增加谷类食物，绿叶蔬菜、水果的摄入，减轻肾脏代谢负担，避免钙过量丢失。",
-						"labelSportsAdvice":"每周进行2-3次的力量练习与不低于150分钟中等强度的有氧训练，促进体内多余的蛋白质排出，减少肾脏负荷。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":16
-							},
-							{
-								"levelIntervalName":"标准",
-								"startValue":16,
-								"endValue":20
-							},
-							{
-								"levelIntervalName":"偏高",
-								"startValue":20
-							}
-						]
-					},
-					{
-						"label":"骨骼肌",
-						"labelValue":28.9,
-						"labelUnit":"kg",
-						"labelDValue":-0.2,
-						"labelDContent":"较43天前减少了0.2kg",
-						"labelLevelName":"标准",
-						"labelContent":"你的骨骼肌标准。骨骼肌是体内有益的肌肉群，骨骼肌偏高其实是好的现象。",
-						"labelDietaryAdvice":"建议继续保持碳水和优质蛋白质的摄入平衡，多食用富含蛋白质较多的食物，保证每天营养摄入稳定。",
-						"labelSportsAdvice":"力量训练（如深蹲、硬拉、俯卧撑、引体向上等）和有氧运动相结合的形式，辅以拉伸放松，增肌训练效果会更好。规律的运动训练应该至少每周3次，每次45分钟以上；但应注意预防运动损伤。",
-						"levelIntervalList":[
-							{
-								"levelIntervalName":"偏低",
-								"endValue":26.3
-							},
-							{
-								"levelIntervalName":"标准",
-								"startValue":26.3,
-								"endValue":32.1
-							},
-							{
-								"levelIntervalName":"理想",
-								"startValue":32.1
-							}
-						]
-					}
-				],
-				"height":0,
-        "moodDto":{
-					"id":1708870,
-					"userId":23412531,
-					"weightId":"3a46098572724f62b1b49e813078e61f",
-					"mood":"？？？心情",
-					"created":1599651985000,
-					"updated":1599651984666,
-					"measurementDate":1599638918000
-				}
-			}
-		],
-		"healthLabelList":[
-			{
-				"healthLabelName":"中心型肥胖",
-				"healthContent":"肥胖不止影响体型，还会影响您的健康！世界卫生组织已将肥胖列为导致疾病负担的十大危险因素之一。\n\n若脂肪主要在腹壁和腹腔内蓄积过多，则被称为\"中心型肥胖\"，具有更高的疾病风险。一般成人达到以下任一标准即可推断为中心型肥胖。\n1.腰围：男性≥85cm，女性≥80cm；\n2.腰臀比（腰围/臀围）:男性>0.9，女性>0.8；\n\n对肥胖人群而言：\n1.出现2型糖尿病、心血管病、高血压、中风和多种癌症的风险概率远高于一般健康人群；\n2.由于过多的脂肪在肝细胞内沉积，易形成脂肪肝；\n3.易出现睡眠中重度打鼾，可能引发睡眠呼吸暂停综合征；\n4.同时还易出现骨关节病、胆囊疾病等多种疾病。",
-				"indexList":[
-					{
-						"indexName":"腰臀比",
-						"indexValue":1
-					},
-					{
-						"indexName":"腰围",
-						"indexValue":80.2,
-						"indexUnit":"cm"
-					}
-				]
-			}
-		]
-	}
-}
-```
-
-
-<a name="Mo8Kz"></a>
-# 5.上传用户的设备测量数据（数据来源于外部）
-url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty<br />method: POST<br />**header参数或者url参数**<br />**
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| associatedId | string | 第三方关联账户id | 关联账号id<br /> |
-
-<a name="TGCUU"></a>
-##### post报文入参：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| recordList | List<Object> | 设备测量记录 |  |
+- 体重管理方案基于中国营养学会《中国居民膳食指南2016》、《中国居民膳食营养素参考摄入量》、《中国成人超重与肥胖症预防与控制指南》和《中国肥胖预防和控制蓝皮书》等专业文献构建。
 
 
 
-<a name="WHRQH"></a>
-###### 设备测量记录：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
-| measurementTime | Date | 测量时间 |  |
-| weight | Double | 体重 |  |
-| resistance50k | Double | 50k电阻值 |  |
-| heartRate | Integer | 心率 |  |
+<a name="ZUsac"></a>
+## 亮点与优势
+1.科学多维的个性化数据评估，包括：
+
+- 多种健康风险解读，
+   - 如：用户体重属于“超重/肥胖”，则为用户解读相关的健康风险、饮食建议、运动建议、推荐食物等；
+- 周数据解析，
+   - 提供每周体重体脂变化解读，阶段性报告更及时；
+- 支持自由选择时段查看趋势：
+   - 科学解读体重变化，提示用户减重状态是否健康；
+- 同龄人数据对比：
+   - 基于乐智千万用户大数据，展示用户的体脂率、肌肉量等指标在同龄人中的水平，激励用户改善。
+
+*其他体重管理竞品，大多是单点干预，全方位的干预方案较少。<br />
+<br />2.吃动心+知信行，构建立体化的体重管理方案
+
+- 知、信而后行：
+   - 提供每日健康体重饮食知识科普，提升用户健康认知，让用户产生科学体重饮食的信念，从而促进行动；
+- 吃、动、心结合：
+   - 从饮食管理、运动管理和心理疏导三方面，帮助用户改善生活方式、健康管理体重；支持不同的体重管理目标，包括减重、增重和保持；
+      - 吃：
+         - 基于用户的体重、年龄、性别、基础代谢和身体活动水平，结合体重改善目标，为用户制订热量和膳食结构方案，提供推荐食谱，并给予用户饮食记录渠道，实时分析用户饮食状况，给予改善建议；
+      - 动：
+         - 给予用户个性化的运动建议，跟踪运动热量消耗，支持手动记录运动量（5月中旬将上线），鼓励用户迈开腿动起来；
+      - 心：
+         - 通过放松音乐和呼吸训练，帮助用户缓解心理情绪压力，减少因心理问题导致的不良生活方式，从而提升体重管理成效。
 
 
+<br />3. 扎根行业，赋能B端高效运营（配合顾问中心）<br />为顾问提供营销工具包，顾问可查看用户的体重变化、饮食方案和执行状况，及时监督改善。<br />
+<br />
+
+<a name="vLtnI"></a>
+# 核心产品路径
+<a name="JiMsO"></a>
+### 1.方案开启流程
+![方案开启流程.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622019290299-e3039249-15e3-49a0-897c-df6c7d915c87.png#clientId=u92ba4d21-8402-4&from=ui&id=u7c866cf6&margin=%5Bobject%20Object%5D&name=%E6%96%B9%E6%A1%88%E5%BC%80%E5%90%AF%E6%B5%81%E7%A8%8B.png&originHeight=2424&originWidth=8424&originalType=binary&size=1198660&status=done&style=none&taskId=u31e4ed82-40fa-4f0c-80fd-a7e9a51c943)
+<a name="uJWIp"></a>
+### 2.体重测量记录
+![数据测量.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622019453512-0e09fb82-1207-4727-b201-3935545cd182.png#clientId=u92ba4d21-8402-4&from=ui&id=u5c2c06ff&margin=%5Bobject%20Object%5D&name=%E6%95%B0%E6%8D%AE%E6%B5%8B%E9%87%8F.png&originHeight=4477&originWidth=6069&originalType=binary&size=1810407&status=done&style=none&taskId=u4aa88f7d-ddb7-47b8-8ecd-856c705c0ff)
+<a name="OvPvp"></a>
+### 3.查看和管理数据
+![查看数据.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622029085544-35eed96e-0d82-4fe5-bcc4-f5d2f33acb36.png#clientId=u92ba4d21-8402-4&from=ui&id=u106c406c&margin=%5Bobject%20Object%5D&name=%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE.png&originHeight=4670&originWidth=6017&originalType=binary&size=4834875&status=done&style=none&taskId=u646402fe-7c21-46dd-8912-e8f4ed9bcb9)
+<a name="bnqHd"></a>
+### 
+<a name="ozuME"></a>
+### 4.查看管理方案、快速记录饮食
+![查看方案.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622031420956-e4e9c1f9-ce49-4a17-9c3c-1bfd15b1121f.png#clientId=u92ba4d21-8402-4&from=ui&id=ud74e9744&margin=%5Bobject%20Object%5D&name=%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%A1%88.png&originHeight=6249&originWidth=3600&originalType=binary&size=2203744&status=done&style=none&taskId=u55d6ee2a-e260-4239-b220-c57f60bddb9)<br />
+
+<a name="HYj60"></a>
+# 功能概览
+<a name="FUSmJ"></a>
+### 体重方案生成流程
+用户首次进入体重业务，一次性收集体重、目标、身体活动水平等必要信息，<br /> 便于快速生成个性化智能体重管理方案，方案定制更精准、用户感知更明确；<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620725878252-12e4bb5e-27fb-49f9-9f40-a271fa095481.png#clientId=ua288b35a-fb29-4&from=paste&height=1822&id=u95b30d31&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3644&originWidth=16312&originalType=binary&size=4673824&status=done&style=none&taskId=u10b14361-5625-44ac-aeae-83fc1a92a11&width=8156)
+<a name="Hamit"></a>
+#### 
+<a name="K5ZAI"></a>
+### 体重首页
+<a name="TRfiK"></a>
+#### 【减重目标模式下】
+将整体管理方案模块化平铺呈现，管住嘴、迈开腿、好习惯、减压力、学知识，减重必备动作全部安排好。<br />
+
+<a name="rJmAa"></a>
+#### 第一屏：最新体重、目标追踪模块
+1.展现用户最新一笔体重数据情况；<br />2.新增目标追踪模块，
+
+- 加入“目标状态”图标和对应名称，如“瘦出小蛮腰”、“减掉双下巴”等等，激励用户更生动；
+- 实时生成目标进度曲线，用户可快速了解减重进展，强化成就感，鼓励用户坚持；
+- 目标进度动态提示，以“小智”的形象告知用户减重进度，提示分享成果；
+- 点击“目标状态”图标可修改目标设置。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620275904185-9240557b-14ec-42ac-90c2-5d6dcfddc5ff.png#clientId=ude2778c1-ef12-4&from=paste&height=552&id=Fu73j&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&originalType=binary&size=732100&status=done&style=none&taskId=uc45fb582-568f-4591-b42e-ea32a7c327d&width=255) ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620286544234-4d15ec46-f2ad-4eda-820b-8a6dcc5f2e16.png#clientId=u89a63c4f-6a62-4&from=paste&height=552&id=EfoKI&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&originalType=binary&size=528335&status=done&style=none&taskId=u968675ee-2262-4436-91f9-aea8d9a3ae8&width=254.9801025390625)<br />
+
+<a name="bUyae"></a>
+#### 第二屏：减重方案-管住嘴模块
+
+- 展示为用户定制的饮食方案，可查看当日热量摄入情况、整体膳食结构推荐，帮助用户控制每日饮食；
+- 提供记录入口和详细方案查看入口；
+   - 点击“记饮食”可唤起饮食速记浮层；
+   - 点击“饮食分析”跳转到饮食管理页；
+   - 点击“健康食谱”跳转到饮食管理页的“推荐食谱”模块；
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620286576794-61a2403f-d8eb-4e69-a00c-be9d5651deb9.png#clientId=u89a63c4f-6a62-4&from=paste&height=580&id=N8rIn&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2532&originWidth=1170&originalType=binary&size=350132&status=done&style=none&taskId=ub486845d-1948-4e09-b11c-ab17f7a178b&width=268) <br />
+
+<a name="dgaJF"></a>
+#### 第三屏：减重方案-好习惯、迈开腿模块
+
+- 在用户开启体重管理方案、且体重目标设置为减重模式后，系统自动为用户添加一批减重小目标，帮助用户自我督促培养良好的生活习惯，助力减重；
+- 若用户添加了健康顾问推荐的小目标，也会展示在此处；
+- “好习惯”区域每日展示用户的减重类小目标，用户可直接点击“做到了”进行打卡，无需跳转。
+- “迈开腿”模块展示用户当日的步数情况（数据来自步数业务），帮助用户自我督促运动量；以6000步为达标基准，符合《中国居民膳食指南》中对国民每日运动量的建议。
+
+
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620289265114-fed0502a-9697-4c4e-b634-90202a3384f5.png#clientId=u89a63c4f-6a62-4&from=paste&height=582&id=qJyfa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2532&originWidth=1170&originalType=binary&size=285127&status=done&style=none&taskId=ub5dca497-8cd0-4a2d-905d-e89abd8b49f&width=268.9942932128906)   ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620289480789-b26f0107-57f7-4144-ada0-cab6dea90e78.png#clientId=u89a63c4f-6a62-4&from=paste&height=582&id=IyHzo&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&originalType=binary&size=718595&status=done&style=none&taskId=u759209ab-ff87-4ae7-85f8-3534d827448&width=268.9801025390625)<br />*左图：“好习惯”未打卡样式；右图“好习惯”已打卡样式<br />
+
+<a name="UcCLE"></a>
+#### 第四屏：减重方案-学知识、减压力模块
+
+- 每日一条小知识，含饮食、运动、生活习惯等多维度，帮助用户树立健康的减肥观，强化方案执行动力；（知识来自内容社区）
+- 通过自然音乐和呼吸训练，帮助用户缓解心理情绪压力，减少因心理问题导致的不良生活方式（如暴饮暴食、熬夜、酗酒等），从而提升体重管理成效。点击自然音乐/呼吸训练，跳转到对应管理页面（来自睡眠业务）。
+
+
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620290104041-e7a54047-54da-4360-8d64-07fa7e0f27d8.png#clientId=u89a63c4f-6a62-4&from=paste&height=582&id=H4E6C&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2532&originWidth=1170&originalType=binary&size=673070&status=done&style=none&taskId=u7b0a5b43-9ddb-4b8b-afbf-77fbb8907de&width=268.99998474121094) ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620290344703-6712a9f2-b964-4c3f-836f-0579ffdddf10.png#clientId=u89a63c4f-6a62-4&from=paste&height=582&id=ETvwQ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2532&originWidth=1170&originalType=binary&size=486598&status=done&style=none&taskId=uf02c8dbb-ed57-4484-a080-b230cd0c482&width=268.991455078125)<br />
+
+<a name="mTcFi"></a>
+#### 【增重/保持目标模式下】
+与减重目标模式的区别点：
+
+- 目标模块：
+   - “保持”目标模式下，不以数据曲线的形式展现目标进度，而是实时监测用户的体重数据是否超出期望保持的范围；若超出，则立即提示用户。信息传递更高效、重点更明确；
+- 管理方案模块：
+   - 以吃、动、心组成方案模块，告知推荐摄入热量、运动建议和睡眠建议；点击饮食管理模块可以进入饮食管理页，查看详细的个性化饮食方案、记录饮食和获取分析，样式上更简约。
+
+
+<br />
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620804938840-3e7b287d-6efb-439a-9d53-3044ab35d18a.png#clientId=u19cb5138-e414-4&from=paste&height=698&id=u615e91ff&margin=%5Bobject%20Object%5D&name=image.png&originHeight=4028&originWidth=3134&originalType=binary&size=1284529&status=done&style=none&taskId=ue5c3ed0e-fda8-4552-8ca5-b6f4f94473e&width=542.9971313476562)<br />
+
+<a name="u5gmy"></a>
+### 体重记录
+<a name="RbQEL"></a>
+#### 上秤测量
+
+- 功能路径
+   - 体重首页-点击“上秤测量”按钮，进入测量页→测量完成，页面快速展示测量结果→用户可查看最新数据详情；（“上秤测量”按钮只有在用户有绑定秤后才会展示）
+
+
+
+- 功能介绍
+   - 用户进入测量页后，图文引导用户正确测量，减少数据误差；
+   - 用户上秤后，只要秤体蓝牙连接到用户手机或连接到有效wifi网络，则数据立即上报，为用户实时呈现测量结果，数据反馈更及时；
+   - 对无法直接匹配到用户历史的体重数据，判断可能是用户家人测量，直接分配给用户可能导致错分配。因此提示用户主动处理，可认领到自己账号或分配给家人账号，从而减少误分配。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620731199755-e7019ddf-1d43-4150-99d8-9c9802699d8a.png#clientId=u1f56ee02-b336-4&from=paste&height=3566&id=ExOzk&margin=%5Bobject%20Object%5D&name=image.png&originHeight=7132&originWidth=5948&originalType=binary&size=3985755&status=done&style=none&taskId=u2e26f6c7-10d7-4289-9299-e70dffcfd54&width=2974)<br />**同时支持离线测量：即用户不打开小程序，上秤测量，<br />-若蓝牙秤，则测量后数据暂存在秤体；打开小程序，只要秤体蓝牙连接到用户手机，则数据立即上报，用户即可在小程序看到近期测量的数据情况。 <br />-若wifi秤，且秤已被配置有效wifi网络，则数据直接上传到云端，用户打开小程序即可看到。
+<a name="c0ir4"></a>
+#### 
+<a name="VziAq"></a>
+#### 手动记录
+
+- 功能路径
+   - 小程序首页→体重首页→底部按钮→点击“记录体重”→编辑需要记录的体重体脂信息，点击“确认添加”
+- 功能介绍
+   - 支持手动记录体重和体脂率，用户即使没有自己的秤，在健身房/朋友家测量也能方便记录体重体脂情况。
+   - 用户未绑定秤时，
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620300521138-778a790c-650b-423e-ab2e-47227b2ed623.png#clientId=uf7342b04-82cc-4&from=paste&height=537&id=Tune3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3248&originWidth=1500&originalType=binary&size=195180&status=done&style=none&taskId=u9e6ae9e4-c447-40ad-af08-13049135a8d&width=247.98294067382812)<br />
+
+<a name="Ve1TM"></a>
+### 体重数据报告和风险改善建议
+
+- 功能路径
+   - 体重首页-更多指标→体重报告→健康建议
+- 功能介绍
+   - 详细解析各项体成分指标；基于数据评估综合健康风险；
+   - 同龄人对比功能，让用户快速知晓自己的体重在同龄人中的水平，激励用户持续改善；
+   - 基于数据评估用户的体成分风险，给出营养补充建议和生活方式调整建议；
+<a name="IKbpm"></a>
+#### ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620733649794-8ce89789-1007-4cd3-9c8a-3f6f3c3eb1a2.png#clientId=u1f56ee02-b336-4&from=paste&height=3996&id=h3IN2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=7992&originWidth=5012&originalType=binary&size=10467009&status=done&style=none&taskId=u9f228c6c-329f-4b50-9cce-c78414ef744&width=2506)
+<a name="VIPsB"></a>
+### 体重目标编辑
+
+- 功能路径
+   - 体重首页→点击“目标状态”旁的小铅笔图标→设置目标→点击“确定”保存成功
+- 功能介绍
+   - 通过设置目标，激励用户持续改善体重。有利于用户及时知晓体重管理状况，时时督促自己改善。
+   - 支持设置三种不同的体重管理模式：减重/增重/保持现状，其中减重和增重模式支持设置体重目标，保持模式支持设置保持范围，超出范围会触发提示。
+   - 支持设置“目标状态”图标和对应名称，如“瘦出小蛮腰”、“减掉双下巴”、“瘦出马甲线”等等，激励用户更生动；
+
+
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620726182746-49d07e0c-3ee8-4478-867b-dfafe6301ea7.png#clientId=ua288b35a-fb29-4&from=paste&height=1783&id=ufab41e0c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3566&originWidth=5032&originalType=binary&size=2267929&status=done&style=none&taskId=u8ef50b2b-6c2d-4af1-9d4a-f3bd09be801&width=2516)
+<a name="oc5Qd"></a>
+#### 
+<a name="zTQN4"></a>
+### 体重趋势分析
+
+- 前提：用户已记录了多天体重数据
+- 功能路径
+   - 体重首页-点击“趋势分析”→进入趋势分析页
+- 功能介绍
+   - 展示体重和体脂率数据趋势图，智能分析数据变化，向用户提供个性化健康建议；
+   - 默认展示近90天数据。可选择“近30天”、“近7天”或自定义，一键圈选想查看的时间段；
+   - 数据分析和建议角度包含：
+      - 减重速度评估： 依据《中国肥胖预防与控制蓝皮书》，健康的减重速度应控制在0.5~1kg/周；  
+      - 体成分变化评估： 判断体成分变化方向是否健康。如体重下降但体脂率上升，可能是水分或肌肉丢失过多，并不是健康的减重状态。
+   - 有利于用户及时知晓体重管理状况，时时督促自己改善。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620731688196-1f4a9eb4-51b6-48f3-bd24-e5f662586875.png#clientId=u1f56ee02-b336-4&from=paste&height=1238&id=ua4cec8e9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=6888&originWidth=1496&originalType=binary&size=3307062&status=done&style=none&taskId=u05265e4d-00bf-4589-8b88-d7fd3a09bcf&width=268.9886169433594)<br />
+<br />
+
+<a name="ZDig9"></a>
+### 
+<a name="tvzdG"></a>
+### 多用户管理
+
+- 功能路径
+   - 体重首页-用户头像→家人列表→添加家人→点击家人头像，进入家人数据页，可记录和查看体重；
+- 功能介绍
+   - 家里老人、小孩不便操作手机？支持添加无限多个虚拟家人账号，帮助家人记录体重数据、跟踪体重趋势。
+   - 全家参与健康管理，也增加保健品销售可能。
+   - 切换账号，即可为家人记录体重，查看家人的体重数据和相关分析，帮助家人改善健康。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620734417623-5f6b6209-2fe3-46f2-beae-175fd8dabab0.png#clientId=u1f56ee02-b336-4&from=paste&height=3484&id=K8o0f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=6968&originWidth=5032&originalType=binary&size=3666243&status=done&style=none&taskId=u31b12331-eda7-401a-a588-0529b29d61c&width=2516)
+<a name="rC82z"></a>
+### 
+<a name="GFXlj"></a>
+#### 
+<a name="vNKyk"></a>
+### 历史数据管理
+
+- 功能路径
+   - 体重首页-更多-历史数据
+- 功能介绍
+   - 支持用户批量删除和重分配体重历史数据，也可自由查看历史数据详情。
+   - 支持批量处理待处理的数据。（待处理数据：指与用户最近一笔体重相差较大的体重数据，系统判断可能是其他家人的称重结果，需要用户进行处理判断）
+   - 对无法匹配到用户的秤测量数据， 用户可自行认领，从而减少误分配，数据管理更自由。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620734928445-c9b95639-8ddb-4b24-b932-685bd23a19a9.png#clientId=u1f56ee02-b336-4&from=paste&height=1733&id=u3942b1bc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3466&originWidth=4780&originalType=binary&size=4635504&status=done&style=none&taskId=uc29603df-e8c2-4f8e-85e8-61f65c81db2&width=2390)<br />
+<br />
+
+<a name="s0HCL"></a>
+### 
+<a name="YwzvZ"></a>
+### 
+<a name="ZbGsu"></a>
+### 减重成果分享
+
+- 分享入口有两个，有条件展示：
+   - 1.首页目标进度位置，当用户设置了减重目标（目标开始日期非今天），且当前体重低于初始体重时，可以生成减重成果分享海报
+   - 2.体重趋势页，当用户设置了减重目标（目标开始日期非今天），且所选时间段内体重有下降，则可以生成减重成果分享海报
+- 功能路径
+   - 1.体重首页-目标进度提示文案旁的“晒成果”按钮。
+   - 2.体重趋势页-“分享”按钮
+- 功能介绍
+   - 精美图文，激励分享；支持多张背景图随机生成；可以帮助用户激发减重动力
+   - 减重成果，一目了然；强化用户的减重成就感
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620735017625-686d5ba7-a51a-45bd-bf28-cee655f00688.png#clientId=u1f56ee02-b336-4&from=paste&height=605&id=ucc514b51&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2560&originWidth=1232&originalType=binary&size=2035709&status=done&style=none&taskId=u7991537d-b272-4908-b636-b40370f063a&width=290.99432373046875)<br />
+
+<a name="S2bRP"></a>
+### 支持单位切换
+
+- 功能路径
+   - 体重首页-更多-单位切换
+- 功能介绍
+   - 支持将体重页面内的重量单位切换到千克/斤，便于用户阅读数据。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620802468259-8d704af9-f02e-4e4d-8f0e-fec4f9739861.png#clientId=u19cb5138-e414-4&from=paste&height=690&id=uc68792a0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3312&originWidth=1402&originalType=binary&size=512023&status=done&style=none&taskId=ua7c7ceae-dd5b-4fd4-be45-b9d9751397a&width=291.98577880859375)<br />
+
+<a name="TTBdF"></a>
+### 常见问题答疑
+
+- 功能路径
+   - 体重首页-更多-常见问题
+- 功能介绍
+   - 针对体脂秤测量环节常见的用户问题进行解答，帮助用户解惑，提升使用体验。
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620803432117-a362566f-ab8a-462f-8739-852f8f11739a.png#clientId=u19cb5138-e414-4&from=paste&height=697&id=u65e5f7fb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3312&originWidth=1402&originalType=binary&size=2559592&status=done&style=none&taskId=u2f2ce30b-1c44-404b-a3f7-35eefd8917a&width=294.9942626953125)<br />
+
+<a name="fn45w"></a>
+### 体重周报
+
+- 只要上周有至少2天的体重数据或饮食记录数据，即可生成周报。
+- 右上角常驻周报入口。点击进入上周周报页。
+
+
+
+<a name="DFmYV"></a>
+#### 总览
+
+- 从数据表现、饮食情况和活动情况三方面总结，包含内容：
+   - 上秤频次分析
+   - 体重趋势分析
+   - 饮食热量分析
+   - 膳食结构分析
+   - 身体活动量分析
+- 产品特色：
+   - 对用户的一周状态总结，是好是坏用四字标题和表情图标轻松传递，帮用户一秒了解上周表现；
+
+             ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614583326504-9d2f2b83-9494-480b-9bdd-66b8e7825f50.png#height=112&id=QvvKY&margin=%5Bobject%20Object%5D&name=image.png&originHeight=133&originWidth=528&originalType=binary&size=50962&status=done&style=none&width=445)
+
+   - 用户表现不佳时，适时场景化推荐保健品，实现用户与客户双赢；
+   - 图表生动展现详细数据，用户无需查看历史即可掌握数据详情；
+
+
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614582935100-888d03c2-858b-4301-bcb0-a3d8d4d467b6.png#height=2227&id=NiwBl&margin=%5Bobject%20Object%5D&name=image.png&originHeight=6140&originWidth=750&originalType=binary&size=1279338&status=done&style=none&width=272)
+<a name="JCcps"></a>
+### 
+<a name="zRJBU"></a>
+#### 上秤测量情况
+总结用户上秤频次，提出鼓励和建议。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614583158250-0bf74191-1874-49c1-b2cf-d75706b30375.png#height=246&id=FvCna&margin=%5Bobject%20Object%5D&name=image.png&originHeight=246&originWidth=473&originalType=binary&size=110871&status=done&style=none&width=473)
+<a name="cxBp4"></a>
+### 
+<a name="wnlDA"></a>
+#### 体重变化情况
+总结用户在过去一周的体重和体脂率变化情况，提出表扬/鼓励或担忧，<br />以表情图标的方式轻松传递。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614583232662-bde82ef3-7314-4681-99dd-5c4be0fa4e0f.png#height=603&id=Txvra&margin=%5Bobject%20Object%5D&name=image.png&originHeight=603&originWidth=374&originalType=binary&size=58516&status=done&style=none&width=374)<br />
+
+<a name="lfZdN"></a>
+#### 饮食热量情况
+总结用户在过去一周，有多少天的饮食记录热量超标（总摄入热量超过推荐值）。<br />若超标天数较多，则会适时推荐低卡代餐商品。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614583654901-4e357865-9bda-444d-a085-e1154d91056c.png#height=594&id=EoB4t&margin=%5Bobject%20Object%5D&name=image.png&originHeight=594&originWidth=326&originalType=binary&size=155690&status=done&style=none&width=326)<br />
+
+<a name="D257y"></a>
+#### 膳食均衡情况
+总结用户在过去一周，有多少天、分别在哪些膳食分类上存在问题。<br />若某类膳食问题较多，则会针对性推荐保健品，<br />如：用户存在多天蔬菜吃得太少的问题，会推荐补充膳食纤维的保健品。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614583809356-195fe86d-e601-4298-abf5-27a2e83ad089.png#height=585&id=MduZ7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=585&originWidth=342&originalType=binary&size=81201&status=done&style=none&width=342)<br />
+
+<a name="vmjic"></a>
+#### 身体活动量情况
+取用户上周日均步数分析，<br />若日均步数小于6000步（中国居民膳食指南推荐的每日成人适易活动量）则会警示。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1614584139841-52ad30f9-2cce-40f8-a265-a819c09cf45e.png#height=361&id=RJvnn&margin=%5Bobject%20Object%5D&name=image.png&originHeight=441&originWidth=477&originalType=binary&size=147658&status=done&style=none&width=390)<br />
+
+<a name="rEYC6"></a>
+## 
+<a name="IVoUN"></a>
+# 交付模式拆解
+1.秤sdk对接<br />2.整体方案页面嵌入客户应用，或嵌入odm小程序。<br />可拆解功能如下：
+
+| **页面** | **原生页** | **H5** | **细项** | **是否可拆解** | **嵌入给客户应用时的修改建议** | **对应内容** | **备注** |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 体重方案生成流程 |  | 是 | 个人信息确认环节 |  | 个人信息确认页，支持用户初始无性别、年龄、身高的情况。
+
+若初始无信息，默认引导文案为“点击填写“。
+
+所有信息必填。<br />若点击“下一步”发现有信息未填写，不允许进入下一页，toast提示：“请完整填写信息，方可为您生成方案” | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618298076284-ab933336-7462-4652-9ec6-1cff270ef910.png#from=paste&height=1240&id=QDbaa&margin=%5Bobject%20Object%5D&originHeight=1240&originWidth=1006&originalType=url&status=done&style=none&width=1006) |  |
+|  |  |  | 方案生成链路 |  | 针对方案生成链路，老用户的定义改为：<br />已有身高性别年龄信息，且已有体重数据，且最近一次体重目标为减重/增重，且设置过目标数值 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618299655034-b354fb7d-1414-4d24-8f02-9f5ef186c7f6.png#from=paste&height=1040&id=Q3lcE&margin=%5Bobject%20Object%5D&originHeight=1040&originWidth=1354&originalType=url&status=done&style=none&width=1354) |  |
+|  |  |  | 亮点图片 |  | 若客户不要分享海报功能，则此处图片需修改。去掉“晒成果”按钮 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618318997160-912e9768-8917-423c-b5e5-1f6f7e013e43.png#from=paste&height=975&id=qbmbf&margin=%5Bobject%20Object%5D&originHeight=975&originWidth=873&originalType=url&status=done&style=none&width=873) |  |
+|  |  |  | 目标改动后提示弹窗 | 是（若客户不要首页减重助手） | 若客户不需要首页减重助手，可以去掉这个弹窗：<br />减重目标下，在体重方案生成流程中的目标设置环节，修改目标模式后点击“下一步”后出现的目标改动后提示弹窗：
+
+原提示逻辑见右图。 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618301404726-63ec318e-1cd5-48e7-998b-c840c9c8d256.png#from=paste&height=734&id=XyTjy&margin=%5Bobject%20Object%5D&originHeight=734&originWidth=1110&originalType=url&status=done&style=none&width=1110) |  |
+| 体重首页 |  | 是 | “召唤助手“按钮 | 是（若客户不要首页减重助手） | 若客户不需要首页减重助手，可以去掉 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618299856267-9520057a-bc5a-47d7-8b78-61f4e7d2871d.png#from=paste&height=378&id=TO4du&margin=%5Bobject%20Object%5D&originHeight=378&originWidth=738&originalType=url&status=done&style=none&width=738) |  |
+|  |  |  | 健康管理方案模块（增重/保持模式下） | 是 |  |  |  |
+|  |  |  | 管住嘴模块（减重模式下） | 是 |  |  |  |
+|  |  |  | 迈开腿模块（减重模式下） | 是 |  |  |  |
+|  |  |  | 好习惯模块（减重模式下） | 是 |  |  |  |
+|  |  |  | 学知识模块（减重模式下） | 是 |  |  |  |
+|  |  |  | 减压力模块（减重模式下） | 是 |  |  |  |
+|  |  |  | 底部”编辑减重方案”按钮 | 是 |  |  |  |
+| 体重统计页 |  | 是 |  |  |  |  |  |
+| 减重成果分享海报生成页 | 是 |  |  | 是 | 若嵌入，需要改为h5页面；或去掉海报分享功能入口。
+
+分享功能入口：<br />1.体重首页-小智提醒模块“晒成果”<br />2.体重统计页-变化解读模块“分享” | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618317976763-729702a9-122e-438b-b5c9-2bcb2a78b5c5.png#from=paste&height=595&id=tEHfl&margin=%5Bobject%20Object%5D&originHeight=595&originWidth=467&originalType=url&status=done&style=none&width=467) |  |
+|  |  |  |  |  |  | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618318024490-dc196205-d53b-4a88-a7e9-4898d500ad7e.png#from=paste&height=850&id=ehHGq&margin=%5Bobject%20Object%5D&originHeight=850&originWidth=580&originalType=url&status=done&style=none&width=580) |  |
+| 上秤测量页 |  | 是 |  | 是 | 若去掉，需同步去掉体重首页的入口按钮。 |  |  |
+| 体重测量结果页（被动/主动测量后出现） |  | 是 |  | 是 |  |  |  |
+| 手动记录体重页 |  | 是 |  |  | 若客户没有采购秤设备，可去掉“绑秤测量”按钮 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618317290337-5d4ef446-8008-41fd-80cf-c059d49a8a4f.png#from=paste&height=928&id=FairU&margin=%5Bobject%20Object%5D&originHeight=928&originWidth=421&originalType=url&status=done&style=none&width=421) |  |
+| 体重目标编辑页 |  | 是 |  |  | 减重目标下，若客户不要首页减重助手，去掉在“目标设置页”点击“确定”后出现的目标改动后提示弹窗：
+
+原提示逻辑见右图。 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618301404726-63ec318e-1cd5-48e7-998b-c840c9c8d256.png#from=paste&height=734&id=PVLVg&margin=%5Bobject%20Object%5D&originHeight=734&originWidth=1110&originalType=url&status=done&style=none&width=1110) |  |
+| 体重详情页（体重报告页） |  | 是 |  |  |  |  |  |
+| 健康建议页 |  | 是 |  | 是 | 若删除，则需同步删除体重详情页上的入口按钮。 |  |  |
+| 体重历史数据页 |  | 是 |  |  |  |  |  |
+| 体重周报页 |  | 是 |  | 是 | 若去掉，需同步去掉体重首页的入口按钮。<br />此页面中的商品推荐模块可摘除。 |  |  |
+| 体围记录页 |  | 是 |  | 是 | 若去掉，需同步去掉体重首页的入口按钮。 |  |  |
+| 体围记录引导页 |  | 是 |  | 是 |  |  |  |
+| 体围数据列表页 |  | 是 |  | 是 | 若去掉，需同步去掉体重首页的入口按钮。 |  |  |
+| 体重新增家人/家人信息编辑页 |  | 是 |  |  |  |  |  |
+| 体重单位切换页 |  | 是 |  |  |  |  |  |
+| 体重成员列表页 |  | 是 |  |  |  |  |  |
+| 体重帮助页 |  | 是 |  | 是 | 可删除右图中文字链 | ![](https://cdn.nlark.com/yuque/0/2021/png/349268/1618318477558-a67f2e06-5630-4a1a-bc21-73ce8216d52d.png#from=paste&height=1116&id=jNEAq&margin=%5Bobject%20Object%5D&originHeight=1116&originWidth=536&originalType=url&status=done&style=none&width=536) |  |
+| 体重家人数据页 |  | 是 |  |  |  |  |  |
+| 客态体重报告页（分享卡片点击进入） |  | 是 |  | 是 | 若h5形式嵌入客户应用，则嵌入内容不包含该页面 |  |  |
+
+
+
+<a name="i24Xz"></a>
+# 常见问题
+<a name="eMbua"></a>
+### 硬件相关
+<a name="joB7b"></a>
+#### 为何有时无法测量到体脂率等数据？
+以下情况可能导致无脂肪数据，请尽量避免哦：<br />1.穿鞋或穿袜子上秤测量。（会导致脚底未接触导电电极，无法测量脂肪等数据）<br />2.测量时过快下秤；<br />3.秤的电量过低。<br />
+
+<a name="vqLpM"></a>
+#### 如何获得更准确的体脂等体成分测量数据？
+1.请将秤放在坚硬平整的水平地面。放在软地板、地毯或弹簧垫等软质材料上易凹陷，导致数据不准；<br />2.脱掉鞋袜，赤裸双脚充分接触秤面，保持脚底干燥，平稳站在秤上停留数秒，等待秤数据稳定；<br />3.请每天尽量在起床后3小时，或饭后3小时后的同一时间、同一条件下测量。<br />因身体状态的变化会影响测量值，一天早晚不同时间点，测量值也会有些微不同。<br />4.体脂率、身体年龄等指标的计算，需基于您的性别、年龄和身高信息。<br />请保证您填写的基础信息准确无误。<br />
+
+<a name="hsxFO"></a>
+#### 为什么有时候测量体重会有偏差呢？
+首次使用或搬动位置后第一次使用，秤会自动调试，所称量的数据包括产品自身重量，因此称重数据可能会产生偏差；<br />请将秤置于平稳坚硬地面，按压秤体使其开机，待显示0.0后再测量即可。<br />
+
+<a name="xw9CX"></a>
+#### 蓝牙秤数据无法上传？
+手机开启蓝牙，进入APP，秤体蓝牙图标常亮表示数据发送成功。<br />称重后，可在APP首页下拉刷新，或等待PUSH消息通知，查看称重结果。<br />
+<br />无法上传数据请按以下步骤检查：<br />1.秤是否能被点亮，若不能请更换电池后重试；<br />2.手机蓝牙是否开启；<br />3.手机网络是否畅通？推荐4G或WIFI；<br />4.进入“我的-我的设备”页，查看设备是否处于蓝牙连接状态；若否则请尝试重连。<br />5.检查是否有其他家人的手机与该设备处于蓝牙连接状态。若有则需家人手机先断开连接；<br />6.尝试重启APP或手机；<br />7.尝试重启秤试试。长按秤背后按钮，直到屏幕上显示clr标识，重启后需重新绑定。<br />8.若以上都无法解决，请联系客服取得人工支持。<br />
+
+<a name="zTXyH"></a>
+#### WIFI秤数据无法上传？
+上秤后，等待秤面WIFI图标常亮，表示数据发送成功。<br />称重后，可在APP首页下拉刷新，或等待PUSH消息通知，查看称重结果。<br />
+<br />无法上传数据请按以下步骤检查：<br />1.秤是否能被点亮，若不能请更换电池后重试；<br />2.请检查秤面上WIFI图标是否常亮。若没有常亮，则进入“我的-我的设备” 页，进入该设备页面进行WIFI配置。<br />3.手机网络是否畅通？推荐4G或WIFI；<br />4.请尝试重启APP或手机；<br />5.尝试重启秤试试。长按秤背后按钮，直到屏幕上显示clr标识，重启后需重新绑定。<br />6.若以上都无法解决，请联系客服取得人工支持。<br />
+
+<a name="IBbyj"></a>
+#### 以下情况请避免测量，会导致数据不准
+1.暴饮暴食后；<br />2.激烈运动大量出汗后；<br />3.出现极度脱水症状；<br />4.桑拿或沐浴后，未擦干身体水分时；<br />5.大量饮酒/饮水后；<br />6.身体过凉、血液循环不通畅时。<br />
+
+<a name="lScei"></a>
+#### 适用人群注意
+以下类型的测量者，体脂率可能会异于一般水平，<br />建议将其结果仅作为分析体脂率变化的参考值；<br />1.成长期儿童；<br />2.健美运动员、职业运动员等；<br />3.怀孕或哺乳中的女性；<br />4.做人工透析治疗的患者、有浮肿症状的患者等；<br />5.行动不便的人和高龄者。<br />
+
+<a name="iVBCe"></a>
+#### 为什么用乐心秤和别家的秤测量出来，数据差异很大？
+体脂秤通过测量体重和电阻抗值，结合个人信息，通过一套计算公式推断肌肉、水分、脂肪等体成分重量。到目前为止，水下称重法、DEXA被称为体成分测量金标准，但这些金标准的重复实验结果也存在差异。目前没有任何仪器能给出体成分绝对正确和标准的答案。<br />各家体成分计算方法都是不一样的，无论我们还是华为、小米、清华同方都有自己的算法，即使拿清华同方和小米、华为对比也会有差异。用户能做的最好的事情不是关心不同设备之间的差异，而是关注同一设备在长时间测量值的相对变化。数据的相对变化比单一测量的绝对值更有意义。<br />
+
+<a name="XBWNi"></a>
+### 数据相关
+<a name="uue3O"></a>
+#### 为什么我的肌肉量偏低，但是显示蛋白质偏高？
+蛋白质不止存在于肌肉里，人体的每个组织：毛发、皮肤、肌肉、骨骼、内脏、大脑、血液、神经、内分泌等都会有蛋白质组成。因此肌肉量是否标准与蛋白质是否正常需区分看待。<br />蛋白质若存在偏高的评估，可以通过调节饮食、适量减少高蛋白食物、增加蔬菜水果等方式尝试改善。增加力量训练和有氧训练，促进体内多余的蛋白质排出，减少肾脏负荷。<br />
 
 
