@@ -79,7 +79,7 @@
 - 目标进度动态提示，以“小智”的形象告知用户减重进度，提示分享成果；
 - 点击“目标状态”图标可修改目标设置。
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620275904185-9240557b-14ec-42ac-90c2-5d6dcfddc5ff.png#clientId=ude2778c1-ef12-4&from=paste&height=552&id=tFron&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&originalType=binary&size=732100&status=done&style=none&taskId=uc45fb582-568f-4591-b42e-ea32a7c327d&width=255) ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620286544234-4d15ec46-f2ad-4eda-820b-8a6dcc5f2e16.png#clientId=u89a63c4f-6a62-4&from=paste&height=552&id=S2zpv&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2337&originWidth=1080&originalType=binary&size=528335&status=done&style=none&taskId=u968675ee-2262-4436-91f9-aea8d9a3ae8&width=254.9801025390625)<br />
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622188353307-de3feb29-5824-41da-bf58-b8ed9c00217b.png#clientId=u3be4b864-773f-4&from=paste&height=575&id=u9e1c1095&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1150&originWidth=1694&originalType=binary&size=411164&status=done&style=none&taskId=u20bb3b72-d3ca-42dd-8155-e19e05e2211&width=847)<br />
 
 <a name="pJikA"></a>
 #### 第二屏：减重方案-管住嘴模块
