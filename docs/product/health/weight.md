@@ -131,8 +131,6 @@
    - 以吃、动、心组成方案模块，告知推荐摄入热量、运动建议和睡眠建议；点击饮食管理模块可以进入饮食管理页，查看详细的个性化饮食方案、记录饮食和获取分析，样式上更简约。
 
 
-<br />
-<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622440650785-49ecf1fa-6196-4d84-9877-e6803e959e22.png#clientId=u1ba4f7cd-7e3f-4&from=paste&height=1284&id=ub2199523&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1284&originWidth=1420&originalType=binary&size=285695&status=done&style=none&taskId=u87d6bf5b-9c92-4316-9d0e-951570f509a&width=1420)<br />
 
 <a name="u5gmy"></a>
 ### 体重记录
