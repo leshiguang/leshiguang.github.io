@@ -1,6 +1,6 @@
-- [内容社区](/product/operation/)
+- [内容社区](/product/operation/neirongshequ)
 - [小习惯](/product/operation/)
-- [小时光](/product/operation/)
+- [小时光](/product/operation/xiaoshiguang)
 - [步数挑战赛](/product/operation/)
 - [顾问中心（直销版）](/product/operation/counselor)
 - [顾问中心（社群版）](/product/operation/communitycounselor)
