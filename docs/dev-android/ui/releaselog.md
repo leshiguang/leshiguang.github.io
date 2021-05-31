@@ -8,6 +8,7 @@
 | 2020-12-31 | 0.1.2 | [lifesense-android-health-service](https://github.com/leshiguang/maven-repository/packages/492064) | 初始版本 |
 | 2021-03-30 | 0.1.3 | [lifesense-android-health-service](https://github.com/leshiguang/maven-repository/packages/492064) | 替换新的蓝牙sdk，优化接入过程 |
 | 2021-03-31 | 0.1.4 | [lifesense-android-health-service](https://github.com/leshiguang/maven-repository/packages/492064) | 增加更新设置、登出、获取绑定设备信息接口 |
+| 2021-05-31 | 0.1.6 | [lifesense-android-health-service](https://github.com/leshiguang/maven-repository/packages/492064) | 增加跳转顾问中心接口，增加分享功能 |
 
 
 
