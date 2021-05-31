@@ -8,7 +8,7 @@
 - [运动管理](sm)
 - [家人互联](fc)
 - [全面风险评估](/product/health/healthEvaluate)
-- [免疫力管理](mainyili)
+- [免疫力管理](/product/health/immunityEvaluate)
 - [设备管理](/product/health/equipment)
 
 
