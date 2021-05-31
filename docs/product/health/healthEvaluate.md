@@ -76,7 +76,7 @@
 
 <a name="DQHLB"></a>
 ## 评估历史页
-![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191560802-ff713061-e9bb-45e6-9d67-44815f0822f6.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=kGRTH&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=47402&status=done&style=stroke&taskId=u96c19baa-d076-4f6e-a236-d4dfa88f07e)<br />评估历史页，可展示用户历史上的每一次全面风险评估结果，包括历史评估的健康生活指数级对应的等级。<br />点击“查看结果”，可查看该次历史评估的详细评估结果。<br />​<br />
+![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191560802-ff713061-e9bb-45e6-9d67-44815f0822f6.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=kGRTH&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=47402&status=done&style=stroke&taskId=u96c19baa-d076-4f6e-a236-d4dfa88f07e)<br />评估历史页，可展示用户历史上的每一次全面风险评估结果，包括历史评估的健康生活指数级对应的等级。<br />点击“查看结果”，可查看该次历史评估的详细评估结果。
 <a name="nNRhH"></a>
 # 产品交付能力
 <a name="xdSog"></a>
@@ -113,7 +113,7 @@
 若客户需要进行商品推荐，则在接入商城后，可以正常使用全面风险评估的全部功能。<br />评估结果页的商品推荐，按照“健康风险标签-商品”的对应关心进行推荐，即，评估结果页的商品推荐位，会根据用户命中的健康风险标签，选取相同名称分组的商品进行推荐。<br />![演示文稿6.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622202584044-86f73f75-f863-4cf7-a1d7-05a6f913b114.jpeg#clientId=u0937555a-9e20-4&from=ui&id=UoGJB&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF6.jpg&originHeight=720&originWidth=1280&originalType=binary&size=57971&status=done&style=stroke&taskId=u1ac5a650-a93a-4c3f-a188-fe806eb6a09)
 <a name="Zw6tO"></a>
 ### 未接入商品推荐能力
-若客户不需要进行商品推荐，则无需额外配置，结果页会自动隐藏相关商品推荐<br />​<br />
+若客户不需要进行商品推荐，则无需额外配置，结果页会自动隐藏相关商品推荐
 <a name="GrZiW"></a>
 # Q&A
 Q：全面风险评估测评的结果可靠吗？<br />A：全面风险评估所使用的模型是由乐智健康与国家工程院陈君石院士旗下的专业健康管理团队共同打造的，拥有权威机构背书认证，更适合国人，结果准确可靠。<br />​
