@@ -9,4 +9,5 @@
    - [H5页面集成](/develop-native/ios/simpleui)
 - 微信小程序开发指南
    - [蓝牙](/develop-native/wx-mini/bluetooth)
+   - [页面集成](/develop-native/wx-mini/ui)
 
