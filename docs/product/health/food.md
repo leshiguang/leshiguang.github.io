@@ -29,7 +29,7 @@
 <a name="rEYC6"></a>
 ## 
 
-<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622097892893-32a3d39a-e891-4db8-81b6-83c34015c8aa.png#clientId=u8b7d794d-ae30-4&from=paste&height=390&id=u3c36e066&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3990&originWidth=4946&originalType=binary&size=3867227&status=done&style=none&taskId=uf2e1d79b-0c99-4f00-8bee-4b76e7f7c86&width=484)<br />
+<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622443111946-5792ea45-38da-4e64-ab82-1abf17dc6961.png#clientId=u690c88c9-8f38-4&from=paste&height=879&id=u522ac0a1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=879&originWidth=1745&originalType=binary&size=339989&status=done&style=none&taskId=u9d9cde71-52c3-41d1-babf-5c829200b14&width=1745)<br />
 
 <a name="LD9Mh"></a>
 ### 3.饮食分析和分享
@@ -62,7 +62,6 @@
 - 食谱与中国营养学会会员、原浙大医学院附属第二医院临床营养师金星老师共创。
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1622441722374-7b43f3da-5c73-4848-96b9-ec54066add05.png#clientId=u4f2aa5df-6409-4&from=paste&height=726&id=uf3888ea9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1452&originWidth=2036&originalType=binary&size=742241&status=done&style=none&taskId=u109a8753-83c4-4e9a-9a7e-a81955ae9b6&width=1018) <br />
-<br />
 
 <a name="lIjxC"></a>
 ### 饮食记录
@@ -74,7 +73,7 @@
 
 - 可查看每个食物条目对应的营养素、热量信息；
 
-    <br />
+    
 
 - 提供十几种主流食物的标准份量图，方便用户估算食物份量，更精确地记录。 
 
@@ -86,30 +85,18 @@
 - 基于此，我们上线速记功能，用户仅需选择食物分类和大概体积即可进行记录，大大降低用户记录饮食的成本。
 
 
-<br />
 <br />用户仅需选择食物分类和大概体积即可进行记录，快捷方便；大大降低用户记录追踪日常饮食的成本。<br />
-<br />
-<br />
-<br />**3.查看饮食记录**<br />用户可便捷查看每餐饮食记录，支持再次编辑和删除<br />
-<br />
-
+<br />**3.查看饮食记录**<br />用户可便捷查看每餐饮食记录，支持再次编辑和删除
+<a name="d1UQ9"></a>
+### 
 <a name="XLe85"></a>
 ### 饮食分析
 对用户当日的热量摄入和各类膳食分布情况进行评价分析。<br />
 
 - 从全天热量、各餐热量等方面，评估用户摄入是否过多或过少；
 - 将用户记录的食物智能分配到各类膳食种类中，去评估每类膳食是否摄入过少或过多，给予用户实时反馈。
-
-      
-
-- 饮食记录后有弹窗即时反馈，分析当日饮食重点，提示改善方向。
-
- 
-
+- 饮食记录后有弹窗即时反馈，分析当日饮食重点，提示改善方向。 
 - 动态个性化饮食tips，提示当日膳食问题和对应建议，帮助用户及时调整。
-
-
-
 <a name="UfCOT"></a>
 #### 
 <a name="kcwRf"></a>
@@ -118,8 +105,6 @@
 - 支持将当日饮食记录生成分享海报，晒出当日饮食的热量分布和膳食结构情况，提升用户健康饮食的成就感，增加互动可能。
 
 
-<br />
-<br />
 
 <a name="zGHFz"></a>
 ## 食物库介绍
