@@ -13,8 +13,7 @@
 结合用户健康风险标签，为用户提供个性化改善方案，并从专业健康角度提升商品转化<br />![幻灯片2.JPG](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622456113765-05f7f489-51c3-4775-bbcb-040b4e1964c3.jpeg#clientId=u77077569-8ecd-4&from=ui&id=O7NnB&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%872.JPG&originHeight=720&originWidth=1280&originalType=binary&size=163195&status=done&style=stroke&taskId=ud21e02da-2cca-4769-bded-8aae22275cd)
 <a name="m071k"></a>
 # 产品关键路径
-<a name="MaHUt"></a>
-# ![幻灯片7.JPG](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622456125007-798decc0-d4a8-4697-9d62-2ff8d799a2c0.jpeg#clientId=u77077569-8ecd-4&from=ui&id=bZt6Z&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%877.JPG&originHeight=720&originWidth=1280&originalType=binary&size=170767&status=done&style=stroke&taskId=uf29053a9-f683-4d2d-914b-0f76ef7829f)
+![幻灯片7.JPG](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622456125007-798decc0-d4a8-4697-9d62-2ff8d799a2c0.jpeg#clientId=u77077569-8ecd-4&from=ui&id=bZt6Z&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%877.JPG&originHeight=720&originWidth=1280&originalType=binary&size=170767&status=done&style=stroke&taskId=uf29053a9-f683-4d2d-914b-0f76ef7829f)
 <a name="TGuYf"></a>
 # 产品模块详解
 <a name="IxVSA"></a>
