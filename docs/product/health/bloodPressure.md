@@ -17,8 +17,9 @@
 通过深度统计与分析，发现血压阶段性的升降趋势、波动变化；每周自动推送控压周报，结合打卡及宣教，易读易懂<br />![血压-文档中心.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/336715/1622519942529-d267960e-2bb4-4977-b928-d9a7cedeef3c.jpeg#clientId=u945db72a-3b0f-4&from=ui&id=u854ea223&margin=%5Bobject%20Object%5D&name=%E8%A1%80%E5%8E%8B-%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.jpg&originHeight=1080&originWidth=1920&originalType=binary&size=172424&status=done&style=none&taskId=u8bcd2849-0e51-44a4-a509-99fd6912915)
 <a name="qnMd3"></a>
 # 产品关键路径
-<a name="cSkVH"></a>
-# ![image.png](https://cdn.nlark.com/yuque/0/2021/png/336715/1621911779039-0f36fc00-75c2-4b6c-a585-a1c9befaf20b.png#clientId=u7e9bfdf6-1368-4&from=paste&id=uf2528207&margin=%5Bobject%20Object%5D&name=image.png&originHeight=990&originWidth=2080&originalType=binary&size=1074638&status=done&style=none&taskId=u5dd73100-e0fb-4825-a476-6dc54ff2200)产品模块详解
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/336715/1621911779039-0f36fc00-75c2-4b6c-a585-a1c9befaf20b.png#clientId=u7e9bfdf6-1368-4&from=paste&id=uf2528207&margin=%5Bobject%20Object%5D&name=image.png&originHeight=990&originWidth=2080&originalType=binary&size=1074638&status=done&style=none&taskId=u5dd73100-e0fb-4825-a476-6dc54ff2200)
+<a name="whaSW"></a>
+# 产品模块详解
 <a name="Hhfwd"></a>
 ## 核心流程1：数据上传及展示流程
 <a name="Dd5dH"></a>
