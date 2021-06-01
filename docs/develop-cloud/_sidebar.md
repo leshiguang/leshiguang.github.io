@@ -46,6 +46,7 @@
 - 乐智云算法
    - [体脂](/develop-cloud/algorithm/fat)
    - [睡眠分析](/develop-cloud/algorithm/sleep)
+   - [心率](/develop-cloud/algorithm/heartrate)
 
 
 
