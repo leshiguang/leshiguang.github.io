@@ -7,7 +7,7 @@
 - [血糖](bs)
 - [营养管理](nm)
 - [免疫力管理](/product/health/immunityEvaluate)
-- [运动管理](sm)
+- [运动管理](/product/health/sportManagement)
 - [家人互联](fc)
 - [设备管理](/product/health/equipment)
 
