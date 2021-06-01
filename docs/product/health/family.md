@@ -14,9 +14,9 @@
 
 - **关怀倍显温暖，营销富有温度**
 
-基于家人的健康风险标签，推荐个性化AI改善方案，可精准推荐辅助改善的保健品等。同时通过健康知识相关科普活动、健康行为打卡、家庭专属激励等鼓励家庭成员养成良好的健康生活方式
-<a name="Nr9pX"></a>
-# ![家人互联-文档中心.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/336715/1622527185056-1f5ded8d-331d-42f8-bd34-1a3261d32dc1.jpeg#clientId=u133e388e-f180-4&from=ui&id=u42a6432f&margin=%5Bobject%20Object%5D&name=%E5%AE%B6%E4%BA%BA%E4%BA%92%E8%81%94-%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.jpg&originHeight=1080&originWidth=1920&originalType=binary&size=172764&status=done&style=none&taskId=u1768a9d8-6ace-4951-bf8a-f1c49ee11b4)产品关键路径
+基于家人的健康风险标签，推荐个性化AI改善方案，可精准推荐辅助改善的保健品等。同时通过健康知识相关科普活动、健康行为打卡、家庭专属激励等鼓励家庭成员养成良好的健康生活方式<br />![家人互联-文档中心.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/336715/1622527185056-1f5ded8d-331d-42f8-bd34-1a3261d32dc1.jpeg#clientId=u133e388e-f180-4&from=ui&id=u42a6432f&margin=%5Bobject%20Object%5D&name=%E5%AE%B6%E4%BA%BA%E4%BA%92%E8%81%94-%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.jpg&originHeight=1080&originWidth=1920&originalType=binary&size=172764&status=done&style=none&taskId=u1768a9d8-6ace-4951-bf8a-f1c49ee11b4)
+<a name="QupDn"></a>
+# 产品关键路径
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/336715/1622095698597-71215dc0-fbee-4a64-b1ef-7509e5a36643.png#clientId=u1cdb0bb9-8c01-4&from=paste&height=503&id=ubb3cb838&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1006&originWidth=2000&originalType=binary&size=785003&status=done&style=none&taskId=u70afb20c-90db-40b2-adec-99cf4ba6e82&width=1000)
 <a name="KGUIs"></a>
 # 产品模块详解
