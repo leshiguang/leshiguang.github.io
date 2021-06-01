@@ -26,4 +26,30 @@
 }
 
 ```
+<a name="NbyEh"></a>
+## 2. 会员解绑顾问
+**URL**：域名 +  /api/family/v1.0/counselorModification/unbindTenantCounselor<br />**类型**：POST
+<a name="KSgW4"></a>
+##### URL入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 会员关联账号id | 标识对接用户，双方约定字段 |
+
+<a name="r95Wq"></a>
+##### POST报文入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| counselorAssociatedId | String | 顾问关联账号ID | 必传 |
+
+<a name="dFeXs"></a>
+##### 出参:
+无<br />
+<br />示例返回报文：
+```json
+{
+	"code":200,  //200-成功  81000-指定顾问不存在或未开通顾问身份
+	"msg":"成功"
+}
+
+```
 
