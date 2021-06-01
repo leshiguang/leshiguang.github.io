@@ -66,12 +66,12 @@
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/785995/1622169249387-393fa476-011b-452b-9c20-d4fd3551f91e.png#clientId=uc78d3281-399c-4&from=paste&height=1624&id=ue5d3ff98&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1624&originWidth=2750&originalType=binary&size=918928&status=done&style=none&taskId=u5f006e9f-e718-4afc-8be2-3027768c4c5&width=2750)
 <a name="XFkQR"></a>
 # 产品交付能力
-<a name="EJz2M"></a>
+<a name="G3HOU"></a>
 ## 仅硬件上传的版本交付
-     在支持硬件的对接场景中，系统支持硬件实现硬件绑定流程及硬件相关操作指南及常见问题的呈现。同时硬件上传或发起的运动数据中，手环能够监测到运动心率，其他外置连接硬件能够传输运动时长、卡路里等数据。硬件的运动记录采用直接上传的方式，更加快捷有效。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/785995/1622108500244-cbbc708e-9893-4da8-a086-895b8bb1253e.png#clientId=ue3d99230-5f11-4&from=paste&height=3994&id=u1f28e5fb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3994&originWidth=2750&originalType=binary&size=1165143&status=done&style=none&taskId=u688c49f4-103f-4113-b91b-a70e6bf1a5d&width=2750)
+在支持硬件的对接场景中，系统支持硬件实现硬件绑定流程及硬件相关操作指南及常见问题的呈现。同时硬件上传或发起的运动数据中，手环能够监测到运动心率，其他外置连接硬件能够传输运动时长、卡路里等数据。硬件的运动记录采用直接上传的方式，更加快捷有效。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/785995/1622108500244-cbbc708e-9893-4da8-a086-895b8bb1253e.png#clientId=ue3d99230-5f11-4&from=paste&height=3994&id=u1f28e5fb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3994&originWidth=2750&originalType=binary&size=1165143&status=done&style=none&taskId=u688c49f4-103f-4113-b91b-a70e6bf1a5d&width=2750)
 <a name="UuTyr"></a>
 ## 仅手动记录的版本交付
-     在不支持硬件的对接场景中，系统支持快速跳转到手动记录页面。保证数据的多样化上传，不使用硬件的客户也能够正常记录日常的身体活动，不会对结果分析造成影响。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/785995/1622108487140-42384a82-f46d-4da5-8f37-05312f601b59.png#clientId=ue3d99230-5f11-4&from=paste&height=3994&id=u7dbe1b5b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3994&originWidth=3916&originalType=binary&size=1086034&status=done&style=none&taskId=u9192db67-1f42-44f8-8233-e17895e01a4&width=3916)<br />​<br />
+在不支持硬件的对接场景中，系统支持快速跳转到手动记录页面。保证数据的多样化上传，不使用硬件的客户也能够正常记录日常的身体活动，不会对结果分析造成影响。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/785995/1622108487140-42384a82-f46d-4da5-8f37-05312f601b59.png#clientId=ue3d99230-5f11-4&from=paste&height=3994&id=u7dbe1b5b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3994&originWidth=3916&originalType=binary&size=1086034&status=done&style=none&taskId=u9192db67-1f42-44f8-8233-e17895e01a4&width=3916)<br />​<br />
 <a name="E22yr"></a>
 ## 硬件上传+手动记录的版本交付
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/785995/1622108469661-3baa1b98-bb77-44f6-955e-5b1ce829b52d.png#clientId=ue3d99230-5f11-4&from=paste&height=5798&id=u67aba0a0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=5798&originWidth=3954&originalType=binary&size=1729728&status=done&style=none&taskId=u0bb17e10-cefd-449b-9132-672746e6e3d&width=3954)<br />
