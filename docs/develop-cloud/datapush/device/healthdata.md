@@ -1,8 +1,43 @@
 <a name="XS3wZ"></a>
 # 1.WIFI体脂称
 
-<br />待补充<br />
 
+<a name="Ily58"></a>
+## 1.1 体脂称测量数据推送
+| eventKey | **dataPush** |
+| --- | --- |
+| dataTypeKey | **dWeight** |
+
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方（data参数解释） |
+| **deviceId** | data | String | 设备id |
+| sn | data | String | 设备sn |
+| **measureEpochMilli** | data | Long | 测量时间（毫秒值） |
+| **weight** | data | double | _体重（单位kg）_ |
+| **resistance50k** | data | double | _阻抗值_ |
+| **heartRate** | data | Integer | 心率 |
+| **timeZone** | data | String | 时区(非必须返回) |
+
+2）推送数据样例样例
+```json
+{
+  "dataTypeKey": "dWeight",
+  "eventKey": "dataPush",
+  "pushStatus": 1,
+  "data": {
+    "deviceId": "00010610c37b",
+    "sn": "1571237813568931",
+    "heartRate": 90,
+    "measureEpochMilli": 1606455623387,
+    "weight": 62.5,
+    "resistance50k": 511,
+    "timeZone": "Asia/Shanghai"
+  }
+}
+```
 <a name="yvcMW"></a>
 # 2.WIFI/NB/GPRS血压计
 
