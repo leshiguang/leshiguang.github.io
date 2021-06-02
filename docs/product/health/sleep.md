@@ -64,9 +64,7 @@
 在不支持硬件（手环）的对接场景中，系统支持手动记录睡眠数据+评估功能。不对接硬件的客户也能够正常记录日常的睡眠数据，及阶段评估。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_手动与评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637679466-b906a9c6-7184-4c22-b773-8529328016b6.png#clientId=ue9c8fabf-93de-4&from=drop&id=Guewv&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E6%89%8B%E5%8A%A8%E4%B8%8E%E8%AF%84%E4%BC%B0.png&originHeight=8992&originWidth=7312&originalType=binary&size=7284329&status=done&style=none&taskId=u83bf9815-440d-43ff-a443-4406923cb95)
 <a name="EV1Fa"></a>
 ## 仅评估（音频可选）交付版本
-仅对接睡眠状况全面评估的版本，不支持日常睡眠数据监测记录。其中，音频相关概念涉及到原生页面，交付时可选。
-<a name="FX6nv"></a>
-## ![睡眠_纯评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637199496-9e89459d-c65d-4592-be2f-df0789c484df.png#clientId=ue9c8fabf-93de-4&from=drop&id=ecPsw&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E7%BA%AF%E8%AF%84%E4%BC%B0.png&originHeight=5646&originWidth=5037&originalType=binary&size=4392891&status=done&style=none&taskId=u4f4935dd-6980-47ca-b784-91f9ec8bc6e)
+仅对接睡眠状况全面评估的版本，不支持日常睡眠数据监测记录。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_纯评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637199496-9e89459d-c65d-4592-be2f-df0789c484df.png#clientId=ue9c8fabf-93de-4&from=drop&id=ecPsw&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E7%BA%AF%E8%AF%84%E4%BC%B0.png&originHeight=5646&originWidth=5037&originalType=binary&size=4392891&status=done&style=none&taskId=u4f4935dd-6980-47ca-b784-91f9ec8bc6e)
 <a name="ek301"></a>
 # Q&A
 <a name="Fl4ju"></a>
