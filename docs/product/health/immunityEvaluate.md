@@ -35,7 +35,7 @@
 ![幻灯片8.PNG](https://cdn.nlark.com/yuque/0/2021/png/2752327/1622462445835-07ee99d6-e039-47e9-bf75-99fcef5857b4.png#clientId=u34d48f8c-630e-4&from=ui&id=oA6ft&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%878.PNG&originHeight=2295&originWidth=4080&originalType=binary&size=1659545&status=done&style=none&taskId=u6ff6be85-fee5-46c8-b833-dc911799bf2)<br />评估引导页用于对免疫力评估进行简要介绍，同时可以显示免疫力评估的历史评估人次及评估预估耗时。
 <a name="su4Ug"></a>
 ## 基本信息确认页
-![幻灯片9.PNG](https://cdn.nlark.com/yuque/0/2021/png/2752327/1622462454156-0e775389-0e40-4930-8b1a-c13c5d234807.png#clientId=u34d48f8c-630e-4&from=ui&id=SyBRA&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%879.PNG&originHeight=2295&originWidth=4080&originalType=binary&size=464519&status=done&style=none&taskId=u6a0e8c56-d74b-424a-b999-61938c96f61)<br />基本信息确认页，用于获取用户的基本信息，涵盖：性别、生日、身高、体重、患病状况。<br />若用户存在已有的基本信息记录，则该页面会自动读取用户上一次填写的的基本信息，用户可以修改基本信息或直接确认。<br />用户填写的基本信息，只用于健康数据的相关计算及健康风险标签的生成，包括但不限于：BMI指数、患病状况等。
+![幻灯片9.PNG](https://cdn.nlark.com/yuque/0/2021/png/2752327/1622462454156-0e775389-0e40-4930-8b1a-c13c5d234807.png#clientId=u34d48f8c-630e-4&from=ui&id=SyBRA&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%879.PNG&originHeight=2295&originWidth=4080&originalType=binary&size=464519&status=done&style=none&taskId=u6a0e8c56-d74b-424a-b999-61938c96f61)<br />基本信息确认页，用于获取用户的基本信息，涵盖：性别、生日、身高、体重、患病状况。<br />若用户存在已有的基本信息记录，则该页面会自动读取用户上一次填写的基本信息，用户可以修改基本信息或直接确认。<br />用户填写的基本信息，只用于健康数据的相关计算及健康风险标签的生成，包括但不限于：BMI指数、患病状况等。
 <a name="EbLsQ"></a>
 ## 评估问卷页
 ![幻灯片10.PNG](https://cdn.nlark.com/yuque/0/2021/png/2752327/1622462482713-cc979f68-f712-44ef-98e9-886b121dfd0d.png#clientId=u34d48f8c-630e-4&from=ui&id=MZ9o8&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%8710.PNG&originHeight=2295&originWidth=4080&originalType=binary&size=1566674&status=done&style=none&taskId=u232d2ed6-7c9e-4898-a90c-2c929b213b9)<br />评估问卷页，用于获取用户的免疫力认知、免疫力表现、心理与压力、生活方式数据。
@@ -72,7 +72,7 @@
 若用户有绑定一个或多个硬件（包括但不限于手环、秤），用户在当天由硬件产生的健康数据，会影响该用户第二天的免疫力水平得分及免疫力水平等级。
 <a name="B9dtg"></a>
 ### 无硬件交付版本
-若用户未绑定任何硬件，仍然可以正常使用免疫力评估的所有功能。<br />用户通过手动记录的健康数据，同样会影响该该用户第二天的免疫力水平得分及免疫力水平等级。
+若用户未绑定任何硬件，仍然可以正常使用免疫力评估的所有功能。<br />用户通过手动记录的健康数据，同样会影响该用户第二天的免疫力水平得分及免疫力水平等级。
 <a name="kTL3G"></a>
 ## 业务接入角度
 免疫力评估为独立业务，不与其他业务产生关联。客户接入乐智健康小程序的部分/全部功能，不影响免疫力评估的使用。
@@ -87,11 +87,14 @@
 <a name="P9Bdu"></a>
 # Q&A
 Q：免疫力评估测评的结果可靠吗？<br />A：免疫力评估所使用的模型是由乐智健康与国家工程院陈君石院士旗下的专业健康管理团队共同打造的，开发过程中，参考了多位免疫力医学专家的相关著作，拥有权威机构背书认证，结果准确可靠。<br />
-<br />Q：免疫力评估与医院的采血评估相比，哪个更准确？<br />A：免疫力趴评估未采集使用评价机体免疫功能的免疫学指标，不能代替精确的检测结果，只是对您免疫力水平的建议测评，评估结果仅供参考。<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />最后更新时间：2021.05.31
+<br />Q：免疫力评估与医院的采血评估相比，哪个更准确？<br />A：免疫力评估未采集使用评价机体免疫功能的免疫学指标，不能代替精确的检测结果，只是对您免疫力水平的建议测评，评估结果仅供参考。<br />
+<br />​
+
+​
+
+​
+
+​
+
+最后更新时间：2021.06.03
 
