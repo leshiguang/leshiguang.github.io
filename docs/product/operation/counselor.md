@@ -12,7 +12,7 @@
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622121177868-b30eefaa-841a-4ca6-9e2b-44682a828e6e.png#clientId=u3fdf093d-e122-4&from=paste&height=1062&id=u2b7a481d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1062&originWidth=1912&originalType=binary&size=481610&status=done&style=none&taskId=uab9ddff6-b23d-4509-92bd-8fa8f28b7b8&width=1912)
 <a name="GUHER"></a>
 ## 产品模块详解
-<a name="yW92h"></a>
+<a name="WXDeR"></a>
 ### 核心流程1：会员绑定
 <a name="sjpKT"></a>
 #### 路径1：顾问邀请会员绑定
@@ -104,25 +104,6 @@
 ![推广商品.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622371644187-bd04bce2-a658-4b68-af8c-4441fe170c3a.png#clientId=u9829444e-9f0f-4&from=ui&id=uea3c5292&margin=%5Bobject%20Object%5D&name=%E6%8E%A8%E5%B9%BF%E5%95%86%E5%93%81.png&originHeight=1166&originWidth=1394&originalType=binary&size=299863&status=done&style=none&taskId=ue94dad79-7242-4544-942c-685974bb21a)<br />
 <br />
 <br />**方式2：奖励金提现**<br />顾问百宝箱页面->点击【交易分析】->点击【待提现】->点击【去提现】->微信提现到账<br />![提现.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622371661614-5cb7e5c0-336a-4b67-9862-9ab1a3d4fcb4.png#clientId=u9829444e-9f0f-4&from=ui&id=u95f82a8c&margin=%5Bobject%20Object%5D&name=%E6%8F%90%E7%8E%B0.png&originHeight=1115&originWidth=898&originalType=binary&size=107431&status=done&style=none&taskId=uce03b4ee-7511-47d3-acd1-e71a6bf4ac8)<br />
-
-<a name="g6FhX"></a>
-## 产品交付能力
-<a name="vb0HU"></a>
-### 有无交易的版本区分
-| 无交易模块首页状态 | 有交易模块首页状态 |
-| --- | --- |
-| ![页面_2.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622465130825-531d4199-5445-421d-a349-bf948444f4d1.png#clientId=u06807d95-428f-4&from=ui&height=448&id=u3121c126&margin=%5Bobject%20Object%5D&name=%E9%A1%B5%E9%9D%A2_2.png&originHeight=869&originWidth=388&originalType=binary&size=118575&status=done&style=none&taskId=u47ab0f1d-fa3c-454f-a9a0-2367c00fdbf&width=200) | ![页面_1.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622465142658-ac19dbba-cf22-4051-9a98-e79d97b25457.png#clientId=u06807d95-428f-4&from=ui&height=535&id=u7d5e65f5&margin=%5Bobject%20Object%5D&name=%E9%A1%B5%E9%9D%A2_1.png&originHeight=1038&originWidth=388&originalType=binary&size=123011&status=done&style=none&taskId=u2ba047fd-f89f-4b9d-abe0-bddaef1e4fe&width=200) |
-| 无交易模块会员详情页状态 | 有交易模块会员详情页状态 |
-| ![会员变现.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622372483833-ccf1f6c5-a88a-42fc-a31d-78a1009a8b44.png#clientId=u9829444e-9f0f-4&from=ui&height=460&id=u9a67e3ae&margin=%5Bobject%20Object%5D&name=%E4%BC%9A%E5%91%98%E5%8F%98%E7%8E%B0.png&originHeight=893&originWidth=388&originalType=binary&size=84636&status=done&style=none&taskId=u809b382d-4cd3-461b-bc75-50351829f41&width=200) | ![首页有交.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622464555632-00037388-4889-4ba9-9d25-7b1a12b501d4.png#clientId=ufaa5d865-fe7f-4&from=ui&height=460&id=u12b8381f&margin=%5Bobject%20Object%5D&name=%E9%A6%96%E9%A1%B5%E6%9C%89%E4%BA%A4.png&originHeight=893&originWidth=388&originalType=binary&size=84286&status=done&style=none&taskId=ue91f468b-87f5-4315-a0c4-1abd1ec0016&width=200) |
-
-
-
-<a name="Q1yp5"></a>
-### 有无公众号版本区分
-| 无公众号版本今日未记录列表页状态 | 有公众号版本今日未记录列表页状态 |
-| --- | --- |
-| ![无交易公众号.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622372785285-a735871c-4602-4c2d-86f8-2feec6e96d70.png#clientId=u9829444e-9f0f-4&from=ui&height=465&id=WGt8S&margin=%5Bobject%20Object%5D&name=%E6%97%A0%E4%BA%A4%E6%98%93%E5%85%AC%E4%BC%97%E5%8F%B7.png&originHeight=903&originWidth=388&originalType=binary&size=42950&status=done&style=none&taskId=u19b322bc-17da-4e13-9473-0fb3d884fe5&width=200) | ![有公众号未记录.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622464820900-77853b59-bb09-4839-bb31-80678275b6b0.png#clientId=ua7843d44-9bce-4&from=ui&height=465&id=u98f8ca26&margin=%5Bobject%20Object%5D&name=%E6%9C%89%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AA%E8%AE%B0%E5%BD%95.png&originHeight=903&originWidth=388&originalType=binary&size=59786&status=done&style=none&taskId=ue9a34928-3d7c-4ee4-bfa4-e7b162236b6&width=200) |
-| 无公众号版本小习惯提醒打卡页状态 | 有公众号版本小习惯提醒打卡页状态 |
-| ![无公众号.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622372811510-73c226ca-f925-43af-a9bb-3e445e1f5984.png#clientId=u9829444e-9f0f-4&from=ui&height=433&id=SZZxm&margin=%5Bobject%20Object%5D&name=%E6%97%A0%E5%85%AC%E4%BC%97%E5%8F%B7.png&originHeight=840&originWidth=388&originalType=binary&size=62857&status=done&style=none&taskId=ucc2cb2e4-1c06-4ac7-b5a6-c40c82147ae&width=200) | ![有公众号.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1622464494695-9337662d-c4d2-4f81-b968-386697d7db56.png#clientId=ufaa5d865-fe7f-4&from=ui&height=433&id=ub49bffda&margin=%5Bobject%20Object%5D&name=%E6%9C%89%E5%85%AC%E4%BC%97%E5%8F%B7.png&originHeight=840&originWidth=388&originalType=binary&size=68901&status=done&style=none&taskId=u47f13a16-0693-4553-9c95-bc20d7d3250&width=200) |
+<br />
 
 
