@@ -1,47 +1,48 @@
-<a name="G5t6R"></a>
+<a name="qHRIv"></a>
 ## 核心价值点
-关注体重的用户有很大占比目标在于减脂，用户购买保健品或相关产品后对于参与减重类比赛热情度较高，趣味性的活动赛事有助于提升用户的参与积极性。<br />​
+- **趣味化健康管理：**根据《中国居民膳食指南》建议，成年人需要每天行走6000步，每天的步行运动对于健康大有裨益。城市步数赛将城市路线虚拟化，通过3种不同形式的趣味化挑战：个人赛、好友PK、团队PK，激励用户坚持每天走路上传步数数据，将趣味活动与用户的健康管理相结合，激励用户坚持每天步行轻运动。
 
-产品化的减重对比照功能，有助于提升用户的分享积极性，扩大平台和活动的影响力，带来裂变拉新的流量。<br />
 
-<a name="i8Dqm"></a>
+
+- **精神激励与物质激励相结合**：用户参与线上活动后，挑战胜利可收集城市卡片，获得乐豆兑换实物奖品激励。
+
+
+<br />
+
+<a name="STeLM"></a>
 ## 产品模块详解
-<a name="jNlHs"></a>
-#### 核心流程1：发起挑战
-小程序首页点【甩肉大比拼】->点击【发起挑战】->设定减重天数、减重数，点击【下一步】->上传减重初始照，点击【下一步】后进入挑战首页，完成发起挑战
+<a name="oM6ij"></a>
+#### 核心流程1：挑战自己
+小程序首页点击【步数赛】活动入口->选择【挑战自己】模式->选择城市路线->投入乐豆开始挑战->每日打卡累计步数->成功后领取奖励<br />![单机版流程.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622539547961-3da064e7-0624-4150-b353-3db5c46d79df.png#clientId=ua5daabd2-5b74-4&from=ui&id=d0cJJ&margin=%5Bobject%20Object%5D&name=%E5%8D%95%E6%9C%BA%E7%89%88%E6%B5%81%E7%A8%8B.png&originHeight=779&originWidth=2910&originalType=binary&size=861925&status=done&style=none&taskId=uc4e22faf-e169-4513-ac0b-fe6a9a6913f)
+<a name="M1gMd"></a>
+#### 核心流程2：好友对战
+小程序首页点击【步数赛】活动入口->选择【好友对战】模式->选择城市路线、设定挑战规则->投入乐豆开团->邀请好友成团->每日打卡累计步数->成功后领取奖励<br />![好友对战.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622547594674-39a62f8e-8f85-459a-95e3-e81afa0ba022.png#clientId=ua5daabd2-5b74-4&from=ui&id=m5Oj2&margin=%5Bobject%20Object%5D&name=%E5%A5%BD%E5%8F%8B%E5%AF%B9%E6%88%98.png&originHeight=768&originWidth=3272&originalType=binary&size=1089112&status=done&style=none&taskId=u3f972353-37ad-4d32-8f2a-10efe920072)
+<a name="HeROl"></a>
+#### 核心流程3：团队争霸
+小程序首页点击【步数赛】活动入口->选择【团队争霸】模式->选择城市路线、设定挑战规则->投入乐豆开团->邀请对手团团长应战->双方团长邀请各自团员成团->每日打卡累计步数->成功后领取奖励<br />![团队争霸流程.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622547416635-ea79ed10-7e0d-4980-b504-09c7606d6b43.png#clientId=ua5daabd2-5b74-4&from=ui&id=ZlF6o&margin=%5Bobject%20Object%5D&name=%E5%9B%A2%E9%98%9F%E4%BA%89%E9%9C%B8%E6%B5%81%E7%A8%8B.png&originHeight=729&originWidth=3450&originalType=binary&size=1198705&status=done&style=none&taskId=uddc29b30-a4a1-4fec-993b-056e2a05bcb)
+<a name="Hbi1w"></a>
+#### 核心流程4：我的天下
+小程序首页点击【步数赛】活动入口->选择【我的天下】入口->查看累计数据和点亮城市信息<br />![我的天下流程.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622545600784-861bab88-10af-4e9a-b43c-c1d7dba68e98.png#clientId=ua5daabd2-5b74-4&from=ui&height=204&id=S6so5&margin=%5Bobject%20Object%5D&name=%E6%88%91%E7%9A%84%E5%A4%A9%E4%B8%8B%E6%B5%81%E7%A8%8B.png&originHeight=704&originWidth=1407&originalType=binary&size=506975&status=done&style=none&taskId=u49c357f7-7075-41a3-817e-026d3fa293b&width=407)
+<a name="x8Mg9"></a>
+#### 核心流程5：排行榜
+小程序首页点击【步数赛】活动入口->选择【排行榜】入口->查看所有参赛人员战况<br />![排行榜.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622547672854-f6dc1af2-1c88-43fb-b236-4659e1c25657.png#clientId=ua5daabd2-5b74-4&from=ui&height=204&id=srzck&margin=%5Bobject%20Object%5D&name=%E6%8E%92%E8%A1%8C%E6%A6%9C.png&originHeight=698&originWidth=699&originalType=binary&size=227978&status=done&style=none&taskId=u0090886d-c7af-4067-98ce-6301940c900&width=204)<br />
 
-- 支持自定义不同的减重目标，根据用户自身情况设定更灵活
-- 上传初始减重上秤照和全身照，记录自身蜕变 
-
-
-<br />![发起挑战.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622627671712-062d89f7-a978-4a6a-a730-f106170f9b00.png#clientId=ua575a4a3-7034-4&from=ui&id=A4VYl&margin=%5Bobject%20Object%5D&name=%E5%8F%91%E8%B5%B7%E6%8C%91%E6%88%98.png&originHeight=578&originWidth=1302&originalType=binary&size=376299&status=done&style=none&taskId=uc781c48b-04c9-4599-b97a-0ecb5153b2b)
-<a name="HUsXe"></a>
-#### 核心流程2：查看活动规则
-挑战主页点击右侧【规则】查看详细活动规则<br />![活动规则.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622627942776-913f3747-7a17-478e-ab56-0ff9fae50d22.png#clientId=ua575a4a3-7034-4&from=ui&height=380&id=Rgb9G&margin=%5Bobject%20Object%5D&name=%E6%B4%BB%E5%8A%A8%E8%A7%84%E5%88%99.png&originHeight=611&originWidth=637&originalType=binary&size=252095&status=done&style=none&taskId=ub4ed88ae-be0c-41e8-8116-350b3088a6b&width=396)
-<a name="iGc4Z"></a>
-#### 核心流程3：查看挑战历史
-挑战主页点击右侧【历史】查看挑战历史<br />![挑战历史.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622627992649-160484e0-cfef-44dd-bd82-b74078aa7490.png#clientId=ua575a4a3-7034-4&from=ui&height=371&id=USJJ2&margin=%5Bobject%20Object%5D&name=%E6%8C%91%E6%88%98%E5%8E%86%E5%8F%B2.png&originHeight=574&originWidth=621&originalType=binary&size=163706&status=done&style=none&taskId=ub300e360-dfc5-4ca9-b902-b7494c456a5&width=401)
-<a name="H4Bip"></a>
-#### 核心流程4：每日称重挑战
-挑战主页点击【开始挑战】按钮跳转称重打卡页<br />![每日打卡.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622628078340-fe4e8b68-b0c5-4a27-8f65-e4e5f92e0a5e.png#clientId=ua575a4a3-7034-4&from=ui&height=378&id=dzUCE&margin=%5Bobject%20Object%5D&name=%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1.png&originHeight=572&originWidth=639&originalType=binary&size=153829&status=done&style=none&taskId=u9b0d038e-d9c3-4ddf-a5f0-8d6d5f90d0e&width=422)
-<a name="kWn8w"></a>
-#### 核心流程5：开启打卡提醒
-挑战主页点击【打卡提醒】<br />-已关注公众号用户，当天尚未上传体重数据的用户晚8点会接到微信模板消息，提醒打卡<br />-未关注公众号用户，进入引导关注公众号通用流程，关注后可收到提醒打卡通知<br />![打卡提醒.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622628149129-1c2c46fd-855d-4f53-bd46-6ee9c8935d90.png#clientId=ua575a4a3-7034-4&from=ui&height=388&id=pRka9&margin=%5Bobject%20Object%5D&name=%E6%89%93%E5%8D%A1%E6%8F%90%E9%86%92.png&originHeight=582&originWidth=639&originalType=binary&size=179699&status=done&style=none&taskId=ueb677fc0-8d49-4bfa-98c1-8b0e6fe34d1&width=426)
-<a name="p4WNf"></a>
-#### 核心流程6：查看好友点赞
-挑战主页点击【点赞按钮】支持查看为你点赞的好友点赞信息<br />![好友点赞.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622628303154-d969e9df-7b8a-424d-8297-84b90499db72.png#clientId=ua575a4a3-7034-4&from=ui&height=432&id=u5725&margin=%5Bobject%20Object%5D&name=%E5%A5%BD%E5%8F%8B%E7%82%B9%E8%B5%9E.png&originHeight=637&originWidth=639&originalType=binary&size=237622&status=done&style=none&taskId=u841d5e60-fc25-48f2-9c92-5bb65e76f6f&width=433)
-<a name="R2xrW"></a>
-#### 核心流程7：乐豆兑换商品
-![乐豆兑换.png](https://cdn.nlark.com/yuque/0/2021/png/457376/1622628404548-74761350-d319-4476-bbf8-f38c082a8904.png#clientId=ua575a4a3-7034-4&from=ui&height=416&id=zlgO9&margin=%5Bobject%20Object%5D&name=%E4%B9%90%E8%B1%86%E5%85%91%E6%8D%A2.png&originHeight=577&originWidth=639&originalType=binary&size=215396&status=done&style=none&taskId=ue66e700b-c4a4-4963-9a10-6a3ddfef32f&width=461)
-
-<a name="QDVna"></a>
+<a name="v8oZX"></a>
 ## 产品交付能力
-整体产品交付版本，不做功能拆分<br />​<br />
-<a name="vUg1l"></a>
+支持根据不同挑战模式进行拆分和拼装不同版本<br />1、单机版<br />2、好友对战<br />3、团队挑战<br />
+<br />
+
+<a name="rNFir"></a>
 ## Q&A
-Q：具体如何挑战？<br />A：根据自身情况，设定一个合理的减重目标并绑定体脂秤，挑战期间需每日来小程序称重打卡，目标天数内达成减重目标即为挑战成功，成功后可获得对应奖励；<br />
-<br />Q：漏打卡怎么办？<br />A：挑战期间漏打卡，可以通过将活动页面分享给好友，获得补打卡机会，补打卡完成后可继续挑战；<br />
-<br />Q：为什么要上传照片？<br />A：挑战开始和挑战完成时都需上传当时的称重和全身照，用于后期活动审核和挑战成功的分享，记录你的蜕变；<br />
-<br />Q：如何设置提醒打卡？<br />A：挑战页面有一个提醒打卡开关，当开启提醒通知并关注公众号，挑战期间每晚8点如果当天没有称重打卡即会收到称重提醒，避免漏打卡导致失败；<br />
-<br />Q：为什么我认领的数据没有记录在比赛中？<br />A：为保证挑战公正性，短期内用户称重数据偏差过大，会被判定为非同一用户，不记录该笔数据。
+**Q:个人赛怎么玩？**<br />A:团员每日打卡累计个人步数，在目标天数内完成虚拟路线的总公里数即为挑战成功，挑战成功的团员均分健康豆奖池。<br />​
+
+**Q：团队赛玩法**<br />A：团员每日打卡累计团队步数，在目标天数内完成虚拟路线的总公里数即为挑战成功，胜利团的每日打卡团员可均分健康豆奖池。<br />**​**
+
+**Q:漏打卡怎么办？**<br />A:漏打卡1天可支付2健康豆补打卡，漏打卡超过1天则挑战失败<br />**​**
+
+**Q:步数累计方式是怎么样的？**<br />A:到完美小程序首页即可完成打卡，累计行走步数。每日步数上限3万步，挑战开始后每日最多可往累计里程中投入3万步数。<br />**​**
+
+**Q:如何与好友互动？**<br />A：每天可给同一个好友加油、捣蛋各3次，好友会在他的页面收到你的互动消息<br />**​**
+
+**Q：如何提醒好友打卡**<br />A：可以给好友发提醒消息，让ta来打卡参与游戏<br />​<br />
 
