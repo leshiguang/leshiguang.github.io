@@ -42,43 +42,6 @@
 <a name="LWfa5"></a>
 ### 五、企业微信工具集成
 企业微信对应聊天框->底部聊天助手->进入聊天助手页面<br />![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622357832434-d6a83c5a-d308-47cd-b8d8-e0a315227e08.png?x-oss-process=image%2Fresize%2Cw_1500#from=paste&height=464&id=H6Mgd&margin=%5Bobject%20Object%5D&originHeight=928&originWidth=1500&originalType=url&status=done&style=none&width=750)
-
-<a name="F0lr6"></a>
-## 产品交付能力
-<a name="aCXri"></a>
-### 一、数据系统
-**1、有无交易的版本区分**
-
-| **无交易模块首页状态** | **有交易模块首页状态** |
-| --- | --- |
-| ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358918798-4ce11662-60b6-48da-87a0-666172c42f9d.png#from=paste&height=1473&id=NmqPX&margin=%5Bobject%20Object%5D&originHeight=2946&originWidth=1500&originalType=url&status=done&style=none&width=750) | ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358704913-513e126d-834d-47f0-abb5-539215915364.png#from=paste&height=1678&id=ZKzQP&margin=%5Bobject%20Object%5D&originHeight=3356&originWidth=1500&originalType=url&status=done&style=none&width=750) |
-| **无交易模块社群分析页状态** | **有交易模块社群分析页状态** |
-| ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622359081420-b821774e-588c-4656-bc43-09e2790266ed.png#from=paste&height=2534&id=wHumN&margin=%5Bobject%20Object%5D&originHeight=5068&originWidth=1500&originalType=url&status=done&style=none&width=750) | ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358701789-0220b2ad-0f4e-4351-807f-478428eced08.png#from=paste&height=2410&id=qvkEL&margin=%5Bobject%20Object%5D&originHeight=4820&originWidth=1500&originalType=url&status=done&style=none&width=750) |
-| **无交易模块会员详情页状态** | **有交易模块会员详情页状态** |
-| ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622359224732-780fab62-1657-4c38-8a34-131e4048fdb6.png?x-oss-process=image%2Fresize%2Cw_1500#from=paste&height=1641&id=yrfz4&margin=%5Bobject%20Object%5D&originHeight=3282&originWidth=1500&originalType=url&status=done&style=none&width=750) | ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358747067-9152b23c-5caf-4598-800d-ebf91de01f1d.png#from=paste&height=1678&id=dfGEg&margin=%5Bobject%20Object%5D&originHeight=3356&originWidth=1500&originalType=url&status=done&style=none&width=750) |
-| 无交易模块会员列表状态 | 有交易模块会员列表状态 |
-| ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622359299427-3ec4b49d-1b4a-4c5d-9fe3-438f8d403c5a.png#from=paste&height=1619&id=qG5a0&margin=%5Bobject%20Object%5D&originHeight=3238&originWidth=1500&originalType=url&status=done&style=none&width=750) | ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358732433-a4dfce36-f154-4cf6-b989-d97e875ee0ef.png#from=paste&height=1678&id=qWK2X&margin=%5Bobject%20Object%5D&originHeight=3356&originWidth=1500&originalType=url&status=done&style=none&width=750) |
-
-**2、有无公众号的版本区分**
-
-| **无公众号版本今日未记录列表页状态** | **有公众号版本今日未记录列表页状态** |
-| --- | --- |
-| ![](https://cdn.nlark.com/yuque/0/2021/png/581207/1622372785285-a735871c-4602-4c2d-86f8-2feec6e96d70.png?x-oss-process=image%2Fresize%2Cw_268#from=paste&height=624&id=lghST&margin=%5Bobject%20Object%5D&originHeight=624&originWidth=268&originalType=url&status=done&style=none&width=268) | ![](https://cdn.nlark.com/yuque/0/2021/png/581207/1622372902448-fd204933-1095-41b3-8202-6a7c7a67d22a.png?x-oss-process=image%2Fresize%2Cw_300#from=paste&height=665&id=zmrXf&margin=%5Bobject%20Object%5D&originHeight=698&originWidth=300&originalType=url&status=done&style=none&width=286) |
-
-**3、有无智能商品推荐的版本区分**
-
-| **无商品推荐会员详情状态** | **有商品推荐会员详情状态** |
-| --- | --- |
-| ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358584588-18407fa7-d5c9-4734-b4dc-344b595845ff.png?x-oss-process=image%2Fresize%2Cw_1500#from=paste&height=1641&id=gFjaN&margin=%5Bobject%20Object%5D&originHeight=3282&originWidth=1500&originalType=url&status=done&style=none&width=750) | ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622358597292-5852fc91-c988-41f3-aeb7-deb7f4eeecc7.png#from=paste&height=1692&id=x2qAQ&margin=%5Bobject%20Object%5D&originHeight=3384&originWidth=1500&originalType=url&status=done&style=none&width=750) |
-
-
-
-<a name="oC1cX"></a>
-### 二、互动系统
-具体以健康小习惯、健康时光、赛事比拼、健康测评其交付能力为准
-<a name="pbAFR"></a>
-### <br />三、内容系统
-具体以内容社区、AI健康助手交付能力为准
 <a name="vWsWt"></a>
-### [<br /><br /><br /><br /><br />](https://lifesense.yuque.com/irg1bl/gpixco/orpta3#rOp1P)
+### [<br /><br /><br /><br /><br /><br /><br />](https://lifesense.yuque.com/irg1bl/gpixco/orpta3#rOp1P)
 
