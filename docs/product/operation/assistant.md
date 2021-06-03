@@ -27,18 +27,4 @@
 路径1：选择要分享/下载/复制的答案，点击分享/下载/复制，快速分享至朋友<br />![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622345200344-82bc9c73-b9a1-4ecc-9307-0daa8330034b.png?x-oss-process=image%2Fresize%2Cw_1500#from=paste&height=402&id=WNidu&margin=%5Bobject%20Object%5D&originHeight=803&originWidth=1500&originalType=url&status=done&style=none&width=750)<br />路径2：选择要评价的答案，点击右侧“大拇指”，给予反馈评价
 <a name="mWwIq"></a>
 #### ![](https://cdn.nlark.com/yuque/0/2021/png/2984863/1622345228417-a0245b9c-c532-4b3e-9fff-20666fc16399.png?x-oss-process=image%2Fresize%2Cw_1500#from=paste&height=500&id=p9VgG&margin=%5Bobject%20Object%5D&originHeight=999&originWidth=1500&originalType=url&status=done&style=none&width=750)<br /><br /><br />
-<a name="EVw3c"></a>
-## 产品交付能力
-**一、交付形式**<br />当前仅支持ODM小程序形式交付
-<a name="yOkKI"></a>
-#### 
-**二、具体交付内容**<br />**1、知识库内容**
-
-- 客户依据自己的业务情况，选择具体接入的知识库内容，其余模块将隐藏。（当前可选知识库：体重、睡眠、血压、血糖、免疫力、营养、智能硬件）
-- 若客户需要接入自己的知识库至AI健康助手，仅需提供具体知识内容，即可使用。
-
-**2、商品推荐**
-
-- 若客户需要进行商品推荐，在提供商品基础信息后，即可正常使用。
-- 若客户不需要商品推荐，则系统会自动隐藏该模块，其余功能不受影响。
 
