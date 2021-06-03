@@ -31,7 +31,7 @@
 ![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622190858019-7b25ab3a-0310-4db3-88de-94dccd3e509f.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=bVbEQ&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=59600&status=done&style=stroke&taskId=u90784d23-ebad-41af-a8d1-098d2ed8cc1)<br />评估引导页用于对全面风险评估进行简要介绍，同时可以显示全面风险评估的历史评估人次及评估预估耗时。
 <a name="TN8KU"></a>
 ## 基本信息确认页
-![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191069592-a43b2563-4412-496c-bca6-23dba0cb364e.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=yRezt&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=37065&status=done&style=stroke&taskId=u58ed611b-a2d7-4868-b1ef-189273b354e)<br />基本信息确认页，用于获取用户的基本信息，涵盖：性别、生日、身高、体重、患病状况。<br />若用户存在已有的基本信息记录，则该页面会自动读取用户上一次填写的的基本信息，用户可以修改基本信息或直接确认。<br />用户填写的基本信息，只用于健康数据的相关计算及健康风险标签的生成，包括但不限于：BMI指数、依据患病状况提供生活方式建议等。
+![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191069592-a43b2563-4412-496c-bca6-23dba0cb364e.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=yRezt&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=37065&status=done&style=stroke&taskId=u58ed611b-a2d7-4868-b1ef-189273b354e)<br />基本信息确认页，用于获取用户的基本信息，涵盖：性别、生日、身高、体重、患病状况。<br />若用户存在已有的基本信息记录，则该页面会自动读取用户上一次填写的基本信息，用户可以修改基本信息或直接确认。<br />用户填写的基本信息，只用于健康数据的相关计算及健康风险标签的生成，包括但不限于：BMI指数、依据患病状况提供生活方式建议等。
 <a name="BH2Jp"></a>
 ## 评估问卷页
 ![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191344019-4329742b-babd-4733-a55a-d277d561d478.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=dSmEo&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=106230&status=done&style=stroke&taskId=u73a4d88b-af63-4a23-a691-77ff9f8cbba)<br />评估问卷页，用于获取用户的饮食习惯、运动习惯、睡眠和精神压力、健康体检指标数据。
@@ -67,7 +67,7 @@
    - 分享给亲友：在评估结果页最下方，无论用户的健康年龄、健康生活指数如何，均出现“分享给亲友”按钮。点击后，会引导用户以小程序卡片的方式，将乐智健康小程序分享给亲友。被分享的用户，可以通过点击小程序卡片的方式，跳转至乐智健康小程序。
 <a name="sbkhO"></a>
 ## 评估历史页
-![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191560802-ff713061-e9bb-45e6-9d67-44815f0822f6.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=vnb1J&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=47402&status=done&style=stroke&taskId=u96c19baa-d076-4f6e-a236-d4dfa88f07e)<br />评估历史页，可展示用户历史上的每一次全面风险评估结果，包括历史评估的健康生活指数级对应的等级。<br />点击“查看结果”，可查看该次历史评估的详细评估结果。
+![演示文稿11.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1622191560802-ff713061-e9bb-45e6-9d67-44815f0822f6.jpeg#clientId=u5b86eb70-a02b-4&from=ui&id=vnb1J&margin=%5Bobject%20Object%5D&name=%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF11.jpg&originHeight=720&originWidth=1280&originalType=binary&size=47402&status=done&style=stroke&taskId=u96c19baa-d076-4f6e-a236-d4dfa88f07e)<br />评估历史页，可展示用户历史上的每一次全面风险评估结果，包括历史评估的健康生活指数及对应的等级。<br />点击“查看结果”，可查看该次历史评估的详细评估结果。
 <a name="Lrlto"></a>
 # 产品交付能力
 <a name="aXf3N"></a>
@@ -78,7 +78,7 @@
 若用户有绑定一个或多个硬件（包括但不限于手环、秤、血压计、血糖仪），用户在当天由硬件产生的健康数据，会影响该用户第二天的健康生活指数及健康年龄。
 <a name="Kynw4"></a>
 ### 无硬件交付版本
-若用户未绑定任何硬件，仍然可以正常使用全面风险评估的所有功能。<br />用户通过手动记录的健康数据，同样会影响该该用户第二天的健康生活指数及健康年龄。
+若用户未绑定任何硬件，仍然可以正常使用全面风险评估的所有功能。<br />用户通过手动记录的健康数据，同样会影响该用户第二天的健康生活指数及健康年龄。
 <a name="dAlPX"></a>
 ## 业务接入角度
 <a name="jIPni"></a>
@@ -125,5 +125,5 @@ Q：评估结果对我有什么用？<br />A：全面风险评估可以让您对
 
 ​
 
-最后更新时间：2021.05.31
+最后更新时间：2021.06.03
 
