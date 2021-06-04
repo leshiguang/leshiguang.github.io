@@ -48,7 +48,6 @@
 <div class="appList">
 
 - <a href="javascript:void(0);">产品服务</a>
-  - [健康产品](/solution/health/README)
 
 </div>
 

@@ -10,8 +10,6 @@
   - [体脂秤](/hardware/scale/README)
   - [智能手表](/hardware/watch/README)
 - <a href="javascript:void(0);">产品&服务<i class="fa fa-angle-down"></i></a>
-  - [健康产品](/product/health/README)
-  - [运营产品](/product/operation/README)
   - [技术服务](/product/tech/README)
 - <a href="javascript:void(0);">SDK&工具<i class="fa fa-angle-down"></i></a>
   - [SDK 集成](/develop-native/apply)
