@@ -52,4 +52,27 @@
 }
 
 ```
+<a name="VUGb2"></a>
+## 3. 查询会员当前绑定的顾问
+**URL**：域名 +  /api/family/v1.0/counselorModification/queryCustomerBindInfo<br />**类型**：GET
+<a name="xeDEk"></a>
+##### URL入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 会员关联账号ID | 标识对接用户，双方约定字段 |
+
+<a name="NPcCg"></a>
+##### 出参:
+String  顾问关联账号ID<br />
+<br />示例返回报文：
+```json
+{
+	"code":200, 
+	"msg":"成功",
+  "data":"85162580782" //绑定顾问对应的associatedId，未绑定顾问返回时null
+}
+
+```
+<a name="H0gyV"></a>
+## ​<br />
 
