@@ -12,9 +12,12 @@
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | moduleKey | String | 标签所属业务模块 |  |
-| firstLevelLabelKey | String | 标签分类 |  |
-| threeLevelLabelKey | String | 标签key |  |
-| threeLevelLabelMsg | String | 标签文本 |  |
+| firstLevelLabelKey | String | 一级标签key |  |
+| firstLevelLabelMsg | String | 一级标签文本 |  |
+| secondLevelLabelKey | String | 二级标签key |  |
+| secondLevelLabelMsg | String | 二级标签文本 |  |
+| threeLevelLabelKey | String | 三级标签key |  |
+| threeLevelLabelMsg | String | 三级标签文本 |  |
 
 示例返回报文：
 ```java
@@ -24,33 +27,30 @@
     "data": [
         {
             "moduleKey": "bloodpressure",
-            "firstLevelLabelKey": "highillrisk",
-            "threeLevelLabelKey": "bprisk_normalHigh",
-            "threeLevelLabelMsg": "血压正常高值"
+            "firstLevelLabelKey": "health",
+            "firstLevelLabelMsg": "健康人群",
+			"secondLevelLabelKey": "health_threeHigh",
+			"secondLevelLabelMsg": "三高指标正常",
+            "threeLevelLabelKey": "bprisk_normal",
+            "threeLevelLabelMsg": "血压正常"
         },
         {
             "moduleKey": "bloodsugar",
             "firstLevelLabelKey": "health",
+            "firstLevelLabelMsg": "健康人群"
+			"secondLevelLabelKey": "health_threeHigh",
+			"secondLevelLabelMsg": "三高指标正常",
             "threeLevelLabelKey": "bs_normal",
             "threeLevelLabelMsg": "血糖正常"
         },
         {
-            "moduleKey": "weight",
-            "firstLevelLabelKey": "highillrisk",
-            "threeLevelLabelKey": "weight_fat",
-            "threeLevelLabelMsg": "体重肥胖"
-        },
-        {
             "moduleKey": "diet",
             "firstLevelLabelKey": "subhealth",
+            "firstLevelLabelMsg": "亚健康人群",
+			"secondLevelLabelKey": "subhealth_diet",
+			"secondLevelLabelMsg": "饮食不合理",
             "threeLevelLabelKey": "fruit_seriousLack",
             "threeLevelLabelMsg": "水果摄入严重不足"
-        },
-        {
-            "moduleKey": "mentalStress",
-            "firstLevelLabelKey": "subhealth",
-            "threeLevelLabelKey": "ms_mental_poor",
-            "threeLevelLabelMsg": "心态不佳"
         }
     ]
 }
