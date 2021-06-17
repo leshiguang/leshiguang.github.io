@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | global_time | String | 筛选条件 | global_time的值可以为day，natureWeek，natureMonth,last7Days,last30Days |
 | day或natureWeek或natureMonth或last7Days或last30Days | String |  | global_time的值作为key，value对应日期 |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | visit_hold_data_card |
 
 
 <br />出参：
@@ -157,7 +157,7 @@
 | --- | --- | --- | --- |
 | global_time | String | 筛选条件 | global_time的值可以为day，natureWeek，natureMonth,last7Days,last30Days |
 | day或natureWeek或natureMonth或last7Days或last30Days | String |  | global_time的值作为key，value对应日期 |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | visit_hold_double_line |
 
 
 <br />出参：
@@ -337,7 +337,7 @@
 | --- | --- | --- | --- |
 | global_time | String | 筛选条件 | global_time的值可以为day，natureWeek，natureMonth,last7Days,last30Days |
 | day或natureWeek或natureMonth或last7Days或last30Days | String |  | global_time的值作为key，value对应日期 |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | visit_page_table |
 
 
 <br />出参：
@@ -3773,7 +3773,7 @@
 | --- | --- | --- | --- |
 | global_time | String | 筛选条件 | global_time的值可以为day，natureWeek，natureMonth,last7Days,last30Days |
 | day或natureWeek或natureMonth或last7Days或last30Days | String |  | global_time的值作为key，value对应日期 |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | path_icon |
 
 
 <br />出参：
@@ -3946,7 +3946,7 @@
 | --- | --- | --- | --- |
 | global_time | String | 筛选条件 | global_time的值可以为day，natureWeek，natureMonth,last7Days,last30Days |
 | day或natureWeek或natureMonth或last7Days或last30Days | String |  | global_time的值作为key，value对应日期 |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | visit_depth_pie |
 
 
 <br />出参：
@@ -4011,14 +4011,13 @@
 ```
 <a name="Y2l7k"></a>
 ## 6、系统设备
-
-<br />入参（URL参数）：
+入参（URL参数）：
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | global_time | String | 筛选条件 | global_time的值可以为day，natureWeek，natureMonth,last7Days,last30Days |
 | day或natureWeek或natureMonth或last7Days或last30Days | String |  | global_time的值作为key，value对应日期 |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | visit_device_data_pie |
 
 
 <br />出参：
