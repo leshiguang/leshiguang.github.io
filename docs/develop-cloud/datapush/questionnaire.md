@@ -55,8 +55,6 @@
   }
 }
 ```
-<a name="eW88A"></a>
-## 
 <a name="wdj1y"></a>
 ## 3、营养均衡评估测评-评估事件
 用户做完问卷后触发
@@ -85,6 +83,35 @@
   }
 }
 ```
-<a name="Mpdx6"></a>
-## 
+<a name="uCIdJ"></a>
+## 4、睡眠评估测评-评估事件
+用户做完问卷后触发
+
+| eventKey | eventPush |
+| --- | --- |
+| dataTypeKey | **uSleepEvalE** |
+
+1.推送data
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object |  |
+| **evalId** | data | String | 评估id<br /> |
+
+2.推送data示例
+```json
+{
+  "userId": 23341064,
+  "associatedId": "66104c5623342apsasad",
+  "dataTypeKey": "uSleepEvalE",
+  "eventKey": "eventPush",
+  "pushStatus": 1,
+  "data": {
+    "evalId": "111111111"
+  }
+}
+```
+
+<br />
+
 
