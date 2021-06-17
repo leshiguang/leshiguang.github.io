@@ -4,7 +4,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code<br />累计增加用户数&活跃数&浏览量接口完全意义，唯一区别就是bizCode | 累计增加用户:total_add_user_overview<br />活跃数量：total_activity_user_overview<br />浏览量：total_look_user_overview" |
 
 
 <br />出参：
@@ -74,7 +74,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_base_portrait |
 
 
 <br />出参：
@@ -154,7 +154,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_province_count |
 
 
 <br />出参：
@@ -359,7 +359,7 @@
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | time | String | 筛选条件 | time的值可以为day，week，month |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_data_trend |
 
 
 <br />出参：
@@ -514,7 +514,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_health_risk |
 
 
 <br />出参：
@@ -573,7 +573,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_health_age_range |
 
 
 <br />出参：
@@ -617,7 +617,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_bmi |
 
 
 <br />出参：
@@ -666,7 +666,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_weight_risk |
 
 
 <br />出参：
@@ -720,7 +720,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_sleep_level |
 
 
 <br />出参：
@@ -769,7 +769,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | user_sleep_risk |
 
 
 <br />出参：
@@ -823,7 +823,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | bp_rang_pie |
 
 
 <br />出参：
@@ -867,7 +867,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | bp_rang_column |
 
 
 <br />出参：
@@ -926,7 +926,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | step_rang_pie |
 
 
 <br />出参：
@@ -975,7 +975,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | step_rang_column |
 
 
 <br />出参：
@@ -1029,7 +1029,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | bs_rang_pie |
 
 
 <br />出参：
@@ -1073,7 +1073,7 @@
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | bs_rang_column |
 
 
 <br />出参：
