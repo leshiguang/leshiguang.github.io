@@ -3,12 +3,12 @@
 主要包含如下两种数据。
 <a name="iFQtN"></a>
 ## 0.1  用户数据推送流程
-用户数据推送的前提是与乐智云有用户层面的合作。<br />![用户数据推送.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1620457966570-99c0f816-ff72-46f3-8c1f-276f88a00225.png#clientId=u6e86d312-81f8-4&from=ui&id=cU1tH&margin=%5Bobject%20Object%5D&name=%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81.png&originHeight=872&originWidth=2434&originalType=binary&size=138481&status=done&style=none&taskId=uc8211ed3-ec5a-4ac0-ac65-c2e5168b385)<br />
+用户数据推送的前提是与乐智云有用户层面的合作。<br />![用户数据推送.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1620457966570-99c0f816-ff72-46f3-8c1f-276f88a00225.png#clientId=u6e86d312-81f8-4&from=ui&id=cU1tH&margin=%5Bobject%20Object%5D&name=%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81.png&originHeight=872&originWidth=2434&originalType=binary&ratio=1&size=138481&status=done&style=none&taskId=uc8211ed3-ec5a-4ac0-ac65-c2e5168b385)<br />
 
 <a name="QHTy9"></a>
 ## 0.2 设备数据推送
 
-<br />设备数据推送适用于纯设备对接的方式，wifi类设备产生数据到乐智云后，由乐智云推送给客户。<br />**注意，设备SN需要提前导入**<br />![设备数据推送.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1620457955083-1d3bf398-b89b-40af-aea1-94b037c33b77.png#clientId=u6e86d312-81f8-4&from=ui&id=u67104ba7&margin=%5Bobject%20Object%5D&name=%E8%AE%BE%E5%A4%87%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81.png&originHeight=1092&originWidth=2522&originalType=binary&size=202942&status=done&style=none&taskId=ud525a9a7-b58b-4af2-b74b-7e52b37ebdb)
+<br />设备数据推送适用于纯设备对接的方式，wifi类设备产生数据到乐智云后，由乐智云推送给客户。<br />**注意，设备SN需要提前导入**<br />![设备数据推送.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1620457955083-1d3bf398-b89b-40af-aea1-94b037c33b77.png#clientId=u6e86d312-81f8-4&from=ui&id=u67104ba7&margin=%5Bobject%20Object%5D&name=%E8%AE%BE%E5%A4%87%E6%95%B0%E6%8D%AE%E6%8E%A8%E9%80%81.png&originHeight=1092&originWidth=2522&originalType=binary&ratio=1&size=202942&status=done&style=none&taskId=ud525a9a7-b58b-4af2-b74b-7e52b37ebdb)
 <a name="VVwCE"></a>
 # 1、客户提供数据回调地址
 | 请求方式 | POST |
@@ -44,4 +44,13 @@
 ```
 
 
+<a name="az2Y4"></a>
+# 4、回调接口返回约定
+在平台注册的回调接口，返回字段格式如下，至少应包含code字段，且值200表示成功
+```json
+{
+  "code": 200
+  
+}
+```
 
