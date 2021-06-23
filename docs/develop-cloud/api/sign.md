@@ -9,7 +9,7 @@ API调用是基于HTTP协议来调用的，开发者可以直接通过调用http
 调用API的服务URL地址，云平台目前提供正式、测试环境。
 
 | 调用环境 | 服务地址(HTTP) | 服务地址(HTTPS) |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | 正式环境 | http://api.leshiguang.com/ | https://api.leshiguang.com/ |
 | 测试环境 | http://api-beta.leshiguang.com/ | https://api-beta.leshiguang.com/ |
 
@@ -18,7 +18,7 @@ API调用是基于HTTP协议来调用的，开发者可以直接通过调用http
 调用任何一个API都必须传入的参数，目前支持的公共参数有：
 
 | 参数名称 | 参数类型 | 是否必须 | 参数描述 |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | api_appKey | String | 是 | 合作商应用ID （通过申请业务接入时获得） |
 | api_timestamp | String | 是 | 时间戳（当前系统时间戳）1分钟有效 |
 | api_version | String | 是 | API协议版本，可选值：1.0。 |
@@ -60,12 +60,27 @@ public static String generateSign(String... contents) {
 }
 
 ```
-**
+**​**<br />
 <a name="s5"></a>
 # 调用示例
 ```
 http://api.leshiguang.com/sport-rest/step/query/getDayStepInfoList?id=51&api_appKey=lx4ec9b2c924ea7283&api_sign=BD63FF28C0FC3434E552921D85FA8591&api_timestamp=1596527190000&api_version=1.0  +  对应接口的参数
 ```
+示例代码见如下仓库：<br />​
 
+[https://github.com/leshiguang/cloud-demo](https://github.com/leshiguang/cloud-demo)<br />​<br />
+```java
+WeightAlgorithmRequest request = WeightAlgorithmRequest.builder()
+    .age(29)
+    .weight(BigDecimal.valueOf(65))
+    .height(BigDecimal.valueOf(1.68))
+    .sex(1)
+    .weightUnit(1)
+    .resistance(BigDecimal.valueOf(500.0))
+    .build();
 
+ResultData<AsiaWeightIndexDTO> res = WeightAlgorithmCloudApi.getAsiaWeightIndexDTO(request);
+
+System.out.println();
+```
 
