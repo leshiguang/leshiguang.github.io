@@ -13,7 +13,7 @@
 # 1、客户提供数据回调地址
 | 请求方式 | POST |
 | --- | --- |
-| URL | 客户定义 |
+| URL | 客户自己定义，举例：https://xxxxx.com/lezhi/callback |
 
 <a name="zpDQr"></a>
 # 2、推送数据分类
