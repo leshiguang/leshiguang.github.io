@@ -40,9 +40,11 @@
       - [健康数据](/develop-cloud/data/health)
 - 乐智云数据订阅（商业版）
    - [数据推送对接流程](/develop-cloud/datapush/common)
-   - [设备维度数据推送](/develop-cloud/datapush/device/healthdata)
-   - [用户健康数据推送](/develop-cloud/datapush/user/healthdata)
-   - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
+   - 设备维度数据推送
+      - [设备维度数据推送](/develop-cloud/datapush/device/healthdata)
+   - 用户维度数据推送
+      - [用户健康数据推送](/develop-cloud/datapush/user/healthdata)
+      - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
 - 乐智云算法
    - [体脂](/develop-cloud/algorithm/fat)
    - [睡眠分析](/develop-cloud/algorithm/sleep)
