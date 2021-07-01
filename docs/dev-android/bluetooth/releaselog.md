@@ -20,6 +20,10 @@
 | 2021-03-19 | 1.1.7 | [bluetooth-mini-1.1.7.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 增加实时心率开关 |
 | 2021-03-19 | 1.1.8 | [bluetooth-mini-1.1.8.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 实时心率数据增加设备信息字段 |
 | 2021-03-26 | 1.1.9 | [bluetooth-mini-1.1.9.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 优化扫描、连接问题，兼容a6秤，修复已知问题 |
+| 2021-04-01 | 1.2.0 | [bluetooth-mini-1.2.0.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复部分手机无法绑定问题 |
+| 2021-04-16 | 1.2.1 | [bluetooth-mini-1.2.1.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 兼容a20体脂秤、修复解绑设备有时候无法断开连接问题 |
+| 2021-05-31 | 1.2.2 | [bluetooth-mini-1.2.2.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复蓝牙配网相关问题 |
+| 2021-07-01 | 1.2.5 | [bluetooth-mini-1.2.5.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复血压计2号键数据不能上传的问题 |
 
 
 
