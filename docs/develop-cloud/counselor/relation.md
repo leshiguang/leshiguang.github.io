@@ -63,13 +63,13 @@
 
 <a name="NPcCg"></a>
 ##### 出参:
-String  顾问关联账号ID<br />
+List<String>  顾问关联账号ID列表<br />
 <br />示例返回报文：
 ```json
 {
 	"code":200, 
 	"msg":"成功",
-  "data":"85162580782" //绑定顾问对应的associatedId，未绑定顾问返回时null
+  "data":["85162580782","179909222"] //绑定顾问对应的associatedId列表，未绑定顾问返回时null
 }
 
 ```
