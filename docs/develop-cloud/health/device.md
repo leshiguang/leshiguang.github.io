@@ -365,7 +365,7 @@ method: post
 
 **对每一个设备，生成一个唯一的乐心设备id。**<br />**1.各业务模块有设备相关的逻辑，如不进行此步骤，则会缺乏合法的乐心设备id，部分功能会受影响；**<br />**2.影响后续设备相关的统计功能；**
 ```bash
-url :  域名 +  /device-rest/api/device/apply/v1.0/applyDeviceId
+url :  域名 +  /api/device/apply/v1.0/applyDeviceId
 method: post
 ```
 **​**
