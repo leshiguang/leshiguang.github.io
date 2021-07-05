@@ -1,12 +1,16 @@
 <a name="OAIV7"></a>
 # 1.绑定设备
-**描述：用户绑定设备**<br />**url :  域名 +  /device-rest/device/bind/bindDevice**<br />**method: post**<br />**<br />**header参数或者url参数**<br />**
+**描述：用户绑定设备**<br />**url :  域名 +  /device-rest/device/bind/bindDevice**<br />**method: post**<br />**​**
+
+**header参数或者url参数**<br />**​**<br />
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
 
-**<br />**post入参 **
+**​**
+
+**post入参 **
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -23,7 +27,7 @@
 }
 ```
 
-<br />**出参******BindResponse**
+<br />**出参**BindResponse**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -86,7 +90,9 @@
 | sort | Integer | _序号_ |  |
 | memo | String | _备注_ |  |
 
-**<br />**DeviceUserDto**
+**​**
+
+**DeviceUserDto**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -115,7 +121,7 @@
 | deviceId | String | 设备id |  |
 | userId | Long | 用户id |  |
 
-**D****eviceSetting**
+**DeviceSetting**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -124,7 +130,9 @@
 | settingClass | String | _设置类名称_ |  |
 | content | String | _json内容_ |  |
 
-**<br />**DeviceStatus**
+**​**
+
+**DeviceStatus**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -234,13 +242,17 @@
 ```
 <a name="F4XDJ"></a>
 # 2.解绑设备
-**url :  域名 +  /device-rest/device/unbind/unbindSelfDevice**<br />**method: post**<br />**<br />**header参数或者url参数**<br />**
+**url :  域名 +  /device-rest/device/unbind/unbindSelfDevice**<br />**method: post**<br />**​**
+
+**header参数或者url参数**<br />**​**<br />
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
 
-**<br />**post入参 **
+**​**
+
+**post入参 **
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -288,12 +300,16 @@
 ```
 <a name="alNzx"></a>
 # 3.获取设备信息
-**
+**​**<br />
 ```bash
 url :  域名 +  /device-rest/device/baseinfo/getDeviceBaseInfo
 method: post
 ```
-**<br />**<br />**post入参 **
+**​**
+
+**​**
+
+**post入参 **
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -309,7 +325,7 @@ method: post
 }
 ```
 
-<br />**出参<br />**<br />DeviceBaseDTO
+<br />**出参​**<br />DeviceBaseDTO
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -343,6 +359,64 @@ method: post
 	}
 }
 ```
-<a name="JyqfC"></a>
-# 
+<a name="TDrfQ"></a>
+# 4.获取乐心设备id
+**​**
+
+**对每一个设备，生成一个唯一的乐心设备id。**<br />**1.各业务模块有设备相关的逻辑，如不进行此步骤，则会缺乏合法的乐心设备id，部分功能会受影响；**<br />**2.影响后续设备相关的统计功能；**
+```bash
+url :  域名 +  /device-rest/api/device/apply/v1.0/applyDeviceId
+method: post
+```
+**​**
+
+**​**
+
+**post入参 **
+
+| 字段 | 类型 | 描述 | 是否必传 | 乐心设备 | 非乐心设备 |
+| --- | --- | --- | --- | --- | --- |
+| **model** | String | 设备型号 | 是 | 乐心设备的型号标识 | 在乐心云为每个型号注册，分配型号标识 |
+| **mac** | String | mac地址 | 否 | 如果是蓝牙设备，必传 | 如果是蓝牙设备，必传 |
+| **thirdDeviceId** | String | _第三方设备唯一标识_ | 是 | 手环：乐心烧码的deviceId<br />非烧码的秤：mac地址<br />非烧码的血压计：mac地址 | 标识设备的标识即可 |
+| **hardwareVersion** | String | _硬件版本号_ | 否 |  |  |
+| **softwareVersion** | String | _固件版本号_ | 否 |  |  |
+|  |  |  |  |  |  |
+
+**示例 **<br />
+
+```json
+{
+    "mac": "087CBED2D27D",
+    "hardwareVersion": "A002",
+    "softwareVersion": "A09",
+    "model": "LS109",
+    "thirdDeviceId": "087CBED2D27D"
+}
+```
+
+<br />**出参​**<br />
+
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| **deviceId** | string | 乐心设备id |  |
+| **sn** | String | 乐心设备sn |  |
+
+
+<br />输出示例
+```json
+
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "deviceId": "000100000111",
+        "mac": "087CBED2D27D",
+        "sn": "0000025600000273"
+    }
+}
+```
+
+
 
