@@ -4,29 +4,29 @@
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
+<a name="TNiBp"></a>
 # 1.睡眠评估
 
 
+<a name="Ocll7"></a>
 ## 1.1 获取睡眠评估问卷题目
 ```bash
 POST /api/sleep/v2.0/evaluate/loadQuestions
 ```
+<a name="s91jI"></a>
 ##### 入参：
-同：免疫力评估
-
-
-**出参**：
-同：免疫力评估
+同：免疫力评估<br />
+<br />**出参**：<br />同：免疫力评估
+<a name="c90yn"></a>
 ## 1.2 提交睡眠评估问卷答案
 ```bash
 POST /api/sleep/v2.0/evaluate/submit
 ```
+<a name="ViTFl"></a>
 ##### 入参：
-同：免疫力评估
-
-
-**出参**：
-同：免疫力评估
+同：免疫力评估<br />
+<br />**出参**：<br />同：免疫力评估
+<a name="ZIdnY"></a>
 ## 1.3 获取某一次睡眠评估的分析结果
 ```bash
 GET /api/sleep/v2.0/evaluate/getEvaluateResult
@@ -203,17 +203,38 @@ RiskLevelDTO：
 	}
 }
 ```
-
-
-# ​
-
-
-
+<a name="b6Qvn"></a>
 # 2 睡眠数据添加
 
 
+<a name="UjIbU"></a>
 ## 2.1 上传乐心手环采集的睡眠原始数据
-待提供
+```bash
+POST /api/sleep/v2.0/upload/bracelet
+```
+**入参：**<br />BraceletOriginUploadRequest
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| braceletOriginDTOS | List<BraceletOriginDTO> | 手环原始数据列表 |  |
+
+BraceletOriginDTO
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| deviceId | String | 设备ID | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| uploadChanel | Integer | 数据上传通道 | 数据上传通道:1(ios)，2(android) |
+| measurementDate | Long | 测量时间 | 时间戳，单位毫秒 |
+| levelSet | String | 蓝牙上传的睡眠底层数据 | 16进制字符串 |
+| timeUnit | Integer | 时长单位，分钟 | 一般填5，即5分钟一笔数据 |
+| uploadNum | Integer | 一次上传的数量 | 有多少个5分钟的数据 |
+| uploaded | Integer | 是否上传 | 默认传1 |
+| created | Long | 创建时间 | 时间戳，单位毫秒 |
+| model | String | 设备型号 | 如：LS431-B3 |
+| softwareVersion | String | 固件版本号 | 如：T310 |
+
+**出参：无**<br />​<br />
+<a name="cfzy1"></a>
 ## 2.2 手动添加睡眠数据（睡眠日记）
 ```bash
 POST /api/sleep/v2.0/diary/save
@@ -234,9 +255,11 @@ POST /api/sleep/v2.0/diary/save
 | belongDay | String | 所属日期(2021-04-06) | 补充数据需要知道补充的哪一天的 |
 
 **出参：Boolean（是否提交成功）**
+<a name="xfoDc"></a>
 # 3 睡眠数据查询
 
 
+<a name="LslPv"></a>
 ## 3.1 查询某一天的睡眠数据及睡眠分析
 ```bash
 POST /api/sleep/v2.0/data/getDaySleepReuslt
@@ -245,13 +268,11 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| queryDate | String | 查询日期(2021-04-06) | queryDate和
-direction传空，则查询最近一次 |
+| queryDate | String | 查询日期(2021-04-06) | queryDate和<br />direction传空，则查询最近一次 |
 | direction | Integer | 方向，>0正向取数据，<0反向取数据 |  |
 
 
-
-**出参：**SleepDataViewDTO
+<br />**出参：**SleepDataViewDTO
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -259,12 +280,10 @@ direction传空，则查询最近一次 |
 | sleepTime | Long | 入睡时间 |  |
 | getupTime | Long | 醒来时间 |  |
 | sleepId | String | sleepId | 只有手环有，日记没有 |
-| sleepModel | Integer | 睡眠模型 | 1-4维手环；
-2-5维日记；
-3-6维PRO |
+| sleepModel | Integer | 睡眠模型 | 1-4维手环；<br />2-5维日记；<br />3-6维PRO |
 | sleepDimensions | List<SleepDimDTO> | 睡眠维度指标 |  |
 | sleepScore | SleepBaseDTO | 睡眠评分 |  |
-| sleepSummary | String | 睡眠总结文案 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872391656-0ab4c030-eb85-43ac-bbd7-c1b85ed2bfa1.png#height=357&id=bYZVx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=733&originalType=binary&size=60863&status=done&style=none&width=733) |
+| sleepSummary | String | 睡眠总结文案 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872391656-0ab4c030-eb85-43ac-bbd7-c1b85ed2bfa1.png#height=357&id=bYZVx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=733&originalType=binary&ratio=1&size=60863&status=done&style=none&width=733) |
 | sleepSegments | List<SleepStateDetail> | 睡眠段数据 |  |
 | sleepRatios | List<SleepRatioDTO> | 睡眠比例 |  |
 | sleepEfficiency | SleepBaseDTO | 睡眠效率 |  |
@@ -279,7 +298,7 @@ direction传空，则查询最近一次 |
 | standardHeartRate | SleepBaseDTO | 基准心率 |  |
 | heartRateList | List<Integer> | 心率值 |  |
 | silentHeartRate | SleepBaseDTO | 晨脉 |  |
-| silentHeartRateSummary | String | 晨脉总结 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872425969-4909f554-7169-4458-9ee4-ed3e24a3dd3e.png#height=252&id=IFnGx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=252&originWidth=666&originalType=binary&size=56299&status=done&style=none&width=666) |
+| silentHeartRateSummary | String | 晨脉总结 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872425969-4909f554-7169-4458-9ee4-ed3e24a3dd3e.png#height=252&id=IFnGx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=252&originWidth=666&originalType=binary&ratio=1&size=56299&status=done&style=none&width=666) |
 
 SleepDimDTO：
 
@@ -322,8 +341,7 @@ SleepRatioDTO：
 | tag | String | 标签 | 偏低、偏高、正常 |
 
 
-
-出参示例
+<br />出参示例
 ```json
 
 {
@@ -407,3 +425,4 @@ SleepRatioDTO：
 
 
 ```
+
