@@ -44,7 +44,7 @@ GET /api/sleep/v2.0/evaluate/getEvaluateResult
 | nickname | String | 昵称 |  |
 | headPic | String | 头像 |  |
 | evaluateTime | String | 评估时间 |  |
-| riskLevel | List<RiskLevelDTO> | 风险等级 |  |
+| riskLevel | List(RiskLevelDTO) | 风险等级 |  |
 | sleepLabels | List<String> | 睡眠标签 |  |
 | recommendAssistant | String | 推荐助手 |  |
 | sleepPattern | Integer | 睡眠类型 | 1-清晨型，2-夜晚型，3-中间型 |
@@ -216,7 +216,7 @@ POST /api/sleep/v2.0/upload/bracelet
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| braceletOriginDTOS | List<BraceletOriginDTO> | 手环原始数据列表 |  |
+| braceletOriginDTOS | List(BraceletOriginDTO) | 手环原始数据列表 |  |
 
 BraceletOriginDTO
 
@@ -248,7 +248,7 @@ POST /api/sleep/v2.0/diary/save
 | prepareSleepDuration | Integer | 多久睡着 |  |
 | wakeUpTime | Integer | 醒来时间 |  |
 | getOutBedTime | Integer | 下床时间 |  |
-| awakeDetailList | List<Integer> | 中途清醒 |  |
+| awakeDetailList | List(Integer) | 中途清醒 |  |
 |  |  |  |  |
 | type | Integer | 类型 | 1-日记；2-补充 |
 | queryUserId | Long | 查询用户ID | 支持家人互联 |
@@ -281,11 +281,11 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 | getupTime | Long | 醒来时间 |  |
 | sleepId | String | sleepId | 只有手环有，日记没有 |
 | sleepModel | Integer | 睡眠模型 | 1-4维手环；<br />2-5维日记；<br />3-6维PRO |
-| sleepDimensions | List<SleepDimDTO> | 睡眠维度指标 |  |
+| sleepDimensions | List(SleepDimDTO) | 睡眠维度指标 |  |
 | sleepScore | SleepBaseDTO | 睡眠评分 |  |
 | sleepSummary | String | 睡眠总结文案 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872391656-0ab4c030-eb85-43ac-bbd7-c1b85ed2bfa1.png#height=357&id=bYZVx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=733&originalType=binary&ratio=1&size=60863&status=done&style=none&width=733) |
-| sleepSegments | List<SleepStateDetail> | 睡眠段数据 |  |
-| sleepRatios | List<SleepRatioDTO> | 睡眠比例 |  |
+| sleepSegments | List(SleepStateDetail) | 睡眠段数据 |  |
+| sleepRatios | List(SleepRatioDTO) | 睡眠比例 |  |
 | sleepEfficiency | SleepBaseDTO | 睡眠效率 |  |
 | sleepDuration | SleepBaseDTO | 睡眠时长 |  |
 | fallSleepDuration | SleepBaseDTO | 入睡用时 |  |
@@ -296,7 +296,7 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 | wakeUpTime | SleepBaseDTO | 醒来时间 |  |
 | wakeUpChange | SleepBaseDTO | 醒来时间变化 |  |
 | standardHeartRate | SleepBaseDTO | 基准心率 |  |
-| heartRateList | List<Integer> | 心率值 |  |
+| heartRateList | List(Integer) | 心率值 |  |
 | silentHeartRate | SleepBaseDTO | 晨脉 |  |
 | silentHeartRateSummary | String | 晨脉总结 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872425969-4909f554-7169-4458-9ee4-ed3e24a3dd3e.png#height=252&id=IFnGx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=252&originWidth=666&originalType=binary&ratio=1&size=56299&status=done&style=none&width=666) |
 
