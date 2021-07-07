@@ -210,7 +210,7 @@ RiskLevelDTO：
 <a name="UjIbU"></a>
 ## 2.1 上传乐心手环采集的睡眠原始数据
 ```bash
-POST /api/sleep/v2.0/upload/bracelet
+POST /api/sleep/v1.0/upload/bracelet/sleep
 ```
 **入参：**<br />BraceletOriginUploadRequest
 
