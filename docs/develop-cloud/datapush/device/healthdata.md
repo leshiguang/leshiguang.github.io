@@ -16,6 +16,7 @@
 | data | - | Object | 字段具体解释见下方（data参数解释） |
 | **deviceId** | data | String | 设备id |
 | sn | data | String | 设备sn |
+| mac | data | String | 设备mac地址 |
 | **measureEpochMilli** | data | Long | 测量时间（毫秒值） |
 | **weight** | data | double | _体重（单位kg）_ |
 | **resistance50k** | data | double | _阻抗值_ |
@@ -25,18 +26,20 @@
 2）推送数据样例样例
 ```json
 {
-  "dataTypeKey": "dWeight",
-  "eventKey": "dataPush",
-  "pushStatus": 1,
-  "data": {
-    "deviceId": "00010610c37b",
-    "sn": "1571237813568931",
-    "heartRate": 90,
-    "measureEpochMilli": 1606455623387,
-    "weight": 62.5,
-    "resistance50k": 511,
-    "timeZone": "Asia/Shanghai"
-  }
+	"dataTypeKey": "dWeight",
+	"deviceId": "ad02f1000f8a",
+	"eventKey": "dataPush",
+	"pushStatus": 1,
+	"data": {
+		"deviceId": "ad02f1000f8a",
+		"sn": "1133848100003978",
+		"mac": "6876270C5097",
+		"measureEpochMilli": 1625716221000,
+		"timeZone": "Asia/Shanghai",
+		"weight": 21.75,
+		"resistance50k": 0,
+		"heartRate": 0
+	}
 }
 ```
 <a name="yvcMW"></a>
