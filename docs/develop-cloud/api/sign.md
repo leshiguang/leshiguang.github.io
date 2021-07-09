@@ -11,7 +11,6 @@ API调用是基于HTTP协议来调用的，开发者可以直接通过调用http
 | 调用环境 | 服务地址(HTTP) | 服务地址(HTTPS) |
 | --- | --- | --- |
 | 正式环境 | http://api.leshiguang.com/ | https://api.leshiguang.com/ |
-| 测试环境 | http://api-beta.leshiguang.com/ | https://api-beta.leshiguang.com/ |
 
 <a name="s2"></a>
 # 公共参数
