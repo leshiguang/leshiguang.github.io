@@ -1,27 +1,85 @@
-<a name="f1RBo"></a>
-## 核心价值点
-1. **内容专业有用，提高品牌信任度：**由专业营养师、健康管理师、医生发布健康知识，内容真实可信专业有用；可结合用户标签和品牌定位，发布用户感兴趣的不同栏目的内容（体重、睡眠、血糖、营养、血压等）。依托内容对用户进行健康宣教、品牌宣传，让用户相信健康管理的重要性，提高用户购买欲，提升转化率。
-1. **内容丰富有趣，沉浸式内容浏览：**内容类型丰富，包含短图文、长图文、视频、音频、问答话题等多种内容形式，可有效减少用户阅读疲劳；瀑布流式内容展示形式，浏览方式简单，打造用户沉浸浏览场景。
-1. **傻瓜式内容工具，赋能私域运营：**顾问端支持内容转发、文字复制、图片下载功能，轻松方便地将内容转发至私域社群，成为私域运营的得力工具。
-1. **运营活动助力用户养成健康习惯：**内容社区头部运营活动（步数赛、甩肉大赛、小习惯）让用户在赛事中减脂锻炼，比赛监督可以提高用户的积极性，帮助用户养成健康生活的好习惯。
+<a name="WEaMo"></a>
+# API调用简介
+API调用是基于HTTP协议来调用的，开发者可以直接通过调用http请求获取信息，调用过程中请求的封装，签名加密等，以下主要是针对自行封装HTTP请求进行API调用的原理进行详细解说。
+<a name="s0"></a>
+# 调用流程
+调用过程如下：填充参数 > 生成签名 > 拼装HTTP请求 > 发起HTTP请求> 得到HTTP响应 > 解释json/xml结果
+<a name="s1"></a>
+# 调用入口
+调用API的服务URL地址，云平台目前提供正式、测试环境。
 
-![图片1.png](https://cdn.nlark.com/yuque/0/2021/png/12786587/1622527397866-423cff26-c7d0-4fc0-812a-3b6f7c6c33d3.png#clientId=ua1606c30-49ea-4&from=ui&id=HiIfm&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%871.png&originHeight=831&originWidth=1630&originalType=binary&size=559555&status=done&style=none&taskId=uc5ddda70-33df-4ab6-a82c-05bfa1e36ae)
-<a name="gWuvT"></a>
-## 产品模块详解
-**主路径1. 互动活动**<br />点击【社区】tab，在内容社区头部的活动模块参与各运营活动（甩肉大赛、步数赛、小习惯），可在乐豆中心领取积分和兑换商品。<br />![内容社区活动模块路径.png](https://cdn.nlark.com/yuque/0/2021/png/12786587/1622437435023-96c43ea3-4e7d-4b91-84bb-c75a0db2ff12.png#clientId=u6fc30a50-f387-4&from=ui&id=xvf8i&margin=%5Bobject%20Object%5D&name=%E5%86%85%E5%AE%B9%E7%A4%BE%E5%8C%BA%E6%B4%BB%E5%8A%A8%E6%A8%A1%E5%9D%97%E8%B7%AF%E5%BE%84.png&originHeight=3893&originWidth=7202&originalType=binary&size=6458150&status=done&style=none&taskId=uaff10dd2-bf22-4b9a-bf14-ee9297d59b1)<br />**主路径2. 社区内容**<br /> 内容浏览：点击【社区】tab，在内容社区首页点击内容分栏，分类展示内容feed流-点击进入二级页查看详情。<br /> 内容互动：点击【社区】tab，在内容社区首页和内容二级页，进行点赞、收藏、评论、转发。<br />![社区内容路径.png](https://cdn.nlark.com/yuque/0/2021/png/12786587/1622441122664-421ee84e-c2aa-48b8-844b-9443506616e6.png#clientId=u6fc30a50-f387-4&from=ui&id=BMjgl&margin=%5Bobject%20Object%5D&name=%E7%A4%BE%E5%8C%BA%E5%86%85%E5%AE%B9%E8%B7%AF%E5%BE%84.png&originHeight=12743&originWidth=4511&originalType=binary&size=9036401&status=done&style=none&taskId=u0e8da075-668a-4648-a6d0-ddd635a8b3f)<br />**主路径3. B端内容工具**<br />内容使用：点击【顾问百宝箱】tab-滑动至顾问页面下方【内容工具】-根据内容分类来使用（复制下载转发）相关内容。问答内容支持在详情页转发，音频内容支持首页转发、下载图片和复制文案和详情页转发、下载图片和复制文案；视频内容支持首页转发、复制文案和详情页转发、复制文案；图文内容支持首页转发、下载图片、复制文案和详情页转发、下载图片和复制文案。<br />​
+| 调用环境 | 服务地址(HTTP) | 服务地址(HTTPS) |
+| --- | --- | --- |
+| 正式环境 | http://api.leshiguang.com/ | https://api.leshiguang.com/ |
 
-内容互动：点击【顾问百宝箱】tab-滑动至顾问页面下方【内容工具】-点击进入内容详情页进行评论。<br />​
+<a name="s2"></a>
+# 公共参数
+调用任何一个API都必须传入的参数，目前支持的公共参数有：
 
-![b端内容社区.png](https://cdn.nlark.com/yuque/0/2021/png/12786587/1622442470326-63489883-48e1-4c12-a2ab-5cac3fe50b0b.png#clientId=u6fc30a50-f387-4&from=ui&id=Qh2jf&margin=%5Bobject%20Object%5D&name=b%E7%AB%AF%E5%86%85%E5%AE%B9%E7%A4%BE%E5%8C%BA.png&originHeight=12073&originWidth=3358&originalType=binary&size=9098905&status=done&style=none&taskId=uc8c15c35-8e2c-400f-ba0f-3237c8e1b66)
-<a name="WMifZ"></a>
-## 产品交付能力
-根据客户需求不同，内容社区可以交付以下不同能力的版本：
+| 参数名称 | 参数类型 | 是否必须 | 参数描述 |
+| --- | --- | --- | --- |
+| api_appKey | String | 是 | 合作商应用ID （通过申请业务接入时获得） |
+| api_timestamp | String | 是 | 时间戳（当前系统时间戳）1分钟有效 |
+| api_version | String | 是 | API协议版本，可选值：1.0。 |
+| api_sign | String | 是 | （api_appKey + api_timestamp + api_version + appSecret）将上述参数按照ASC码先排序，然后拼接成一个字符串，再进行MD5计算(md5DigestAsHex)，转化成16进制字符(String，大写) |
 
-1. 小时光+运营活动（步数赛、甩肉赛、小习惯、乐豆中心）+内容的全能力版本
-1. 无小时光和小习惯版本
-1. 只有内容版本
-1. 头部banner+内容版本
+<a name="s3"></a>
+# 业务参数
+API调用除了必须包含公共参数外，如果API本身有业务级的参数也必须传入，每个API的业务级参数请考API文档说明。
+<a name="s4"></a>
+# 签名算法
+为了防止API调用过程中被黑客恶意篡改，调用任何一个API都需要携带签名，服务端会根据请求参数，对签名进行验证，签名不合法的请求将会被拒绝。目前支持的签名算法一种：MD5(md5DigestAsHex)，签名大体过程如下：
 
-![内容社区交付能力.png](https://cdn.nlark.com/yuque/0/2021/png/12786587/1622517811724-b65235a6-103c-44e3-b9a2-8ef7d2978dae.png#clientId=u1c835a46-05c5-4&from=ui&id=Nos9Q&margin=%5Bobject%20Object%5D&name=%E5%86%85%E5%AE%B9%E7%A4%BE%E5%8C%BA%E4%BA%A4%E4%BB%98%E8%83%BD%E5%8A%9B.png&originHeight=1940&originWidth=4327&originalType=binary&size=2002343&status=done&style=none&taskId=u1859a6f1-daef-417b-8ee6-2b1b616205b)<br /> <br />
+- 对相关参数（api_appKey、api_timestamp、api_version、appSecret），根据参数值的ASCII码表的顺序排序。
+- 将排序好的参数值拼装在一起。
+- 把拼装好的字符串采用utf-8编码，使用签名算法对编码后的字节流进行摘要。使用MD5算法加密，如：md5(value)；
+- 将摘要得到的字节流结果使用十六进制表示，如：hex(“helloworld”.getBytes(“utf-8”)).toUpperCase = “68656C6C6F776F726C64”
 
+**JAVA签名示例代码**
+```
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.DigestUtils;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+//计算示例
+public static String generateSign(String api_appKey,String api_timestamp,String api_version,String appSecret) {
+       String[] arraySign = new String[]{api_timestamp,api_appKey,appSecret,api_version};
+ 			 String sign = generateSign(arraySign);---获取到密钥
+}
+
+//签名计算示例
+public static String generateSign(String... contents) {
+        String sign = Arrays.stream(contents).filter(StringUtils::isNotBlank)
+                .sorted()
+                .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+                .toString();
+        return DigestUtils.md5DigestAsHex(sign.getBytes()).toUpperCase();
+}
+
+```
+**​**<br />
+<a name="s5"></a>
+# 调用示例
+```
+http://api.leshiguang.com/sport-rest/step/query/getDayStepInfoList?id=51&api_appKey=lx4ec9b2c924ea7283&api_sign=BD63FF28C0FC3434E552921D85FA8591&api_timestamp=1596527190000&api_version=1.0  +  对应接口的参数
+```
+示例代码见如下仓库：<br />​
+
+[https://github.com/leshiguang/cloud-demo](https://github.com/leshiguang/cloud-demo)<br />​<br />
+```java
+WeightAlgorithmRequest request = WeightAlgorithmRequest.builder()
+    .age(29)
+    .weight(BigDecimal.valueOf(65))
+    .height(BigDecimal.valueOf(1.68))
+    .sex(1)
+    .weightUnit(1)
+    .resistance(BigDecimal.valueOf(500.0))
+    .build();
+
+ResultData<AsiaWeightIndexDTO> res = WeightAlgorithmCloudApi.getAsiaWeightIndexDTO(request);
+
+System.out.println();
+```
 
