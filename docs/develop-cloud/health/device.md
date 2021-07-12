@@ -374,24 +374,25 @@ method: post
 
 **post入参 **
 
-| 字段 | 类型 | 描述 | 是否必传 | 乐心设备 | 非乐心设备 |
-| --- | --- | --- | --- | --- | --- |
-| **model** | String | 设备型号 | 是 | 乐心设备的型号标识 | 在乐心云为每个型号注册，分配型号标识 |
-| **mac** | String | mac地址 | 否 | 如果是蓝牙设备，必传 | 如果是蓝牙设备，必传 |
-| **thirdDeviceId** | String | _第三方设备唯一标识_ | 是 | 手环：乐心烧码的deviceId，不需要调用此接口，该deviceId可以直接使用；<br />非烧码的秤：mac地址<br />非烧码的血压计：mac地址 | 标识设备的标识即可 |
-| **hardwareVersion** | String | _硬件版本号_ | 否 |  |  |
-| **softwareVersion** | String | _固件版本号_ | 否 |  |  |
-|  |  |  |  |  |  |
+| 字段 | 类型 | 描述 | 是否必传 | 备注 |
+| --- | --- | --- | --- | --- |
+| **model** | String | 设备型号 | 是 | 在乐心云为每个型号注册，分配型号标识 |
+| **thirdDeviceId** | String | _第三方设备唯一标识_ | 是 | 标识设备的标识即可，需唯一，不同设备不重复 |
+| **mac** | String | mac地址 | 否 | 如果是蓝牙设备，必传 |
+| **hardwareVersion** | String | _硬件版本号_ | 否 |  |
+| **softwareVersion** | String | _固件版本号_ | 否 |  |
+|  |  |  |  |  |
 
 **示例 **<br />
 
 ```json
 {
+  	"model": "LS109",
+    "thirdDeviceId": "087CBED2D27D",
     "mac": "087CBED2D27D",
     "hardwareVersion": "A002",
     "softwareVersion": "A09",
-    "model": "LS109",
-    "thirdDeviceId": "087CBED2D27D"
+    
 }
 ```
 
