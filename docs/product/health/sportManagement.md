@@ -18,7 +18,7 @@
 
 - **丰富有趣的运动课程，易于用户坚持**
 
-与哑铃、跳绳等多种智能硬件联动的运动课程，游戏互动性强，智能识别动作标准度，让运动更有效<br />![幻灯片2.PNG](https://cdn.nlark.com/yuque/0/2021/png/2752327/1622519653478-9c99814d-d957-4193-b0fb-f4dc643a9af1.png#clientId=u1be7cfc0-b765-4&from=ui&id=XQuAk&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%872.PNG&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=1771212&status=done&style=none&taskId=u4b844cd2-93fb-423c-aee5-a6d6d41fd60)
+与哑铃、跳绳等多种智能硬件联动的运动课程，游戏互动性强，智能识别动作标准度，让运动更有效<br />![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1626074435004-071d97a8-581a-41f3-85f9-c0fc229ddb36.jpeg#clientId=u7c7ec1ad-0031-4&from=ui&id=ucf97868b&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=1064809&status=done&style=none&taskId=uf03e7eb7-ea90-4327-9c32-d27b5964a75)
 <a name="INOrm"></a>
 # 产品关键路径
 ![幻灯片1.PNG](https://cdn.nlark.com/yuque/0/2021/png/2752327/1622519661789-3a09db1b-39fe-4dcb-9298-f835159d1953.png#clientId=u1be7cfc0-b765-4&from=ui&id=T893F&margin=%5Bobject%20Object%5D&name=%E5%B9%BB%E7%81%AF%E7%89%871.PNG&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=388040&status=done&style=none&taskId=u7be08f64-7cb3-4791-9837-5126ee3562a)<br />
