@@ -223,15 +223,8 @@ BraceletOriginDTO
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | deviceId | String | 设备ID | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
-| uploadChanel | Integer | 数据上传通道 | 数据上传通道:1(ios)，2(android) |
 | measurementDate | Long | 测量时间 | 时间戳，单位毫秒 |
 | levelSet | String | 蓝牙上传的睡眠底层数据 | 16进制字符串 |
-| timeUnit | Integer | 时长单位，分钟 | 一般填5，即5分钟一笔数据 |
-| uploadNum | Integer | 一次上传的数量 | 有多少个5分钟的数据 |
-| uploaded | Integer | 是否上传 | 默认传1 |
-| created | Long | 创建时间 | 时间戳，单位毫秒 |
-| model | String | 设备型号 | 如：LS431-B3 |
-| softwareVersion | String | 固件版本号 | 如：T310 |
 
 **出参：无**<br />​<br />
 <a name="cfzy1"></a>
