@@ -59,33 +59,33 @@
 
 <a name="M5Y44"></a>
 ## 营养素详细分析
-1.基于评估结果，智能分析有哪些健康问题，缺乏哪些营养素；<br />用人体图+文案的形式，显示健康问题更加聚焦。<br />![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626159214688-6bddb967-5712-45b6-bb78-06fd9bb628af.png#clientId=uaac2ad28-94ee-4&from=drop&id=u40ee7e7a&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=488&originWidth=800&originalType=binary&ratio=1&size=74149&status=done&style=none&taskId=ua6f146db-8b91-4c10-b851-393ea0b2a01)<br />2.基于评估结果，分析对应的缺乏程度，提示用户及时重视；<br />标注出对应的健康问题，更便于用户针对性改善。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626146785418-8c747e02-18aa-4ab4-a62c-bc379ad354ed.png#clientId=u253a48ce-b237-4&from=paste&height=401&id=ua289fb57&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1260&originWidth=582&originalType=binary&ratio=1&size=377907&status=done&style=none&taskId=u08d29f37-4645-439d-a7a9-21ee8bffd96&width=185)<br />
+1.基于评估结果，智能分析有哪些健康问题，缺乏哪些营养素；<br />用人体图+文案的形式，显示健康问题更加聚焦。<br />![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626159214688-6bddb967-5712-45b6-bb78-06fd9bb628af.png#clientId=uaac2ad28-94ee-4&from=drop&id=u40ee7e7a&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=488&originWidth=800&originalType=binary&ratio=1&size=74149&status=done&style=none&taskId=ua6f146db-8b91-4c10-b851-393ea0b2a01)<br />2.基于评估结果，分析对应的缺乏程度，提示用户及时重视；<br />标注出对应的健康问题，更便于用户针对性改善。<br />![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626159804078-383a71f7-0e7f-4d0a-bfc5-6a834b0b692a.png#clientId=u1d649cb9-6a1c-4&from=drop&id=u052bff28&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=490&originWidth=800&originalType=binary&ratio=1&size=65118&status=done&style=none&taskId=u5c5b3d99-bc3d-4dd0-af30-e356ca222c1)<br />
 <br />3.解析用户缺乏的营养素，提示每日需补充剂量。
 
 - 推荐富含该营养素的食物，帮助用户通过日常膳食进行调理；
 - 针对较难补充的营养素，运用富含该营养素的食物来类比每日补充剂量，提示用户仅仅通过日常饮食补充是不够的，进而强引导用户购买对应膳食补充剂。
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626146880844-fb108cb6-996c-4e17-b8ca-fff1d61a52dd.png#clientId=u253a48ce-b237-4&from=paste&height=400&id=ubd8531cf&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1792&originWidth=828&originalType=binary&ratio=1&size=567559&status=done&style=none&taskId=uc40b941b-7e2f-42da-8586-5cdf32b3cc2&width=185)
+![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626159845093-2e19728a-a960-4190-941a-794ffe092194.png#clientId=u1d649cb9-6a1c-4&from=drop&id=u4611cc39&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=490&originWidth=800&originalType=binary&ratio=1&size=50146&status=done&style=none&taskId=ucf9e5c67-e60a-40b6-b4f0-d0cdaeeb2d1)
 
 - 针对性推荐膳食补充剂，辅以日常饮食调理方案，改善方案更全面、科学性更强；
 - 告知可能影响营养吸收的注意事项，帮助用户了解如何更好地补充，使用户感知我们的科学性、为用户着想。
 - 日常饮食调理+保健品的一体化改善方案更有助于用户信服和接受、并进一步坚持执行；
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1616050687102-2d45d9a5-8315-423b-9184-4df0224f48a7.png#height=345&id=AMB9G&margin=%5Bobject%20Object%5D&name=image.png&originHeight=974&originWidth=550&originalType=binary&ratio=1&size=286954&status=done&style=none&width=195)<br />
+![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626160090788-ed877add-0699-43d7-b865-f434d877be3b.png#clientId=u1d649cb9-6a1c-4&from=drop&id=u85662de7&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=512&originWidth=800&originalType=binary&ratio=1&size=57898&status=done&style=none&taskId=u4ddc01aa-6404-4c1d-8d87-fc50dcc9c1e)<br />
 
 <a name="JMb4u"></a>
 ## 再测一次
-支持再次评估，用户可以通过多次评估，评估不同的健康问题，<br />也可以通过一段时间后的再次评估，对比之前的评估结果，感受自己服用保健品后的健康提升成果。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626147050728-1ac8b090-c3c4-4ab5-99f6-04fee0841fcb.png#clientId=u253a48ce-b237-4&from=paste&height=399&id=u1b66d88e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1256&originWidth=582&originalType=binary&ratio=1&size=504937&status=done&style=none&taskId=u70bdc8b6-3175-4b3f-9b3e-fec41b90eca&width=185)<br />
+支持再次评估，用户可以通过多次评估，评估不同的健康问题，<br />也可以通过一段时间后的再次评估，对比之前的评估结果，感受自己服用保健品后的健康提升成果。<br />![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626160123424-8d83de8b-386c-4125-a67f-39b539777e2e.png#clientId=u1d649cb9-6a1c-4&from=drop&id=u011d8196&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=470&originWidth=800&originalType=binary&ratio=1&size=74067&status=done&style=none&taskId=u3c56ed1b-1ca6-4071-a2ad-39b554590b6)<br />
 <br />
 
 <a name="OOGDg"></a>
 ## 评估结果分享
-支持“与好友PK辛劳指数”和“分享小知识点给关心的人”，增加了分享的趣味性和价值。让亲朋好友了解营养小知识，PK谁更辛劳。<br />也通过分享宣传，吸引更多用户参与营养均衡评估，有利于助力企业引流。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626147431620-d4f94dc4-2fc9-4463-820b-9b774ccd100a.png#clientId=u253a48ce-b237-4&from=paste&height=400&id=u45f0018b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1792&originWidth=828&originalType=binary&ratio=1&size=740099&status=done&style=none&taskId=u677be17b-bb70-47b6-937f-ee3c413005b&width=185)![image.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626147449361-b53f6640-8fe6-4fc2-80e5-26dff36a9baa.png#clientId=u253a48ce-b237-4&from=paste&height=400&id=u63173c35&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1792&originWidth=828&originalType=binary&ratio=1&size=528207&status=done&style=none&taskId=uddcb41fe-e9ba-425a-93d0-f265528647e&width=185)
+支持“与好友PK辛劳指数”和“分享小知识点给关心的人”，增加了分享的趣味性和价值。让亲朋好友了解营养小知识，PK谁更辛劳。<br />也通过分享宣传，吸引更多用户参与营养均衡评估，有利于助力企业引流。<br />![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626160234113-2ad70ffb-566c-4b7f-92fc-918fb4ead7c6.png#clientId=u1d649cb9-6a1c-4&from=drop&id=udc3a8723&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=470&originWidth=800&originalType=binary&ratio=1&size=99120&status=done&style=none&taskId=u60920c2c-1ed5-45c2-b89f-a2e2c316bdc)
 <a name="IxhsY"></a>
 #### 
 <a name="zurBu"></a>
 ## 评估历史回溯
-可保留用户历史的每一次评估结果，用户可以通过回溯评估结果；<br />通过历史结果对比，用户可以明显感受到进行营养管理后的改善效果，进一步帮助企业论证保健品的效用。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626147512142-1fd27eef-96a3-4821-a0ea-0499d0cce9ca.png#clientId=u253a48ce-b237-4&from=paste&height=400&id=ue098a448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1792&originWidth=828&originalType=binary&ratio=1&size=325505&status=done&style=none&taskId=u7615d7dc-1499-4ad5-9775-23d71295a61&width=185)<br />
+可保留用户历史的每一次评估结果，用户可以通过回溯评估结果；<br />通过历史结果对比，用户可以明显感受到进行营养管理后的改善效果，进一步帮助企业论证保健品的效用。<br />![图片.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626160263582-2d4d7c2d-d1f6-4aba-be26-8b82ff6dcb6c.png#clientId=u1d649cb9-6a1c-4&from=drop&id=uabf527cc&margin=%5Bobject%20Object%5D&name=%E5%9B%BE%E7%89%87.png&originHeight=487&originWidth=800&originalType=binary&ratio=1&size=36777&status=done&style=none&taskId=u8db00e3e-ee90-44bf-b993-8de288c5e77)<br />
 
 <a name="GvfHN"></a>
 # 交付模式拆解
