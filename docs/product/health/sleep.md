@@ -18,21 +18,21 @@
 
 - **SMART睡眠改善方案，多维度促进高效睡眠**
 
-结合用户睡眠风险及诱因标签，定制个性化睡眠改善方案，智能推荐助眠商品，通过压力缓解及认知行为改善睡眠质量<br />![11.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622530085500-0705f329-27f1-45e7-bd39-b60bb3e38ff5.png#clientId=u8ce13b7f-0262-4&from=ui&id=SZtXc&margin=%5Bobject%20Object%5D&name=11.png&originHeight=600&originWidth=1067&originalType=binary&size=196920&status=done&style=none&taskId=ue6db9bc2-bb73-46b5-864b-6c32473a176)<br />
+结合用户睡眠风险及诱因标签，定制个性化睡眠改善方案，智能推荐助眠商品，通过压力缓解及认知行为改善睡眠质量<br />![11.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622530085500-0705f329-27f1-45e7-bd39-b60bb3e38ff5.png#clientId=u8ce13b7f-0262-4&from=ui&id=SZtXc&margin=%5Bobject%20Object%5D&name=11.png&originHeight=600&originWidth=1067&originalType=binary&ratio=1&size=196920&status=done&style=none&taskId=ue6db9bc2-bb73-46b5-864b-6c32473a176)<br />
 
 <a name="T7hpy"></a>
 # 产品关键路径
-![新版睡眠说明0510.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/336715/1622464938419-b6596b37-bd20-45ee-96af-ed309e5d361b.jpeg#clientId=ubc437d63-bfb4-4&from=ui&id=ralqU&margin=%5Bobject%20Object%5D&name=%E6%96%B0%E7%89%88%E7%9D%A1%E7%9C%A0%E8%AF%B4%E6%98%8E0510.jpg&originHeight=1080&originWidth=1920&originalType=binary&size=152590&status=done&style=none&taskId=uf3623a40-9660-417a-aa5c-0f16f9ab3c1)
+![新版睡眠说明0510.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/336715/1622464938419-b6596b37-bd20-45ee-96af-ed309e5d361b.jpeg#clientId=ubc437d63-bfb4-4&from=ui&id=ralqU&margin=%5Bobject%20Object%5D&name=%E6%96%B0%E7%89%88%E7%9D%A1%E7%9C%A0%E8%AF%B4%E6%98%8E0510.jpg&originHeight=1080&originWidth=1920&originalType=binary&ratio=1&size=152590&status=done&style=none&taskId=uf3623a40-9660-417a-aa5c-0f16f9ab3c1)
 <a name="cLiSw"></a>
 # 产品模块详解
 <a name="Glolc"></a>
 ## 核心流程1：数据上传及展示流程
 <a name="I94mz"></a>
 ### 路径1：硬件数据上传
-小程序首页点击【个人中心】->添加新设备或确认已有手环设备连接成功->小程序首页点击【睡眠】板块，查看数据概况->点击“详情”查看数据报告<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641447310-688c0fdd-39dc-42b8-a473-0c5fe4fec90d.png#clientId=u53d4943f-843d-4&from=paste&height=887&id=MEfNP&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1774&originWidth=2391&originalType=binary&size=902431&status=done&style=none&taskId=u6df7a658-f4de-45c1-b44d-7de62730fc5&width=1195.5)<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641084296-583cbe09-6711-42e4-af60-6aed84c8317a.png#clientId=u53d4943f-843d-4&from=paste&height=2923&id=WaLM9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=5846&originWidth=2843&originalType=binary&size=2110465&status=done&style=none&taskId=u9182a1c7-250c-4889-a9fd-917e61be335&width=1421.5)
+小程序首页点击【个人中心】->添加新设备或确认已有手环设备连接成功->小程序首页点击【睡眠】板块，查看数据概况->点击“详情”查看数据报告<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641447310-688c0fdd-39dc-42b8-a473-0c5fe4fec90d.png#clientId=u53d4943f-843d-4&from=paste&height=887&id=MEfNP&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1774&originWidth=2391&originalType=binary&ratio=1&size=902431&status=done&style=none&taskId=u6df7a658-f4de-45c1-b44d-7de62730fc5&width=1195.5)<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641084296-583cbe09-6711-42e4-af60-6aed84c8317a.png#clientId=u53d4943f-843d-4&from=paste&height=2923&id=WaLM9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=5846&originWidth=2843&originalType=binary&ratio=1&size=2110465&status=done&style=none&taskId=u9182a1c7-250c-4889-a9fd-917e61be335&width=1421.5)
 <a name="djmnS"></a>
 ### 路径2：手动记录数据
-小程序首页点击【睡眠】板块->睡眠模块首页点击“手动记录昨晚睡眠”->完成睡眠日记点击“获取睡眠日报”->查看睡眠日报<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641137178-1c4f0f78-30b1-4695-bccc-3bdc6fd03a60.png#clientId=u53d4943f-843d-4&from=paste&height=1969&id=TE6Y8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3937&originWidth=4580&originalType=binary&size=1151516&status=done&style=none&taskId=u3f5a8768-c8d0-4982-87dd-d605e7f5b2a&width=2290)
+小程序首页点击【睡眠】板块->睡眠模块首页点击“手动记录昨晚睡眠”->完成睡眠日记点击“获取睡眠日报”->查看睡眠日报<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641137178-1c4f0f78-30b1-4695-bccc-3bdc6fd03a60.png#clientId=u53d4943f-843d-4&from=paste&height=1969&id=TE6Y8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=3937&originWidth=4580&originalType=binary&ratio=1&size=1151516&status=done&style=none&taskId=u3f5a8768-c8d0-4982-87dd-d605e7f5b2a&width=2290)
 <a name="rcyKJ"></a>
 ## 核心流程2：评估及报告查看流程
 <a name="J012n"></a>
@@ -42,29 +42,30 @@
 ### 
 <a name="gkJNJ"></a>
 ### 路径2：再次评估
-小程序首页点击【睡眠】板块->睡眠模块首页点击“再次评估”->【评估介绍页】点击“开始评估”->完成评估，查看评估报告<br />小程序首页点击【睡眠】板块->睡眠模块首页点击“上次评估结果”->【评估报告页】点击“再测一次”->【评估介绍页】点击“开始评估”->完成评估，查看评估报告<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641301163-7dd701db-d88d-447d-a4e9-8af495fa93fd.png#clientId=u53d4943f-843d-4&from=paste&height=2707&id=ruIqJ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=5413&originWidth=4582&originalType=binary&size=6254829&status=done&style=none&taskId=ubbf4d981-8e72-4e49-90e0-8cc078ad3e9&width=2291)<br />​<br />
+小程序首页点击【睡眠】板块->睡眠模块首页点击“再次评估”->【评估介绍页】点击“开始评估”->完成评估，查看评估报告<br />小程序首页点击【睡眠】板块->睡眠模块首页点击“上次评估结果”->【评估报告页】点击“再测一次”->【评估介绍页】点击“开始评估”->完成评估，查看评估报告<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641301163-7dd701db-d88d-447d-a4e9-8af495fa93fd.png#clientId=u53d4943f-843d-4&from=paste&height=2707&id=ruIqJ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=5413&originWidth=4582&originalType=binary&ratio=1&size=6254829&status=done&style=none&taskId=ubbf4d981-8e72-4e49-90e0-8cc078ad3e9&width=2291)<br />​<br />
 <a name="jYsSR"></a>
 ## 核心流程3：风险诱因及改善方案流程
 小程序首页点击【睡眠】板块->睡眠模块首页下拉查看【风险与诱因】->继续下拉查看【改善方案】
 
+- 身心恢复到放松状态
 - 每日坚持记录睡眠数据
 - 适当补充助眠食物
 - 保持舒适的睡眠环境
-- 身心恢复到放松状态
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641402158-6d59f61e-ec3b-46b7-bedb-15239403515d.png#clientId=u53d4943f-843d-4&from=paste&height=2633&id=OHtcO&margin=%5Bobject%20Object%5D&name=image.png&originHeight=5265&originWidth=780&originalType=binary&size=1663707&status=done&style=none&taskId=u516e4c1a-7d66-40d4-ad9a-2a4dbd06e8e&width=390)<br />
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1626255512100-881b98bb-c0ab-460e-bbb3-5d8cba6c5786.png#clientId=uef7e7190-4961-4&from=paste&height=2289&id=uefc4a1ac&margin=%5Bobject%20Object%5D&name=image.png&originHeight=4577&originWidth=1080&originalType=binary&ratio=1&size=1510051&status=done&style=none&taskId=u2848982c-269b-4dbc-9de0-f524ccf9a3f&width=540)<br />
+<br />
 
 <a name="FopVD"></a>
 # 产品交付能力
 <a name="LVIGL"></a>
 ## 硬件上传+手动记录+评估（音频可选）完整交付版本
-在支持硬件（手环）的对接场景中，系统支持硬件上传睡眠数据+手动记录睡眠数据+评估功能。是睡眠管理的完整交付方案。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_完整方案.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641701735-18cc22b7-8d20-49aa-93cb-651760ea1ba0.png#clientId=u85b26cd9-d4be-4&from=drop&id=Zbj0M&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E5%AE%8C%E6%95%B4%E6%96%B9%E6%A1%88.png&originHeight=10740&originWidth=10796&originalType=binary&size=11311600&status=done&style=none&taskId=uf7439d35-ba5d-4821-827b-b8540a0b317)
+在支持硬件（手环）的对接场景中，系统支持硬件上传睡眠数据+手动记录睡眠数据+评估功能。是睡眠管理的完整交付方案。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_完整方案.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622641701735-18cc22b7-8d20-49aa-93cb-651760ea1ba0.png#clientId=u85b26cd9-d4be-4&from=drop&id=Zbj0M&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E5%AE%8C%E6%95%B4%E6%96%B9%E6%A1%88.png&originHeight=10740&originWidth=10796&originalType=binary&ratio=1&size=11311600&status=done&style=none&taskId=uf7439d35-ba5d-4821-827b-b8540a0b317)
 <a name="aMpyx"></a>
 ## 手动记录+评估（音频可选）交付版本
-在不支持硬件（手环）的对接场景中，系统支持手动记录睡眠数据+评估功能。不对接硬件的客户也能够正常记录日常的睡眠数据，及阶段评估。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_手动与评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637679466-b906a9c6-7184-4c22-b773-8529328016b6.png#clientId=ue9c8fabf-93de-4&from=drop&id=Guewv&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E6%89%8B%E5%8A%A8%E4%B8%8E%E8%AF%84%E4%BC%B0.png&originHeight=8992&originWidth=7312&originalType=binary&size=7284329&status=done&style=none&taskId=u83bf9815-440d-43ff-a443-4406923cb95)
+在不支持硬件（手环）的对接场景中，系统支持手动记录睡眠数据+评估功能。不对接硬件的客户也能够正常记录日常的睡眠数据，及阶段评估。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_手动与评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637679466-b906a9c6-7184-4c22-b773-8529328016b6.png#clientId=ue9c8fabf-93de-4&from=drop&id=Guewv&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E6%89%8B%E5%8A%A8%E4%B8%8E%E8%AF%84%E4%BC%B0.png&originHeight=8992&originWidth=7312&originalType=binary&ratio=1&size=7284329&status=done&style=none&taskId=u83bf9815-440d-43ff-a443-4406923cb95)
 <a name="EV1Fa"></a>
 ## 仅评估（音频可选）交付版本
-仅对接睡眠状况全面评估的版本，不支持日常睡眠数据监测记录。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_纯评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637199496-9e89459d-c65d-4592-be2f-df0789c484df.png#clientId=ue9c8fabf-93de-4&from=drop&id=ecPsw&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E7%BA%AF%E8%AF%84%E4%BC%B0.png&originHeight=5646&originWidth=5037&originalType=binary&size=4392891&status=done&style=none&taskId=u4f4935dd-6980-47ca-b784-91f9ec8bc6e)
+仅对接睡眠状况全面评估的版本，不支持日常睡眠数据监测记录。其中，音频相关概念涉及到原生页面，交付时可选。<br />![睡眠_纯评估.png](https://cdn.nlark.com/yuque/0/2021/png/2460131/1622637199496-9e89459d-c65d-4592-be2f-df0789c484df.png#clientId=ue9c8fabf-93de-4&from=drop&id=ecPsw&margin=%5Bobject%20Object%5D&name=%E7%9D%A1%E7%9C%A0_%E7%BA%AF%E8%AF%84%E4%BC%B0.png&originHeight=5646&originWidth=5037&originalType=binary&ratio=1&size=4392891&status=done&style=none&taskId=u4f4935dd-6980-47ca-b784-91f9ec8bc6e)
 <a name="ek301"></a>
 # Q&A
 <a name="Fl4ju"></a>
@@ -83,7 +84,7 @@
 ## 睡眠知识
 <a name="GpWOd"></a>
 ### 关于睡眠指数
-睡眠指数，科学客观的反映了用户的每日睡眠综合状况，是乐智健康与国际睡眠医学专家孔祥团队，结合睡眠医学与大数据统计分析得出的多因素模型体系。等级划分标准：指数总分为100分；90<指数<=100，优；80=<指数<=90，良；60=<指数<80，中；指数<60，差。<br />睡眠指数构成包括：睡眠深浅、睡眠效率、睡眠时长、入睡快慢、中途清醒、睡眠节律等。<br />​<br />
+睡眠指数，科学客观的反映了用户的每日睡眠综合状况，是乐智健康与国际睡眠医学专家孔祥团队，结合睡眠医学与大数据统计分析得出的多因素模型体系。等级划分标准：指数总分为100分；90<指数<=100，优；80=<指数<=90，良；60=<指数<80，中；指数<60，差。<br />睡眠指数构成包括：睡眠深浅、睡眠效率、睡眠时长、入睡快慢、中途清醒、睡眠节律等。
 <a name="hSwsC"></a>
 ### 关于睡眠周期的构成
 一个完整的睡眠周期包括快速眼动睡眠（REM）和非快速眼动睡眠（NREM），其中非快速眼动睡眠又包括深度睡眠（深睡）、浅度睡眠（浅睡）。典型的睡眠周期是按照以下顺序进行状态切换：清醒->浅睡->深睡->浅睡->快速眼动。<br />​<br />
