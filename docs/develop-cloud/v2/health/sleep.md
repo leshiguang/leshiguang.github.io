@@ -423,7 +423,7 @@ SleepRatioDTO：
 <a name="h9UNg"></a>
 ## 3.2 查询最近30天的睡眠信息
 ```bash
-POST /api/sleep/v2.0/query/getLastThirtyDaysSleepInfo
+GET /api/sleep/v2.0/query/getLastThirtyDaysSleepInfo
 ```
 **入参：**无<br />
 <br />**出参：**List(SaaSSleepQueryDTO)<br />​<br />
