@@ -1,6 +1,6 @@
 <a name="OAIV7"></a>
 # 1.绑定设备
-**描述：用户绑定设备**<br />**url :  域名 +  /device-rest/device/bind/bindDevice**<br />**method: post**<br />**​**
+**描述：用户绑定设备**<br />**url :  域名 +  **/api/device/bind/v1.0/bindDevice<br />**method: post**<br />**​**
 
 **header参数或者url参数**<br />**​**<br />
 
@@ -242,7 +242,7 @@
 ```
 <a name="F4XDJ"></a>
 # 2.解绑设备
-**url :  域名 +  /device-rest/device/unbind/unbindSelfDevice**<br />**method: post**<br />**​**
+**url :  域名 +  **/api/device/unbind/v1.0/unbindSelfDevice<br />**method: post**<br />**​**
 
 **header参数或者url参数**<br />**​**<br />
 
@@ -302,7 +302,7 @@
 # 3.获取设备信息
 **​**<br />
 ```bash
-url :  域名 +  /device-rest/device/baseinfo/getDeviceBaseInfo
+url :  域名 +  /api/device/baseinfo/v1.0/getDeviceBaseInfo
 method: post
 ```
 **​**
