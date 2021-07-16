@@ -25,6 +25,7 @@
       - [饮食](develop-cloud/v2/health/diet)
       - [健康评估V2](/develop-cloud/v2/health/estimate)
       - [运动](/develop-cloud/v2/health/exercise)
+      - [心率](/develop-cloud/v2/health/heartrate)​
    - 顾问服务
       - [顾问管理](/develop-cloud/counselor/manage)
       - [顾问会员关联](/develop-cloud/counselor/relation)
