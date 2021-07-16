@@ -419,3 +419,160 @@ SleepRatioDTO：
 
 ```
 
+
+<a name="h9UNg"></a>
+## 3.2 查询最近30天的睡眠信息
+```bash
+POST /api/sleep/v2.0/query/getLastThirtyDaysSleepInfo
+```
+**入参：**无<br />
+<br />**出参：**List(SaaSSleepQueryDTO)<br />​<br />
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| id | String | 睡眠ID | ​<br /> |
+| userId | Long | 用户ID | ​<br /> |
+| deviceId | String | 设备ID | ​<br /> |
+| sleepTime | Date | 入睡时间 | ​<br /> |
+| awakeningTime | Date | 醒来时间 | ​<br /> |
+| deepSleep | Integer | 深睡时长(分钟) | ​<br /> |
+| shallowSleep | Integer | 浅睡时长(分钟) | ​<br /> |
+| awakening | Integer | 醒来时长(分钟) | ​<br /> |
+| awakeningCount | Integer | 醒来次数 | ​<br /> |
+| fromDevice | Boolean | 是否来自设备 | true-设备 false-日记 |
+
+
+<br />示例数据：
+```sql
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":[
+		{
+			"id":"bracelet245239689c9b44cca0259e5133b8d410",
+			"userId":26729267,
+			"deviceId":"1b0405006a8c",
+			"sleepTime":1626365999000,
+			"awakeningTime":1626394799000,
+			"deepSleep":125,
+			"shallowSleep":355,
+			"awakening":0,
+			"awakeningCount":0,
+			"fromDevice":true
+		},
+		{
+			"id":"bracelet46c5ad552e1346749329aaa2e10bb2b6",
+			"userId":26729267,
+			"deviceId":"df042f00625c",
+			"sleepTime":1626281099000,
+			"awakeningTime":1626304199000,
+			"deepSleep":110,
+			"shallowSleep":270,
+			"awakening":5,
+			"awakeningCount":1,
+			"fromDevice":true
+		},
+		{
+			"id":"bracelet4f7084d3fd1044eb84cbebba4b8f7a16",
+			"userId":26729267,
+			"deviceId":"04046d00645a",
+			"sleepTime":1626358499000,
+			"awakeningTime":1626389399000,
+			"deepSleep":35,
+			"shallowSleep":475,
+			"awakening":5,
+			"awakeningCount":1,
+			"fromDevice":true
+		},
+		{
+			"id":"bracelet98a8bdccf69b436d96c866167cad1ba0",
+			"userId":26729267,
+			"deviceId":"0f0499006b06",
+			"sleepTime":1626367499000,
+			"awakeningTime":1626390299000,
+			"deepSleep":80,
+			"shallowSleep":300,
+			"awakening":0,
+			"awakeningCount":0,
+			"fromDevice":true
+		},
+		{
+			"id":"bracelet9c0ebf3dde074991b8d62fba5e2bd620",
+			"userId":26729267,
+			"deviceId":"1b0405006a8c",
+			"sleepTime":1626325799000,
+			"awakeningTime":1626330599000,
+			"deepSleep":0,
+			"shallowSleep":75,
+			"awakening":5,
+			"awakeningCount":1,
+			"fromDevice":true
+		},
+		{
+			"id":"braceletad1447c339f44775ae754c2955f176ed",
+			"userId":26729267,
+			"deviceId":"65049a0058ee",
+			"sleepTime":1626362399000,
+			"awakeningTime":1626388499000,
+			"deepSleep":150,
+			"shallowSleep":280,
+			"awakening":5,
+			"awakeningCount":1,
+			"fromDevice":true
+		},
+		{
+			"id":"diary4a053485eb5d4d4385c8bbda0b3f0878",
+			"userId":26729267,
+			"sleepTime":1626194400000,
+			"awakeningTime":1626222600000,
+			"fromDevice":false
+		},
+		{
+			"id":"diary6421e1a697874b4ab8684989cc5fd97b",
+			"userId":26729267,
+			"sleepTime":1626273900000,
+			"awakeningTime":1626300000000,
+			"fromDevice":false
+		},
+		{
+			"id":"diaryf8a8463f673f451497138fb55ef97e94",
+			"userId":26729267,
+			"sleepTime":1626275100000,
+			"awakeningTime":1626298200000,
+			"fromDevice":false
+		},
+		{
+			"id":"diaryd849f79db3a44717a084561e72f7134f",
+			"userId":26729267,
+			"sleepTime":1626279300000,
+			"awakeningTime":1626298200000,
+			"fromDevice":false
+		},
+		{
+			"id":"diary18e2077f3768436492ae2893eae87a1e",
+			"userId":26729267,
+			"sleepTime":1626273000000,
+			"awakeningTime":1626298200000,
+			"fromDevice":false
+		},
+		{
+			"id":"diary641618a0214c4725ae0c32f628d20343",
+			"userId":26729267,
+			"sleepTime":1626278400000,
+			"awakeningTime":1626309000000,
+			"fromDevice":false
+		},
+		{
+			"id":"diaryb3b930b0b226433697b710cc6b3aaac4",
+			"userId":26729267,
+			"sleepTime":1626276300000,
+			"awakeningTime":1626309000000,
+			"fromDevice":false
+		}
+	]
+}
+
+
+```
+
