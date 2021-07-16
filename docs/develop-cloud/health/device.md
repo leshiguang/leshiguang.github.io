@@ -313,7 +313,7 @@ method: post
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceKeyType** | String | 设备标识类型，可选值为：<br />id： 设备id<br />sn:  设备sn<br />mac: 设备mac地址 | 必传 |
+| **deviceKeyType** | String | 设备标识类型，可选值为：<br />id： 设备id<br />sn:  设备sn<br />mac: 设备mac地址<br />**qrcode: 设备二维码** | 必传 |
 | **deviceKey** | string | 根据key类型传相应的值 |  |
 
 **示例 **<br />
