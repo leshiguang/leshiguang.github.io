@@ -425,7 +425,13 @@ SleepRatioDTO：
 ```bash
 GET /api/sleep/v2.0/query/getLastThirtyDaysSleepInfo
 ```
-**入参：**无<br />
+**入参：**​
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id |  |
+
+
 <br />**出参：**List(SaaSSleepQueryDTO)<br />​<br />
 
 | **字段** | **类型** | **描述** | **其他** |
