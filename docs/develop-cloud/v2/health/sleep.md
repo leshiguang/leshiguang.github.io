@@ -272,8 +272,8 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 | belongDay | String | 日期(2021-04-01) |  |
 | sleepTime | Long | 入睡时间 |  |
 | getupTime | Long | 醒来时间 |  |
-| sleepId | String | sleepId | 只有手环有，日记没有 |
-| sleepModel | Integer | 睡眠模型 | 1-4维手环；<br />2-5维日记；<br />3-6维PRO |
+| sleepId | String | sleepId | ​<br /> |
+| sleepModel | Integer | 睡眠模型 | 1-手环(4维)；<br />2-日记(5维)；<br />3-PRO(6维) |
 | sleepDimensions | List(SleepDimDTO) | 睡眠维度指标 |  |
 | sleepScore | SleepBaseDTO | 睡眠评分 |  |
 | sleepSummary | String | 睡眠总结文案 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872391656-0ab4c030-eb85-43ac-bbd7-c1b85ed2bfa1.png#height=357&id=bYZVx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=733&originalType=binary&ratio=1&size=60863&status=done&style=none&width=733) |
@@ -300,8 +300,9 @@ SleepDimDTO：
 | dimType | Integer | 维度 |  |
 | dimValue | Integer | 维度值 |  |
 
-| 1 | 睡眠时长 |
+| **dimType枚举** | **dimType语义** |
 | --- | --- |
+| 1 | 睡眠时长 |
 | 2 | 中途清醒 |
 | 3 | 睡眠节律 |
 | 4 | 睡眠深浅 |
@@ -334,9 +335,296 @@ SleepRatioDTO：
 | tag | String | 标签 | 偏低、偏高、正常 |
 
 
-<br />出参示例
+<br />**出参示例1：手环**
 ```json
 
+{
+	"code":200,
+	"msg":"成功",
+	"data":{
+		"data":{
+			"sleepId":"bracelet904cb419b49e4239a5eb2ece2bdf56eb",
+			"belongDay":"2021-07-20",
+			"sleepTime":1626804000000,
+			"getupTime":1626828300000,
+			"sleepModel":1,
+			"sleepDimensions":[
+				{
+					"dimType":4,
+					"dimValue":100
+				},
+				{
+					"dimType":1,
+					"dimValue":85
+				},
+				{
+					"dimType":2,
+					"dimValue":80
+				},
+				{
+					"dimType":3,
+					"dimValue":80
+				}
+			],
+			"sleepScore":{
+				"sleepBaseValue":87,
+				"sleepBaseTag":"良"
+			},
+			"sleepSummary":"睡眠规律性一般，可以再调整下哦。您昨晚的入睡时间为02:00，睡眠节律为中间型，赶在01:00前入睡会更好～尽量避免连续3个晚上睡眠不足，周末也要规律睡眠，避免熬夜。",
+			"sleepSegments":[
+				{
+					"sleepStatus":2,
+					"startTime":1626804000000,
+					"endTime":1626806400000,
+					"duration":40
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626806400000,
+					"endTime":1626807000000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626807000000,
+					"endTime":1626807900000,
+					"duration":15
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626807900000,
+					"endTime":1626808500000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626808500000,
+					"endTime":1626810000000,
+					"duration":25
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626810000000,
+					"endTime":1626813600000,
+					"duration":60
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626813600000,
+					"endTime":1626813900000,
+					"duration":5
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626813900000,
+					"endTime":1626814200000,
+					"duration":5
+				},
+				{
+					"sleepStatus":1,
+					"startTime":1626814200000,
+					"endTime":1626814500000,
+					"duration":5
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626814500000,
+					"endTime":1626817200000,
+					"duration":45
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626817200000,
+					"endTime":1626817800000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626817800000,
+					"endTime":1626819900000,
+					"duration":35
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626819900000,
+					"endTime":1626820200000,
+					"duration":5
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626820200000,
+					"endTime":1626822900000,
+					"duration":45
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1626822900000,
+					"endTime":1626823500000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626823500000,
+					"endTime":1626827100000,
+					"duration":60
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1626827100000,
+					"endTime":1626828300000,
+					"duration":20
+				}
+			],
+			"sleepRatios":[
+				{
+					"sleepStatus":3,
+					"sleepRatio":27,
+					"duration":110,
+					"tag":"正常"
+				},
+				{
+					"sleepStatus":2,
+					"sleepRatio":72,
+					"duration":290,
+					"tag":"正常"
+				},
+				{
+					"sleepStatus":1,
+					"sleepRatio":1,
+					"duration":5,
+					"tag":"正常"
+				}
+			],
+			"sleepDuration":{
+				"sleepBaseValue":400,
+				"sleepBaseTag":"偏少"
+			},
+			"awakeTimes":{
+				"sleepBaseValue":1,
+				"sleepBaseTag":"正常"
+			},
+			"awakeDuration":{
+				"sleepBaseValue":5,
+				"sleepBaseTag":"正常"
+			},
+			"fallSleepTime":{
+				"sleepBaseValue":120,
+				"sleepBaseTag":"熬夜"
+			},
+			"fallSleepChange":{
+				"sleepBaseValue":25,
+				"sleepBaseTag":"规律"
+			},
+			"wakeUpTime":{
+				"sleepBaseValue":525,
+				"sleepBaseTag":"正常"
+			},
+			"wakeUpChange":{
+				"sleepBaseValue":-5,
+				"sleepBaseTag":"规律"
+			},
+			"standardHeartRate":{
+				"sleepBaseValue":60,
+				"sleepBaseTag":"正常"
+			},
+			"heartRateList":[
+				59,
+				59,
+				59,
+				60,
+				61,
+				61,
+				60,
+				60,
+				60,
+				61,
+				60,
+				59,
+				61,
+				60,
+				62,
+				66,
+				63,
+				62,
+				60,
+				60,
+				60,
+				61,
+				61,
+				60,
+				60,
+				61,
+				60,
+				59,
+				60,
+				61,
+				61,
+				61,
+				61,
+				65,
+				65,
+				60,
+				61,
+				61,
+				64,
+				60,
+				59,
+				58,
+				58,
+				58,
+				58,
+				58,
+				58,
+				59,
+				58,
+				58,
+				58,
+				58,
+				58,
+				59,
+				62,
+				62,
+				61,
+				61,
+				59,
+				58,
+				58,
+				58,
+				58,
+				58,
+				58,
+				59,
+				59,
+				58,
+				60,
+				60,
+				61,
+				63,
+				60,
+				61,
+				60,
+				59,
+				58,
+				57,
+				57,
+				60,
+				65,
+				70
+			],
+			"silentHeartRate":{
+				"sleepBaseValue":68,
+				"sleepBaseTag":"优"
+			},
+			"silentHeartRateSummary":"晨脉波动平稳。说明运动负荷合适，休息充分，身体机能恢复良好，可以继续保持原来的运动量和运动强度。",
+			"createTime":1626859864000
+		},
+		"status":true,
+		"code":200
+	}
+}
+```
+**出参示例2：日记**
+```json
 {
 	"code":200,
 	"msg":"成功",
@@ -415,11 +703,7 @@ SleepRatioDTO：
 		"code":200
 	}
 }
-
-
 ```
-
-
 <a name="h9UNg"></a>
 ## 3.2 查询最近30天的睡眠信息
 ```bash
