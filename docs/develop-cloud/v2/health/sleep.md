@@ -323,15 +323,15 @@ SleepSegmentDetail：（同睡眠首页）
 | sleepStatus | Integer | 睡眠状态 | 0-rem；1-清醒；2-浅睡；3-深睡 |
 | startTime | Date | 开始时间 |  |
 | endTime | Date | 结束时间 |  |
-| duration | Integer | 持续时长 |  |
+| duration | Integer | 持续时长 | 单位: 分钟 |
 
 SleepRatioDTO：
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | sleepStatus | Integer | 睡眠状态 | 0-rem；1-清醒；2-浅睡；3-深睡 |
-| sleepRatio | Integer | 比例(整数值, eg: 45) |  |
-| duration | Integer | 持续时长(单位: 分钟) |  |
+| sleepRatio | Integer | 比例 | 整数值, eg: 45 |
+| duration | Integer | 持续时长 | 单位: 分钟 |
 | tag | String | 标签 | 偏低、偏高、正常 |
 
 
@@ -727,7 +727,7 @@ GET /api/sleep/v2.0/query/getLastThirtyDaysSleepInfo
 | awakeningTime | Date | 醒来时间 | ​<br /> |
 | deepSleep | Integer | 深睡时长(分钟) | ​<br /> |
 | shallowSleep | Integer | 浅睡时长(分钟) | ​<br /> |
-| awakening | Integer | 醒来时长(分钟) | ​<br /> |
+| awakening | Integer | 清醒时长(分钟) | ​<br /> |
 | awakeningCount | Integer | 醒来次数 | ​<br /> |
 | fromDevice | Boolean | 是否来自设备 | true-设备 false-日记 |
 
