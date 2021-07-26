@@ -26,7 +26,8 @@
       - [健康评估V2](/develop-cloud/v2/health/estimate)
       - [运动V2](/develop-cloud/v2/health/exercise)
       - [心率V2](/develop-cloud/v2/health/heartrate)
-      - [血压V2](/develop-cloud/v2/health/bp)​
+      - [血压V2](/develop-cloud/v2/health/bp)
+      - [血糖V2](/develop-cloud/v2/health/bs)
    - 顾问服务
       - [顾问管理](/develop-cloud/counselor/manage)
       - [顾问会员关联](/develop-cloud/counselor/relation)
