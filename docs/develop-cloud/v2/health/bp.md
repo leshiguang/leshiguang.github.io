@@ -20,7 +20,14 @@ POST /api/bloodpressure/v2.0/upload/deviceBp
 | userNo | Integer | 设备用户（按钮） | 可为空 |
 | irregularHeartbeat | Integer | 是否心率补齐（0正常，1心率补齐） | 可为空 |
 
+**响应JSON格式**<br />正常（服务器正常响应）情况下，http code是200<br />http code与JSON里的code字段是有不同含义的。<br />注意，调用时也请处理，http code非200的情况。
 
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| data | Boolean | 上传结果 | ​<br /> |
+| msg | String | 描述 | 提示信息 |
+| code | Integer | 状态码 | 200是正常，<br />非200，请参照msg |
+| status | Boolean | 状态 |  |
 
 <a name="kGddp"></a>
 ## 1.2 上传非血压计血压数据
@@ -37,6 +44,15 @@ POST /api/bloodpressure/v2.0/upload/manualEnteredBp
 | measurementTime | Long | 测量时间（时间戳ms) | 必填（必须大于2015年1月1日00:00:00） |
 | temperature | Float | 体温 | 非必填 |
 
+**响应JSON格式**<br />正常（服务器正常响应）情况下，http code是200，<br />http code与JSON里的code字段是有不同含义的。<br />注意，调用时也请处理，http code非200的情况。
 
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| data | Boolean | 上传结果 | ​<br /> |
+| msg | String | 描述 | 提示信息 |
+| code | Integer | 状态码 | 200是正常，<br />非200，请参照msg |
+| status | Boolean | 状态 |  |
 
+<a name="obpnN"></a>
+## ​<br />
 
