@@ -37,7 +37,7 @@ Boolean，授权解除是否成功<br />示例返回报文：
         "headImg":"xxx",          //头像
         "sex": 1,                 //性别，1-男 2-女，默认值为男
         "birthday":1627353452000, //生日
-        "height":170              //身高，单位cm
+        "height":166.0              //身高，单位cm
     }
 }
 //associatedId未关联账号时，返回code=460-用户不存在
