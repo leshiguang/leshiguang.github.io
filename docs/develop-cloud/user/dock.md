@@ -1,5 +1,5 @@
 <a name="Kryue"></a>
-## 1. 解除授权
+## 1. 解除乐心账号授权
 **URL**：域名 +  /user-rest/associate/unbindLifesenseUserByGateway<br />**Method**：POST
 <a name="wMfnX"></a>
 ##### POST报文入参:
@@ -18,7 +18,7 @@ Boolean，授权解除是否成功<br />示例返回报文：
 }
 ```
 <a name="LOjxO"></a>
-## 2. 查询用户信息
+## 2. 查询乐心用户信息
 **URL**：域名 +  /user-rest/associate/queryLifesenseUserByGateway<br />**Method**：GET
 <a name="WKt2d"></a>
 ##### URL入参:
