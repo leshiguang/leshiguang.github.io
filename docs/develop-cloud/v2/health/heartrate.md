@@ -111,8 +111,6 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 | dateStamp | String | 标签 |  |
 
 
-<br />
-<br />
 <br />返回示例报文:
 ```sql
 {
@@ -191,7 +189,8 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 	}
 }
 ```
-​
+
+<br />
 
 <a name="AdkOV"></a>
 ## 2.2 查询最近30天心率数据
