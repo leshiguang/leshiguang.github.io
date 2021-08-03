@@ -4,17 +4,17 @@
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
-<a name="r1ZrW"></a>
+<a name="cKu5w"></a>
 # 1.心率上传
-<a name="ngNqb"></a>
+<a name="w8lPu"></a>
 # 2.心率查询
-<a name="cotwG"></a>
+<a name="NKUiK"></a>
 ## 2.1 查询日全天心率 
 ```sql
 GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 ```
   描述：查询用户在queryTimeStamp之前或之后（包含queryTimeStamp）一天的心率数据，如果查询当天没有会一直往前查找，直到找到有数据的一天。<br />​<br />
-<a name="ZHwM0"></a>
+<a name="kmZfN"></a>
 ##### 入参:
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
@@ -24,7 +24,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 
 
 
-<a name="Sdpvl"></a>
+<a name="njGD9"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
@@ -36,16 +36,16 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 | silentHeartRateDTO | Object | 晨脉信息 |  |
 | example | Boolean | 是否是示例数据 |  |
 
-<a name="iiPNw"></a>
+<a name="ZxV8S"></a>
 ###### 
-<a name="eCN0E"></a>
+<a name="CYSSO"></a>
 ###### 当前心率：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | currentHeartRate | Integer | 最新心率 |  |
 | updateTimeStamp | Long | 更新时间戳 |  |
 
-<a name="gbIpj"></a>
+<a name="ZjTmC"></a>
 ###### 
 当日心率：
 
@@ -64,7 +64,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 | enduranceHeartRate | Obj | 耐力-较大强度 |  |
 | limitHeartRate | Obj | _极限-_极限强度 |  |
 
-<a name="C4DuV"></a>
+<a name="cuXKX"></a>
 ###### 
 运动心率区间:
 
@@ -74,7 +74,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 | end | Integer | _区间结束值_ |  |
 | value | Integer | _所占分钟数_ |  |
 
-<a name="Vi5wd"></a>
+<a name="V17x2"></a>
 ###### 
 睡眠心率：
 
@@ -90,7 +90,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 | text | String | _文案_ |  |
 | analysisText | String | 分析文案 |  |
 
-<a name="xn9Cq"></a>
+<a name="Hrhqu"></a>
 ###### 
 晨脉信息：
 
@@ -114,7 +114,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 <br />
 <br />
 <br />返回示例报文:
-```json
+```sql
 {
 	"code": 200,
 	"msg": "成功",
@@ -194,7 +194,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 
 <br />
 
-<a name="kufTC"></a>
+<a name="AdkOV"></a>
 ## 2.2 查询最近30天心率数据
 ​<br />
 ```sql
@@ -228,7 +228,6 @@ GET /api/heartrate/v2.0/query/getLastThirtyDaysHeartRate
 | measurementDate | Date | 测量日期 | ​<br /> |
 
 
-<br />
 <br />实例:
 ```sql
 {
@@ -461,4 +460,6 @@ GET /api/heartrate/v2.0/query/getLastThirtyDaysHeartRate
 
 
 ```
+
+
 
