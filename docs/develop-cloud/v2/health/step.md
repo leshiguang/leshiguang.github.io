@@ -46,9 +46,7 @@ POST /api/step/v2.0/upload/uploadWXStep
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| step | int | 步数 | 设备id获取参考：[链接
-
-](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| step | int | 步数 | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | timestamp | long | 测量时间，单位是 s |  |
 
 <a name="Jt6Gk"></a>
