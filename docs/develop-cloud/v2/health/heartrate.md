@@ -462,5 +462,3 @@ GET /api/heartrate/v2.0/query/getLastThirtyDaysHeartRate
 
 ```
 
-
-
