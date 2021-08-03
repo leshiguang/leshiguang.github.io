@@ -921,6 +921,154 @@ GET /api/sleep/v1.0/diary/query/by/id
 }
 ```
 
+
+<a name="i8ah5"></a>
+## 3.4 根据sleepId查询手环睡眠
+```bash
+GET /api/sleep/v1.0/data/query/by/id
+```
+**入参：**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| sleepId | String | 睡眠ID |  |
+
+**出参：**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| sleepTime | Date | 入睡时间 |  |
+| getupTime | Date | 起床时间 |  |
+| sleepDurationMinute | Integer | 睡眠总时长 | 分钟 |
+| segmentType | Integer | 睡眠时间 | 日间睡眠/夜间睡眠 |
+| sleepScore | Integer | 睡眠评分 |  |
+| sleepLevel | Integer | 睡眠等级 |  |
+| belongDay | Date | 所属日期 |  |
+| segmentDetailList | List(SleepSegmentDetail) | 睡眠段信息 |  |
+| deepSleepDuration | Long | 深睡的总时长 | 分钟 |
+| lightSleepDuration | Long | 浅睡的总时长 | 分钟 |
+| awakeSleepDuration | Long | 清醒的总时长 | 分钟 |
+| deepSleepDurationFirst90Ratio | Integer | 深睡比例 |  |
+| shallowSleepDurationFirst90Ratio | Integer | 浅睡比例 |  |
+| awakingDurationFirst90Ratio | Integer | 清醒比例 |  |
+| remDurationFirst90Ratio | Integer | rem比例 |  |
+
+**​**
+
+**返回示例：**
+```json
+{
+	"code":200,
+	"msg":"成功",
+	"data":{
+		"data":{
+			"sleepTime":1627926000000,
+			"getupTime":1627952100000,
+			"sleepDurationMinute":435,
+			"segmentType":1,
+			"sleepScore":94,
+			"sleepLevel":1,
+			"belongDay":1627833600000,
+			"segmentDetailList":[
+				{
+					"sleepStatus":2,
+					"startTime":1627926000000,
+					"endTime":1627926600000,
+					"duration":10
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1627926600000,
+					"endTime":1627929000000,
+					"duration":40
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627929000000,
+					"endTime":1627930200000,
+					"duration":20
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1627930200000,
+					"endTime":1627932000000,
+					"duration":30
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627932000000,
+					"endTime":1627933500000,
+					"duration":25
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1627933500000,
+					"endTime":1627934100000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627934100000,
+					"endTime":1627937700000,
+					"duration":60
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627937700000,
+					"endTime":1627939500000,
+					"duration":30
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1627939500000,
+					"endTime":1627940100000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627940100000,
+					"endTime":1627942500000,
+					"duration":40
+				},
+				{
+					"sleepStatus":3,
+					"startTime":1627942500000,
+					"endTime":1627943100000,
+					"duration":10
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627943100000,
+					"endTime":1627946700000,
+					"duration":60
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627946700000,
+					"endTime":1627950300000,
+					"duration":60
+				},
+				{
+					"sleepStatus":2,
+					"startTime":1627950300000,
+					"endTime":1627952100000,
+					"duration":30
+				}
+			],
+			"deepSleepDuration":100,
+			"lightSleepDuration":335,
+			"awakeSleepDuration":0,
+			"deepSleepDurationFirst90Ratio":67,
+			"shallowSleepDurationFirst90Ratio":33,
+			"awakingDurationFirst90Ratio":0,
+			"remDurationFirst90Ratio":0
+		},
+		"status":true,
+		"code":200
+	}
+}
+```
+
 <br />
 <br />
 <br />
