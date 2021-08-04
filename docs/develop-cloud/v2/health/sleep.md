@@ -242,7 +242,6 @@ POST /api/sleep/v2.0/diary/save
 | wakeUpTime | Integer | 醒来时间 |  |
 | getOutBedTime | Integer | 下床时间 |  |
 | awakeDetailList | List(Integer) | 中途清醒 |  |
-|  |  |  |  |
 | type | Integer | 类型 | 1-日记；2-补充 |
 | queryUserId | Long | 查询用户ID | 支持家人互联 |
 | belongDay | String | 所属日期(2021-04-06) | 补充数据需要知道补充的哪一天的 |
@@ -259,7 +258,7 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| queryDate | String | 查询日期(2021-04-06) | queryDate和<br />direction传空，则查询最近一次 |
+| queryDate | String | 查询日期(2021-04-06) | queryDate和direction传空，则查询最近一次 |
 | direction | Integer | 方向，>0正向取数据，<0反向取数据 |  |
 
 
@@ -271,7 +270,7 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 | sleepTime | Long | 入睡时间戳，比如1626804000000即2021-07-21 02:00:00 |  |
 | getupTime | Long | 醒来时间戳， |  |
 | sleepId | String | 睡眠端标识id | ​<br /> |
-| sleepModel | Integer | 睡眠模型 | 1-手环(4维)；<br />2-日记(5维)；<br />3-PRO(6维) |
+| sleepModel | Integer | 睡眠模型 | 1-手环(4维)；2-日记(5维)；3-PRO(6维) |
 | sleepDimensions | List(SleepDimDTO) | 6个睡眠维度指标的值，具体见SleepDimDTO的说明 |  |
 | sleepScore | SleepBaseDTO | 睡眠评分的值和标签 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297565353-fe6499b0-d3c6-47a9-92de-1f4764b946c7.png#clientId=u861829ea-9025-4&from=paste&height=70&id=u785f33d7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=140&originWidth=686&originalType=binary&ratio=1&size=55675&status=done&style=none&taskId=u06f47210-8125-4c74-980b-470f57b4f99&width=343) |
 | sleepSummary | String | 睡眠总结文案 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872391656-0ab4c030-eb85-43ac-bbd7-c1b85ed2bfa1.png#height=357&id=bYZVx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=357&originWidth=733&originalType=binary&ratio=1&size=60863&status=done&style=none&width=733) |
@@ -286,9 +285,9 @@ POST /api/sleep/v2.0/data/getDaySleepReuslt
 | fallSleepChange | SleepBaseDTO | **入睡时间变化**的值和标签 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297323113-590d2717-5964-4c47-a4f0-a8ca3bc4f98a.png#clientId=u861829ea-9025-4&from=paste&height=177&id=u5de6a4d4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=354&originWidth=356&originalType=binary&ratio=1&size=56915&status=done&style=none&taskId=u5b769164-0ab7-4c0f-899c-cef59d183ad&width=178) |
 | wakeUpTime | SleepBaseDTO | **醒来时间**的值和标签 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297344292-2f8c369b-0ea6-4c27-95dd-ddaa8c94dca9.png#clientId=u861829ea-9025-4&from=paste&height=130&id=u384c6387&margin=%5Bobject%20Object%5D&name=image.png&originHeight=260&originWidth=476&originalType=binary&ratio=1&size=52446&status=done&style=none&taskId=u6aa2ac60-72e7-45f6-926d-6228ba1596b&width=238) |
 | wakeUpChange | SleepBaseDTO | **醒来时间变化**的值和标签 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297356332-3993cb84-c1f2-499d-b05b-a6e348ff7a79.png#clientId=u861829ea-9025-4&from=paste&height=127&id=u0d1b5e88&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=412&originalType=binary&ratio=1&size=48259&status=done&style=none&taskId=u3aba5858-c5c9-4b43-8c16-29e9f676373&width=206) |
-| standardHeartRate | SleepBaseDTO | 基准心率 | [https://h5.leshiguang.com/sleep/1.2.1/questionTab.html?activeName=%25E7%259D%25A1%25E7%259C%25A0%25E5%25BF%2583%25E7%258E%2587&vconsole=1](https://h5.leshiguang.com/sleep/1.2.1/questionTab.html?activeName=%25E7%259D%25A1%25E7%259C%25A0%25E5%25BF%2583%25E7%258E%2587&vconsole=1)<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297242316-ffab3be7-65c3-4f8f-bfd5-4720eb3c4c13.png#clientId=u861829ea-9025-4&from=paste&height=146&id=ue076b234&margin=%5Bobject%20Object%5D&name=image.png&originHeight=292&originWidth=618&originalType=binary&ratio=1&size=42471&status=done&style=none&taskId=uc4b3fb03-3056-4125-bf5b-31886ec9a60&width=309) |
+| standardHeartRate | SleepBaseDTO | 基准心率 | [https://h5.leshiguang.com/sleep/1.2.1/questionTab.html?activeName=%25E7%259D%25A1%25E7%259C%25A0%25E5%25BF%2583%25E7%258E%2587&vconsole=](https://h5.leshiguang.com/sleep/1.2.1/questionTab.html?activeName=%25E7%259D%25A1%25E7%259C%25A0%25E5%25BF%2583%25E7%258E%2587&vconsole=1)1![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297242316-ffab3be7-65c3-4f8f-bfd5-4720eb3c4c13.png#clientId=u861829ea-9025-4&from=paste&height=146&id=ue076b234&margin=%5Bobject%20Object%5D&name=image.png&originHeight=292&originWidth=618&originalType=binary&ratio=1&size=42471&status=done&style=none&taskId=uc4b3fb03-3056-4125-bf5b-31886ec9a60&width=309) |
 | heartRateList | List(Integer) | 睡眠期间的心率值 |  |
-| silentHeartRate | SleepBaseDTO | 晨脉 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627296301259-9c2ae7b8-bf0d-493e-a0c5-98523a0ce6e6.png#clientId=u861829ea-9025-4&from=paste&height=127&id=u9bc49e63&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=858&originalType=binary&ratio=1&size=143295&status=done&style=none&taskId=u021b6163-7b06-4db3-9777-fc2ff04be88&width=429)<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297216258-26330efe-c4b2-4714-8819-e1ce39063402.png#clientId=u861829ea-9025-4&from=paste&height=80&id=u97b1fdbb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=160&originWidth=436&originalType=binary&ratio=1&size=29039&status=done&style=none&taskId=u0ea5eb72-518c-4172-8ee5-f46138e3af5&width=218) |
+| silentHeartRate | SleepBaseDTO | 晨脉 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627296301259-9c2ae7b8-bf0d-493e-a0c5-98523a0ce6e6.png#clientId=u861829ea-9025-4&from=paste&height=127&id=u9bc49e63&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=858&originalType=binary&ratio=1&size=143295&status=done&style=none&taskId=u021b6163-7b06-4db3-9777-fc2ff04be88&width=429)![image.png](https://cdn.nlark.com/yuque/0/2021/png/279267/1627297216258-26330efe-c4b2-4714-8819-e1ce39063402.png#clientId=u861829ea-9025-4&from=paste&height=80&id=u97b1fdbb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=160&originWidth=436&originalType=binary&ratio=1&size=29039&status=done&style=none&taskId=u0ea5eb72-518c-4172-8ee5-f46138e3af5&width=218) |
 | silentHeartRateSummary | String | 晨脉总结 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/1385043/1617872425969-4909f554-7169-4458-9ee4-ed3e24a3dd3e.png#height=252&id=IFnGx&margin=%5Bobject%20Object%5D&name=image.png&originHeight=252&originWidth=666&originalType=binary&ratio=1&size=56299&status=done&style=none&width=666) |
 
 SleepDimDTO：
@@ -714,23 +713,22 @@ GET /api/sleep/v2.0/query/getLastThirtyDaysSleepInfo
 | associatedId | String | 关联账号id |  |
 
 
-<br />**出参：**List(SaaSSleepQueryDTO)<br />​<br />
+<br />**出参：**List(SaaSSleepQueryDTO)
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| id | String | 睡眠ID | ​<br /> |
-| userId | Long | 用户ID | ​<br /> |
-| deviceId | String | 设备ID | ​<br /> |
-| sleepTime | Date | 入睡时间 | ​<br /> |
-| awakeningTime | Date | 醒来时间 | ​<br /> |
-| deepSleep | Integer | 深睡时长(分钟) | ​<br /> |
-| shallowSleep | Integer | 浅睡时长(分钟) | ​<br /> |
-| awakening | Integer | 清醒时长(分钟) | ​<br /> |
-| awakeningCount | Integer | 醒来次数 | ​<br /> |
+| id | String | 睡眠ID |  |
+| userId | Long | 用户ID |  |
+| deviceId | String | 设备ID |  |
+| sleepTime | Date | 入睡时间 |  |
+| awakeningTime | Date | 醒来时间 |  |
+| deepSleep | Integer | 深睡时长(分钟) |  |
+| shallowSleep | Integer | 浅睡时长(分钟) |  |
+| awakening | Integer | 清醒时长(分钟) |  |
+| awakeningCount | Integer | 醒来次数 |  |
 | fromDevice | Boolean | 是否来自设备 | true-设备 false-日记 |
 
-
-<br />示例数据：
+**示例数据：**
 ```sql
 
 {
