@@ -1,6 +1,6 @@
 <a name="OAIV7"></a>
 # 1.绑定设备
-**描述：用户绑定设备**<br />**url :  域名 +  **/api/device/bind/v1.0/bindDevice<br />**method: post**<br />**​**
+**描述：用户绑定设备**<br />**url :  域名 + /**api/device/bind/v1.0/bindDevice<br />method：post<br />**​**
 
 **header参数或者url参数**<br />**​**<br />
 
@@ -8,140 +8,131 @@
 | --- | --- | --- | --- |
 | associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
 
-**​**
-
-**post入参 **
+**post入参**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceKeyType** | String | 设备标识类型，可选值为：<br />id： 设备id<br />sn:  设备sn | 必传 |
-| **deviceKey** | string | 根据key类型传相应的值 |  |
+| **deviceKeyType** | String | 设备标识类型，可选值为：id：设备id；sn:  设备sn | 必传 |
+| **deviceKey** | string | 根据key类型传相应的值 | 必传 |
 
 
-<br />**示例 **<br />
-
+<br />**请求示例：**
 ```json
 {
 	"deviceKeyType":"id",
 	"deviceKey":"A4C138A70285"
 }
 ```
-
-<br />**出参**BindResponse**
+**出参：**<br />BindResponse
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | device | Device | 设备信息 |  |
-| deviceUsers | List<DeviceUserDto> | 设备绑定信息列表 |  |
-| deviceUserExts | List<DevcieUserExtDto> | 激活状态列表 |  |
-| deviceSettings | List<DeviceSetting> | 设备设置列表 |  |
+| deviceUsers | List(DeviceUserDto) | 设备绑定信息列表 |  |
+| deviceUserExts | List(DevcieUserExtDto) | 激活状态列表 |  |
+| deviceSettings | List(DeviceSetting) | 设备设置列表 |  |
 | deviceStatus | DeviceStatus | 设备状态列表 |  |
 
-
-<br />**Device**
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | String | _设备ID_ |  |
-| sn | String | _产品SN号_ |  |
-| sn8 | String | _产品8位sn号_ |  |
-| wechatDeviceId | String | _微信设备ID_ |  |
-| platformId | String | _设备平台id_ |  |
-| mac | String | _MAC地址(仅适用于蓝牙设备)_ |  |
-| qrcode | String | _设备二维码_ |  |
-| hardwareVersion | String | _硬件版本号_ |  |
-| softwareVersion | String | _软件版本号_ |  |
-| protocolType | String | _协议类型_ |  |
-| broadcastId | String | _广播id_ |  |
-| password | String | _通讯密码（仅适用于A2版蓝牙设备）_ |  |
-| sleepSupport | Boolean | _是否支持睡眠（仅适用与计步器）_ |  |
-| experienceFlag | Boolean | _是否体验设备_ |  |
-| doctorDevice | Boolean | _是否医生专用设备_ |  |
-| userDevice | Boolean | _是否用户设备_ |  |
-| name | String | _产品名称_ |  |
-| productId | String | _产品id_ |  |
-| productTypeCode | String | _产品类型_ | 体重秤("01")<br />体重脂肪测量仪("02")<br />手环("04")<br />血糖仪("06")<br />血压计("08")<br />人体成分分析仪("09")<br />支付卡("11") |
-| model | String | _工厂型号_ |  |
-| salesModel | String | _销售型号_ |  |
-| picture | String | _产品图片地址_ |  |
-| communicationType | Integer | _通讯方式_ | 1:网络,<br />2: WIFI,<br />3:GPRS,<br />4:蓝牙,<br />5:WIFI_GPRS,<br />6: NB_IOT |
-| maxUserQuantity | Integer | _用户最大使用数_ |  |
-| netType | Integer | _网络类型_ | _GPRS_(0), _WIFI_(1); |
-| online | Boolean | _在线标识_ |  |
-| deleted | Boolean | _删除标识_ | _0-未删除；1-删除_ |
-| clientId | String | _客户端id_ |  |
-| status | int | _设备状态 _ | _0,激活 1,未激活_ |
-| imgUrl | String | _实体图片_ |  |
-| venderId | String | _厂商id_ |  |
-| isActive | Integer | _是否是激活设备_ | _多手环情况_ |
-| isForeign | Boolean | _是否是国际版_ |  |
-| configureManne | Integer | 配网方式 | 通讯方式为wifi时使用<br />_0:airkiss 和 Smartlink_<br />_1:airkiss_<br />_2:Smartlink_<br />_6:_SmartlinkAndSoftAP(ap配网) |
-| thirdDeviceId | String | _第三方设备id_ | _如是第三方设备，则有第三方设备id_ |
-| operationGuide | String | _操作指南_ |  |
-| productProperties | List<ProductProperties> | _设备属性_ |  |
-
-**ProductProperties**
+Device
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | Integer | 主键id |  |
-| key | Integer | _类型key_ |  |
-| value | String | _值_ |  |
-| sort | Integer | _序号_ |  |
-| memo | String | _备注_ |  |
+| id | String | 设备ID | ​<br /> |
+| sn | String | 产品SN号 | ​<br /> |
+| sn8 | String | 产品8位sn号 | ​<br /> |
+| wechatDeviceId | String | 微信设备ID | ​<br /> |
+| platformId | String | 设备平台id | ​<br /> |
+| mac | String | MAC地址(仅适用于蓝牙设备) | ​<br /> |
+| qrcode | String | 设备二维码 | ​<br /> |
+| hardwareVersion | String | 硬件版本号 | ​<br /> |
+| softwareVersion | String | 软件版本号 | ​<br /> |
+| protocolType | String | 协议类型 | ​<br /> |
+| broadcastId | String | 广播id | ​<br /> |
+| password | String | 通讯密码（仅适用于A2版蓝牙设备） | ​<br /> |
+| sleepSupport | Boolean | 是否支持睡眠（仅适用与计步器） | ​<br /> |
+| experienceFlag | Boolean | 是否体验设备 | ​<br /> |
+| doctorDevice | Boolean | 是否医生专用设备 | ​<br /> |
+| userDevice | Boolean | 是否用户设备 | ​<br /> |
+| name | String | 产品名称 | ​<br /> |
+| productId | String | 产品id | ​<br /> |
+| productTypeCode | String | 产品类型 | 体重秤("01")<br />体重脂肪测量仪("02")<br />手环("04")<br />血糖仪("06")<br />血压计("08")<br />人体成分分析仪("09")<br />支付卡("11") |
+| model | String | 工厂型号 | ​<br /> |
+| salesModel | String | 销售型号 | ​<br /> |
+| picture | String | 产品图片地址 | ​<br /> |
+| communicationType | Integer | 通讯方式 | 1:网络,<br />2: WIFI,<br />3:GPRS,<br />4:蓝牙,<br />5:WIFI_GPRS,<br />6: NB_IOT |
+| maxUserQuantity | Integer | 用户最大使用数 | ​<br /> |
+| netType | Integer | 网络类型 | GPRS(0), WIFI(1); |
+| online | Boolean | 在线标识 | ​<br /> |
+| deleted | Boolean | 删除标识 | 0-未删除；1-删除 |
+| clientId | String | 客户端id | ​<br /> |
+| status | int | 设备状态 | 0,激活 1,未激活 |
+| imgUrl | String | 实体图片 | ​<br /> |
+| venderId | String | 厂商id | ​<br /> |
+| isActive | Integer | 是否是激活设备 | 多手环情况 |
+| isForeign | Boolean | 是否是国际版 | ​<br /> |
+| configureManne | Integer | 配网方式 | 通讯方式为wifi时使用<br />0:airkiss 和 Smartlink<br />1:airkiss<br />2:Smartlink<br />6:SmartlinkAndSoftAP(ap配网) |
+| thirdDeviceId | String | 第三方设备id | 如是第三方设备，则有第三方设备id |
+| operationGuide | String | 操作指南 | ​<br /> |
+| productProperties | List(ProductProperties) | 设备属性 | ​<br /> |
 
-**​**
+ProductProperties
 
-**DeviceUserDto**
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| id | Integer | 主键id | ​<br /> |
+| key | Integer | 类型key | ​<br /> |
+| value | String | 值 | ​<br /> |
+| sort | Integer | 序号 | ​<br /> |
+| memo | String | 备注 | ​<br /> |
+
+DeviceUserDto
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | id | Integer | 主键id |  |
-| userId | Long | _使用者id_ |  |
-| deviceId | String | _设备id_ |  |
-| userNo | Integer | _绑定的设备按钮号_ |  |
-| updated | Long | _修改时间_ |  |
-| clientId | String | _客服端id_ |  |
-| deleted | Boolean | _删除标识_ |  |
-| nickname | String | _昵称_ |  |
-| created | Date | _创建时间_ |  |
-| headimg | String | _头像地址_ |  |
+| userId | Long | 使用者id |  |
+| deviceId | String | 设备id |  |
+| userNo | Integer | 绑定的设备按钮号 |  |
+| updated | Long | 修改时间 |  |
+| clientId | String | 客服端id |  |
+| deleted | Boolean | 删除标识 |  |
+| nickname | String | 昵称 |  |
+| created | Date | 创建时间 |  |
+| headimg | String | 头像地址 |  |
 | sex | Integer | 性别 |  |
-| height | Double | _身高_ |  |
-| weight | Double | _体重_ |  |
-| birthday | Date | _出身日期_ |  |
+| height | Double | 身高 |  |
+| weight | Double | 体重 |  |
+| birthday | Date | 出身日期 |  |
 | channel | Integer | 绑定渠道 |  |
 
-
-<br />**DevcieUserExtDto**
+DevcieUserExtDto
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| isActive | Integer | 活跃状态 | 1:活跃状态,0非活跃状态 |
+| isActive | Integer | 活跃状态 | 1:活跃状态；0:非活跃状态 |
 | deviceId | String | 设备id |  |
 | userId | Long | 用户id |  |
 
-**DeviceSetting**
+DeviceSetting
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | Integer | 主键id |  |
-| deviceId | String | _设备id_ |  |
-| settingClass | String | _设置类名称_ |  |
-| content | String | _json内容_ |  |
+| id | Integer | 主键id | ​<br /> |
+| deviceId | String | _设备id_ | ​<br /> |
+| settingClass | String | _设置类名称_ | ​<br /> |
+| content | String | _json内容_ | ​<br /> |
+
+DeviceStatus
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| id | Integer | 主键id | ​<br /> |
+| deviceId | String | 设备id | ​<br /> |
+| battery | Integer | 电量 | ​<br /> |
 
 **​**
 
-**DeviceStatus**
-
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | Integer | 主键id |  |
-| deviceId | String | _设备id_ |  |
-| battery | Integer | _电量_ |  |
-
-**示例**<br />
-
+**返回示例：**
 ```json
 
 {
