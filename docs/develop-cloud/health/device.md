@@ -1,8 +1,6 @@
 <a name="OAIV7"></a>
 # 1.绑定设备
-**描述：用户绑定设备**<br />**url :  域名 + /**api/device/bind/v1.0/bindDevice<br />method：post<br />**​**
-
-**header参数或者url参数**<br />**​**<br />
+**描述：用户绑定设备**<br />**url :  **域名+/api/device/bind/v1.0/bindDevice<br />method：post<br />**header参数或者url参数**<br />**​**<br />
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
