@@ -231,44 +231,36 @@ DeviceStatus
 ```
 <a name="F4XDJ"></a>
 # 2.解绑设备
-**url :  域名 +  **/api/device/unbind/v1.0/unbindSelfDevice<br />**method: post**<br />**​**
-
-**header参数或者url参数**<br />**​**<br />
+**url：**域名+/api/device/unbind/v1.0/unbindSelfDevice<br />**method：post**<br />**header参数或者url参数**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
 
-**​**
-
-**post入参 **
+**post入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceKeyType** | String | 设备标识类型，可选值为：<br />id： 设备id<br />sn:  设备sn | 必传 |
-| **deviceKey** | string | 根据key类型传相应的值 |  |
+| **deviceKeyType** | String | 设备标识类型，可选值为：id：设备id；sn:  设备sn | 必传 |
+| **deviceKey** | string | 根据key类型传相应的值 | 必传 |
 
-**示例 **<br />
-
+**入参示例：**
 ```json
 {
 	"deviceKeyType":"id",
 	"deviceKey":"A4C138A70285"
 }
 ```
-
-<br />**出参**<br />****DevcieUserExtDto**
+**出参：**<br />DevcieUserExtDto
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| isActive | Integer | 活跃状态 | 1:活跃状态,0非活跃状态 |
-| deviceId | String | 设备id |  |
-| userId | Long | 用户id |  |
+| isActive | Integer | 活跃状态 | 1:活跃状态；0:非活跃状态 |
+| deviceId | String | 设备id | ​<br /> |
+| userId | Long | 用户id | ​<br /> |
 
-
-<br />示例：
+**返回示例：**
 ```json
-
 {
 	"code":200,
 	"msg":"成功",
@@ -284,52 +276,41 @@ DeviceStatus
 		]
 	}
 }
-
-
 ```
 <a name="alNzx"></a>
 # 3.获取设备信息
-**​**<br />
 ```bash
 url :  域名 +  /api/device/baseinfo/v1.0/getDeviceBaseInfo
 method: post
 ```
-**​**
-
-**​**
-
-**post入参 **
+**post入参：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceKeyType** | String | 设备标识类型，可选值为：<br />id： 设备id<br />sn:  设备sn<br />mac: 设备mac地址<br />**qrcode: 设备二维码** | 必传 |
-| **deviceKey** | string | 根据key类型传相应的值 |  |
+| deviceKeyType | String | 设备标识类型，可选值为：<br />id： 设备id<br />sn:  设备sn<br />mac: 设备mac地址<br />qrcode: 设备二维码 | 必传 |
+| deviceKey | string | 根据key类型传相应的值 | 必传 |
 
-**示例 **<br />
-
+**入参示例：**
 ```json
 {
 	"deviceKeyType":"id",
 	"deviceKey":"A4C138A70285"
 }
 ```
-
-<br />**出参​**<br />DeviceBaseDTO
+**出参：**<br />DeviceBaseDTO
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceId** | string | 设备id |  |
-| **sn** | String | 设备sn |  |
-| **mac** | Long | 设备mac地址 |  |
-| **model** | string | 设备工厂型号 |  |
-| **productType** | string | 设备分类 | **体重秤**(**"01"**),<br />**体重脂肪测量仪**(**"02"**),<br />**手环**(**"04"**), **血糖仪**(**"06"**),<br />**血压计**(**"08"**),<br />**人体成分分析仪**(**"09"**),<br />**支付卡**(**"11"**),<br />**pillow**(**"14"**); |
-| **hardwareVersion** | string | 设备硬件版本 |  |
-| **softwareVersion** | string | 设备固件版本 |  |
+| deviceId | string | 设备id | ​<br /> |
+| sn | String | 设备sn | ​<br /> |
+| mac | Long | 设备mac地址 | ​<br /> |
+| model | string | 设备工厂型号 | ​<br /> |
+| productType | string | 设备分类 | 体重秤("01"),<br />体重脂肪测量仪("02"),<br />手环("04"), 血糖仪("06"),<br />血压计("08"),<br />人体成分分析仪("09"),<br />支付卡("11"),<br />pillow("14"); |
+| hardwareVersion | string | 设备硬件版本 | ​<br /> |
+| softwareVersion | string | 设备固件版本 | ​<br /> |
 
-
-<br />输出示例
+**返回示例：**
 ```json
-
 {
 	"code":200,
 	"msg":"成功",
@@ -350,53 +331,40 @@ method: post
 ```
 <a name="TDrfQ"></a>
 # 4.获取乐心设备id
-**​**
-
 **对每一个设备，生成一个唯一的乐心设备id。**<br />**1.各业务模块有设备相关的逻辑，如不进行此步骤，则会缺乏合法的乐心设备id，部分功能会受影响；**<br />**2.影响后续设备相关的统计功能；**
 ```bash
 url :  域名 +  /api/device/apply/v1.0/applyDeviceId
 method: post
 ```
-**​**
-
-**​**
-
-**post入参 **
+**post入参：**
 
 | 字段 | 类型 | 描述 | 是否必传 | 备注 |
 | --- | --- | --- | --- | --- |
-| **model** | String | 设备型号 | 是 | 在乐心云为每个型号注册，分配型号标识 |
-| **thirdDeviceId** | String | _第三方设备唯一标识_ | 是 | 标识设备的标识即可，需唯一，不同设备不重复 |
-| **mac** | String | mac地址 | 否 | 如果是蓝牙设备，必传 |
-| **hardwareVersion** | String | _硬件版本号_ | 否 |  |
-| **softwareVersion** | String | _固件版本号_ | 否 |  |
-|  |  |  |  |  |
+| model | String | 设备型号 | 是 | 在乐心云为每个型号注册，分配型号标识 |
+| thirdDeviceId | String | 第三方设备唯一标识 | 是 | 标识设备的标识即可，需唯一，不同设备不重复 |
+| mac | String | mac地址 | 否 | 如果是蓝牙设备，必传 |
+| hardwareVersion | String | 硬件版本号 | 否 | ​<br /> |
+| softwareVersion | String | 固件版本号 | 否 | ​<br /> |
 
-**示例 **<br />
-
+**入参示例：**
 ```json
 {
-  	"model": "LS109",
+		"model": "LS109",
     "thirdDeviceId": "087CBED2D27D",
     "mac": "087CBED2D27D",
-    "hardwareVersion": "A002",
-    "softwareVersion": "A09",
-    
+    "hardwareVersion": "H100",
+    "softwareVersion": "T311",
 }
 ```
-
-<br />**出参​**<br />
-
+**出参：**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceId** | string | 乐心设备id |  |
-| **sn** | String | 乐心设备sn |  |
+| deviceId | string | 乐心设备id |  |
+| sn | String | 乐心设备sn |  |
 
-
-<br />输出示例
+**返回示例：**
 ```json
-
 {
     "code": 200,
     "msg": "成功",
