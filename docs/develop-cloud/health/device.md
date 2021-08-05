@@ -349,11 +349,11 @@ method: post
 **入参示例：**
 ```json
 {
-		"model": "LS109",
-    "thirdDeviceId": "087CBED2D27D",
-    "mac": "087CBED2D27D",
-    "hardwareVersion": "H100",
-    "softwareVersion": "T311",
+    "model":"LS109",
+    "thirdDeviceId":"087CBED2D27D",
+    "mac":"087CBED2D27D",
+    "hardwareVersion":"H100",
+    "softwareVersion":"T311"
 }
 ```
 **出参：**
