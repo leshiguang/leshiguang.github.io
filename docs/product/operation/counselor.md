@@ -63,8 +63,10 @@
 **方式1：健康分析**<br />进入顾问百宝箱页面->点击【健康分析】->进入健康分析页面
 
 - 实时跟踪会员动态健康变化情况
+- 健康状况改善会员的数据提醒
+- 顾问一键提醒会员记录数据提醒
 
-![健康分析新.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1626765783657-972b9cbe-ffc3-470b-8208-836eed1f9056.png#clientId=u1026ce77-ae46-4&from=ui&id=ub9839d4b&margin=%5Bobject%20Object%5D&name=%E5%81%A5%E5%BA%B7%E5%88%86%E6%9E%90%E6%96%B0.png&originHeight=1945&originWidth=913&originalType=binary&ratio=1&size=393823&status=done&style=none&taskId=u402906f3-c6cb-4339-a3eb-d6f15555767)<br />
+![健康分析新.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1628231169327-35ec2c94-432a-416f-9e7b-2c3ecd3ccaa6.png#clientId=ud1c0fe53-1b6c-4&from=ui&id=uba300083&margin=%5Bobject%20Object%5D&name=%E5%81%A5%E5%BA%B7%E5%88%86%E6%9E%90%E6%96%B0.png&originHeight=3440&originWidth=2436&originalType=binary&ratio=1&size=1155037&status=done&style=none&taskId=uc65e78ed-5693-4f57-bf18-a8f2fa36968)<br />
 <br />**方式2：交易分析**<br />进入顾问百宝箱页面->点击【交易分析】->进入交易分析页面<br />![交易分析新.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1626765804290-82f434b4-147b-4b4f-88ec-975d42e6d5ba.png#clientId=u1026ce77-ae46-4&from=ui&id=u8e9684b1&margin=%5Bobject%20Object%5D&name=%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%E6%96%B0.png&originHeight=1450&originWidth=906&originalType=binary&ratio=1&size=355911&status=done&style=none&taskId=ub6f8315d-48df-4c9b-9081-48980713aa9)<br />
 <br />**方式3：大数据分析**<br />进入顾问百宝箱页面->点击【会员统计】->进入会员统计页面<br />![大数据分析新.png](https://cdn.nlark.com/yuque/0/2021/png/581207/1626765834696-68ad8d1a-ee05-4dfa-b030-5e53bd1aaae2.png#clientId=u1026ce77-ae46-4&from=ui&id=uffe84d4c&margin=%5Bobject%20Object%5D&name=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%96%B0.png&originHeight=1824&originWidth=902&originalType=binary&ratio=1&size=381023&status=done&style=none&taskId=ub19f2251-c5cb-4c0a-8e80-6bdb131179b)
 <a name="LkVNg"></a>
