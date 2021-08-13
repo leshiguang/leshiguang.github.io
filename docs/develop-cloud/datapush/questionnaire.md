@@ -133,7 +133,7 @@
 {
     "userId":23341064,
     "associatedId":"66104c5623342apsasad",
-    "dataTypeKey":"uSleepEvalE",
+    "dataTypeKey":"uShareEvalE",
     "eventKey":"eventPush",
     "pushStatus":1,
     "data":{
