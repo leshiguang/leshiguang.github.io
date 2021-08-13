@@ -111,7 +111,42 @@
   }
 }
 ```
+<a name="QTjgN"></a>
+## 5、分享评估事件
+顾问点击分享问卷后触发
 
+| eventKey | eventPush |
+| --- | --- |
+| dataTypeKey | **uShareEvalE** |
+
+1.推送data
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object |  |
+| userId | data | String | 用户ID<br /> |
+| evalType | data | String | 评估问卷：1-全面风险评估；2-营养均衡评估；3-免疫力评估；4-睡眠状况评估 |
+| shareDate | data | Date | 分享时间 |
+
+2.推送data示例
+```json
+{
+    "userId":23341064,
+    "associatedId":"66104c5623342apsasad",
+    "dataTypeKey":"uSleepEvalE",
+    "eventKey":"eventPush",
+    "pushStatus":1,
+    "data":{
+        "userId":23341064,
+        "evalType":"1",
+        "shareDate":1628823259000
+    }
+}
+```
+<a name="qB0u1"></a>
+## ​<br />
+
+<br />
 <br />
 
 
