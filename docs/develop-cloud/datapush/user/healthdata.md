@@ -1,7 +1,5 @@
 <a name="XS3wZ"></a>
 # 1.用户体重数据
-
-
 <a name="Ily58"></a>
 ## 1.1 用户体重数据变更
 | eventKey | **eventPush** |
@@ -103,8 +101,6 @@
   }
 }
 ```
-
-
 <a name="ceXyh"></a>
 # 3.用户血压数据
 | eventKey | **dataPush** |
@@ -148,13 +144,8 @@
   
 }
 ```
-
-
 <a name="J53Gw"></a>
 # 4.用户血糖数据
-
-
-
 | eventKey | **dataPush** |
 | --- | --- |
 | dataTypeKey | uBs |
@@ -188,8 +179,6 @@
   
 }
 ```
-
-
 <a name="biYUd"></a>
 # 5.用户步数数据变更
 | eventKey | **eventPush** |
@@ -214,6 +203,32 @@
   }
 }
 ```
-<a name="GTLLC"></a>
+<a name="yFL86"></a>
+# 6.用户心率数据变更
+| eventKey | **eventPush** |
+| --- | --- |
+| dataTypeKey | **uHeartrateChangeE** |
+
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方（data参数解释） |
+| measurementDate | data | Long | 测量时间，13位，精确到毫秒 |
+
+2）推送数据样例
+```json
+{
+  "dataTypeKey": "eventPush",
+  "eventKey": "uHeartrateChangeE",
+  "pushStatus": 1,
+  "data": {
+    "measurementDate": 1629098641000
+  }
+}
+```
+<a name="Y9gef"></a>
 ## ​<br />
+
+
 
