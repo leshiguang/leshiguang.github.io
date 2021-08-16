@@ -190,4 +190,30 @@
 ```
 
 
+<a name="biYUd"></a>
+# 5.用户步数数据变更
+| eventKey | **eventPush** |
+| --- | --- |
+| dataTypeKey | **uStepChangeE** |
+
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方（data参数解释） |
+| measurementDate | data | Long | 测量时间，13位，精确到毫秒 |
+
+2）推送数据样例
+```json
+{
+  "dataTypeKey": "eventPush",
+  "eventKey": "uStepChangeE",
+  "pushStatus": 1,
+  "data": {
+    "measurementDate": 1629098641000
+  }
+}
+```
+<a name="GTLLC"></a>
+## ​<br />
 
