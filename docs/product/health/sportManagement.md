@@ -1,4 +1,4 @@
-<a name="dBRDF"></a>
+<a name="RgHsp"></a>
 # 核心价值点
 - **权威专家背书，科学运动管理体系**
 
@@ -18,15 +18,15 @@
 
 - **丰富有趣的运动训练，易于用户坚持**
 
-与哑铃、跳绳等多种智能硬件联动的运动训练，游戏趣味性强，智能统计运动相关数据，让运动更有效<br />![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630049232120-c217304e-d15b-4593-b40e-1e3b87d3263d.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=aywLy&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=1096105&status=done&style=stroke&taskId=ube42e84c-5101-4b80-bb37-381e85f1bd1)
-<a name="SgfLJ"></a>
+与哑铃、跳绳等多种智能硬件联动的运动训练，游戏趣味性强，智能统计运动相关数据，让运动更有效<br />![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630049232120-c217304e-d15b-4593-b40e-1e3b87d3263d.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=u665a2b68&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=1096105&status=done&style=stroke&taskId=ube42e84c-5101-4b80-bb37-381e85f1bd1)
+<a name="xzvKi"></a>
 # 产品关键路径
-![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630049382560-0df149f6-fa70-4590-a988-1a1f7f38c715.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=cSsEZ&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=1222909&status=done&style=stroke&taskId=u02bc55cf-42ca-4c40-9fde-5eb0b5fce93)
-<a name="mfQmt"></a>
+![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630049382560-0df149f6-fa70-4590-a988-1a1f7f38c715.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=uf3e1cf36&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=1222909&status=done&style=stroke&taskId=u02bc55cf-42ca-4c40-9fde-5eb0b5fce93)
+<a name="gLOe8"></a>
 # 产品模块详解
-<a name="yxC81"></a>
+<a name="JSR4b"></a>
 ## 核心流程1：运动数据上传
-<a name="W2CWw"></a>
+<a name="VyZKz"></a>
 ### 路径1：手动数据上传
 小程序首页点击“运动管理”板块→运动管理首页中点击“记录运动”→运动选择列表
 
@@ -35,8 +35,8 @@
 - 常用运动根据用户使用习惯进行显示
 - 根据用户的体重情况换算运动所消耗的热量
 
-![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625727498571-d125cfa6-d615-4280-b3c9-6b934345ba76.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=ubc9a0fdf&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=550048&status=done&style=stroke&taskId=ua46c9488-85a7-496b-a366-29e46445fa4)
-<a name="IGYm3"></a>
+![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625727498571-d125cfa6-d615-4280-b3c9-6b934345ba76.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=yaBx4&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=550048&status=done&style=stroke&taskId=ua46c9488-85a7-496b-a366-29e46445fa4)
+<a name="y5nIB"></a>
 ### 路径2：硬件数据上传
 小程序首页点击“运动管理”板块→运动管理首页点击“有X条新的运动明细”→点击某条运动记录→运动详情页面
 
@@ -45,8 +45,8 @@
 - 根据用户的心率变动和身体运动，自动识别健走等运动
 - 能够监测到心率变化，热量的换算更加精确
 
-![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625727650613-9521e0ce-79cf-489a-b792-09b8273df14c.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=u65c766dc&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=546308&status=done&style=stroke&taskId=uba1f789a-93d0-49cb-9d3e-4f1182253dd)
-<a name="UqeC2"></a>
+![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625727650613-9521e0ce-79cf-489a-b792-09b8273df14c.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=jrGkh&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=546308&status=done&style=stroke&taskId=uba1f789a-93d0-49cb-9d3e-4f1182253dd)
+<a name="p4TNC"></a>
 ## 核心流程2：历史数据查看
 小程序首页点击“运动管理”板块→运动管理首页点击“更多”→更多菜单中点击“历史运动”<br />→运动历史页面点击“全部运动筛选”，筛选运动类型；<br />→运动历史页面点击“运动记录详情”，进入单笔运动记录页面；
 
@@ -56,8 +56,8 @@
 - 运动贴士与益处宣教
 - 个性化运动情况反馈（达标、超负荷运动）
 
-![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625728176430-e907963f-b245-4422-aaee-56c304b80e2e.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=ufe7da83a&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=628100&status=done&style=stroke&taskId=u50a9607f-c617-4b34-97c3-ed6321bd941)
-<a name="NrxFb"></a>
+![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625728176430-e907963f-b245-4422-aaee-56c304b80e2e.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=egEjS&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=628100&status=done&style=stroke&taskId=u50a9607f-c617-4b34-97c3-ed6321bd941)
+<a name="aV0H6"></a>
 ## 核心流程3：完成运动评估
 小程序首页点击“运动管理”板块→运动管理首页点击“去评估”→根据实际情况完成评估→查看评估结果
 
@@ -66,39 +66,39 @@
 - 针对个人身体素质，给与心率、运动类型、运动次数、其他建议等运动贴士，帮助更好完成运动目标
 - 根据运动状况，动态调整每周运动目标
 
-![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625730206135-b2a54390-594a-4a32-93ef-1bf8438105f0.jpeg#clientId=u29d5db43-9ea2-4&from=drop&id=u87212468&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=758897&status=done&style=stroke&taskId=u4278dab6-f6de-4ba4-a154-b892416b1b2)
-<a name="teLFF"></a>
+![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625730206135-b2a54390-594a-4a32-93ef-1bf8438105f0.jpeg#clientId=u29d5db43-9ea2-4&from=drop&id=YAahn&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=758897&status=done&style=stroke&taskId=u4278dab6-f6de-4ba4-a154-b892416b1b2)
+<a name="K8gGm"></a>
 ## 核心流程4：运动时长目标设置
 小程序首页点击“运动管理”板块→运动管理首页点击“目标”→目标设置页面点击“运动时长”
 
 - 根据用户的实际身体状况，设置每周运动时长目标
 
-![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625731279483-2f9d3729-15cb-4a52-8feb-6ad1fb920e17.jpeg#clientId=u5fccfd7e-7af9-4&from=ui&id=ub9a3768a&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=389716&status=done&style=stroke&taskId=u824917b6-4a19-4188-af56-3c6d77f9c02)
-<a name="RR5uK"></a>
+![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625731279483-2f9d3729-15cb-4a52-8feb-6ad1fb920e17.jpeg#clientId=u5fccfd7e-7af9-4&from=ui&id=AIJkm&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=389716&status=done&style=stroke&taskId=u824917b6-4a19-4188-af56-3c6d77f9c02)
+<a name="c8lkN"></a>
 ## 核心流程5：进行运动训练
 小程序首页点击“运动管理”板块→运动管理首页点击“运动训练”板块→选择一种模式进行运动训练→查看运动记录
 
 - 目前运动训练支持结合智能跳绳硬件进行跳绳训练
 - 跳绳训练可选择自由模式、定时模式、计数模式、闯关模式四种训练模式
 
-![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630052965069-131374c0-ae00-4e43-8def-f31f5ec0e618.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=d3UgX&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=744608&status=done&style=stroke&taskId=uf181fa20-fd39-4844-a724-c64d9e7353a)
-<a name="GWSVt"></a>
+![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630052965069-131374c0-ae00-4e43-8def-f31f5ec0e618.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=u3817d48f&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=744608&status=done&style=stroke&taskId=uf181fa20-fd39-4844-a724-c64d9e7353a)
+<a name="XFkQR"></a>
 # 产品交付能力
-<a name="EJz2M"></a>
+<a name="jMbxQ"></a>
 ## 仅手环上传的版本交付
-在支持手环的对接场景中，系统支持手环实现绑定流程及手环相关操作指南及常见问题的呈现。同时手环上传或发起的运动数据中，手环能够监测到运动心率。手环的运动记录采用直接上传的方式，更加快捷有效。<br />仅手环上传的版本中，无“运动训练”相关功能及功能入口。<br />仅手环上传的版本中，需包含运动评估相关功能。<br />![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625732119543-dfd4dce4-ec20-48b0-bdf2-56aecf584904.jpeg#clientId=u1cc09b4b-6eae-4&from=ui&id=u5ca84cdf&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=533237&status=done&style=stroke&taskId=uda7f94f1-a68c-4401-be73-d6d6f9206e0)
-<a name="Pgbyx"></a>
+该版本适用于客户仅采买手环、未采买其他智能运动硬件的场景。<br />在支持手环的对接场景中，系统支持手环实现绑定流程及手环相关操作指南及常见问题的呈现。同时手环上传或发起的运动数据中，手环能够监测到运动心率。手环的运动记录采用直接上传的方式，更加快捷有效。<br />仅手环上传的版本中，无“运动训练”相关功能及功能入口。<br />仅手环上传的版本中，需包含运动评估相关功能。<br />该版本可根据客户需要，选择是否支持手动记录功能。<br />![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625732119543-dfd4dce4-ec20-48b0-bdf2-56aecf584904.jpeg#clientId=u1cc09b4b-6eae-4&from=ui&id=G4xyo&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=533237&status=done&style=stroke&taskId=uda7f94f1-a68c-4401-be73-d6d6f9206e0)
+<a name="cklwi"></a>
+## 仅智能运动硬件的版本交付
+该版本适用于客户未采买手环、仅采买智能运动硬件的场景。<br />在支持智能运动硬件的对接场景中，显示“运动训练”相关入口及功能页面。可在连接跳绳、哑铃等智能硬件后，发起运动训练，更好地完成运动目标。运动过程中，可查看实时数据；运动结束后，可查看硬件上传的相关结果数据。<br />仅智能运动硬件的版本交付，需包含运动评估相关功能。<br />该版本可根据客户需要，选择是否支持手动记录功能。<br />![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630052965069-131374c0-ae00-4e43-8def-f31f5ec0e618.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=oROkr&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=744608&status=done&style=stroke&taskId=uf181fa20-fd39-4844-a724-c64d9e7353a)
+<a name="UuTyr"></a>
 ## 仅手动记录的版本交付
-在不支持硬件的对接场景中，系统支持快速跳转到手动记录页面。保证数据的多样化上传，不使用硬件的客户也能够正常记录日常的身体活动，不会对结果分析造成影响。<br />仅手动记录的版本中，无“运动训练”相关功能及功能入口。<br />仅手动记录的版本中，需包含运动评估相关功能<br />![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625727498571-d125cfa6-d615-4280-b3c9-6b934345ba76.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=woUzs&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=550048&status=done&style=stroke&taskId=ua46c9488-85a7-496b-a366-29e46445fa4)
-<a name="uRELO"></a>
-## 支持智能运动硬件的版本交付
-在支持智能运动硬件的对接场景中，显示“运动训练”相关入口及功能页面。可在连接跳绳、哑铃等智能硬件后，发起运动训练，更好地完成运动目标。运动过程中，可查看实时数据；运动结束后，可查看硬件上传的相关结果数据。<br />支持智能运动硬件的版本，可与仅手环上传的版本或仅手动记录的版本结合使用，但不可单独使用。<br />![运动管理-V1.2.0.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1630052965069-131374c0-ae00-4e43-8def-f31f5ec0e618.jpeg#clientId=u3f8b3b96-c2b8-4&from=ui&id=xDdl4&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86-V1.2.0.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=744608&status=done&style=stroke&taskId=uf181fa20-fd39-4844-a724-c64d9e7353a)
-<a name="pm0TY"></a>
+该版本适用于客户未采买手环、也未采买智能运动硬件的场景。<br />在不支持硬件的对接场景中，系统支持快速跳转到手动记录页面。保证数据的多样化上传，不使用硬件的客户也能够正常记录日常的身体活动，不会对结果分析造成影响。<br />仅手动记录的版本中，无“运动训练”相关功能及功能入口。<br />仅手动记录的版本中，需包含运动评估相关功能。<br />![运动管理.jpg](https://cdn.nlark.com/yuque/0/2021/jpeg/2752327/1625727498571-d125cfa6-d615-4280-b3c9-6b934345ba76.jpeg#clientId=u29d5db43-9ea2-4&from=ui&id=ELuRk&margin=%5Bobject%20Object%5D&name=%E8%BF%90%E5%8A%A8%E7%AE%A1%E7%90%86.jpg&originHeight=2295&originWidth=4080&originalType=binary&ratio=1&size=550048&status=done&style=stroke&taskId=ua46c9488-85a7-496b-a366-29e46445fa4)
+<a name="E22yr"></a>
 ## 手环上传+智能运动硬件+手动记录的版本交付
-该版本包含运动管理业务全部功能
-<a name="Uqc0f"></a>
+该版本适用于客户既采买手环、也采买智能运动硬件的场景。<br />该版本包含运动管理业务全部功能，也可根据客户需要，选择是否支持手动记录功能。
+<a name="NrQjC"></a>
 # Q&A
-<a name="XrLkH"></a>
+<a name="qzi8N"></a>
 ## 常见问题
 Q：运动记录是怎么产生的？<br />A：运动记录的产生有以下三种方式：1-小程序连接手环，通过手环发起运动后，产生运动记录。2-小程序连接智能运动硬件，发起运动后，产生运动记录。3-在App自动识别到的运动记录数据，同步到小程序。<br />​
 
@@ -107,33 +107,33 @@ Q：运动记录支持哪些运动种类？<br />A：运动记录目前支持15�
 Q：发起运动，为什么提示GPS连接失败？<br />A：由于小程序自身的限制，目前小程序连接手环时，无法支持GPS连接。您可以在手环上点击“跳过”，这不会影响运动记录的生成。<br />​
 
 Q：游泳的单趟距离，为什么不能修改？<br />A：单趟距离仅支持运动当日修改，如果没有修改，默认单趟距离是25米。
-<a name="Yc6RN"></a>
+<a name="bPLGV"></a>
 ## 运动知识
-<a name="z1Pa4"></a>
+<a name="UUnVP"></a>
 ### 关于中等强度运动目标
 运动目标以周身体活动时长进行衡量，世界卫生组织建议：成年人每周至少进行150分钟中等强度或75分钟高强度的身体活动，或者中等和高强度两种活动相结合的身体活动。身体活动包括运动锻炼及需要消耗能量的身体动作。<br />权威证据表明，所有成年人都应定期进行体育锻炼，有一些体育活动总比没有好。并且，还应该每周两天或更多天进行涉及所有主要肌肉群的肌肉强化活动。<br />合理有效的运动能够减轻抑郁、焦虑和失眠等症状，增强日常生活中的幸福感。<br />对于心脏来说，可以降低血压和胆固醇，从而降低心脏病和中风的危险。适度运动可以降低炎症性肠道疾病的风险，经常锻炼可以降低13种癌症的发病率，包括乳腺癌，结肠癌，卵巢癌和子宫内膜癌。
-<a name="yRFkt"></a>
+<a name="lG9Y9"></a>
 ### 关于时长分布
 世界卫生组织建议，成年人每周至少进行150分钟的中等强度或75分钟高等强度的身体活动。您的运动强度越大，则可能获得双倍的运动时长，运动效果加倍。中等强度活动需要中等程度的努力并可明显加快心率，通常需要达到最大心率的60%-79%。高强度身体活动需要大量努力并造成呼吸急促和心率显著加快，通常需要达到最大心率的80%及以上但同时高强度运动时间过长也会对的身体造成劳损。
-<a name="YxOXC"></a>
+<a name="x7G1P"></a>
 ### 关于运动心率区间
 运动心率，即人体在运动时保持的心率状态，合适的运动心率对于运动效果和运动安全都很重要。运动心率区间是不同锻炼强度下的心率范围，根据自身最大心率（HRmax）的不同百分比，可分为热身区间、燃脂区间、有氧耐力区间、无氧耐力区间、极限区间。<br />不同的运动心率区间强度对应不同的锻炼效果。可以通过自己的最大心率来计算对应的强度区间。最大心率计算公式=207-年龄*0.7。
-<a name="MCqtZ"></a>
+<a name="AKwMH"></a>
 ### 热身区间
 心率参考范围：50%-59%HRmax<br />热身区间大多由5-10分钟的低到中等强度有氧运动和肌肉耐力运动组成，属于轻度运动，耗能也很少。适合运动前的动态热身或者运动后的放松活动。
-<a name="p9bHg"></a>
+<a name="xOg47"></a>
 ### 燃脂区间
 心率参考范围：60%-69%HRmax<br />燃脂区间以轻度的有氧运动为主，属于中等强度运动区间，也是推荐的运动区间哦。适合以放松恢复为目的来进行锻炼，比如慢跑、椭圆机、健身操等轻松的锻炼项目，这时候身体主要以脂肪代谢为主，是个减重的好区间。
-<a name="dBaop"></a>
+<a name="pkmlU"></a>
 ### 有氧耐力区间
 心率参考范围：70%-79%HRmax<br />有氧耐力区间属于中等到高强度的运动区间，在这个区间范围内的运动的话，身体中糖原的代谢比例增大。能够有效锻炼到我们身体的有氧能力，提高脂肪的代谢率。且在这个区间范围内的运动大多强度适中，适合以健身减肥为目的的朋友，大部分马拉松选手的训练的时候，都会把心率控制在这个区间。
-<a name="oqfBv"></a>
+<a name="fObQ4"></a>
 ### 无氧耐力区间
 心率参考范围：80%-89%HRmax<br />无氧耐力区间也被称作乳酸阀值区间，在这个区间内身体主要以糖原代谢为主，容易出现乳酸堆积。在这个区间内的运动强度都比较大。以跑步为例，节奏跑和马拉松的配速跑大多在这个区间内。这种训练一般用于提高身体对于乳酸的耐受性，但是每周的训练时间不宜过长，控制在1.5小时内就可以了。
-<a name="xbn8V"></a>
+<a name="H8GEp"></a>
 ### 极限区间
 心率参考范围：90%-100%+HRmax<br />在这个区间身体已经接近无氧代谢，几乎全部的能量来源都来自于糖原分解。在这个运动区间，我们心脏的负担会加大。以跑步为例，运动项目主要也是锻炼绝对速度能力，适合有长期经验的训练者。建议每次持续时间在30分钟左右，每周不要超过1小时。
-<a name="vuvzU"></a>
+<a name="AZrPY"></a>
 ### 跳绳的好处
 跳绳运动的效率高。通常情况下，跳绳3分钟等于步行1000步。虽然体重下降、体脂降低，和每个人的身体基础、饮食习惯、同时进行的其他运动锻炼等都有关，但不得不说，从减脂效率上来说，跳绳真的很优秀！<br />​
 
