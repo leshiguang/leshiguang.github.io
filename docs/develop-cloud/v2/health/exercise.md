@@ -6,6 +6,142 @@
 
 <a name="Cbj0y"></a>
 # 1.运动上传
+
+
+<a name="vodik"></a>
+## 1.1 上传手环的运动数据
+
+
+```
+POST /api/exercise/v2.0/upload/uploadDeviceExerciseRecord
+```
+
+<br />**入参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| list | List<设备运动记录> | 运动集合 |  |
+
+
+<br />**设备运动记录：**
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| deviceId | String | 设备id | ​<br /> |
+| startTime | Date | 开始时间 | ​<br /> |
+| endTime | Date | 结束时间 | ​<br /> |
+| step | Integer | 总步数，当锻炼类型为4时代表趟数 |  |
+| calories | BigDecimal | 总卡路里 | ​<br /> |
+| distance | BigDecimal | 总里程 | 单位：米 |
+| exerciseTime | Integer | 运动时长 | 单位：秒 |
+| maxHeartRate | Integer | 最大心率 | ​<br /> |
+| maxStepRate | Integer | 最大步频 | ​<br /> |
+| avgHeartRate | Integer | 平均心率 | ​<br /> |
+| avgStepRate | Integer | 平均步频 | ​<br /> |
+| dataSource | Integer | 数据来源 | 0-设备<br />1-微信<br />2-安卓app<br />3-iosApp<br />4-其他 |
+| created | Date | 创建时间 | ​<br /> |
+| updated | Long | 更新时间 | ​<br /> |
+| requestTime | Long | 请求时间 | ​<br /> |
+| dataType | Integer | 数据类型 | ​<br /> |
+| avgPace | Integer | 平均配速 | 单位： s/km |
+| avgSpeed | BigDecimal | 平均速度 | 单位：km/h |
+| bestSpeed | BigDecimal | 最大速度 | 单位：km/h |
+| exerciseType | Integer | 锻炼类型 |  |
+
+
+<br />**示例数据：**
+```sql
+
+{
+	"list":[
+		{
+			"deviceId":"00010619b68a",
+			"startTime":1627816801000,
+			"endTime":1627820401000,
+			"step":2023,
+			"calories":149.1,
+			"distance":1659.17,
+			"exerciseTime":720,
+			"maxHeartRate":137,
+			"maxStepRate":178,
+			"avgHeartRate":123,
+			"avgStepRate":169,
+			"dataSource":0,
+			"dataType":4,
+			"exerciseType":7
+		},
+		{
+      "deviceId":"0001061a0a88",
+			"startTime":1627993201000,
+			"endTime":1628000401000,
+			"step":2023,
+			"calories":149.1,
+			"distance":1659.17,
+			"exerciseTime":720,
+			"maxHeartRate":137,
+			"maxStepRate":178,
+			"avgHeartRate":123,
+			"avgStepRate":169,
+			"dataSource":0,
+			"dataType":4,
+			"exerciseType":7
+		}
+	]
+}
+
+
+```
+<a name="OQ9ex"></a>
+## 1.2 上传非手环的运动数据
+
+
+```
+POST /api/exercise/v2.0/upload/uploadManualExerciseRecord
+```
+
+<br />**入参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| list | List<手动运动记录> | 运动集合 |  |
+
+
+<br />**手动运动记录：**
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| measurementDate | Date | 测量时间 |  |
+| exerciseMinute | Integer | 运动时长(分钟数) |  |
+| exerciseType | Integer | 运动类型 | //手动添加运动类型<br />(60, "散步"),<br />(61, "快走"),<br />(62, "慢跑"),<br />(63, "快跑"),<br />(64, "骑行（慢速）"),<br />(65, "骑行（快速）"),<br />(66, "游泳（低强度）"),<br />(67, "游泳（高强度）"),<br />(68, "高尔夫"),<br />(69, "网球"),<br />(70, "郊游"),<br />(71, "擦窗户"),<br />(72, "擦车"),<br />(73, "扫地"),<br />(74, "拖地"),<br />(75, "整理杂物"),<br />(76, "收拾房间"),<br />(77, "园艺除草"),<br />(78, "木工工作"),<br />(79, "做农活"),<br />(80, "搬家"),<br />(81, "搬重物"),<br />(82, "广场舞"),<br />(83, "爬山"),<br />(84, "帆船运动") |
+| feelType | Integer | 运动感受 | 1-疲惫 <br />2-正好<br />3-轻松 |
+
+
+<br />**示例数据：**
+```sql
+
+{
+	"list":[
+		{
+			"userId":26729267,
+			"measurementDate":1618997205411,
+			"exerciseType":66,
+			"feelType":3,
+			"exerciseMinute":30
+		},
+		{
+			"userId":26729267,
+			"measurementDate":1628000401000,
+			"exerciseType":66,
+			"feelType":3,
+			"exerciseMinute":30
+		}
+	]
+}
+
+
+```
+
+
 <a name="tIk58"></a>
 # 2.运动查询
 <a name="JhhzL"></a>
