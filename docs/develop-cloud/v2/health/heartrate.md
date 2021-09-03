@@ -6,6 +6,49 @@
 
 <a name="cKu5w"></a>
 # 1.心率上传
+<a name="OQ9ex"></a>
+## 1.1 常规心率上传
+```
+POST /api/heartrate/v2.0/upload/uploadHeartRate
+```
+
+<br />**入参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| **list** | List<日间心率> | 心率集合 | ​<br /> |
+
+日间心率
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| deviceId | String | 设备id |  |
+| quantityOfHeartRate | Integer | 当前上传心率数据条数 |  |
+| heartRates | String | 心率数据集合 | 16进制<br />5分钟一笔 |
+| measurementDate | Long | 测量开始时间 |  |
+
+
+<br />**示例数据：**
+```sql
+
+{
+	"list":[
+		{
+			"heartRates":"b9928178a0887c7bb69c7286948ab494748eab8483adbb9d619272b1a48bb7a57777b670a98a7eb28e628c79b4ac9377b6b4779698a07d997b6cb7bc7f7dbbb2b87783628598ae998aa7807f9193a46e95a0ae637f93a063848da97f869cbb628dae9e6a8ba670a289697c60b17dbc6c63937f768165acaf9b8587b96e70788494bd96978d85759b916ea4aaa8797e966aa5739db48c6b6779bb70616b7e90b5ba8c8c6d79a1ac717275ac989ebc8c8d619c75826478ab738faabab39fa1a0a3a7ba9f77898b66a14649543a3854464b37395d5a4b384d553c5c4f4636505459454b4a485e3a59455150445651474d36505b4844503e3552354f4f433f5d53323255553e575a3a464f405d5c4c525b5c5a4e3343513d46323944434357574f3b",
+			"quantityOfHeartRate":288,
+			"measurementDate":1629469201000,
+			"deviceId":"39049f006147"
+		},
+		{
+			"heartRates":"b9928178a0887c7bb69c7286948ab494748eab8483adbb9d619272b1a48bb7a57777b670a98a7eb28e628c79b4ac9377b6b4779698a07d997b6cb7bc7f7dbbb2b87783628598ae998aa7807f9193a46e95a0ae637f93a063848da97f869cbb628dae9e6a8ba670a289697c60b17dbc6c63937f768165acaf9b8587b96e70788494bd96978d85759b916ea4aaa8797e966aa5739db48c6b6779bb70616b7e90b5ba8c8c6d79a1ac717275ac989ebc8c8d619c75826478ab738faabab39fa1a0a3a7ba9f77898b66a14649543a3854464b37395d5a4b384d553c5c4f4636505459454b4a485e3a59455150445651474d36505b4844503e3552354f4f433f5d53323255553e575a3a464f405d5c4c525b5c5a4e3343513d46323944434357574f3b",
+			"quantityOfHeartRate":288,
+			"measurementDate":1629901201000,
+			"deviceId":"39049f006147"
+		}
+	]
+}
+
+```
 <a name="w8lPu"></a>
 # 2.心率查询
 <a name="NKUiK"></a>
