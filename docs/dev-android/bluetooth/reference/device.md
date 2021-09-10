@@ -47,9 +47,8 @@ BleDeviceManager.getDefaultManager().search(10000, new Consumer<DeviceInfo>() {
 | deviceId | String | 设备Id |
 | sn | String | 设备sn |
 | modelNumber | String | 设备型号 |
-| softwareVersion | String | 软件版本 |
+| softwareVersion | String | 软件版本、<br />固件版本 |
 | handwareVersion | String | 硬件版本 |
-| firmwareVersion | String | 固件版本 |
 | manufactureName | String | 制造商 |
 | registerStatus | int | 设备注册状态（0:未注册 1:已注册） |
 | manufactureId | String | 厂商Id |
