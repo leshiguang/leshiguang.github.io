@@ -1,6 +1,12 @@
 <a name="xVxQM"></a>
 ## 关于天气设置
-天气设置是通过app给手环下发天气相关信息，方便用户在手环上查看天气信息
+天气设置是通过app给手环下发天气相关信息，方便用户在手环上查看天气信息<br />​
+
+支持的设备：乐心手环Mambo3、乐心手环MamboHR2、乐心手环Mambo5、乐心手环Mambo5S、乐心手环Mambo Watch1、乐心手环Mambo Watch2、乐心手环HR6<br />
+
+<a name="r5mQa"></a>
+## 应用场景
+App连接蓝牙成功时， 获取当前app的定位信息， 通过getWeathers API从服务器获取天气信息，获取成功后通过设置天气API将设置下发给手环/手表
 <a name="RuRpg"></a>
 ## 获取天气
 从云端获取天气信息，可设置到手环(天气信息是由 "和风天气" 提供的付费接口, 超过调用次数需要收费, 请合理调用)
@@ -76,17 +82,19 @@ WeatherState
 | TORNADO | 龙卷风 |
 
 
-<br />不同的天气类型在手环上有不同的图标呈现：<br />                  ![image.png](https://cdn.nlark.com/yuque/0/2021/png/354855/1616725576313-dd609b19-1bf2-4ede-904f-ef23d9db06a4.png#align=left&display=inline&height=285&margin=%5Bobject%20Object%5D&name=image.png&originHeight=285&originWidth=485&size=31010&status=done&style=none&width=485)
+<br />不同的天气类型在手环上有不同的图标呈现：<br />                  ![image.png](https://cdn.nlark.com/yuque/0/2021/png/354855/1616725576313-dd609b19-1bf2-4ede-904f-ef23d9db06a4.png#height=285&id=KcnJT&margin=%5Bobject%20Object%5D&name=image.png&originHeight=285&originWidth=485&originalType=binary&ratio=1&size=31010&status=done&style=none&width=485)
 <a name="Z45MA"></a>
 ## 调用示例
 ```java
-BleDeviceManager.getDefaultManager().updateConfig(deviceInfo.getValue().getMac(), dialPlate, new Consumer<ConfigStatus>() {
+Weathers weathers = new Weathers();
+weathers.setUpdateTime(new Date.getTime() / 1000)
+weathers.setWeatherList(weatherList)
+BleDeviceManager.getDefaultManager().updateConfig(deviceInfo.getValue().getMac(), weathers, new Consumer<ConfigStatus>() {
             @Override
             public void accept(ConfigStatus configStatus)throwsException{   
                 if(configStatus == ConfigStatus.SUCCESS) {
-                    ConfigsRepository.saveConfig(deviceInfo.getValue().getMac(),config);
+                    //do something
                 }
-                ConfigViewModel.this.configStatus.postValue(configStatus);
             }
 }  )  ;
 ```
