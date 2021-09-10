@@ -44,7 +44,7 @@
    - [压力](/dev-android/bluetooth/receive/pressure)
    - [步数](/dev-android/bluetooth/receive/step)
    - [心率](/dev-android/bluetooth/receive/heartrate)
-   - [静息心率](restingheartrate)
+   - [静息心率](/dev-android/bluetooth/receive/restingheartrate)
    - [配速](/dev-android/bluetooth/receive/speed)
    - [运动卡路里](/dev-android/bluetooth/receive/calories)
    - [运动报告](/dev-android/bluetooth/receive/sportreport)
