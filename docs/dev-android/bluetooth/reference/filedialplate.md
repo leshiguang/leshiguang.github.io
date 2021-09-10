@@ -10,13 +10,13 @@
 ## 数据类型
 类名：com.lifesense.android.ble.core.application.model.config.FileDialPlate
 
-| 字段 | 字段类型 |  |
+| 字段 | 字段类型 | 描述 |
 | --- | --- | --- |
-| uniqueId | String |  |
-| index | int |  |
-| dialPlateName | String |  |
-| dialPlateType | int |  |
-| filePath | String |  |
+| uniqueId | String | 表盘ID |
+| index | int | 表盘位置 0～7 目前只支持7，表示推动表盘的位置，如果该位置非空，则表示替换，否则表示新增 |
+| dialPlateName | String | 表盘文件名称 |
+| dialPlateType | int | 表盘类型0:在线表盘1:相册表盘2:本地表盘255:无表盘（可用于删除表盘） |
+| filePath | String | 表盘文件路径 |
 
 <a name="6m4XS"></a>
 ## 调用示例
