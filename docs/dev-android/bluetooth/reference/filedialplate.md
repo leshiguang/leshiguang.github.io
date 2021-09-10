@@ -9,6 +9,15 @@
 <a name="gXub0"></a>
 ## 数据类型
 类名：com.lifesense.android.ble.core.application.model.config.FileDialPlate
+
+| 字段 | 字段类型 |  |
+| --- | --- | --- |
+| uniqueId | String |  |
+| index | int |  |
+| dialPlateName | String |  |
+| dialPlateType | int |  |
+| filePath | String |  |
+
 <a name="6m4XS"></a>
 ## 调用示例
 
