@@ -12,6 +12,7 @@
 | distance | int | 距离 单位：m |
 | voltage | int | 电压 |
 | status | int | 电量、运动等级 |
+| restHeartRate | int | 当前静息心率（HR6、Mambo Watch1、Mambo Watch2） |
 
 
 
