@@ -12,19 +12,23 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object |  |
-| **evalId** | data | String | 评估id<br /> |
+| evalId | data | String | 评估ID |
+| source | data | Integer | 来源:1-主态; 2-家人; 3-顾问 |
+| sourceUserId | data | Long | 来源用户ID |
 
 2.推送data示例
 ```json
 {
-  "userId": 23341064,
-  "associatedId": "66104c5623342apsasad",
-  "dataTypeKey": "uHealthRiskEvalE",
-  "eventKey": "eventPush",
-  "pushStatus": 1,
-  "data": {
-    "evalId": "111111111"
-  }
+    "userId":23341064,
+    "associatedId":"66104c5623342apsasad",
+    "dataTypeKey":"uHealthRiskEvalE",
+    "eventKey":"eventPush",
+    "pushStatus":1,
+    "data":{
+        "evalId":"111111111",
+        "source":3,
+        "sourceUserId":31056557
+    }
 }
 ```
 <a name="CAeLM"></a>
@@ -40,19 +44,23 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object |  |
-| **evalId** | data | String | 评估id<br /> |
+| evalId | data | String | 评估ID |
+| source | data | Integer | 来源:1-主态; 2-家人; 3-顾问 |
+| sourceUserId | data | Long | 来源用户ID |
 
 2.推送data示例
 ```json
 {
-  "userId": 23341064,
-  "associatedId": "66104c5623342apsasad",
-  "dataTypeKey": "uImmuneEvalE",
-  "eventKey": "eventPush",
-  "pushStatus": 1,
-  "data": {
-    "evalId": "111111111"
-  }
+    "userId":23341064,
+    "associatedId":"66104c5623342apsasad",
+    "dataTypeKey":"uImmuneEvalE",
+    "eventKey":"eventPush",
+    "pushStatus":1,
+    "data":{
+        "evalId":"111111111",
+        "source":3,
+        "sourceUserId":31056557
+    }
 }
 ```
 <a name="wdj1y"></a>
@@ -68,19 +76,23 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object |  |
-| **evalId** | data | String | 评估id<br /> |
+| evalId | data | String | 评估ID |
+| source | data | Integer | 来源:1-主态; 2-家人; 3-顾问 |
+| sourceUserId | data | Long | 来源用户ID |
 
 2.推送data示例
 ```json
 {
-  "userId": 23341064,
-  "associatedId": "66104c5623342apsasad",
-  "dataTypeKey": "uNutritionEvalE",
-  "eventKey": "eventPush",
-  "pushStatus": 1,
-  "data": {
-    "evalId": "111111111"
-  }
+    "userId":23341064,
+    "associatedId":"66104c5623342apsasad",
+    "dataTypeKey":"uNutritionEvalE",
+    "eventKey":"eventPush",
+    "pushStatus":1,
+    "data":{
+        "evalId":"111111111",
+        "source":3,
+        "sourceUserId":31056557
+    }
 }
 ```
 <a name="uCIdJ"></a>
@@ -96,19 +108,23 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object |  |
-| **evalId** | data | String | 评估id<br /> |
+| evalId | data | String | 评估ID |
+| source | data | Integer | 来源:1-主态; 2-家人; 3-顾问 |
+| sourceUserId | data | Long | 来源用户ID |
 
 2.推送data示例
 ```json
 {
-  "userId": 23341064,
-  "associatedId": "66104c5623342apsasad",
-  "dataTypeKey": "uSleepEvalE",
-  "eventKey": "eventPush",
-  "pushStatus": 1,
-  "data": {
-    "evalId": "111111111"
-  }
+    "userId":23341064,
+    "associatedId":"66104c5623342apsasad",
+    "dataTypeKey":"uSleepEvalE",
+    "eventKey":"eventPush",
+    "pushStatus":1,
+    "data":{
+        "evalId":"111111111",
+        "source":3,
+        "sourceUserId":31056557
+    }
 }
 ```
 <a name="QTjgN"></a>
