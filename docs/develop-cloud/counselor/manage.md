@@ -28,4 +28,26 @@ boolean，表示开通是否成功<br />
 }
 
 ```
+<a name="f51Ez"></a>
+## 2. 查询用户是否是顾问
+**URL**：域名 +  /api/family/v1.0/counselorData/userIsCounselor<br />**类型**：GET
+<a name="GjiKf"></a>
+##### URL入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id | 标识对接用户，双方约定字段 |
+
+<a name="jfyoy"></a>
+##### 出参:
+boolean，表示用户是否是顾问<br />​
+
+示例返回报文：
+```json
+{
+	"code":200,  //200-成功  401-associatedId无对应关联账号
+	"msg":"成功",
+	"data":true //用户是顾问
+}
+
+```
 
