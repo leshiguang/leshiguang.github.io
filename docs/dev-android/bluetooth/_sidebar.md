@@ -54,6 +54,6 @@
    - [步数统计](/dev-android/bluetooth/receive/stepstatistics)
    - [跳绳实时](/dev-android/bluetooth/receive/roperealtime)
    - [跳绳结果](/dev-android/bluetooth/receive/roperesult)
-   - [服药](medicine)
+   - [服药](/dev-android/bluetooth/receive/medicine)
 - [常见问题](/dev-android/bluetooth/help)
 
