@@ -20,13 +20,13 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | recordType | Integer | 数据类型 |  1-手环设备产生数据<br /> 2-手动添加数据<br /> 3-跳绳数据 |
-| exerciseInfo | Object | 锻炼详情信息 | 不同的数据类型，有对应的 |
+| exerciseInfo | Object | 锻炼详情信息 | ​<br /> |
 | heartRateInfo | Object | 运动心率信息 | ​<br /> |
 | productList | List<Object> | 商品信息 | ​<br /> |
 | feelType | Integer | 运动感受 | (1, "疲惫"),<br />(2, "正好"),<br />(3, "轻松") |
 
 <a name="tMJzn"></a>
-###### 锻炼详情信息-基本信息
+###### 锻炼详情信息
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | sportId | String | 运动记录ID | 所有数据类型共有参数 |
