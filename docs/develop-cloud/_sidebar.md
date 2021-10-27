@@ -29,6 +29,7 @@
       - [血压V2](/develop-cloud/v2/health/bp)
       - [血糖V2](/develop-cloud/v2/health/bs)
    - 健康服务V3
+      - [运动V3](/develop-cloud/v3/health/exercise)​
    - 顾问服务
       - [顾问管理](/develop-cloud/counselor/manage)
       - [顾问会员关联](/develop-cloud/counselor/relation)
