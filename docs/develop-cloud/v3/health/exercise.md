@@ -22,7 +22,7 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | recordType | Integer | 数据类型 |  1-手环设备产生数据<br /> 2-手动添加数据<br /> 3-跳绳数据 |
 | exerciseInfo | Object | 锻炼详情信息 | ​<br /> |
 | heartRateInfo | Object | 运动心率信息 | ​<br /> |
-| productList | List<Object> | 商品信息 | ​<br /> |
+| productList | List | 商品信息 | ​<br /> |
 | feelType | Integer | 运动感受 | (1, "疲惫"),<br />(2, "正好"),<br />(3, "轻松") |
 
 <a name="tMJzn"></a>
@@ -40,9 +40,9 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | exerciseName | String | 锻炼名称 |  |
 | icon | String | 图标 |  |
 | manual | Boolean | 是否手动添加的运动数据 |  |
-| paces | List<Integer> | 配速信息 | ​
 
-1-手环设备产生数据专属参数 |
+| paces | List | 配速信息 | 1-手环设备产生数据专属参数 |
+| --- | --- | --- | --- |
 | paceInterval | Integer | 配速间隔距离，单位米 |  |
 | avgPace | Integer | 平均配速 |  |
 | swmRounds | Integer | 游泳圈数-游泳类型 |  |
@@ -57,11 +57,17 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | avgHeartRate | Integer | 平均心率 |  |
 | avgStepRate | Integer | 平均步频 |  |
 | distance | BigDecimal | 总里程 |  |
+
 | measurementDate | Date | 测量时间 | 2-手动添加数据专属参数 |
+| --- | --- | --- | --- |
+
 | skipRopeMode | Integer | 跳绳模式<br />1 - "自由模式"<br />2- "定时模式"<br />3- "计数模式"​<br />4- "闯关模式" | 3-跳绳数据专属参数 |
+| --- | --- | --- | --- |
 | skipCount | Integer | 跳绳个数 |  |
 | skipAvgCount | Integer | 跳绳频次 |  |
 | skipTripCount | Integer | 绊绳次数 |  |
+
+
 
 <a name="MhEiI"></a>
 ###### 运动心率信息:
@@ -72,9 +78,9 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | maxHeartRate | Integer | 最大心率 | ​<br /> |
 | minHeartRate | Integer | 最小心率 | ​<br /> |
 | avgHeartRate | Integer | 平均心率 | ​<br /> |
-| heartRateList | List<Integer> | 心率集合 | ​<br /> |
-| ~~heartRateSecondsList~~ | ~~List<Integer>~~ | ~~心率运动时长秒~~ | ~~每个心率点对应的运动时长~~ |
-| heartRateIntervals | List<Object> | 心率区间信息 | ​<br /> |
+| heartRateList | List | 心率集合 | ​<br /> |
+| ~~heartRateSecondsList~~ | ~~List~~ | ~~心率运动时长秒~~ | ~~每个心率点对应的运动时长~~ |
+| heartRateIntervals | List | 心率区间信息 | ​<br /> |
 
 <a name="BEUZH"></a>
 ###### 心率区间信息:
