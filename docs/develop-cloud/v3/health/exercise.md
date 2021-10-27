@@ -41,8 +41,9 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | icon | String | 图标 |  |
 | manual | Boolean | 是否手动添加的运动数据 |  |
 
-| paces | List | 配速信息 | 1-手环设备产生数据专属参数 |
+| 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
+| paces | List | 配速信息 | 1-手环设备产生数据专属参数 |
 | paceInterval | Integer | 配速间隔距离，单位米 |  |
 | avgPace | Integer | 平均配速 |  |
 | swmRounds | Integer | 游泳圈数-游泳类型 |  |
@@ -58,16 +59,16 @@ GET api/sportmanage/v3.0/exercise/query/detail/get
 | avgStepRate | Integer | 平均步频 |  |
 | distance | BigDecimal | 总里程 |  |
 
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
 | measurementDate | Date | 测量时间 | 2-手动添加数据专属参数 |
-| --- | --- | --- | --- |
 
-| skipRopeMode | Integer | 跳绳模式<br />1 - "自由模式"<br />2- "定时模式"<br />3- "计数模式"​<br />4- "闯关模式" | 3-跳绳数据专属参数 |
+| 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
+| skipRopeMode | Integer | 跳绳模式<br />1 - "自由模式"<br />2- "定时模式"<br />3- "计数模式"​<br />4- "闯关模式" | 3-跳绳数据专属参数 |
 | skipCount | Integer | 跳绳个数 |  |
 | skipAvgCount | Integer | 跳绳频次 |  |
 | skipTripCount | Integer | 绊绳次数 |  |
-
-
 
 <a name="MhEiI"></a>
 ###### 运动心率信息:
