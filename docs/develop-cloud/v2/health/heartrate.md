@@ -11,8 +11,7 @@
 ```
 POST /api/heartrate/v2.0/upload/uploadHeartRate
 ```
-
-<br />**入参:**
+**入参:**
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -29,7 +28,7 @@ POST /api/heartrate/v2.0/upload/uploadHeartRate
 
 
 <br />**示例数据：**
-```sql
+```json
 
 {
 	"list":[
@@ -49,10 +48,138 @@ POST /api/heartrate/v2.0/upload/uploadHeartRate
 }
 
 ```
+<a name="OSIr6"></a>
+## 1.2 运动心率上传
+```
+POST /api/heartrate/v2.0/upload/uploadSportHeartRate
+```
+**入参:**
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| list | List<Obj> | 运动心率数据列表 |  |
+
+运动心率数据：
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| deviceId | String | _设备id_ |  |
+| heartRates | String | _心率数据集合_ | 16进制，2位一个心率点 |
+| beginMeasurementDate | Date | _运动开始时间_ |  |
+| endMeasurementDate | Date | _运动结束时间_ |  |
+| quantityOfHeartRate | Integer | _当前上传心率数据条数_ |  |
+| utcOffSet | Integer | utc偏移量 | 多少秒一笔心率点 |
+| exerciseType | Integer | _锻炼类型_ | (1,"跑步"), //户外跑步<br />(2,"健走"),//户外健走<br />(3,"骑行"),//户外骑行<br />(4,"游泳"),<br />(5,"健身"),<br />(6,"篮球"),<br />(7,"足球"),<br />(8,"羽毛球"),<br />(9,"排球"),<br />(10,"乒乓球"),<br />(11,"瑜伽"),<br />(12,"电竞"),<br />(15,"室内跑"),//室内跑步<br />(16,"椭圆机"),<br />(19,"健身操"),<br />(20,"打太极"),<br />(21,"力量训练"),<br />(22,"室内骑行"),<br />(23,"划船机"),<br />(24,"自由训练")<br />(25,"跳绳")<br />(26,"室内步行")<br />(27,"滑雪")<br />(28,"板球")<br />(69,"网球")<br />(83,"登山")<br />(29,"徒步") |
+
+<a name="P0mhy"></a>
+###### 示例报文：
+```json
+
+{
+	"list":[
+		{
+			"deviceId":"test",
+			"quantityOfHeartRate":10,
+			"heartRates":"5555555555",
+			"beginMeasurementDate":1604232000000,
+			"endMeasurementDate":1604232520000,
+			"minHeartRate":50,
+			"maxHeartRate":100,
+			"exetimeLf":10,
+			"exetimeCpm":20,
+      "exerciseType":1
+		}
+	]
+}
+
+
+```
+<a name="TGKQt"></a>
+## 1.3 上传静息心率
+```
+POST /api/heartrate/v2.0/upload/uploadSilentHeartRate
+```
+**入参:**
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| list | List<Object> | 静息心率集合 |  |
+
+<a name="p83Dh"></a>
+###### 数据列表:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| deviceId | String | 设备id |  |
+| measurementDate | String | 测量时间戳 |  |
+| silentHeartRate | Integer | 静息心率 |  |
+
+<a name="v84bX"></a>
+###### 示例报文：
+```json
+
+{
+	"list":[
+		{
+			"measurementDate":1604802120000,
+			"deviceId":"test1",
+			"silentHeartRate":66
+		},
+		{
+			"measurementDate":1605100207806,
+			"deviceId":"test1",
+			"silentHeartRate":100
+		}
+	]
+}
+
+
+```
+<a name="fZASZ"></a>
+## 1.4 上传运动心率区间值
+```
+POST /api/heartrate/v2.0/upload/uploadSportHeartRateRange
+```
+**入参:**
+
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| list | List<Object> | 心率区间值集合 |  |
+
+<a name="IJTr6"></a>
+###### 心率数据:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| deviceId | String | 设备id |  |
+| startTime | String | 运动开始时间 |  |
+| exerciseTime | Integer | 锻炼时长 |  |
+| heartRateRangeMinutes | Array[] | 心率区间分钟数 | 固定5条，如<br />[10,20,0,0,0] |
+| exerciseType | Integer | 运动类型 |  |
+
+<a name="YcdRF"></a>
+###### 示例报文：
+```json
+{
+	"list":[
+		{
+			"deviceId":"b504b6008e89",
+			"heartRateRangeMinutes":[
+				10,
+				20,
+				10,
+				10,
+				50
+			],
+			"startTime":1634544461613,
+			"exerciseTime":1299,
+      "exerciseType" : 1
+		}
+	]
+}
+```
 <a name="w8lPu"></a>
 # 2.心率查询
 <a name="NKUiK"></a>
-## 2.1 查询日全天心率 
+## 2.1 查询日全天心率
 ```sql
 GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 ```
@@ -155,7 +282,7 @@ GET /api/heartrate/v2.0/query/dailyQuery/getDailyHeartRate
 
 
 <br />返回示例报文:
-```sql
+```json
 {
 	"code": 200,
 	"msg": "成功",
@@ -270,7 +397,7 @@ GET /api/heartrate/v2.0/query/getLastThirtyDaysHeartRate
 
 
 <br />实例:
-```sql
+```json
 {
 	"code":200,
 	"msg":"成功",
