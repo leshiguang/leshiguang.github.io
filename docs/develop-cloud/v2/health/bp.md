@@ -53,6 +53,89 @@ POST /api/bloodpressure/v2.0/upload/manualEnteredBp
 | code | Integer | 状态码 | 200是正常，<br />非200，请参照msg |
 | status | Boolean | 状态 |  |
 
-<a name="obpnN"></a>
-## ​<br />
+
+
+<a name="g4acj"></a>
+## 1.3 查询用户最近30天的血压记录
+```bash
+GET /api/bloodpressure/v2.0/query/getLastThirtyDaysBPRecord
+```
+**入参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id |  |
+
+​
+
+**出参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| id | String | 当前数据唯一标识 | ​<br /> |
+| userId | Long | 用户id | ​<br /> |
+| measurementDate | Long | 测量时间(毫秒值) | ​<br /> |
+| systolicPressure | Integer | 收缩压（高压） | ​<br /> |
+| diastolicPressure | Integer | 舒张压（低压） | ​<br /> |
+| heartRate | Integer | 心率 | ​<br /> |
+| level | Integer | 血压等级 |  |
+| irregularHeartbeat | Integer | 心率不齐标示（0为正常，1为不齐） | ​<br /> |
+| movementError | Integer | 抖动标示（0为正常，1为抖动） | ​<br /> |
+| remark | String | 备注 | ​<br /> |
+| source | Integer | 数据来源（0:设备采集;1:手工添加） | ​<br /> |
+
+
+<br />示例数据：
+```sql
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":[
+		{
+			"id":"e35fe7886c18417ab93652f561abdd1e",
+			"userId":26729267,
+			"measurementDate":1635992340000,
+			"systolicPressure":119,
+			"diastolicPressure":76,
+			"heartRate":79,
+			"level":2,
+			"irregularHeartbeat":0,
+			"movementError":0,
+			"remark":"",
+			"source":2,
+			"userNo":0
+		},
+		{
+			"id":"6dfdc4c89c61433f9e542e7a9a1d19b3",
+			"userId":26729267,
+			"measurementDate":1636185660000,
+			"systolicPressure":69,
+			"diastolicPressure":52,
+			"heartRate":58,
+			"level":2,
+			"irregularHeartbeat":0,
+			"movementError":0,
+			"remark":"666",
+			"source":2,
+			"userNo":0
+		},
+		{
+			"id":"0be9b2ab40ed4412a9d20e8d2a168794",
+			"userId":26729267,
+			"measurementDate":1636355340000,
+			"systolicPressure":110,
+			"diastolicPressure":90,
+			"heartRate":70,
+			"level":4,
+			"irregularHeartbeat":0,
+			"movementError":0,
+			"remark":"",
+			"source":2,
+			"userNo":0
+		}
+	]
+}
+
+```
 
