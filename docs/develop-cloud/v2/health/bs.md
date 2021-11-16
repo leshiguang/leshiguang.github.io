@@ -40,4 +40,140 @@ POST /api/bloodsugar/v2.0/upload/manualEnteredBs
 
 
 
+<a name="JsBKI"></a>
+## 1.3 查询用户最近30天的血糖记录
+```bash
+GET /api/bloodsugar/v2.0/query/getLastThirtyDaysBSRecord
+```
+**入参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id |  |
+
+​
+
+**出参:**
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| measurementDate | Long | 测量时间 | ​<br /> |
+| glucoseConcentration | double | 血糖浓度 | ​<br /> |
+| mealPeroid | int | 是否有数据 | 用餐状态（0：空腹；1：早餐后；2：午餐前；3：午餐后；4：晚餐前；5：晚餐后；6：睡前； 国际版（8:空腹，9:随机时间，10:饭后2小时）；11、凌晨，12、餐前，13、餐后2小时，14、运动前，15、运动后，16、随机" |
+| userNo | int | 绑定键序列 | ​<br /> |
+| level | int | 血糖水平:(高血糖:4，偏高:3，正常:2，偏低:1，低血糖:0) | ​<br /> |
+| levelName | String | 血糖水平对应的名称 | ​<br /> |
+
+
+<br />**示例数据:**
+```sql
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":[
+		{
+			"id":1376961,
+			"userId":26729267,
+			"measurementDate":1635995460000,
+			"glucoseConcentration":5.7,
+			"mealPeroid":2,
+			"userNo":0,
+			"deviceId":"userAdd",
+			"level":1,
+			"battery":0,
+			"requestTime":1636600315038,
+			"memo":"",
+			"year":2021,
+			"month":11,
+			"week":45,
+			"day":4,
+			"created":1636600315000,
+			"updated":1636600315043,
+			"mealPeroidName":"餐前",
+			"levelName":"达标",
+			"deleted":0,
+			"source":1,
+			"drugStatus":0,
+			"abnormalTags":""
+		},
+		{
+			"id":1376960,
+			"userId":26729267,
+			"measurementDate":1636254660000,
+			"glucoseConcentration":5,
+			"mealPeroid":2,
+			"userNo":0,
+			"deviceId":"userAdd",
+			"level":1,
+			"battery":0,
+			"requestTime":1636600301452,
+			"memo":"",
+			"year":2021,
+			"month":11,
+			"week":45,
+			"day":7,
+			"created":1636600301000,
+			"updated":1636600301457,
+			"mealPeroidName":"餐前",
+			"levelName":"达标",
+			"deleted":0,
+			"source":1,
+			"drugStatus":0,
+			"abnormalTags":""
+		},
+		{
+			"id":1376959,
+			"userId":26729267,
+			"measurementDate":1636513860000,
+			"glucoseConcentration":6.8,
+			"mealPeroid":2,
+			"userNo":0,
+			"deviceId":"userAdd",
+			"level":1,
+			"battery":0,
+			"requestTime":1636600287647,
+			"memo":"",
+			"year":2021,
+			"month":11,
+			"week":46,
+			"day":10,
+			"created":1636600288000,
+			"updated":1636600287651,
+			"mealPeroidName":"餐前",
+			"levelName":"达标",
+			"deleted":0,
+			"source":1,
+			"drugStatus":0,
+			"abnormalTags":""
+		},
+		{
+			"id":1376958,
+			"userId":26729267,
+			"measurementDate":1636600260000,
+			"glucoseConcentration":6,
+			"mealPeroid":2,
+			"userNo":0,
+			"deviceId":"userAdd",
+			"level":1,
+			"battery":0,
+			"requestTime":1636600271473,
+			"memo":"",
+			"year":2021,
+			"month":11,
+			"week":46,
+			"day":11,
+			"created":1636600271000,
+			"updated":1636600271492,
+			"mealPeroidName":"餐前",
+			"levelName":"达标",
+			"deleted":0,
+			"source":1,
+			"drugStatus":0,
+			"abnormalTags":""
+		}
+	]
+}
+
+```
 
