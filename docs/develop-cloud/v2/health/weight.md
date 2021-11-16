@@ -750,6 +750,119 @@ GET /api/weight/v2.0/query/getByWeightId
 	}
 }
 ```
+<a name="pS509"></a>
+## 2.4 获取最近30天的体重记录
+```
+GET /api/weight/v2.0/query/getLastThirtyDayRecord
+```
+<a name="ctrBk"></a>
+##### 入参：
+无
+<a name="TQa5c"></a>
+##### 出参(List)：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| id | String | 主键id |  |
+| weight | Double | 体重 |  |
+| bmi | Double | bmi |  |
+| pbf | Double | 体脂率 |  |
+| pbfValue | Double | 脂肪量 |  |
+| fatLossVal | Double | 去脂体重 |  |
+| muscle | Double | 肌肉量 |  |
+| muscleRate | Double | 肌肉率 |  |
+| water | Double | 水分率 |  |
+| waterValue | Double | 水分量 |  |
+| basalMetabolism | Double | 基础代谢量 |  |
+| bodyAge | Integer | 身体年龄 |  |
+| ageOffset | Integer | 身体年龄偏移量 |  |
+| visceralFat | Integer | 内脏脂肪指数 |  |
+| skeletonMuscleEnum | Double | 骨骼肌 |  |
+| bone | Double | 骨量 |  |
+| protein | Double | 蛋白质 |  |
+| fc | Double | 脂肪控制 |  |
+| mc | Double | 肌肉控制 |  |
+| age | Integer | 年纪 |  |
+| sex | Integer | 性别 |  |
+| height | Double | 身高 | 单位：cm |
+| measurementDate | Date | 测量时间 |  |
+| heartRate | Integer | 心率 |  |
+| unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
+
+<a name="UBrYL"></a>
+##### 示例报文：
+```json
+
+{
+	"code":200,
+	"msg":"成功",
+	"data":[
+		{
+			"id":"b316a922f7674cdaa3eb7e4f0163c363",
+			"userId":23412531,
+			"weight":70.6,
+			"bmi":25.6,
+			"pbf":23.7,
+			"pbfValue":16.7,
+			"fatLossVal":53.9,
+			"muscle":51,
+			"muscleRate":72.2,
+			"water":55.1,
+			"basalMetabolism":1534,
+			"bodyAge":24,
+			"ageOffset":-1,
+			"visceralFat":7,
+			"skeletonMuscleEnum":29.8,
+			"bone":2.8,
+			"protein":17.2,
+			"fc":-1.3,
+			"mc":0,
+			"age":25,
+			"sex":1,
+			"height":1.66,
+			"measurementDate":1635940798000
+		},
+		{
+			"id":"865d5cdf76b742eeadeebcb10911a100",
+			"userId":23412531,
+			"weight":70.6,
+			"bmi":25.6,
+			"pbf":23.3,
+			"pbfValue":16.4,
+			"fatLossVal":54.2,
+			"muscle":51.3,
+			"muscleRate":72.7,
+			"water":55.6,
+			"basalMetabolism":1540,
+			"bodyAge":24,
+			"ageOffset":-1,
+			"visceralFat":7,
+			"skeletonMuscleEnum":30.1,
+			"bone":2.8,
+			"protein":17.1,
+			"fc":-1,
+			"mc":0,
+			"age":25,
+			"sex":1,
+			"height":1.66,
+			"measurementDate":1635940778000
+		},
+    {
+			"id":"9e3ac92afb0b4c7c932ff5eb085fb9d4",
+			"userId":23412531,
+			"weight":70.6,
+			"bmi":25.6,
+			"pbf":28.8,
+			"pbfValue":20.3,
+			"age":25,
+			"sex":1,
+			"height":1.66,
+			"measurementDate":1635214134000
+		}
+	]
+}
+
+
+```
 <a name="U3HFZ"></a>
 # 3.体重分析
 <a name="Lh8Cs"></a>
