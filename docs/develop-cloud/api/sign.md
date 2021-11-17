@@ -36,6 +36,8 @@ API调用除了必须包含公共参数外，如果API本身有业务级的参�
 - 将摘要得到的字节流结果使用十六进制表示，如：hex(“helloworld”.getBytes(“utf-8”)).toUpperCase = “68656C6C6F776F726C64”
 <a name="ZJd94"></a>
 ## JAVA签名示例代码
+
+
 ```
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.DigestUtils;
@@ -67,7 +69,7 @@ public static String generateSign(String... contents) {
 
 <br />
 
-```go
+```
 package main
 
 import (
