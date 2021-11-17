@@ -60,8 +60,13 @@ public static String generateSign(String... contents) {
 
 ```
 **​**<br />
+<a name="GB6GL"></a>
+## 
 <a name="vGi7T"></a>
 ## GO签名示例代码
+
+<br />
+
 ```go
 package main
 
