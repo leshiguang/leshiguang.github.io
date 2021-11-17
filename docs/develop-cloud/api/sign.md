@@ -34,8 +34,8 @@ API调用除了必须包含公共参数外，如果API本身有业务级的参�
 - 将排序好的参数值拼装在一起。
 - 把拼装好的字符串采用utf-8编码，使用签名算法对编码后的字节流进行摘要。使用MD5算法加密，如：md5(value)；
 - 将摘要得到的字节流结果使用十六进制表示，如：hex(“helloworld”.getBytes(“utf-8”)).toUpperCase = “68656C6C6F776F726C64”
-
-**JAVA签名示例代码**
+<a name="ZJd94"></a>
+## JAVA签名示例代码
 ```
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.DigestUtils;
@@ -60,6 +60,34 @@ public static String generateSign(String... contents) {
 
 ```
 **​**<br />
+<a name="vGi7T"></a>
+## GO签名示例代码
+```go
+package main
+
+import (
+    "crypto/md5"
+	"sort"
+	"strings"
+	"fmt"
+)
+
+func main() {
+	paramArr := [] string {"1637138966894","1.0","your app key","your app key secret"}
+	sort.Strings(paramArr) //参数值按照ASCII的顺序排序
+	//fmt.Printf("%v\n",paramArr)
+	
+	str := strings.Join(paramArr,"") //拼接成字符串
+    
+    data := []byte(str)
+    has := md5.Sum(data) //md5计算
+    apiSign := fmt.Sprintf("%X", has) //将[]byte转成16进制
+    
+    fmt.Println(apiSign)
+	
+	
+}
+```
 <a name="s5"></a>
 # 调用示例
 ```
