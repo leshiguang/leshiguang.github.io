@@ -51,7 +51,7 @@ POST /api/step/v2.0/upload/uploadWXStep
 ```
 GET /api/step/v2.0/query/getDayStep
 ```
-<a name="i2J1C"></a>
+<a name="Wrskb"></a>
 ##### 入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -271,8 +271,9 @@ GET /api/step/v2.0/query/getWeekStep
 | stepStatisticsInfo | Object | 步数统计信息 | 见[日步数接口出参](#pQU9e) |
 
 
-<br />
-<br />示例报文：
+
+<a name="J03qK"></a>
+###### 示例报文：
 ```json
 
 {
@@ -329,9 +330,8 @@ GET /api/step/v2.0/query/getWeekStep
 		}
 	}
 }
+
 ```
-
-
 <a name="DcZ3V"></a>
 ## 2.3 查询用户某一个月的步数统计数据
 ```
@@ -353,9 +353,9 @@ GET /api/step/v2.0/query/getMonthStep
 | totalStep | Integer | _总步数_ |  |
 
 
-<br />​
-
-示例报文：
+<br />​<br />
+<a name="rfC5f"></a>
+###### 示例报文：
 ```sql
 
 {
@@ -403,6 +403,7 @@ GET /api/step/v2.0/query/getMonthStep
 		}
 	}
 }
+
 ```
 
 
@@ -430,9 +431,10 @@ GET /api/step/v2.0/query/getLastDayStep
 | distanceText | String | 距离文案 |  |
 
 
-<br />
-<br />示例报文：
-```sql
+
+<a name="qyrNr"></a>
+###### 示例报文：
+```json
 
 {
 	"code":200,
@@ -447,6 +449,7 @@ GET /api/step/v2.0/query/getLastDayStep
 		"targetStep":4000
 	}
 }
+
 ```
 
 
@@ -478,7 +481,7 @@ GET /api/step/v2.0/query/getLastThirtyDaysStep
 ###### 
 <a name="Hj4X6"></a>
 ###### 示例返回报文：
-```sql
+```json
 
 {
 	"code":200,
