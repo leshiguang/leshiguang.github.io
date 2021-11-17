@@ -273,7 +273,7 @@ GET /api/step/v2.0/query/getWeekStep
 
 <br />
 <br />示例报文：
-```sql
+```json
 
 {
 	"code":200,
@@ -330,6 +330,8 @@ GET /api/step/v2.0/query/getWeekStep
 	}
 }
 ```
+
+
 <a name="DcZ3V"></a>
 ## 2.3 查询用户某一个月的步数统计数据
 ```
@@ -402,6 +404,8 @@ GET /api/step/v2.0/query/getMonthStep
 	}
 }
 ```
+
+
 <a name="Hwvfc"></a>
 ## 2.4 查询用户最新的步数记录
 ```
@@ -444,6 +448,8 @@ GET /api/step/v2.0/query/getLastDayStep
 	}
 }
 ```
+
+
 <a name="VAszz"></a>
 ## 2.5 查询最近30天的步数记录
 ```
