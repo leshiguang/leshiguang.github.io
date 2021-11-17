@@ -3,17 +3,14 @@
 **注：如无特殊情况，以下接口都需要在header或者param参数中传递associatedId 参数。**
 <a name="fOW2V"></a>
 # 1.步数上传
-```bash
+```
 POST /api/step/v2.0/upload/uploadBandDeviceStep
 ```
 > 该校验会校验设备id的合法性
 
-
-
 <a name="vodik"></a>
 ## 1.1 上传手环的步数数据
-
-<br />**入参**
+**入参**
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -29,11 +26,9 @@ POST /api/step/v2.0/upload/uploadBandDeviceStep
 | calories | Double | 卡路里 |  |
 | distance | Double | 距离 |  |
 
-
-
 <a name="b74s6"></a>
 ## 1.2 上传非手环的步数数据
-```bash
+```
 POST /api/step/v2.0/upload/uploadWXStep
 ```
 **入参:	**
@@ -49,13 +44,11 @@ POST /api/step/v2.0/upload/uploadWXStep
 | step | int | 步数 | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | timestamp | long | 测量时间，单位是 s |  |
 
-<a name="Jt6Gk"></a>
-##### ​<br />
 <a name="sBdZM"></a>
 # 2.步数查询
 <a name="gRw6F"></a>
 ## 2.1 查询用户某一天的步数数据
-```bash
+```
 GET /api/step/v2.0/query/getDayStep
 ```
 <a name="i2J1C"></a>
@@ -258,11 +251,9 @@ GET /api/step/v2.0/query/getDayStep
 	]
 }
 ```
-
-
 <a name="iUgX1"></a>
 ## 2.2 查询用户某一周的步数统计数据
-```bash
+```
 GET /api/step/v2.0/query/getWeekStep
 ```
 <a name="AXkCo"></a>
@@ -341,7 +332,7 @@ GET /api/step/v2.0/query/getWeekStep
 ```
 <a name="DcZ3V"></a>
 ## 2.3 查询用户某一个月的步数统计数据
-```bash
+```
 GET /api/step/v2.0/query/getMonthStep
 ```
 <a name="D0UQx"></a>
@@ -413,7 +404,7 @@ GET /api/step/v2.0/query/getMonthStep
 ```
 <a name="Hwvfc"></a>
 ## 2.4 查询用户最新的步数记录
-```bash
+```
 GET /api/step/v2.0/query/getLastDayStep
 ```
 <a name="WQwjj"></a>
@@ -453,11 +444,9 @@ GET /api/step/v2.0/query/getLastDayStep
 	}
 }
 ```
-<a name="bV2Lk"></a>
-## 
 <a name="VAszz"></a>
 ## 2.5 查询最近30天的步数记录
-```bash
+```
 GET /api/step/v2.0/query/getLastThirtyDaysStep
 ```
 <a name="YAall"></a>
@@ -826,13 +815,11 @@ GET /api/step/v2.0/query/getLastThirtyDaysStep
 	]
 }
 ```
-<a name="Hgptn"></a>
-# ​<br />
 <a name="ETgeU"></a>
 # 3.步数目标
 <a name="iUAfu"></a>
 ## 3.1 设置步数目标
-```bash
+```
 POST /api/step/v2.0/target/setTargetStep
 ```
 <a name="yuFau"></a>
@@ -844,11 +831,9 @@ POST /api/step/v2.0/target/setTargetStep
 | --- | --- | --- | --- |
 | targetStep | Integer | 步数目标值 |  |
 
-<a name="kdfFO"></a>
-##### 
 <a name="yGIz9"></a>
 ## 3.2 查询步数目标
-```bash
+```
 GET /api/step/v2.0/target/getTargetStep
 ```
 <a name="z2en7"></a>
