@@ -1,10 +1,14 @@
 <a name="OAIV7"></a>
 # 1.绑定设备
-**描述：用户绑定设备**<br />**url :  **域名+/api/device/bind/v1.0/bindDevice<br />method：post<br />**header参数或者url参数**<br />**​**<br />
+```bash
+POST /api/device/bind/v1.0/bindDevice
+```
+
+<br />**header参数或者url参数**<br />**​**<br />
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
 
 **post入参**
 
@@ -17,8 +21,8 @@
 <br />**请求示例：**
 ```json
 {
-	"deviceKeyType":"id",
-	"deviceKey":"A4C138A70285"
+    "deviceKeyType":"id",
+    "deviceKey":"A4C138A70285"
 }
 ```
 **出参：**<br />BindResponse
@@ -116,9 +120,9 @@ DeviceSetting
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | id | Integer | 主键id | ​<br /> |
-| deviceId | String | _设备id_ | ​<br /> |
-| settingClass | String | _设置类名称_ | ​<br /> |
-| content | String | _json内容_ | ​<br /> |
+| deviceId | String | 设备id | ​<br /> |
+| settingClass | String | 设置类名称 | ​<br /> |
+| content | String | json内容 | ​<br /> |
 
 DeviceStatus
 
@@ -231,11 +235,14 @@ DeviceStatus
 ```
 <a name="F4XDJ"></a>
 # 2.解绑设备
-**url：**域名+/api/device/unbind/v1.0/unbindSelfDevice<br />**method：post**<br />**header参数或者url参数**
+```bash
+POST /api/device/unbind/v1.0/unbindSelfDevice
+```
+**header参数或者url参数**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| associatedId | string | 根据key类型传相应的值 | 关联账号id<br /> |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
 
 **post入参：**
 
@@ -247,8 +254,8 @@ DeviceStatus
 **入参示例：**
 ```json
 {
-	"deviceKeyType":"id",
-	"deviceKey":"A4C138A70285"
+    "deviceKeyType":"id",
+    "deviceKey":"A4C138A70285"
 }
 ```
 **出参：**<br />DevcieUserExtDto
@@ -262,26 +269,25 @@ DeviceStatus
 **返回示例：**
 ```json
 {
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"list":[
-			{
-				"deviceId":"a0047d0038e4",
-				"userId":4512224,
-				"id":32245,
-				"isActive":1,
-				"lastDataTime":1603180822000
-			}
-		]
-	}
+    "code":200,
+    "msg":"成功",
+    "data":{
+        "list":[
+            {
+                "deviceId":"a0047d0038e4",
+                "userId":4512224,
+                "id":32245,
+                "isActive":1,
+                "lastDataTime":1603180822000
+            }
+        ]
+    }
 }
 ```
 <a name="alNzx"></a>
 # 3.获取设备信息
 ```bash
-url :  域名 +  /api/device/baseinfo/v1.0/getDeviceBaseInfo
-method: post
+POST /api/device/baseinfo/v1.0/getDeviceBaseInfo
 ```
 **post入参：**
 
@@ -293,8 +299,8 @@ method: post
 **入参示例：**
 ```json
 {
-	"deviceKeyType":"id",
-	"deviceKey":"A4C138A70285"
+    "deviceKeyType":"id",
+    "deviceKey":"A4C138A70285"
 }
 ```
 **出参：**<br />DeviceBaseDTO
@@ -312,29 +318,28 @@ method: post
 **返回示例：**
 ```json
 {
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"deviceId":"000100000111",
-		"sn":"0000025600000273",
-		"mac":"087CBED2D27D",
-		"qrcode":"http://we.qq.com/d/AQC7PnaOdLFlFdS_3JPVgT7UuA9QPIZTMx8Dq3rj",
-		"model":"LS109",
-		"productType":"01",
-		"watchFlag":false,
-		"hardwareVersion":"A002",
-		"softwareVersion":"A09",
-		"useSceneType":1,
-		"factoryActivateStatus":0
-	}
+    "code":200,
+    "msg":"成功",
+    "data":{
+        "deviceId":"000100000111",
+        "sn":"0000025600000273",
+        "mac":"087CBED2D27D",
+        "qrcode":"http://we.qq.com/d/AQC7PnaOdLFlFdS_3JPVgT7UuA9QPIZTMx8Dq3rj",
+        "model":"LS109",
+        "productType":"01",
+        "watchFlag":false,
+        "hardwareVersion":"A002",
+        "softwareVersion":"A09",
+        "useSceneType":1,
+        "factoryActivateStatus":0
+    }
 }
 ```
 <a name="TDrfQ"></a>
-# 4.获取乐心设备id
+# 4.获取乐心设备ID
 **对每一个设备，生成一个唯一的乐心设备id。**<br />**1.各业务模块有设备相关的逻辑，如不进行此步骤，则会缺乏合法的乐心设备id，部分功能会受影响；**<br />**2.影响后续设备相关的统计功能；**
 ```bash
-url :  域名 +  /api/device/apply/v1.0/applyDeviceId
-method: post
+POST /api/device/apply/v1.0/applyDeviceId
 ```
 **post入参：**
 
@@ -366,12 +371,12 @@ method: post
 **返回示例：**
 ```json
 {
-    "code": 200,
-    "msg": "成功",
-    "data": {
-        "deviceId": "000100000111",
-        "mac": "087CBED2D27D",
-        "sn": "0000025600000273"
+    "code":200,
+    "msg":"成功",
+    "data":{
+        "deviceId":"000100000111",
+        "mac":"087CBED2D27D",
+        "sn":"0000025600000273"
     }
 }
 ```
