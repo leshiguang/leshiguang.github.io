@@ -377,4 +377,57 @@ method: post
 ```
 
 
+<a name="TGsJQ"></a>
+# 5.获取用户设备列表
+```bash
+POST /api/device/v1.0/getDeviceList
+```
+**header参数或者url参数**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
+
+**出参：**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| deviceId | String | 设备ID |  |
+| sn | String | 设备sn |  |
+| mac | String | mac地址 |  |
+| name | String | 设备名称 |  |
+| model | String | 设备型号 |  |
+| soft_version | String | 软件版本号 |  |
+| productTypeCode | String | 产品类型 |  |
+| communicationType | Integer | 通讯方式 |  |
+| picture | String | 图片 |  |
+
+**返回示例：**
+```json
+{
+    "code":200,
+    "msg":"成功",
+    "data":[
+        {
+            "picture":"https://files.lifesense.com/other/20210927/d7977a4dc6ec4479837c4e92d8c7d758.png",
+            "deviceId":"1204b100a0b6",
+            "sn":"0118084900041142",
+            "name":"乐心健康手表C1",
+            "soft_version":"T026",
+            "mac":"D00C3DF14511",
+            "productTypeCode":"04",
+            "communicationType":4,
+            "model":"LS460-B2",
+            "isActive":1
+        }
+    ]
+}
+```
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
 
