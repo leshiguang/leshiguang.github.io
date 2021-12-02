@@ -7,7 +7,9 @@ POST /api/algorithm/heartrate/v1.0/calculateSilentHeartrate
 ##### 入参： 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| sleepHeartRates | ​<br /> | 睡眠期间心率值 | 16进制 |
+| sleepHeartRates | ​<br /> | 睡眠期间心率值 | 16进制<br />​
+
+注：睡眠心率为FF的，统一替换成00 |
 
 <a name="dhSVD"></a>
 ###### 示例报文：
