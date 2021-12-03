@@ -9,7 +9,7 @@ POST /api/algorithm/heartrate/v1.0/calculateSilentHeartrate
 | --- | --- | --- | --- |
 | sleepHeartRates | ​<br /> | 睡眠期间心率值 | 16进制<br />​
 
-注：睡眠心率为FF的，统一替换成00 |
+注：没有检测到心率，统一用00替换 |
 
 <a name="dhSVD"></a>
 ###### 示例报文：
