@@ -38,7 +38,7 @@ API调用除了必须包含公共参数外，如果API本身有业务级的参�
 ## JAVA签名示例代码
 
 
-```
+```java
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.DigestUtils;
 
@@ -61,15 +61,13 @@ public static String generateSign(String... contents) {
 }
 
 ```
-**​**<br />
 <a name="GB6GL"></a>
 ## 
 <a name="vGi7T"></a>
 ## GO签名示例代码
 
-<br />
 
-```
+```go
 package main
 
 import (
@@ -91,8 +89,40 @@ func main() {
     apiSign := fmt.Sprintf("%X", has) //将[]byte转成16进制
     
     fmt.Println(apiSign)
-	
-	
+}
+```
+<a name="P6YF9"></a>
+## PHP签名示例代码
+
+
+```php
+protected $_KEY = '';
+
+protected $_SECRET = '';
+
+protected $_TIMESTAMP = '';
+
+function getTimestamp()
+{
+    if (empty($this->_TIMESTAMP)) {
+        list($t1, $t2) = explode(' ', microtime());
+        $this->_TIMESTAMP = (float)sprintf('%.0f', (floatval($t1) + floatval($t2)) * 1000) . '';
+    }
+    return $this->_TIMESTAMP;
+}
+
+public function getSign()
+{
+    $arr = [
+        'api_timestamp' => $this->getTimestamp(),
+        'api_version' => '1.0',
+        'api_appKey' => $this->_KEY,
+        'appSecret' => $this->_SECRET
+    ];
+    sort($arr);
+    $str = implode('', $arr);
+    $md5 = md5($str);
+    return strtoupper($md5);
 }
 ```
 <a name="s5"></a>
@@ -117,4 +147,6 @@ ResultData<AsiaWeightIndexDTO> res = WeightAlgorithmCloudApi.getAsiaWeightIndexD
 
 System.out.println();
 ```
+<a name="gtMP2"></a>
+## 
 
