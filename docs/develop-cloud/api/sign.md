@@ -19,7 +19,7 @@ API调用是基于HTTP协议来调用的，开发者可以直接通过调用http
 | 参数名称 | 参数类型 | 是否必须 | 参数描述 |
 | --- | --- | --- | --- |
 | api_appKey | String | 是 | 合作商应用ID （通过申请业务接入时获得） |
-| api_timestamp | String | 是 | 时间戳（当前系统时间戳）1分钟有效 |
+| api_timestamp | String | 是 | 时间戳（当前系统时间戳，精确到ms）1分钟有效 |
 | api_version | String | 是 | API协议版本，可选值：1.0。 |
 | api_sign | String | 是 | （api_appKey + api_timestamp + api_version + appSecret）将上述参数按照ASC码先排序，然后拼接成一个字符串，再进行MD5计算(md5DigestAsHex)，转化成16进制字符(String，大写) |
 
