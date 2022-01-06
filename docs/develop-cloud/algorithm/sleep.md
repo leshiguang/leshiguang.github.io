@@ -1,14 +1,19 @@
 <a name="IbV2j"></a>
 ## 一、睡眠分析接口
+<a name="TLRfe"></a>
+### 1.1 调用时序图
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/279267/1641460836688-714bb22b-5380-4429-9e5e-b8eb549eab6a.png#clientId=udb2efec3-ced1-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=593&id=u82e4b80e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1186&originWidth=1788&originalType=binary&ratio=1&rotation=0&showTitle=false&size=193850&status=done&style=none&taskId=u0d0511a3-ff13-40bb-b4ba-2e912a21351&title=&width=894)<br />​<br />
+<a name="UaRcQ"></a>
+### 1.2 接口入参和出参
 url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br />
 <br />入参：
 
 | **字段** | **类型** | **描述** | **是否必传** | **备注** |
 | --- | --- | --- | --- | --- |
-| levelSetStr | String | 睡眠数据，16进制字符串，5分钟两位 | 是 |  |
+| levelSetStr | String | 睡眠数据，通过蓝牙sdk获取。16进制字符串，5分钟两位，详细说明参看1.3 | 是 |  |
 | startTime | Date | 分析开始时间（毫秒值） | 是 |  |
-| model | String | 设备型号 | 是 |  |
-| softwareVersion | String | 固件版本号 | 是 |  |
+| model | String | 设备型号，通过蓝牙sdk里获取 | 是 |  |
+| softwareVersion | String | 固件版本号，通过蓝牙sdk里获取 | 是 |  |
 
 入参示例
 ```json
@@ -101,12 +106,8 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 ```
 
 
-<a name="GtUvY"></a>
-## 二、夜间/日间睡眠逻辑
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/1385043/1616756570952-20b40473-2d64-41dc-801b-e47c81bc7bcb.jpeg)[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
-
-<a name="oVTFi"></a>
-## 三、参数组装逻辑
+<a name="XHKzw"></a>
+### 1.3、levelSetStr参数组装
 手环每**5**分钟监测用户睡眠状态生成一个10进制数值，传入睡眠分析接口的levelSetStr参数为16进制，转换如下：
 
 | 时间 | 18:00 | 18:05 | 18:10 | 18:15 | 18:20 | 18:25 | 18:30 | 18:35 | 18:40 | 18:45 | 18:50 | 18:55 | 19:00 | 19:05 | 19:10 | 19:15 |
@@ -116,8 +117,8 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 
 则参数levelSetStr=63453b23001b300d2a120d1828195b5c<br />**注意10进制转成16进制不足两位时一定要补0，如：0 -> 00；13 -> 0d**<br />**如遇到中间时段缺失，则每5分钟补FF。**<br />
 
-<a name="SrEiv"></a>
-## 四、睡眠段逻辑
+<a name="cPjTz"></a>
+### 1.4、睡眠段逻辑
 因区分日间/夜间睡眠的时间点为18:00点，18:00～18:00定义为一个周期，因此levelSetStr一般从18:00开始分析，开始时间startTime为当天的18:00，可视具体情况而定。<br />
 <br />当传入levelSetStr为18:00到次日18:00的手环监测数据，睡眠算法对监测数据进行分析，分析结果可为如下几种情况：
 
@@ -129,8 +130,10 @@ url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br
 | 4、 | 既有日间也有夜间睡眠 | data.size > 1 |
 
 
-<br />
-<br />
+
+<a name="mrVQq"></a>
+### 1.5、夜间/日间睡眠逻辑
+[https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg](https://files.lifesense.com/other/20210326/074d0ced457e428793bd27109e006579.jpg)<br />
 <br />
 <br />
 <br />
