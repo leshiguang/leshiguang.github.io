@@ -2,7 +2,7 @@
 # 一、睡眠分析接口
 <a name="erOmf"></a>
 ## 1.1 调用时序图
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/279267/1641460836688-714bb22b-5380-4429-9e5e-b8eb549eab6a.png#clientId=udb2efec3-ced1-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=593&id=u82e4b80e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1186&originWidth=1788&originalType=binary&ratio=1&rotation=0&showTitle=false&size=193850&status=done&style=none&taskId=u0d0511a3-ff13-40bb-b4ba-2e912a21351&title=&width=894)<br />​<br />
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/279267/1641462207400-92a764af-12a2-44a9-a214-c4f6b2bb4df1.png#clientId=u395ed69d-af0b-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=547&id=u36d2fcb0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1094&originWidth=1766&originalType=binary&ratio=1&rotation=0&showTitle=false&size=192411&status=done&style=none&taskId=ufd721599-4dd4-4100-83b1-0bbeebecf1c&title=&width=883)<br />​<br />
 <a name="p9fpZ"></a>
 ## 1.2 接口入参和出参
 url :  域名 +  **/api/sleep/v1.0/origin/data/analysis**<br />method: post<br />
