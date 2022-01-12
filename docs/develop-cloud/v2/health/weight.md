@@ -81,25 +81,69 @@ GET /api/weight/v2.0/query/getLastOne
 | --- | --- | --- | --- |
 | weightId | String | 体重id |  |
 | weight | Double | 体重 |  |
-| pbf | Double | 体脂率 | onlyQueryPbf为false时，<br />该值可能为空 |
+| bmi | Double | bmi |  |
+| pbf | Double | 体脂率 |  |
+| pbfValue | Double | 脂肪量 |  |
+| fatLossVal | Double | 去脂体重 |  |
+| muscle | Double | 肌肉量 |  |
+| muscleRate | Double | 肌肉率 |  |
+| water | Double | 水分率 |  |
+| waterValue | Double | 水分量 |  |
+| basalMetabolism | Double | 基础代谢量 |  |
+| bodyAge | Integer | 身体年龄 |  |
+| ageOffset | Integer | 身体年龄偏移量 |  |
+| visceralFat | Integer | 内脏脂肪指数 |  |
+| skeletonMuscleEnum | Double | 骨骼肌 |  |
+| bone | Double | 骨量 |  |
+| protein | Double | 蛋白质 |  |
+| fc | Double | 脂肪控制 |  |
+| mc | Double | 肌肉控制 |  |
+| age | Integer | 年纪 |  |
+| sex | Integer | 性别 |  |
+| height | Double | 身高 | 单位：cm |
 | measurementDate | Date | 测量时间 |  |
-| unit | Integer | 单位 | 1 kg<br />2 斤 |
+| heartRate | Integer | 心率 |  |
+| unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
+
+
 
 <a name="WeXbc"></a>
 ###### 示例报文：
 ```json
+
 {
 	"code":200,
 	"msg":"成功",
 	"data":{
-		"weightId":"7682033a29f74efcb819684694ba11ce",
 		"userId":23342312,
-		"weight":92,
-		"pbf":27.9,
-		"unit":1,
-		"measurementDate":1620443600000
+		"weight":135,
+		"bmi":24.8,
+		"pbf":26.5,
+		"pbfValue":35.8,
+		"fatLossVal":99.2,
+		"muscle":94,
+		"muscleRate":69.6,
+		"water":55.3,
+		"basalMetabolism":1442,
+		"bodyAge":66,
+		"ageOffset":1,
+		"visceralFat":13,
+		"skeletonMuscleEnum":57,
+		"bone":5.2,
+		"protein":14.3,
+		"fc":-3.6,
+		"mc":0,
+		"age":65,
+		"sex":1,
+		"height":1.65,
+		"measurementDate":1636715457000,
+		"heartRate":80,
+		"unit":2,
+		"weightId":"ffb673ea33f54f1ea8ca5517bbd7a140"
 	}
 }
+
+
 ```
 <a name="jVwpr"></a>
 ## 2.2 查询用户一段时间内的体重测量数据
