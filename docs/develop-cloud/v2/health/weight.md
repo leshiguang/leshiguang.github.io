@@ -100,7 +100,7 @@ GET /api/weight/v2.0/query/getLastOne
 | mc | Double | 肌肉控制 |  |
 | age | Integer | 年纪 |  |
 | sex | Integer | 性别 |  |
-| height | Double | 身高 | 单位：cm |
+| height | Double | 身高 | 单位：m |
 | measurementDate | Date | 测量时间 |  |
 | heartRate | Integer | 心率 |  |
 | unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
@@ -182,7 +182,7 @@ GET /api/weight/v2.0/query/getListByTime
 | mc | Double | 肌肉控制 |  |
 | age | Integer | 年纪 |  |
 | sex | Integer | 性别 |  |
-| height | Double | 身高 | 单位：cm |
+| height | Double | 身高 | 单位：m |
 | measurementDate | Date | 测量时间 |  |
 | heartRate | Integer | 心率 |  |
 | unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
@@ -827,7 +827,7 @@ GET /api/weight/v2.0/query/getLastThirtyDayRecord
 | mc | Double | 肌肉控制 |  |
 | age | Integer | 年纪 |  |
 | sex | Integer | 性别 |  |
-| height | Double | 身高 | 单位：cm |
+| height | Double | 身高 | 单位：m |
 | measurementDate | Date | 测量时间 |  |
 | heartRate | Integer | 心率 |  |
 | unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
