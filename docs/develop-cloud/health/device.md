@@ -644,8 +644,69 @@ GET /api/device/v1.0/product/list/get
 }
 ```
 
+<a name="gq5D6"></a>
+# 7.获取设备设置项
+```bash
+GET /api/device/v1.0/device/setting/get
+```
+**header参数或者url参数**
 
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
 
+**get参数：**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| deviceId | string | 设备ID |  |
+
+**出参：**List<DeviceSetting>
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| id | Integer | 主键id | <br /> |
+| deviceId | String | 设备id | <br /> |
+| settingClass | String | 设置类名称 | <br /> |
+| content | String | json内容 | <br /> |
+
+**返回示例：**
+```json
+{
+    "code":200,
+    "msg":"成功",
+    "data":[
+        {
+            "id":"37fa095da5794475bcb8b315347d148f",
+            "deviceId":"00041d00a41e",
+            "settingClass":"LSEDialModelCfg",
+            "settingTime":1632628320942,
+            "content":"https://cn-pics.leshiguang.com/overseasmobileheadpic/2021/09/26/4cfd774f339945558d70195ef1e395f9.jpg"
+        }
+    ]
+}
+```
+
+<a name="rKECp"></a>
+# 8.设置设备设置项
+```bash
+POST /api/device/v1.0/user/setting/save
+```
+**header参数或者url参数**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
+
+**post参数：**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| deviceId | string | 设备ID |  |
+| settingClass | String | 设置类名称 |  |
+| content | String | json内容 |  |
+
+**出参：**无
 
 
 
