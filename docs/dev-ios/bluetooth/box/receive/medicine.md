@@ -2,6 +2,15 @@
 ## 用药数据
 
 
+LZMcuBoxData
+
+| list | NSArray <LZMcuCellBoxData *> | 编号 |
+| --- | --- | --- |
+| size | int | 总条数 |
+| finish | finishi | 结束 |
+
+
+LZMcuCellBoxData
 
 | cellIndex | int | 编号 |
 | --- | --- | --- |
