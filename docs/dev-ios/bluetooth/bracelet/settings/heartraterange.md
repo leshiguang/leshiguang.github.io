@@ -1,0 +1,47 @@
+<a name="Gqwld"></a>
+## 关于心率区间
+心率区间指根据一定的规则将用户心率区间划分为3个阶段，分别对应中等强度（热身），较大强度（燃脂）和极限强度。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616722995901-2400d283-aa9f-4484-bb54-a50636c39288.png#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&name=image.png&originHeight=227&originWidth=869&size=55805&status=done&style=none&width=869)
+<a name="cCqdJ"></a>
+## 数据类型
+**LZA5SettingHRSectionData**
+
+| 字段 | 类型 | 含义 |
+| --- | --- | --- |
+| age | UInt8 | 用户年龄 |
+| section1Min | UInt8 | 热身心率区间下限 |
+| section1Max | UInt8 | 热身心率区间上限 |
+| section2Min | UInt8 | 减脂心率区间下限 |
+| section2Max | UInt8 | 减脂心率区间上限 |
+| section3Min | UInt8 | 极限心率区间下限 |
+| section3Max | UInt8 | 极限心率区间上限 |
+
+<a name="LMcOt"></a>
+## 设置心率区间
+三个心率区间计算方式：<br />最大心率：220 - 年龄 <br />热身心率区间下限：最大心率 * 0.64;<br />燃脂心率区间下限：最大心率 * 0.76;<br />极限心率区间下限： 最大心率 * 0.96;
+
+调用示例：
+```objectivec
+[self.deviceManager sendDataModel:LZA5SettingHRSectionData macString:self.device.mac completion:^(LZBluetoothErrorCode result, id resp) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf hideActivityIndicatorHUD];
+            if (result == LZBluetoothErrorCodeSuccess) {
+                [weakSelf saveSettingData:settingData];
+                [weakSelf showHintMessage:@"设置成功" duration:1];
+            } else {
+                [weakSelf showHintMessage:@"设置失败" duration:1];
+            }
+            [weakSelf updateUIWithResult:result];
+        });
+    }];
+```
+
+
+<a name="xc9id"></a>
+## 应用场景
+
+- 运动报告中统计用户运动各个阶段的运动状态
+- 结合实时心率，实时显示用户当前所处的运动区间，控制运动的有效性
+- 结合心率计算运动强度，给出疲劳度和恢复时间
+
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616672206675-0d4fee14-3fd5-4ba7-b19b-3c0023abb78b.png#align=left&display=inline&height=522&margin=%5Bobject%20Object%5D&name=image.png&originHeight=522&originWidth=859&size=68948&status=done&style=none&width=859)
+
