@@ -37,7 +37,6 @@ API调用除了必须包含公共参数外，如果API本身有业务级的参�
 <a name="ZJd94"></a>
 ## JAVA签名示例代码
 
-
 ```java
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.DigestUtils;
@@ -66,7 +65,6 @@ public static String generateSign(String... contents) {
 <a name="vGi7T"></a>
 ## GO签名示例代码
 
-
 ```go
 package main
 
@@ -93,7 +91,6 @@ func main() {
 ```
 <a name="P6YF9"></a>
 ## PHP签名示例代码
-
 
 ```php
 protected $_KEY = '';
@@ -130,9 +127,10 @@ public function getSign()
 ```
 http://api.leshiguang.com/sport-rest/step/query/getDayStepInfoList?id=51&api_appKey=lx4ec9b2c924ea7283&api_sign=BD63FF28C0FC3434E552921D85FA8591&api_timestamp=1596527190000&api_version=1.0  +  对应接口的参数
 ```
-示例代码见如下仓库：<br />​
+示例代码见如下仓库：
 
-[https://github.com/leshiguang/cloud-demo](https://github.com/leshiguang/cloud-demo)<br />​<br />
+[https://github.com/leshiguang/cloud-demo](https://github.com/leshiguang/cloud-demo)
+
 ```java
 WeightAlgorithmRequest request = WeightAlgorithmRequest.builder()
     .age(29)
@@ -147,6 +145,25 @@ ResultData<AsiaWeightIndexDTO> res = WeightAlgorithmCloudApi.getAsiaWeightIndexD
 
 System.out.println();
 ```
-<a name="gtMP2"></a>
-## 
+<a name="LmH3y"></a>
+# 返回码
+| **返回码** | **说明** |
+| --- | --- |
+| 200 | 成功 |
+| -401 | 签名未通过! |
+| -402 | 授权未通过! |
+| -403 | 文件过大 |
+| -404 | 请求URL不存在 |
+| -429 | 限流，请稍后重试! |
+| -430 | 元数据不完整! |
+| -100 | 参数错误,请检查相关文档! |
+| -101 | 时间参数错误或者已经过期! |
+| -102 | 规则未匹配! |
+| -103 | 服务调用异常，或者未返回结果 |
+| -104 | 服务调用超时 |
+| -105 | 签名时间戳已经超过2分钟! |
+| -106 | 未匹配到URL，请联系我们！ |
+| -107 | 未匹配到URL，请联系我们！ |
+| -110 | 配置缺失，请联系管理员 |
+
 
