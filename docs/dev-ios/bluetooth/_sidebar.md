@@ -3,10 +3,10 @@
 - [快速集成](/dev-ios/bluetooth/integrate)
 - [接入Demo](/dev-ios/bluetooth/demo)
 - LZBluetooth 2.0.0及以上
-   - [设备管理](/dev-ios/bluetooth/bracelet/core/device)
-   - [电量信息](/dev-ios/bluetooth/bracelet/core/battery)
-   - [设置项](dev-ios/bluetooth/bracelet/core/settings)
-   - [数据接收](/dev-ios/bluetooth/bracelet/core/receive)
+   - [设备管理](/dev-ios/bluetooth/core/device)
+   - [电量信息](/dev-ios/bluetooth/core/battery)
+   - [设置项](dev-ios/bluetooth/core/settings)
+   - [数据接收](/dev-ios/bluetooth/core/receive)
 - 手环&手表（LZBracelet）
    - 设置项
       - [通知手环上报数据](/dev-ios/bluetooth/bracelet/settings/sync)
