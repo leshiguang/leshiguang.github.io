@@ -2,7 +2,7 @@
 - [SDK下载&变更历史](/dev-ios/bluetooth/releaselog)
 - [快速集成](/dev-ios/bluetooth/integrate)
 - [接入Demo](/dev-ios/bluetooth/demo)
-- 核心蓝牙库（LZBluetooth）2.0.0及以上
+- LZBluetooth 2.0.0及以上
    - [设备管理](/dev-ios/bluetooth/bracelet/core/device)
    - [电量信息](/dev-ios/bluetooth/bracelet/core/battery)
    - [设置项](dev-ios/bluetooth/bracelet/core/settings)
@@ -77,7 +77,7 @@
       - [定时](/dev-ios/bluetooth/box/settings/timing)
    - 数据接收
       - [用药数据](/dev-ios/bluetooth/box/receive/medicine)
-- LZBluetooth版本1.7.2及以前
+- LZBluetooth 1.7.2及以前
    - [设备管理](/dev-ios/bluetooth/reference/device)
    - [电量信息](/dev-ios/bluetooth/reference/battery)
    - [设置项](/dev-ios/bluetooth/reference/settings)
