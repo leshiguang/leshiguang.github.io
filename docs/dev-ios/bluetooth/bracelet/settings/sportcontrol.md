@@ -1,18 +1,49 @@
-<a name="fWNcV"></a>
+<a name="qyyy3"></a>
+## 关于运动控制
+运动控制指从手机侧控制手环运动的开始与结束状态。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616722774653-039ef6b2-1570-4298-aacd-e676cd0c6472.png#align=left&display=inline&height=305&margin=%5Bobject%20Object%5D&name=image.png&originHeight=305&originWidth=868&size=70654&status=done&style=none&width=868)
+<a name="Wi4fM"></a>
 ## 数据类型
-**LZA5SettingRealTimeHeartRateSwitchData**
+控制手环运动状态<br />**LZA5SettingSportControlData**
 
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
-| enable | BOOL | 是否开启实时心率 |
+| sportMode | LZA5SportMode | 参考运动模式 LZA5SportMode |
+| start | BOOL | 开始（true）结束（false） |
 
-*注：实时心率在蓝牙断开连接后会自动关闭，若用户使用过程中断开连接， 您需要重新打开实时心率服务。开启实时心率服务手环的电量续航将受到影响， 请务必注意在合适的时机关闭实时心率服务！
-<a name="NCJAa"></a>
-## 设置运动设置
 
+
+**LZA5SportMode**
+
+| 含义 | 名称 | 值 |
+| --- | --- | --- |
+| 未指定          | LZA5SportModeUnknow         | 0 |
+| 跑步           | LZA5SportModeRun            | 0x01             |
+| 健走           | LZA5SportModeWalk           | 0x02             |
+| 骑行           | LZA5SportModeCycling        | 0x03             |
+| 游泳           | LZA5SportModeSwim           | 0x04             |
+| 力量训练 （旧称 健身） | LZA5SportModeKeepfit        | 0x05             |
+| 新版跑步         | LZA5SportModeNewRun         | 0x06             |
+| 室内跑（旧称 跑步机）  | LZA5SportModeRunInDoor      | 0x07             |
+| 椭圆机          | LZA5SportModeElliptical     | 0x08             |
+| 有氧运动         | LZA5SportModeAerobicWorkout | 0x09             |
+| 篮球           | LZA5SportModeBasketball     | 0x0a             |
+| 足球           | LZA5SportModeFootball       | 0x0b             |
+| 羽毛球          | LZA5SportModeBadminton      | 0x0c             |
+| 排球           | LZA5SportModeVolleyball     | 0x0d             |
+| 乒乓球          | LZA5SportModeTableTennis    | 0x0e             |
+| 瑜伽           | LZA5SportModeYoga           | 0x0f             |
+| 电竞           | LZA5SportModeGame           | 0x10             |
+| 有氧能力测试12分钟跑  | LZA5SportMode12MinutesRun  | 0x11             |
+| 有氧能力测试6分钟走   | LZA5SportMode6MinutesWalk  | 0x12             |
+| 健身舞          | LZA5SportModeGymDance       | 0x13             |
+| 太极 | LZA5SportModeTaiji          | 0x14             |
+
+
+<a name="l4Kno"></a>
+## 设置运动控制
 调用示例：
 ```objectivec
-[self.deviceManager sendDataModel:LZA5SettingRealTimeHeartRateSwitchData macString:self.device.mac completion:^(LZBluetoothErrorCode result, id resp) {
+[self.deviceManager sendDataModel:LZA5SettingSportControlData macString:self.device.mac completion:^(LZBluetoothErrorCode result, id resp) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf hideActivityIndicatorHUD];
             if (result == LZBluetoothErrorCodeSuccess) {
@@ -25,9 +56,7 @@
         });
     }];
 ```
-<a name="efqQ6"></a>
-## 应用场景
- 1、户外运动场景：通过运动过程中的心率语音/文案提示，为用户的运动作出实时的指导，达到心率设定--心率指导运动--心率查看--再次开始训练的闭环，保证安全&高效运动。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616662635894-62c7d607-f478-42cd-9841-c277ded97d19.png#align=left&display=inline&height=482&margin=%5Bobject%20Object%5D&name=image.png&originHeight=482&originWidth=1762&size=103106&status=done&style=none&width=1762)
 
-2、室内运动场景：App实时显示用户心率值和所处区间值，作为运动指导的看板，控制室内运动的强度，实时反应用户的负荷情况，确保运动的有效性和针对性。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616662449780-0574729c-b661-468f-bc82-adfd2e061820.png#align=left&display=inline&height=470&margin=%5Bobject%20Object%5D&name=image.png&originHeight=470&originWidth=868&size=71985&status=done&style=none&width=868)
+
+
 
