@@ -1,0 +1,15 @@
+<a name="avW90"></a>
+## 蓝牙配网时序图
+
+![](https://cdn.nlark.com/yuque/__puml/950b4cef0d25432e191aba847eb0dead.svg#lake_card_v2=eyJ0eXBlIjoicHVtbCIsImNvZGUiOiJAc3RhcnR1bWxcblxuYXV0b251bWJlclxuXG5hY3RvciBcIueUqOaIt1wiIGFzIFVzZXJcbnBhcnRpY2lwYW50IFwi5a6_5Li7QXBwXCIgYXMgQXBwXG5wYXJ0aWNpcGFudCBcIlNES1wiIGFzIFNESyAjb3JhbmdlXG5wYXJ0aWNpcGFudCBcIuiuvuWkh1wiIGFzIERldmljZVxuXG5hY3RpdmF0ZSBBcHBcblxuQXBwIC0-IFNESzrosIPnlKhpbml0V2l0aEFwcElk6L-b6KGM5Yid5aeL5YyWXG5hY3RpdmF0ZSBTREtcblxuU0RLIC0-IERldmljZTroh6rliqjov57mjqXorr7lpIdcbmFjdGl2YXRlIFVzZXJcblxuVXNlciAtPiBBcHA6IOeCueWHu-WPkei1t-mFjee9kea1geeoi1xuXG5BcHAgLT4gU0RLOiDosIPnlKhzZW5kRGF0YU1vZGVsOkxaV2lmaVNjYW5EYXRh6L-b6KGM5omr5o-PXG5cblNESyAtPiBEZXZpY2U6IOWPkemAgeaJq-aPj-aMh-S7pFxuYWN0aXZhdGUgRGV2aWNlXG5cbkRldmljZSAtPiBEZXZpY2U6IOiHquWKqOaJq-aPj-WFvOWuueeahFdpZmnkv6Hmga9cblxuRGV2aWNlIC0tPiBTREs65Y-R6YCB5omr5o-P57uT5p6cXG5cblNESyAtLT4gQXBwOuWbnuiwg-e7k-aenOe7mUFwcFxuXG5BcHAgLS0-IFVzZXI65ZGI546wd2lmaeWIl-ihqOS_oeaBr1xuXG5Vc2VyIC0-IEFwcDrpgInmi6nkuIDkuKpXaWZp5L-h5oGv77yM6L6T5YWl5a-G56CBXG5cbkFwcCAtPlNESzrosIPnlKhzZW5kRGF0YU1vZGVsOkxaV2lmaURhdGHov5vooYzphY3nvZFcblxuU0RLIC0-IERldmljZTrlj5HpgIFzc2lk5ZKM5a-G56CB6K6-572u5oyH5LukXG5cbkRldmljZSAtPiBEZXZpY2U66Ieq5Yqo6YWN572RXG5cbkRldmljZSAtLT4gU0RLOuS4iuaKpemFjee9keeKtuaAgVxuXG5TREsgLS0-IEFwcDrlm57osIPphY3nvZHnu5PmnpzliLBBUFBcblxuQXBwIC0tPiBVc2VyOuaYvuekuumFjee9kee7k-aenFxuXG5AZW5kdW1sIiwidXJsIjoiaHR0cHM6Ly9jZG4ubmxhcmsuY29tL3l1cXVlL19fcHVtbC85NTBiNGNlZjBkMjU0MzJlMTkxYWJhODQ3ZWIwZGVhZC5zdmciLCJpZCI6Im9KNldvIiwibWFyZ2luIjp7InRvcCI6dHJ1ZSwiYm90dG9tIjp0cnVlfSwiaGVpZ2h0Ijo0ODAsImNhcmQiOiJkaWFncmFtIn0=)
+<a name="JAqSM"></a>
+## C端方案参考
+
+<a name="79oj9"></a>
+### 扫描
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616761991909-c4fd62a6-104f-4978-b184-f0db01529f25.png#crop=0&crop=0&crop=1&crop=1&height=448&id=TuhDJ&margin=%5Bobject%20Object%5D&name=image.png&originHeight=642&originWidth=728&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71904&status=done&style=none&title=&width=508)
+
+<a name="3H79A"></a>
+### 配置
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616762059152-bb8a8614-7e86-46b1-9dd0-d6c32a480ce7.png#crop=0&crop=0&crop=1&crop=1&height=626&id=GKAhL&margin=%5Bobject%20Object%5D&name=image.png&originHeight=626&originWidth=1536&originalType=binary&ratio=1&rotation=0&showTitle=false&size=132179&status=done&style=none&title=&width=1536)
+
