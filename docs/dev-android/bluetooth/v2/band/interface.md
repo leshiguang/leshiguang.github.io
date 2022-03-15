@@ -18,5 +18,17 @@ SynchronizeData：
 | --- | --- | --- |
 | type | Type | 同步数据类型 |
 
+Type：
+
+| NORMAL_HEART_RATE | 常规心率记录 |
+| --- | --- |
+| SLEEP_ANALYSIS_RESULT | 睡眠明细记录 |
+| SPORT_PACE | 运动配速记录 |
+| SPORT_HEART_RATE | 运动心率记录 |
+| SPORT_CALORIES | 运动卡洛里记录 |
+| REST_HEART_RATE | 静息心率记录 |
+| STEP_DETAIL | 常规计步明细记录 |
+|  |  |
+|  |  |
 
 
