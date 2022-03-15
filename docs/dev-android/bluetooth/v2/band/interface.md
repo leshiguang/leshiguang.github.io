@@ -5,4 +5,18 @@
 ```java
 public public void syncData(String mac, SynchronizeData synchronizeData)
 ```
+参数说明：
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| mac | String | mac地址 |
+| synchronizeData | SynchronizeData | 同步数据类 |
+
+SynchronizeData：
+
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| type | Type | 同步数据类型 |
+
+
 
