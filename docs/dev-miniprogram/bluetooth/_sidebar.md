@@ -1,0 +1,10 @@
+- [demo](/dev-miniprogram/bluetooth/demo)
+- [插件接入](/dev-miniprogram/bluetooth/plugin)
+- npm接入
+   - [蓝牙核心模块（sg-ble）](dev-miniprogram/bluetooth/npm/ble)
+   - [手环（sg-bracelet）](dev-miniprogram/bluetooth/npm/bracelet)
+   - [体脂秤（sg-scale）](dev-miniprogram/bluetooth/npm/scale)
+   - [血压设备（sg-bloodpressure）](dev-miniprogram/bluetooth/npm/bloodpressure)
+   - [药盒（sg-box）](dev-miniprogram/bluetooth/npm/box)
+   - [跳绳（sg-skip）](dev-miniprogram/bluetooth/npm/skip)
+
