@@ -112,7 +112,6 @@ pod 'LZSkip'					// 支持跳绳	可选
 或者
 #import <LZBracelet/LZBracelet.h>
 
-
 /// 2、引入体脂秤设置项或者数据的头文件, 需要在pod文件加入 pod 'LZScale'
 @import LZScale;
 或者
