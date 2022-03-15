@@ -14,10 +14,8 @@ LZMioBeginToJumpSetting 配置网络
 | utc | Uint32 | 时间戳 |
 
 
-<a name="NCJAa"></a>
-## 配置网络
-
-调用示例：
+<a name="ioHno"></a>
+## 调用示例：
 ```objectivec
 LZMioBeginToJumpSetting *temp = [LZMioBeginToJumpSetting new];
 temp.jumpMode = LZMioJumpModeNumberCountdown;
