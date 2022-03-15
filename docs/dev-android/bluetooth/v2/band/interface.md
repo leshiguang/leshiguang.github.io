@@ -22,7 +22,7 @@ Type：
 
 | NORMAL_HEART_RATE | 常规心率记录 |
 | --- | --- |
-|  |  |
+| SLEEP_ANALYSIS_RESULT | 睡眠明细记录 |
 |  |  |
 |  |  |
 |  |  |
