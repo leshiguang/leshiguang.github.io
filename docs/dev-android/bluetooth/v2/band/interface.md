@@ -28,12 +28,12 @@ Type：
 | SPORT_CALORIES | 运动卡洛里记录 |
 | REST_HEART_RATE | 静息心率记录 |
 | STEP_DETAIL | 常规计步明细记录 |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| TODAY_STEP_DETAIL | 当天常规计步明细记录 |
+| TODAY_HEART_RATE_DETAIL | 当天常规心率明细记录电 |
+| LAST_CHARGE | 最后一次充电记录 |
+| CURRENT_LIGHT | 当前亮度设定 |
+| DIAL_DATA | 表盘数据记录 |
+| SPORT_PITCH | 运动步频记录 |
 |  |  |
 |  |  |
 |  |  |
