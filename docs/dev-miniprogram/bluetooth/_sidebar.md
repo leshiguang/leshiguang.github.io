@@ -1,4 +1,3 @@
-- [demo](/dev-miniprogram/bluetooth/demo)
 - [插件接入](/dev-miniprogram/bluetooth/plugin)
 - npm接入
    - [蓝牙核心模块（sg-ble）](dev-miniprogram/bluetooth/npm/ble)
@@ -7,4 +6,5 @@
    - [血压设备（sg-bloodpressure）](dev-miniprogram/bluetooth/npm/bloodpressure)
    - [药盒（sg-box）](dev-miniprogram/bluetooth/npm/box)
    - [跳绳（sg-skip）](dev-miniprogram/bluetooth/npm/skip)
+- [demo](/dev-miniprogram/bluetooth/demo)
 
