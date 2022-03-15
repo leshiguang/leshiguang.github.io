@@ -18,7 +18,7 @@
 {
     "dependencies": {
         "sg-ble": "^2.0.2",	
-        "sg-skip": "^1.0.0"
+        "sg-box": "^1.0.0"
     }
 }
 ```
@@ -27,7 +27,7 @@
 ## 2.2 模块引入
 
 ```javascript
-const skip = require("sg-skip");
+const box = require("sg-box");
 ```
 
 <a name="G7Gpg"></a>
@@ -36,97 +36,103 @@ const skip = require("sg-skip");
 ```javascript
 const plugin = require("sg-ble");
 
-// 体脂秤
-const skip = require('sg-skip');
+// 药盒
+const box = require('sg-box');
 
-plugin.regist(skip);
+plugin.regist(box);
 ```
 
 <a name="aU86X"></a>
 # 3、设置项
-
 <a name="hcmIu"></a>
-### 3.1 开始跳绳
+### 3.1 同步数据
+拉取数据<br />SyncBoxData 没有参数
 
-控制体脂秤测量心率的开关<br />BeginToJumpSetting 的参数
+```javascript
+// 体脂秤
+const box = require('sg-box');
+const plugin = require("sg-ble");
 
-| 字段 | 类型 | 含义 |
+let setting = new box.settingFactory.SyncBoxData(enable);
+
+plugin.pushSetting(setting).then(() => {
+    console.warn('设置成功');
+})
+```
+<a name="fMzYG"></a>
+### 
+<a name="qElwQ"></a>
+### 3.2 搜索药盒
+拉取数据<br />FindBox 没有参数
+
+```javascript
+// 体脂秤
+const box = require('sg-box');
+const plugin = require("sg-ble");
+
+let setting = new box.settingFactory.FindBox();
+
+plugin.pushSetting(setting).then(() => {
+    console.warn('设置成功');
+})
+```
+
+<a name="wXRIe"></a>
+### 3.3 定时
+拉取数据<br />BoxTiming 参数
+
+| 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| jumpMode | number | 跳转模式<br /><br />///倒计时<br />0,<br />///到计数<br />1,<br />///自由模式<br />2,<br /> |
-| settingContent | number | 倒计时跳:设置倒计时秒数; <br />倒计数跳:设置倒计次次数<br />自由模式: 无意义 |
-| numberOfCountdown | number | 倒计秒数（s） 3-60s 如设置3则为3、2、1，开始跳 绳的倒计秒数 |
-| utc | number | 时间戳 |
+| times | Time[] | 事件列表 |
+| index | number | 药盒序号 |
+
+Time 参数
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| hour | Time[] | 时 |
+| min | number | 分 |
+| sec | number | 秒 |
+| weeks | Week[] | 星期<br />export const enum Week {<br />MON = 0x01,<br />TUES = 0x02,<br />WED = 0x04,<br />THUR = 0x08,<br />FRI = 0x10,<br />SAT = 0x20,<br />SUN = 0x40<br />} |
 
 
 ```javascript
 // 体脂秤
-const skip = require('sg-skip');
+const box = require('sg-box');
 const plugin = require("sg-ble");
 
-let setting = new skip.settingFactory.BeginToJumpSetting(jumpMode, settingContent, utc, countdown);
+let time = {
+  hour: 8,
+  min: 0,
+  sec: 0,
+  weeks: [1, 2, 4]
+}
+let index = 1;
+let setting = new box.settingFactory.BoxTiming(index, [time]);
 
 plugin.pushSetting(setting).then(() => {
     console.warn('设置成功');
 })
 ```
-
-<a name="YfJJu"></a>
-### 3.2 结束跳绳
-
-控制体脂秤单位的显示<br />EndToJumpSetting 无参数
-
-
-```javascript
-// 体脂秤
-const skip = require('sg-skip');
-const plugin = require("sg-ble");
-EndToJumpSetting
-let setting = new skip.settingFactory.EndToJumpSetting();
-
-plugin.pushSetting(setting).then(() => {
-    console.warn('设置成功');
-})
-```
-<a name="ARSCR"></a>
-# <br />
 
 <a name="f4SA2"></a>
-# 数据接收
-<a name="t84yk"></a>
-## 跳绳实时数据 MioJumpRealtimeData
-| 字段 | 类型 | 含义 |
+# 4、数据接收
+<a name="RXGgo"></a>
+### 用药数据 SyncBoxDataResult 的数据结构
+| 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| jumpMode | number | 跳绳模式<br />///倒计时<br />0,<br />///到计数<br />1,<br />///自由模式<br />2, |
-| settingContent | number | 倒计时:倒计时秒数<br />倒计数:倒计次次数 |
-| duration | number | 总时长 |
-| count | number | 总次数 |
-| groupCount | number | 绊绳次数最大为49次，跳绳组 数最大值为50;跳绳组数=绊 绳次数+1; 有绊绳后，会产生的多组跳 绳数据组数，若无绊绳，则 只有1组 |
-| battery | number | 电量0-100 |
-| validDuration | number | 有效时长 |
-| freq | number | 频次 |
+| boxDatas | BoxData[] | 剩余测量数据条数 |
+| size | number | 总个数 |
+| dataType | String | 固定值为 SyncBoxData |
 
+BoxData 的数据结构
 
-<a name="bcKiB"></a>
-## 跳绳结果数据 MioJumpResultData
-| 字段 | 类型 | 含义 |
+| 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| type | number | 0-表示当前跳神的结果。 1-表示历史数据的结果 |
-| utc | number | 测量时间 |
-| jumpMode | number | 跳绳模式<br />///倒计时<br />0,<br />///到计数<br />1,<br />///自由模式<br />2, |
-| settingContent | number | 倒计时:倒计时秒数<br />倒计数:倒计次次数 |
-| duration | number | 总时长 |
-| count | number | 总次数 |
-| avgFreq | number | 平均频次 |
-| maxFreq | number | 最大频次 |
-| maxContinueCount | number | 最大连跳次数 |
-| groupCount | number | 绊绳次数最大为49次，跳绳组 数最大值为50;跳绳组数=绊 绳次数+1; 有绊绳后，会产生的多组跳 绳数据组数，若无绊绳，则 只有1组 |
-| list | JumpData[] | 数据格式如 {"time": 10, "count": 3 }  标识在time时间内，跳了count次 |
+| cellIndex | number | 编号 |
+| size | number | 总条数 |
+| status | number | 用药状态 已服 0x01 未服 0x02 |
+| utc | number | 时间戳 |
 
-JumpData
-
-| 字段 | 类型 | 含义 |
-| --- | --- | --- |
-| time | number | 时间 |
-| count | number | 次数 |
 
 
