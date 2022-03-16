@@ -15,10 +15,10 @@ LZMcuTimingSetting
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| hour | Time[] | 时 |
-| min | number | 分 |
-| sec | number | 秒 |
-| weeks | Week[] | 星期<br />export const enum Week {<br />MON = 0x01,<br />TUES = 0x02,<br />WED = 0x04,<br />THUR = 0x08,<br />FRI = 0x10,<br />SAT = 0x20,<br />SUN = 0x40<br />} |
+| hour | UInt32 | 时 |
+| min | UInt32 | 分 |
+| sec | UInt32 | 秒 |
+| weeks | typedefNS_OPTIONS(NSUInteger, LZMcuWeek) {<br />///星期一<br />LZMcuWeekMon        = 1 << 0,<br />///星期二<br />LZMcuWeekTues       = 1 << 1,<br />///星期三<br />LZMcuWeekWed        = 1 << 2,<br />///星期四<br />LZMcuWeekThur       = 1 << 3,<br />///星期五<br />LZMcuWeekFri        = 1 << 4,<br />///星期六<br />LZMcuWeekSat        = 1 << 5,<br />///星期天<br />LZMcuWeekSun        = 1 << 6,<br />}; | 星期 |
 
 
 
