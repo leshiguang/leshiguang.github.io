@@ -6,7 +6,16 @@
 | --- | --- | --- |
 | unitType | UnitType | 单位类型 |
 
-UnitType<br />调用示例：
+UnitType
+
+| UNIT_KG | 千克 |
+| --- | --- |
+| UNIT_LB | 磅 |
+| UNIT_ST | 英石 |
+| UNIT_JIN | 斤 |
+| UNIT_GONG_JIN | 公斤 |
+
+调用示例：
 ```java
 BleDeviceManager.getDefaultManager().updateConfig(deviceInfo.getValue().getMac(), dialPlate, new Consumer<ConfigStatus>() {
     @Override
