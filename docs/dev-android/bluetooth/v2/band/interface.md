@@ -20,31 +20,31 @@ SynchronizeData：
 
 Type：
 
-| NORMAL_HEART_RATE | 常规心率 |
+| NORMAL_HEART_RATE | 常规心率记录 |
 | --- | --- |
-| SLEEP_ANALYSIS_RESULT | <br /> |
-| SPORT_PACE |  |
-| SPORT_HEART_RATE |  |
-| SPORT_CALORIES |  |
-| REST_HEART_RATE |  |
-| STEP_DETAIL |  |
-| TODAY_STEP_DETAIL |  |
-| TODAY_HEART_RATE_DETAIL |  |
-| LAST_CHARGE |  |
-| CURRENT_LIGHT |  |
-| DAILY_DATA |  |
-| SPORT_REPORT |  |
-| BLOOD_OXYGEN_SINGLE |  |
-| MEDITATION_REPORT |  |
-| SLEEP_QUALITY_REPORT |  |
-| TODAY_BLOOD_OXYGEN_REPORT |  |
-| HEART_RATE_STATE_REPORT |  |
-| BLOOD_OXYGEN |  |
-| SLEEP_BREATH_QUALITY |  |
-| PRESSURE_REPORT |  |
-| SINGLE_HEART_RATE_REPORT |  |
-| DAILY_REPORT_EXTRA |  |
-| ALL_DATA |  |
+| SLEEP_ANALYSIS_RESULT | 睡眠明细记录 |
+| SPORT_PACE | 运动配速记录 |
+| SPORT_HEART_RATE | 运动心率记录 |
+| SPORT_CALORIES | 运动卡洛里记录 |
+| REST_HEART_RATE | 静息心率记录 |
+| STEP_DETAIL | 常规计步明细记录 |
+| TODAY_STEP_DETAIL | 当天常规计步明细记录 |
+| TODAY_HEART_RATE_DETAIL | 当天常规心率明细记录电 |
+| LAST_CHARGE | 最后一次充电记录 |
+| CURRENT_LIGHT | 当前亮度设定 |
+| DAILY_DATA | 表盘数据记录 |
+| SPORT_REPORT | 运动步频记录 |
+| BLOOD_OXYGEN_SINGLE | 运动配速记录使用英制 |
+| MEDITATION_REPORT | 区间心率数据 |
+| SLEEP_QUALITY_REPORT | 每小时报告 |
+| TODAY_BLOOD_OXYGEN_REPORT | 每天报告 |
+| HEART_RATE_STATE_REPORT | 运动报告 |
+| BLOOD_OXYGEN | 血氧测量报告点测 |
+| SLEEP_BREATH_QUALITY | 冥想测量报告 |
+| PRESSURE_REPORT | 睡眠质量报告 |
+| SINGLE_HEART_RATE_REPORT | 当天血氧测量报告 |
+| DAILY_REPORT_EXTRA | 状态心率数据 |
+| ALL_DATA | 连续血氧报告 |
 
 <a name="m7SMF"></a>
 ## 读取电量
