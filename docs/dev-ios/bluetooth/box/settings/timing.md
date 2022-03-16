@@ -4,6 +4,22 @@ app设置药盒的提醒时间
 
 LZMcuTimeData
 
+| 字段 | 类型 | 含义 |
+| --- | --- | --- |
+| times | NSArray <LZMcuTimeData *> * | 定时设置（最多设置9个）条目为0的时候表示删除该编号所有定时器 |
+| index | Uint32 | 药格编号（1-4） |
+
+
+
+LZMcuTimingSetting
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| hour | Time[] | 时 |
+| min | number | 分 |
+| sec | number | 秒 |
+| weeks | Week[] | 星期<br />export const enum Week {<br />MON = 0x01,<br />TUES = 0x02,<br />WED = 0x04,<br />THUR = 0x08,<br />FRI = 0x10,<br />SAT = 0x20,<br />SUN = 0x40<br />} |
+
 
 
 <a name="qvAra"></a>
