@@ -2,3 +2,9 @@
 
 类：com.lifesense.android.ble.device.fatscale.model.WeightMeasureData
 
+| utc | int | 测量时间 单位 s |
+| --- | --- | --- |
+| weight | double | 体重 |
+| resistance50K | double | 阻抗 |
+
+
