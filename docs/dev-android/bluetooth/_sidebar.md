@@ -2,6 +2,7 @@
 - [SDK下载&变更历史](/dev-android/bluetooth/releaselog)
 - [快速集成](/dev-android/bluetooth/v2/integrate)
 - [接入Demo](/dev-android/bluetooth/demo)
+- [设备管理](/dev-android/bluetooth/v2/device)
 - 手环(Band)
    - [绑定流程](/dev-android/bluetooth/v2/band/bind)
    - [接口参考](/dev-android/bluetooth/v2/band/interface)
