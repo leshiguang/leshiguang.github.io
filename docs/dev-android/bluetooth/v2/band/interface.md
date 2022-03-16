@@ -20,36 +20,31 @@ SynchronizeData：
 
 Type：
 
-| NORMAL_HEART_RATE | 常规心率记录 |
+| NORMAL_HEART_RATE | 常规心率 |
 | --- | --- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| SLEEP_ANALYSIS_RESULT | <br /> |
+| SPORT_PACE |  |
+| SPORT_HEART_RATE |  |
+| SPORT_CALORIES |  |
+| REST_HEART_RATE |  |
+| STEP_DETAIL |  |
+| TODAY_STEP_DETAIL |  |
+| TODAY_HEART_RATE_DETAIL |  |
+| LAST_CHARGE |  |
+| CURRENT_LIGHT |  |
+| DAILY_DATA |  |
+| SPORT_REPORT |  |
+| BLOOD_OXYGEN_SINGLE |  |
+| MEDITATION_REPORT |  |
+| SLEEP_QUALITY_REPORT |  |
+| TODAY_BLOOD_OXYGEN_REPORT |  |
+| HEART_RATE_STATE_REPORT |  |
+| BLOOD_OXYGEN |  |
+| SLEEP_BREATH_QUALITY |  |
+| PRESSURE_REPORT |  |
+| SINGLE_HEART_RATE_REPORT |  |
+| DAILY_REPORT_EXTRA |  |
+| ALL_DATA |  |
 
 <a name="m7SMF"></a>
 ## 读取电量
