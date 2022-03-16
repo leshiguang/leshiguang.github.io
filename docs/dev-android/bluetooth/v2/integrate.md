@@ -16,14 +16,11 @@ repositories {
     api 'com.annimon:stream:1.2.1' // 实现Collection的stream操作
   	api 'io.reactivex.rxjava2:rxjava:2.2.8'
     api 'io.reactivex.rxjava2:rxandroid:2.1.1'
- 	api 'com.google.auto.service:auto-service:1.0-rc7'
-    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc7'
 ```
 依赖说明：
 
 - stream：一个轻量级的Stream API [https://github.com/aNNiMON/Lightweight-Stream-API](https://github.com/aNNiMON/Lightweight-Stream-API)， Android21使用Android24（或jdk1.8）的Stream能力的替代方案，用来实现一些集合流式遍历、变换等操作
 - rxjava：EDD的思想实现的一套基于观察者模式的链式调用库，提供简洁易用的线程切换功能
-- autoService:google开源的 ServiceLoader metadata 生成器
 
 <a name="PexyG"></a>
 ## 权限
@@ -51,7 +48,7 @@ repositories {
  <application>
    //ANCS服务
 		<service
-            android:name="com.lifesense.android.ble.core.application.service.DefaultNotificationListenerService"
+            android:name="com.lifesense.android.ble.device.band.ance.service.DefaultNotificationListenerService"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
