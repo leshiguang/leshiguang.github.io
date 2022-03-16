@@ -22,7 +22,6 @@ Type：
 
 | NORMAL_HEART_RATE | 常规心率记录 |
 | --- | --- |
-| SLEEP_ANALYSIS_RESULT | 睡眠明细记录 |
 |  |  |
 |  |  |
 |  |  |
@@ -50,8 +49,7 @@ Type：
 |  |  |
 |  |  |
 |  |  |
-
-
+|  |  |
 
 <a name="m7SMF"></a>
 ## 读取电量
@@ -84,7 +82,6 @@ public void inputRandomNumber(String mac, String randomNumber)
 | --- | --- | --- |
 | mac | String | mac地址 |
 | randomNumber | String | 随机数 |
-
 
 <a name="BafzT"></a>
 ## 设置自定义表盘
