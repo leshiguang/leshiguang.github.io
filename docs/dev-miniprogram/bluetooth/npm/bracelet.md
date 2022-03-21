@@ -17,8 +17,8 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.2",	
-        "sg-bracelet": "^1.0.0"
+        "sg-ble": "^2.0.4",	
+        "sg-bracelet": "^1.0.1"
     }
 }
 ```
@@ -112,8 +112,24 @@ let generalHr = {
 let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 ```
 
+<a name="x5pzf"></a>
+### 3.3 心率开关
+456支持获取<br />HeartRateDetectSetting的数据结构
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| state | number | 0表示关，1表示开 |
+
+
+实例
+
+```javascript
+
+let setting = new bracelet.settingFactory.HeartRateDetectSetting(1);
+```
+
 <a name="EyAjm"></a>
-### 3.3 快捷屏幕 仅456支持
+### 3.4 快捷屏幕 仅456支持
 
 456支持获取<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
 
@@ -134,7 +150,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="i7ZyR"></a>
-### 3.4 睡眠血氧开关 仅456支持
+### 3.5 睡眠血氧开关 仅456支持
 
 456支持获取<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
 
@@ -155,7 +171,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="kbWmi"></a>
-### 3.5 久坐提醒
+### 3.6 久坐提醒
 
 456可支持获取<br />`SedentaryReminderSetting` 的数据结构
 
@@ -197,7 +213,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="pvcpN"></a>
-### 3.6 睡眠提醒计划
+### 3.7 睡眠提醒计划
 
 支持获取，获取的有效值 只有开关与时间<br />只能支持一次设置一个<br />`NewEventRemindSetting` 的数据结构
 
@@ -243,7 +259,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="nnzQf"></a>
-### 3.7 事件提醒（闹钟）
+### 3.8 事件提醒（闹钟）
 
 支持获取<br />只能支持一次设置一个<br />`EventReminderSetting` 的数据结构
 
@@ -299,7 +315,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="q8hXB"></a>
-### 3.8 时间格式
+### 3.9 时间格式
 
 `TimeFormatSetting` 的数据格式
 
@@ -316,7 +332,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="fPhIW"></a>
-### 3.9 表盘推送
+### 3.10 表盘推送
 
 456的表盘也不支持切换顺序 index 1、2、3、4表示本地表盘，5表示相册表盘，6与7表示云端表盘<br />`PushDialSetting`的数据结构
 
@@ -359,7 +375,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="acWl1"></a>
-### 3.10 表盘选择
+### 3.11 表盘选择
 
 表盘位置上必须有表盘表盘选择才能成功<br />`DialEnableSetting` 的数据结构
 
@@ -376,7 +392,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="w8Krz"></a>
-### 3.11 表盘删除
+### 3.12 表盘删除
 
 这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
 
@@ -401,7 +417,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="TURAp"></a>
-### 3.12 目标设置
+### 3.13 目标设置
 
 `EncourageTargetSetting` 的数据结构
 
@@ -419,7 +435,7 @@ let setting = new bracelet.settingFactory.HeartRateWarningSetting(sportHr, gener
 ```
 
 <a name="Urfji"></a>
-### 3.13 天气设置
+### 3.14 天气设置
 
 `WeatherSetting` 的数据结构
 
@@ -452,7 +468,7 @@ let weather = {
 ```
 
 <a name="NSvq0"></a>
-### 3.14 新天气设置 456 支持
+### 3.15 新天气设置 456 支持
 
 `NewWeatherSetting` 的数据结构
 
@@ -537,7 +553,7 @@ let weather = {
 ```
 
 <a name="dt4fh"></a>
-### 3.15 旧的表盘设置
+### 3.16 旧的表盘设置
 
 `DialTypeSetting` 的数据结构
 
@@ -554,7 +570,7 @@ let weather = {
 <a name="gnm8w"></a>
 ### 
 <a name="RW8Kh"></a>
-### 3.16 自定义一级屏幕设置
+### 3.17 自定义一级屏幕设置
 
 `CustomPagesSetting`
 
@@ -635,7 +651,7 @@ let weather = {
 ```
 
 <a name="P2FQg"></a>
-### 3.17 实时心率开关  RealtimeHRSetting
+### 3.18 实时心率开关  RealtimeHRSetting
 
 `RealtimeHRSetting` 的数据结构
 
