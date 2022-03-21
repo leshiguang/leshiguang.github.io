@@ -52,6 +52,7 @@
       - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
 - 乐智云算法
    - [体脂](/develop-cloud/algorithm/fat)
+   - [体脂V2](/develop-cloud/algorithm/fat/v2)
    - [睡眠分析](/develop-cloud/algorithm/sleep)
    - [心率](/develop-cloud/algorithm/heartrate)
 
