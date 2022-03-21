@@ -90,16 +90,16 @@
     min-height: 50px;
     justify-content: space-between;
   }
-  .app-nav.no-badge .nav-header .docs-logo {
+  /* .app-nav.no-badge .nav-header .docs-logo {
     position: fixed;
     width: 90px;
     height: 60px;
     left: 10px;
     top: -6px;
-    background: url(https://cdn.leshiguang.com/leshiguang/chaosconsole/assets/img/logo.ff1db55.ff1db55b.png)
+    background: url(https://files.lifesense.com/other/20211215/0c4dff78e1c5485c87e83c1c2dcb3f9d.png)
       center center no-repeat;
     background-size: 100%;
-  }
+  } */
   .markdown-section .homepage .homepage-docs {
     display: contents;
   }

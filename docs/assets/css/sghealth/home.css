@@ -1,3 +1,10 @@
+[data-page*='home'] .main {
+  display: block;
+}
+[data-page*='home'] main {
+  min-height: calc(100vh - 60px);
+  width: 100vw;
+}
 [data-page*='home'] .sidebar {
   display: none;
 }
@@ -22,6 +29,11 @@
   text-align: left;
   box-sizing: border-box;
   margin: 0 auto;
+}
+.homepage .homepage-top .homepage-top-img {
+  position: absolute;
+  right: 80px;
+  top: 0px;
 }
 
 .homepage .homepage-suggest .homepage-suggest-container .homepage-suggest-wrap {
@@ -52,15 +64,15 @@
   .homepage-suggest
   .homepage-suggest-container
   .homepage-suggest-wrap
-  .suggest-prod:hover{
-    border: 1px solid #155bd4;
-  }
+  .suggest-prod:hover {
+  border: 1px solid var(--theme-color, #155bd4);
+}
 .homepage
   .homepage-suggest
   .homepage-suggest-container
   .homepage-suggest-wrap
   .suggest-prod
-.fa-logo {
+  .fa-logo {
   position: absolute;
   display: inline-block;
   top: 1.7143rem;
@@ -74,8 +86,9 @@
   .homepage-suggest-container
   .homepage-suggest-wrap
   .suggest-prod
-.fa-logo i{
-  color: #155bd4;
+  .fa-logo
+  i {
+  color: var(--theme-color, #155bd4);
 }
 .homepage
   .homepage-suggest
@@ -147,7 +160,7 @@
   margin-top: -65px;
   text-align: center;
   /* background: #fafbff; */
-  background-image: url(/assets/images/home-bg.jpeg);
+  background-image: url(https://files.lifesense.com/other/20211215/27e137cd6fb840679a7cc8abf62a6c33.png);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -168,7 +181,7 @@
 
 .homepage-top .container h2 {
   margin: 25px auto;
-  color: #fff;
+  color: #222;
   text-shadow: 0 2px 3px rgb(0 0 0 / 50%);
 }
 .homepage-top .container .search .input-wrap {

@@ -1,8 +1,9 @@
 <div class="homepage">
     <div class="homepage-top">
         <div class="container">
-            <h2>乐智云文档中心</h2>
-            <div class="homepage-search">
+            <h2>拾果健康文档中心</h2>
+            <div class="homepage-top-img">
+                <img style="height:320px" src="https://files.lifesense.com/other/20211202/b9c5db45e15d4ed498a3d7d1b9e4c180.png" />
             </div>
         </div>
     </div>
@@ -41,7 +42,7 @@
 <div class="appList">
 
 - <a href="javascript:void(0);">关于我们</a>
-  <!-- - [乐智健康介绍](/solution/health/README) -->
+  - [拾果健康介绍](/solution/health/README)
 
 </div>
 
@@ -54,18 +55,18 @@
 <div class="appList">
 
 - <a href="javascript:void(0);">解决方案</a>
-  <!-- - [保健品行业](/solution/health/README)
+  <!-- - [保健品行业](/solution/health/README) -->
   - [药店行业](/solution/drugstore/README)
-  - [社康行业](/solution/clinic/README) -->
+  - [社康行业](/solution/clinic/README)
 
 </div>
 
 <div class="appList">
 
 - <a href="javascript:void(0);">使用指南</a>
-  <!-- - [API 文档](/develop-cloud/api/sign)
+  - [API 文档](/develop-cloud/api/sign)
   - [SDK 集成](/develop-native/apply)
-  - [SDK 下载中心](/develop-native/download/README) -->
+  - [SDK 下载中心](/develop-native/download/README)
 
 </div>
     </div>

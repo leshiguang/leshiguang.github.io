@@ -1,0 +1,109 @@
+.sgloading {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sgloading .sgloading-img {
+  background: url(https://files.leshiguang.com/favicon/sghealth/favicon.ico) center
+    center no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sgloading .sgloading-wrapper {
+  font-size: 10px;
+  margin: 30% auto;
+  text-indent: -9999em;
+  border-radius: 50%;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 8px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+  background: #fff;
+  background: -moz-linear-gradient(
+    left,
+    var(--theme-color, #00c3cc) 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    var(--theme-color, #00c3cc) 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -o-linear-gradient(
+    left,
+    var(--theme-color, #00c3cc) 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -ms-linear-gradient(
+    left,
+    var(--theme-color, #00c3cc) 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: linear-gradient(
+    to right,
+    var(--theme-color, #00c3cc) 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+}
+.sgloading .sgloading-wrapper:before,
+.sgloading .sgloading-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sgloading .sgloading-wrapper:before {
+  width: 50%;
+  height: 50%;
+  background: var(--theme-color, #00c3cc);
+  border-radius: 100% 0 0 0;
+}
+.sgloading .sgloading-wrapper:after {
+  background: #fff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

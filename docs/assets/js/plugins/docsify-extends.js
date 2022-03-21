@@ -40,6 +40,7 @@
                 }
             }
         },
+
         getAndActive: function (router, el, isParent, autoTitle) {
             el = Docsify.dom.getNode(el);
             var links = [];
@@ -94,7 +95,7 @@
             var $sidebarTitle = Docsify.dom.find(".sidebar-title");
             if ($sidebarTitle) {
                 var $faRight = Docsify.dom.find($sidebarTitle, '.fa-angle-right')
-                if(!$faRight){
+                if (!$faRight) {
                     var $a = this.createA()
                     Docsify.dom.appendTo($sidebarTitle, $a);
                     let that = this;
@@ -124,6 +125,7 @@
         $init: function (vm) {
             var $sidebar = Docsify.dom.find(".sidebar");
             var $lis = Docsify.dom.findAll($sidebar, "li");
+            var $content = Docsify.dom.find(".markdown-section")
             $lis.forEach(li => {
                 var $ul = Docsify.dom.find(li, "ul");
                 /**
@@ -148,8 +150,10 @@
                                 that.disActive(item, false);
                         })
                     }
+                    // that.customActive(parentLi)
                     if (!isActive) {
                         that.active(parentLi, true);
+                        $content.scrollTop = 0
                     } else {
                         that.disActive(parentLi, false);
                     }
@@ -200,9 +204,16 @@
             let el = Docsify.dom.create("div", html);
             Docsify.dom.toggleClass(el, "content-anchors");
             let $liList = Docsify.dom.findAll(el, "li");
+            let $main_content = Docsify.dom.find(".markdown-section")
+            let that = this
             $liList.forEach($li => {
                 let $a = Docsify.dom.find($li, "a");
                 Docsify.dom.on($a, "click", function () {
+                    let id = that.formatTitle2ID($a.getAttribute('href').substr($a.getAttribute('href').indexOf("id=") + 3))
+                    let top = Math.round(window.document.getElementById(decodeURI(id)).getBoundingClientRect().top)
+
+                    top = top - 80
+                    $main_content.scrollTop += top
                     $liList.forEach(item => {
                         if (item.classList.contains("active")) {
                             Docsify.dom.toggleClass(item, "active");
@@ -294,6 +305,16 @@
             });
             return tpl.replace('{inner}', innerHTML);
         },
+        formatTitle2ID (str) {
+            let s_char = [{ key: '<', value: 'lt' }, { key: '>', value: 'gt' }, { key: '&', value: 'amp' }, { key: '\'', value: 'apos' }, { key: '\"', value: 'quot' }]
+            let newStr = str
+            s_char.forEach(item => {
+                if (str.indexOf(item.key) != -1) {
+                    newStr = str.replace(new RegExp(item.key, 'g'), item.value)
+                }
+            })
+            return newStr
+        }
     }
     function $init () {
         return function (hook, vm) {

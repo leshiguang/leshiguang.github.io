@@ -1,0 +1,90 @@
+body {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', '\5FAE\8F6F\96C5\9ED1',
+      'Microsoft Yahei', tahoma, arial, '\5B8B\4F53';
+  }
+  main {
+    width: var(--content-width);
+    position: relative;
+    top: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  .content {
+    display: flex;
+    position: relative;
+  }
+  .content .content-anchors {
+    position: absolute;
+    right: 0px;
+    background-color: var(--content-anchors-bg);
+    width: var(--content-anchors-width);
+    max-height: calc(100vh - 60px);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: block;
+    border-left: 2px solid #f2f3f5;
+  }
+  [data-page*='home'] .content .content-anchors {
+    display: none;
+  }
+  .content .content-anchors.hide {
+    display: none;
+  }
+  .content .content-anchors ul {
+    padding-left: 8px;
+    text-align: left;
+  }
+  .content .content-anchors ul li {
+    padding: 8px;
+    font-size: 14px;
+    list-style-type: none;
+    position: relative;
+  }
+  .content .content-anchors ul li:first-child {
+    margin-top: 0;
+  }
+  
+  .content .content-anchors ul li a {
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .content .content-anchors ul {
+    position: relative;
+  }
+  
+  .content .content-anchors ul .active a {
+    color: var(--theme-color, #155bd4);
+  }
+  
+  .content .content-anchors ul .active::before {
+    content: '';
+    width: 3px;
+    height: 20px;
+    background: var(--theme-color, #155bd4);
+    position: absolute;
+    left: -3px;
+    z-index: 222;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .sidebar::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  .content::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  .markdown-section::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  .content .content-anchors ul li a {
+    color: var(--sidebar-h2-font-color);
+    top: 50px;
+  }
+  

@@ -2287,7 +2287,8 @@
         Math.round(el.getBoundingClientRect().top) + window.pageYOffset - offset,
       duration: 500,
     })
-      .on('tick', function (v) { return window.scrollTo(0, v); })
+      .on('tick', function (v) {
+         return window.scrollTo(0, v); })
       .on('done', function () {
         enableScrollEvent = true;
         scroller = null;
@@ -8318,6 +8319,7 @@
 
   function initRender(vm) {
     var config = vm.config;
+    console.log(vm)
 
     // Init markdown compiler
     vm.compiler = new Compiler(config, vm.router);
