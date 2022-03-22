@@ -575,3 +575,27 @@ pre[data-lang] code .attr-value {
   max-width: unset;
   min-height: calc(100vh - 60px);
 }
+
+.markdown-section .markdown-menu {
+  margin: 50px;
+}
+.markdown-section .markdown-menu > ul {
+  list-style: none;
+  display: inline-table;
+  width: 100%;
+  padding: 30px;
+}
+.markdown-section .markdown-menu ul > li {
+  list-style: none;
+}
+.markdown-section .markdown-menu > ul > li {
+  border: 1px solid #ddd;
+}
+.markdown-section .markdown-menu a {
+  text-decoration: auto;
+}
+.markdown-section .markdown-menu .th {
+  background: #f1fade;
+  font-weight: bold;
+  border-top: 1px;
+}

@@ -16,6 +16,7 @@ footer .page-footer-copyright {
   background: transparent;
   border-top: 1px solid #f8f8f8;
   color: #f8f8f8;
+  display: inline-flex;
 }
 footer .page-footer-copyright a {
   font-size: 0.8571rem;

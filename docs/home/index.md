@@ -27,7 +27,7 @@
                         </div>
                         <p class="title">上手体验</p>
                         <p class="des">快速体验乐智健康小程序</p></a
-                    ><a class="suggest-prod" target="_blank" href="/beian1/README"
+                    ><a class="suggest-prod" target="_blank" href="/beian1/"
                         >
                         <div class="fa-logo">
                              <i class="fa fa-keyboard-o"></i>
@@ -42,7 +42,7 @@
 <div class="appList">
 
 - <a href="javascript:void(0);">关于我们</a>
-  - [拾果健康介绍](/solution/health/README)
+  - [拾果健康介绍](/solution/health/)
 
 </div>
 
@@ -55,9 +55,9 @@
 <div class="appList">
 
 - <a href="javascript:void(0);">解决方案</a>
-  <!-- - [保健品行业](/solution/health/README) -->
-  - [药店行业](/solution/drugstore/README)
-  - [社康行业](/solution/clinic/README)
+  <!-- - [保健品行业](/solution/health/) -->
+  - [药店行业](/solution/drugstore/)
+  - [社康行业](/solution/clinic/)
 
 </div>
 
@@ -66,7 +66,7 @@
 - <a href="javascript:void(0);">使用指南</a>
   - [API 文档](/develop-cloud/api/sign)
   - [SDK 集成](/develop-native/apply)
-  - [SDK 下载中心](/develop-native/download/README)
+  - [SDK 下载中心](/develop-native/download/)
 
 </div>
     </div>

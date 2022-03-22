@@ -6,7 +6,7 @@
 # 快速集成
 <a name="oZOVP"></a>
 ## SDK下载
-下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
+下载地址： [https://docs.leshiguang.com/download/](https://docs.leshiguang.com/download/)
 <a name="250a1dc2"></a>
 ## 项目依赖配置
 1、解压缩下载的压缩文件，您将看到三个Framework

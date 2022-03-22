@@ -19,6 +19,31 @@ body.sticky .sidebar {
   position: fixed;
   top: 50px;
 }
+
+.sidebar .sidebar-title {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #303030;
+  font-weight: 700;
+  padding-left: 10px;
+  border-bottom: 1px solid #eee;
+  background: #f8f8fa;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 222;
+}
+.sidebar .sidebar-title i {
+  margin-right: 10px;
+}
+.sidebar .sidebar-title a {
+  float: right;
+  padding-right: 9px;
+  cursor: pointer;
+}
 .sidebar.hide {
   display: none;
 }
@@ -78,7 +103,7 @@ body.sticky .sidebar {
 .sidebar .sidebar-nav > ul > li > ul > li > ul > li,
 .sidebar .sidebar-nav > ul > li > ul > li > ul > li a {
   font-size: 0.6rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .sidebar ul li.active a,
 .sidebar-nav li.active > ul > li.active > a,

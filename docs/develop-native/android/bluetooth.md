@@ -5,7 +5,7 @@
 # 快速集成
 <a name="iazCZ"></a>
 ## 蓝牙SDK下载
-下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
+下载地址： [https://docs.leshiguang.com/download/](https://docs.leshiguang.com/download/)
 <a name="LVJNh"></a>
 ## 项目依赖配置
 1、拷贝下载的SDK到项目的libs文件夹中<br />2、在module的build.gradle中添加本地仓库地址：
@@ -927,7 +927,7 @@ com.lifesense.ble.OnDeviceReadListener是一个接口类，在调用接口readDe
 SDK 接口所用到的常量定义在 com.lifesense.ble.bean.constant 包里，使用这些枚举常量的时候可 以在项目里导入这个包，如 import com.lifesense.ble.bean.constant.*;或者指定导入某个常量。 
 <a name="1ny2l"></a>
 ### DeviceType（设备类型}
- UNKNOWN 表示未知类型的设备 <br /> WEIGHT_SCALE 体重秤 <br /> PEDOMETER 手环或手表 <br /> SPHYGMOMANOMETER 血压计 <br /> KITCHEN_SCALE 厨房秤 <br /> HEIGHT_RULER 身高测量仪 <br /> FAT_SCALE 脂肪秤 
+ UNKNOWN 表示未知类型的设备 <br /> WEIGHT_SCALE 体重秤 <br /> PEDOMETER 手环或手表 <br /> bloodpressure 血压计 <br /> KITCHEN_SCALE 厨房秤 <br /> HEIGHT_RULER 身高测量仪 <br /> FAT_SCALE 脂肪秤 
 <a name="JgPki"></a>
 ### BroadacstType(广播模式）
  ALL 全广播，包括正常与配对广播 <br /> NORMAL 正常广播信号 <br /> PAIR 配对广播信号 

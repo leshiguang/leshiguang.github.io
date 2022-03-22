@@ -1,12 +1,23 @@
-<div class="sidebar-title "><i class="fa  fa-plus-square"></i>体脂秤</div>
+<div class="sidebar-title">智能体脂秤</div>
 
-
-* [产品简介](/hardware/scale/scale)
-* 型号分类
-  - [乐心S7](/hardware/scale/lifesense/S7)
-  - [乐心S12](/hardware/scale/lifesense/S12)
-* 购买指南
-  - [收费标准](/hardware/scale/scale)
-  - [线上下单](/hardware/scale/scale)
-* 常见问题
-  - [血压计](/hardware/scale/scale)
+- [产品简介](/hardware/scale/intro/)
+- 型号介绍
+  - [乐心S12](/hardware/scale/model/lifesense-S12)
+  - [乐心S7](/hardware/scale/model/lifesense-S7)
+- 购买指南
+  - [收费标准](/hardware/scale/purchase/fees)
+  - [下单流程](/hardware/scale/purchase/buy)
+- SDK指南
+  - [绑定流程](/hardware/scale/dev/andorid/bind)
+  - andorid
+      - [数据接收](/hardware/scale/dev/andorid/data)
+  - ios
+      - [数据接收](/hardware/scale/dev/ios/data)
+  - [小程序](/hardware/scale/dev/miniprogram/npm)
+- 接口对接
+  - [接口签名](/hardware/scale/dev/cloud/sign)
+  - [接口文档](/hardware/scale/dev/cloud/api)
+  - 数据订阅
+     - [订阅流程](/hardware/scale/dev/cloud/push-intro)
+     - [订阅接入](/hardware/scale/dev/cloud/push)
+- [常见问题](/hardware/scale/faq/)

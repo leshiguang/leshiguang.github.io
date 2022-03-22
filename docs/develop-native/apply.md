@@ -47,7 +47,7 @@
 
 <br />乐智云api：
 
-- 云api对接文档（商业版， 需要联系对应的商务开通权限）：[https://docs.leshiguang.com/develop-cloud/README](https://docs.leshiguang.com/develop-cloud/README)
+- 云api对接文档（商业版， 需要联系对应的商务开通权限）：[https://docs.leshiguang.com/develop-cloud/](https://docs.leshiguang.com/develop-cloud/)
 
 乐智云算法：
 

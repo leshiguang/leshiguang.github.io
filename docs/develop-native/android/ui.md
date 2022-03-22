@@ -5,7 +5,7 @@
 # 快速集成
 <a name="LvlIQ"></a>
 ## SDK下载
-下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
+下载地址： [https://docs.leshiguang.com/download/](https://docs.leshiguang.com/download/)
 <a name="wAasu"></a>
 ## 添加依赖
 拷贝所需的aar包到libs目录下：

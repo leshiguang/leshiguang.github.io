@@ -87,14 +87,14 @@
             var $a = Docsify.dom.create("a", innerText);
             var $icon = Docsify.dom.create("i");
             Docsify.dom.toggleClass($icon, "add", 'fa');
-            Docsify.dom.toggleClass($icon, "add", 'fa-angle-right');
+            Docsify.dom.toggleClass($icon, "add", 'fa-angle-down');
             Docsify.dom.appendTo($a, $icon);
             return $a;
         },
         titleToggle: function () {
             var $sidebarTitle = Docsify.dom.find(".sidebar-title");
             if ($sidebarTitle) {
-                var $faRight = Docsify.dom.find($sidebarTitle, '.fa-angle-right')
+                var $faRight = Docsify.dom.find($sidebarTitle, '.fa-angle-down')
                 if (!$faRight) {
                     var $a = this.createA()
                     Docsify.dom.appendTo($sidebarTitle, $a);
@@ -115,11 +115,11 @@
         },
         toggleIcon ($icon, active) {
             if (active) {
-                Docsify.dom.toggleClass($icon, "remove", "fa-angle-right");
-                Docsify.dom.toggleClass($icon, "add", "fa-angle-down");
-            } else {
                 Docsify.dom.toggleClass($icon, "remove", "fa-angle-down");
-                Docsify.dom.toggleClass($icon, "add", "fa-angle-right");
+                Docsify.dom.toggleClass($icon, "add", "fa-angle-up");
+            } else {
+                Docsify.dom.toggleClass($icon, "remove", "fa-angle-up");
+                Docsify.dom.toggleClass($icon, "add", "fa-angle-down");
             }
         },
         $init: function (vm) {
@@ -177,7 +177,7 @@
                         var $a = Docsify.dom.create("a", innerText);
                         var $icon = Docsify.dom.create("i");
                         Docsify.dom.toggleClass($icon, 'fa');
-                        Docsify.dom.toggleClass($icon, 'fa-angle-down');
+                        Docsify.dom.toggleClass($icon, 'fa-angle-up');
                         Docsify.dom.appendTo($a, $icon);
                         li.firstChild.replaceWith($a);
                     }

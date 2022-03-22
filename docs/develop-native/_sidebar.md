@@ -1,3 +1,5 @@
+<div class="sidebar-title ">SDK集成</div>
+
 - [接入申请](/develop-native/apply)
 - Android开发指南
    - [蓝牙](/dev-android/bluetooth/summary)
