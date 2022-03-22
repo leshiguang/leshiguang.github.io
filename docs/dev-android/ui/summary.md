@@ -1,10 +1,10 @@
 <a name="SXXrH"></a>
 ## 关于SDK
-UI级SDK是乐智提供的健康管理解决方案的集成方案之一，在UI级SDK内部涵盖了设备绑定、设备自动连接、设备数据自动上传到乐智云及数据分析和页面呈现一整套完整的方案。UI级SDK不会采集用户身份相关的信息（手机号、邮箱、身份证等证件）。<br />
+UI级SDK是拾果提供的健康管理解决方案的集成方案之一，在UI级SDK内部涵盖了设备绑定、设备自动连接、设备数据自动上传到拾果云及数据分析和页面呈现一整套完整的方案。UI级SDK不会采集用户身份相关的信息（手机号、邮箱、身份证等证件）。<br />
 
 <a name="54RnH"></a>
 ## 合作模式介绍
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616570476413-402a0c43-c4ff-46b4-80b3-1cca35e72b0a.png#align=left&display=inline&height=489&margin=%5Bobject%20Object%5D&name=image.png&originHeight=489&originWidth=698&size=47236&status=done&style=none&width=698)<br />*约定：连接线实线表示您或您的用户需要对接或需要操作的流程、连接线虚线代表UI级SDK或设备自动完成的部分，关于实线的部分，您可以选择不实现。<br />流程解释：<br />1、初始化UI级SDK， 完成授权流程<br />2、用户打开设备页面，搜索绑定设备<br />3、设备产生数据后若是蓝牙设备则自动上报数据到UI级SDK，若是Wifi、GPRS、NB设备则自动上报数据到乐智云平台<br />4、UI级SDK上传设备数据到乐智云平台<br />5、UI级SDK通知App有数据更新<br />6、客户App告知自己的云平台有数据更新（可选流程）<br />7、客户云平台对接乐智云平台拉取用户的数据并存储（可选流程）<br />
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/265997/1616570476413-402a0c43-c4ff-46b4-80b3-1cca35e72b0a.png#align=left&display=inline&height=489&margin=%5Bobject%20Object%5D&name=image.png&originHeight=489&originWidth=698&size=47236&status=done&style=none&width=698)<br />*约定：连接线实线表示您或您的用户需要对接或需要操作的流程、连接线虚线代表UI级SDK或设备自动完成的部分，关于实线的部分，您可以选择不实现。<br />流程解释：<br />1、初始化UI级SDK， 完成授权流程<br />2、用户打开设备页面，搜索绑定设备<br />3、设备产生数据后若是蓝牙设备则自动上报数据到UI级SDK，若是Wifi、GPRS、NB设备则自动上报数据到拾果云平台<br />4、UI级SDK上传设备数据到拾果云平台<br />5、UI级SDK通知App有数据更新<br />6、客户App告知自己的云平台有数据更新（可选流程）<br />7、客户云平台对接拾果云平台拉取用户的数据并存储（可选流程）<br />
 
 <a name="nVmzg"></a>
 ## 接入申请

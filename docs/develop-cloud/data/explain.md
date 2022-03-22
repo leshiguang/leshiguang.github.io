@@ -6,7 +6,7 @@
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | filterMap | Map | 筛选条件 | ​<br /> |
-| bizCode | String | 业务code | 统一由乐智申请给到 |
+| bizCode | String | 业务code | 统一由拾果申请给到 |
 
 
 <br />出参：

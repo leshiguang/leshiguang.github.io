@@ -1,10 +1,6 @@
 [data-page*='home'] .main {
   display: block;
 }
-[data-page*='home'] main {
-  min-height: calc(100vh - 60px);
-  width: 100vw;
-}
 [data-page*='home'] .sidebar {
   display: none;
 }
@@ -21,7 +17,12 @@
 }
 
 [data-page*='home'] .content .markdown-section h2 {
-  font-size: 30px;
+  margin-top: 140px;
+  font-size: 44px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 600;
+  color: #222;
+  line-height: 56px;
 }
 .homepage .homepage-suggest .homepage-suggest-container {
   margin-bottom: 32px;
@@ -157,9 +158,6 @@
 
 .homepage-top {
   height: 450px;
-  margin-top: -65px;
-  text-align: center;
-  /* background: #fafbff; */
   background-image: url(https://files.lifesense.com/other/20211215/27e137cd6fb840679a7cc8abf62a6c33.png);
   background-repeat: no-repeat;
   background-position: center;

@@ -585,11 +585,13 @@ pre[data-lang] code .attr-value {
   width: 100%;
   padding: 30px;
 }
-.markdown-section .markdown-menu ul > li {
+.markdown-section .markdown-menu ul li {
   list-style: none;
+  padding: 5px 8px;
 }
 .markdown-section .markdown-menu > ul > li {
   border: 1px solid #ddd;
+  padding: 5px 8px;
 }
 .markdown-section .markdown-menu a {
   text-decoration: auto;

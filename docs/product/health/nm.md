@@ -5,7 +5,7 @@
 <a name="R60T4"></a>
 ## 专业背书
 
-- 营养均衡评估模型，由乐智健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
+- 营养均衡评估模型，由拾果健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
 - 模型参考了陈君石院士、周建烈院士主编的《维生素矿物质补充剂在疾病防治中的临床应用：专家共识》，国际最佳营养学会创始人帕特里克.霍尔福德的著作，以及中国营养学会《中国居民膳食营养素参考摄入量（2013版）》等专业文献，极力保证方案的专业度、科学性。
 - 科普文章与中国营养学会会员、原浙大医学院附属第二医院临床营养师金星老师合作，由金星老师提供专业科普文章，助力提升用户对营养均衡重要性的认知。
 
@@ -40,7 +40,7 @@
 <a name="viq24"></a>
 ## 健康问卷
 
-- 评估问卷由乐智健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
+- 评估问卷由拾果健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
 - 用户可以通过勾选自己关心的健康问题进行评估，系统根据用户勾选情况向用户推送对应问卷题目（一次只能选择1~4个健康问题）。更有针对性、用户负担更轻。
 - 选择完健康问题后，用户可选择简单版（题目少）或全面版（题目全面）进行答题。
    - 简单版：答完能够获得缺乏的营养素、营养素补充方案。
@@ -55,7 +55,7 @@
 <a name="aoDms"></a>
 ## 评估介绍
 从健康问题选择页，可查看评估介绍。<br />介绍说明评估的目的、价值以及专业背书，并提供科普文章，提升用户认知和信服度。<br />![评估介绍.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626093638442-be467317-02e7-4703-a34d-9e6ad57f9837.png#clientId=u5770b8e2-fc48-4&from=drop&id=ud0efa7f8&margin=%5Bobject%20Object%5D&name=%E8%AF%84%E4%BC%B0%E4%BB%8B%E7%BB%8D.png&originHeight=3124&originWidth=1900&originalType=binary&ratio=1&size=1039599&status=done&style=none&taskId=ub85483b0-6a6d-4453-b1d6-0deb41621ef)<br />
-<br />乐智健康和著名营养师金星老师合作，提供专业营养知识科普文章。<br />通过加强用户对营养均衡的重视，强力引导用户参与营养均衡评估，来提升产品转化率。<br />![科普文章.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626146224406-fa6870d4-238f-4dd2-9ab5-8496fdf7bc87.png#clientId=u253a48ce-b237-4&from=drop&height=1042&id=u9e5c44ee&margin=%5Bobject%20Object%5D&name=%E7%A7%91%E6%99%AE%E6%96%87%E7%AB%A0.png&originHeight=2545&originWidth=1414&originalType=binary&ratio=1&size=1108763&status=done&style=none&taskId=u128f8be4-7aba-4a23-8636-dfb29a2e5c6&width=578.7604370117188)<br />
+<br />拾果健康和著名营养师金星老师合作，提供专业营养知识科普文章。<br />通过加强用户对营养均衡的重视，强力引导用户参与营养均衡评估，来提升产品转化率。<br />![科普文章.png](https://cdn.nlark.com/yuque/0/2021/png/5376726/1626146224406-fa6870d4-238f-4dd2-9ab5-8496fdf7bc87.png#clientId=u253a48ce-b237-4&from=drop&height=1042&id=u9e5c44ee&margin=%5Bobject%20Object%5D&name=%E7%A7%91%E6%99%AE%E6%96%87%E7%AB%A0.png&originHeight=2545&originWidth=1414&originalType=binary&ratio=1&size=1108763&status=done&style=none&taskId=u128f8be4-7aba-4a23-8636-dfb29a2e5c6&width=578.7604370117188)<br />
 
 <a name="M5Y44"></a>
 ## 营养素详细分析

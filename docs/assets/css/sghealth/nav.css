@@ -5,12 +5,12 @@
   right: 0 !important;
   margin: 0px auto;
   height: 50px;
-  position: relative;
   border-bottom: 1px solid #eee;
   background: #ffffff;
-  height: 50px;
   box-sizing: content-box;
-  text-align: center;
+}
+.app-nav li{
+  padding: 0px;
 }
 .app-nav.no-badge .nav-container {
   width: var(--content-width);
@@ -87,13 +87,14 @@
   appearance: none;
 }
 
-.app-nav.no-badge .nav-container .nav-menu ul {
-  /* padding-inline-start: 0px; */
+.app-nav.no-badge .nav-container .nav-menu > ul {
+  height: 50px;
+  line-height: 50px;
+  float: left;
 }
 .app-nav.no-badge .nav-container .nav-menu ul > li {
   display: inline-block;
   position: relative;
-  padding: 0px;
   font-size: 14px;
   font-weight: bold;
   color: #142655;
@@ -113,11 +114,10 @@
   display: block;
 }
 
-.app-nav.no-badge .nav-container .nav-menu ul a,
-i {
-  display: block;
+.app-nav.no-badge .nav-container .nav-menu ul a {
   line-height: 30px;
-  padding: 5px 0px;
+  height: 30px;
+  margin: 5px 0px;
   position: relative;
   font-size: 16px;
   font-weight: 700;
@@ -125,8 +125,7 @@ i {
 }
 
 .app-nav.no-badge .nav-container .nav-menu > ul > li i {
-  padding-top: 13px;
-  padding-left: 5px;
+  margin: 0px 5px;
 }
 .app-nav.no-badge .nav-container .nav-menu > ul > li > ul {
   min-width: 150px;
@@ -142,7 +141,7 @@ i {
 
 .app-nav.no-badge .nav-container .nav-menu > ul > li > ul > li a {
   line-height: 30px;
-  margin: 0px;
+  margin: 5px 0px;
   padding: 2px 20px;
   font-size: 14px;
   font-weight: normal;
@@ -163,14 +162,14 @@ i {
 
 .app-nav.no-badge .nav-container .nav-menu > ul > li a.active {
   color: var(--theme-color, #155bd4);
-  border-bottom: 2px solid var(--theme-color, #155bd4);
+  border-bottom: 3px solid var(--theme-color, #155bd4);
 }
 
 .app-nav.no-badge .nav-container .nav-menu > ul > li a:hover {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
-  border-bottom: 2px solid var(--theme-color, #155bd4);
+  border-bottom: 3px solid var(--theme-color, #155bd4);
 }
 
 .app-nav.no-badge .nav-container .nav-menu > ul > li > ul > li a:hover {

@@ -1,6 +1,8 @@
 
+<div class="sidebar-title">API 文档</div>
+
 - [API签名](/develop-cloud/api/sign)
-- 乐智云API(商业版)
+- 拾果云API(商业版)
    - 用户服务
       - [静默登录](/develop-cloud/user/login)
       - [用户信息](/develop-cloud/user/info)
@@ -43,14 +45,14 @@
       - [接口说明](/develop-cloud/data/explain)
       - [访问留存](/develop-cloud/data/retention)
       - [健康数据](/develop-cloud/data/health)
-- 乐智云数据订阅（商业版）
+- 拾果云数据订阅（商业版）
    - [数据推送对接流程](/develop-cloud/datapush/common)
    - 设备维度数据推送
       - [设备维度数据推送](/develop-cloud/datapush/device/healthdata)
    - 用户维度数据推送
       - [用户健康数据推送](/develop-cloud/datapush/user/healthdata)
       - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
-- 乐智云算法
+- 拾果云算法
    - [体脂](/develop-cloud/algorithm/fat)
    - [体脂V2](/develop-cloud/algorithm/fat/v2)
    - [睡眠分析](/develop-cloud/algorithm/sleep)

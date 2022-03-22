@@ -146,7 +146,7 @@ DeviceNetManager.getInstance().updateUser(user, null);
 ```
 <a name="YVBCV"></a>
 ### 2.1.3、 设置蓝牙设备数据的回调
-功能描述：蓝牙数据通过设备上传到sdk后，会直接上传到乐智云平台，同时也会通过本地消息的方式分发给订阅者<br />接口：com.lifesense.device.scale.application.service.LZDeviceService
+功能描述：蓝牙数据通过设备上传到sdk后，会直接上传到拾果云平台，同时也会通过本地消息的方式分发给订阅者<br />接口：com.lifesense.device.scale.application.service.LZDeviceService
 ```java
     void registerDataReceiveCallBack(BleReceiveCallback callback);
 ```

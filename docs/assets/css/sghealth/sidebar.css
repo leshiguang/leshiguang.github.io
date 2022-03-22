@@ -1,7 +1,4 @@
 footer {
-  display: none;
-}
-[data-page*='home'] footer {
   display: block;
 }
 .sidebar-toggle {

@@ -5,7 +5,7 @@
 <a name="bJt1e"></a>
 ## 专业背书
 
-- 营养均衡评估模型，由乐智健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
+- 营养均衡评估模型，由拾果健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
 - 模型参考了陈君石院士、周建烈院士主编的《维生素矿物质补充剂在疾病防治中的临床应用：专家共识》，国际最佳营养学会创始人帕特里克.霍尔福德的著作，以及中国营养学会《中国居民膳食营养素参考摄入量（2013版）》等专业文献，极力保证方案的专业度、科学性。
 - 科普文章与中国营养学会会员、原浙大医学院附属第二医院临床营养师金星老师合作，由金星老师提供专业科普文章，助力提升用户对营养均衡重要性的认知。
 
@@ -42,7 +42,7 @@
 <a name="dTua6"></a>
 ## 健康问卷
 
-- 评估问卷由乐智健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
+- 评估问卷由拾果健康与中国工程院陈君石院士旗下的专业健康管理技术团队共同打造。
 - 用户可以通过勾选自己关心的健康问题进行评估，系统根据用户勾选情况向用户推送对应问卷题目。更有针对性、用户负担更轻。
 - 问卷均采用选择题形式，便于用户操作。
 - 问卷内容包括：
@@ -54,7 +54,7 @@
 <a name="AYczn"></a>
 ## 评估介绍
 从健康问题选择页，可查看评估介绍。<br />介绍说明评估的目的、价值以及专业背书，并提供科普文章，提升用户认知和信服度。<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/349268/1620357016977-1ada720d-03af-4eb0-888b-af332b502d65.png#clientId=u4b9f15f2-f3e5-4&from=paste&height=772&id=u57b3e934&margin=%5Bobject%20Object%5D&name=image.png&originHeight=2436&originWidth=1676&originalType=binary&size=1037711&status=done&style=none&taskId=u00d30db9-c546-480f-8173-e6ab49d6771&width=530.9971313476562)<br />
-<br />乐智健康和著名营养师金星老师合作，提供专业营养知识科普文章。<br />通过加强用户对营养均衡的重视，强力引导用户参与营养均衡评估、进入营养管理链路，来提升产品转化率。<br />![页面_2.png](https://cdn.nlark.com/yuque/0/2021/png/12836903/1616048752658-00f9af6d-f55f-4a8f-8a85-0cf64de105de.png#height=530&id=zwtkn&margin=%5Bobject%20Object%5D&name=%E9%A1%B5%E9%9D%A2_2.png&originHeight=5181&originWidth=2788&originalType=binary&size=2425739&status=done&style=none&width=285)<br />
+<br />拾果健康和著名营养师金星老师合作，提供专业营养知识科普文章。<br />通过加强用户对营养均衡的重视，强力引导用户参与营养均衡评估、进入营养管理链路，来提升产品转化率。<br />![页面_2.png](https://cdn.nlark.com/yuque/0/2021/png/12836903/1616048752658-00f9af6d-f55f-4a8f-8a85-0cf64de105de.png#height=530&id=zwtkn&margin=%5Bobject%20Object%5D&name=%E9%A1%B5%E9%9D%A2_2.png&originHeight=5181&originWidth=2788&originalType=binary&size=2425739&status=done&style=none&width=285)<br />
 
 <a name="rFrih"></a>
 ## 营养素详细分析

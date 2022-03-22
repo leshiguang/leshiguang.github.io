@@ -1,6 +1,6 @@
 <a name="wPoi4"></a>
 # 1、方案介绍
-乐心医疗专业从事家用医疗健康电子产品的研发、生产和销售，及智能健康云平台的研发和运营。 乐心医疗成立于2002年，于2019年成立乐智健康产研中心。  创建软硬件一体化血压监测管理系统。 从高血压筛查入手，助力药店行业数字化转型，为高血压人群提供全方位健康管理工具。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/294004/1601432147652-b36b9fee-f034-49f5-bfe7-24a5f75c88bf.png#align=left&display=inline&height=292&margin=%5Bobject%20Object%5D&name=image.png&originHeight=584&originWidth=1280&size=156593&status=done&style=none&width=640)<br />旨在为产业赋能，互利共赢，深挖行业现状，直击药店痛点，为药店提供一整套的解决方案。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/294004/1601432265596-68e64f0d-796b-4b6c-a2ee-205aa1d32980.png#align=left&display=inline&height=278&margin=%5Bobject%20Object%5D&name=image.png&originHeight=556&originWidth=1280&size=130181&status=done&style=none&width=640)
+乐心医疗专业从事家用医疗健康电子产品的研发、生产和销售，及智能健康云平台的研发和运营。 乐心医疗成立于2002年，于2019年成立拾果健康产研中心。  创建软硬件一体化血压监测管理系统。 从高血压筛查入手，助力药店行业数字化转型，为高血压人群提供全方位健康管理工具。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/294004/1601432147652-b36b9fee-f034-49f5-bfe7-24a5f75c88bf.png#align=left&display=inline&height=292&margin=%5Bobject%20Object%5D&name=image.png&originHeight=584&originWidth=1280&size=156593&status=done&style=none&width=640)<br />旨在为产业赋能，互利共赢，深挖行业现状，直击药店痛点，为药店提供一整套的解决方案。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/294004/1601432265596-68e64f0d-796b-4b6c-a2ee-205aa1d32980.png#align=left&display=inline&height=278&margin=%5Bobject%20Object%5D&name=image.png&originHeight=556&originWidth=1280&size=130181&status=done&style=none&width=640)
 <a name="71DIY"></a>
 # 2、产品说明
 <a name="dxZH8"></a>

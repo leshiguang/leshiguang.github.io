@@ -63,7 +63,7 @@
 <a name="9lwlZ"></a>
 #### 2、项目依赖配置
 
-<br />1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     乐智UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
+<br />1、项目中依赖的framework<br />LSAuthorization.framework         三方登录鉴权<br />LSBluetooth.framework              核心蓝牙库， 处理传输层和链路层数据，维持设备连接和通信<br />LSBluetoothUI_iOS.framework     拾果UI解决方案接入<br />LSDeviceManagerFramework.framework     设备核心库， 处理设备管理、设置和数据上传<br />LSNetwork_iOS.framework         网络库，打通IOT平台<br />
 <br />
 
 <a name="FOnmM"></a>
@@ -236,7 +236,7 @@ pod 'MBProgressHUD', '0.9.2'
         //登录成功后需要进行蓝牙SDK登录
         [[LSDeviceManager shareInstance] loginWithUserId:weakSelf.lzUserId];
         
-		//如果需要使用乐智UI,需要进行下面初始化操作
+		//如果需要使用拾果UI,需要进行下面初始化操作
         LSBluetoothUIAccountInfo *accountInfo = [[LSBluetoothUIAccountInfo alloc] init];
         accountInfo.userId = weakSelf.lzUserId;
         accountInfo.accessToken = weakSelf.accessToken;
