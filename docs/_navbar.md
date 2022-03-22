@@ -12,9 +12,9 @@
     - [智能体脂秤](/hardware/scale/)
     <!-- - [智能手表](/hardware/watch/) -->
 
-  - <a href="javascript:void(0);">产品&服务<i class="fa fa-angle-down"></i></a>
+  <!-- - <a href="javascript:void(0);">产品&服务<i class="fa fa-angle-down"></i></a>
     - [健康服务](/product/health/)
-    - [运营服务](/product/operation/)
+    - [运营服务](/product/operation/) -->
 
   - <a href="javascript:void(0);">SDK&工具<i class="fa fa-angle-down"></i></a>
     - [SDK 集成](/develop-native/apply)
