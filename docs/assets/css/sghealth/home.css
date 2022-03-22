@@ -1,6 +1,9 @@
 [data-page*='home'] .main {
   display: block;
 }
+[data-page*='home'] main {
+  width: 100vw;
+}
 [data-page*='home'] .sidebar {
   display: none;
 }
@@ -158,6 +161,7 @@
 
 .homepage-top {
   height: 450px;
+  text-align: center;
   background-image: url(https://files.lifesense.com/other/20211215/27e137cd6fb840679a7cc8abf62a6c33.png);
   background-repeat: no-repeat;
   background-position: center;
