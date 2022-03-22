@@ -43,23 +43,23 @@
 <div class="appList">
 
 - <a href="javascript:void(0);">智能硬件</a>
-  - [智能体脂秤](/hardware/scale/)
-  - [智能血压计](/hardware/bloodpressure/)
+  - [智能体脂秤](/hardware/scale/README)
+  - [智能血压计](/hardware/bloodpressure/README)
 
 </div>
 <div class="appList">
 
 - <a href="javascript:void(0);">产品&服务</a>
-  <!-- - [健康服务](/product/health/)
-  - [运营服务](/product/operation/) -->
+  <!-- - [健康服务](/product/health/README)
+  - [运营服务](/product/operation/README) -->
 
 </div>
 
 <div class="appList">
 
 - <a href="javascript:void(0);">解决方案</a>
-  - [药店行业](/solution/drugstore/)
-  - [社康行业](/solution/clinic/)
+  - [药店行业](/solution/drugstore/README)
+  - [社康行业](/solution/clinic/README)
 
 </div>
 
@@ -68,7 +68,7 @@
 - <a href="javascript:void(0);">使用指南</a>
   - [API 文档](/develop-cloud/api/sign)
   - [SDK 集成](/develop-native/apply)
-  - [SDK 下载中心](/develop-native/download/)
+  - [SDK 下载中心](/develop-native/download/README)
 
 </div>
     </div>

@@ -1,6 +1,6 @@
 <div class="markdown-menu">
 
-- [产品简介](/hardware/scale/intro/)
+- [产品简介](/hardware/scale/intro/README)
 - 型号介绍
   - [乐心S12](/hardware/scale/model/lifesense-S12)
   - [乐心S7](/hardware/scale/model/lifesense-S7)
@@ -20,6 +20,6 @@
   - 数据订阅
      - [订阅流程](/hardware/scale/dev/cloud/push-intro)
      - [订阅接入](/hardware/scale/dev/cloud/push)
-- [常见问题](/hardware/scale/faq/)
+- [常见问题](/hardware/scale/faq/README)
 
 </div>

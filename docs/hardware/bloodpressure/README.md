@@ -1,6 +1,6 @@
 <div class="markdown-menu">
 
-- [产品简介](/hardware/bloodpressure/intro/)
+- [产品简介](/hardware/bloodpressure/intro/README)
 - 型号介绍
   - [乐心I9 wifi版本](/hardware/bloodpressure/model/lifesense-i9)
   - [乐心I7 蓝牙版本](/hardware/bloodpressure/model/lifesense-i7)
@@ -20,6 +20,6 @@
   - 数据订阅
      - [订阅流程](/hardware/bloodpressure/dev/cloud/push-intro)
      - [订阅接入](/hardware/bloodpressure/dev/cloud/push)
-- [常见问题](/hardware/bloodpressure/faq/)
+- [常见问题](/hardware/bloodpressure/faq/README)
 
 </div>

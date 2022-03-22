@@ -811,7 +811,7 @@ WeatherState
 
 <a name="G9GRF"></a>
 # 常见问题
-拾果云平台蓝牙设备接入帮助地址：[https://docs.leshiguang.com/FAQ/](https://docs.leshiguang.com/FAQ/)<br />
+拾果云平台蓝牙设备接入帮助地址：[https://docs.leshiguang.com/FAQ/README](https://docs.leshiguang.com/FAQ/README)<br />
 <br />
 
 
