@@ -71,7 +71,59 @@
   border-top: 1px solid #ccc;
 }
 
-.markdown-section p.tip,
+.markdown-section table {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  table-layout: fixed;
+  border-color: #dfe1e6;
+}
+.markdown-section table * > p {
+  font-size: 14px;
+  color: #252b3a;
+  line-height: 22px;
+}
+.markdown-section table * > p:last-child {
+  margin-bottom: 0;
+}
+.markdown-section table * > th {
+  padding: 12px 20px;
+  background: #eef0f4;
+  border-top-color: transparent;
+}
+.markdown-section table * > th:first-child {
+  border-left-color: #eef0f4;
+}
+.markdown-section table * > th:last-child {
+  border-right-color: #eef0f4;
+}
+.markdown-section table * > td {
+  padding: 20px;
+  word-wrap: break-word;
+}
+.markdown-section table caption {
+  text-align: left;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #252b3a;
+  line-height: 22px;
+}
+.markdown-section table caption b {
+  font-weight: normal;
+}
+.markdown-section table thead {
+  background: #f6f7ff;
+}
+.markdown-section table thead tr th {
+  padding: 12px 20px;
+}
+.markdown-section table pre {
+  white-space: pre-wrap;
+}
+.markdown-section table ul,
+.markdown-section table ol {
+  margin-bottom: 0;
+}
 .markdown-section tr:nth-child(2n) {
   background-color: #f8f8f8;
 }

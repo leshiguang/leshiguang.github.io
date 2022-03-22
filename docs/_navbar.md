@@ -19,9 +19,9 @@
   - <a href="javascript:void(0);">SDK&工具<i class="fa fa-angle-down"></i></a>
     - [SDK 集成](/develop-native/apply)
     - [SDK 下载](/develop-native/download/)
-  - [API 文档](develop-cloud/api/sign)
+  - [API文档](develop-cloud/api/sign)
   - [解决方案](solution/drugstore/)
-  - [帮助](FAQ/README)
+  - [帮助中心](FAQ/README)
 
   </div>
   <div class="nav-right">
