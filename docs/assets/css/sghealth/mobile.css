@@ -16,7 +16,7 @@
     display: block;
   }
   body.sticky .sidebar {
-    position: absolute;
+    position: fixed;
   }
   body.sticky .sidebar-toggle {
     position: fixed;
