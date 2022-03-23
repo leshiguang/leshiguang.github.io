@@ -22,6 +22,9 @@
     bottom: 200px;
     display: flex;
   }
+  body.sticky[data-page*='home'] .sidebar-toggle {
+    display: none;
+  }
   .content .content-anchors {
     display: none;
   }
@@ -115,16 +118,6 @@
     min-height: 50px;
     justify-content: space-between;
   }
-  /* .app-nav.no-badge .nav-header .docs-logo {
-    position: fixed;
-    width: 90px;
-    height: 60px;
-    left: 10px;
-    top: -6px;
-    background: url(https://files.lifesense.com/other/20211215/0c4dff78e1c5485c87e83c1c2dcb3f9d.png)
-      center center no-repeat;
-    background-size: 100%;
-  } */
   .markdown-section .homepage .homepage-docs {
     display: contents;
   }
@@ -144,6 +137,12 @@
     padding: 14px;
     max-width: calc(100vw - 20px);
     min-width: calc(100vw - 20px);
+  }
+  footer .page-footer-copyright {
+    display: block;
+  }
+  .sidebar-toggle:hover .sidebar-toggle-button {
+    opacity: 1;
   }
   [data-page*='home'] .content .markdown-section {
     max-width: 100%;
