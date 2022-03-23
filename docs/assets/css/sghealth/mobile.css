@@ -4,6 +4,7 @@
     margin-left: 0px;
     max-width: 100vw;
     position: relative;
+    padding-top: 0px;
     transition: transform 0.25s ease;
   }
   .app-nav {
@@ -18,8 +19,9 @@
     position: absolute;
   }
   body.sticky .sidebar-toggle {
-    position: absolute;
-    bottom: 200px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
     display: flex;
   }
   body.sticky[data-page*='home'] .sidebar-toggle {
@@ -50,8 +52,9 @@
   }
   .app-nav.no-badge .nav-container .nav-right {
     position: fixed;
-    display: inline-block;
-    float: right;
+    display: inline-flex;
+    right: 0px;
+    width: 60px;
   }
   .app-nav.no-badge .nav-container .nav-right .nav-menu-collapse {
     display: block;
@@ -134,11 +137,15 @@
   }
   .markdown-section,
   .search-results.show {
-    padding: 14px;
     max-width: calc(100vw - 20px);
     min-width: calc(100vw - 20px);
+    position: relative;
+    padding: 5px;
   }
   footer .page-footer-copyright {
+    display: none;
+  }
+  [data-page*='home'] footer .page-footer-copyright {
     display: block;
   }
   .sidebar-toggle:hover .sidebar-toggle-button {
