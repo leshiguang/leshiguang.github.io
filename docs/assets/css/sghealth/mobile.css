@@ -2,10 +2,8 @@
 @media screen and (max-width: 768px) {
   .content {
     margin-left: 0px;
-    top: 50px;
     max-width: 100vw;
     position: relative;
-    padding-top: 20px;
     transition: transform 0.25s ease;
   }
   .app-nav {
@@ -14,18 +12,31 @@
 
   body.close .sidebar {
     transform: translateX(300px);
+    display: block;
   }
-  .app-nav.no-badge .nav-menu > ul > li > ul {
+  body.sticky .sidebar {
+    position: absolute;
+  }
+  body.sticky .sidebar-toggle {
+    position: absolute;
+    bottom: 200px;
+    display: flex;
+  }
+  .content .content-anchors {
+    display: none;
+  }
+  .app-nav.no-badge .nav-container .nav-menu > ul > li > ul {
     top: 0px;
     right: 0px;
     position: relative;
   }
-  .app-nav.no-badge .nav-menu {
+  .app-nav.no-badge .nav-container .nav-menu {
     display: none;
   }
-  .app-nav.no-badge .nav-menu.collapsed {
+  .app-nav.no-badge .nav-container .nav-menu.collapsed {
     background: #fafbff;
     display: block;
+    left: 100px;
     position: fixed;
     top: 50px;
     height: 450px;
@@ -34,23 +45,36 @@
     border-bottom: 0.5px solid #efefef;
     border-right: 0.5px solid #efefef;
   }
-  .app-nav.no-badge .nav-right .nav-menu-collapse {
+  .app-nav.no-badge .nav-container .nav-right {
+    position: fixed;
+    display: inline-block;
+    float: right;
+  }
+  .app-nav.no-badge .nav-container .nav-right .nav-menu-collapse {
     display: block;
     margin-right: 5px;
   }
-  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-collapse {
+  .app-nav.no-badge
+    .nav-container
+    .nav-right
+    .nav-menu-collapse
+    .nav-menu-collapse {
     background-color: transparent;
     width: auto;
     padding: 30px 30px 10px 10px;
   }
-  .app-nav.no-badge .nav-right .nav-menu-collapse .nav-menu-toggle-button {
+  .app-nav.no-badge
+    .nav-container
+    .nav-right
+    .nav-menu-collapse
+    .nav-menu-toggle-button {
     position: relative;
     float: right;
-    height: 45px;
+    height: 40px;
     text-align: center;
     width: 50px;
-    line-height: 45px;
-    margin: 5px 0px;
+    line-height: 40px;
+    margin: 5px 0;
     background-color: var(--theme-color, #155bd4);
     cursor: pointer;
   }
@@ -64,19 +88,20 @@
     font-weight: lighter;
     width: 20px;
   }
-  .app-nav.no-badge .nav-menu > ul > li a:hover {
+  .app-nav.no-badge .nav-container .nav-menu > ul > li a:hover {
     border-bottom: 0px;
   }
-  .app-nav.no-badge .nav-menu > ul {
+  .app-nav.no-badge .nav-container .nav-menu > ul {
     text-align: start;
     width: 100%;
   }
-  .app-nav.no-badge .nav-menu > ul > li {
+  .app-nav.no-badge .nav-container .nav-menu > ul > li {
     display: grid;
   }
   main {
     height: auto;
     overflow-x: hidden;
+    width: 100%;
   }
   .markdown-section h1:first-of-type {
     text-align: start;
@@ -118,23 +143,11 @@
   .search-results.show {
     padding: 14px;
     max-width: calc(100vw - 20px);
+    min-width: calc(100vw - 20px);
   }
   [data-page*='home'] .content .markdown-section {
     max-width: 100%;
+    min-width: 100%;
     margin: auto;
-  }
-  .markdown-section table {
-    display: block;
-    width: max-content;
-    max-width: 100%;
-    overflow: auto;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .search .input-wrap {
-    width: 160px;
-    border-radius: 3px;
-    border: 0.5px solid var(--theme-color, #155bd4);
   }
 }

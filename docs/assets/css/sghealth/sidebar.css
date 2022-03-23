@@ -7,9 +7,6 @@ footer {
 body.sticky .sidebar {
   position: relative;
 }
-.sidebar-toggle {
-  display: none;
-}
 .sidebar {
   background-color: #fafbff;
   width: 250px;
