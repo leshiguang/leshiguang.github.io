@@ -140,7 +140,6 @@
     max-width: calc(100vw - 20px);
     min-width: calc(100vw - 20px);
     position: relative;
-    padding: 5px;
   }
   footer .page-footer-copyright {
     display: none;
