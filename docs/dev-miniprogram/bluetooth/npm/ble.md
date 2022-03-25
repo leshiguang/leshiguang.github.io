@@ -1,6 +1,10 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
 
+<a name="CU64w"></a>
+### 2.0.6
+
+- feat：新增index.d.ts 接口说明文档，方便开发时直接调用相对应的方法，而不用看文档
 <a name="p0Zj5"></a>
 ### 2.0.2
 
@@ -17,7 +21,7 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.2",						
+        "sg-ble": "^2.0.6",						
     }
 }
 ```
@@ -61,8 +65,7 @@ plugin.regist(bracelet);
 ```javascript
   plugin.init({
     //用邮件乐心分配的appId替换掉下面字符串
-      appId: "你申请的appkey",
-      logger: null,
+      appKey: "你申请的appkey",
     });
 ```
 
@@ -70,10 +73,10 @@ plugin.regist(bracelet);
 
 | 属性 | 类型 | 是否必要 | 说明 |
 | --- | --- | --- | --- |
-| appId | string | 是 | 搜索到的设备对象的回调 |
+| appKey | string | 是 | 搜索到的设备对象的回调 |
 | associatedId | string | 否 | 第三方关联userId，客户标记用户使用，方便标识日志 |
 | debug | boolean | 否 | 是否打印debug日志 |
-| logger | obj | 否 | 日志打印器，需要实现console的一些打印的方法， |
+| logger | obj | 否 | 日志打印器，需要实现console的一些打印的方法，详情参考 index.d.ts |
 
 <a name="nQuug"></a>
 # 2 设备相关
