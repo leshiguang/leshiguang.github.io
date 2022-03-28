@@ -273,9 +273,9 @@ let setting = new bracelet.settingFactory.HeartRateDetectSetting(1);
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | enable | boolean | 是否开关 |
-| index | number | 1～10   暂时只使用1就行   membo hr2只支持1～5 |
+| index | number | 1～10   序号 |
 | type | number | 1: 喝水  2: 加餐  3: 睡觉 |
-| desc | string | 是否开关 |
+| desc | string | 事件名称 |
 | hour | number | 开始时间 小时 |
 | minute | number | 开始时间 分钟 |
 | repeatTime | number | 第0位表示星期一的开关... 第6bit表示星期日的开关，全0表示不重复 456无效 |
