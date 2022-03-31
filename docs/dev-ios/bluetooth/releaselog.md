@@ -2,6 +2,9 @@
 
 | 更新日期 | 名称 | 版本 | 下载地址 | 更新日志 |
 | --- | --- | --- | --- | --- |
+| 2022-3-31 | LZBluetooth | 2.0.1 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip) | 1、新增回调deviceInfo:didReceiveMeasurementData: 方法 |
+| 2022-3-31 | LZBracelet | 1.0.2 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip) | 1、修复hr6的一些解析方法<br />2、适配新回调（部分数据）<br />deviceInfo:didReceiveMeasurementData: |
+| 2022-3-31 | LZBloodPressure | 1.0.1 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip) | 1、适配新回调<br />deviceInfo:didReceiveMeasurementData: |
 | 2022-3-10 | LZBracelet | 1.0.0 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.0/LZBracelet.framework.zip) | 1、支持手环&手表的库 |
 | 2022-3-10 | LZBloodPressure | 1.0.0 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBloodPressure/1.0.0/LZBloodPressure.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBloodPressure/1.0.0/LZBloodPressure.framework.zip) | 1、支持血压计的库 |
 | 2022-3-10 | LZScale | 1.0.0 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZScale/1.0.0/LZScale.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZScale/1.0.0/LZScale.framework.zip) | 1、支持秤的库 |
