@@ -11,7 +11,7 @@ URL：域名 +  /api/family/v1.0/counselorData/getALlRiskLabel<br />类型：GE
 ##### 出参:
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| label | Map<String, Integer> | 标签    新版使用     <br />String 标签,Integer 标签code | ​<br /> |
+| label | Map<String, Integer> | 标签    新版使用     <br />String 标签,Integer 标签code | <br /> |
 | weight | Map<String, Integer> | 体重标签  旧版使用 |  |
 | sleep | Map<String, Integer> | 睡眠标签  旧版使用 |  |
 
@@ -41,16 +41,21 @@ URL：域名 +  /api/family/v1.0/counselorData/getALlRiskLabel<br />类型：GE
 ```
 <a name="H6qtG"></a>
 ## 2. 会员列表筛选
-URL：域名 +  /api/family/v1.0/counselorData/listCustomerData<br />类型：GET
+URL：域名 +  /api/family/v1.0/counselorData/listCustomerData<br />类型：POST
 <a name="CZcdx"></a>
 ##### URL入参:
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | associatedId | String | 顾问的关联账号id | 标识对接用户，双方约定字段 |
+
+<a name="fyZX6"></a>
+##### POST报文入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
 | pageNum | Integer | 页码 | 必传 |
 | pageSize | Integer | 每页数量 | 必传 |
-| condition | String | 名称或手机号模糊查询 | ​<br /> |
-| tagCodes | List<Integer> | 筛选的标签code | ​<br /> |
+| condition | String | 名称或手机号模糊查询 | <br /> |
+| tagCodes | List<Integer> | 筛选的标签code | <br /> |
 | sortType | 排序类型 | 排序类型<br />* 关联时间  associate_time<br />* 风险标签数量 risk_label_num<br />* 订单数量 order_num<br />* 成交金额 total_pay_amount |  |
 
 <a name="V41SK"></a>
