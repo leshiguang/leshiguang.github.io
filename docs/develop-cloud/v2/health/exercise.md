@@ -7,49 +7,47 @@
 <a name="Cbj0y"></a>
 # 1.运动上传
 
-
 <a name="vodik"></a>
 ## 1.1 上传手环的运动数据
-
 
 ```
 POST /api/exercise/v2.0/upload/uploadDeviceExerciseRecord
 ```
 
-<br />**入参:**
+**入参:**
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | list | List<设备运动记录> | 运动集合 |  |
 
 
-<br />**设备运动记录：**
+**设备运动记录：**
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| deviceId | String | 设备id | ​<br /> |
-| startTime | Date | 开始时间 | ​<br /> |
-| endTime | Date | 结束时间 | ​<br /> |
+| deviceId | String | 设备id | <br /> |
+| startTime | Date | 开始时间 | <br /> |
+| endTime | Date | 结束时间 | <br /> |
 | step | Integer | 总步数，当锻炼类型为4时代表趟数 |  |
-| calories | BigDecimal | 总卡路里 | ​<br /> |
+| calories | BigDecimal | 总卡路里 | <br /> |
 | distance | BigDecimal | 总里程 | 单位：米 |
 | exerciseTime | Integer | 运动时长 | 单位：秒 |
-| maxHeartRate | Integer | 最大心率 | ​<br /> |
-| maxStepRate | Integer | 最大步频 | ​<br /> |
-| avgHeartRate | Integer | 平均心率 | ​<br /> |
-| avgStepRate | Integer | 平均步频 | ​<br /> |
+| maxHeartRate | Integer | 最大心率 | <br /> |
+| maxStepRate | Integer | 最大步频 | <br /> |
+| avgHeartRate | Integer | 平均心率 | <br /> |
+| avgStepRate | Integer | 平均步频 | <br /> |
 | dataSource | Integer | 数据来源 | 0-设备<br />1-微信<br />2-安卓app<br />3-iosApp<br />4-其他 |
-| created | Date | 创建时间 | ​<br /> |
-| updated | Long | 更新时间 | ​<br /> |
-| requestTime | Long | 请求时间 | ​<br /> |
-| dataType | Integer | 数据类型 | ​<br /> |
+| created | Date | 创建时间 | <br /> |
+| updated | Long | 更新时间 | <br /> |
+| requestTime | Long | 请求时间 | <br /> |
+| dataType | Integer | 数据类型 | <br /> |
 | avgPace | Integer | 平均配速 | 单位： s/km |
 | avgSpeed | BigDecimal | 平均速度 | 单位：km/h |
 | bestSpeed | BigDecimal | 最大速度 | 单位：km/h |
 | exerciseType | Integer | 锻炼类型 |  |
 
 
-<br />**示例数据：**
+**示例数据：**
 ```sql
 
 {
@@ -94,19 +92,18 @@ POST /api/exercise/v2.0/upload/uploadDeviceExerciseRecord
 <a name="OQ9ex"></a>
 ## 1.2 上传非手环的运动数据
 
-
 ```
 POST /api/exercise/v2.0/upload/uploadManualExerciseRecord
 ```
 
-<br />**入参:**
+**入参:**
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | list | List<手动运动记录> | 运动集合 |  |
 
 
-<br />**手动运动记录：**
+**手动运动记录：**
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
@@ -116,7 +113,7 @@ POST /api/exercise/v2.0/upload/uploadManualExerciseRecord
 | feelType | Integer | 运动感受 | 1-疲惫 <br />2-正好<br />3-轻松 |
 
 
-<br />**示例数据：**
+**示例数据：**
 ```sql
 
 {
@@ -141,7 +138,66 @@ POST /api/exercise/v2.0/upload/uploadManualExerciseRecord
 
 ```
 
+<a name="DTmtP"></a>
+## 1.3 上传跳绳记录
+```
+POST /api/sportmanage/v2.0/train/upload/skiprope
+```
+**入参:**
 
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| list | List<Obj> | 跳绳数据列表 | 
+
+ |
+
+跳绳记录列表：
+
+| 字段 | 类型 | 描述 | 是否必传 | 其他 |
+| --- | --- | --- | --- | --- |
+| deviceId | String | _设备id_ | 是 | <br /> |
+| startTime | Long | _开始时间_ | 是 | <br /> |
+| endTime | Long | _结束时间_ | 是 | <br /> |
+| calories | Double | _总卡路里_ | 是 | <br /> |
+| exerciseTime | Integer | _运动时长_ | 是 | 单位：秒 |
+| dataSource | Integer | 数据涞源 | 是 | 0-设备；<br />1-微信；<br />2-安卓app；<br />3-iosApp；<br />4-其他；(默认)<br />101-手动添加运动记录 |
+| dataType | Integer | 数据类型 | 是 | 50-跳绳设备产生的数据<br />101-手动添加运动类型 |
+| exerciseType | Integer | 锻炼类型 | 是 | 25-跳绳 |
+| skipRopeMode | Integer | 跳绳模式 | <br />是 | 1 - "自由模式"<br />2- "定时模式"<br />3- "计数模式"<br />4- "闯关模式" |
+| skipCount | Integer | 跳绳个数 | <br />是 | 
+
+ |
+| skipAvgCount | Integer | 跳绳频次 | <br />是 | 
+
+ |
+| skipTripCount | Integer | 绊绳次数 | <br />是 | 
+
+ |
+| passLevel | Integer | 闯关等级 | 否 | 闯关模式必传 |
+
+出参：<br />无<br />示例入参报文：
+```json
+
+{
+  "list":[
+    {
+      "deviceId":"7210db000001",
+      "startTime":1645701205000,
+      "endTime":1645701305000,
+      "calories":"0.4",
+      "exerciseTime":4,
+      "dataSource":0,
+      "dataType":50,
+      "exerciseType":25,
+      "skipRopeMode":2,
+      "skipCount":2,
+      "skipAvgCount":30,
+      "skipTripCount":10
+    }
+  ]
+}
+
+```
 <a name="tIk58"></a>
 # 2.运动查询
 <a name="JhhzL"></a>
@@ -150,24 +206,23 @@ POST /api/exercise/v2.0/upload/uploadManualExerciseRecord
 GET /api/exercise/v2.0/query/getLastThirtyDaysExercise
 ```
 
-<br />**入参:**
+**入参:**
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
-​
 
 **出参:**
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| totalCalories | BigDecimal | 所有运动的总消耗卡路里 | ​<br /> |
-| totalExerciseMinute | Long | 运动时长，单位分钟 | ​<br /> |
-| dayRecordList | List<ExerciseDayListDTO>  | 锻炼记录 | ​<br /> |
+| totalCalories | BigDecimal | 所有运动的总消耗卡路里 | <br /> |
+| totalExerciseMinute | Long | 运动时长，单位分钟 | <br /> |
+| dayRecordList | List<ExerciseDayListDTO>  | 锻炼记录 | <br /> |
 
 
-<br />ExerciseDayListDTO
+ExerciseDayListDTO
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
@@ -175,14 +230,14 @@ GET /api/exercise/v2.0/query/getLastThirtyDaysExercise
 | recordList | List<ExerciseBriefInfoDTO> | 运动记录集合 |  |
 
 
-<br />ExerciseBriefInfoDTO
+ExerciseBriefInfoDTO
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | sportId | String | 运动id |  |
 | exerciseType | Integer | 运动类型 | 取值见下文 |
 | exerciseName | String | 运动名称 |  |
-| startTime | Date | 运动开始时间 | ​<br /> |
+| startTime | Date | 运动开始时间 | <br /> |
 | exerciseMinute | Integer | 运动时长 |  |
 | calories | double | 消耗卡路里 |  |
 | manual | boolean | 是否是手动添加的运动数据 |  |
@@ -211,7 +266,7 @@ exerciseType：手环支持的运动类型如下
 (23,"划船机"),
 (24,"自由训练")
 ```
-还支持手动添加运动数据，手动添加的运动类型很多，不在这里列出<br />**​**
+还支持手动添加运动数据，手动添加的运动类型很多，不在这里列出
 
 **示例数据：**
 ```sql
@@ -300,7 +355,6 @@ exerciseType：手环支持的运动类型如下
 
 ```
 
-
 <a name="wlhNj"></a>
 ## 2.2  查询单条锻炼记录
 ```
@@ -313,49 +367,49 @@ GET /api/exercise/v2.0/query/getExerciseRecord
 | sportId | String | 运动记录ID |  |
 
 
-<br />**出参:**<br />**​**
+**出参:**
 
 SaaSExerciseRecordDTO
 
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| id | String | 运动记录ID | ​<br /> |
-| userId | Long | 用户id | ​<br /> |
-| deviceId | String | 设备id | ​<br /> |
-| startTime | Date | 开始时间 | ​<br /> |
-| endTime | Date | 结束时间 | ​<br /> |
-| step | Integer | 总步数，当锻炼类型为4时代表趟数 | ​<br /> |
-| calories | BigDecimal | 总卡路里 | ​<br /> |
+| id | String | 运动记录ID | <br /> |
+| userId | Long | 用户id | <br /> |
+| deviceId | String | 设备id | <br /> |
+| startTime | Date | 开始时间 | <br /> |
+| endTime | Date | 结束时间 | <br /> |
+| step | Integer | 总步数，当锻炼类型为4时代表趟数 | <br /> |
+| calories | BigDecimal | 总卡路里 | <br /> |
 | distance | BigDecimal | 总里程 | 单位：米 |
-| exerciseMinute | Integer | 运动分钟数 | ​<br /> |
-| maxHeartRate | Integer | 最大心率 | ​<br /> |
-| maxStepRate | Integer | 最大步频 | ​<br /> |
-| avgHeartRate | Integer | 平均心率 | ​<br /> |
-| avgStepRate | Integer | 平均步频 | ​<br /> |
-| dataSource | Integer | 数据来源 | ​<br /> |
-| created | Date | 创建时间 | ​<br /> |
-| updated | Long | 更新时间 | ​<br /> |
-| requestTime | Long | 请求时间 | ​<br /> |
-| dataType | Integer | 数据类型 | ​<br /> |
+| exerciseMinute | Integer | 运动分钟数 | <br /> |
+| maxHeartRate | Integer | 最大心率 | <br /> |
+| maxStepRate | Integer | 最大步频 | <br /> |
+| avgHeartRate | Integer | 平均心率 | <br /> |
+| avgStepRate | Integer | 平均步频 | <br /> |
+| dataSource | Integer | 数据来源 | <br /> |
+| created | Date | 创建时间 | <br /> |
+| updated | Long | 更新时间 | <br /> |
+| requestTime | Long | 请求时间 | <br /> |
+| dataType | Integer | 数据类型 | <br /> |
 | speed | Integer | 配速 | 单位：km/h |
-| exerciseType | Integer | 锻炼类型 | ​<br /> |
-| changeStartTime | Long | 用户变更开始时间 | ​<br /> |
-| changeEndTime | Long | 用户变更结束时间 | ​<br /> |
+| exerciseType | Integer | 锻炼类型 | <br /> |
+| changeStartTime | Long | 用户变更开始时间 | <br /> |
+| changeEndTime | Long | 用户变更结束时间 | <br /> |
 | paces | List<Integer>  | 配速信息 | 单位：秒 |
 | paceInterval | Integer | 配速间隔距离 | 单位：米 |
 | avgPace | Integer | 平均配速 | 单位: km/h |
-| swmRounds | Integer | 游泳圈数-游泳类型 | ​<br /> |
-| poolLength | Integer | 泳池长度-游泳类型 | ​<br /> |
-| remark | String | 存储设备相关信息 | ​<br /> |
+| swmRounds | Integer | 游泳圈数-游泳类型 | <br /> |
+| poolLength | Integer | 泳池长度-游泳类型 | <br /> |
+| remark | String | 存储设备相关信息 | <br /> |
 | avgSpeed | BigDecimal | 平均速度  | 单位：km/h |
 | bestSpeed | BigDecimal | 最大速度  | 单位：km/h |
-| exerciseName | String | 运动名 | ​<br /> |
-| icon | String | 图标 | ​<br /> |
+| exerciseName | String | 运动名 | <br /> |
+| icon | String | 图标 | <br /> |
 | feelType | Integer | 运动感受 | (1, "疲惫"),<br />(2, "正好"),<br />(3, "轻松") |
-| ifManual | Boolean | 是否是手动上传 | ​<br /> |
+| ifManual | Boolean | 是否是手动上传 | <br /> |
 
 
-<br />**示例数据：**
+**示例数据：**
 ```sql
 
 {
@@ -394,22 +448,20 @@ SaaSExerciseRecordDTO
 
 ```
 
-
 <a name="D4Xbf"></a>
 ## 2.3  批量查询锻炼记录
 ```
 POST /api/exercise/v2.0/query/batchGetExerciseRecords
 ```
 
-
 <a name="TQa1I"></a>
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| sportIds | List<String>  | 运动记录ID列表 | ​<br /> |
+| sportIds | List<String>  | 运动记录ID列表 | <br /> |
 
 
-<br />**出参:**<br />List<SaaSExerciseRecordDTO><br />实例数据：
+**出参:**<br />List<SaaSExerciseRecordDTO><br />实例数据：
 ```sql
 
 {
@@ -502,13 +554,11 @@ POST /api/exercise/v2.0/query/batchGetExerciseRecords
 
 ```
 
-
 <a name="IaqCl"></a>
 ## 2.4 查询用户某一天的运动记录
 ```
 GET /api/exercise/v2.0/query/getOneDayExerciseRecord
 ```
-
 
 <a name="IL6Wf"></a>
 ##### 入参:
@@ -517,7 +567,7 @@ GET /api/exercise/v2.0/query/getOneDayExerciseRecord
 | queryTime | Long | 查询时间戳<br />eg:<br />1627355668000<br />(2021-07-27 11:14:28) | 如果指定时间当天运动记录不存在，<br />查询最近有记录的那一天的运动记录 |
 
 
-<br />**出参:**<br />List<SaaSExerciseRecordDTO><br />实例：
+**出参:**<br />List<SaaSExerciseRecordDTO><br />实例：
 ```sql
 
 {
@@ -609,6 +659,5 @@ GET /api/exercise/v2.0/query/getOneDayExerciseRecord
 
 
 ```
-
 
 
