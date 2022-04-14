@@ -14,8 +14,9 @@ POST /api/device/bind/v1.0/bindDevice
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| **deviceKeyType** | String | 设备标识类型，可选值为：id：设备id；sn:  设备sn | 必传 |
-| **deviceKey** | string | 根据key类型传相应的值 | 必传 |
+| deviceKeyType | String | 设备标识类型，可选值为：id：设备id；sn:  设备sn | 必传 |
+| deviceKey | string | 根据key类型传相应的值 | 必传 |
+| userNo | Integer |  | 非必传，血压计传0 |
 
 
 **请求示例：**
@@ -708,6 +709,49 @@ POST /api/device/v1.0/user/setting/save
 
 **出参：**无
 
+<a name="gISN9"></a>
+# 9.血压计分配用户
+```bash
+POST /api/device/bind/v1.0/bp/bindDeviceButtonNo
+```
+
+**header参数或者url参数**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
+
+**post入参**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| deviceId | String | 设备ID | 必传 |
+| list | List<UsernoInfo> | 用户信息 | 必传 |
+
+**UsernoInfo**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| userId | Long | 用户ID |  |
+| userNo | Integer | 按键编号 | 1 or 2 |
+
+**请求示例：**
+```json
+{
+    "deviceId":"ab040522cc22",
+    "list":[
+        {
+            "userId":39704304,
+            "userNo":1
+        },
+        {
+            "userId":39704304,
+            "userNo":1
+        }
+    ]
+}
+```
+**出参：**<br />同接口1、绑定设备
 
 
 
