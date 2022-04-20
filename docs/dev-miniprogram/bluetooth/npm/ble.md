@@ -1,10 +1,17 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
 
+<a name="TiKMX"></a>
+### 2.0.8
+
+- fix：解决isPlugin的报错问题
+
 <a name="CU64w"></a>
 ### 2.0.6
 
 - feat：新增index.d.ts 接口说明文档，方便开发时直接调用相对应的方法，而不用看文档
+<a name="SZ9z7"></a>
+### 
 <a name="p0Zj5"></a>
 ### 2.0.2
 
@@ -21,7 +28,7 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.6",						
+        "sg-ble": "^2.0.8",						
     }
 }
 ```
