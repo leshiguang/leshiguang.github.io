@@ -2,8 +2,13 @@
 <a name="JO0ZI"></a>
 # 1、版本更新日志
 
+<a name="Y6hce"></a>
+### 1.0.4
+
+- fix：解决手环报错的问题
+
 <a name="p0Zj5"></a>
-### 1.0.0
+### 1.0.1
 
 - 对应插件1.0.15版本拆出来的模块
 
@@ -17,7 +22,7 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.4",	
+        "sg-ble": "^2.0.8",	
         "sg-bracelet": "^1.0.1"
     }
 }
@@ -668,6 +673,57 @@ let weather = {
 
 <a name="f4SA2"></a>
 # 4、数据接收
+
+注：新手环或手表即 型号为456或者460数据接收需要调用pushsetting获取数据，例如
+```javascript
+
+export const enum SyncDataType {
+  heartRate = 0x01,               // 常规心率记录
+  sleepDetail = 0x02,             // 睡眠明细记录  
+  sportPace = 0x03,               // 运动配速记录
+  sportHeartRate = 0x04,          // 运动心率记录
+  sportCalories = 0x05,           // 运动卡洛里记录
+  silenceHeartRate = 0x06,        // 静息心率记录
+  generalStepDetail = 0x07,       // 常规计步明细记录
+  dailyGeneralStepDetail = 0x08,  // 当天常规计步明细记录
+  dailyGeneralHrDetail = 0x09,    // 当天常规心率明细记录电
+  lastCharging = 0x0a,            // 最后一次充电记录
+  brightness = 0x0b,              // 当前亮度设定
+  dialData = 0x0c,                // 表盘数据记录
+  sportStepFreq = 0x0d,           // 运动步频记录
+  sportPaceIn = 0x0e,             // 运动配速记录（英制）
+  sectionHr = 0x0f,               // 区间心率数据
+
+  dailyHour = 0x81,               // 每小时报告
+  dailyDay = 0x82,                // 每天报告
+  sportReport = 0x83,             // 运动报告
+  bloodOxygen = 0x84,             // 血氧测量报告（点测）
+  meditation = 0x85,              // 冥想测量报告
+  sleepQuality = 0x86,            // 睡眠质量报告
+  dailyBloodOxygen = 0x87,        // 当天血氧测量报告
+  statusHeartRate = 0x88,         // 状态心率数据
+  continuousBloodOxygen = 0x89,   // 连续血氧报告
+  sleepRespiratoryQuality = 0x8a, // 睡眠呼吸质量报告
+  pressureTest = 0x8b,            // 压力测试报告
+  hearRateTest = 0x8c,            // 点测心率数据报告
+  stand = 0x8d,                   // 站立数据
+
+  burialPointData = 0xf0,         // 埋点数据记录（参见0x5B）
+  burialPointDataStatistics = 0xf1,// 埋点数据统计（参见0x11）
+
+  measureData = 0xfe,             // 全部测量数据
+  all = 0xff,                     // 以上所有数据
+}
+
+注：不同设备支持的项是有区别的，你可以直接使用 0xfe 获取全部测量数据
+let settingInfo = new bracelet.settingFactory.SyncReqSetting(SyncDataType);
+plugin.pushSetting(settingInfo).then(_ => {
+    console.warn('获取数据成功');
+}).catch(error => {
+    console.warn("失败", error)
+});
+```
+
 <a name="tUyAK"></a>
 ### 4.1 总结数据 DailyData
 
