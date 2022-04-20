@@ -1,6 +1,13 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
+<a name="ttWAp"></a>
+### 
+<a name="czs6M"></a>
+### 1.1.0
 
+- feat: 新增哑铃支持
+<a name="f6vm8"></a>
+### 
 <a name="p0Zj5"></a>
 ### 1.0.15
 
@@ -106,7 +113,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 [申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)
 
 ```javascript
-  plugin.init({
+  ble.init({
     //用邮件乐心分配的appId替换掉下面字符串
       appId: "你申请的appkey",
       logger: null,
@@ -146,7 +153,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 
 ```javascript
 // 开始扫描设备
-  plugin.startScanning(device => {
+  ble.startScanning(device => {
     // 将扫描到的设备保存，具体参数参考具体接口
     scanResults.push(device);
     // 刷新UI
@@ -309,7 +316,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 
 ```javascript
 // 取消绑定
-plugin.cancelBind({ mac });
+ble.cancelBind({ mac });
 ```
 
 请求参数：`Object object`
@@ -328,13 +335,13 @@ plugin.cancelBind({ mac });
   /// 添加监听
   // 如果是安卓设备，则需要判断位置是否可用，位置权限是否可用 let { locationEnabled, locationAuthorized } = wx.getSystemInfoSync();
   
-  plugin.addMonitorDevice({ 
+  ble.addMonitorDevice({ 
     mac: this.data.mac,
     model: this.data.model,
   })
 
   // 替换目前已监听的
-  plugin.setMonitroDevice({ 
+  ble.setMonitroDevice({ 
     mac: this.data.mac,
     model: this.data.model,
   })
@@ -355,12 +362,12 @@ plugin.cancelBind({ mac });
 
 ```javascript
   /// 删除某个正在监听的设备
-  plugin.deleteMonitorDevice({ 
+  ble.deleteMonitorDevice({ 
     mac: this.data.mac,
   })
 
   // 删除全部正在监听的设备
-  plugin.deleteAllMonitorDevice({ 
+  ble.deleteAllMonitorDevice({ 
     mac: this.data.mac,
     model: this.data.model,
   })
@@ -373,7 +380,7 @@ plugin.cancelBind({ mac });
 
 ```javascript
 // 当前蓝牙是否可用
-  let bluetoothAvalible = plugin.isBluetoothAvailable();
+  let bluetoothAvalible = ble.isBluetoothAvailable();
   // mac 设备的唯一标识
   let state = plugin.getConnectionState({mac}});
 ```
@@ -730,7 +737,7 @@ App发送Wifi SSID和密码到设备， 设备自动进行Wifi的连接过程，
 | remainCount | number | 剩余测量数据条数 |
 | unit | number | 0=kg,1=lb,2=st,3=斤 |
 | weight | number | 体重 (单位kg) |
-| utc | number | utc |
+| utc | number | 时间戳 注：存在断电后的时间重置，使用方需要根据使用情况进行过滤处理 |
 | resistance | number | 电阻值 |
 | userNumber | number | 用户编号 |
 | timeZone | number | 时区 （缺失，使用当前系统的时区） |
@@ -1800,7 +1807,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 ### 9.4.1 产品列表页
 
 - 产品列表可以选择需要绑定的设备
-- 产品列表展示的设备需要由拾果工作人员进行配置
+- 产品列表展示的设备需要由乐智工作人员进行配置
 - 页面跳转
 
 ```javascript
