@@ -17,8 +17,8 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.2",	
-        "sg-scale": "^1.0.0"
+        "sg-ble": "^2.0.4",	
+        "sg-scale": "^1.0.1"
     }
 }
 ```
@@ -212,7 +212,7 @@ App发送Wifi SSID和密码到设备， 设备自动进行Wifi的连接过程，
 | remainCount | number | 剩余测量数据条数 |
 | unit | number | 0=kg,1=lb,2=st,3=斤 |
 | weight | number | 体重 (单位kg) |
-| utc | number | utc |
+| utc | number | 时间戳  注：可能存在断电后的时间重置，使用方需要根据使用情况进行过滤处理 |
 | resistance | number | 电阻值 |
 | userNumber | number | 用户编号 |
 | timeZone | number | 时区 （缺失，使用当前系统的时区） |
