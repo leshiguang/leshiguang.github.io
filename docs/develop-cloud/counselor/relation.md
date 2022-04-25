@@ -17,8 +17,9 @@
 
 <a name="HOIRB"></a>
 ##### 出参:
-无<br />
-<br />示例返回报文：
+无
+
+示例返回报文：
 ```json
 {
 	"code":200,  //200-成功  81000-指定顾问不存在或未开通顾问身份
@@ -43,8 +44,9 @@
 
 <a name="dFeXs"></a>
 ##### 出参:
-无<br />
-<br />示例返回报文：
+无
+
+示例返回报文：
 ```json
 {
 	"code":200,  //200-成功  81000-指定顾问不存在或未开通顾问身份
@@ -63,8 +65,9 @@
 
 <a name="NPcCg"></a>
 ##### 出参:
-List<String>  顾问关联账号ID列表<br />
-<br />示例返回报文：
+List<String>  顾问关联账号ID列表
+
+示例返回报文：
 ```json
 {
   "code":200,
@@ -74,5 +77,29 @@ List<String>  顾问关联账号ID列表<br />
 
 ```
 <a name="H0gyV"></a>
-## ​<br />
+## 4. 会员 开启/关闭顾问的数据项授权
+**URL**：域名 +  /api/family/v1.0/counselorModification/changeCounselorPermissions<br />**类型**：POST
+<a name="cbv1P"></a>
+##### URL入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 会员关联账号id | 标识对接用户，双方约定字段 |
+
+<a name="wnMJy"></a>
+##### POST报文入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| counselorAssociatedId | String | 顾问关联账号ID | 必传 |
+| permission | String | 权限(传null 表示修改所有权限)<br />体重-weightQuery<br />睡眠-sleepQuery<br />步数-stepQuery<br />心率-heartRateQuery<br />血压-bloodPressureQuery<br />血糖-bloodSugarQuery<br />饮食-dietQuery<br />用药-medicineQuery | 可空 |
+| open | Boolean | 开启/关闭 | 必传 |
+
+示例返回报文：
+```json
+{
+	"code":200,  //200-成功  81000-指定顾问不存在或未开通顾问身份
+	"msg":"成功",
+  "data":true //true-更新成功 false-无可更新内容或更新失败
+}
+
+```
 
