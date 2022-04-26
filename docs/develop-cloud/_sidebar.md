@@ -17,7 +17,7 @@
       - [健康评估](/develop-cloud/health/estimate)
       - [免疫力评估](/develop-cloud/v1/health/immune)
       - [营养均衡评估](/develop-cloud/v1/health/nutritionEval)
-      - [有氧能力](https://lifesense.yuque.com/develop-cloud/v1/health/aerobics)
+      - [有氧能力](/develop-cloud/v1/health/aerobics)
    - 健康服务V2
       - [步数V2](/develop-cloud/v2/health/step)
       - [体重V2](/develop-cloud/v2/health/weight)
