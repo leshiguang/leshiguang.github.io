@@ -64,7 +64,8 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
-| **sleepId** | data | String | 睡眠记录id |
+| **sleepId** | data | String | 睡眠记录ID |
+| userId | data | Long | 用户ID |
 
 2）推送数据样例
 ```json
@@ -73,6 +74,7 @@
   "eventKey": "uSleepDeviceChangeE",
   "pushStatus": 1,
   "data": {
+    "userId": "323047100",
     "sleepId": "bracelet42ad51d6323047128598ee18d4206b00"
   }
 }
@@ -89,6 +91,7 @@
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
 | **sleepId** | data | String | 睡眠记录id |
+| userId | data | Long | 用户ID |
 
 2）推送数据样例
 ```json
@@ -97,6 +100,7 @@
   "eventKey": "uSleepDeviceChangeE",
   "pushStatus": 1,
   "data": {
+    "userId": "323047100",
     "sleepId": "diaryc0c31ed729bf4593a3c8fcf81642f37b"
   }
 }
@@ -157,8 +161,8 @@
 | data | - | Object | 字段具体解释见下方（data参数解释） |
 | **measurementDate** | data | Long | 测量时间（毫秒值） |
 | **glu** | data | Double | _血糖浓度 单位 mmol/L_ |
-| **mealPeriod** | data | Integer | _用餐时段 12 餐前 13餐后2小时 16随机_ |
-| **level** | data | Integer | _参考血糖等级_ |
+| **mealPeriod** | data | Integer | _用餐时段_<br />_ _0：空腹；<br />1：早餐后；<br />2：午餐前；<br />3：午餐后；<br />4：晚餐前；<br />5：晚餐后；<br />6：睡前； <br />11：凌晨；<br />12：餐前；<br />13：餐后2小时；<br />14：运动前；<br />15：运动后；<br />16：随机 |
+| **level** | data | Integer | _血糖等级:_<br />_0: 低血糖_<br />_1: 偏低_<br />_2: 正常_<br />_3: 偏高_<br />_4: 高血糖_ |
 
 2）推送数据样例
 ```json
@@ -171,7 +175,6 @@
   "data": {
     "glu": 23,
     "level": 4,
-    "mealPeriod": 3,
     "mealPeroid": 3,
     "measurementDate": 1625121120000,
     "userId": 200
@@ -228,7 +231,6 @@
 }
 ```
 <a name="Y9gef"></a>
-## ​<br />
-
+## <br />
 
 
