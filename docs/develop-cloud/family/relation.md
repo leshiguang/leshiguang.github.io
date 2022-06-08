@@ -124,5 +124,94 @@ boolean，表示解绑是否成功
 
 ```
 <a name="IsEXD"></a>
+## 5. 查询家人信息
+**URL**：域名 +  /api/family/v1.0/relation/queryRelationship<br />**类型**：GET
+<a name="HhoPs"></a>
+##### URL入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id | 当前登录用户ID |
+| associatedUserId | Long | 家人账号id | 要查询的家人账号ID |
+
+<a name="ncBmW"></a>
+##### 出参:
+
+示例返回报文：
+```json
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "associatedUserId": 413382,
+        "headUrl": "https://files.lifesense.com/other/20210224/ba43a1da179d42a3870bf57999957aec.png",
+        "nickname": "",              //昵称
+        "identity": "测试家人号",     //身份
+        "gender": 1,                 //性别
+        "birthday": 949334400000,    //生日
+        "height": 174.0,             //身高
+        "allowToSee": true,          //是否允许对方查看数据
+        "isInitiative": true,        //是否主动关联
+        "relationType": 1,           //关联家人号类型 0-实体  1-虚拟
+        "weightUnit": 1,             
+        "illnessList": [],
+        "questionDTO": {             //患病问题详情
+            "id": 70001,
+            "groupKey": "healthRiskEvaluate",
+            "questionType": 2,
+            "answer": "",
+            "analysis": "",
+            "questionStem": "您是否患有以下疾病？",  
+            "optionContent": {
+                "options": [
+                    {
+                        "optKey": "A",
+                        "optContent": "否",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "B",
+                        "optContent": "糖尿病",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "C",
+                        "optContent": "高血压",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "D",
+                        "optContent": "高尿酸血症/痛风",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "E",
+                        "optContent": "慢性肾病",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "F",
+                        "optContent": "慢性阻塞性肺疾病",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "G",
+                        "optContent": "支气管炎",
+                        "basal": false
+                    },
+                    {
+                        "optKey": "H",
+                        "optContent": "恶性肿瘤",
+                        "basal": false
+                    }
+                ]
+            }
+        },
+        "selectedKeys": [            //已勾选的患病标签
+            "C"
+        ]
+    }
+
+```
+<a name="jvEto"></a>
 ## <br />
 
