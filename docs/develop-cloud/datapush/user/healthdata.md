@@ -16,12 +16,12 @@
 2）推送数据样例
 ```json
 {
-  "dataTypeKey": "eventPush",
-  "eventKey": "uWeightChangeE",
-  "pushStatus": 1,
-  "data": {
-    "weightId": "00a4ec4328444ab9bcaa7e1ce49dec12"
-  }
+    "dataTypeKey":"eventPush",
+    "eventKey":"uWeightChangeE",
+    "pushStatus":1,
+    "data":{
+        "weightId":"00a4ec4328444ab9bcaa7e1ce49dec12"
+    }
 }
 ```
 <a name="sj3kj"></a>
@@ -40,15 +40,15 @@
 2）推送数据样例
 ```json
 {
-  "dataTypeKey": "eventPush",
-  "eventKey": "uWeightDeleteE",
-  "pushStatus": 1,
-  "data": {
-    "recordIds": [
-      "00a4ec4328444ab9bcaa7e1ce49dec12",
-      "011403cdb4d44681a01438725b5bf565"
-    ]
-  }
+    "dataTypeKey":"eventPush",
+    "eventKey":"uWeightDeleteE",
+    "pushStatus":1,
+    "data":{
+        "recordIds":[
+            "00a4ec4328444ab9bcaa7e1ce49dec12",
+            "011403cdb4d44681a01438725b5bf565"
+        ]
+    }
 }
 ```
 <a name="AuAdo"></a>
@@ -70,13 +70,13 @@
 2）推送数据样例
 ```json
 {
-  "dataTypeKey": "eventPush",
-  "eventKey": "uSleepDeviceChangeE",
-  "pushStatus": 1,
-  "data": {
-    "userId": "323047100",
-    "sleepId": "bracelet42ad51d6323047128598ee18d4206b00"
-  }
+    "dataTypeKey":"eventPush",
+    "eventKey":"uSleepDeviceChangeE",
+    "pushStatus":1,
+    "data":{
+        "userId":"323047100",
+        "sleepId":"bracelet42ad51d6323047128598ee18d4206b00"
+    }
 }
 ```
 <a name="JotKN"></a>
@@ -96,13 +96,13 @@
 2）推送数据样例
 ```json
 {
-  "dataTypeKey": "eventPush",
-  "eventKey": "uSleepDeviceChangeE",
-  "pushStatus": 1,
-  "data": {
-    "userId": "323047100",
-    "sleepId": "diaryc0c31ed729bf4593a3c8fcf81642f37b"
-  }
+    "dataTypeKey":"eventPush",
+    "eventKey":"uSleepDeviceChangeE",
+    "pushStatus":1,
+    "data":{
+        "userId":"323047100",
+        "sleepId":"diaryc0c31ed729bf4593a3c8fcf81642f37b"
+    }
 }
 ```
 <a name="ceXyh"></a>
@@ -129,23 +129,22 @@
 2）推送数据样例
 ```json
 {
-  "dataTypeKey": "uBp",
-  "eventKey": "dataPush",
-  "pushStatus": 1,
-  "userId": 23807166,
-  "associatedId":"xxxxxx",
-  "data": {
-    "dia": 220,
-    "ihb": false,
-    "measurementDate": 1624611480000,
-    "movementError": false,
-    "pul": 66,
-    "sys": 220,
-    "timeZone": "Asia/Shanghai",
-    "userId": 23807166,
-    "userNo": 0
-  }
-  
+    "dataTypeKey":"uBp",
+    "eventKey":"dataPush",
+    "pushStatus":1,
+    "userId":23807166,
+    "associatedId":"xxxxxx",
+    "data":{
+        "dia":220,
+        "ihb":false,
+        "measurementDate":1624611480000,
+        "movementError":false,
+        "pul":66,
+        "sys":220,
+        "timeZone":"Asia/Shanghai",
+        "userId":23807166,
+        "userNo":0
+    }
 }
 ```
 <a name="J53Gw"></a>
@@ -167,47 +166,22 @@
 2）推送数据样例
 ```json
 {
-  "userId": 200,
-  "associatedId": "201079547",
-  "dataTypeKey": "uBs",
-  "eventKey": "dataPush",
-  "pushStatus": 1,
-  "data": {
-    "glu": 23,
-    "level": 4,
-    "mealPeroid": 3,
-    "measurementDate": 1625121120000,
-    "userId": 200
-  }
-  
+    "userId":200,
+    "associatedId":"201079547",
+    "dataTypeKey":"uBs",
+    "eventKey":"dataPush",
+    "pushStatus":1,
+    "data":{
+        "glu":23,
+        "level":4,
+        "mealPeroid":3,
+        "measurementDate":1625121120000,
+        "userId":200
+    }
 }
 ```
 <a name="biYUd"></a>
-# 5.用户步数数据变更
-| eventKey | **eventPush** |
-| --- | --- |
-| dataTypeKey | **uStepChangeE** |
-
-1）推送数据格式
-
-| 参数 | parent | 字段类型 | 字段说明 |
-| --- | --- | --- | --- |
-| data | - | Object | 字段具体解释见下方（data参数解释） |
-| measurementDate | data | Long | 测量时间，13位，精确到毫秒 |
-
-2）推送数据样例
-```json
-{
-  "dataTypeKey": "eventPush",
-  "eventKey": "uStepChangeE",
-  "pushStatus": 1,
-  "data": {
-    "measurementDate": 1629098641000
-  }
-}
-```
-<a name="yFL86"></a>
-# 6.用户心率数据变更
+# 5.用户心率数据变更
 | eventKey | **eventPush** |
 | --- | --- |
 | dataTypeKey | **uHeartrateChangeE** |
@@ -222,15 +196,66 @@
 2）推送数据样例
 ```json
 {
-  "dataTypeKey": "eventPush",
-  "eventKey": "uHeartrateChangeE",
-  "pushStatus": 1,
-  "data": {
-    "measurementDate": 1629098641000
-  }
+    "dataTypeKey":"eventPush",
+    "eventKey":"uHeartrateChangeE",
+    "pushStatus":1,
+    "data":{
+        "measurementDate":1629098641000
+    }
 }
 ```
-<a name="Y9gef"></a>
-## <br />
+<a name="FQ15o"></a>
+# 6.用户步数数据变更
+| eventKey | **eventPush** |
+| --- | --- |
+| dataTypeKey | **uStepChangeE** |
+
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方（data参数解释） |
+| measurementDate | data | Long | 测量时间，13位，精确到毫秒 |
+
+2）推送数据样例
+```json
+{
+    "dataTypeKey":"eventPush",
+    "eventKey":"uStepChangeE",
+    "pushStatus":1,
+    "data":{
+        "measurementDate":1629098641000
+    }
+}
+```
+<a name="dcZh5"></a>
+# 7.用户运动数据变更
+| eventKey | **eventPush** |
+| --- | --- |
+| dataTypeKey | **uSportChangeE** |
+
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方（data参数解释） |
+| measurementDate | data | Long | 测量时间，13位，精确到毫秒 |
+
+2）推送数据样例
+```json
+{
+    "dataTypeKey":"eventPush",
+    "eventKey":"uSportChangeE",
+    "pushStatus":1,
+    "data":{
+        "sportId":"00a4ec4328444ab9bcaa7e1ce49dec12"
+    }
+}
+```
+<a name="fo975"></a>
+# <br />
+
+
+
 
 
