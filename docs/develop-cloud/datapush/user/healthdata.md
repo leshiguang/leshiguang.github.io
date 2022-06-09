@@ -239,7 +239,7 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
-| measurementDate | data | Long | 测量时间，13位，精确到毫秒 |
+| sportId | data | String | 运动记录ID |
 
 2）推送数据样例
 ```json
