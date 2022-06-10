@@ -11,7 +11,7 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
-| **weightId** | data | String | 体重记录id |
+| **weightId** | data | String | 体重记录ID |
 
 2）推送数据示例
 ```json
@@ -38,7 +38,7 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
-| **recordIds** | data | List<String> | 删除的体重记录id |
+| **recordIds** | data | List(String) | 删除的体重记录ID |
 
 2）推送数据示例
 ```json
@@ -71,7 +71,7 @@
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
 | **sleepId** | data | String | 睡眠记录ID |
-| userId | data | Long | 用户ID |
+| **userId** | data | Long | 用户ID |
 
 2）推送数据示例
 ```json
@@ -98,8 +98,8 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
-| **sleepId** | data | String | 睡眠记录id |
-| userId | data | Long | 用户ID |
+| **sleepId** | data | String | 睡眠记录ID |
+| **userId** | data | Long | 用户ID |
 
 2）推送数据示例
 ```json
@@ -126,14 +126,14 @@
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
 | data | - | Object | 字段具体解释见下方（data参数解释） |
-| **deviceId** | data | String | 设备id |
-| sn | data | String | 设备sn |
+| **deviceId** | data | String | 设备ID |
+| sn | data | String | 设备SN |
 | **measurementDate** | data | Long | 测量时间（毫秒值） |
 | **sys** | data | Integer | 收缩压（高压） |
-| **dia** | data | Integer | _舒张压（低压）_ |
+| **dia** | data | Integer | 舒张压（低压） |
 | **pul** | data | Integer | 心率 |
-| **ihb** | data | Boolean | _心率不齐标示(true表示心率不齐)_ |
-| **movementError** | data | Boolean | _抖动标示_ |
+| **ihb** | data | Boolean | 心率不齐标示(true表示心率不齐) |
+| **movementError** | data | Boolean | 抖动标示 |
 | **timeZone** | data | String | 时区(非必须返回) |
 
 2）推送数据示例
@@ -251,7 +251,7 @@
 
 | 参数 | parent | 字段类型 | 字段说明 |
 | --- | --- | --- | --- |
-| data | - | Object | 字段具体解释见下方（data参数解释） |
+| data | - | Object | 字段具体解释见下方 |
 | **sportId** | data | String | 运动记录ID |
 
 2）推送数据示例
