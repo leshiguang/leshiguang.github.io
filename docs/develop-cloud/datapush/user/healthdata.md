@@ -2,9 +2,10 @@
 # 1.用户体重数据
 <a name="Ily58"></a>
 ## 1.1 用户体重数据变更
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uWeightChangeE** |
+| eventKey | eventPush |
+| dataTypeKey | uWeightChangeE |
 
 1）推送数据格式
 
@@ -29,9 +30,10 @@
 ```
 <a name="sj3kj"></a>
 ## 1.2 用户体重数据删除
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uWeightDeleteE** |
+| eventKey | eventPush |
+| dataTypeKey | uWeightDeleteE |
 
 1）推送数据格式
 
@@ -61,9 +63,10 @@
 # 2.用户睡眠数据
 <a name="oAadY"></a>
 ## 2.1 用户手环睡眠数据变更
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uSleepDeviceChangeE** |
+| eventKey | eventPush |
+| dataTypeKey | uSleepDeviceChangeE |
 
 1）推送数据格式
 
@@ -89,8 +92,9 @@
 ```
 <a name="JotKN"></a>
 ## 2.2 用户睡眠日记数据变更
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
+| eventKey | eventPush |
 | dataTypeKey | uSleepDiaryChangeE |
 
 1）推送数据格式
@@ -117,9 +121,10 @@
 ```
 <a name="ceXyh"></a>
 # 3.用户血压数据
-| eventKey | **dataPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uBp** |
+| eventKey | dataPush |
+| dataTypeKey | uBp |
 
 1）推送数据格式
 
@@ -159,8 +164,9 @@
 ```
 <a name="J53Gw"></a>
 # 4.用户血糖数据
-| eventKey | **dataPush** |
+| **Key** | **Value** |
 | --- | --- |
+| eventKey | dataPush |
 | dataTypeKey | uBs |
 
 1）推送数据格式
@@ -192,9 +198,10 @@
 ```
 <a name="biYUd"></a>
 # 5.用户心率数据变更
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uHeartrateChangeE** |
+| eventKey | eventPush |
+| dataTypeKey | uHeartrateChangeE |
 
 1）推送数据格式
 
@@ -216,9 +223,10 @@
 ```
 <a name="FQ15o"></a>
 # 6.用户步数数据变更
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uStepChangeE** |
+| eventKey | eventPush |
+| dataTypeKey | uStepChangeE |
 
 1）推送数据格式
 
@@ -243,9 +251,10 @@
 ```
 <a name="dcZh5"></a>
 # 7.用户运动数据变更
-| eventKey | **eventPush** |
+| **Key** | **Value** |
 | --- | --- |
-| dataTypeKey | **uSportChangeE** |
+| eventKey | eventPush |
+| dataTypeKey | uSportChangeE |
 
 1）推送数据格式
 
