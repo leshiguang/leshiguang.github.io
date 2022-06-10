@@ -20,9 +20,9 @@
     "dataTypeKey":"uWeightChangeE",
     "pushStatus":1,
     "associatedId":"201079547",
-    "userId":200,
+    "userId":37616,
     "data":{
-        "userId":200,
+        "userId":37616,
         "weightId":"a50b8337ddd549499a3705bbd1ae1e34"
     }
 }
