@@ -14,7 +14,7 @@
 - 邮件内容如下：
 ```java
 收件人：hezuo@leshiguang.com
-主题：【拾果健康服务准入申请】-（xx 企业/组织/个人）
+主题：【乐智健康服务准入申请】-（xx 企业/组织/个人）
 邮件正文：
 1、接入目的：（示例：（xx企业/组织/个人）-申请接入乐心服务，目的是借助xx（硬件型号）的数据能力帮助（xx企业/组织/个人）的用户完成健康管理）
 2、企业全称：
@@ -26,7 +26,7 @@
 8、应用名称：
 9、设备型号+工厂型号：如体脂称A20，GBF-2008-BF；（若为双模设备，如A20/S20/S30，则需在邮件中写明设备的sn码）
 本次接入硬件数量：如体脂秤5台
-10、接入的产品服务：【蓝牙SDK】，【体脂、睡眠算法】，【UI级SDK】，【拾果云Api服务】
+10、接入的产品服务：【蓝牙SDK】，【体脂、睡眠算法】，【UI级SDK】，【乐智云Api服务】
 11、本次期望采购的硬件设备数量（多款设备分别陈述）：
 ```
 邮件发送后， 我们会在一个工作日内完成企业信息、订阅设备的初始化工作，并将申请的appId等信息通过邮件的形式回复给您<br />申请成功将会收到乐心的回复，回复内容中会包含一下信息：<br />1.appKey（appid）:对应一个应用<br />2.appSecret:私钥<br />3.tenantName：租户名缩写（用于h5页面版本管理）<br />4.api权限表
@@ -38,25 +38,26 @@
 - iOS蓝牙SDK文档：[https://docs.leshiguang.com/dev-ios/bluetooth/summary](https://docs.leshiguang.com/dev-ios/bluetooth/summary)
 - 微信小程序SDK文档：[https://docs.leshiguang.com/develop-native/wx-mini/bluetooth](https://docs.leshiguang.com/develop-native/wx-mini/bluetooth)
 
-
-<br />UI级SDK：<br />
+UI级SDK：
 
 - android UI级sdk接入文档： [https://docs.leshiguang.com/dev-android/ui/summary](https://docs.leshiguang.com/dev-android/ui/summary)
 - iOS UI级sdk接入文档：[https://docs.leshiguang.com/dev-ios/ui/summary](https://docs.leshiguang.com/dev-ios/ui/summary)
 
+乐智云api：
 
-<br />拾果云api：
+- 云api对接文档（商业版， 需要联系对应的商务开通权限）：[https://docs.leshiguang.com/develop-cloud/README](https://docs.leshiguang.com/develop-cloud/README)
 
-- 云api对接文档（商业版， 需要联系对应的商务开通权限）：[https://docs.leshiguang.com/develop-cloud/](https://docs.leshiguang.com/develop-cloud/README)
-
-拾果云算法：
+乐智云算法：
 
 - 算法对接文档：[https://docs.leshiguang.com/develop-cloud/algorithm/fat](https://docs.leshiguang.com/develop-cloud/algorithm/fat)
 <a name="TyEeX"></a>
 # 支持设备
 | 设备类型 | 型号 |
 | --- | --- |
-| 手环 | 乐心手环5S |
+| 手环 | MamboWatch2 |
+|  | MamboWatch1 |
+|  | HR6 |
+|  | 乐心手环5S |
 |  | MamboHR2 |
 |  | MamboHR3 |
 |  | 乐心手环5 |
@@ -74,7 +75,6 @@
 |  | S30 |
 |  | A1-F |
 | 血压计 | i7蓝牙版 |
-
 
 
 
