@@ -2,6 +2,19 @@
 # 版本更新日志
 <a name="ttWAp"></a>
 ### 
+<a name="qeJP7"></a>
+### 1.1.2
+
+- fix：表盘bug
+<a name="ny9tZ"></a>
+### 
+<a name="jcXVw"></a>
+### 1.1.1
+
+- feat：增加初始化失败的回调
+- feat：缩小包的体积
+- fix：解决存在bug
+
 <a name="czs6M"></a>
 ### 1.1.0
 
@@ -367,10 +380,7 @@ ble.cancelBind({ mac });
   })
 
   // 删除全部正在监听的设备
-  ble.deleteAllMonitorDevice({ 
-    mac: this.data.mac,
-    model: this.data.model,
-  })
+  ble.deleteAllMonitorDevice();
 ```
 
 <a name="UFdUK"></a>
