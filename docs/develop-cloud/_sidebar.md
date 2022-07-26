@@ -53,6 +53,7 @@
    - 用户维度数据推送
       - [用户健康数据推送](/develop-cloud/datapush/user/healthdata)
       - [用户问卷测评推送](/develop-cloud/datapush/questionnaire)
+      - [用户授权事件推送](/develop-cloud/datapush/user/authorize)
 - 乐智云算法
    - [体脂V3](/develop-cloud/algorithm/fat/v3)
    - [睡眠分析](/develop-cloud/algorithm/sleep)
