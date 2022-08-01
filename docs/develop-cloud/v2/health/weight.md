@@ -11,14 +11,14 @@ _该校验会校验设备id的合法性_
 ##### 入参： 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| recordList | List<Object> | 体重记录集合 |  |
+| recordList | List(Object) | 体重记录集合 |  |
 
 <a name="DAgXv"></a>
 ###### 体重记录：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | String | 体重记录id | 可以为空 |
-| deviceId | String | 设备id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| id | String | 体重记录ID | 可以为空 |
+| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | weight | Double | 体重 |  |
 | resistance50k | Double | 50k电阻值 |  |
@@ -105,8 +105,6 @@ GET /api/weight/v2.0/query/getLastOne
 | heartRate | Integer | 心率 |  |
 | unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
 
-
-
 <a name="WeXbc"></a>
 ###### 示例报文：
 ```json
@@ -161,7 +159,7 @@ GET /api/weight/v2.0/query/getListByTime
 ##### 出参(List)：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| id | String | 主键id |  |
+| id | String | 主键ID |  |
 | weight | Double | 体重 |  |
 | bmi | Double | bmi |  |
 | pbf | Double | 体脂率 |  |
@@ -288,10 +286,8 @@ GET /api/weight/v2.0/query/getListByTime
 	]
 }
 ```
-<a name="EANSr"></a>
-## ​<br />
 <a name="PJD9X"></a>
-## 2.3 根据id查询体重详情记录
+## 2.3 根据ID查询体重详情记录
 ```
 GET /api/weight/v2.0/query/getByWeightId
 ```
@@ -310,8 +306,8 @@ GET /api/weight/v2.0/query/getByWeightId
 | headImg | String | 用户头像 |  |
 | unit | Integer | 单位 | 1-kg;2-斤;3-磅;4-英石 |
 | bindBodyFatScale | boolean | 是否绑定体脂秤 |  |
-| weightList | List<Object> | 体重数据List |  |
-| healthLabelList | List<Object> | 风险解读标签 |  |
+| weightList | List(Object) | 体重数据List |  |
+| healthLabelList | List(Object) | 风险解读标签 |  |
 
 <a name="vFBe1"></a>
 ###### 体重数据：
@@ -352,7 +348,7 @@ GET /api/weight/v2.0/query/getByWeightId
 | labelContent | String | 解读 |  |
 | labelDietaryAdvice | String | 饮食建议 |  |
 | labelSportsAdvice | String | 运动建议建议 |  |
-| levelIntervalList | List<Object> | 等级区间 |  |
+| levelIntervalList | List(Object) | 等级区间 |  |
 
 <a name="VNMUD"></a>
 ###### 标签等级：
@@ -368,7 +364,7 @@ GET /api/weight/v2.0/query/getByWeightId
 | --- | --- | --- | --- |
 | healthLabelName | String | 健康风险标签名 |  |
 | healthContent | String | 健康风险解读 |  |
-| indexList | List<Object> | 风险对应标签对象 |  |
+| indexList | List(Object) | 风险对应标签对象 |  |
 
 <a name="YOwfN"></a>
 ###### 风险标签对象：
@@ -927,9 +923,9 @@ POST /api/weight/v2.0/analysis/getTrendInfo
 ##### 出参：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| indexInfoList | List<list> | 信息集合 | 按时间顺序 |
-| compareExplainList | List<Object> | 重要属性对比及文案 |  |
-| indexCompareList | List<Object> | 首尾数据对比 |  |
+| indexInfoList | List(Object) | 信息集合 | 按时间顺序 |
+| compareExplainList | List(Object) | 重要属性对比及文案 |  |
+| indexCompareList | List(Object) | 首尾数据对比 |  |
 | targetType | Integer | _目标类型_ | 1-减肥<br />2-增肥<br />3-保持 |
 
 <a name="VosyF"></a>
@@ -945,7 +941,7 @@ POST /api/weight/v2.0/analysis/getTrendInfo
 ###### compareExplainList：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| indexCompareList | List<Object> | 指标差值对象 |  |
+| indexCompareList | List(Object) | 指标差值对象 |  |
 | title | String | 标题 |  |
 | text | String | 文案 |  |
 
@@ -1029,7 +1025,7 @@ POST /api/weight/v2.0/analysis/getRiskExplain
 ##### 入参：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| weightId | Date | 体重记录id |  |
+| weightId | Date | 体重记录ID |  |
 
 <a name="VxEM7"></a>
 ##### 出参(List)：
@@ -1037,7 +1033,7 @@ POST /api/weight/v2.0/analysis/getRiskExplain
 | --- | --- | --- | --- |
 | healthLabelName | String | 健康风险标签名 |  |
 | healthContent | String | 健康风险解读 |  |
-| indexList | List<Object> | 风险对应标签对象 |  |
+| indexList | List(Object) | 风险对应标签对象 |  |
 
 <a name="U4DPr"></a>
 ###### indexList(风险对应标签对象)
@@ -1082,14 +1078,14 @@ GET /api/weight/v2.0/analysis/getPeerWeightComparison
 ##### 入参： 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | String | 记录id | 必传 |
+| id | String | 记录ID | 必传 |
 
 <a name="g6YGy"></a>
 ##### 出参： 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | sex | Integer | 性别 1：男  2：女 |  |
-| peerWeightIndexDtoList | List<Object> | 指标列表 |  |
+| peerWeightIndexDtoList | List(Object) | 指标列表 |  |
 
 <a name="uRpd7"></a>
 ###### 指标列表：
@@ -1180,9 +1176,9 @@ LineChartsRecordDTO
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| weightList | List<BaseSingleRecordDTO> | 体重记录 |  |
-| pbfList | List<BaseSingleRecordDTO> | 体脂率记录 |  |
-| bodyRoundList | List<BaseSingleRecordDTO> | 体围记录 |  |
+| weightList | List(BaseSingleRecordDTO) | 体重记录 |  |
+| pbfList | List(BaseSingleRecordDTO) | 体脂率记录 |  |
+| bodyRoundList | List(BaseSingleRecordDTO) | 体围记录 |  |
 | lastBodyRoundRecord | BodyRoundRecordDto | 最新一条体围记录 |  |
 
 BaseSingleRecordDTO
@@ -1237,7 +1233,7 @@ ReportIndexVariationDTO
 | emotionPicUrl | String | 情绪图标地址 |  |
 | dynamicTextDesc | String | 动态的文本描述 |  |
 | staticTextDesc | String | 静态的文本描述 |  |
-| dayFoodCaloriesDetailList | List<DayFoodCaloriesDetailDTO> |  |  |
+| dayFoodCaloriesDetailList | List(DayFoodCaloriesDetailDTO) |  |  |
 | tips | String | 小贴士文案 |  |
 | goodsRecommendText | String | 商品推荐文案 | 无商品会为空 |
 | recommdGoods | RecommdGoodsDTO | 推荐商品 |  |
@@ -1271,7 +1267,7 @@ RecommdGoodsDTO
 | emotionPicUrl | String | 情绪图标地址 |  |
 | dynamicTextDesc | String | 动态的文本描述 |  |
 | staticTextDesc | String | 静态的文本描述 |  |
-| dietaryBalanceProblemDetailList | List<DayDietaryBalanceProblemDetailResultDTO> | 膳食均衡问题天统计 |  |
+| dietaryBalanceProblemDetailList | List(DayDietaryBalanceProblemDetailResultDTO) | 膳食均衡问题天统计 |  |
 | tips | String | 小贴士文案 |  |
 | goodsRecommendText | String | 商品推荐文案 | 无商品会为空 |
 | recommdGoods | RecommdGoodsDTO | 推荐商品 |  |
