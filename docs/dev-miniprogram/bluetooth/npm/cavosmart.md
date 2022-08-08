@@ -40,8 +40,6 @@ const cavosmart = require('sg-cavosmart');
 
 plugin.regist(cavosmart);
 ```
-<a name="pGr3H"></a>
-## <br />
 <a name="aU86X"></a>
 # 3、设置项
 
