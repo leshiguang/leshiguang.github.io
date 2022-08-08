@@ -6,5 +6,6 @@
    - [血压设备（sg-bloodpressure）](dev-miniprogram/bluetooth/npm/bloodpressure)
    - [药盒（sg-box）](dev-miniprogram/bluetooth/npm/box)
    - [跳绳（sg-skip）](dev-miniprogram/bluetooth/npm/skip)
+   - [迦沃手环 （sg-cavosmart）](dev-miniprogram/bluetooth/npm/cavosmart)
 - [demo](/dev-miniprogram/bluetooth/demo)
 
