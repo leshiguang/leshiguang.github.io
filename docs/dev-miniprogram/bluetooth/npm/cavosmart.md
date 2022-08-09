@@ -122,19 +122,22 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
 
 <a name="i7ZyR"></a>
 ### 3.5 心率开关
-<br />`MessageReminderSwitch` 的数据结构
+
+`HeartRateSwitch` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
-| type | number | enumMessageType {<br />CALL=0x01,<br />QQ = 0x03,<br />WECHAT = 0x05,<br />SMS=0x07,<br />LINE=0x09,<br />TWITTER =0x0B,<br />FACEBOOK = 0x0E,<br />MESSENGER = 0x10<br />} |
 | enable | boolean | 1表示开 0表示关 |
+| interval | number | 不支持（使用默认） |
+| type | number | // 心率开关<br />enumType {<br />SERIAL,<br />TEST,<br />} |
+| dataType | string | HeartRateSwitchConfig |
 
-
-实例
 
 ```javascript
-  
-  settingInfo = new cavosmart.settingFactory.MessageReminderSwitch(0x01, true);
+/** 构建函数
+  constructor(enable:boolean, type:Type = Type.SERIAL, interval: number = 5) )
+    */
+  settingInfo = new cavosmart.settingFactory.HeartRateSwitch(true);
 ```
 
 <a name="kbWmi"></a>
@@ -149,9 +152,7 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
 | duration | number | 多久不活动出发提醒 单位分钟 |
 | repeatDay | number | 第0位表示星期一的开关... 第6bit表示星期日的开关，全0表示不重复 |
 
-
 实例
-
 ```javascript
 /** 构建函数
   constructor(
