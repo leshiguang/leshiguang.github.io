@@ -1,6 +1,13 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
 
+<a name="ZUXHs"></a>
+### 2.1.5
+
+- feat:   体脂秤ota的支持
+- feat：日志的支持
+- fix：一些连接上的优化
+
 <a name="TiKMX"></a>
 ### 2.0.8
 
@@ -10,8 +17,7 @@
 ### 2.0.6
 
 - feat：新增index.d.ts 接口说明文档，方便开发时直接调用相对应的方法，而不用看文档
-<a name="SZ9z7"></a>
-### 
+
 <a name="p0Zj5"></a>
 ### 2.0.2
 
@@ -84,6 +90,10 @@ plugin.regist(bracelet);
 | associatedId | string | 否 | 第三方关联userId，客户标记用户使用，方便标识日志 |
 | debug | boolean | 否 | 是否打印debug日志 |
 | logger | obj | 否 | 日志打印器，需要实现console的一些打印的方法，详情参考 index.d.ts |
+
+
+<a name="HQ2va"></a>
+## 1.5 微信小程序需要配置请求白名单 [https://api-r1.leshiguang.com](https://api-r1.leshiguang.com)
 
 <a name="nQuug"></a>
 # 2 设备相关
