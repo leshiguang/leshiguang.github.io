@@ -8,10 +8,11 @@
 
 - LZBluetooth.framework: 核心的蓝牙库，用户设备的绑定、连接、数据的上传 （2.0以上将各个设备的支持单独分出去了）
 - LZBracelet.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-- LZScale.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-- LZBox.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-- LZBloodPressure.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-- LZSkip.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
+- LZScale.framework: 支持乐心体脂秤的库 （依赖LZBluetooth（2.0.0））
+- LZBox.framework: 支持药盒的库 （依赖LZBluetooth（2.0.0））
+- LZBloodPressure.framework: 支持乐心血压记的库 （依赖LZBluetooth（2.0.0））
+- LZSkip.framework: 支持跳绳的库 （依赖LZBluetooth（2.0.0））
+- LZCavosmart.framework: 支持cavo手环的库 （依赖LZBluetooth （2.0.3））
 
 SDK目前支持的CPU架构为arm64，是个动态库<br />2、在Target->BuildPhase->Link Binary with Libraries 选型卡中， 添加”1“中解压的Framework<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/223399/1610680095972-3b725270-12df-4385-b7cd-a96f2a5670b0.png#crop=0&crop=0&crop=1&crop=1&height=92&id=VoiAv&margin=%5Bobject%20Object%5D&name=image.png&originHeight=184&originWidth=1958&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40827&status=done&style=none&title=&width=979)<br />注：请不要将Status状态设置为Optional，否则会带来image not found异常<br />3、如果您的Target类型为Application，需要在Target->General->Frameworks,Libraries,Embeded Content选项卡中， 将导入的Framework类型设置为Embeded & Sign <br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/223399/1610680041082-f5c12478-8fa5-4166-9b48-9f12c99fbdfc.png#crop=0&crop=0&crop=1&crop=1&height=89&id=VkOf8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=178&originWidth=1532&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44411&status=done&style=none&title=&width=766)
 <a name="wvQrb"></a>
@@ -20,13 +21,15 @@ SDK目前支持的CPU架构为arm64，是个动态库<br />2、在Target->BuildP
 # 源
 source 'https://github.com/leshiguang/cocoapods.git'
 
-pod 'LZBluetooth', '~> 2.0' 	// 请按照版本发布记录使用最新版本
+pod 'LZBluetooth', '~> 2.0.3' 	// 请按照版本发布记录使用最新版本
 pod 'LZBracelet'				// 支持手环&手表 可选
 pod 'LZScale'					// 支持体脂秤	可选
 pod 'LZBox'						// 支持药盒		可选
 pod 'LZBloodPressure'			// 支持血压计	可选
 pod 'LZSkip'					// 支持跳绳	可选
+pod 'LZCavosmart'               // 支持cavo手环 可选
 ```
+	
 
 <a name="A1NbP"></a>
 ## Info.plist 权限控制
@@ -101,10 +104,11 @@ pod 'LZSkip'					// 支持跳绳	可选
 - 使用pod的时候，需要将你所需设备对应的分包给引入，将LZBluetooth版本升级到2.0.0， 对应关系
    - LZBluetooth.framework: 核心的蓝牙库，用户设备的绑定、连接、数据的上传 （2.0以上将各个设备的支持单独分出去了）
    - LZBracelet.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-   - LZScale.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-   - LZBox.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-   - LZBloodPressure.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
-   - LZSkip.framework: 支持手环&手表的库 （依赖LZBluetooth（2.0.0））
+   - LZScale.framework: 支持体脂秤的库 （依赖LZBluetooth（2.0.0））
+   - LZBox.framework: 支持药盒的库 （依赖LZBluetooth（2.0.0））
+   - LZBloodPressure.framework: 支持血压计的库 （依赖LZBluetooth（2.0.0））
+   - LZSkip.framework: 支持跳绳的库 （依赖LZBluetooth（2.0.0））
+   - LZCavosmart.framework: 支持cavo手环的库 （依赖LZBluetooth （2.0.3））
 - 如果报Use of undeclared identifie ‘xxx’的错误，是因为设置所对应的类与数据所对应的类都在各个设备的分包中，你只需要引入对应的头文件即可，如下：
 ```objectivec
 /// 1、引入手环设置项或者数据的头文件, 需要在pod文件加入 pod 'LZBracelet'
@@ -131,6 +135,8 @@ pod 'LZSkip'					// 支持跳绳	可选
 @import LZBox;
 或者
 #import <LZBox/LZBox.h>
+
+/// 6、引入调试
 
 ```
 
