@@ -1,5 +1,3 @@
-<div class="sidebar-title ">蓝牙-ios SDK</div>
-
 - [概述](/dev-ios/bluetooth/summary)
 - [SDK下载&变更历史](/dev-ios/bluetooth/releaselog)
 - [快速集成](/dev-ios/bluetooth/integrate)
@@ -79,6 +77,29 @@
       - [定时](/dev-ios/bluetooth/box/settings/timing)
    - 数据接收
       - [用药数据](/dev-ios/bluetooth/box/receive/medicine)
+- cavo手环（LZCavosmart）
+   - 设置项
+      - [语言设置](dev-ios/bluetooth/cavo/settings/language)
+      - [鼓励提醒](dev-ios/bluetooth/cavo/settings/encourage)
+      - [转腕](dev-ios/bluetooth/cavo/settings/raise)
+      - [24小时格式](dev-ios/bluetooth/cavo/settings/timeformat)
+      - [久坐提醒](dev-ios/bluetooth/cavo/settings/longsit)
+      - [心率开关](dev-ios/bluetooth/cavo/settings/hrswitch)
+      - [表盘](dev-ios/bluetooth/cavo/settings/dial)
+      - [闹钟](dev-ios/bluetooth/cavo/settings/clock)
+      - [体温功能显示开关](dev-ios/bluetooth/cavo/settings/temperaturedisplay)
+      - [体温测量发起](dev-ios/bluetooth/cavo/settings/temperaturetest)
+      - [血压功能显示开关](dev-ios/bluetooth/cavo/settings/bpdisplay)
+      - [血压测量发起](dev-ios/bluetooth/cavo/settings/bptest)
+      - [同步数据](dev-ios/bluetooth/cavo/settings/syncdata)
+   - 数据接收
+      - [血压](dev-ios/bluetooth/cavo/receive/bp)
+      - [充电状态](dev-ios/bluetooth/cavo/receive/charging)
+      - [历史步数数据](dev-ios/bluetooth/cavo/receive/stephistory)
+      - [实时步数](dev-ios/bluetooth/cavo/receive/step)
+      - [运动](dev-ios/bluetooth/cavo/receive/sport)
+      - [心率](dev-ios/bluetooth/cavo/receive/hr)
+      - [睡眠](dev-ios/bluetooth/cavo/receive/sleep)
 - LZBluetooth 1.7.2及以前
    - [设备管理](/dev-ios/bluetooth/reference/device)
    - [电量信息](/dev-ios/bluetooth/reference/battery)
