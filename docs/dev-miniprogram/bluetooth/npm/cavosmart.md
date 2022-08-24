@@ -45,8 +45,8 @@ plugin.regist(cavosmart);
 
 获取设置项目前支持<br />SyncSettingType.HeartRateSwitachSetting = 18<br />SyncSettingType.SedentaryReminderSetting = 2<br />SyncSettingType.EventReminderSetting = 4<br />SyncSettingType.TimeFormatSetting = 5<br />SyncSettingType.BloodPressureDisplaySwitch = 22<br />SyncSettingType.TemperatureDisplaySwitch = 23
 
-<a name="aJaXp"></a>
-### 3.1 鼓励目标
+<a name="dqKvQ"></a>
+## 3.1 鼓励目标
 
 `Encourage` 的数据结构
 
@@ -71,8 +71,8 @@ plugin.regist(cavosmart);
   settingInfo = new cavosmart.settingFactory.Encourage(1)
 ```
 
-<a name="fyP8G"></a>
-### 3.2 血压测量开关
+<a name="iOYQw"></a>
+## 3.2 血压测量开关
 <br />`BloodPressureSwitch`的数据结构
 
 | 属性 | 类型 | 说明 |
@@ -86,8 +86,8 @@ plugin.regist(cavosmart);
 let setting = new cavosmart.settingFactory.BloodPressureSwitch(true);
 ```
 
-<a name="x5pzf"></a>
-### 3.3 血压常驻开关
+<a name="zR4By"></a>
+## 3.3 血压常驻开关
 <br />`BloodPressureDisplaySwitch`的数据结构
 
 | 属性 | 类型 | 说明 |
@@ -103,8 +103,8 @@ let setting = new cavosmart.settingFactory.BloodPressureSwitch(true);
 let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
 ```
 
-<a name="EyAjm"></a>
-### 3.4 24小时显示开关设置
+<a name="YSPe4"></a>
+## 3.4 24小时显示开关设置
 <br />`TimeFormat` 的数据结构
 
 | 属性 | 类型 | 说明 |
@@ -120,8 +120,8 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
   settingInfo = new cavosmart.settingFactory.TimeFormatConfig(1)
 ```
 
-<a name="i7ZyR"></a>
-### 3.5 心率开关
+<a name="m0lmT"></a>
+## 3.5 心率开关
 
 `HeartRateSwitch` 的数据结构
 
@@ -140,8 +140,8 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
   settingInfo = new cavosmart.settingFactory.HeartRateSwitch(true);
 ```
 
-<a name="kbWmi"></a>
-### 3.6 久坐提醒
+<a name="pSzCl"></a>
+## 3.6 久坐提醒
 <br />`LongSit` 的数据结构
 
 | 属性 | 类型 | 说明 |
@@ -173,8 +173,8 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
   )
 ```
 
-<a name="pvcpN"></a>
-### 3.7 闹钟
+<a name="cWMez"></a>
+## 3.7 闹钟
 <br />`Clock` 的数据结构（全局替换，每次设置都要设置全）
 
 | 属性 | 类型 | 说明 |
@@ -207,8 +207,8 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
   settingInfo = new cavosmart.settingFactory.Clock([event]);
 ```
 
-<a name="nnzQf"></a>
-### 3.8 同步所有数据
+<a name="PDVLh"></a>
+## 3.8 同步所有数据
 <br />`SyncHistoryDataReq` 的数据结构 无参数 结束
 
 | 属性 | 类型 | 说明 |
@@ -223,8 +223,8 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
 
 ```
 
-<a name="q8hXB"></a>
-### 3.9 温度测量开关
+<a name="uh97b"></a>
+## 3.9 温度测量开关
 <br />`TemperatureSwitch`的数据结构
 
 | 属性 | 类型 | 说明 |
@@ -238,8 +238,8 @@ let setting = new cavosmart.settingFactory.BloodPressureDisplaySwitch(1);
 let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 ```
 
-<a name="vakfR"></a>
-### 3.10 温度功能常驻开关
+<a name="BO36V"></a>
+## 3.10 温度功能常驻开关
 <br />`TemperatureDisplaySwitch`的数据结构
 
 | 属性 | 类型 | 说明 |
@@ -248,13 +248,10 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | dataType | string | 固定值TemperatureDisplaySwitchConfig，获取的时候区分设置项 |
 
 
-<a name="fPhIW"></a>
-### 
-
-<a name="jIOHo"></a>
-## 4 测量数据
-<a name="tUyAK"></a>
-### 4.1 步数
+<a name="u5XOx"></a>
+# 4 测量数据
+<a name="UdYCU"></a>
+## 4.1 步数
 
 `Step`的数据结构
 
@@ -270,8 +267,8 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | dataType | String | CAVOStep  固定值 |
 
 
-<a name="DUpyL"></a>
-### 4.2 心率数据 
+<a name="FtjGs"></a>
+## 4.2 心率数据 
 
 `HeartRate` 的数据结构
 
@@ -283,8 +280,8 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | dataType | string | 固定值 CAVOHeartRate |
 
 
-<a name="h0i6r"></a>
-### 4.3 睡眠报告
+<a name="pnUwW"></a>
+## 4.3 睡眠报告
 
 `SleepReportData` 的数据结构
 
@@ -319,8 +316,8 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | deep | number | 1浅睡 2深睡 3清醒 |
 
 
-<a name="yGpRA"></a>
-### 4.4 运动记录 
+<a name="Cd09W"></a>
+## 4.4 运动记录 
 
 `SportReportData` 的数据结构
 
@@ -355,13 +352,33 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | freeSport | 0x19 | 自由训练 |
 | plank | 0x65 | 平板支撑 |
 
-<a name="txRk7"></a>
-### 4.5 数据接受完成
+<a name="dxKI4"></a>
+## 4.5 数据接受完成
 
 `SyncHistoryDataFinishRes` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | dataType | string | 固定值 CAVOSyncFinish |
+
+<a name="e73AI"></a>
+## 4.6 历史步数
+`StepHistory`的数据结构
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| data | StepInfo[] | 步数列表 |
+| dataType | string | 固定值 StepHistory |
+
+`StepInfo`
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| mode | number | 暂时无用 |
+| utc | number | 时间戳 |
+| step | number | 步数 |
+| calories | number | 卡路里 （卡） |
+| distance | number | 距离 （米） |
+| dataType | String | StepHistory  固定值 |
 
 
