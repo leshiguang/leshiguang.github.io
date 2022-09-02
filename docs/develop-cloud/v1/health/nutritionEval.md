@@ -1986,9 +1986,8 @@ RecommendFood
 | questionType | Integer | 题目类型 | 1-单选 2-多选 3-单项填空 4-多项填空 |
 | questionStem | String | 题干 |  |
 | submitted | Class | 用户提交内容 | List |
-| submitted.key | String | 选项(非选择题默认A) | 序号或关联营养素 |
-| submitted.value | Object | 选择题时同key一致，填空题时为用户提交的值 |  |
-| submitted.content | String | 可为空，选择题时为key对应的内容，填空题时为用户提交的展示值 |  |
+| submitted.key | String | 选项序号或关联的营养素 | <br /> |
+| submitted.content | String | 选项展示内容 |  |
 
 
 
