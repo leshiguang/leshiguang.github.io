@@ -2057,4 +2057,109 @@ RecommendFood
     ]
 }
 ```
+<a name="xEyw5"></a>
+# 7.查询营养评估结果的营养素解析详情
+  url：域名 +  /api/nutritionEval/v1/getNutriEvalAnalysisResultByTag<br />  method: POST
+
+<a name="rGypR"></a>
+##### URL入参:
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| associatedId | String | 关联账号id |  |
+
+
+<a name="aS4oa"></a>
+##### POST报文入参:
+（数据一般来自评估结果）
+
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| evaId | String | 评估ID |  |
+| subTag | Object | 查询对象 |  |
+| subTag.healthIssue | String | 健康问题 | 如“毛发” |
+| subTag.lackLevel | Integer | 严重程度 | 0-无缺乏  1-轻度缺乏 2-中度缺乏<br />3-中重度缺乏  4-重度缺乏 |
+| subTag.nutriList | List<String> | 营养素 | 如：["生物素"] |
+
+
+
+<a name="RELOr"></a>
+##### 出参:
+NutriEvalResultAnalysisDTO   结构同上述，示例如下：
+
+示例返回报文：
+```java
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "analysisDetailList": [
+            {
+                "nutritionInfo": {
+                    "nutriName": "生物素",
+                    "tabooFactorList": [
+                        "油炸食品"
+                    ],
+                    "nutrientDesc": "生物素是一种水溶性维生素，又称维生素B7、辅酶R，是水溶性维生素。在牛奶、牛肝、蛋黄、动物肾脏、草莓、柚子、葡萄等水果、瘦肉、糙米、啤酒、小麦中都含有生物素。",
+                    "nutrientBriefPic": "https://cn-pics.leshiguang.com/nutrition/2021/06/02/生物素大.png",
+                    "nutrientDisplayPic": "https://cn-pics.leshiguang.com/nutrition/2021/06/02/生物素小.png"
+                },
+                "healthIssueList": [
+                    "精神状态",
+                    "毛发",
+                    "皮肤",
+                    "肌肉"
+                ],
+                "dailyIntake": "30μg",
+                "recommendFoodList": [
+                    {
+                        "foodName": "猪肝",
+                        "foodPic": "https://files.lifesense.com/other/20210226/e37e0a773c7046ebbd28cba15196c497.png",
+                        "purityPer100g": "61.9",
+                        "nutriUnitName": "μg",
+                        "tabooHint": "建议一般成年人每日摄入内脏类食物不超过25g"
+                    },
+                    {
+                        "foodName": "榛子",
+                        "foodPic": "https://files.lifesense.com/other/20210226/654f99020c194c848fc7794e8f65e79f.png",
+                        "purityPer100g": "90.1",
+                        "nutriUnitName": "μg",
+                        "tabooHint": "建议一般成年人每日食用坚果不超过25g"
+                    },
+                    {
+                        "foodName": "葵花籽",
+                        "foodPic": "https://files.lifesense.com/other/20210226/54fe88d5f06b4576b8b20d79da77c558.png",
+                        "purityPer100g": "104",
+                        "nutriUnitName": "μg",
+                        "tabooHint": "建议一般成年人每日食用坚果不超过25g"
+                    },
+                    {
+                        "foodName": "花生",
+                        "foodPic": "https://files.lifesense.com/other/20210226/d1638d6e55594a4688a835bb85f42c1f.png",
+                        "purityPer100g": "107.9",
+                        "nutriUnitName": "μg",
+                        "tabooHint": "建议一般成年人每日食用坚果不超过25g"
+                    },
+                    {
+                        "foodName": "茶树菇",
+                        "foodPic": "https://files.lifesense.com/other/20210226/9258e32c89ec49ac87900d7057c02bca.png",
+                        "purityPer100g": "86.5",
+                        "nutriUnitName": "μg",
+                        "tabooHint": ""
+                    }
+                ],
+                "recommendGoodsList": [],
+                "recommendGoodsListV2": []
+            }
+        ],
+        "curSubTag": {
+            "lackLevel": 1,
+            "healthIssue": "毛发",
+            "nutriList": [
+                "生物素"
+            ]
+        }
+    }
+}
+```
 
