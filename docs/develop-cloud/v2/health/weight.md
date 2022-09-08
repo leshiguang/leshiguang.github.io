@@ -2,7 +2,7 @@
 <a name="A21Ds"></a>
 # 1.体重上传
 <a name="fmIrp"></a>
-## 1.1 上传体脂称测量的体重数据
+## 1.1 上传体脂秤测量的体重数据
 ```bash
 POST /api/weight/v2.0/upload/uploadWeightFromThirdparty
 ```
@@ -60,6 +60,47 @@ POST /api/weight/v2.0/upload/manualUploadWeight
 	"measurementTime":1615344189239,
 	"weight":68.8,
 	"pbf":22.22
+}
+```
+
+<a name="IJzqk"></a>
+## 1.3 上传体脂秤测量的体重数据（含分配逻辑）
+注：本接口上传的体重会按照分配逻辑，将体重分配给当前用户或者家人，无法分配的添加到待分配的体重列表
+```bash
+POST /weight-rest/upload/uploadBluetoothDeviceWeight 
+```
+_该校验会校验设备id的合法性_
+<a name="obcXK"></a>
+##### 入参： 
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| recordList | List(Object) | 体重记录集合 |  |
+
+<a name="DHhjB"></a>
+###### 体重记录：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| id | String | 体重记录ID | 可以为空 |
+| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| measurementTime | Date | 测量时间 |  |
+| weight | Double | 体重 |  |
+| resistance50k | Double | 50k电阻值 |  |
+| heartRate | Integer | 心率 |  |
+
+<a name="lF60a"></a>
+###### 示例报文：
+```json
+{
+	"recordList":[
+		{
+			"measurementTime":1615195409957,
+			"deviceId":"a00240000d6b",
+			"weight":66.6,
+			"heartRate":64,
+			"resistance50k":400
+		}
+		
+	]
 }
 ```
 <a name="oLf6W"></a>
