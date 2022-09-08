@@ -92,8 +92,23 @@ plugin.regist(bracelet);
 | logger | obj | 否 | 日志打印器，需要实现console的一些打印的方法，详情参考 index.d.ts |
 
 
+<a name="RpEow"></a>
+## 1.5 更新用户信息 
+
+主要是手环计算卡路里及路程需要使用到用户信息
+
+```javascript
+// 开始扫描设备
+  plugin.updateUserInfo({
+        gender: 1,
+        weight: 59,
+        height: 1.76,
+        age: 24,
+      });
+```
+
 <a name="HQ2va"></a>
-## 1.5 微信小程序需要配置请求白名单 [https://api-r1.leshiguang.com](https://api-r1.leshiguang.com)
+## 1.6 微信小程序需要配置请求白名单 [https://api-r1.leshiguang.com](https://api-r1.leshiguang.com)
 
 <a name="nQuug"></a>
 # 2 设备相关
