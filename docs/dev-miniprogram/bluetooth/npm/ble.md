@@ -107,6 +107,16 @@ plugin.regist(bracelet);
       });
 ```
 
+| 属性 | 类型 | 是否必要 | 说明 |
+| --- | --- | --- | --- |
+| userId | string | 否 | 用户唯一标识 |
+| weight | number | 是 | 体重 单位：kg     精确两位小数 |
+| height | number | 是 | 身高 单位：米     精确两位小数 |
+| gender | number | 是 | 性别 1：男性 0：女性 用来做算法计算 |
+| age | number | 是 | 年龄 |
+
+<a name="yF4ro"></a>
+## 
 <a name="HQ2va"></a>
 ## 1.6 微信小程序需要配置请求白名单 [https://api-r1.leshiguang.com](https://api-r1.leshiguang.com)
 
