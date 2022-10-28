@@ -1,6 +1,12 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
 
+<a name="qHSEs"></a>
+### 2.1.9
+
+- fix：适配新设备
+- fix：优化日志
+
 <a name="ZUXHs"></a>
 ### 2.1.5
 
@@ -34,7 +40,7 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.8",						
+        "sg-ble": "^2.1.9",						
     }
 }
 ```
@@ -188,10 +194,28 @@ plugin.regist(bracelet);
 ```javascript
   // 用户选择某个设备绑定
   // 如果是安卓设备，则需要判断位置是否可用，位置权限是否可用 
-  // isAndroid() 判断是否是安卓平台
-  let { locationEnabled, locationAuthorized, platform } = wx.getSystemInfoSync();
+	function checkBluetoothEnable() {
+    let { bluetoothEnabled, locationEnabled, locationAuthorized, platform } = wx.getSystemInfoSync();
+    // 微信暂未提供bluetoothAuthorized，我们从蓝牙可用判断是否授权
+    let bluetoothAuthorized = plugin.isBluetoothAvailable() && bluetoothEnabled;
+    if (platform.indexOf('android') > -1) {
+      if (!bluetoothEnabled && !locationEnabled) return '请打开手机蓝牙和GPS定位功能，方可查找设备';
+      if (!bluetoothEnabled) return '请打开手机蓝牙，方可查找设备';
+      if (!locationEnabled) return '请打开手机GPS定位功能，方可查找设备';
+      if (!locationAuthorized) return '请进入手机应用设置，开启微信的GPS定位授权，方可查找设备';
+    } else {
+      if (!bluetoothEnabled) return '请打开手机蓝牙，并进入手机应用设置开启微信的蓝牙授权，方可查找设备';
+      if (!bluetoothAuthorized) return '请打开手机蓝牙，并进入手机应用设置开启微信的蓝牙授权，方可查找设备';
+    }
+  }
 
   var bindDevice = function() {
+    	// 判断蓝牙是否可用
+      let msg = checkBluetoothEnable();
+      if (msg) {
+        alert(msg);
+        return;
+      }
       plugin.bindDevice({
           mac: mac,
           callback: res => {
@@ -387,8 +411,8 @@ plugin.cancelBind({ mac });
 如果你想监听手机蓝牙是否开启，设备的连接状态，及设备同步过来的数据，则可以使用 `plugin.$on` 监听某个事件，目前支持三个事件
 
 1. 手机蓝牙的开关 eventName = "adaptorState",
-1. 蓝牙设备的连接状态 eventName = "connectionState",
-1. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
+2. 蓝牙设备的连接状态 eventName = "connectionState",
+3. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
 
 事件是通过 eventKey，同一事件的同一eventKey 回调会被覆盖<br />取消监听则使用 `plugin.$off` 参数<br />调用示例：
 
