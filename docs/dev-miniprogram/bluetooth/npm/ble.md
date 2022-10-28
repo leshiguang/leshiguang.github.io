@@ -82,9 +82,25 @@ plugin.regist(bracelet);
 [申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)
 
 ```javascript
-  plugin.init({
+// 自定义打印日志
+const logger = {
+  info: () => { // 自定日志打印 
+    console.info(arguments);
+  },
+  warn: () => { // 自定义日志打印 
+    console.warn(arguments);
+  },
+  error: () => { // 自定义日志打印 
+    console.error(arguments);
+	),
+  debug: () => { // 自定义日志打印 
+    console.debug(arguments);
+  },
+}
+plugin.init({
     //用邮件乐心分配的appId替换掉下面字符串
       appKey: "你申请的appkey",
+    	logger,
     });
 ```
 
@@ -95,7 +111,7 @@ plugin.regist(bracelet);
 | appKey | string | 是 | 搜索到的设备对象的回调 |
 | associatedId | string | 否 | 第三方关联userId，客户标记用户使用，方便标识日志 |
 | debug | boolean | 否 | 是否打印debug日志 |
-| logger | obj | 否 | 日志打印器，需要实现console的一些打印的方法，详情参考 index.d.ts |
+| logger | obj | 否 | 日志打印器，需要实现console的一些打印的方法，详情参考 index.d.ts<br />如果不实现，默认是调用系统的日志打印 |
 
 
 <a name="RpEow"></a>
