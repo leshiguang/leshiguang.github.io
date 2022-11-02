@@ -8,5 +8,5 @@
    - [跳绳（sg-skip）](dev-miniprogram/bluetooth/npm/skip)
    - [HR5 Plus 手环 （sg-cavosmart）](dev-miniprogram/bluetooth/npm/cavosmart)
 - [demo](/dev-miniprogram/bluetooth/demo)
-- [旧版sdk升级指南](dev-miniprogram/bluetooth/oldsdkupdate)[链接]()
+- [旧版sdk升级指南](dev-miniprogram/bluetooth/oldsdkupdate)
 
