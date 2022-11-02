@@ -1,5 +1,5 @@
-<a name="sJXH1"></a>
-## 资料入口及升级目的
+<a name="qiKtp"></a>
+# 资料入口及升级目的
 - [旧版SDK 插件接入方式](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx43b1ab446b5db1e0&token=1532068600&lang=zh_CN)
 - [新版SDK 插件接入方式](https://docs.leshiguang.com/dev-miniprogram/bluetooth/plugin)
 - [新版SDK npm接入方式](https://docs.leshiguang.com/dev-miniprogram/bluetooth/npm/ble)  [demo](https://docs.leshiguang.com/dev-miniprogram/bluetooth/demo)（推荐）
@@ -9,13 +9,16 @@
 - 设备搜索和链接更稳定
 - 可根据设备类型按需引入分包
 - 大部分接口返回Promise
-<a name="HBcDr"></a>
-## 算法接口升级
+
+<a name="VPAi2"></a>
+# 算法接口升级
 [https://docs.leshiguang.com/develop-cloud/algorithm/fat/v3](https://docs.leshiguang.com/develop-cloud/algorithm/fat/v3)
-<a name="s4WA7"></a>
-## 注意事项
-<a name="Wtix6"></a>
-### npm接入
+
+<a name="CJu3Y"></a>
+# 注意事项
+
+<a name="HAhFM"></a>
+## npm接入
 在package.json中声明sg-ble的引用
 
 ```javascript
@@ -36,8 +39,10 @@
 ```
 
 **npm方式需要引入npm，如果不想引入npm，可直接复制mini_dist目录下的index.js 文件，到你们的项目**<br />npm接入需要微信小程序需要配置请求白名单 [https://api-r1.leshiguang.com](https://api-r1.leshiguang.com/)
-<a name="rjebX"></a>
-### 初始化
+
+<a name="Jbz8H"></a>
+## 初始化
+
 旧版
 
 ```javascript
@@ -69,8 +74,9 @@ plugin.init({
 ```
 
 不管是新版还是旧版，获取当前蓝牙可用状态都应该在初始化成功之后获取。推荐在app.js中初始化。
-<a name="Mwnb0"></a>
-### 扫描
+<a name="ZqJ8g"></a>
+## 扫描
+
 旧版
 
 ```javascript
@@ -90,8 +96,9 @@ plugin.startScanning(device => {
 });
 ```
 
-<a name="GE90h"></a>
-### 绑定设备
+<a name="PnPIG"></a>
+## 绑定设备
+
 旧版
 
 ```javascript
@@ -130,8 +137,9 @@ plugin.bindDevice({
 })
 ```
 
-<a name="HFL6K"></a>
-### 连接与断开设备
+<a name="Xlkxb"></a>
+## 连接与断开设备
+
 旧版
 
 ```javascript
@@ -167,8 +175,9 @@ plugin.deleteMonitorDevice({
 
 ```
 
-<a name="A3R2a"></a>
-### 监听数据的接收与连接状态的变化
+<a name="ix3vd"></a>
+## 监听数据的接收与连接状态的变化
+
 旧版
 
 ```javascript
@@ -285,8 +294,9 @@ plugin.$off({
 
 ```
 
-<a name="YF8Gu"></a>
-### 数据字段变更
+<a name="TAz8x"></a>
+## 数据字段变更
+
 旧版
 
 ```javascript
@@ -329,8 +339,9 @@ var _weightData = {
 ```
 <a name="JKSMb"></a>
 #### 
-<a name="PgmQh"></a>
-### 蓝牙权限判断逻辑建议
+<a name="H4J1X"></a>
+## 蓝牙权限判断逻辑建议
+
 建议在UI上展示弹窗或者Toast提示
 
 ```javascript
