@@ -1,12 +1,11 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
 
-<a name="hXMWm"></a>
+<a name="xQUSn"></a>
 ### 2.1.10     2022-11-02
 
 - feat：适配新设备的优化
-<a name="bxcml"></a>
-### 
+
 <a name="qHSEs"></a>
 ### 2.1.9
 
