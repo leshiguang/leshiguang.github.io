@@ -17,6 +17,7 @@
 <a name="Wtix6"></a>
 ### npm接入
 在package.json中声明sg-ble的引用
+
 ```javascript
 // 按需引入，如果是只接入秤，如下
 "dependencies": {
@@ -25,7 +26,7 @@
 }
 
 
-// 按需引入，如果是接入秤，手环，如下
+/* 按需引入，如果是接入秤，手环，如下 */
 "dependencies": {
     "sg-ble": "^2.1.9",	
     "sg-scale": "^1.1.4",
@@ -33,10 +34,12 @@
 }
 
 ```
+
 **npm方式需要引入npm，如果不想引入npm，可直接复制mini_dist目录下的index.js 文件，到你们的项目**<br />npm接入需要微信小程序需要配置请求白名单 [https://api-r1.leshiguang.com](https://api-r1.leshiguang.com/)
 <a name="rjebX"></a>
 ### 初始化
 旧版
+
 ```javascript
 const plugin = requirePlugin("LSDevicePlugin")
 plugin.init(res => {
@@ -50,6 +53,7 @@ plugin.initAuthorization({
 ```
 
 新版
+
 ```javascript
 const plugin = require("sg-ble");
 const scale = require("sg-scale");
@@ -63,10 +67,12 @@ plugin.init({
 })
 
 ```
+
 不管是新版还是旧版，获取当前蓝牙可用状态都应该在初始化成功之后获取。推荐在app.js中初始化。
 <a name="Mwnb0"></a>
 ### 扫描
 旧版
+
 ```javascript
 let scanCallback = device => {
   // 对于设备做过略，或者更新UI
@@ -76,6 +82,7 @@ plugin.startScanning(scanCallback, [plugin.Profiles.ScanFilter.Scale]);
 ```
 
 新版
+
 ```javascript
 // 搜索
 plugin.startScanning(device => {
@@ -86,6 +93,7 @@ plugin.startScanning(device => {
 <a name="GE90h"></a>
 ### 绑定设备
 旧版
+
 ```javascript
 let onBindingListener = {
     //连接状态改变回调
@@ -109,7 +117,9 @@ let obj = {
 }
 plugin.bindDevice(obj, onBindingListener);
 ```
+
 新版
+
 ```javascript
 plugin.bindDevice({
     mac: this.data.mac,
@@ -123,6 +133,7 @@ plugin.bindDevice({
 <a name="HFL6K"></a>
 ### 连接与断开设备
 旧版
+
 ```javascript
 // 1、先添加设备到队列
 
@@ -139,7 +150,9 @@ if (plugin.isStartSyncing()) {
 plugin.removeDevice(mac);
 plugin.stopDataSync('tag');
 ```
+
 新版
+
 ```javascript
 // 通过设备的mac 和model来去连接设备
 plugin.addMonitorDevice({
@@ -157,6 +170,7 @@ plugin.deleteMonitorDevice({
 <a name="A3R2a"></a>
 ### 监听数据的接收与连接状态的变化
 旧版
+
 ```javascript
 // 1、监听蓝牙开关变化
 plugin.registerBluetoothStateListener([], (res) => {
@@ -227,6 +241,7 @@ plugin.startDataSync(_syncCallback);
 ```
 
 新版
+
 ```javascript
 /**
  * AdaptorState = 'adaptorState',//蓝牙状态改变回调
@@ -273,6 +288,7 @@ plugin.$off({
 <a name="YF8Gu"></a>
 ### 数据字段变更
 旧版
+
 ```javascript
 // 体重数据结构
 var _weightData = {
@@ -293,6 +309,7 @@ var _weightData = {
 ```
 
 新版 
+
 ```javascript
 // 体重数据结构
 // https://docs.leshiguang.com/dev-miniprogram/bluetooth/npm/scale?id=%e4%bd%93%e5%88%b6%e7%a7%a4%e6%95%b0%e6%8d%ae-scaledata
@@ -315,6 +332,7 @@ var _weightData = {
 <a name="PgmQh"></a>
 ### 蓝牙权限判断逻辑建议
 建议在UI上展示弹窗或者Toast提示
+
 ```javascript
 function checkBluetoothEnable() {
     let { bluetoothEnabled, locationEnabled, locationAuthorized, platform } = wx.getSystemInfoSync();
