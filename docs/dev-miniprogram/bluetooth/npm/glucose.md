@@ -97,17 +97,7 @@ RecordInfo的数据结构
 | --- | --- | --- |
 | dataType | string | 固定值：GLRealtimeData |
 | glucose | number | 血糖 (单位 mmol) |
-| state | ```typescript
-enum State {
-  last = 0x10,
-  testPape = 0x11,
-  waitBlood = 0x22,
-  alread = 0x33,
-  result = 0x44,
-  warn = 0x55,
-}
-```
-  | <br /><br />last 表示上一笔<br />testPage 表示显示去测试<br />alread 表示已经完成<br />result 表示结果<br />warn 表示错误<br /> |
+| state | enum State {<br />  last = 0x10,<br />  testPape = 0x11,<br />  waitBlood = 0x22,<br />  alread = 0x33,<br />  result = 0x44,<br />  warn = 0x55,<br />} | <br /><br />last 表示上一笔<br />testPage 表示显示去测试<br />alread 表示已经完成<br />result 表示结果<br />warn 表示错误<br /> |
 | errCode | number | 错误码 |
 | sample | number |  样本， 0x11 为血液 0x22 为质控液 |
 
