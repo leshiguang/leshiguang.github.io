@@ -145,6 +145,25 @@ plugin.init({
 <a name="nQuug"></a>
 # 2 设备相关
 
+<a name="rmJ60"></a>
+## 2.0 蓝牙权限判断建议
+```javascript
+function checkBluetoothEnable() {
+  let { bluetoothEnabled, locationEnabled, locationAuthorized, platform } = wx.getSystemInfoSync();
+  let bluetoothAuthorized = plugin.isBluetoothAvailable() && bluetoothEnabled;
+  if (platform.indexOf('android') > -1) {
+    if (!bluetoothEnabled && !locationEnabled) return '请打开手机蓝牙和GPS定位功能，方可查找设备';
+    if (!bluetoothEnabled) return '请打开手机蓝牙，方可查找设备';
+    if (!locationEnabled) return '请打开手机GPS定位功能，方可查找设备';
+    if (!locationAuthorized) return '请进入手机应用设置，开启微信的GPS定位授权，方可查找设备';
+  } else {
+    if (!bluetoothEnabled) return '请打开手机蓝牙，并进入手机应用设置开启微信的蓝牙授权，方可查找设备';
+    if (!bluetoothAuthorized) return '请打开手机蓝牙，并进入手机应用设置开启微信的蓝牙授权，方可查找设备';
+  }
+}
+
+```
+
 <a name="C81w3"></a>
 ## 2.1 搜索&发现设备
 
