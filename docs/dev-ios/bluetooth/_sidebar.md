@@ -77,7 +77,7 @@
       - [定时](/dev-ios/bluetooth/box/settings/timing)
    - 数据接收
       - [用药数据](/dev-ios/bluetooth/box/receive/medicine)
-- cavo手环（LZCavosmart）
+- H5Plus 手环（LZCavosmart）
    - 设置项
       - [语言设置](dev-ios/bluetooth/cavo/settings/language)
       - [鼓励提醒](dev-ios/bluetooth/cavo/settings/encourage)
