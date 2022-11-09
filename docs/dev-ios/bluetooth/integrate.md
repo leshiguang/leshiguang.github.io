@@ -40,6 +40,7 @@ pod 'LZCavosmart'               // 支持cavo手环 可选
 
 <a name="cf2a4d11"></a>
 ## SDK初始化
+
 ```objectivec
 #import <LZBluetooth/LZBluetooth.h>
 
@@ -85,6 +86,7 @@ pod 'LZCavosmart'               // 支持cavo手环 可选
     NSLog(@"收到电量 %@", device.batteryInfo);
 }
 ```
+
 
 集成和初始化工作做完， 下一步您需要开始绑定硬件设备：[绑定流程](/dev-ios/bluetooth/reference/device)
 
