@@ -79,6 +79,22 @@
    - 数据接收
       - [跳神结果](/dev-android/bluetooth/v2/skippingrope/data/ropeskippingresult)
       - [跳神实时](/dev-android/bluetooth/v2/skippingrope/data/ropeskippingrealtime)
+- 珈沃手环(CavoSmart)
+   - [绑定流程](/dev-android/bluetooth/v2/band/bind)
+   - 设置项
+      - [闹钟](/dev-android/bluetooth/v2/cavosmart/settings/clock)
+      - [切换表盘](/dev-android/bluetooth/v2/cavosmart/settings/dialplate)
+      - [心率开关](/dev-android/bluetooth/v2/cavosmart/settings/heartrateswitch)
+      - [语言](/dev-android/bluetooth/v2/cavosmart/settings/language)
+      - [久坐提醒](/dev-android/bluetooth/v2/cavosmart/settings/longsit)
+      - [多类型目标](/dev-android/bluetooth/v2/cavosmart/settings/targetencourage)
+      - [时间制式](/dev-android/bluetooth/v2/cavosmart/settings/timeformat)
+      - [获取手环测量数据](/dev-android/bluetooth/v2/cavosmart/settings/synchronizedata)
+   - 数据接收
+      - [睡眠分析](/dev-android/bluetooth/v2/cavosmart/data/sleepanalysisresult)
+      - [心率](/dev-android/bluetooth/v2/cavosmart/data/heartrate)
+      - [运动](/dev-android/bluetooth/v2/cavosmart/data/sportreport)
+      - [日常监测](/dev-android/bluetooth/v2/cavosmart/data/dailymeasuredata)
 - 旧版入口
    - [快速集成](/dev-android/bluetooth/integrate)
    - [设备管理](/dev-android/bluetooth/reference/device)
