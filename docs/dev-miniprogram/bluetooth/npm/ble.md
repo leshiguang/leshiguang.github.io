@@ -224,6 +224,7 @@ function checkBluetoothEnable() {
 | protoName | string | 协议名称 |
 | sn | string | sn |
 | connectStatus | ConnectionState | 连接状态 |
+| isLoadingData | boolean | 是否正在加载数据，应用于接受数据比较多的情况，仅支持HR6，与HR5Plus<br /> |
 
 
 <a name="qJz3J"></a>
