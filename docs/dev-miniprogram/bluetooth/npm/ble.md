@@ -464,6 +464,7 @@ plugin.cancelBind({ mac });
 1. 手机蓝牙的开关 eventName = "adaptorState",
 2. 蓝牙设备的连接状态 eventName = "connectionState",
 3. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
+4. 设备的数据上传状态 eventName = "syncDataStateChange"
 
 事件是通过 eventKey，同一事件的同一eventKey 回调会被覆盖<br />取消监听则使用 `plugin.$off` 参数<br />调用示例：
 
@@ -500,6 +501,17 @@ plugin.cancelBind({ mac });
     },
   });
 
+
+  // 只是对HR6，HR5Plus有效, 监听数据上传中的状态
+  plugin.$on({
+      eventName: "syncDataStateChange",
+      eventKey: 'dad', /// 唯一标识，同一标识的监听会被覆盖
+      callback: (device) => {
+          const isLoading = device.isLoadingData;
+          console.warn('是否正在加载数据', isLoading);
+      }
+  })
+
   // 取消监听
   plugin.$off({
     eventname: "adaptorState",
@@ -513,6 +525,11 @@ plugin.cancelBind({ mac });
 
   plugin.$off({
     eventname: "dataReport",
+    eventKey: "wo"
+  })
+
+	plugin.$off({
+    eventname: "syncDataStateChange",
     eventKey: "wo"
   })
 ```
