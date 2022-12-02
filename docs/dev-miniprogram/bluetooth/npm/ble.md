@@ -505,7 +505,7 @@ plugin.cancelBind({ mac });
   // 只是对HR6，HR5Plus有效, 监听数据上传中的状态
   plugin.$on({
       eventName: "syncDataStateChange",
-      eventKey: 'dad', /// 唯一标识，同一标识的监听会被覆盖
+      eventKey: 'wo', /// 唯一标识，同一标识的监听会被覆盖
       callback: (device) => {
           const isLoading = device.isLoadingData;
           console.warn('是否正在加载数据', isLoading);
