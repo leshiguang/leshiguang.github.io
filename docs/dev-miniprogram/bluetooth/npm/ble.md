@@ -503,7 +503,7 @@ plugin.cancelBind({ mac });
   });
 
 
-  // 只是对HR6，HR5Plus有效, 监听数据上传中的状态
+  // 只是对HR6，HR5Plus，membo watch1，membo watch 2有效, 监听数据上传中的状态
   plugin.$on({
       eventName: "syncDataStateChange",
       eventKey: 'wo', /// 唯一标识，同一标识的监听会被覆盖
