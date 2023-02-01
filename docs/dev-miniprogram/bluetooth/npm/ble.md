@@ -95,7 +95,7 @@ plugin.regist(bracelet);
 <a name="jeaGu"></a>
 ## 1.4 模块初始化
 
-[申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)
+[申请乐心AppKey](https://docs.sghealth.cn/develop-native/apply)
 
 ```javascript
 // 自定义打印日志
