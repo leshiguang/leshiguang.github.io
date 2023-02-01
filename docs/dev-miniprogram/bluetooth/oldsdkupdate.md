@@ -1,8 +1,8 @@
 <a name="qiKtp"></a>
 # 资料入口及升级目的
 - [旧版SDK 插件接入方式](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx43b1ab446b5db1e0&token=1532068600&lang=zh_CN)
-- [新版SDK 插件接入方式](https://docs.leshiguang.com/dev-miniprogram/bluetooth/plugin)
-- [新版SDK npm接入方式](https://docs.leshiguang.com/dev-miniprogram/bluetooth/npm/ble)  [demo](https://docs.leshiguang.com/dev-miniprogram/bluetooth/demo)（推荐）
+- [新版SDK 插件接入方式](https://docs.sghealth.cn/dev-miniprogram/bluetooth/plugin)
+- [新版SDK npm接入方式](https://docs.sghealth.cn/dev-miniprogram/bluetooth/npm/ble)  [demo](https://docs.sghealth.cn/dev-miniprogram/bluetooth/demo)（推荐）
 
 新版sdk的优化点：
 
@@ -12,7 +12,7 @@
 
 <a name="VPAi2"></a>
 # 算法接口升级
-[https://docs.leshiguang.com/develop-cloud/algorithm/fat/v3](https://docs.leshiguang.com/develop-cloud/algorithm/fat/v3)
+[https://docs.sghealth.cn/develop-cloud/algorithm/fat/v3](https://docs.sghealth.cn/develop-cloud/algorithm/fat/v3)
 
 <a name="CJu3Y"></a>
 # 注意事项
