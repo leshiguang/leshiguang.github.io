@@ -121,7 +121,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 <a name="jeaGu"></a>
 ## 1.3 插件初始化
 
-[申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)
+[申请乐心AppKey](https://docs.sghealth.cn/develop-native/apply)
 
 ```javascript
   ble.init({
