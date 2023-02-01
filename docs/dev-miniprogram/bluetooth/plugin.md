@@ -418,8 +418,8 @@ ble.cancelBind({ mac });
 如果你想监听手机蓝牙是否开启，设备的连接状态，及设备同步过来的数据，则可以使用 `plugin.$on` 监听某个事件，目前支持三个事件
 
 1. 手机蓝牙的开关 eventName = "adaptorState",
-1. 蓝牙设备的连接状态 eventName = "connectionState",
-1. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
+2. 蓝牙设备的连接状态 eventName = "connectionState",
+3. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
 
 事件是通过 eventKey，同一事件的同一eventKey 回调会被覆盖<br />取消监听则使用 `plugin.$off` 参数<br />调用示例：
 
@@ -628,9 +628,9 @@ catch的 `resp` 的数据结构
 蓝牙配网一般流程
 
 1. 监听数据的接收
-1. 向蓝牙设备发送扫描wifi指令 （扫描wifi这个动作是蓝牙设备完成的，因为手机不能扫描附近的wifi设备）
-1. 通过监听的数据得到扫描到的wifi列表
-1. 选中某个wifi 并输入密码， 然后向蓝牙设备发送指定wifi的连接指令<br />调用示例：
+2. 向蓝牙设备发送扫描wifi指令 （扫描wifi这个动作是蓝牙设备完成的，因为手机不能扫描附近的wifi设备）
+3. 通过监听的数据得到扫描到的wifi列表
+4. 选中某个wifi 并输入密码， 然后向蓝牙设备发送指定wifi的连接指令<br />调用示例：
 
 ```javascript
   let settingFactory = plugin.settingFactory;
@@ -1824,7 +1824,7 @@ wx.navigateTo({
 })
 ```
 
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/11aa67944e214c9a9f087b0166e0c3ae.jpg#crop=0&crop=0&crop=1&crop=1&id=xwfp0&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/11aa67944e214c9a9f087b0166e0c3ae.jpg#id=xwfp0&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="YqAOx"></a>
 ### 9.4.2 设备绑定页
@@ -1840,7 +1840,7 @@ wx.navigateTo({
 })
 ```
 
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/f7a8257470994e138cde25ccd0aba66f.jpg#crop=0&crop=0&crop=1&crop=1&id=HmebY&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/f7a8257470994e138cde25ccd0aba66f.jpg#id=HmebY&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="NfgfX"></a>
 ### 9.4.3 我的列表页
@@ -1855,7 +1855,7 @@ wx.navigateTo({
 })
 ```
 
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/7617ad3bc28440a6af77f6e2a22ba849.jpg#crop=0&crop=0&crop=1&crop=1&id=BW9Tc&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/7617ad3bc28440a6af77f6e2a22ba849.jpg#id=BW9Tc&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="ON1qc"></a>
 ### 9.4.4 设备详情页
@@ -1871,7 +1871,7 @@ wx.navigateTo({
 })
 ```
 
-- 页面预览（体脂秤S20为例）<br />![](https://files.lifesense.com/other/20210830/109dccf5b0a0433eb95ba968893214bf.jpg#crop=0&crop=0&crop=1&crop=1&id=h2Ish&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- 页面预览（体脂秤S20为例）<br />![](https://files.lifesense.com/other/20210830/109dccf5b0a0433eb95ba968893214bf.jpg#id=h2Ish&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="KZgzx"></a>
 ### 9.4.5 体脂秤配网
@@ -1887,7 +1887,7 @@ wx.navigateTo({
 })
 ```
 
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/5ea2f781eb6a4ebbb3e32fa7a7684b3c.jpg#crop=0&crop=0&crop=1&crop=1&id=l6ZXI&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/5ea2f781eb6a4ebbb3e32fa7a7684b3c.jpg#id=l6ZXI&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="U3Aek"></a>
 ### 9.4.6 设备升级（ota）
@@ -1902,7 +1902,7 @@ wx.navigateTo({
 })
 ```
 
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/4b75d04f4a30427f9975ce18c7043acb.jpg#crop=0&crop=0&crop=1&crop=1&id=me37L&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/4b75d04f4a30427f9975ce18c7043acb.jpg#id=me37L&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="ab8a2303"></a>
 #### 
