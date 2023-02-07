@@ -6,7 +6,7 @@ iOS SDK实现乐心设备私有蓝牙协议的接入工作，支持手环、体�
 支持设备清单：[SDK支持的硬件清单](https://docs.sghealth.cn/develop-native/apply?id=%e6%94%af%e6%8c%81%e8%ae%be%e5%a4%87)
 <a name="NA9EG"></a>
 ## 支持的功能
-硬件支持功能清单： [https://docs.sghealth.cn/FAQ/devicefeature](https://docs.sghealth.cn/FAQ/devicefeature)<br />请开发者参考自身接入的设备类型进行开发，勿使用设备不支持的功能<br />[点击查看功能全景](https://pics.leshiguang.com/vpage/2023/02/01/3edaa5a6df634304af99823a689364a8.png)
+硬件支持功能清单： [https://docs.sghealth.cn/FAQ/devicefeature](https://docs.sghealth.cn/FAQ/devicefeature)<br />请开发者参考自身接入的设备类型进行开发，勿使用设备不支持的功能<br />![3edaa5a6df634304af99823a689364a8.png](https://cdn.nlark.com/yuque/0/2023/png/223399/1675753904350-6f806036-bfac-4054-a717-4542d47663fc.png#averageHue=%23090808&clientId=ue5236e06-6b0c-4&from=ui&id=ub0546b85&name=3edaa5a6df634304af99823a689364a8.png&originHeight=1956&originWidth=750&originalType=binary&ratio=1&rotation=0&showTitle=false&size=50086&status=done&style=none&taskId=u3d7ff642-f006-458f-8d9a-a9dd932d6e6&title=)
 
 <a name="tAA3g"></a>
 ## 接入申请
