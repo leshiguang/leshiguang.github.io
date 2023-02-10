@@ -2,6 +2,8 @@
 
 | 更新日期 | 名称 | 版本 | 下载地址 | 更新日志 |
 | --- | --- | --- | --- | --- |
+| 2023-2-9 | LZGlucose | 1.0.0 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZGlucose/1.0.0/LZGlucose.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZGlucose/1.0.0/LZGlucose.framework.zip) | 1、增加对G3血糖仪的支持 |
+| 2023-2-9 | LZBluetooth | 2.1.0 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBluetooth/2.1.0/LZBluetooth.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBluetooth/2.1.0/LZBluetooth.framework.zip) | 1、增加对LZGlucose的适配 |
 | 2022-8-23 | LZCavosmart | 1.0.0 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZCavosmart/1.0.0/LZCavosmart.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZCavosmart/1.0.0/LZCavosmart.framework.zip) | 1、对于cavo手环的支持 |
 | 2022-8-23 | LZBluetooth | 2.0.3 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBluetooth/2.0.3/LZBluetooth.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBluetooth/2.0.3/LZBluetooth.framework.zip) | 1、新增LZDeviceTypeCavo类型 |
 | 2022-8-5 | LZBracelet | 1.0.4 | [https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.4/LZBracelet.framework.zip](https://media.githubusercontent.com/media/leshiguang/Framework/main/LZBracelet/1.0.4/LZBracelet.framework.zip) | 1、解决5s的报错问题 |
