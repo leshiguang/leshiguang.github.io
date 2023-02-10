@@ -13,21 +13,23 @@
 - LZBloodPressure.framework: 支持乐心血压记的库 （依赖LZBluetooth（2.0.0））
 - LZSkip.framework: 支持跳绳的库 （依赖LZBluetooth（2.0.0））
 - LZCavosmart.framework: 支持cavo手环的库 （依赖LZBluetooth （2.0.3））
+- LZGlucose.framework: 支持G3血糖仪的库（依赖LZBluetooth （2.1.0）
 
-SDK目前支持的CPU架构为arm64，是个动态库<br />2、在Target->BuildPhase->Link Binary with Libraries 选型卡中， 添加”1“中解压的Framework<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/223399/1610680095972-3b725270-12df-4385-b7cd-a96f2a5670b0.png#averageHue=%23f8f8f8&crop=0&crop=0&crop=1&crop=1&height=92&id=VoiAv&margin=%5Bobject%20Object%5D&name=image.png&originHeight=184&originWidth=1958&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40827&status=done&style=none&title=&width=979)<br />注：请不要将Status状态设置为Optional，否则会带来image not found异常<br />3、如果您的Target类型为Application，需要在Target->General->Frameworks,Libraries,Embeded Content选项卡中， 将导入的Framework类型设置为Embeded & Sign <br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/223399/1610680041082-f5c12478-8fa5-4166-9b48-9f12c99fbdfc.png#averageHue=%23f1f1f1&crop=0&crop=0&crop=1&crop=1&height=89&id=VkOf8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=178&originWidth=1532&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44411&status=done&style=none&title=&width=766)
+SDK目前支持的CPU架构为arm64，是个动态库<br />2、在Target->BuildPhase->Link Binary with Libraries 选型卡中， 添加”1“中解压的Framework<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/223399/1610680095972-3b725270-12df-4385-b7cd-a96f2a5670b0.png#averageHue=%23f8f8f8&height=92&id=VoiAv&name=image.png&originHeight=184&originWidth=1958&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40827&status=done&style=none&title=&width=979)<br />注：请不要将Status状态设置为Optional，否则会带来image not found异常<br />3、如果您的Target类型为Application，需要在Target->General->Frameworks,Libraries,Embeded Content选项卡中， 将导入的Framework类型设置为Embeded & Sign <br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/223399/1610680041082-f5c12478-8fa5-4166-9b48-9f12c99fbdfc.png#averageHue=%23f1f1f1&height=89&id=VkOf8&name=image.png&originHeight=178&originWidth=1532&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44411&status=done&style=none&title=&width=766)
 <a name="wvQrb"></a>
 #### 通过CocoaPods
 ```python
 # 源
 source 'https://github.com/leshiguang/cocoapods.git'
 
-pod 'LZBluetooth', '~> 2.0.3' 	// 请按照版本发布记录使用最新版本
+pod 'LZBluetooth', '~> 2.1.0' 	// 请按照版本发布记录使用最新版本
 pod 'LZBracelet'				// 支持手环&手表 可选
 pod 'LZScale'					// 支持体脂秤	可选
 pod 'LZBox'						// 支持药盒		可选
 pod 'LZBloodPressure'			// 支持血压计	可选
 pod 'LZSkip'					// 支持跳绳	可选
 pod 'LZCavosmart'               // 支持cavo手环 可选
+pod 'LZGlucose'					// 支持G3	可选
 ```
 	
 
@@ -61,7 +63,8 @@ pod 'LZCavosmart'               // 支持cavo手环 可选
     id<LZDeviceManagerProtocol> deviceManager = [LZBluetooth getDeviceManagerWithDeviceTypes:@[
         @(LZDeviceTypeBracelet),
         @(LZDeviceTypeScale),
-        @(LZDeviceTypeBloodPressure)
+        @(LZDeviceTypeBloodPressure),
+        @(LZDeviceTypeG3),
     ]];
     /// 3、设置设备相关的代理
     deviceManager.delegate = self;
