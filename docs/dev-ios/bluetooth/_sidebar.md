@@ -63,6 +63,13 @@
 - 血压计（LZBloodPressure）
    - 数据接收
       - [血压数据](/dev-ios/bluetooth/bloodpressure/receive/bloodpressure)
+- 血糖仪G3（LZGlucose）
+   - 设置项
+      - [读取历史数据](/dev-ios/bluetooth/glucose/settings/readrecord)
+      - [删除历史数据](/dev-ios/bluetooth/glucose/settings/deletesetting)
+   - 数据接收
+      - [实时状态数据](/dev-ios/bluetooth/glucose/receive/recorddata)
+      - [历史记录数据](/dev-ios/bluetooth/glucose/receive/historydata)
 - 跳绳（LZSkip）
    - 设置项
       - [开始跳绳](/dev-ios/bluetooth/skip/settings/start)
