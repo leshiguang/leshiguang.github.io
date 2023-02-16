@@ -2,7 +2,6 @@
 <a name="XS3wZ"></a>
 # 1.WIFI体脂称
 
-
 <a name="Ily58"></a>
 ## 1.1 体脂称测量数据推送
 | eventKey | **dataPush** |
@@ -16,6 +15,7 @@
 | data | - | Object | 字段具体解释见下方（data参数解释） |
 | **deviceId** | data | String | 设备id |
 | sn | data | String | 设备sn |
+| thirdSn | data | String | 外包装sn，一般与设备sn相同，部分特殊型号的设备除外 |
 | mac | data | String | 设备mac地址 |
 | **measureEpochMilli** | data | Long | 测量时间（毫秒值） |
 | **weight** | data | double | _体重（单位kg）_ |
@@ -44,7 +44,6 @@
 ```
 <a name="yvcMW"></a>
 # 2.WIFI/NB/GPRS血压计
-
 
 <a name="KgoQe"></a>
 ## 2.1 血压数据推送
@@ -109,7 +108,7 @@
 | **deviceId** | data | String | 设备id |
 | **measurementDate** | data | Long | 测量时间（毫秒值） |
 | **glu** | data | Double | _血糖浓度 单位 mmol/L_ |
-| mealPeriod | data | Integer | _用餐时段_<br />_​_0：空腹；<br />1：早餐后；<br />2：午餐前；<br />3：午餐后；<br />4：晚餐前；<br />5：晚餐后；<br />6：睡前； <br />11：凌晨；<br />12：餐前；<br />13：餐后2小时；<br />14：运动前；<br />15：运动后；<br />16：随机 |
+| mealPeriod | data | Integer | _用餐时段_<br />0：空腹；<br />1：早餐后；<br />2：午餐前；<br />3：午餐后；<br />4：晚餐前；<br />5：晚餐后；<br />6：睡前； <br />11：凌晨；<br />12：餐前；<br />13：餐后2小时；<br />14：运动前；<br />15：运动后；<br />16：随机 |
 
 2）推送数据样例
 ```json
