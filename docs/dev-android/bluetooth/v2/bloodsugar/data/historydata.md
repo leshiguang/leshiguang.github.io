@@ -4,7 +4,7 @@
 
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
-| list | List<[BloodSugarMeasureData]()> | 历史数据列表 |
+| list | List<[BloodSugarMeasureData](/dev-android/bluetooth/v2/bloodsugar/data/realtimedata)> | 历史数据列表 |
 
 
 
