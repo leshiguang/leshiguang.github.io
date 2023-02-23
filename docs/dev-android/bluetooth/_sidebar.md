@@ -79,7 +79,7 @@
    - 数据接收
       - [跳神结果](/dev-android/bluetooth/v2/skippingrope/data/ropeskippingresult)
       - [跳神实时](/dev-android/bluetooth/v2/skippingrope/data/ropeskippingrealtime)
-- 珈沃手环(CavoSmart)
+- HR5 Plus(CavoSmart)
    - [绑定流程](/dev-android/bluetooth/v2/band/bind)
    - 设置项
       - [闹钟](/dev-android/bluetooth/v2/cavosmart/settings/clock)
@@ -95,6 +95,13 @@
       - [心率](/dev-android/bluetooth/v2/cavosmart/data/heartrate)
       - [运动](/dev-android/bluetooth/v2/cavosmart/data/sportreport)
       - [日常监测](/dev-android/bluetooth/v2/cavosmart/data/dailymeasuredata)
+- 血糖仪(BloodSugar)
+   - [接口参考](/dev-android/bluetooth/v2/band/interface)
+   - 设置项
+      - 删除数据
+   - 数据接收
+      - 历史数据
+      - 实时测量数据
 - 旧版入口
    - [快速集成](/dev-android/bluetooth/integrate)
    - [设备管理](/dev-android/bluetooth/reference/device)
