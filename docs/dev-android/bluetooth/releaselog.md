@@ -23,6 +23,7 @@
 | 2021-05-31 | 1.2.2 | [bluetooth-mini-1.2.2.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复蓝牙配网相关问题 |
 | 2021-07-01 | 1.2.5 | [bluetooth-mini-1.2.5.jar](https://github.com/leshiguang/maven-repository/packages/575505) | 修复血压计2号键数据不能上传的问题 |
 | 2022-03-15 | 2.0 | [bluetooth-mini-core](https://github.com/leshiguang/maven-repository/packages/1303299):蓝牙核心库<br />[bluetooth-mini-band](https://github.com/leshiguang/maven-repository/packages/1303301):手环设备支持库<br />[bluetooth-mini-bloodpressure](https://github.com/leshiguang/maven-repository/packages/1303305):血压计设备支持库<br />[bluetooth-mini-fatscalee](https://github.com/leshiguang/maven-repository/packages/1303312):体脂秤设备支持库<br />[bluetooth-mini-medicalkit](https://github.com/leshiguang/maven-repository/packages/1303316):药盒设备支持库<br />[bluetooth-mini-skip](https://github.com/leshiguang/maven-repository/packages/1303331):跳绳设备支持库 | sdk模块化，降低依赖成本 |
+| 2023-2-23 |  | [bluetooth-mini-bloodsugar](https://github.com/leshiguang/maven-repository/packages/1796658):血糖仪设备 | 接入血糖仪 |
 
 
 
