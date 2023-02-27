@@ -4,8 +4,8 @@
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
-<a name="yOLGu"></a>
-# 1.获取评估问卷题目
+<a name="PUQMv"></a>
+## 1.获取评估问卷题目
 ```bash
 GET /api/healthRiskEval/v2/loadQuestions
 ```
@@ -30,17 +30,17 @@ GET /api/healthRiskEval/v2/loadQuestions
 | questionConf.groups.groupQuestions | List | 题目集合 |  |
 | questionConf.groups.groupQuestions.id | Long | 题目id |  |
 | questionConf.groups.groupQuestions.questionType | Integer | 题目选项类型 | 1-单选<br />2-多选<br />3-单项填空<br />4-多项填空 |
-| questionConf.groups.groupQuestions.analysis | String | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632720295214-19770fbf-6885-4f7e-8d53-350b8dd483ae.png#clientId=u6bdfdfa1-082a-4&from=paste&height=544&id=u101c7ea1&name=image.png&originHeight=544&originWidth=267&originalType=binary&ratio=1&size=29223&status=done&style=none&taskId=u833fef99-b593-4ad9-8921-7bc4a929ef2&width=267) |  |
+| questionConf.groups.groupQuestions.analysis | String | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632720295214-19770fbf-6885-4f7e-8d53-350b8dd483ae.png#averageHue=%23a4a1a0&clientId=u6bdfdfa1-082a-4&from=paste&height=544&id=u101c7ea1&name=image.png&originHeight=544&originWidth=267&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29223&status=done&style=none&taskId=u833fef99-b593-4ad9-8921-7bc4a929ef2&title=&width=267) |  |
 | questionConf.groups.groupQuestions.optionContent.options | List | 题目选项集合 | <br /> |
 
 | 选择类型 |  |  |
 | --- | --- | --- |
-| 选择题 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632720631541-278c5026-32bf-40f8-b0cc-3a33686e8dff.png#clientId=u6bdfdfa1-082a-4&from=paste&height=230&id=ubd45633e&name=image.png&originHeight=230&originWidth=334&originalType=binary&ratio=1&size=17565&status=done&style=none&taskId=u14b8e815-8426-4747-939a-e01ca2fa837&width=334) | checked ：是否默认选中<br /> |
-| 多个子单选题<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632720787555-62a97054-fe57-46ae-99a4-501864a78222.png#clientId=u6bdfdfa1-082a-4&from=paste&height=275&id=u8c1f7400&name=image.png&originHeight=275&originWidth=275&originalType=binary&ratio=1&size=10768&status=done&style=none&taskId=u423b1f99-8e20-4a8a-97e1-b1172c805a8&width=275) | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632721014940-deb933a2-4dba-4677-b273-7a80914a4201.png#clientId=u6bdfdfa1-082a-4&from=paste&height=1090&id=ucdf88e0d&name=image.png&originHeight=1090&originWidth=497&originalType=binary&ratio=1&size=82581&status=done&style=none&taskId=u4c52ed87-db16-4a7d-84b9-063029f98ca&width=497) | blankType：<br />   - 1-普通输入框类型<br />   - 2-范围滑动框类型<br />   - 3-选择框类型<br />   - 4-步进器<br />   - 5-日历<br />   - 6-单选框radio-group<br />
+| 选择题 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632720631541-278c5026-32bf-40f8-b0cc-3a33686e8dff.png#averageHue=%23f9f9f9&clientId=u6bdfdfa1-082a-4&from=paste&height=230&id=ubd45633e&name=image.png&originHeight=230&originWidth=334&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17565&status=done&style=none&taskId=u14b8e815-8426-4747-939a-e01ca2fa837&title=&width=334) | checked ：是否默认选中<br /> |
+| 多个子单选题<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632720787555-62a97054-fe57-46ae-99a4-501864a78222.png#averageHue=%23f7f8f9&clientId=u6bdfdfa1-082a-4&from=paste&height=275&id=u8c1f7400&name=image.png&originHeight=275&originWidth=275&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10768&status=done&style=none&taskId=u423b1f99-8e20-4a8a-97e1-b1172c805a8&title=&width=275) | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632721014940-deb933a2-4dba-4677-b273-7a80914a4201.png#averageHue=%23f9f9f9&clientId=u6bdfdfa1-082a-4&from=paste&height=1090&id=ucdf88e0d&name=image.png&originHeight=1090&originWidth=497&originalType=binary&ratio=1&rotation=0&showTitle=false&size=82581&status=done&style=none&taskId=u4c52ed87-db16-4a7d-84b9-063029f98ca&title=&width=497) | blankType：<br />   - 1-普通输入框类型<br />   - 2-范围滑动框类型<br />   - 3-选择框类型<br />   - 4-步进器<br />   - 5-日历<br />   - 6-单选框radio-group<br />
 blankRule.dataType: <br />   - 1-数值类型<br />   - 2-字符串类型<br />   - 3-日期类型<br /> |
-| 有范围的限定填空 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632721889381-1d5dc27d-4d2b-4972-9591-c9941be81573.png#clientId=u6bdfdfa1-082a-4&from=paste&height=493&id=u29216861&name=image.png&originHeight=493&originWidth=460&originalType=binary&ratio=1&size=47170&status=done&style=none&taskId=ua3c4db3d-2c8a-4503-8472-a01c1d39f2a&width=460) | min: 最小<br />max: 最大<br />step: 自增多少 |
-| 带引用值的选项 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632722196768-b2f32c90-44f5-4a78-b40d-36f2773077e6.png#clientId=u6bdfdfa1-082a-4&from=paste&height=358&id=u935be3d3&name=image.png&originHeight=358&originWidth=388&originalType=binary&ratio=1&size=32225&status=done&style=none&taskId=u1c13f4e8-6e14-4bb3-b2f5-cef2258cff6&width=388) | refValue：提交问卷的时候要带上该值 |
-| 有范围的限定填空-带单位和默认值 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632722299059-f3728fc3-0d9b-469a-b0c2-9b697e1c67c7.png#clientId=u6bdfdfa1-082a-4&from=paste&height=373&id=u3bc0ebb1&name=image.png&originHeight=373&originWidth=371&originalType=binary&ratio=1&size=26442&status=done&style=none&taskId=ubdf5d421-bc7f-4a61-805b-e61000cc80a&width=371) |  |
+| 有范围的限定填空 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632721889381-1d5dc27d-4d2b-4972-9591-c9941be81573.png#averageHue=%23f9f9f9&clientId=u6bdfdfa1-082a-4&from=paste&height=493&id=u29216861&name=image.png&originHeight=493&originWidth=460&originalType=binary&ratio=1&rotation=0&showTitle=false&size=47170&status=done&style=none&taskId=ua3c4db3d-2c8a-4503-8472-a01c1d39f2a&title=&width=460) | min: 最小<br />max: 最大<br />step: 自增多少 |
+| 带引用值的选项 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632722196768-b2f32c90-44f5-4a78-b40d-36f2773077e6.png#averageHue=%23f9f9f9&clientId=u6bdfdfa1-082a-4&from=paste&height=358&id=u935be3d3&name=image.png&originHeight=358&originWidth=388&originalType=binary&ratio=1&rotation=0&showTitle=false&size=32225&status=done&style=none&taskId=u1c13f4e8-6e14-4bb3-b2f5-cef2258cff6&title=&width=388) | refValue：提交问卷的时候要带上该值 |
+| 有范围的限定填空-带单位和默认值 | ![image.png](https://cdn.nlark.com/yuque/0/2021/png/324847/1632722299059-f3728fc3-0d9b-469a-b0c2-9b697e1c67c7.png#averageHue=%23f9f9f9&clientId=u6bdfdfa1-082a-4&from=paste&height=373&id=u3bc0ebb1&name=image.png&originHeight=373&originWidth=371&originalType=binary&ratio=1&rotation=0&showTitle=false&size=26442&status=done&style=none&taskId=ubdf5d421-bc7f-4a61-805b-e61000cc80a&title=&width=371) |  |
 
 ```json
 
@@ -793,8 +793,8 @@ blankRule.dataType: <br />   - 1-数值类型<br />   - 2-字符串类型<br /> 
 
 
 ```
-<a name="UioKQ"></a>
-# 2.提交评估问卷答案
+<a name="E8dbN"></a>
+## 2.提交评估问卷答案
 ```bash
 POST /api/healthRiskEval/v2/submitQuestions
 ```
@@ -1070,8 +1070,8 @@ POST /api/healthRiskEval/v2/submitQuestions
 ```
 
 **出参**：<br />无
-<a name="eAoEr"></a>
-# 3.获取某个评估的评估结果
+<a name="yfl5j"></a>
+## 3.获取某个评估的评估结果
 
 ```bash
 GET /api/healthRiskEval/v2/getOneEvaluateResult
