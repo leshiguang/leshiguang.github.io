@@ -545,7 +545,7 @@
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
-| bizType | String | 问卷所属业务 | 健康评估： healthRisk <br />免疫力评估： immune<br />睡眠评估：sleep<br />饮食评估：diet |
+| bizType | String | 问卷所属业务 | 全面风险评估： healthRisk <br />免疫力评估： immune<br />睡眠评估：sleep<br />饮食评估：diet |
 
 <a name="XBTfi"></a>
 ##### 出参:
