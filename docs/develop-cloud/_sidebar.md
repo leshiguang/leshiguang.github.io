@@ -24,6 +24,7 @@
       - [睡眠V2](/develop-cloud/v2/health/sleep)
       - [饮食](develop-cloud/v2/health/diet)
       - [健康评估V2](/develop-cloud/v2/health/estimate)
+      - [健康评估（顾问版本）](/develop-cloud/v2/health/evaluateCounselor)
       - [运动V2](/develop-cloud/v2/health/exercise)
       - [心率V2](/develop-cloud/v2/health/heartrate)
       - [血压V2](/develop-cloud/v2/health/bp)
