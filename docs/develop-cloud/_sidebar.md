@@ -25,6 +25,8 @@
       - [饮食](develop-cloud/v2/health/diet)
       - [健康评估V2](/develop-cloud/v2/health/estimate)
       - [健康评估（顾问版本）](/develop-cloud/v2/health/evaluateCounselor)
+      - [饮食风险评估](/develop-cloud/v2/health/FoodRisk)
+      - [运动状态评估](/develop-cloud/v2/health/ExerciseStatus)
       - [运动V2](/develop-cloud/v2/health/exercise)
       - [心率V2](/develop-cloud/v2/health/heartrate)
       - [血压V2](/develop-cloud/v2/health/bp)
