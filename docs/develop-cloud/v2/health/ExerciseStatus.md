@@ -286,7 +286,7 @@ POST /sport-rest/api/sportmanage/v2.0/evaluate/submit
 <a name="Ibe00"></a>
 ## 3. 查询评估结果
 ```
- GET sport-rest/api/sportmanage/v2.0/evaluate/getHomeInfo
+ GET /api/healthRiskEval/v2/diet/queryReport
 ```
 <a name="jCd9v"></a>
 ##### 入参： 
