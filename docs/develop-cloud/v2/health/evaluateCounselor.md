@@ -150,7 +150,7 @@ POST /riskEva/eva/submit
 <a name="kqAl8"></a>
 ## 3.获取某个评估的评估结果
 ```bash
-GET /riskEva/report/query
+GET /api/healthRiskEval/counselorVersion/report/query
 ```
 <a name="gAhoz"></a>
 #### 请求参数
@@ -889,6 +889,251 @@ GET /riskEva/report/query
       }
     }
   }
+}
+```
+
+<a name="nPM9J"></a>
+## 4.获取用户提交数据
+```bash
+GET /api/healthRiskEval/counselorVersion/report/queryUserSubmit
+```
+<a name="HEgjS"></a>
+#### 请求参数
+| 名称 | 位置 | 类型 | 必选 | 说明 |
+| --- | --- | --- | --- | --- |
+| reportNo | query | string | 否 | 报告No |
+
+<a name="IV2nN"></a>
+#### 返回结果
+| 名称 | 类型 | 必选 | 约束 | 中文名 | 说明 |
+| --- | --- | --- | --- | --- | --- |
+| » code | integer | true | none |  | none |
+| » msg | string | true | none |  | none |
+| » data | [object] | true | none |  | none |
+| »» questionStem | string | true | none | 题目题干 | none |
+| »» questionType | integer | true | none | 选项类型 | none |
+| »» submitted | [object] | true | none |  | none |
+| »»» key | string | true | none | 选项key | none |
+| »»» value | string | true | none | 值 | none |
+| »»» content | string | true | none | 选项内容 | none |
+
+<a name="qdRWw"></a>
+#### 返回结果示例
+```json
+{
+  "code": 200,
+  "msg": "成功",
+  "data": [
+    {
+      "questionStem": "您是否患有以下疾病？",
+      "questionType": 2,
+      "submitted": [
+        {
+          "key": "E",
+          "value": "E",
+          "content": "肾上腺皮质功能减退"
+        }
+      ]
+    },
+    {
+      "questionStem": "您的父亲或母亲是否超重/肥胖？",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "父母体重都正常"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一周您平均每天摄入的谷类的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "6.5份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一周您平均每天摄入的薯类的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "3.5份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一周您平均每天摄入的水果的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "3份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月您平均每周摄入的蛋类的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "6.5份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月您平均每周摄入的乳制品的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "7.5份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月您平均每周摄入的禽畜肉的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "9.5份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月您平均每周摄入的水产品的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "9.5份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月您平均每周摄入的大豆及豆制品的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "6份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月您平均每周摄入的坚果的分量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "6份或更少"
+        }
+      ]
+    },
+    {
+      "questionStem": "您是否喜欢经常肥肉、油炸食品、水煮鱼等吃高油食物（含自己在家做饭及在外就餐或外卖）？",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "几乎不吃高油食物"
+        }
+      ]
+    },
+    {
+      "questionStem": "您是否经常晚餐吃的过饱？",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "晚餐大吃大喝"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一周，您平均每天摄入的添加糖的份量最接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "不摄入添加糖"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月，您的运动量更接近于哪一种？",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "很少运动或不运动"
+        }
+      ]
+    },
+    {
+      "questionStem": "您最近是否感到生活充满压力？",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "无压力或压力很轻"
+        }
+      ]
+    },
+    {
+      "questionStem": "您最近是否经常有焦虑、忧愁痛苦的感觉？",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "几乎没有"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一周，您平均每天的饮水量是",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "不怎么喝水或者用饮料来代替水"
+        }
+      ]
+    },
+    {
+      "questionStem": "最近一个月，您平均每天的睡眠时长更接近",
+      "questionType": 1,
+      "submitted": [
+        {
+          "key": "A",
+          "value": "A",
+          "content": "不足5小时"
+        }
+      ]
+    }
+  ]
 }
 ```
 
