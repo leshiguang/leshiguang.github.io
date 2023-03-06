@@ -155,8 +155,8 @@
 ```
 
 <a name="mLt41"></a>
-## 三、获取用户最近一次提交的评估结果
-接口：域名+/food-web/api/dieteval/v1.0/home/get<br />请求方式：GET
+## 三、查询饮食评估报告
+接口：/api/healthRiskEval/v2/diet/queryReport<br />请求方式：GET
 <a name="iNMtZ"></a>
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
