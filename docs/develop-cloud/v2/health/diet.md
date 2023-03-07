@@ -1,6 +1,6 @@
 **注：如无特殊情况，以下接口都需要在header或者param参数中传递associatedId 参数**。
-<a name="VcIhg"></a>
-# 1.获取用户某一天的饮食记录、热量分析、饮食结构等信息
+<a name="K0gxT"></a>
+## 1.获取用户某一天的饮食记录、热量分析、饮食结构等信息
 ```bash
 GET /api/food/v2.0/diet/getDayFoodRecordWithAnalysis
 ```
@@ -417,8 +417,8 @@ GET /api/food/v2.0/diet/getDayFoodRecordWithAnalysis
 
 ```
 
-<a name="sTbFS"></a>
-# 2.查询用户推荐食谱
+<a name="usS5x"></a>
+## 2.查询用户推荐食谱
 ```bash
 GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipe
 ```
