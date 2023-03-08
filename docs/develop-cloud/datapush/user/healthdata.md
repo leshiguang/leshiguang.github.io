@@ -1,7 +1,7 @@
-<a name="XS3wZ"></a>
-# 1.用户体重数据
-<a name="Ily58"></a>
-## 1.1 用户体重数据变更
+<a name="cph4F"></a>
+## 1.用户体重数据
+<a name="sl8p8"></a>
+### 1.1 用户体重数据变更
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -28,8 +28,8 @@
     }
 }
 ```
-<a name="sj3kj"></a>
-## 1.2 用户体重数据删除
+<a name="LFcno"></a>
+### 1.2 用户体重数据删除
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -59,10 +59,10 @@
     }
 }
 ```
-<a name="AuAdo"></a>
-# 2.用户睡眠数据
-<a name="oAadY"></a>
-## 2.1 用户手环睡眠数据变更
+<a name="dxide"></a>
+## 2.用户睡眠数据
+<a name="KEOxf"></a>
+### 2.1 用户手环睡眠数据变更
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -90,8 +90,8 @@
     }
 }
 ```
-<a name="JotKN"></a>
-## 2.2 用户睡眠日记数据变更
+<a name="B1HXa"></a>
+### 2.2 用户睡眠日记数据变更
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -119,8 +119,8 @@
     }
 }
 ```
-<a name="ceXyh"></a>
-# 3.用户血压数据
+<a name="gYlQW"></a>
+## 3.用户血压数据
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | dataPush |
@@ -162,8 +162,8 @@
     }
 }
 ```
-<a name="J53Gw"></a>
-# 4.用户血糖数据
+<a name="w4ZrI"></a>
+## 4.用户血糖数据
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | dataPush |
@@ -196,8 +196,8 @@
     }
 }
 ```
-<a name="biYUd"></a>
-# 5.用户心率数据变更
+<a name="aAk05"></a>
+## 5.用户心率数据变更
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -221,8 +221,8 @@
     }
 }
 ```
-<a name="FQ15o"></a>
-# 6.用户步数数据变更
+<a name="d4gfT"></a>
+## 6.用户步数数据变更
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -249,8 +249,8 @@
     }
 }
 ```
-<a name="dcZh5"></a>
-# 7.用户运动数据变更
+<a name="gJdJO"></a>
+## 7.用户运动数据变更
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
@@ -277,7 +277,64 @@
     }
 }
 ```
+<a name="GMZV8"></a>
+## 8.用户饮食数据变更
+<a name="DA8tO"></a>
+### 8.1 用户膳食模式变更
+| **Key** | **Value** |
+| --- | --- |
+| eventKey | eventPush |
+| dataTypeKey | uDietModelDataChangeE |
 
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方 |
+| dietModelSource | data | Integer | 饮食模式来源 1-营养均衡 2-减重 3-护肤控糖 |
+
+2）推送数据示例
+```json
+{
+    "eventKey":"eventPush",
+    "dataTypeKey":"uDietModelDataChangeE",
+    "pushStatus":1,
+    "associatedId":"201079547",
+    "userId":37616,
+    "data":{
+        "userId":37616,
+        "dietModelSource":1
+    }
+}
+```
+<a name="KnlnU"></a>
+### 8.2 用户推荐食谱变更
+| **Key** | **Value** |
+| --- | --- |
+| eventKey | eventPush |
+| dataTypeKey | uRecommendRecipeChangeE |
+
+1）推送数据格式
+
+| 参数 | parent | 字段类型 | 字段说明 |
+| --- | --- | --- | --- |
+| data | - | Object | 字段具体解释见下方 |
+| dietModelSource | data | Integer | 饮食模式来源 1-营养均衡 2-减重 3-护肤控糖 |
+
+2）推送数据示例
+```json
+{
+    "eventKey":"eventPush",
+    "dataTypeKey":"uRecommendRecipeChangeE",
+    "pushStatus":1,
+    "associatedId":"201079547",
+    "userId":37616,
+    "data":{
+        "userId":37616,
+        "dietModelSource":1
+    }
+}
+```
 
 
 
