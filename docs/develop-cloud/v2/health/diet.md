@@ -427,7 +427,7 @@ GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipe
 ##### 入参:
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
-| recommendRecipe | Integer | 推荐食谱类型 |  1-营养均衡食谱 <br />2-减重食谱 <br />3-美肤控糖食谱 |
+| dietModelSource | Integer | 饮食模式来源  | 1-营养均衡 <br />2-减重 <br />3-护肤控糖 |
 
 <a name="gAYhl"></a>
 ##### 出参：
