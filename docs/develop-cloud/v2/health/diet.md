@@ -603,6 +603,124 @@ GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipe
 	}
 }
 ```
-<a name="ag5yJ"></a>
+<a name="hi84G"></a>
+## 3.查询用户食谱问卷结果
+```bash
+GET /api/food/v2.0/diet/recipe/queryUserRecipeQuestionResult 
+```
+
+<a name="UF6Eg"></a>
+##### 入参:
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| dietModelSource | Integer | 饮食模式来源  | 1-营养均衡 <br />2-减重 <br />3-护肤控糖 |
+
+<a name="HWqjc"></a>
+##### 出参：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| lightFastDTO | Object | 饮食模式 |  |
+| userProfileDTO | Object | 用户信息 |  |
+| hasAgeBloodSugar | Boolean | 是否有糖尿病 |  |
+| weightTargetRecordDto | Object | 体重目标 | dietModelSource=2时存在 |
+| weightAllIndexValueDTO | Object | 体重 |  |
+| userWeightDTO | Object | 活动水平 |  |
+
+<a name="yosy9"></a>
+##### 饮食模式数据(lightFastDTO)：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| fastType | Integer | 饮食模式 | 0-经典均衡膳食 <br />1-5+2轻断食  <br />2-6+1轻断食  <br />3-限能量减重<br />4-经典均衡膳食-控糖版<br />5-限能量减重-控糖版 |
+| fastValue | String | 轻断食时间记录 | 1代表星期一以，分割 |
+| dietModelSource | boolean | 饮食模式来源 | 1-营养均衡 <br />2-减重 <br />3-护肤控糖 |
+
+<a name="t5kdr"></a>
+##### 用户信息(userProfileDTO)：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| birthday | Long | 生日 | 时间戳 |
+| sex | Integer | 性别 | 1-男 2-女 |
+| height | Integer | 身高 | 单位 cm |
+
+<a name="kHvCQ"></a>
+##### 体重目标(weightTargetRecordDto)：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| originWeight | Double | 设置目标时的体重 |  |
+| unit | Integer | 单位 | 1 kg<br />2 斤 |
+| targetWeight | Double | 目标值 |  |
+| startTime | Date | 初始体重时间 |  |
+| startTargetWeight | Integer | 建议体重最低值 |  |
+| endTargetWeight | Double | 建议体重最高值 |  |
+| minWeight | Double | 体重保持-最低值 | 用户设置的体重保持-最低值 |
+| maxWeight | Double | 体重保持-最高值 | 用户设置的体重保持-最高值 |
+| targetType | Integer | 目标类型枚举 | -1 未设置目标<br />1 减重<br />2 增重<br />3 保持 |
+| targetModel | Integer | 目标模式 | 1-健康减重<br />2-瘦出小蛮腰<br />3-瘦出天鹅臂<br />4-瘦出马甲线<br />5-减掉啤酒肚<br />6-减掉双下巴<br />7-健康增重<br />8-增肌塑形 |
+
+<a name="KEziv"></a>
+##### 体重(weightAllIndexValueDTO)：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| id | String | 体重id |  |
+| weight | Double | 体重 | 1 kg<br />2 斤 |
+| bmi | Double | bmi |  |
+| pbf | Double | 体脂率 |  |
+
+<a name="Pmb5B"></a>
+##### 活动水平(userWeightDTO)：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| strengthType | Integer | 活动强度 | 1-经常坐着 <br />2-经常站立或者走动 <br />3-经常有重体力 |
+
+出参示例：
+```json
+{
+    "code": 200,
+    "msg": "成功",
+    "data": {
+        "lightFastDTO": {
+            "userId": 26733731,
+            "fastType": 0,
+            "fastValue": "1,4",
+            "dietModelSource": 1
+        },
+        "userProfileDTO": {
+            "userId": 0,
+            "sex": 1,
+            "birthday": 974304000000,
+            "height": 182,
+            "waist": 0,
+            "targetStep": 0,
+            "hasFill": false
+        },
+        "hasAgeBloodSugar": false,
+        "weightAllIndexValueDTO": {
+            "id": "c07c04d4c51c41598bc7a4a3f35aa8da",
+            "weight": 60.90,
+            "pbf": 11.6
+        },
+         "weightTargetRecordDto": {
+            "id": 1166,
+            "userId": 26733731,
+            "originWeight": 60.0,
+            "unit": 1,
+            "targetWeight": 43.9,
+            "startTime": 1678334131000,
+            "startTargetWeight": 69.6,
+            "endTargetWeight": 76.2,
+            "minWeight": 0.0,
+            "maxWeight": 0.0,
+            "targetType": 1,
+            "targetModel": 1,
+            "weightLossSwitch": false
+        },
+        "userWeightDTO": {
+            "userId": 26733731,
+            "strengthType": 1
+        }
+    }
+}
+```
+<a name="fm8Li"></a>
 # <br />
 
