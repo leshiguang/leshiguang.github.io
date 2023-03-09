@@ -280,7 +280,7 @@
 <a name="GMZV8"></a>
 ## 8.用户饮食数据变更
 <a name="DA8tO"></a>
-### 8.1 信息问卷采集
+### 8.1 饮食信息问卷采集
 | **Key** | **Value** |
 | --- | --- |
 | eventKey | eventPush |
