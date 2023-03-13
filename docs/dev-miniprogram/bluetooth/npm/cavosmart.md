@@ -268,17 +268,24 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 
 
 <a name="FtjGs"></a>
-## 4.2 心率数据 
+## 4.2 心率体温数据 
 
-`HeartRate` 的数据结构
+`HeartRateAndTemperature` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | utc | number | 测量时间 |
 | utcOffset | number | 每笔值间隔 单位：s |
 | heartRates | number[] | 心率列表，每笔间隔时间为 utcOffset |
-| dataType | string | 固定值 CAVOHeartRate |
+| dataType | string | 固定值 CAVOHeartRateAndTemperature |
+| temperatures |                 Temperature |  体温数据，每笔间隔时间为 utcOffset |
 
+`Temperature`
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| value | number | 体温值（摄氏度） |
+| compensationEnable |                   boolean | 补偿开关 |
 
 <a name="pnUwW"></a>
 ## 4.3 睡眠报告
@@ -380,5 +387,18 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | calories | number | 卡路里 （卡） |
 | distance | number | 距离 （米） |
 | dataType | String | StepHistory  固定值 |
+
+<a name="iExmn"></a>
+## 4.7 血氧数据
+`BloodOxygen`的数据结构
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| utc | number | 测量时间（秒） |
+| dataType | string | 固定值 BloodOxygen |
+| currentBloodOxygen | number | 当前测量血氧值 |
+| highestBloodOxygen | number | 最高血氧值 |
+| lowestBloodOxygen | number | 最低血氧值 |
+| <br /> |  |  |
 
 
