@@ -260,10 +260,10 @@ let setting = new cavosmart.settingFactory.TemperatureSwitch(true);
 | stepsOf15min | number | 15分钟步数 |
 | distanceOf15min | number | 15分钟距离 |
 | caloriesOf15min | number | 15分钟卡路里 |
-| utc | number | 时间戳 |
+| utc | number | 时间戳 (秒) |
 | step | number | 步数 |
-| calories | number | 卡路里 |
-| distance | number | 距离 |
+| calories | number | 卡路里 (千卡) |
+| distance | number | 距离 (米) |
 | dataType | String | CAVOStep  固定值 |
 
 
