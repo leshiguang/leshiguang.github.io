@@ -116,7 +116,10 @@ const logger = {
 plugin.init({
     //用邮件乐心分配的appId替换掉下面字符串
       appKey: "你申请的appkey",
-    	logger,
+      ble: {
+        onBluetoothDeviceFound: xxx,
+        xxxx
+      }
     });
 ```
 
@@ -149,7 +152,7 @@ plugin.init({
 | --- | --- | --- | --- |
 | userId | string | 否 | 用户唯一标识 |
 | weight | number | 是 | 体重 单位：kg     精确两位小数 |
-| height | number | 是 | 身高 单位：米     精确两位小数 |
+| height | number | 是 | 身高 单位：cm    |
 | gender | number | 是 | 性别 1：男性 0：女性 用来做算法计算 |
 | age | number | 是 | 年龄 |
 
