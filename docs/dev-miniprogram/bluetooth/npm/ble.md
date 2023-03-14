@@ -143,7 +143,7 @@ plugin.init({
   plugin.updateUserInfo({
         gender: 1,
         weight: 59,
-        height: 1.76,
+        height: 176,
         age: 24,
       });
 ```
