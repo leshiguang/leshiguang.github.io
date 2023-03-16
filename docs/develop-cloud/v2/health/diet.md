@@ -721,6 +721,35 @@ GET /api/food/v2.0/diet/recipe/queryUserRecipeQuestionResult
     }
 }
 ```
-<a name="fm8Li"></a>
+<a name="IcCWz"></a>
+## 4.查询用户推荐食谱拥有情况
+```bash
+GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipeHaveInfo 
+```
+
+<a name="cvcMl"></a>
+##### 入参: 无
+<a name="ZvrDm"></a>
+##### 出参：
+| **字段** | **类型** | **描述** | **其他** |
+| --- | --- | --- | --- |
+| haveBalancedDiet | Boolean | 是否有均衡食谱 |  |
+| haveWeightLoss | Boolean | 用户有减重食谱 |  |
+| haveControlSugar | Boolean | 是否有控糖食谱 |  |
+
+
+出参示例：
+```json
+{
+	"code": 200,
+	"msg": "成功",
+	"data": {
+		"haveBalancedDiet": false,
+		"haveWeightLoss": true,
+		"haveControlSugar": false
+	}
+}
+```
+<a name="fY6ja"></a>
 # <br />
 
