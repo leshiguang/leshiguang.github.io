@@ -726,16 +726,13 @@ GET /api/food/v2.0/diet/recipe/queryUserRecipeQuestionResult
 ```bash
 GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipeHaveInfo 
 ```
-
-<a name="cvcMl"></a>
-##### 入参: 无
 <a name="ZvrDm"></a>
 ##### 出参：
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | haveBalancedDiet | Boolean | 是否有均衡食谱 |  |
 | balancedDietCreateTime | Long | 均衡食谱创建时间 | 时间戳 |
-| haveWeightLoss | Boolean | 用户有减重食谱 | <br /> |
+| haveWeightLoss | Boolean | 是否有减重食谱 | <br /> |
 | weightLossCreateTime | Long | 减重食谱创建时间 | 时间戳 |
 | haveControlSugar | Boolean | 是否有控糖食谱 |  |
 | controlSugarCreateTime | Long | 控糖食谱创建时间 | 时间戳 |
