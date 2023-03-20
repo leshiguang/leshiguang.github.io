@@ -9,6 +9,7 @@
 | notCreate | boolean | 未查询到关联账号时，是否不做账号新增 | 默认false，即关联id无映射的用户时自动创建 |
 | softLogin | boolean | 是否软登录，软登录先尝试获取用户当前<br />accessToken,获取失败则创建新的<br />accessToken | 默认false，即每次重新获取<br />accessToken，之前请求的<br />accessToken会失效 |
 | userName | String | 用户昵称，首次创建关联账号时初始化信息 | 可空 |
+| headImg | String | 头像,首次创建关联账号时初始化信息 | 可空 |
 | sex | Integer | 性别，1-男 2-女，首次创建关联账号时初始化信息 | 可空 |
 | birthday | Long | 生日，毫秒时间戳，首次创建关联账号时初始化信息 | 可空 |
 | height | Integer | 身高，单位cm，首次创建关联账号时初始化信息 | 可空 |
@@ -23,7 +24,7 @@
 | needInfo | boolean | 是否为新用户，即之前未创建关联 |  |
 
 
-<br />示例返回报文：
+示例返回报文：
 ```json
 {
 	"code":200,
@@ -60,7 +61,6 @@
 | accessToken | String | 用户登录TOKEN |  |
 | needInfo | boolean | 是否为新用户，即之前未创建关联 |  |
 
-​
 
 示例返回报文：
 ```json
