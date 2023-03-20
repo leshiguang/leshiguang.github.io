@@ -734,8 +734,11 @@ GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipeHaveInfo
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | haveBalancedDiet | Boolean | 是否有均衡食谱 |  |
-| haveWeightLoss | Boolean | 用户有减重食谱 |  |
+| balancedDietCreateTime | Long | 均衡食谱创建时间 | 时间戳 |
+| haveWeightLoss | Boolean | 用户有减重食谱 | <br /> |
+| weightLossCreateTime | Long | 减重食谱创建时间 | 时间戳 |
 | haveControlSugar | Boolean | 是否有控糖食谱 |  |
+| controlSugarCreateTime | Long | 控糖食谱创建时间 | 时间戳 |
 
 
 出参示例：
@@ -744,9 +747,12 @@ GET /api/food/v2.0/diet/recipe/queryUserRecommendRecipeHaveInfo
 	"code": 200,
 	"msg": "成功",
 	"data": {
-		"haveBalancedDiet": false,
+		"haveBalancedDiet": true,
+		"balancedDietCreateTime": 1679281501000,
 		"haveWeightLoss": true,
-		"haveControlSugar": false
+		"weightLossCreateTime": 1679280256000,
+		"haveControlSugar": true,
+		"controlSugarCreateTime": 1679281594000
 	}
 }
 ```
