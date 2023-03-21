@@ -17,8 +17,8 @@
 ```json
 {
     "dependencies": {
-        "sg-ble": "^2.0.2",	
-        "sg-bloodpressure": "^1.0.0"
+        "sg-ble": "^2.0.4",	
+        "sg-bloodpressure": "^1.0.1"
     }
 }
 ```
@@ -48,7 +48,7 @@ plugin.regist(bloodpressure);
 ## 血压数据 BPData
 | 字段 | 字段类型 | 描述 |
 | --- | --- | --- |
-| utc | number | 测量时间,单位：秒 |
+| utc | number | 测量时间,单位：毫秒 |
 | unit | number | _单位 0:mmHg 1:Kpa_ |
 | systolic | number | 高压数据，以mmHg上传，根据unit flag的定义进行显示 |
 | diastolic | number | 低压数据，以mmHg上传，根据unit flag的定义进行显示 |
