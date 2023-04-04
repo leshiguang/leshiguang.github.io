@@ -1,6 +1,6 @@
 <a name="1FyCB"></a>
-## [关于事件提醒](https://docs.leshiguang.com/dev-ios/bluetooth/reference/settings/eventreminder?id=%e5%85%b3%e4%ba%8e%e4%ba%8b%e4%bb%b6%e6%8f%90%e9%86%92)
-事件提醒是闹钟功能的扩展， 解决了闹钟提醒功能中缺少事件名称的问题，用户可以自定义事件名称（如：喝水、吃药、睡觉）， 达到事件提醒时间点，手环通过震动并显示事件信息以提醒用户；在app端设置事件时，可设置重复周期（周一至周日，任意一天或多天），时长（5秒、15秒、30秒、60秒），在app端，支持最多可设置5组事件；标签内容为一行1-4个汉字（即8个英文字符）；内容支持汉字＼英文＼数字，不支持表情输入。<br />
+## [关于事件提醒](https://docs.sghealth.cn/dev-ios/bluetooth/reference/settings/eventreminder?id=%e5%85%b3%e4%ba%8e%e4%ba%8b%e4%bb%b6%e6%8f%90%e9%86%92)
+事件提醒是闹钟功能的扩展， 解决了闹钟提醒功能中缺少事件名称的问题，用户可以自定义事件名称（如：喝水、吃药、睡觉）， 达到事件提醒时间点，手环通过震动并显示事件信息以提醒用户；在app端设置事件时，可设置重复周期（周一至周日，任意一天或多天），时长（5秒、15秒、30秒、60秒），在app端，支持最多可设置5组事件；标签内容为一行1-4个汉字（即8个英文字符）；内容支持汉字＼英文＼数字，不支持表情输入。
 
 <a name="l8qwn"></a>
 ## 数据类型
@@ -34,5 +34,5 @@ BleDeviceManager.getDefaultManager().updateConfig(deviceInfo.getValue().getMac()
 ```
 <a name="WNFGT"></a>
 ## [实现方案示例](https://docs.leshiguang.com/dev-ios/bluetooth/reference/settings/eventreminder?id=%e5%ae%9e%e7%8e%b0%e6%96%b9%e6%a1%88%e7%a4%ba%e4%be%8b)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/354855/1616761732037-306b6b10-9c81-43ad-a881-c8a29e0ed4b6.png#align=left&display=inline&height=345&margin=%5Bobject%20Object%5D&name=image.png&originHeight=397&originWidth=858&size=30746&status=done&style=none&width=746)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/354855/1616761732037-306b6b10-9c81-43ad-a881-c8a29e0ed4b6.png#averageHue=%23fbfbfb&height=345&id=f84Xs&name=image.png&originHeight=397&originWidth=858&originalType=binary&ratio=1&rotation=0&showTitle=false&size=30746&status=done&style=none&title=&width=746)
 
