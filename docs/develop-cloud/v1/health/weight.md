@@ -1,152 +1,107 @@
-**注：如无特殊情况，以下接口都需要在header或者param参数中传递associatedId 参数。**
-<a name="A21Ds"></a>
-# 1.体重上传
-<a name="fmIrp"></a>
-## 1.1 上传体脂秤测量的体重数据
-```bash
-POST /api/weight/v2.0/upload/uploadWeightFromThirdparty
-```
-_该校验会校验设备id的合法性_
-<a name="Oc3mq"></a>
-##### 入参： 
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| recordList | List(Object) | 体重记录集合 |  |
-
-<a name="DAgXv"></a>
-###### 体重记录：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | String | 体重记录ID | 可以为空 |
-| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
-| measurementTime | Date | 测量时间 |  |
-| weight | Double | 体重 |  |
-| resistance50k | Double | 50k电阻值 |  |
-| heartRate | Integer | 心率 |  |
-
-<a name="TW9Ne"></a>
-###### 示例报文：
-```json
-{
-	"recordList":[
-		{
-			"measurementTime":1615195409957,
-			"deviceId":"a00240000d6b",
-			"weight":66.6,
-			"heartRate":64,
-			"resistance50k":400
-		}
-		
-	]
-}
-```
-<a name="O2na9"></a>
-## 1.2 上传用户手动添加的体重数据
-```
-POST /api/weight/v2.0/upload/manualUploadWeight
-```
-<a name="W4U7I"></a>
+<a name="HFnwp"></a>
+# 1. 新体重首页接口
+url :  域名 +  /weight-rest/weightRecord/getHomeRecord<br />method: get
+<a name="fKMqT"></a>
 ##### 入参：
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| measurementTime | Date | 测量时间 |  |
-| weight | Double | 体重 | 单位：kg |
-| pbf | Double | 体脂率 | 可以为空 |
-
-<a name="pQsjJ"></a>
-###### 示例报文：
-```json
-{
-	"measurementTime":1615344189239,
-	"weight":68.8,
-	"pbf":22.22
-}
-```
-
-<a name="IJzqk"></a>
-## 1.3 上传体脂秤测量的体重数据（含分配逻辑）
-注：本接口上传的体重会按照分配逻辑，将体重分配给当前用户或者家人，无法分配的添加到待分配的体重列表
-```bash
-POST /weight-rest/upload/uploadBluetoothDeviceWeight 
-```
-_该校验会校验设备id的合法性_
-<a name="obcXK"></a>
-##### 入参： 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| recordList | List(Object) | 体重记录集合 |  |
+| associatedId | String | 关联账号id |  |
 
-<a name="DHhjB"></a>
-###### 体重记录：
+<a name="WjtLg"></a>
+##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | String | 体重记录ID | 可以为空 |
-| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
-| measurementTime | Date | 测量时间 |  |
-| weight | Double | 体重 |  |
-| resistance50k | Double | 50k电阻值 |  |
-| heartRate | Integer | 心率 |  |
+| userInfo | Object | 用户信息 |  |
+| bindBodyFatScale | boolean | 是否绑定体脂秤 |  |
+| sampleData | boolean | 是否示例数据 |  |
+| haveNewWeightRecord | boolean | 家人是否有新数据未读 |  |
+| lastWeightRecord | Object | 最新一条体重数据 | 详情见：[链接](#we37g) |
+| lineChartsRecords | Object | 趋势图数据 | 详情见：[链接](#dJHg3) |
+| weightTargetInfo | Object | 目标体重数据 | 详情见：[链接](#22dDT) |
+| healthLabelList | List<Object> | 风险解读标签 | 详情见：[链接](#dN1MO) |
+|  |  |  |  |
 
-<a name="lF60a"></a>
-###### 示例报文：
-```json
-{
-	"recordList":[
-		{
-			"measurementTime":1615195409957,
-			"deviceId":"a00240000d6b",
-			"weight":66.6,
-			"heartRate":64,
-			"resistance50k":400
-		}
-		
-	]
-}
-```
-<a name="oLf6W"></a>
-# 2.体重查询
-<a name="vSZLg"></a>
-## 2.1 查询用户最新一笔的体重测量数据
-```
-GET /api/weight/v2.0/query/getLastOne
-```
-<a name="NuCqV"></a>
-##### 入参：
-| **字段** | **类型** | **描述** | **其他** |
+<a name="we37g"></a>
+###### 用户信息：
+| 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| onlyQueryPbf | boolean | 只查有体脂率的数据 |  |
+| userName | String | 用户名称 |  |
+| headImg | String | 用户头像 |  |
+| unit | Integer | 单位 | 1-kg;<br />2-斤;<br />3-磅;<br />4-英石 |
 
-<a name="i2dJH"></a>
-##### 出参：
-| **字段** | **类型** | **描述** | **其他** |
+<a name="LyuD0"></a>
+###### lastWeightRecord(最新体重数据)
+| 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| weightId | String | 体重id |  |
-| weight | Double | 体重 |  |
-| bmi | Double | bmi |  |
-| pbf | Double | 体脂率 |  |
-| pbfValue | Double | 脂肪量 |  |
-| fatLossVal | Double | 去脂体重 |  |
-| muscle | Double | 肌肉量 |  |
-| muscleRate | Double | 肌肉率 |  |
-| water | Double | 水分率 |  |
-| waterValue | Double | 水分量 |  |
-| basalMetabolism | Double | 基础代谢量 |  |
-| bodyAge | Integer | 身体年龄 |  |
-| ageOffset | Integer | 身体年龄偏移量 |  |
-| visceralFat | Integer | 内脏脂肪指数 |  |
-| skeletonMuscleEnum | Double | 骨骼肌 |  |
-| bone | Double | 骨量 |  |
-| protein | Double | 蛋白质 |  |
-| fc | Double | 脂肪控制 |  |
-| mc | Double | 肌肉控制 |  |
-| age | Integer | 年纪 |  |
-| sex | Integer | 性别 |  |
-| height | Double | 身高 | 单位：m |
+| id | String | 主键id |  |
 | measurementDate | Date | 测量时间 |  |
-| heartRate | Integer | 心率 |  |
-| unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
+| bmiInfo | Object | bmi数据信息 | 见：indexInfo |
+| weightInfo | Object | 体重数据信息 |  |
+| pbfInfo | Object | 脂肪率数据信息 |  |
 
-<a name="WeXbc"></a>
+indexInfo:
+
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| indexName | String | 标签名称 |
+| indexValue | Double | 标签值 |
+| indexUnit | String | 单位名称 |
+| indexLevelName | String | 等级名称 |
+
+<a name="dJHg3"></a>
+###### lineChartsRecords(趋势图数据)：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| weightList | List<Obj> | 体重列表 | 见SingleRecordInfo |
+| pbfList | List<Obj> | 脂肪率列表 |  |
+| bodyRoundList | List<Obj> | 体围列表 |  |
+| lastBodyRoundRecord | Object | 最新一条体围数据 | 见体围信息 |
+
+singleRecordInfo：
+
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| value | String | 标签值 |
+| unitName | string | 单位 |
+| measurementDate | Date | 测量时间 |
+
+体围信息：
+
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| waistHipRate | String | 腰臀比 |
+| scoreContent | string | 得分文案 |
+| measurementDate | Date | 测量时间 |
+
+<a name="22dDT"></a>
+###### weightTargetInfo(体重目标)：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| targetWeight | Double | 体重目标 |  |
+| targetText | String | 目标文案 |  |
+| percent | Double | 完成百分比 |  |
+| percentLevel | Integer | 完成百分比等级 | **1-**( 0, 1),<br />**2-**(1, 29),<br />**3-**(30, 80),<br />**4-**(81, 99),<br />**5-**(100, 100) |
+| targetType | Integer | 目标类型 | 1-减肥<br />2-增肥 |
+| startTime | Date | 目标开始时间 |  |
+
+<a name="Guqwq"></a>
+###### healthLabelList(风险解读标签)
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| healthLabelName | String | 健康风险标签名 |  |
+| healthContent | String | 健康风险解读 |  |
+| indexList | List<Object> | 风险对应标签对象 |  |
+
+<a name="dN1MO"></a>
+###### indexList(风险对应标签对象)
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| indexName | String | 标签名称 |  |
+| indexValue | BigDecimal | 标签值 |  |
+| indexUnit | String | 单位 |  |
+| indexLevel | String | 指标等级 |  |
+
+<a name="8sj7A"></a>
 ###### 示例报文：
 ```json
 
@@ -154,79 +109,466 @@ GET /api/weight/v2.0/query/getLastOne
 	"code":200,
 	"msg":"成功",
 	"data":{
-		"userId":23342312,
-		"weight":135,
-		"bmi":24.8,
-		"pbf":26.5,
-		"pbfValue":35.8,
-		"fatLossVal":99.2,
-		"muscle":94,
-		"muscleRate":69.6,
-		"water":55.3,
-		"basalMetabolism":1442,
-		"bodyAge":66,
-		"ageOffset":1,
-		"visceralFat":13,
-		"skeletonMuscleEnum":57,
-		"bone":5.2,
-		"protein":14.3,
-		"fc":-3.6,
-		"mc":0,
-		"age":65,
-		"sex":1,
-		"height":1.65,
-		"measurementDate":1636715457000,
-		"heartRate":80,
-		"unit":2,
-		"weightId":"ffb673ea33f54f1ea8ca5517bbd7a140"
+		"lastWeightRecord":{
+			"id":"3a46098572724f62b1b49e813078e61f",
+			"measurementDate":1599638918000,
+			"bmiInfo":{
+				"indexName":"BMI",
+				"indexValue":23.6,
+				"indexUnit":"",
+				"indexLevelName":"理想"
+			},
+			"weightInfo":{
+				"indexName":"体重",
+				"indexValue":66.6,
+				"indexUnit":"kg"
+			},
+			"pbfInfo":{
+				"indexName":"体脂率",
+				"indexValue":17.2,
+				"indexUnit":"%",
+				"indexLevelName":"理想"
+			}
+		},
+		"lineChartsRecords":{
+			"weightList":[
+				{
+					"value":66.8,
+					"unitName":"kg",
+					"measurementDate":1596070685000
+				},
+				{
+					"value":66,
+					"unitName":"kg",
+					"measurementDate":1596157756000
+				},
+				{
+					"value":65.7,
+					"unitName":"kg",
+					"measurementDate":1596762501000
+				},
+				{
+					"value":62.8,
+					"unitName":"kg",
+					"measurementDate":1598956071000
+				},
+				{
+					"value":66.4,
+					"unitName":"kg",
+					"measurementDate":1599009230000
+				},
+				{
+					"value":67,
+					"unitName":"kg",
+					"measurementDate":1599445006000
+				},
+				{
+					"value":66.6,
+					"unitName":"kg",
+					"measurementDate":1599638918000
+				}
+			],
+			"pbfList":[
+				{
+					"value":16.9,
+					"unitName":"%",
+					"measurementDate":1592403940000
+				},
+				{
+					"value":17.2,
+					"unitName":"%",
+					"measurementDate":1592873845000
+				},
+				{
+					"value":19.9,
+					"unitName":"%",
+					"measurementDate":1594913938000
+				},
+				{
+					"value":14.7,
+					"unitName":"%",
+					"measurementDate":1595764697000
+				},
+				{
+					"value":14.7,
+					"unitName":"%",
+					"measurementDate":1595865058000
+				},
+				{
+					"value":17.3,
+					"unitName":"%",
+					"measurementDate":1595865738000
+				},
+				{
+					"value":17.2,
+					"unitName":"%",
+					"measurementDate":1599638918000
+				}
+			],
+			"bodyRoundList":[
+			],
+			"lastBodyRoundRecord":{
+				"id":303326,
+				"userId":23412531,
+				"calInfo":"24,1,1.68",
+				"measurementDate":1599639940000,
+				"deleted":0,
+				"waistHipRate":1.01,
+				"waistCircumference":80.2,
+				"hipCircumference":79.1,
+				"chestCircumference":81.6,
+				"armCircumference":24.2,
+				"thighCircumference":49.2,
+				"calfCircumference":32.1,
+				"score":0,
+				"scoreContent":"差",
+				"beatPercent":0,
+				"age":0,
+				"sex":0,
+				"height":0
+			}
+		},
+		"weightTargetInfo":{
+			"targetWeight":62.7,
+			"targetText":"加油，别松懈哦",
+			"percent":0,
+			"percentLevel":1,
+			"targetType":1,
+			"startTime":1596470400000
+		},
+		"healthLabelList":[
+			{
+				"healthLabelName":"中心型肥胖",
+				"healthContent":"肥胖不止影响体型，还会影响您的健康！世界卫生组织已将肥胖列为导致疾病负担的十大危险因素之一。\n\n若脂肪主要在腹壁和腹腔内蓄积过多，则被称为\"中心型肥胖\"，具有更高的疾病风险。一般成人达到以下任一标准即可推断为中心型肥胖。\n1.腰围：男性≥85cm，女性≥80cm；\n2.腰臀比（腰围/臀围）:男性>0.9，女性>0.8；\n\n对肥胖人群而言：\n1.出现2型糖尿病、心血管病、高血压、中风和多种癌症的风险概率远高于一般健康人群；\n2.由于过多的脂肪在肝细胞内沉积，易形成脂肪肝；\n3.易出现睡眠中重度打鼾，可能引发睡眠呼吸暂停综合征；\n4.同时还易出现骨关节病、胆囊疾病等多种疾病。",
+				"indexList":[
+					{
+						"indexName":"腰臀比",
+						"indexValue":1
+					},
+					{
+						"indexName":"腰围",
+						"indexValue":80.2,
+						"indexUnit":"cm"
+					}
+				]
+			}
+		],
+		"sampleData":false,
+		"bindBodyFatScale":true,
+		"haveNewWeightRecord":false,
+		"userInfo":{
+			"userId":23412531,
+			"headImg":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLdjibSZBoU4bsB2g6qdM8nSbD4Y05uNyLkAJaoToFzsribYAvrbcauWtDztdeRwhicZicpQFWW5ftd2w/132",
+			"userName":"test.",
+			"sex":1,
+			"birthday":816537600000,
+			"height":168,
+			"unit":1
+		}
 	}
 }
+```
+<a name="kjEqt"></a>
+# 2. 查询分析对比数据接口
+url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo<br />method: POST<br />**header参数或者url参数**
 
-
-```
-<a name="jVwpr"></a>
-## 2.2 查询用户一段时间内的体重测量数据
-```
-GET /api/weight/v2.0/query/getListByTime
-```
-<a name="IhzhY"></a>
-##### 入参：
-| **字段** | **类型** | **描述** | **其他** |
+| 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| startTime | Long | 开始时间 |  |
-| endTime | Long | 结束时间 |  |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
 
-<a name="NKr4e"></a>
-##### 出参(List)：
-| **字段** | **类型** | **描述** | **其他** |
+<a name="rH4mg"></a>
+##### post报文入参：
+| 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| id | String | 主键ID |  |
+| associatedId | String | 关联账号id |  |
+| queryDateType | Integer | 查询时间类型 | 1-按日查<br />2-按周查 |
+| startTime | Date | 开始时间 |  |
+| endTime | Date | 结束时间 |  |
+| queryIndexType | Integer | 是否只查询有体脂率的数据 | 1-查询体重<br />2-查询体脂 |
+
+<a name="o3re0"></a>
+###### 示例入参：
+```json
+{
+	"queryDateType":"1",
+	"startTime":"1591891200000",
+	"endTime":"1599642344721",
+	"queryIndexType":"2"
+}
+```
+<a name="GB13a"></a>
+##### 出参:
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| indexInfoList | List<Object> | 指标信息趋势图数据集合 | 按时间顺序 |
+| compareExplainList | List<Object> | 重要属性对比及文案 |  |
+| indexCompareList | List<Object> | 首尾数据对比 |  |
+| targetType | Integer | 目标类型 | 1-减肥<br />2-增肥<br />3-保持 |
+
+indexInfoList：
+
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| value | String | 标签值 |
+| unitName | string | 单位 |
+| measurementDate | Date | 测量时间 |
+| measurementDateText | String | 测量时间文本描述 |
+
+<a name="LWD22"></a>
+###### compareExplainList(重要属性对比及文案)：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| indexCompareList | List<Object> | 指标差值对象 |  |
+| title | String | 标题 |  |
+| text | String | 文案 |  |
+
+<a name="SgQuI"></a>
+###### indexCompareList(首尾数据对比)：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| label | String | 标签名称 |  |
+| labelStartValue | Double | 开始值 |  |
+| labelEndValue | Double | 结束值 |  |
+| labelUnit | String | 单位 |  |
+| labelDValue | Double | 差值 |  |
+
+<a name="oDVgs"></a>
+###### 出参报文示例：
+```json
+{
+	"code":200,
+	"msg":"成功",
+	"data":{
+		"indexInfoList":[
+			{
+				"value":17.3,
+				"unitName":"%",
+				"measurementDate":1592320246000,
+				"measurementDateText":"06.16"
+			},
+			{
+				"value":16.9,
+				"unitName":"%",
+				"measurementDate":1592323200000,
+				"measurementDateText":"06.17"
+			},
+			{
+				"value":17.2,
+				"unitName":"%",
+				"measurementDate":1592841600000,
+				"measurementDateText":"06.23"
+			},
+			{
+				"value":19.9,
+				"unitName":"%",
+				"measurementDate":1594828800000,
+				"measurementDateText":"07.16"
+			},
+			{
+				"value":14.7,
+				"unitName":"%",
+				"measurementDate":1595692800000,
+				"measurementDateText":"07.26"
+			},
+			{
+				"value":14.7,
+				"unitName":"%",
+				"measurementDate":1595779200000,
+				"measurementDateText":"07.27"
+			},
+			{
+				"value":17.3,
+				"unitName":"%",
+				"measurementDate":1595865600000,
+				"measurementDateText":"07.28"
+			},
+			{
+				"value":17.2,
+				"unitName":"%",
+				"measurementDate":1599638918000,
+				"measurementDateText":"09.09"
+			}
+		],
+		"compareExplainList":[
+			{
+				"differenceValueList":[
+					{
+						"label":"体重",
+						"labelUnit":"kg",
+						"labelDValue":-0.1
+					},
+					{
+						"label":"体脂率",
+						"labelUnit":"%",
+						"labelDValue":-0.1
+					}
+				],
+				"title":"体重尚无明显变化",
+				"text":"这段时间体重变化不大，继续努力哦！减重需重点关注体脂率的变化，减脂是减重的核心哦~"
+			},
+			{
+				"differenceValueList":[
+					{
+						"label":"脂肪量",
+						"labelUnit":"kg",
+						"labelDValue":0
+					},
+					{
+						"label":"肌肉量",
+						"labelUnit":"kg",
+						"labelDValue":0
+					},
+					{
+						"label":"水分",
+						"labelUnit":"kg",
+						"labelDValue":0
+					}
+				],
+				"title":"体重虽下降，但去脂体重丢失较多",
+				"text":"去脂体重（含水分/肌肉等）丢失，可能导致基础代谢下降，影响减重效果。减脂才是减重的核心，多多运动来减脂吧！"
+			}
+		],
+		"indexCompareList":[
+			{
+				"label":"BMI",
+				"labelStartValue":23.6,
+				"labelEndValue":23.6,
+				"labelUnit":"",
+				"labelDValue":0
+			},
+			{
+				"label":"体脂率",
+				"labelStartValue":17.3,
+				"labelEndValue":17.2,
+				"labelUnit":"%",
+				"labelDValue":-0.1
+			},
+			{
+				"label":"肌肉量",
+				"labelStartValue":52.3,
+				"labelEndValue":52.3,
+				"labelUnit":"kg",
+				"labelDValue":0
+			},
+			{
+				"label":"身体年龄",
+				"labelStartValue":22,
+				"labelEndValue":22,
+				"labelUnit":"岁",
+				"labelDValue":0
+			},
+			{
+				"label":"脂肪量",
+				"labelStartValue":11.5,
+				"labelEndValue":11.5,
+				"labelUnit":"kg",
+				"labelDValue":0
+			},
+			{
+				"label":"内脏脂肪等级",
+				"labelStartValue":6,
+				"labelEndValue":6,
+				"labelUnit":"等级",
+				"labelDValue":0
+			},
+			{
+				"label":"基础代谢量",
+				"labelStartValue":1561,
+				"labelEndValue":1561,
+				"labelUnit":"大卡",
+				"labelDValue":0
+			},
+			{
+				"label":"去脂体重",
+				"labelStartValue":55.2,
+				"labelEndValue":55.1,
+				"labelUnit":"kg",
+				"labelDValue":-0.1
+			},
+			{
+				"label":"肌肉率",
+				"labelStartValue":78.4,
+				"labelEndValue":78.5,
+				"labelUnit":"%",
+				"labelDValue":0.1
+			},
+			{
+				"label":"水分率",
+				"labelStartValue":56.6,
+				"labelEndValue":56.7,
+				"labelUnit":"%",
+				"labelDValue":0.1
+			},
+			{
+				"label":"骨量",
+				"labelStartValue":2.9,
+				"labelEndValue":2.9,
+				"labelUnit":"kg",
+				"labelDValue":0
+			},
+			{
+				"label":"蛋白质",
+				"labelStartValue":21.8,
+				"labelEndValue":21.7,
+				"labelUnit":"%",
+				"labelDValue":-0.1
+			},
+			{
+				"label":"骨骼肌",
+				"labelStartValue":28.9,
+				"labelEndValue":28.9,
+				"labelUnit":"kg",
+				"labelDValue":0
+			}
+		],
+		"targetType":1
+	}
+}
+```
+<a name="DsXnv"></a>
+# 3. 体重历史列表页查询
+ur: 域名 +  /weight-rest/weightRecord/getWeightListForWeek<br />method: post<br />说明：查询queryTime时间前的50条记录
+<a name="kfcfp"></a>
+##### **header参数或者url参数**
+<br />
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
+
+<a name="NqHhl"></a>
+##### post报文入参:
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| queryTime | Long | 查询时间戳 | 如查当前时间之前的最新一条，可不传 |
+
+<a name="S3JdT"></a>
+###### 示例:
+```json
+{
+	"queryTime":"1603266355689"
+}
+```
+**出参(List):**
+
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| weekValue | String | 周名称 | 例：本周，2019年09月23日2019年09月29日 |
+| avgWeight | Double | 周平均体重 |  |
+| unit | Integer | 单位 | 1-kg;2-斤;3-磅;4-英石 |
+| weightList | List<Object> | 本周详细体重列表 |  |
+
+<a name="sTiXN"></a>
+###### 体重详细信息：
+| 字段 | 类型 | 描述 | 备注 |
+| --- | --- | --- | --- |
+| id | String | 体重主键id |  |
 | weight | Double | 体重 |  |
-| bmi | Double | bmi |  |
-| pbf | Double | 体脂率 |  |
-| pbfValue | Double | 脂肪量 |  |
-| fatLossVal | Double | 去脂体重 |  |
-| muscle | Double | 肌肉量 |  |
-| muscleRate | Double | 肌肉率 |  |
-| water | Double | 水分率 |  |
-| waterValue | Double | 水分量 |  |
-| basalMetabolism | Double | 基础代谢量 |  |
-| bodyAge | Integer | 身体年龄 |  |
-| ageOffset | Integer | 身体年龄偏移量 |  |
-| visceralFat | Integer | 内脏脂肪指数 |  |
-| skeletonMuscleEnum | Double | 骨骼肌 |  |
-| bone | Double | 骨量 |  |
-| protein | Double | 蛋白质 |  |
-| fc | Double | 脂肪控制 |  |
-| mc | Double | 肌肉控制 |  |
-| age | Integer | 年纪 |  |
-| sex | Integer | 性别 |  |
-| height | Double | 身高 | 单位：m |
+| bmi | Double | 体质指数 |  |
 | measurementDate | Date | 测量时间 |  |
-| heartRate | Integer | 心率 |  |
-| unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
+| sourceType | Integer | 数据类型 | 0-正常数据,2-手动 |
 
-<a name="o5svI"></a>
+<a name="SLSwd"></a>
 ###### 示例报文：
 ```json
 
@@ -235,149 +577,271 @@ GET /api/weight/v2.0/query/getListByTime
 	"msg":"成功",
 	"data":[
 		{
-			"id":"96c90c9e61ad42c087a9c435e01988db",
-			"userId":23342312,
-			"weight":78,
-			"bmi":26.4,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1620446598000
+			"weekValue":"06月15日-06月21日",
+			"avgWeight":67.9,
+			"unit":1,
+			"weightList":[
+				{
+					"id":"c62c31a7175e4c98915b55ab38cab299",
+					"userId":23342312,
+					"weight":65.8,
+					"bmi":22.8,
+					"measurementDate":1592366523000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"8c580eb3965b45b2b1b731fc7d5774ef",
+					"userId":23342312,
+					"weight":66.1,
+					"bmi":22.9,
+					"measurementDate":1592366429000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				}
+			]
 		},
 		{
-			"id":"7682033a29f74efcb819684694ba11ce",
-			"userId":23342312,
-			"weight":92,
-			"bmi":31.1,
-			"pbf":27.9,
-			"pbfValue":25.7,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1620443600000
+			"weekValue":"06月08日-06月14日",
+			"avgWeight":66.8,
+			"unit":1,
+			"weightList":[
+				{
+					"id":"3ac825a700614bfea28ab594011f61a0",
+					"userId":23342312,
+					"weight":67.7,
+					"bmi":23.4,
+					"measurementDate":1591956243000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"e2118878f1fe4f2286f309f37bb2136b",
+					"userId":23342312,
+					"weight":67.3,
+					"bmi":23.3,
+					"measurementDate":1591953372000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"2fae05c0e7be4681b85ba04211660df4",
+					"userId":23342312,
+					"weight":67.6,
+					"bmi":23.4,
+					"measurementDate":1591949731000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"81d6d9e860344378a80cfa15c991279a",
+					"userId":23342312,
+					"weight":67.4,
+					"bmi":23.3,
+					"measurementDate":1591945604000,
+					"sourceType":0,
+					"pbf":14.1,
+					"muscle":54.9,
+					"water":59.9,
+					"bone":3,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"9e19d8713955401e833774ad97940708",
+					"userId":23342312,
+					"weight":67.2,
+					"bmi":23.3,
+					"measurementDate":1591944997000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"b6808908f83f44a8a7236949fabc9192",
+					"userId":23342312,
+					"weight":66,
+					"bmi":22.8,
+					"measurementDate":1591944932000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"330937eb417e4f5486e370501f48e3f6",
+					"userId":23342312,
+					"weight":66.1,
+					"bmi":22.9,
+					"measurementDate":1591944922000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"4b64d7bfaf444e2a8e7b42bba4ec70c5",
+					"userId":23342312,
+					"weight":65.4,
+					"bmi":22.63,
+					"measurementDate":1591777009000,
+					"sourceType":0,
+					"pbf":19.8,
+					"weightStatus":0,
+					"height":0
+				}
+			]
 		},
 		{
-			"id":"446063793b564abba885276a00dc60f9",
-			"userId":23342312,
-			"weight":60,
-			"bmi":20.3,
-			"pbf":19.9,
-			"pbfValue":11.9,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1619611345000
+			"weekValue":"06月01日-06月07日",
+			"avgWeight":67.2,
+			"unit":1,
+			"weightList":[
+				{
+					"id":"95e361c0b2944b9caf1a89952f8384fd",
+					"userId":23342312,
+					"weight":67,
+					"bmi":23.18,
+					"measurementDate":1591261683000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"42b52a92754d4478a9bb933d85b9abb3",
+					"userId":23342312,
+					"weight":67.4,
+					"bmi":23.32,
+					"measurementDate":1591160030000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"6e450d99a18e4217bf69ef90b27a54f8",
+					"userId":23342312,
+					"weight":66.7,
+					"bmi":23.08,
+					"measurementDate":1591160002000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"7ead2750eb624deaba3d2cf447183b27",
+					"userId":23342312,
+					"weight":67.2,
+					"bmi":23.25,
+					"measurementDate":1591159580000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"200bcfbce9e740c6b0ce5374cd9a4dcc",
+					"userId":23342312,
+					"weight":67.3,
+					"bmi":23.29,
+					"measurementDate":1591159505000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"4c6160ca81d247fb982f1ea6af34c256",
+					"userId":23342312,
+					"weight":67.3,
+					"bmi":23.29,
+					"measurementDate":1591157001000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				}
+			]
 		},
 		{
-			"id":"5fc74d36f47b4b2cb4b7a11c17c1da83",
-			"userId":23342312,
-			"weight":60,
-			"bmi":20.3,
-			"pbf":21.9,
-			"pbfValue":13.1,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1619611208000
-		},
-		{
-			"id":"bcd76569a10a4d8a8ab675b78b643c2e",
-			"userId":23342312,
-			"weight":60,
-			"bmi":20.3,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1619611181000
-		},
-		{
-			"id":"bef65e1d1bf049399c40b7c22dabec1f",
-			"userId":23342312,
-			"weight":75,
-			"bmi":25.4,
-			"pbf":20.9,
-			"pbfValue":15.7,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1619611149000
-		},
-		{
-			"id":"1f5196d2ef614950b14d716961007804",
-			"userId":23342312,
-			"weight":85,
-			"bmi":28.7,
-			"pbf":20,
-			"pbfValue":17,
-			"age":27,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1618055460000
-		},
-		{
-			"id":"dd69bd40679311ebb766e32a38014345",
-			"userId":23342312,
-			"weight":25,
-			"bmi":8.5,
-			"age":25,
-			"sex":1,
-			"height":1.72,
-			"measurementDate":1611825780000
+			"weekValue":"05月25日-05月31日",
+			"avgWeight":68.3,
+			"unit":1,
+			"weightList":[
+				{
+					"id":"fbfd019022e447f2a279f7306db8d9e9",
+					"userId":23342312,
+					"weight":68.7,
+					"bmi":23.77,
+					"measurementDate":1590488473000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				},
+				{
+					"id":"af2338ac9cf74956884248f891413702",
+					"userId":23342312,
+					"weight":67.9,
+					"bmi":23.49,
+					"measurementDate":1590401880000,
+					"sourceType":0,
+					"weightStatus":0,
+					"height":0
+				}
+			]
 		}
+	
 	]
 }
 ```
-<a name="PJD9X"></a>
-## 2.3 根据ID查询体重详情记录
-```
-GET /api/weight/v2.0/query/getByWeightId
-```
-<a name="Y38gi"></a>
-##### 入参：
+<a name="oKTBG"></a>
+# 4. 体重详情页
+url :  域名 +  /weight-rest/bulletinBoard/getWeightRoundDetail<br />method: get
+<a name="arEuR"></a>
+##### 入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | String | 体重 | 必传 |
+| id | Long | 体重记录id | 必传 |
+| associatedId | String | 关联账号id |  |
 
-<a name="aZAXU"></a>
-##### 出参：
+<a name="lixr0"></a>
+##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| userId | Long | 用户id |  |
 | userName | String | 用户名称 |  |
 | headImg | String | 用户头像 |  |
 | unit | Integer | 单位 | 1-kg;2-斤;3-磅;4-英石 |
 | bindBodyFatScale | boolean | 是否绑定体脂秤 |  |
-| weightList | List(Object) | 体重数据List |  |
-| healthLabelList | List(Object) | 风险解读标签 |  |
+| weightList | List<Object> | 体重数据List |  |
+| healthLabelList | List<Object> | 风险解读标签 |  |
 
-<a name="vFBe1"></a>
+<a name="SAaQd"></a>
+###### 
+<a name="in01j"></a>
 ###### 体重数据：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | id | String | 体重主键id |  |
 | weight | Double | 体重 |  |
 | sourceType | int | 数据类型 | 0-正常,1-异常数据,2-手动,3-体重数据 |
-| mc | Double | 肌肉控制 |  |
-| fc | Double | 脂肪控制 |  |
 | bmi | Double | 体质指数 |  |
 | bmiLevelName | String | bmi等级名称 |  |
 | measurementDate | Date | 测量时间 |  |
 | bodyStyle | String | 体型 |  |
 | bodyScore | String | 身材得分名称 |  |
 | topContent | String | 整体解读 |  |
-| bmiLabelDto | Object | bmi标签对象 |  |
+| bmiLabelDto | Object | bmi标签对象 | 见标签数据 |
 | labelList | List<Object> | 标签List |  |
-| moodDto | MoodDto | 心情 |  |
+| moodDto | Object | 心情 |  |
 
-<a name="Xsuhe"></a>
-###### 心情：
+<a name="96ThS"></a>
+###### 心情数据:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | mood | String | 心情文字 |  |
 | images | String | 图片地址 | 多张图片，使用英文逗号分隔图片地址，多张图片，使用英文逗号分隔 |
 
-<a name="u69VI"></a>
-###### 标签对象：
+<a name="pHFv4"></a>
+###### 标签数据：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | label | String | 标签名称 |  |
@@ -389,26 +853,26 @@ GET /api/weight/v2.0/query/getByWeightId
 | labelContent | String | 解读 |  |
 | labelDietaryAdvice | String | 饮食建议 |  |
 | labelSportsAdvice | String | 运动建议建议 |  |
-| levelIntervalList | List(Object) | 等级区间 |  |
+| levelIntervalList | List<Object> | 等级区间 |  |
 
-<a name="VNMUD"></a>
-###### 标签等级：
+等级区间：
+
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | levelIntervalName | String | 等级区间名称 |  |
-| startValue | BigDecimal | 区间开始值 | 最左及左右无返回 |
+| startValue | BigDecimal | 区间开始值 | 最左及最右无返回 |
 | endValue | BigDecimal | 区间结束值 |  |
 
-<a name="lCD1k"></a>
-###### 风险标签解读：
+<a name="pO9hf"></a>
+###### healthLabelList(风险解读标签)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | healthLabelName | String | 健康风险标签名 |  |
 | healthContent | String | 健康风险解读 |  |
-| indexList | List(Object) | 风险对应标签对象 |  |
+| indexList | List<Object> | 风险对应标签对象 |  |
 
-<a name="YOwfN"></a>
-###### 风险标签对象：
+<a name="He2FY"></a>
+###### indexList(风险对应标签对象)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | indexName | String | 标签名称 |  |
@@ -416,7 +880,7 @@ GET /api/weight/v2.0/query/getByWeightId
 | indexUnit | String | 单位 |  |
 | indexLevel | String | 指标等级 |  |
 
-<a name="PdOZd"></a>
+<a name="xd6Xc"></a>
 ###### 示例报文：
 ```json
 
@@ -424,28 +888,30 @@ GET /api/weight/v2.0/query/getByWeightId
 	"code":200,
 	"msg":"成功",
 	"data":{
-		"userId":35084685,
-		"userName":"Jamie",
-		"headImg":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKosPnLNia5iaicvJ02rjekFU8DtYU9PTia3CnpPxoBn0AITFM3ic2NvmbKibEg4xSnOiacLdvyxou3fRicvA/132",
+		"userId":23412531,
+		"userName":"..test..",
+		"headImg":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLdjibSZBoU4bsB2g6qdM8nSbD4Y05uNyLkAJaoToFzsribYAvrbcauWtDztdeRwhicZicpQFWW5ftd2w/132",
 		"unit":1,
 		"bindBodyFatScale":false,
+		"sampleData":false,
+		"haveNewWeightRecord":false,
 		"weightList":[
 			{
-				"id":"36a2bd936a82442e879cdc00c46192ec",
-				"weight":50.4,
+				"id":"3a46098572724f62b1b49e813078e61f",
+				"weight":66.6,
 				"sourceType":0,
-				"bmi":21,
+				"bmi":23.6,
 				"bmiLevelName":"理想",
-				"measurementDate":1623921551000,
-				"bodyStyle":"缺乏运动型",
-				"bodyScore":"良",
-				"topContent":"再多点肌肉，体型会更好看哦！体脂率很理想；多多运动，有助于增强骨骼肌！",
+				"measurementDate":1599638918000,
+				"bodyStyle":"标准型",
+				"bodyScore":"优",
+				"topContent":"你拥有标准的健康体型。体脂率很理想；均衡膳食多运动，维持良好的肌肉量吧！",
 				"bmiLabelDto":{
 					"label":"BMI",
-					"labelValue":21,
+					"labelValue":23.6,
 					"labelUnit":"",
-					"labelDValue":0.2,
-					"labelDContent":"较1天前增加了0.2",
+					"labelDValue":-0.1,
+					"labelDContent":"较2天前减少了0.1",
 					"labelLevelName":"理想",
 					"labelContent":"你的BMI在理想范围内。很棒，建议继续保持！记得每天均衡饮食、适量运动。",
 					"labelDietaryAdvice":"建议保持饮食均衡，保证每天热量摄入稳定，维持当前体重。",
@@ -474,10 +940,10 @@ GET /api/weight/v2.0/query/getByWeightId
 				"labelList":[
 					{
 						"label":"体脂率",
-						"labelValue":29.7,
+						"labelValue":17.2,
 						"labelUnit":"%",
-						"labelDValue":1.2,
-						"labelDContent":"较1天前增加了1.2%",
+						"labelDValue":-0.1,
+						"labelDContent":"较43天前减少了0.1%",
 						"labelLevelName":"理想",
 						"labelContent":"你的体脂率理想。很棒，建议继续保持！记得每天均衡饮食、适量运动。",
 						"labelDietaryAdvice":"建议保持饮食均衡，保证每天热量摄入稳定，维持当前状态。",
@@ -485,30 +951,30 @@ GET /api/weight/v2.0/query/getByWeightId
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":20
+								"endValue":10
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":20,
-								"endValue":32
+								"startValue":10,
+								"endValue":22
 							},
 							{
 								"levelIntervalName":"偏高",
-								"startValue":32,
-								"endValue":39
+								"startValue":22,
+								"endValue":28
 							},
 							{
 								"levelIntervalName":"超高",
-								"startValue":39
+								"startValue":28
 							}
 						]
 					},
 					{
 						"label":"肌肉量",
-						"labelValue":33.5,
+						"labelValue":52.3,
 						"labelUnit":"kg",
-						"labelDValue":-0.3,
-						"labelDContent":"较1天前减少了0.3kg",
+						"labelDValue":-0.2,
+						"labelDContent":"较43天前减少了0.2kg",
 						"labelLevelName":"标准",
 						"labelContent":"你的肌肉量标准。很棒！建议继续保持。",
 						"labelDietaryAdvice":"建议继续保持碳水和优质蛋白质的摄入平衡，多食用富含蛋白质较多的食物，保证每天热量摄入稳定。",
@@ -516,25 +982,25 @@ GET /api/weight/v2.0/query/getByWeightId
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":32.9
+								"endValue":44
 							},
 							{
 								"levelIntervalName":"标准",
-								"startValue":32.9,
-								"endValue":37.6
+								"startValue":44,
+								"endValue":52.5
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":37.6
+								"startValue":52.5
 							}
 						]
 					},
 					{
 						"label":"身体年龄",
-						"labelValue":31,
+						"labelValue":22,
 						"labelUnit":"岁",
 						"labelDValue":0,
-						"labelDContent":"较1天前无变化",
+						"labelDContent":"较43天前无变化",
 						"labelLevelName":"年轻",
 						"labelContent":"你的身体年龄比真实年龄年轻。",
 						"labelDietaryAdvice":"随着年龄的增长，身体水分和基础代谢会逐渐下降。保持健康饮食和生活方式，可以使身体看起来更年轻。",
@@ -542,20 +1008,20 @@ GET /api/weight/v2.0/query/getByWeightId
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"年轻",
-								"endValue":32
+								"endValue":24
 							},
 							{
 								"levelIntervalName":"偏大",
-								"startValue":32
+								"startValue":24
 							}
 						]
 					},
 					{
 						"label":"脂肪量",
-						"labelValue":15,
+						"labelValue":11.5,
 						"labelUnit":"kg",
-						"labelDValue":0.7,
-						"labelDContent":"较1天前增加了0.7kg",
+						"labelDValue":-0.1,
+						"labelDContent":"较43天前减少了0.1kg",
 						"labelLevelName":"理想",
 						"labelContent":"你的脂肪量理想，很棒，建议继续保持！记得每天均衡饮食、适量运动哦。",
 						"labelDietaryAdvice":"建议保持饮食平衡，保证每天热量摄入稳定，维持当前状态。",
@@ -563,30 +1029,30 @@ GET /api/weight/v2.0/query/getByWeightId
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":10.1
+								"endValue":6.7
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":10.1,
-								"endValue":16.1
+								"startValue":6.7,
+								"endValue":14.7
 							},
 							{
 								"levelIntervalName":"偏高",
-								"startValue":16.1,
-								"endValue":19.7
+								"startValue":14.7,
+								"endValue":18.6
 							},
 							{
 								"levelIntervalName":"超高",
-								"startValue":19.7
+								"startValue":18.6
 							}
 						]
 					},
 					{
 						"label":"内脏脂肪等级",
-						"labelValue":4,
+						"labelValue":6,
 						"labelUnit":"等级",
 						"labelDValue":0,
-						"labelDContent":"较1天前无变化",
+						"labelDContent":"较43天前无变化",
 						"labelLevelName":"理想",
 						"labelContent":"你的内脏脂肪等级理想。保持理想的内脏脂肪水平，有助于降低脂肪肝、高血压、高血脂、2型糖尿病等慢性疾病的患病风险。",
 						"labelDietaryAdvice":"推荐每日均衡摄入：适量优质蛋白质、适量碳水化合物（增加全谷物、杂豆类）、低脂肪；增加新鲜蔬菜和水果。",
@@ -614,59 +1080,59 @@ GET /api/weight/v2.0/query/getByWeightId
 					},
 					{
 						"label":"基础代谢量",
-						"labelValue":1135,
+						"labelValue":1561,
 						"labelUnit":"大卡",
-						"labelDValue":-7,
-						"labelDContent":"较1天前减少了7.0大卡",
-						"labelLevelName":"偏低",
-						"labelContent":"你的基础代谢偏低，稍微多吃就容易发胖。容易出现减重时的平台期及反弹。",
-						"labelDietaryAdvice":"建议多喝白开水，补充B族维生素，保证优质蛋白质和膳食纤维的摄入量。",
+						"labelDValue":-6,
+						"labelDContent":"较43天前减少了6.0大卡",
+						"labelLevelName":"理想",
+						"labelContent":"你的基础代谢理想，很棒！可继续保持。",
+						"labelDietaryAdvice":"建议多喝白开水，保证蛋白质和膳食纤维的摄入量。",
 						"labelSportsAdvice":"每周进行力量训练，结合有氧运动，可以刺激肌肉生长。增加身体的肌肉含量，是提升基础代谢的秘密武器。",
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":1170
+								"endValue":1550
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":1170
+								"startValue":1550
 							}
 						]
 					},
 					{
 						"label":"去脂体重",
-						"labelValue":35.4,
+						"labelValue":55.1,
 						"labelUnit":"kg",
 						"labelDValue":-0.3,
-						"labelDContent":"较1天前减少了0.3kg",
+						"labelDContent":"较43天前减少了0.3kg",
 						"labelLevelName":"理想",
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"超低",
-								"endValue":30.7
+								"endValue":48
 							},
 							{
 								"levelIntervalName":"偏低",
-								"startValue":30.7,
-								"endValue":34.3
+								"startValue":48,
+								"endValue":51.9
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":34.3,
-								"endValue":40.3
+								"startValue":51.9,
+								"endValue":59.9
 							},
 							{
 								"levelIntervalName":"偏高",
-								"startValue":40.3
+								"startValue":59.9
 							}
 						]
 					},
 					{
 						"label":"肌肉率",
-						"labelValue":66.5,
+						"labelValue":78.5,
 						"labelUnit":"%",
-						"labelDValue":-1.1,
-						"labelDContent":"较1天前减少了1.1%",
+						"labelDValue":0.1,
+						"labelDContent":"较43天前增加了0.1%",
 						"labelLevelName":"标准",
 						"labelContent":"你的肌肉量标准。很棒！建议继续保持。",
 						"labelDietaryAdvice":"建议继续保持碳水和优质蛋白质的摄入平衡，多食用富含蛋白质较多的食物，保证每天热量摄入稳定。",
@@ -674,25 +1140,25 @@ GET /api/weight/v2.0/query/getByWeightId
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":65.3
+								"endValue":66.1
 							},
 							{
 								"levelIntervalName":"标准",
-								"startValue":65.3,
-								"endValue":74.6
+								"startValue":66.1,
+								"endValue":78.8
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":74.6
+								"startValue":78.8
 							}
 						]
 					},
 					{
 						"label":"水分率",
-						"labelValue":48.7,
+						"labelValue":56.7,
 						"labelUnit":"%",
-						"labelDValue":-1.2,
-						"labelDContent":"较1天前减少了1.2%",
+						"labelDValue":0,
+						"labelDContent":"较43天前无变化",
 						"labelLevelName":"标准",
 						"labelContent":"你的水分率标准，规律的饮食和每天八杯水就可以继续保持理想的身体水分含量啦。",
 						"labelDietaryAdvice":"充足的水分可以促进新陈代谢，保持皮肤年轻，喝水时注意少量、多次地及时补充水分和电解质。",
@@ -700,50 +1166,50 @@ GET /api/weight/v2.0/query/getByWeightId
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":45
+								"endValue":55
 							},
 							{
 								"levelIntervalName":"标准",
-								"startValue":45,
-								"endValue":60
+								"startValue":55,
+								"endValue":65
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":60
+								"startValue":65
 							}
 						]
 					},
 					{
 						"label":"骨量",
-						"labelValue":1.9,
+						"labelValue":2.9,
 						"labelUnit":"kg",
-						"labelDValue":-0.1,
-						"labelDContent":"较1天前减少了0.1kg",
-						"labelLevelName":"偏低",
-						"labelContent":"你的骨量含量偏低。骨量减少是骨质疏松的前期重要表现和关键性原因，若未及时控制和治疗，易出现骨质疏松。",
-						"labelDietaryAdvice":"提升骨量，需摄入足量的钙、蛋白质和维生素D；过量饮用酒、碳酸饮料、茶或咖啡，都可能导致钙流失或影响钙吸收，从而降低骨质量。需注意适度。",
-						"labelSportsAdvice":"提升骨质，需减少久坐，避免钙沉积减少；推荐依据自身情况增加运动量尤其是力量训练，如深蹲、俯卧撑等。",
+						"labelDValue":0,
+						"labelDContent":"较43天前无变化",
+						"labelLevelName":"理想",
+						"labelContent":"你的骨量含量理想，很棒！建议继续保持。",
+						"labelDietaryAdvice":"预防骨量减少，需摄入足量的钙、蛋白质和维生素D；过量饮用酒、碳酸饮料、茶或咖啡，都可能导致钙流失或影响钙吸收，从而降低骨质量。需注意适度。",
+						"labelSportsAdvice":"预防骨量减少，需减少久坐，多活动；推荐依据自身情况增加运动量尤其是力量训练，如深蹲、俯卧撑等。",
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":2.2
+								"endValue":2.9
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":2.2
+								"startValue":2.9
 							}
 						]
 					},
 					{
 						"label":"蛋白质",
-						"labelValue":17.8,
+						"labelValue":21.7,
 						"labelUnit":"%",
-						"labelDValue":0.2,
-						"labelDContent":"较1天前增加了0.2%",
-						"labelLevelName":"标准",
-						"labelContent":"你的蛋白质含量标准。很棒！建议继续保持。",
-						"labelDietaryAdvice":"建议维持营养均衡摄入。过多和过低的蛋白质对人体都有伤害。",
-						"labelSportsAdvice":"推荐每天至少行走6000步，每周进行不低于150分钟中等强度的有氧运动。",
+						"labelDValue":0,
+						"labelDContent":"较43天前无变化",
+						"labelLevelName":"偏高",
+						"labelContent":"你的蛋白质含量偏高，摄取过量会造成体内脂肪堆积，加大肾脏排泄负担。",
+						"labelDietaryAdvice":"建议控制高蛋白食物的摄入量，适当增加谷类食物，绿叶蔬菜、水果的摄入，减轻肾脏代谢负担，避免钙过量丢失。",
+						"labelSportsAdvice":"每周进行2-3次的力量练习与不低于150分钟中等强度的有氧训练，促进体内多余的蛋白质排出，减少肾脏负荷。",
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
@@ -762,68 +1228,56 @@ GET /api/weight/v2.0/query/getByWeightId
 					},
 					{
 						"label":"骨骼肌",
-						"labelValue":17.7,
+						"labelValue":28.9,
 						"labelUnit":"kg",
-						"labelDValue":-0.4,
-						"labelDContent":"较1天前减少了0.4kg",
-						"labelLevelName":"偏低",
-						"labelContent":"你的骨骼肌偏低，会影响运动表现和活动能力，需注意增肌。",
-						"labelDietaryAdvice":"饮食上注意保证优质蛋白质的摄入，促进糖原恢复和肌肉合成；摄入充足的维生素D、维生素C和维生素E等，有利于减少肌肉衰减。",
+						"labelDValue":-0.2,
+						"labelDContent":"较43天前减少了0.2kg",
+						"labelLevelName":"标准",
+						"labelContent":"你的骨骼肌标准。骨骼肌是体内有益的肌肉群，骨骼肌偏高其实是好的现象。",
+						"labelDietaryAdvice":"建议继续保持碳水和优质蛋白质的摄入平衡，多食用富含蛋白质较多的食物，保证每天营养摄入稳定。",
 						"labelSportsAdvice":"力量训练（如深蹲、硬拉、俯卧撑、引体向上等）和有氧运动相结合的形式，辅以拉伸放松，增肌训练效果会更好。规律的运动训练应该至少每周3次，每次45分钟以上；但应注意预防运动损伤。",
 						"levelIntervalList":[
 							{
 								"levelIntervalName":"偏低",
-								"endValue":19.1
+								"endValue":26.3
 							},
 							{
 								"levelIntervalName":"标准",
-								"startValue":19.1,
-								"endValue":23.3
+								"startValue":26.3,
+								"endValue":32.1
 							},
 							{
 								"levelIntervalName":"理想",
-								"startValue":23.3
+								"startValue":32.1
 							}
 						]
 					}
 				],
-				"height":0
+				"height":0,
+        "moodDto":{
+					"id":1708870,
+					"userId":23412531,
+					"weightId":"3a46098572724f62b1b49e813078e61f",
+					"mood":"？？？心情",
+					"created":1599651985000,
+					"updated":1599651984666,
+					"measurementDate":1599638918000
+				}
 			}
 		],
 		"healthLabelList":[
 			{
-				"healthLabelName":"肌肉量偏低",
-				"healthContent":"1.肌肉量偏低，会影响人的运动表现和活动能力，增加老年人的跌倒风险；\n\n2.易引起基础代谢率低，易肥胖，或减肥后易反弹；\n\n3.影响身体机能的正常运转，如神经、消化、呼吸等。",
+				"healthLabelName":"中心型肥胖",
+				"healthContent":"肥胖不止影响体型，还会影响您的健康！世界卫生组织已将肥胖列为导致疾病负担的十大危险因素之一。\n\n若脂肪主要在腹壁和腹腔内蓄积过多，则被称为\"中心型肥胖\"，具有更高的疾病风险。一般成人达到以下任一标准即可推断为中心型肥胖。\n1.腰围：男性≥85cm，女性≥80cm；\n2.腰臀比（腰围/臀围）:男性>0.9，女性>0.8；\n\n对肥胖人群而言：\n1.出现2型糖尿病、心血管病、高血压、中风和多种癌症的风险概率远高于一般健康人群；\n2.由于过多的脂肪在肝细胞内沉积，易形成脂肪肝；\n3.易出现睡眠中重度打鼾，可能引发睡眠呼吸暂停综合征；\n4.同时还易出现骨关节病、胆囊疾病等多种疾病。",
 				"indexList":[
 					{
-						"indexName":"骨骼肌",
-						"indexValue":17.7,
-						"indexUnit":"kg",
-						"indexLevel":"偏低"
-					}
-				]
-			},
-			{
-				"healthLabelName":"基础代谢偏低",
-				"healthContent":"基础代谢低，体重更易增加或减重后反弹。\n因1天的进食量超过“基础代谢+日常活动代谢+进食产热效应”时，多余的能量将以脂肪形式蓄积在体内。",
-				"indexList":[
+						"indexName":"腰臀比",
+						"indexValue":1
+					},
 					{
-						"indexName":"基础代谢量",
-						"indexValue":1135,
-						"indexUnit":"大卡",
-						"indexLevel":"偏低"
-					}
-				]
-			},
-			{
-				"healthLabelName":"骨量偏低",
-				"healthContent":"骨量减少是骨质疏松的前期重要表现和关键性原因，若未及时控制和治疗，易出现骨质疏松；\n\n而骨质疏松则会导致骨折概率增加，我国70%~80%的中老年骨折是因骨质疏松引起的。\n\n腰酸、背疼、腿抽筋，都是骨质在向你拉响警报。",
-				"indexList":[
-					{
-						"indexName":"骨量",
-						"indexValue":1.9,
-						"indexUnit":"kg",
-						"indexLevel":"偏低"
+						"indexName":"腰围",
+						"indexValue":80.2,
+						"indexUnit":"cm"
 					}
 				]
 			}
@@ -831,721 +1285,31 @@ GET /api/weight/v2.0/query/getByWeightId
 	}
 }
 ```
-<a name="pS509"></a>
-## 2.4 获取最近30天的体重记录
-```
-GET /api/weight/v2.0/query/getLastThirtyDayRecord
-```
-<a name="ctrBk"></a>
-##### 入参：
-无
-<a name="TQa5c"></a>
-##### 出参(List)：
-| **字段** | **类型** | **描述** | **其他** |
+
+<a name="Mo8Kz"></a>
+# 5.上传用户的设备测量数据（数据来源于外部）
+url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty<br />method: POST<br />**header参数或者url参数**
+
+| 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| id | String | 主键id |  |
+| associatedId | string | 第三方关联账户id | 关联账号id |
+
+<a name="TGCUU"></a>
+##### post报文入参：
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| recordList | List<Object> | 设备测量记录 |  |
+
+
+<a name="WHRQH"></a>
+###### 设备测量记录：
+| 字段 | 类型 | 描述 | 其他 |
+| --- | --- | --- | --- |
+| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.sghealth.cn/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| measurementTime | Date | 测量时间 |  |
 | weight | Double | 体重 |  |
-| bmi | Double | bmi |  |
-| pbf | Double | 体脂率 |  |
-| pbfValue | Double | 脂肪量 |  |
-| fatLossVal | Double | 去脂体重 |  |
-| muscle | Double | 肌肉量 |  |
-| muscleRate | Double | 肌肉率 |  |
-| water | Double | 水分率 |  |
-| waterValue | Double | 水分量 |  |
-| basalMetabolism | Double | 基础代谢量 |  |
-| bodyAge | Integer | 身体年龄 |  |
-| ageOffset | Integer | 身体年龄偏移量 |  |
-| visceralFat | Integer | 内脏脂肪指数 |  |
-| skeletonMuscleEnum | Double | 骨骼肌 |  |
-| bone | Double | 骨量 |  |
-| protein | Double | 蛋白质 |  |
-| fc | Double | 脂肪控制 |  |
-| mc | Double | 肌肉控制 |  |
-| age | Integer | 年纪 |  |
-| sex | Integer | 性别 |  |
-| height | Double | 身高 | 单位：m |
-| measurementDate | Date | 测量时间 |  |
+| resistance50k | Double | 50k电阻值 |  |
 | heartRate | Integer | 心率 |  |
-| unit | Integer | 单位 | 1-千克;<br />2-斤;<br />3-磅; |
-
-<a name="UBrYL"></a>
-##### 示例报文：
-```json
-
-{
-	"code":200,
-	"msg":"成功",
-	"data":[
-		{
-			"id":"b316a922f7674cdaa3eb7e4f0163c363",
-			"userId":23412531,
-			"weight":70.6,
-			"bmi":25.6,
-			"pbf":23.7,
-			"pbfValue":16.7,
-			"fatLossVal":53.9,
-			"muscle":51,
-			"muscleRate":72.2,
-			"water":55.1,
-			"basalMetabolism":1534,
-			"bodyAge":24,
-			"ageOffset":-1,
-			"visceralFat":7,
-			"skeletonMuscleEnum":29.8,
-			"bone":2.8,
-			"protein":17.2,
-			"fc":-1.3,
-			"mc":0,
-			"age":25,
-			"sex":1,
-			"height":1.66,
-			"measurementDate":1635940798000
-		},
-		{
-			"id":"865d5cdf76b742eeadeebcb10911a100",
-			"userId":23412531,
-			"weight":70.6,
-			"bmi":25.6,
-			"pbf":23.3,
-			"pbfValue":16.4,
-			"fatLossVal":54.2,
-			"muscle":51.3,
-			"muscleRate":72.7,
-			"water":55.6,
-			"basalMetabolism":1540,
-			"bodyAge":24,
-			"ageOffset":-1,
-			"visceralFat":7,
-			"skeletonMuscleEnum":30.1,
-			"bone":2.8,
-			"protein":17.1,
-			"fc":-1,
-			"mc":0,
-			"age":25,
-			"sex":1,
-			"height":1.66,
-			"measurementDate":1635940778000
-		},
-    {
-			"id":"9e3ac92afb0b4c7c932ff5eb085fb9d4",
-			"userId":23412531,
-			"weight":70.6,
-			"bmi":25.6,
-			"pbf":28.8,
-			"pbfValue":20.3,
-			"age":25,
-			"sex":1,
-			"height":1.66,
-			"measurementDate":1635214134000
-		}
-	]
-}
 
 
-```
-<a name="U3HFZ"></a>
-# 3.体重分析
-<a name="Lh8Cs"></a>
-## 3.1 获取用户的体重趋势分析
-```
-POST /api/weight/v2.0/analysis/getTrendInfo
-```
-<a name="Vhfxk"></a>
-##### 入参：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| queryDateType | Integer | 查询时间类型 | 1-按日查<br />2-按周查 |
-| startTime | Date | 开始时间 |  |
-| endTime | Date | 结束时间 |  |
-| queryIndexType | Integer | 是否只查询有体脂率的数据 | 1-查询体重<br />2-查询体脂 |
-
-<a name="cOMa0"></a>
-##### 出参：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexInfoList | List(Object) | 信息集合 | 按时间顺序 |
-| compareExplainList | List(Object) | 重要属性对比及文案 |  |
-| indexCompareList | List(Object) | 首尾数据对比 |  |
-| targetType | Integer | _目标类型_ | 1-减肥<br />2-增肥<br />3-保持 |
-
-<a name="VosyF"></a>
-###### indexInfoList：
-| 字段 | 类型 | 描述 |  |
-| --- | --- | --- | --- |
-| value | String | 标签值 |  |
-| unitName | string | 单位 |  |
-| measurementDate | Date | 测量时间 |  |
-| measurementDateText | String | _测量时间文本描述_ |  |
-
-<a name="t2mkM"></a>
-###### compareExplainList：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexCompareList | List(Object) | 指标差值对象 |  |
-| title | String | 标题 |  |
-| text | String | 文案 |  |
-
-<a name="zob6L"></a>
-###### indexCompareList：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| label | String | 标签名称 |  |
-| labelStartValue | Double | 开始值 |  |
-| labelEndValue | Double | 结束值 |  |
-| labelUnit | String | 单位 |  |
-| labelDValue | Double | 差值 |  |
-
-<a name="WqPVD"></a>
-###### 示例报文：
-```json
-// 入参：
-{
-	"queryUserId":"23342312",
-	"queryDateType":"1",
-	"startTime":"1603244948000",
-	"endTime":"1611848948000",
-	"queryIndexType":"1"
-}
-
-// 出参：
-
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"indexInfoList":[
-			{
-				"value":67,
-				"unitName":"kg",
-				"measurementDate":1603273046000,
-				"measurementDateText":"10.21"
-			},
-			{
-				"value":68,
-				"unitName":"kg",
-				"measurementDate":1603900800000,
-				"measurementDateText":"10.29"
-			},
-			{
-				"value":25,
-				"unitName":"kg",
-				"measurementDate":1608652800000,
-				"measurementDateText":"12.23"
-			},
-			{
-				"value":25,
-				"unitName":"kg",
-				"measurementDate":1611825780000,
-				"measurementDateText":"01.28"
-			}
-		],
-		"compareExplainList":[
-			{
-				"differenceValueList":[
-					{
-						"label":"体重",
-						"labelUnit":"kg",
-						"labelDValue":-42
-					}
-				],
-				"title":"体重反而下降了，请多多注意",
-				"text":"体重反而下降了42.00kg。"
-			}
-		],
-		"targetType":2
-	}
-}
-```
-<a name="dlLxo"></a>
-## 3.2 获取用户某一条体重数据的风险解读
-```
-POST /api/weight/v2.0/analysis/getRiskExplain
-```
-<a name="l89Ld"></a>
-##### 入参：
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| weightId | Date | 体重记录ID |  |
-
-<a name="VxEM7"></a>
-##### 出参(List)：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| healthLabelName | String | 健康风险标签名 |  |
-| healthContent | String | 健康风险解读 |  |
-| indexList | List(Object) | 风险对应标签对象 |  |
-
-<a name="U4DPr"></a>
-###### indexList(风险对应标签对象)
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexName | String | 标签名称 |  |
-| indexValue | BigDecimal | 标签值 |  |
-| indexUnit | String | 单位 |  |
-| indexLevel | String | 指标等级 |  |
-
-<a name="zq69k"></a>
-###### 示例报文：
-```json
-{
-	"code":200,
-	"msg":"成功",
-	"data":[
-		{
-			"healthLabelName":"中心型肥胖",
-			"healthContent":"肥胖不止影响体型，还会影响您的健康！世界卫生组织已将肥胖列为导致疾病负担的十大危险因素之一。\n\n若脂肪主要在腹壁和腹腔内蓄积过多，则被称为\"中心型肥胖\"，具有更高的疾病风险。一般成人达到以下任一标准即可推断为中心型肥胖。\n1.腰围：男性≥85cm，女性≥80cm；\n2.腰臀比（腰围/臀围）:男性>0.9，女性>0.8；\n\n对肥胖人群而言：\n1.出现2型糖尿病、心血管病、高血压、中风和多种癌症的风险概率远高于一般健康人群；\n2.由于过多的脂肪在肝细胞内沉积，易形成脂肪肝；\n3.易出现睡眠中重度打鼾，可能引发睡眠呼吸暂停综合征；\n4.同时还易出现骨关节病、胆囊疾病等多种疾病。",
-			"indexList":[
-				{
-					"indexName":"腰臀比",
-					"indexValue":1.5
-				},
-				{
-					"indexName":"腰围",
-					"indexValue":114,
-					"indexUnit":"cm"
-				}
-			]
-		}
-	]
-}
-```
-<a name="FNKxP"></a>
-## 3.3 获取用户某一条体重数据的同龄人对比
-```
-GET /api/weight/v2.0/analysis/getPeerWeightComparison
-```
-<a name="fMK6d"></a>
-##### 入参： 
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| id | String | 记录ID | 必传 |
-
-<a name="g6YGy"></a>
-##### 出参： 
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| sex | Integer | 性别 1：男  2：女 |  |
-| peerWeightIndexDtoList | List(Object) | 指标列表 |  |
-
-<a name="uRpd7"></a>
-###### 指标列表：
-| 字段 | 类型 | 描述 | 备注 |
-| --- | --- | --- | --- |
-| indexName | String | 指标名称 |  |
-| indexValue | Double | 指标值 |  |
-| indexUnit | String | 指标单位 |  |
-| indexAvgValue | Double | 同龄人指标值 |  |
-
-<a name="I7r3e"></a>
-###### 示例报文：
-```json
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"sex":1,
-		"peerWeightIndexDtoList":[
-			{
-				"indexName":"BMI",
-				"indexValue":25.4,
-				"indexUnit":"",
-				"indexAvgValue":23.37
-			},
-			{
-				"indexName":"体脂率",
-				"indexValue":20.9,
-				"indexUnit":"%",
-				"indexAvgValue":20.34
-			}
-		]
-	}
-}
-```
-<a name="gujP6"></a>
-# 4.体重周报
-<a name="sOriz"></a>
-## 4.1 获取用户某个周的报告
-```
-GET /api/weight/v2.0/report/getWeekReport
-```
-**入参：**
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| weekStartDay | String | 该周的周一 | 格式：yyyyMMdd<br />eg：20210120 |
-
-**出参：**
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| userName | String | 用户名字 |  |
-| reportTime | String | 报告时间 |  |
-| yyyMMdd | String | 每周的周一 |  |
-| measureModuleViewDTO | ReportMeasureModuleViewDTO | 测量情况 |  |
-| weightModuleViewDTO | ReportWeightModuleViewDTO | 体重变化情况 |  |
-| foodCaloriesModuleViewDTO | ReportFoodCaloriesModuleViewDTO | 饮食热量 |  |
-| dietaryBalanceModuleViewDTO | ReportDietaryBalanceModuleViewDTO | 膳食均衡模块 |  |
-| bodyActivityModuleViewDTO | ReportBodyActivityModuleViewDTO | 身体活动模块 |  |
-
-<a name="dajBn"></a>
-###### ReportMeasureModuleViewDTO：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| canShow | Integer | 是否该展示 | * 1： 展示<br />* 0：不展示 |
-| moduleName | String | 模块名字 |  |
-| evaluateLableName | String | 评价标签 |  |
-| emotionPicUrl | String | 情绪图标地址 |  |
-| dynamicTextDesc | String | 动态的文本描述 |  |
-| staticTextDesc | String | 静态的文本描述 |  |
-
-<a name="u5D2v"></a>
-###### ReportWeightModuleViewDTO：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| canShow | Integer | 是否该展示 | * 1： 展示<br />* 0：不展示 |
-| moduleName | String | 模块名字 |  |
-| evaluateLableName | String | 评价标签 |  |
-| emotionPicUrl | String | 情绪图标地址 |  |
-| dynamicTextDesc | String | 动态的文本描述 |  |
-| staticTextDesc | String | 静态的文本描述 |  |
-| lineChartsRecords | LineChartsRecordDTO | 折线图数据 |  |
-| weightVariation | ReportIndexVariationDTO | 体重变化 |  |
-| pbfVariation | ReportIndexVariationDTO | 体脂率变化 |  |
-
-LineChartsRecordDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| weightList | List(BaseSingleRecordDTO) | 体重记录 |  |
-| pbfList | List(BaseSingleRecordDTO) | 体脂率记录 |  |
-| bodyRoundList | List(BaseSingleRecordDTO) | 体围记录 |  |
-| lastBodyRoundRecord | BodyRoundRecordDto | 最新一条体围记录 |  |
-
-BaseSingleRecordDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| value | BigDecimal | 标签值 |  |
-| unitName | String | 单位 |  |
-| measurementDate | Date | 测量时间 |  |
-| measurementDateText | String | 测量时间文本描述 |  |
-
-BodyRoundRecordDto
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| id | long | 体围id |  |
-| userId | long | 用户ID |  |
-| calInfo | String | 涉及计算用的信息 |  |
-| updated | Date | 最后修改时间 |  |
-| measurementDate | Date | 测量时间 |  |
-| created | Date | 创建时间 |  |
-| deleted | int | 是否删除 |  |
-| waistHipRate | double | 腰臀比 |  |
-| waistCircumference | double | 腰围 |  |
-| hipCircumference | double | 臀围 |  |
-| chestCircumference | double | 胸围 |  |
-| armCircumference | double | 臂围 |  |
-| thighCircumference | double | 腿围 |  |
-| calfCircumference | double | 小腿围 |  |
-| score | double | 得分 |  |
-| scoreContent | String | 得分文案 |  |
-| beatPercent | double | 击败比例 |  |
-| age | int | 年龄 |  |
-| sex | int | 性别 |  |
-| height | double | 身高 |  |
-
-ReportIndexVariationDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| VariationText | String | 变化文案 |  |
-| VariationValue | String | 变化数值 |  |
-| VariationUnit | String | 变化单位 |  |
-
-<a name="x7STz"></a>
-###### ReportFoodCaloriesModuleViewDTO：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| canShow | Integer | 是否该展示 | * 1： 展示<br />* 0：不展示 |
-| moduleName | String | 模块名字 |  |
-| evaluateLableName | String | 评价标签 |  |
-| emotionPicUrl | String | 情绪图标地址 |  |
-| dynamicTextDesc | String | 动态的文本描述 |  |
-| staticTextDesc | String | 静态的文本描述 |  |
-| dayFoodCaloriesDetailList | List(DayFoodCaloriesDetailDTO) |  |  |
-| tips | String | 小贴士文案 |  |
-| goodsRecommendText | String | 商品推荐文案 | 无商品会为空 |
-| recommdGoods | RecommdGoodsDTO | 推荐商品 |  |
-
-DayFoodCaloriesDetailDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| recommendCalories | BigDecimal | 推荐卡路里 |  |
-| eatCalories | BigDecimal | 吃了的卡路里 |  |
-| belongDay | Date | 哪一天 |  |
-| lightFastFlag | boolean | 轻断食标记 |  |
-| caloriesExceedFlag | boolean | 热量超标标志 |  |
-
-RecommdGoodsDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| goodsId | long | 商品id |  |
-| title | String | 标题 |  |
-| subTitle | String | 副标题 |  |
-| goodsPicUrl | String | 商品图片地址 |  |
-
-<a name="RkDYw"></a>
-###### ReportDietaryBalanceModuleViewDTO：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| canShow | Integer | 是否该展示 | * 1： 展示<br />* 0：不展示 |
-| moduleName | String | 模块名字 |  |
-| evaluateLableName | String | 评价标签 |  |
-| emotionPicUrl | String | 情绪图标地址 |  |
-| dynamicTextDesc | String | 动态的文本描述 |  |
-| staticTextDesc | String | 静态的文本描述 |  |
-| dietaryBalanceProblemDetailList | List(DayDietaryBalanceProblemDetailResultDTO) | 膳食均衡问题天统计 |  |
-| tips | String | 小贴士文案 |  |
-| goodsRecommendText | String | 商品推荐文案 | 无商品会为空 |
-| recommdGoods | RecommdGoodsDTO | 推荐商品 |  |
-
-DayDietaryBalanceProblemDetailResultDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| dietaryBalanceProblemCategory | String | 饮食问题种类 | "蔬菜"<br />"鱼肉蛋豆"<br />"主食"<br />"乳类"<br />"水果" |
-| overMuchDaysCount | Integer | 过多天数 |  |
-| tooLittleDaysCount | Integer | 过少天数 |  |
-
-RecommdGoodsDTO
-
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| goodsId | long | 商品id |  |
-| title | String | 标题 |  |
-| subTitle | String | 副标题 |  |
-| goodsPicUrl | String | 商品图片地址 |  |
-
-<a name="oA5GX"></a>
-###### ReportBodyActivityModuleViewDTO：
-| 字段 | 类型 | 描述 | 其他 |
-| --- | --- | --- | --- |
-| canShow | Integer | 是否该展示 | * 1： 展示<br />* 0：不展示 |
-| moduleName | String | 模块名字 |  |
-| evaluateLableName | String | 评价标签 |  |
-| emotionPicUrl | String | 情绪图标地址 |  |
-| dynamicTextDesc | String | 动态的文本描述 |  |
-| staticTextDesc | String | 静态的文本描述 |  |
-| avgStep | Integer | 日均步数 |  |
-| avgCalories | Integer | 日均消耗卡路里 | 产品要求保留整数 |
-
-<a name="LQbtL"></a>
-###### 示例报文：
-```json
-
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"userName":"..test..",
-		"reportTime":"2021年01月25日-01月31日",
-		"yyyMMdd":"20210125",
-		"measureModuleViewDTO":{
-			"canShow":1,
-			"moduleName":"测量情况",
-			"dynamicTextDesc":"这周共测量体重3天。",
-			"staticTextDesc":"还不错！大数据发现：每天测量1次，对比每周测量1次，减重成功率高36%！"
-		},
-		"weightModuleViewDTO":{
-			"canShow":1,
-			"moduleName":"测量情况",
-			"evaluateLableName":"体重见长",
-			"dynamicTextDesc":"这周体重上升较多。",
-			"staticTextDesc":"不要掉以轻心哦！注意控制饮食摄入量，少吃高油高糖食物。",
-			"weightVariation":{
-				"variationText":"下降",
-				"variationValue":"20.00",
-				"variationUnit":"kg"
-			},
-			"pbfVariation":{
-				"variationText":"无变化"
-			}
-		},
-		"foodCaloriesModuleViewDTO":{
-			"canShow":1,
-			"moduleName":"测量情况",
-			"evaluateLableName":"吃动平衡",
-			"dynamicTextDesc":"这周饮食热量都没有超标。",
-			"staticTextDesc":"值得表扬！再接再厉哦！",
-			"dayFoodCaloriesDetailList":[
-				{
-					"recommendCalories":1727,
-					"eatCalories":338,
-					"belongDay":1611504000000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				},
-				{
-					"recommendCalories":2058,
-					"eatCalories":837,
-					"belongDay":1611590400000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				},
-				{
-					"recommendCalories":2017,
-					"eatCalories":587,
-					"belongDay":1611676800000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				},
-				{
-					"recommendCalories":2017,
-					"eatCalories":0,
-					"belongDay":1611763200000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				},
-				{
-					"recommendCalories":2017,
-					"eatCalories":0,
-					"belongDay":1611849600000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				},
-				{
-					"recommendCalories":2017,
-					"eatCalories":0,
-					"belongDay":1611936000000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				},
-				{
-					"recommendCalories":2017,
-					"eatCalories":0,
-					"belongDay":1612022400000,
-					"lightFastFlag":false,
-					"caloriesExceedFlag":false
-				}
-			]
-		},
-		"dietaryBalanceModuleViewDTO":{
-			"canShow":1,
-			"moduleName":"测量情况",
-			"evaluateLableName":"鱼肉蛋豆过少",
-			"dynamicTextDesc":"有2天时间鱼肉蛋豆摄入过少。",
-			"staticTextDesc":"鱼肉蛋豆可提供丰富的蛋白质和矿物质，有助于骨骼和肌肉增长、从而提升基础代谢，请注意补充！",
-			"dietaryBalanceProblemDetailList":[
-				{
-					"dietaryBalanceProblemCategory":"鱼肉蛋豆",
-					"overMuchDaysCount":2
-				},
-				{
-					"dietaryBalanceProblemCategory":"主食",
-					"overMuchDaysCount":1
-				}
-			],
-			"tips":"蛋类的营养价值很高，可作为蛋白质来源优选~",
-			"goodsRecommendText":"鱼肉蛋豆总是吃不够？为您推荐营养补充方案：",
-			"recommdGoods":{
-				"goodsId":201280006002,
-				"title":"迪士尼每日坚果1 750g CP44",
-				"subTitle":"9种果仁营养11",
-				"goodsPicUrl":"https://sports-qa-files.lifesense.com/other/20200507/d45a2933ebab44b8a324d02f7cfd60f7.jpg"
-			}
-		},
-		"bodyActivityModuleViewDTO":{
-			"canShow":1,
-			"moduleName":"测量情况",
-			"evaluateLableName":"健步达人",
-			"dynamicTextDesc":"这周活动量很充足。",
-			"staticTextDesc":"太棒啦！身体和灵魂，总有一个要在路上！",
-			"avgStep":9005,
-			"avgCalories":161
-		}
-	}
-}
-
-```
-<a name="ZVpPX"></a>
-# 5.体重目标
-<a name="JXe3u"></a>
-## 5.1 设置体重目标
-```
-POST /api/weight/v2.0/goal/set
-```
-<a name="siPjI"></a>
-##### 入参：
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| originWeight | Double | 设置目标时的体重 | 单位：kg |
-| targetWeight | Double | 目标值 | 单位：kg |
-| startTime | Date | 初始体重时间 |  |
-| minWeight | Integer | 体重保持-最低值 | 体重保持必传 |
-| maxWeight | Double | 体重保持-最高值 |  |
-| targetType | Integer | 目标类型枚举 | 1 减肥<br />2 增肥<br />3 保持 |
-| targetModel | Integer | 目标模式 | 1-健康减重<br />2-瘦出小蛮腰<br />3-瘦出天鹅臂<br />4-瘦出马甲线<br />5-减掉啤酒肚<br />6-减掉双下巴<br />7-健康增重<br />8-增肌塑形 |
-
-<a name="vOS4h"></a>
-###### 示例报文：
-```json
-{
-
-	"originWeight":60,
-	"targetWeight":50,
-	"startTime":1547049600000,
-	"targetType":1,
-	"targetModel":1
-}
-
-```
-<a name="VDgh9"></a>
-## 5.2 查询用户的体重目标
-```
-GET /api/weight/v2.0/goal/getLast
-```
-<a name="Cfjif"></a>
-##### 入参：
-无
-<a name="kHvCQ"></a>
-##### 出参：
-| **字段** | **类型** | **描述** | **其他** |
-| --- | --- | --- | --- |
-| originWeight | Double | 设置目标时的体重 |  |
-| unit | Integer | 单位 | 1 kg<br />2 斤 |
-| targetWeight | Double | 目标值 |  |
-| startTime | Date | 初始体重时间 |  |
-| startTargetWeight | Integer | 建议体重最低值 |  |
-| endTargetWeight | Double | 建议体重最高值 |  |
-| minWeight | Double | 体重保持-最低值 | 用户设置的体重保持-最低值 |
-| maxWeight | Double | 体重保持-最高值 | 用户设置的体重保持-最高值 |
-| targetType | Integer | 目标类型枚举 | -1 未设置目标<br />1 减肥<br />2 增肥<br />3 保持 |
-| targetModel | Integer | 目标模式 | 1-健康减重<br />2-瘦出小蛮腰<br />3-瘦出天鹅臂<br />4-瘦出马甲线<br />5-减掉啤酒肚<br />6-减掉双下巴<br />7-健康增重<br />8-增肌塑形 |
-
-<a name="pBvGR"></a>
-###### 示例报文：
-```json
-{
-	"code":200,
-	"msg":"成功",
-	"data":{
-		"id":1112,
-		"userId":23342312,
-		"originWeight":80,
-		"unit":1,
-		"targetWeight":84,
-		"startTime":1620403200000,
-		"startTargetWeight":62.1,
-		"endTargetWeight":68,
-		"minWeight":0,
-		"maxWeight":0,
-		"targetType":2,
-		"targetModel":7
-	}
-}
-```
 
