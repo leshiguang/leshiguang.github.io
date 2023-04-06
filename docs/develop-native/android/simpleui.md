@@ -10,7 +10,7 @@
 <a name="m5j66"></a>
 #### 2.1.1、添加依赖
 
-<br />拷贝所需的aar包到libs目录下：
+拷贝所需的aar包到libs目录下：
 
 - [lifesense-android-simple-webview-service](https://github.com/leshiguang/maven-repository/packages/571063)：webview实现部分， 处理webview的桥接口、缓存等逻辑
 
@@ -23,7 +23,7 @@ repositories {
 }
 ```
 
-<br />在项目的build.gradle中添加依赖：<br />
+在项目的build.gradle中添加依赖：
 
 ```groovy
     implementation fileTree(dir: 'libs', include: ['*.aar'])
@@ -44,26 +44,19 @@ init(Context context,String tn)
 
 - 参数说明：
 
-
-
-
 | 类型 | Names | 说明 |
 | --- | --- | --- |
 | Context | context | app上下文 |
 | String | tn | 租户名称 |
 |  |  |  |
 
-2.1.2.2 登录<br />描述：第三方账号和乐心账号静默打通， 获取默认的用户ID和token信息<br />接口：com.lifesense.weidong.lswebview.webview.LSWebViewManager<br />
+2.1.2.2 登录<br />描述：第三方账号和乐心账号静默打通， 获取默认的用户ID和token信息<br />接口：com.lifesense.weidong.lswebview.webview.LSWebViewManager
 
 ```java
 login( String appKey, String appSecret,String associatedId, final OnLoginCallback callback)
 ```
 
-
 - 参数说明：
-
-
-
 
 | 类型 | Names | 说明 |
 | --- | --- | --- |
@@ -73,16 +66,16 @@ login( String appKey, String appSecret,String associatedId, final OnLoginCallbac
 | OnLoginCallback | callback | 登陆状态回调，只有回调onLoginSuccess后才能进行后续的页面跳转 |
 
 
-<br />appKey， appSecret需要走申请流程：
+appKey， appSecret需要走申请流程：
 
 - 申请接入需要的材料
 
 准备申请材料：
 
 1. 确定应用接入的（企业）组织名称，并说明使用场景、用途、评估应用接入的量级
-1. 确定应用的bundle identifier（appid会对使用的app进行合法性校验）
-1. 确定应用需要接入的设备型号列表（如果是进行设备鉴权的话必须填写）
-1. 确定应用需要接入的服务（设备、算法、软件服务包）名称（用于获得服务ID和服务版本）
+2. 确定应用的bundle identifier（appid会对使用的app进行合法性校验）
+3. 确定应用需要接入的设备型号列表（如果是进行设备鉴权的话必须填写）
+4. 确定应用需要接入的服务（设备、算法、软件服务包）名称（用于获得服务ID和服务版本）
 
 材料确定后，发送申请接入邮件模板如下(前期以这种流程走， 后续sass平台将实现流程化接入)：
 ```
@@ -115,14 +108,14 @@ login( String appKey, String appSecret,String associatedId, final OnLoginCallbac
 ### 2.2.1、token获取
 url：https://api-r1.leshiguang.com/sessions-rest/associatedBusiness/loginTenant<br />method：post
 <a name="ui3k9"></a>
-##### [入参:](https://docs.leshiguang.com/#/develop-cloud/health/login?id=%e5%85%a5%e5%8f%82)
+##### [入参:](https://docs.sghealth.cn/#/develop-cloud/health/login?id=%e5%85%a5%e5%8f%82)
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id | 标识对接用户，双方约定字段 |
 | notCreate | boolean | 未查询到关联账号时，是否不做账号新增 | 默认false，即关联id无映射的用户时自动创建 |
 
 <a name="oQ7Eh"></a>
-##### [出参:](https://docs.leshiguang.com/#/develop-cloud/health/login?id=%e5%87%ba%e5%8f%82)
+##### [出参:](https://docs.sghealth.cn/#/develop-cloud/health/login?id=%e5%87%ba%e5%8f%82)
 | **字段** | **类型** | **描述** | **其他** |
 | --- | --- | --- | --- |
 | userId | Long | 用户id |  |
@@ -143,7 +136,6 @@ url：https://api-r1.leshiguang.com/sessions-rest/associatedBusiness/loginTenant
     }
 }
 ```
-
 
 <a name="bGZGo"></a>
 ### 2.2.2、初始化webview
@@ -212,18 +204,14 @@ ws.setDomStorageEnabled(true);
 ```
 <a name="7UaTb"></a>
 ### 2.2.4、页面跳转
-通过webview的loadUrl进行跳转<br />
-
+通过webview的loadUrl进行跳转
 
 | 页面功能 | 链接 | 参数 |
 | --- | --- | --- |
-| 体重首页 | [https://h5.leshiguang.com/weight/0.0.1/perfect.html?tn=](https://h5.leshiguang.com/weight/0.0.1/perfect.html?tn=zhongyizhijia) | tn:租户名称
-
- |
+| 体重首页 | [https://h5.leshiguang.com/weight/0.0.1/perfect.html?tn=](https://h5.leshiguang.com/weight/0.0.1/perfect.html?tn=zhongyizhijia) | tn:租户名称<br /> |
 | 血压首页 | [https://h5.leshiguang.com/bloodpressure/0.0.1/analysis.html?tn=](https://h5.leshiguang.com/bloodpressure/0.0.1/analysis.html?tn=zhongyizhijia) | tn:租户名称 |
 
 
-<br />
-<br />
+
 
 
