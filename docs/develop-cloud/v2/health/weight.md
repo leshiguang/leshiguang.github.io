@@ -18,7 +18,7 @@ _该校验会校验设备id的合法性_
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | id | String | 体重记录ID | 可以为空 |
-| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.sghealth.cn/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | weight | Double | 体重 |  |
 | resistance50k | Double | 50k电阻值 |  |
@@ -81,7 +81,7 @@ _该校验会校验设备id的合法性_
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | id | String | 体重记录ID | 可以为空 |
-| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| deviceId | String | 设备ID | 设备ID获取参考：[链接](https://docs.sghealth.cn/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | weight | Double | 体重 |  |
 | resistance50k | Double | 50k电阻值 |  |
