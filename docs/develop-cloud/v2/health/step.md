@@ -20,7 +20,7 @@ POST /api/step/v2.0/upload/uploadBandDeviceStep
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.sghealth.cn/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | step | Integer | 步数 |  |
 | calories | Double | 卡路里 |  |
@@ -41,7 +41,7 @@ POST /api/step/v2.0/upload/uploadWXStep
 
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| step | int | 步数 | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| step | int | 步数 | 设备id获取参考：[链接](https://docs.sghealth.cn/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | timestamp | long | 测量时间，单位是 s |  |
 
 <a name="sBdZM"></a>
@@ -59,7 +59,6 @@ GET /api/step/v2.0/query/getDayStep
 | size | int | 往前查询多少天的数据 | >= 1 && <= 50 |
 
 
-<br />
 
 <a name="Wakk4"></a>
 ##### 出参（List）:
@@ -76,7 +75,7 @@ GET /api/step/v2.0/query/getDayStep
 ###### 步数信息：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| step | Integer | 总步数 | 手环/手机/微信步数最大值<br /> |
+| step | Integer | 总步数 | 手环/手机/微信步数最大值 |
 | measurementDate | Date | 测量时间 | 每天的0点0分<br />如：yyyy-MM-dd 00:00:00 |
 | bandStep | Integer | 手环步数 |  |
 | dataSource | Integer | 数据来源 | 1-手环<br />2-手机<br />3-微信 |
@@ -271,7 +270,6 @@ GET /api/step/v2.0/query/getWeekStep
 | stepStatisticsInfo | Object | 步数统计信息 | 见[日步数接口出参](#pQU9e) |
 
 
-
 <a name="J03qK"></a>
 ###### 示例报文：
 ```json
@@ -353,7 +351,7 @@ GET /api/step/v2.0/query/getMonthStep
 | totalStep | Integer | _总步数_ |  |
 
 
-<br />​<br />
+
 <a name="rfC5f"></a>
 ###### 示例报文：
 ```sql
@@ -406,7 +404,6 @@ GET /api/step/v2.0/query/getMonthStep
 
 ```
 
-
 <a name="Hwvfc"></a>
 ## 2.4 查询用户最新的步数记录
 ```
@@ -431,7 +428,6 @@ GET /api/step/v2.0/query/getLastDayStep
 | distanceText | String | 距离文案 |  |
 
 
-
 <a name="qyrNr"></a>
 ###### 示例报文：
 ```json
@@ -452,7 +448,6 @@ GET /api/step/v2.0/query/getLastDayStep
 
 ```
 
-
 <a name="VAszz"></a>
 ## 2.5 查询最近30天的步数记录
 ```
@@ -467,7 +462,7 @@ GET /api/step/v2.0/query/getLastThirtyDaysStep
 | --- | --- | --- | --- |
 | id | String | 数据id |  |
 | userId | Long | 用户id |  |
-| measurementDate | Date | 测量时间 | ​<br /> |
+| measurementDate | Date | 测量时间 | <br /> |
 | deviceId | String | 设备id | 最大步数为手环时，才会有值 |
 | step | Integer | 步数 | 该值为所有来源中的最大步数 |
 | bandStep | Integer | 手环步数 |  |
@@ -834,8 +829,6 @@ POST /api/step/v2.0/target/setTargetStep
 <a name="yuFau"></a>
 ##### 入参:
 
-
-
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | targetStep | Integer | 步数目标值 |  |
@@ -852,7 +845,7 @@ GET /api/step/v2.0/target/getTargetStep
 | data | Integer | 目标值 | 公共参数 |
 
 
-<br />示例出参:
+示例出参:
 ```sql
 {
 	"code":200,
