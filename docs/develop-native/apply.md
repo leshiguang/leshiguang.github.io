@@ -34,22 +34,22 @@
 ### 接入文档
 蓝牙SDK：
 
-- android蓝牙SDK文档：[https://docs.leshiguang.com/dev-android/bluetooth/summary](https://docs.leshiguang.com/dev-android/bluetooth/summary)
-- iOS蓝牙SDK文档：[https://docs.leshiguang.com/dev-ios/bluetooth/summary](https://docs.leshiguang.com/dev-ios/bluetooth/summary)
-- 微信小程序SDK文档：[https://docs.leshiguang.com/develop-native/wx-mini/bluetooth](https://docs.leshiguang.com/develop-native/wx-mini/bluetooth)
+- android蓝牙SDK文档：[https://docs.sghealth.cn/dev-android/bluetooth/summary](https://docs.sghealth.cn/dev-android/bluetooth/summary)
+- iOS蓝牙SDK文档：[https://docs.sghealth.cn/dev-ios/bluetooth/summary](https://docs.sghealth.cn/dev-ios/bluetooth/summary)
+- 微信小程序SDK文档：[https://docs.sghealth.cn/develop-native/wx-mini/bluetooth](https://docs.sghealth.cn/develop-native/wx-mini/bluetooth)
 
 UI级SDK：
 
-- android UI级sdk接入文档： [https://docs.leshiguang.com/dev-android/ui/summary](https://docs.leshiguang.com/dev-android/ui/summary)
-- iOS UI级sdk接入文档：[https://docs.leshiguang.com/dev-ios/ui/summary](https://docs.leshiguang.com/dev-ios/ui/summary)
+- android UI级sdk接入文档： [https://docs.sghealth.cn/dev-android/ui/summary](https://docs.sghealth.cn/dev-android/ui/summary)
+- iOS UI级sdk接入文档：[https://docs.sghealth.cn/dev-ios/ui/summary](https://docs.sghealth.cn/dev-ios/ui/summary)
 
 乐智云api：
 
-- 云api对接文档（商业版， 需要联系对应的商务开通权限）：[https://docs.leshiguang.com/develop-cloud/README](https://docs.leshiguang.com/develop-cloud/README)
+- 云api对接文档（商业版， 需要联系对应的商务开通权限）：[https://docs.sghealth.cn/develop-cloud/README](https://docs.sghealth.cn/develop-cloud/README)
 
 乐智云算法：
 
-- 算法对接文档：[https://docs.leshiguang.com/develop-cloud/algorithm/fat](https://docs.leshiguang.com/develop-cloud/algorithm/fat)
+- 算法对接文档：[https://docs.sghealth.cn/develop-cloud/algorithm/fat](https://docs.sghealth.cn/develop-cloud/algorithm/fat)
 <a name="TyEeX"></a>
 # 支持设备
 | 设备类型 | 型号 |
