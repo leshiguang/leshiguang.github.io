@@ -13,7 +13,7 @@ repositories {
 }
 ```
 
-<br />在项目的build.gradle中添加依赖：<br />
+在项目的build.gradle中添加依赖：
 
 ```groovy
     implementation fileTree(dir: 'libs', include: ['*.aar'])
@@ -37,34 +37,33 @@ repositories {
 <a name="NaSja"></a>
 ## 初始化
 
-<br />描述：SDK初始化一些基础功能，应尽早的调用（建议在Application中调用）<br />类:com.lifesense.android.health.service.LZHealth
+描述：SDK初始化一些基础功能，应尽早的调用（建议在Application中调用）<br />类:com.lifesense.android.health.service.LZHealth
 ```java
 public void init(Context context, Config config)
 ```
-参数说明：<br />context：上下文<br />config：SDK配置类<br />
-<br />Config
+参数说明：<br />context：上下文<br />config：SDK配置类
+
+Config
 
 |  |  |  |
 | --- | --- | --- |
-| appKey | String | appSecret需要申请获取：[https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply) |
+| appKey | String | appSecret需要申请获取：[https://docs.sghealth.cn/develop-native/apply](https://docs.sghealth.cn/develop-native/apply) |
 | appSecret | String | 应用密钥 |
 | tn | String | 租户名 |
 | debug | boolean | 是否开启调试 |
 
 
-
 <a name="GRiVG"></a>
 ## 登录
-描述：第三方账号和乐心账号静默打通<br />类：com.lifesense.android.health.service.LZHealth<br />
+描述：第三方账号和乐心账号静默打通<br />类：com.lifesense.android.health.service.LZHealth
 
 ```java
 public void login(String associatedId, Consumer<LoginState> consumer)
 ```
 
-
 - 参数说明：
 
-associatedId：用户的唯一标识号（通常指userId）<br />consumer：登陆状态<br />
+associatedId：用户的唯一标识号（通常指userId）<br />consumer：登陆状态
 
 <a name="rHTss"></a>
 ## 登出
@@ -72,6 +71,5 @@ associatedId：用户的唯一标识号（通常指userId）<br />consumer：登
 ```java
 public void logout()
 ```
-
 
 
