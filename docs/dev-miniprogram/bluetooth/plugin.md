@@ -1795,7 +1795,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 <a name="I5lNF"></a>
 ## 9.3 插件初始化页面
 
-[申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)
+[申请乐心AppKey](https://docs.sghealth.cn/develop-native/apply)
 
 ```javascript
   lsPlugin.initUI({
