@@ -1,12 +1,12 @@
 <a name="1d2be86b"></a>
 # 合作方式介绍
-1、设备通过乐心提供的蓝牙SDK绑定设备、上传数据<br />2、数据经过SDK初步处理后， 以回调的方式给到客户APP<br />3、客户APP上传数据到自己的云平台进行数据存储<br />4、客户可在APP或云平台调用乐心开放平台提供的API进行数据分析（睡眠、体重等场景）<br />
+1、设备通过乐心提供的蓝牙SDK绑定设备、上传数据<br />2、数据经过SDK初步处理后， 以回调的方式给到客户APP<br />3、客户APP上传数据到自己的云平台进行数据存储<br />4、客户可在APP或云平台调用乐心开放平台提供的API进行数据分析（睡眠、体重等场景）
 
 <a name="gb7VV"></a>
 # 快速集成
 <a name="oZOVP"></a>
 ## SDK下载
-下载地址： [https://docs.leshiguang.com/download/](https://docs.leshiguang.com/download/README)
+下载地址： [http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceBluetooth-1.5.0.zip?e=1620631856&attname=&token=fCj0mxPVEsXXpyTOBQ32smvgMng0P-pLEc6rpY94:MLxxtlAY9s3nhEFvXXeu_xY9cfs=](http://qi4q5rivb.hn-bkt.clouddn.com/LSDeviceBluetooth-1.5.0.zip?e=1620631856&attname=&token=fCj0mxPVEsXXpyTOBQ32smvgMng0P-pLEc6rpY94:MLxxtlAY9s3nhEFvXXeu_xY9cfs=)
 <a name="250a1dc2"></a>
 ## 项目依赖配置
 1、解压缩下载的压缩文件，您将看到三个Framework
@@ -15,10 +15,10 @@
 - LSAuthorizationFramework.framework: 鉴权库，用于控制设备准入信息，需要用到[1.2.2](#lnH19)中申请的appId信息
 - LSNetworkFramework.framework: 基础网络库，LSAuthoriaztionFramework内部需要使用
 
-SDK目前支持的CPU架构为X86_64、arm64，新版本的xcode中，已经不支持i386和armv7、armv7s的Framework打包<br />2、在Target->BuildPhase->Link Binary with Libraries 选型卡中， 添加”1“中解压缩的3个Framework<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1602575801727-7c6fe769-15a2-4e47-bc3b-0a1227927004.png#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&name=image.png&originHeight=227&originWidth=1267&size=30854&status=done&style=none&width=1267#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&originHeight=227&originWidth=1267&status=done&style=none&width=1267)<br />注：请不要将Status状态设置为Optional，否则会带来image not found异常<br />3、如果您的Target类型为Application，需要在Target->General->Frameworks,Libraries,Embeded Content选项卡中， 将导入的Framework类型设置为Embeded & Sign 否则运行时会Crash<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1602576174613-20ad90f4-6889-4289-9d71-51e245e0783b.png#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&name=image.png&originHeight=227&originWidth=1218&size=30522&status=done&style=none&width=1218#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&originHeight=227&originWidth=1218&status=done&style=none&width=1218)
+SDK目前支持的CPU架构为X86_64、arm64，新版本的xcode中，已经不支持i386和armv7、armv7s的Framework打包<br />2、在Target->BuildPhase->Link Binary with Libraries 选型卡中， 添加”1“中解压缩的3个Framework<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1602575801727-7c6fe769-15a2-4e47-bc3b-0a1227927004.png#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&name=image.png&originHeight=227&originWidth=1267&size=30854&status=done&style=none&width=1267#averageHue=%23f9f7f6&height=227&id=IMKze&originHeight=227&originWidth=1267&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1267)<br />注：请不要将Status状态设置为Optional，否则会带来image not found异常<br />3、如果您的Target类型为Application，需要在Target->General->Frameworks,Libraries,Embeded Content选项卡中， 将导入的Framework类型设置为Embeded & Sign 否则运行时会Crash<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1602576174613-20ad90f4-6889-4289-9d71-51e245e0783b.png#align=left&display=inline&height=227&margin=%5Bobject%20Object%5D&name=image.png&originHeight=227&originWidth=1218&size=30522&status=done&style=none&width=1218#averageHue=%23f9f8f8&height=227&id=aLHbf&originHeight=227&originWidth=1218&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1218)
 <a name="62fd5f81"></a>
 ## 权限声明
-由于SDK中需要使用到蓝牙权限， 需要在主工程的info.plist中添加蓝牙权限使用声明：<br />NSBluetoothPeripheralUsageDescription：A message that tells the user why the app is requesting the ability to connect to Bluetooth peripherals.(告诉用户为什么需要连接蓝牙外设)<br />NSBluetoothAlwaysUsageDescription：A message that tells the user why the app needs access to Bluetooth.（告诉用户为什么需要访问蓝牙权限）<br />
+由于SDK中需要使用到蓝牙权限， 需要在主工程的info.plist中添加蓝牙权限使用声明：<br />NSBluetoothPeripheralUsageDescription：A message that tells the user why the app is requesting the ability to connect to Bluetooth peripherals.(告诉用户为什么需要连接蓝牙外设)<br />NSBluetoothAlwaysUsageDescription：A message that tells the user why the app needs access to Bluetooth.（告诉用户为什么需要访问蓝牙权限）
 
 <a name="d750cee6"></a>
 ## 接入Demo
@@ -81,7 +81,6 @@ SDK目前支持的CPU架构为X86_64、arm64，新版本的xcode中，已经不�
 void stopSearch();
 ```
 
-
 <a name="0a548a16"></a>
 ### _配对或绑定设备_
 
@@ -94,7 +93,7 @@ void stopSearch();
 - 返回值：boolean，true 表示设备配对功能可用，false 表示设备配对功能不可用或工作状态错误
 <a name="22eb134d"></a>
 #### 绑定设备的回调LSDevicePairingDelegate
-1、didProductUserlistUpdate：_接收设备发上来需要绑定的编号（硬件上的用户编号）(血压计)_<br />_2、_didOperationCommandUpdate：_返回设备在配对或绑定过程中，上传的**操作指令**信息_<br />3、didPairingStatusChange：_返回配对成功的设备信息和绑定结果（**配对状态**）_
+1、didProductUserlistUpdate：_接收设备发上来需要绑定的编号（硬件上的用户编号）(血压计)_<br />_2、_didOperationCommandUpdate：_返回设备在配对或绑定过程中，上传的操作指令信息_<br />3、didPairingStatusChange：_返回配对成功的设备信息和绑定结果（配对状态）_
 <a name="e6cdf2f2"></a>
 #### _绑定设备上的用户编号_
 
@@ -120,8 +119,6 @@ void stopSearch();
 - 接口：LSBluetoothManager#cancelDevicePairing
 - 参数：LsDeviceInfo lsDevice,设备信息对象
 
-
-
 <a name="bd0a064d"></a>
 # 数据同步
 <a name="5a8c76bd"></a>
@@ -133,10 +130,9 @@ void stopSearch();
 -(BOOL)addMeasureDevice:(NSString *) appId andDevice:(LSDeviceInfo *)lsDevice result:(void (^)(NSUInteger)) result;
 ```
 
-
 - 参数：
 
-appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)<br />lsDevice：参考 LsDeviceInfo 的定义<br />result：添加状态码：<br />UN_KNOWN = -1<br />SUCCESS = 200<br />SERVER_ERROR = 500<br />UNCERFIFIED_BUNDLE = 20001<br />PARAMETER_ERROR = 20002<br />UNCERFIFIED_MODEL = 20003<br />ACTIVATION_EXCEED = 20004<br />INVALID_SERVICE = 20005<br />INVALID_DEVICE = 20006<br />INVALID_APPID = 20007
+appId: 申请地址： [https://docs.sghealth.cn/develop-native/apply](https://docs.sghealth.cn/develop-native/apply)<br />lsDevice：参考 LsDeviceInfo 的定义<br />result：添加状态码：<br />UN_KNOWN = -1<br />SUCCESS = 200<br />SERVER_ERROR = 500<br />UNCERFIFIED_BUNDLE = 20001<br />PARAMETER_ERROR = 20002<br />UNCERFIFIED_MODEL = 20003<br />ACTIVATION_EXCEED = 20004<br />INVALID_SERVICE = 20005<br />INVALID_DEVICE = 20006<br />INVALID_APPID = 20007
 <a name="28fe29f7"></a>
 ## 开启数据同步
 
@@ -178,8 +174,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 - 功能：设备脂肪秤或体重秤的用户信息
 - 接口：LSBluetoothManager#setProductUserInfo
 - 参数：LSProductUserInfo userInfo: 体重秤、脂肪秤的用户基本信息对象
-
-
 
 <a name="3dc43200"></a>
 ## 手环设置
@@ -298,7 +292,7 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 - 接口：LSBluetoothManager#updateAutoRecognition
 - 参数：
 
-① NSArray <LSAutomaticSportstypeModel _>_)autoRecognitions，运动模式列表 <br />② NSString *broadcastId, 设备广播 ID <br />③ DeviceSettingBlock settingBlock,update results callback block<br />
+① NSArray <LSAutomaticSportstypeModel _>_)autoRecognitions，运动模式列表 <br />② NSString *broadcastId, 设备广播 ID <br />③ DeviceSettingBlock settingBlock,update results callback block
 
 <a name="4caa6025"></a>
 ### 事件提醒设置
@@ -310,7 +304,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 ① LSDeviceEventReminderInfo _eventInfo 事件提醒信息 <br />② NSString _broadcastId, 设备广播 ID <br />③ DeviceSettingBlock settingBlock,update results callback block
 <a name="82bed059"></a>
 ### 鼓励设置
-
 
 - 功能：更新手环的鼓励目标设置，支持不同类型的鼓励目标，包括：步数；卡路里；距离
 - 接口：LSBluetoothManager#updateEncourageInfo
@@ -369,11 +362,9 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 - 接口：LSBluetoothManager#configWifiPassword
 - 参数：
 
-① NSString _password, wifi password <br />② NSString _networksName,net works name(SSID) '<br />③ LSDeviceInfo *lsDevice, 设备信息对象,参考 LSDeviceInfo 的定义 <br />④ id configDelegate,配置结果回调对象<br />
+① NSString _password, wifi password <br />② NSString _networksName,net works name(SSID) '<br />③ LSDeviceInfo *lsDevice, 设备信息对象,参考 LSDeviceInfo 的定义 <br />④ id configDelegate,配置结果回调对象
 
 - 返回值：BOOL,YES 表示接口功能可用，NO 表示接口功能不可用
-
-
 
 <a name="FVSlJ"></a>
 ## 蓝牙wifi双模秤配网
@@ -384,8 +375,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 - 接口：LSBluetootthManager#scanScalesWifi
 - 参数：deviceMac，设备广播 ID
 
-
-
 <a name="u9WR0"></a>
 ### 通过蓝牙进行wifi配网
 
@@ -393,7 +382,7 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 - 接口：LSBluetootthManager#connectWifi:bssid:password
 - 参数：
 
-① broadcastId 设备广播 ID<br />② bssid bssid设置搜索wifi返回，和ssid对应<br />③ password wifi密码<br />
+① broadcastId 设备广播 ID<br />② bssid bssid设置搜索wifi返回，和ssid对应<br />③ password wifi密码
 
 <a name="ilzRa"></a>
 ### 重置wifi
@@ -401,8 +390,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 - 功能：重置秤wifi配置
 - 接口：LSBluetootthManager#restConnectRequest
 - 参数：broadcastId，设备广播 ID
-
-
 
 <a name="oWk65"></a>
 ### 获取wifi连接状态
@@ -493,8 +480,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 
 - 详细说明：体重测量数据回调接口
 
-
-
 <a name="6fb737da"></a>
 ### didMeasureDataUpdateForWeightAppend（体重体脂测量数据）
 
@@ -552,8 +537,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 
 - 详细说明：在调用接口readDeviceVoltage读取设备的实时电量时，读取结果将以异步的方式，通过这个类的回调方法返回。flag=0x00 表示正常工作,flag=0x01 表示充电中,flag=-1 表示不支持，flag=2 表示返回的是电量百分比，没有电压；voltageValue=-1 表示不支持
 
-
-
 <a name="uXcWS"></a>
 ### didMeasureDataUpdateForWifi (蓝牙wifi双模秤扫描wifi数据回调）
 
@@ -571,8 +554,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 
 - 详细说明：调用爆款秤wifi配网的回调
 
-
-
 <a name="QVKQS"></a>
 ### didReconnectWifiResult （蓝牙wifi双模秤重置结果回调）
 
@@ -581,8 +562,6 @@ appId: 申请地址： [https://docs.leshiguang.com/develop-native/apply](https:
 ① LSDeviceInfo _lsDevice, 设备对象信息, 参考 LSDeviceInfo 的定义 <br />      ② _LSScaleRestConnectWifiResult, 重置wifi信息的数据model，参考LSScaleRestConnectWifiResult 的定义
 
 - 详细说明：调用重置wifi接口回调
-
-
 
 <a name="elDev"></a>
 ### didWifiState （蓝牙wifi双模秤重置结果回调）
@@ -740,7 +719,7 @@ int state 运动状态，0x00 表示开始，0x01 表示结束
 LSAutomaticSportstype type 自动识别的运动类型 <br />BOOL isOpen 是否启用 
 <a name="4a61e9b7"></a>
 ### LSUCaloriesData（运动卡路里数据）
-NSArray<NSNumber *> calorieList 表示跑步卡路里数据的集合 <br />NSData srcData 跑步卡路里的原始数据 <br />
+NSArray<NSNumber *> calorieList 表示跑步卡路里数据的集合 <br />NSData srcData 跑步卡路里的原始数据 
 
 <a name="k1lag"></a>
 ### LSScaleWifiModel (蓝牙wifi双模秤扫描wifi回调Model)
