@@ -5,7 +5,7 @@
 # 快速集成
 <a name="LvlIQ"></a>
 ## SDK下载
-下载地址： [https://docs.leshiguang.com/download/README](https://docs.leshiguang.com/download/README)
+下载地址： [https://docs.sghealth.cn/download/README](https://docs.sghealth.cn/download/README)
 <a name="wAasu"></a>
 ## 添加依赖
 拷贝所需的aar包到libs目录下：
@@ -23,7 +23,7 @@ repositories {
 }
 ```
 
-<br />在项目的build.gradle中添加依赖：<br />
+在项目的build.gradle中添加依赖：
 
 ```groovy
     implementation fileTree(dir: 'libs', include: ['*.aar'])
@@ -45,17 +45,13 @@ public void init(Context context)
 ```
 <a name="G7NSJ"></a>
 ### 登录
-描述：第三方账号和乐心账号静默打通， 获取默认的用户ID和token信息<br />接口：com.lifesense.component.devicemanager.application.interfaces.ILZDeviceService<br />
+描述：第三方账号和乐心账号静默打通， 获取默认的用户ID和token信息<br />接口：com.lifesense.component.devicemanager.application.interfaces.ILZDeviceService
 
 ```java
 login(String appKey, String appSecret, String associatedId, final String tn, final OnLoginCallback callback)
 ```
 
-
 - 参数说明：
-
-
-
 
 | 类型 | Names | 说明 |
 | --- | --- | --- |
@@ -66,7 +62,7 @@ login(String appKey, String appSecret, String associatedId, final String tn, fin
 | String | tn |  |
 
 
-<br />appKey， appSecret需要申请获取：[https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
+appKey， appSecret需要申请获取：[https://docs.sghealth.cn/develop-native/apply](https://docs.sghealth.cn/develop-native/apply)
 <a name="bOaRr"></a>
 ### 设备管理初始化（登录后调用）
 描述：初始化SDK<br />接口：com.lifesense.device.scale.application.interfaces.ILZDeviceService#init
@@ -81,9 +77,6 @@ void init(Context context, BleReceiveCallback bleReceiveCallback);
 ```
 
 - 参数说明：
-
-
-
 
 | 类型 | Names | 说明 |
 | --- | --- | --- |
@@ -127,7 +120,7 @@ DeviceNetManager.getInstance().updateUser(user, null);
 ```
 <a name="YVBCV"></a>
 ### 设置蓝牙设备数据的回调
-功能描述：蓝牙数据通过设备上传到sdk后，会直接上传到拾果云平台，同时也会通过本地消息的方式分发给订阅者<br />接口：com.lifesense.device.scale.application.service.LZDeviceService
+功能描述：蓝牙数据通过设备上传到sdk后，会直接上传到乐智云平台，同时也会通过本地消息的方式分发给订阅者<br />接口：com.lifesense.device.scale.application.service.LZDeviceService
 ```java
     void registerDataReceiveCallBack(BleReceiveCallback callback);
 ```
@@ -139,14 +132,12 @@ DeviceNetManager.getInstance().updateUser(user, null);
 | OnDeviceConnectStateListener | connectStateListener | 设备状态监听，包括wifi和蓝牙的信息 |
 
 
-
 -  接收设备上传的数据
 | 数据项 | 接口 | 数据类型 | 回调方法 |
 | --- | --- | --- | --- |
 | 体重数据 | OnDataReceiveListener | 体重数据 | onReceiveWeightData |
 | 血压数据 |  | 血压数据 | onReceiveBpMeasureInfo |
 | 手环数据 | OnDataReceiveListener | 手环测量数据 | onReceiveDeviceMeasureData |
-
 
 
 -  接收设备状态数据
@@ -156,15 +147,12 @@ public interface OnDeviceConnectStateListener {
 }
 ```
 
-
-
 | 数据项 | 接口 | 回调方法 |
 | --- | --- | --- |
 | 蓝牙连接状态 | OnDeviceConnectStateListener | onDeviceConnectStateChange |
 | wifi连接状态 |  | onReceiveWifiConnectState |
 | 蓝牙设备扫描到的wifi信息 |  | onReceiveWifiScanResult |
 | 蓝牙设备处于扫描结束状态 |  | onReceiveWifiScanEnd |
-
 
 
 <a name="zPwjK"></a>
@@ -179,9 +167,8 @@ public interface OnDeviceConnectStateListener {
 | 睡眠首页 |  | openSleepPage |  |
 
 
-
 <a name="3nY56"></a>
 # 接入demo
-[https://github.com/leshiguang/lifesense-android-ui-integrate-demo](https://github.com/leshiguang/lifesense-android-ui-integrate-demo)<br />
+[https://github.com/leshiguang/lifesense-android-ui-integrate-demo](https://github.com/leshiguang/lifesense-android-ui-integrate-demo)
 
 
