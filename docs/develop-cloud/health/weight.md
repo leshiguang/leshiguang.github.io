@@ -1,11 +1,13 @@
+<a name="HFnwp"></a>
 # 1. 新体重首页接口
-url :  域名 +  /weight-rest/weightRecord/getHomeRecord
-method: get
+url :  域名 +  /weight-rest/weightRecord/getHomeRecord<br />method: get
+<a name="fKMqT"></a>
 ##### 入参：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
 
+<a name="WjtLg"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -19,16 +21,15 @@ method: get
 | healthLabelList | List<Object> | 风险解读标签 | 详情见：[链接](#dN1MO) |
 |  |  |  |  |
 
+<a name="we37g"></a>
 ###### 用户信息：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | userName | String | 用户名称 |  |
 | headImg | String | 用户头像 |  |
-| unit | Integer | 单位 | 1-kg;
-2-斤;
-3-磅;
-4-英石 |
+| unit | Integer | 单位 | 1-kg;<br />2-斤;<br />3-磅;<br />4-英石 |
 
+<a name="LyuD0"></a>
 ###### lastWeightRecord(最新体重数据)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -41,12 +42,13 @@ method: get
 indexInfo:
 
 | 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | indexName | String | 标签名称 |
 | indexValue | Double | 标签值 |
 | indexUnit | String | 单位名称 |
 | indexLevelName | String | 等级名称 |
 
+<a name="dJHg3"></a>
 ###### lineChartsRecords(趋势图数据)：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -58,7 +60,7 @@ indexInfo:
 singleRecordInfo：
 
 | 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | value | String | 标签值 |
 | unitName | string | 单位 |
 | measurementDate | Date | 测量时间 |
@@ -66,26 +68,23 @@ singleRecordInfo：
 体围信息：
 
 | 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | waistHipRate | String | 腰臀比 |
 | scoreContent | string | 得分文案 |
 | measurementDate | Date | 测量时间 |
 
+<a name="22dDT"></a>
 ###### weightTargetInfo(体重目标)：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | targetWeight | Double | 体重目标 |  |
 | targetText | String | 目标文案 |  |
 | percent | Double | 完成百分比 |  |
-| percentLevel | Integer | 完成百分比等级 | **1-**( 0, 1),
-**2-**(1, 29),
-**3-**(30, 80),
-**4-**(81, 99),
-**5-**(100, 100) |
-| targetType | Integer | 目标类型 | 1-减肥
-2-增肥 |
+| percentLevel | Integer | 完成百分比等级 | **1-**( 0, 1),<br />**2-**(1, 29),<br />**3-**(30, 80),<br />**4-**(81, 99),<br />**5-**(100, 100) |
+| targetType | Integer | 目标类型 | 1-减肥<br />2-增肥 |
 | startTime | Date | 目标开始时间 |  |
 
+<a name="Guqwq"></a>
 ###### healthLabelList(风险解读标签)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -93,6 +92,7 @@ singleRecordInfo：
 | healthContent | String | 健康风险解读 |  |
 | indexList | List<Object> | 风险对应标签对象 |  |
 
+<a name="dN1MO"></a>
 ###### indexList(风险对应标签对象)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -101,6 +101,7 @@ singleRecordInfo：
 | indexUnit | String | 单位 |  |
 | indexLevel | String | 指标等级 |  |
 
+<a name="8sj7A"></a>
 ###### 示例报文：
 ```json
 
@@ -267,28 +268,25 @@ singleRecordInfo：
 	}
 }
 ```
+<a name="kjEqt"></a>
 # 2. 查询分析对比数据接口
-url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo
-method: POST
-**header参数或者url参数**
-**
+url：域名 +  /weight-rest/recordComparison/getWeightListAndCompareInfo<br />method: POST<br />**header参数或者url参数**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| associatedId | string | 根据key类型传相应的值 | 关联账号id
- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
 
+<a name="rH4mg"></a>
 ##### post报文入参：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | associatedId | String | 关联账号id |  |
-| queryDateType | Integer | 查询时间类型 | 1-按日查
-2-按周查 |
+| queryDateType | Integer | 查询时间类型 | 1-按日查<br />2-按周查 |
 | startTime | Date | 开始时间 |  |
 | endTime | Date | 结束时间 |  |
-| queryIndexType | Integer | 是否只查询有体脂率的数据 | 1-查询体重
-2-查询体脂 |
+| queryIndexType | Integer | 是否只查询有体脂率的数据 | 1-查询体重<br />2-查询体脂 |
 
+<a name="o3re0"></a>
 ###### 示例入参：
 ```json
 {
@@ -298,25 +296,25 @@ method: POST
 	"queryIndexType":"2"
 }
 ```
+<a name="GB13a"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | indexInfoList | List<Object> | 指标信息趋势图数据集合 | 按时间顺序 |
 | compareExplainList | List<Object> | 重要属性对比及文案 |  |
 | indexCompareList | List<Object> | 首尾数据对比 |  |
-| targetType | Integer | 目标类型 | 1-减肥
-2-增肥
-3-保持 |
+| targetType | Integer | 目标类型 | 1-减肥<br />2-增肥<br />3-保持 |
 
 indexInfoList：
 
 | 字段 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | value | String | 标签值 |
 | unitName | string | 单位 |
 | measurementDate | Date | 测量时间 |
 | measurementDateText | String | 测量时间文本描述 |
 
+<a name="LWD22"></a>
 ###### compareExplainList(重要属性对比及文案)：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -324,6 +322,7 @@ indexInfoList：
 | title | String | 标题 |  |
 | text | String | 文案 |  |
 
+<a name="SgQuI"></a>
 ###### indexCompareList(首尾数据对比)：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -333,6 +332,7 @@ indexInfoList：
 | labelUnit | String | 单位 |  |
 | labelDValue | Double | 差值 |  |
 
+<a name="oDVgs"></a>
 ###### 出参报文示例：
 ```json
 {
@@ -525,23 +525,24 @@ indexInfoList：
 	}
 }
 ```
+<a name="DsXnv"></a>
 # 3. 体重历史列表页查询
-ur: 域名 +  /weight-rest/weightRecord/getWeightListForWeek
-method: post
-说明：查询queryTime时间前的50条记录
+ur: 域名 +  /weight-rest/weightRecord/getWeightListForWeek<br />method: post<br />说明：查询queryTime时间前的50条记录
+<a name="kfcfp"></a>
 ##### **header参数或者url参数**
-**
+<br />
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| associatedId | string | 根据key类型传相应的值 | 关联账号id
- |
+| associatedId | string | 根据key类型传相应的值 | 关联账号id |
 
+<a name="NqHhl"></a>
 ##### post报文入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | queryTime | Long | 查询时间戳 | 如查当前时间之前的最新一条，可不传 |
 
+<a name="S3JdT"></a>
 ###### 示例:
 ```json
 {
@@ -557,6 +558,7 @@ method: post
 | unit | Integer | 单位 | 1-kg;2-斤;3-磅;4-英石 |
 | weightList | List<Object> | 本周详细体重列表 |  |
 
+<a name="sTiXN"></a>
 ###### 体重详细信息：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -566,6 +568,7 @@ method: post
 | measurementDate | Date | 测量时间 |  |
 | sourceType | Integer | 数据类型 | 0-正常数据,2-手动 |
 
+<a name="SLSwd"></a>
 ###### 示例报文：
 ```json
 
@@ -790,15 +793,17 @@ method: post
 	]
 }
 ```
+<a name="oKTBG"></a>
 # 4. 体重详情页
-url :  域名 +  /weight-rest/bulletinBoard/getWeightRoundDetail
-method: get
+url :  域名 +  /weight-rest/bulletinBoard/getWeightRoundDetail<br />method: get
+<a name="arEuR"></a>
 ##### 入参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | id | Long | 体重记录id | 必传 |
 | associatedId | String | 关联账号id |  |
 
+<a name="lixr0"></a>
 ##### 出参:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -809,7 +814,9 @@ method: get
 | weightList | List<Object> | 体重数据List |  |
 | healthLabelList | List<Object> | 风险解读标签 |  |
 
+<a name="SAaQd"></a>
 ###### 
+<a name="in01j"></a>
 ###### 体重数据：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -826,12 +833,14 @@ method: get
 | labelList | List<Object> | 标签List |  |
 | moodDto | Object | 心情 |  |
 
+<a name="96ThS"></a>
 ###### 心情数据:
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
 | mood | String | 心情文字 |  |
 | images | String | 图片地址 | 多张图片，使用英文逗号分隔图片地址，多张图片，使用英文逗号分隔 |
 
+<a name="pHFv4"></a>
 ###### 标签数据：
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -854,6 +863,7 @@ method: get
 | startValue | BigDecimal | 区间开始值 | 最左及最右无返回 |
 | endValue | BigDecimal | 区间结束值 |  |
 
+<a name="pO9hf"></a>
 ###### healthLabelList(风险解读标签)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -861,6 +871,7 @@ method: get
 | healthContent | String | 健康风险解读 |  |
 | indexList | List<Object> | 风险对应标签对象 |  |
 
+<a name="He2FY"></a>
 ###### indexList(风险对应标签对象)
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
@@ -869,6 +880,7 @@ method: get
 | indexUnit | String | 单位 |  |
 | indexLevel | String | 指标等级 |  |
 
+<a name="xd6Xc"></a>
 ###### 示例报文：
 ```json
 
@@ -1274,29 +1286,26 @@ method: get
 }
 ```
 
-
+<a name="Mo8Kz"></a>
 # 5.上传用户的设备测量数据（数据来源于外部）
-url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty
-method: POST
-**header参数或者url参数**
-**
+url：域名 +  /weight-rest/upload/uploadWeightFromThirdparty<br />method: POST<br />**header参数或者url参数**
 
 | 字段 | 类型 | 描述 | 备注 |
 | --- | --- | --- | --- |
-| associatedId | string | 第三方关联账户id | 关联账号id
- |
+| associatedId | string | 第三方关联账户id | 关联账号id |
 
+<a name="TGCUU"></a>
 ##### post报文入参：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
 | recordList | List<Object> | 设备测量记录 |  |
 
 
-
+<a name="WHRQH"></a>
 ###### 设备测量记录：
 | 字段 | 类型 | 描述 | 其他 |
 | --- | --- | --- | --- |
-| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.leshiguang.com/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
+| deviceId | string | 设备标识id | 设备id获取参考：[链接](https://docs.sghealth.cn/develop-cloud/health/device?id=_4%e8%8e%b7%e5%8f%96%e4%b9%90%e5%bf%83%e8%ae%be%e5%a4%87id) |
 | measurementTime | Date | 测量时间 |  |
 | weight | Double | 体重 |  |
 | resistance50k | Double | 50k电阻值 |  |
