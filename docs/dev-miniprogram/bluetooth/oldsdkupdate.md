@@ -322,7 +322,7 @@ var _weightData = {
 
 ```javascript
 // 体重数据结构
-// https://docs.leshiguang.com/dev-miniprogram/bluetooth/npm/scale?id=%e4%bd%93%e5%88%b6%e7%a7%a4%e6%95%b0%e6%8d%ae-scaledata
+// https://docs.sghealth.cn/dev-miniprogram/bluetooth/npm/scale?id=%e4%bd%93%e5%88%b6%e7%a7%a4%e6%95%b0%e6%8d%ae-scaledata
 // 新版体重数据多了 dataType 主要是识别数据的类型，比如体脂数据为'scale'
 var _weightData = {
   remainCount:0,          //剩余测量数据条数
