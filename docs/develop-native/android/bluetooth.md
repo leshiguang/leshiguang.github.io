@@ -5,7 +5,7 @@
 # 快速集成
 <a name="iazCZ"></a>
 ## 蓝牙SDK下载
-下载地址： [https://docs.leshiguang.com/download/](https://docs.leshiguang.com/download/README)
+下载地址： [https://docs.sghealth.cn/download/README](https://docs.sghealth.cn/download/README)
 <a name="LVJNh"></a>
 ## 项目依赖配置
 1、拷贝下载的SDK到项目的libs文件夹中<br />2、在module的build.gradle中添加本地仓库地址：
@@ -20,7 +20,6 @@ repositories {
 ```groovy
     implementation fileTree(dir: 'libs', include: ['*.aar'])
 ```
-
 
 <a name="7xg5U"></a>
 ## 权限声明
@@ -48,7 +47,7 @@ repositories {
 
 - 参数说明：
 
-appContext：Application上下文<br />appId：申请方法： [https://docs.leshiguang.com/develop-native/apply](https://docs.leshiguang.com/develop-native/apply)
+appContext：Application上下文<br />appId：申请方法： [https://docs.sghealth.cn/develop-native/apply](https://docs.sghealth.cn/develop-native/apply)
 
 - 返回值：boolean，true 表示初始化成功，false 表示初始化失败
 - 调用示例：
@@ -84,7 +83,6 @@ LsBleManager.getInstance().initialize(getApplicationContext(), "com.leshiguang.s
 void registerMessageService ()
 ```
 
-
 <a name="pLJFr"></a>
 ### 取消注册消息监听服务
 
@@ -96,8 +94,6 @@ void registerMessageService ()
 
 - 功能描述：_根据设备类型列表、设备的广播类型搜索附近的乐心设备_
 - 接口：com.lifesense.ble.LsBleInterface#searchLsDevice
-
-
 
 ```java
 	/**
@@ -115,29 +111,23 @@ void registerMessageService ()
 
 ```
 
-
 - 参数定义：
 | 类型 | Names | 说明 |
 | --- | --- | --- |
 | DeviceType | deviceType | 设备类型对照表 |
-| SearchCallback | scanCallback | 搜索结果回调， 单个返回LsDeviceInfo（查看数据结构） |
+| SearchCallback | scanCallback | 搜索结果回调， 单个返回<br />LsDeviceInfo（查看数据结构） |
 | BroadcastType | broadcastType | 开启的扫描模式 |
-
 
 
 <a name="sjSIK"></a>
 ## 停止搜索
 
-
 - 功能描述：中断正在进行中的搜索，一般在离开搜索页面或搜索结束时调用
 - 接口：com.lifesense.ble.LsBleInterface#stopSearch
-
-
 
 ```java
 void stopSearch();
 ```
-
 
 <a name="XSY2K"></a>
 ## _配对_
@@ -145,12 +135,9 @@ void stopSearch();
 - 功能描述：开始绑定用户从搜索到的设备列表中选择的设备
 - 接口：com.lifesense.ble.LsBleInterface#pairingWithDevice
 
-
-
 ```java
 boolean pairingWithDevice(LsDeviceInfo lsDevice,PairCallback pairCallback)
 ```
-
 
 - 参数：
 
@@ -158,8 +145,8 @@ boolean pairingWithDevice(LsDeviceInfo lsDevice,PairCallback pairCallback)
 
 - 返回值：boolean，true 表示设备配对功能可用，false 表示设备配对功能不可用或工作状态错误
 <a name="uPQSS"></a>
-#### 绑定设备的回调PairCallback_
-1、onDiscoverUserInfo：_接收设备发上来需要绑定的编号（硬件上的用户编号）(血压计)_<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1601001048061-401dab4b-53d3-4e11-834a-899a10296250.png#align=left&display=inline&height=456&margin=%5Bobject%20Object%5D&name=image.png&originHeight=456&originWidth=838&size=217345&status=done&style=none&width=838)<br />_2、_onDeviceConfigInfoSettingSuccess：_配对过程中的用户信息设置成功回调_<br />_3、_onDeviceOperationCommandUpdate：_返回设备在配对或绑定过程中，上传的__操作指令__信息_<br />4、onPairResults：_返回配对成功的设备信息和绑定结果（__配对状态__）_
+#### 绑定设备的回调PairCallback
+1、onDiscoverUserInfo：_接收设备发上来需要绑定的编号（硬件上的用户编号）(血压计)_<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/265997/1601001048061-401dab4b-53d3-4e11-834a-899a10296250.png#averageHue=%23656261&height=456&id=BUCAu&name=image.png&originHeight=456&originWidth=838&originalType=binary&ratio=1&rotation=0&showTitle=false&size=217345&status=done&style=none&title=&width=838)<br />_2、_onDeviceConfigInfoSettingSuccess：_配对过程中的用户信息设置成功回调_<br />_3、_onDeviceOperationCommandUpdate：_返回设备在配对或绑定过程中，上传的操作指令信息_<br />4、onPairResults：_返回配对成功的设备信息和绑定结果（配对状态）_
 <a name="OaGjl"></a>
 #### _绑定设备上的用户编号_
 
@@ -174,8 +161,6 @@ boolean bindDeviceUser(String macAddress,int,String)
 ① String macAddress,目标设备的 mac address<br />② int userNumber,设备的用户编号 <br />③ String username,用户姓名，长度<= 16 个字符
 
 - 返回值：boolean，true 表示绑定用户功能可用，false 表示参数无效或工作状态错误
-
-
 
 <a name="AnbhD"></a>
 ### 注册设备ID
@@ -210,7 +195,6 @@ int inputOperationCommand(String macAddress,OperationCommand cmd,Object obj)
 boolean cancelDevicePairing(LsDeviceInfo lsDevice)
 ```
 
-
 - 参数：LsDeviceInfo lsDevice,设备信息对象
 <a name="7M20L"></a>
 # 数据同步
@@ -243,8 +227,6 @@ boolean startDataReceiveService(ReceiveDataCallback dataCallback)；
 
 - 返回值：boolean,true 表示服务启动成功，false 表示服务启动失败或工作状态错误
 
-
-
 <a name="z1LvW"></a>
 ## 结束（停止）数据同步
 
@@ -256,8 +238,6 @@ boolean stopDataReceiveService()；
 
 - 参数：无
 - 返回值：boolean,true 表示服务停止成功，false 表示服务停止失败或工作状态错误。
-
-
 
 <a name="90sD2"></a>
 ## 检查设备的连接状态
@@ -271,7 +251,7 @@ DeviceConnectState checkDeviceConnectState(String address)
 - 参数：String address,目标设备的 MacAddress
 - 返回值：DeviceConnectState ,设备连接状态，CONNECTED_SUCCESS 表示已连接，返回 UNKNOWN,
 
-表示当前设备的连接状态未知或连接已断开，详细可参考 DeviceConnectState 的定义<br />
+表示当前设备的连接状态未知或连接已断开，详细可参考 DeviceConnectState 的定义
 
 <a name="nflh3"></a>
 ## 删除设备
@@ -281,7 +261,6 @@ DeviceConnectState checkDeviceConnectState(String address)
 ```java
 boolean deleteMeasureDevice(String broadcastId)
 ```
-
 
 - 参数：String broadcastId ，LsDeviceInfo 设备对象的广播 ID
 - 返回值：boolean,true表示删除设备成功，false表示删除设备失败或参数无效
@@ -367,7 +346,7 @@ void updateHeartRateDetection(String,boolean,String,String,OnSettingListener)
 
 - 参数：
 
-① String address; 目标设备的 MacAddress<br />② boolean enable;启动开关<br />③ String startTime;禁用心率检测的开始时间，当启动开关=false 时，该字段才有意义<br />④ String endTime; 禁用心率检测的结束时间，当启动开关=false 时，该字段才有意义<br />⑤ OnSettingListener listener,信息设置状态的回调对象<br />
+① String address; 目标设备的 MacAddress<br />② boolean enable;启动开关<br />③ String startTime;禁用心率检测的开始时间，当启动开关=false 时，该字段才有意义<br />④ String endTime; 禁用心率检测的结束时间，当启动开关=false 时，该字段才有意义<br />⑤ OnSettingListener listener,信息设置状态的回调对象
 
 <a name="BWjDG"></a>
 ### 防丢失设置
@@ -392,7 +371,7 @@ void updatePedometerSedentary(String,boolean,List<PedometerSedentaryInfo>,OnSett
 
 - 参数：
 
-① String address; 目标设备的 MacAddress<br />② boolean enable;启动开关<br />③ List<PedometerSedentaryInfo> sedentaryInfos; 久坐不动提醒设置列表<br />④ OnSettingListener listener,信息设置状态的回调对象<br />
+① String address; 目标设备的 MacAddress<br />② boolean enable;启动开关<br />③ List<PedometerSedentaryInfo> sedentaryInfos; 久坐不动提醒设置列表<br />④ OnSettingListener listener,信息设置状态的回调对象
 
 <a name="QcRL8"></a>
 ### 步数目标设置
@@ -405,7 +384,7 @@ void updatePedometerStepGoal(String,boolean,int,OnSettingListener)
 
 - 参数：
 
-① String address，目标设备的 MacAddress<br />② boolean enable，启动开关<br />③ int stepGoal,手环的步数目标<br />④ OnSettingListener listener,信息设置状态的回调对象<br />
+① String address，目标设备的 MacAddress<br />② boolean enable，启动开关<br />③ int stepGoal,手环的步数目标<br />④ OnSettingListener listener,信息设置状态的回调对象
 
 <a name="OahNO"></a>
 ### 心率区间设置
@@ -442,7 +421,7 @@ void updateHeartRateRange(String,boolean,int,OnSettingListener)
 
 - 参数：
 
-① String address; 目设备的 MacAddress<br />② int userAge,用户年龄<br />③ OnSettingListener listener,信息设置状态的回调对象<br />
+① String address; 目设备的 MacAddress<br />② int userAge,用户年龄<br />③ OnSettingListener listener,信息设置状态的回调对象
 
 <a name="D1Kf8"></a>
 ### 心率监测模式设置
@@ -623,7 +602,7 @@ void updateDeviceLanguage(String, DeviceLanguage, OnSettingListener)
 
 - 参数：
 
-① String macAddress,设备 macAddress<br />② DeviceLanguage language,语言信息<br />③ OnSettingListener listener,信息设置状态的回调对象<br />
+① String macAddress,设备 macAddress<br />② DeviceLanguage language,语言信息<br />③ OnSettingListener listener,信息设置状态的回调对象
 
 <a name="rbMvN"></a>
 ### 运动参数设置
@@ -672,7 +651,7 @@ updateDeviceFunctionInfo(String, DeviceFunctionInfo, OnSettingListener)
 
 - 参数：
 
-① String macAddress,设备 macAddress<br />② DeviceFunctionInfo functionInfo,设备功能信息<br />③ OnSettingListener listener,信息设置状态的回调对象<br />
+① String macAddress,设备 macAddress<br />② DeviceFunctionInfo functionInfo,设备功能信息<br />③ OnSettingListener listener,信息设置状态的回调对象
 
 <a name="A1BIB"></a>
 ## 其他通用设置
@@ -717,8 +696,6 @@ boolean configDeviceWifiPassword(LsDeviceInfo,String,String,PairCallback)
 
 - 返回值：boolean,true 表示接口功能可用，false 表示接口功能不可用
 
-
-
 <a name="Vii5U"></a>
 ## 蓝牙Wi-Fi双模设备配网
 <a name="1RdGF"></a>
@@ -746,8 +723,6 @@ public void getWifiConnectStatus(String mac)
 
 - 回调接口 详见 八、数据回调中的 8.3 ReceiveDataCallback
 
-
-
 <a name="q8M4O"></a>
 ### 搜索Wi-Fi
 
@@ -762,8 +737,6 @@ public void startScanWifi(String mac)
     ①String mac:要配网设备的mac地址
 
 - 回调接口 详见 八、数据回调中的 8.3 ReceiveDataCallback
-
-
 
 <a name="HC5KC"></a>
 ### 配置Wi-Fi
@@ -821,7 +794,7 @@ void interruptUpgradeProcess(String macAddress)
 
 - 参数：
 
-① String address,目标设备的 MacAddress<br />
+① String address,目标设备的 MacAddress
 
 <a name="s79v3"></a>
 # 数据回调
@@ -845,7 +818,7 @@ com.lifesense.ble.PairCallback 是一个抽象类，当调用接口 pairingWithD
 void onPairResults(LsDeviceInfo lsDevice, int status)<br />参数：<br />① LsDeviceInfo lsDevice,设备对象信息<br />② int status, 配对状态，0 表示配对成功，-1 或非 0 表示配对失败<br />详细说明：返回设备的配对结果
 <a name="K4hUR"></a>
 ### onDeviceOperationCommandUpdate
-参数：<br />① String macAddress,设备 MAC<br />② OperationCommand cmd, 操作指令<br />③ Object obj,操作指令内容<br />详细说明：对于支持随机码绑定的设备和互联秤，在配对或绑定过程中，需要重写该方法。并根据设<br />备上传的操作指令进行下一步操作。<br />
+参数：<br />① String macAddress,设备 MAC<br />② OperationCommand cmd, 操作指令<br />③ Object obj,操作指令内容<br />详细说明：对于支持随机码绑定的设备和互联秤，在配对或绑定过程中，需要重写该方法。并根据设<br />备上传的操作指令进行下一步操作。
 
 <a name="fbpdS"></a>
 ## ReceiveDataCallback
@@ -879,19 +852,19 @@ com.lifesense.ble.ReceiveDataCallback是一个抽象类，当调用startDataRece
 参数：<br />① WeightUserInfo userInfo,体重秤或脂肪秤的当前用户信息<br />返回值：void<br />详细说明：返回体重秤或脂肪秤的当前用户信息（A3 协议）
 <a name="ReI83"></a>
 ### onReceivePedometerMeasureData
-参数：<br />① Object obj,测量数据对象<br />② PacketProfile type,测量数据对象类型<br />③ String sourceData,原始测量数据（解析前）<br />详细说明：返回手环的测量数据，该接口只支持 A5 协议或微信协议手环的测量数据返回，如 Mambo、<br />Mabo Call、Mambo HR、Mambo Watch<br />
+参数：<br />① Object obj,测量数据对象<br />② PacketProfile type,测量数据对象类型<br />③ String sourceData,原始测量数据（解析前）<br />详细说明：返回手环的测量数据，该接口只支持 A5 协议或微信协议手环的测量数据返回，如 Mambo、<br />Mabo Call、Mambo HR、Mambo Watch
 
 <a name="vIYjU"></a>
 ### onReceiveWifiConnectState
-参数：WifiState wifiState，设备Wi-Fi的连接状态<br />
+参数：WifiState wifiState，设备Wi-Fi的连接状态
 
 <a name="Zk9I0"></a>
 ### onReceiveWifiScanResult
-参数：WifiInfo wifiInfo，设备扫描到的Wi-Fi信息<br />
+参数：WifiInfo wifiInfo，设备扫描到的Wi-Fi信息
 
 <a name="4FaW6"></a>
 ### onReceiveWifiScanEnd
-参数：void 设备扫描Wi-Fi结束<br />
+参数：void 设备扫描Wi-Fi结束
 
 <a name="WLsQ5"></a>
 ### onReceiveWifiConfigInfo
@@ -927,7 +900,7 @@ com.lifesense.ble.OnDeviceReadListener是一个接口类，在调用接口readDe
 SDK 接口所用到的常量定义在 com.lifesense.ble.bean.constant 包里，使用这些枚举常量的时候可 以在项目里导入这个包，如 import com.lifesense.ble.bean.constant.*;或者指定导入某个常量。 
 <a name="1ny2l"></a>
 ### DeviceType（设备类型}
- UNKNOWN 表示未知类型的设备 <br /> WEIGHT_SCALE 体重秤 <br /> PEDOMETER 手环或手表 <br /> bloodpressure 血压计 <br /> KITCHEN_SCALE 厨房秤 <br /> HEIGHT_RULER 身高测量仪 <br /> FAT_SCALE 脂肪秤 
+ UNKNOWN 表示未知类型的设备 <br /> WEIGHT_SCALE 体重秤 <br /> PEDOMETER 手环或手表 <br /> SPHYGMOMANOMETER 血压计 <br /> KITCHEN_SCALE 厨房秤 <br /> HEIGHT_RULER 身高测量仪 <br /> FAT_SCALE 脂肪秤 
 <a name="JgPki"></a>
 ### BroadacstType(广播模式）
  ALL 全广播，包括正常与配对广播 <br /> NORMAL 正常广播信号 <br /> PAIR 配对广播信号 
@@ -984,11 +957,11 @@ DialPeace2 表盘 2<br />DialPeace3 表盘 3<br />DialPeace4 表盘 4<br />DialP
 RUNNING 跑步模式<br />WALKING 健走模式<br />CYCLING 骑行模式<br />SWIMMING 游泳模式<br />BODY_BUILDING 健身模式
 <a name="6cMY3"></a>
 ### DeviceLanguage（语言）
-CHINESE_CN 中文(简体)<br />CHINESE_TW 中文(繁体)<br />ENGLISH 英语<br />JAPANESE 日语 <br />KOREAN 朝鲜语<br />FRENCH 法语<br />
+CHINESE_CN 中文(简体)<br />CHINESE_TW 中文(繁体)<br />ENGLISH 英语<br />JAPANESE 日语 <br />KOREAN 朝鲜语<br />FRENCH 法语
 
 <a name="pvxNB"></a>
 ### DeviceFunctionType（设备功能类型）
-HEARTBEAT 心跳数据采集<br />
+HEARTBEAT 心跳数据采集
 <a name="aPa06"></a>
 ### WifiState (Wi-Fi 状态)
 CONNECTED Wi-Fi已连接<br />DISCONNECTED Wi-Fi未连接<br />BLE_NOTCONNECTED 蓝牙未连接
@@ -1016,11 +989,11 @@ String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broad
 <a name="VHQa0"></a>
 ### WeightAppendData（体重分析数据）
 
-<br />double basalMetabolism 基础代谢 <br />double bodyFatRatio 脂肪率 <br />double bodyWaterRatio 身体水分含量 <br />double muscleMassRatio 肌肉重量比 <br />double boneDensity 骨质密度 
+double basalMetabolism 基础代谢 <br />double bodyFatRatio 脂肪率 <br />double bodyWaterRatio 身体水分含量 <br />double muscleMassRatio 肌肉重量比 <br />double boneDensity 骨质密度 
 <a name="pg080"></a>
 ### WeightData_A2（体重数据A2）
 
-<br />String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />double pbf 脂肪率 <br />double resistance_1 电阻值 1 <br />double resistance_2 电阻值 2 <br />String deviceSelectedUnit 当前测量单位 <br />int flag 标志位，1 表示脂肪秤，0 表示体重秤 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 体脂率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />byte battery 电池电量共有 7 个等级 <br />int weightStatus 测量状态，0 表示不稳定，1 表示稳定 <br />int impedanceStatus 电阻状态 <br />boolean hasAppendMeasurement 是否有脂肪相关数据标志位 <br />double voltageData 电压值 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位） 
+String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />double pbf 脂肪率 <br />double resistance_1 电阻值 1 <br />double resistance_2 电阻值 2 <br />String deviceSelectedUnit 当前测量单位 <br />int flag 标志位，1 表示脂肪秤，0 表示体重秤 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 体脂率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />byte battery 电池电量共有 7 个等级 <br />int weightStatus 测量状态，0 表示不稳定，1 表示稳定 <br />int impedanceStatus 电阻状态 <br />boolean hasAppendMeasurement 是否有脂肪相关数据标志位 <br />double voltageData 电压值 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位） 
 <a name="qoKyo"></a>
 ### WeightData_A3（体重数据）
 String deviceId 设备 ID <br />String deviceSn 设备 SN 号 <br />String broadcastId 设备当前的广播 ID <br />String date 测量时间 <br />int userNo 用户编号 <br />double weight 体重值 <br />String weightDifferenceValue 体重差值 <br />double impedance 阻抗 <br />String deviceSelectedUnit 当前测量单位 <br />String accuracyStatus 测量数据准确性状态 <br />float basalMetabolism 基础代谢 ，脂肪秤特有数据 <br />float bodyFatRatio 脂肪率，脂肪秤特有数据 <br />float bodyWaterRatio 体含水率，脂肪秤特有数据 <br />float visceralFatLevel 内脏脂肪水平 ，脂肪秤特有数据 <br />float muscleMassRatio 肌肉重量比，脂肪秤特有数据 <br />float boneDensity 骨质密度，脂肪秤特有数据 <br />int battery 电池电量共有 7 个等级 <br />String weightStatus 体重测量值状态 <br />String impedanceStatus 电阻状态 <br />boolean appendMeasurement 是否有脂肪数据的标志位 <br />double lbWeightValue 体重值（以 LB 为测量单位） <br />double stWeightValue 体重值小数部分（以 ST 为测量单位） <br />int stSectionValue 体重值整数部分（以 ST 为测量单位） 
@@ -1068,7 +1041,7 @@ int offset 时间偏移量 <br />int value G-Sensor Data
 String deviceId 设备 Id <br />String broadcastId 设备广播 ID <br />long utc UTC 单位秒<br />int remainCount 剩余条数 <br />int currentUploadingCount 当前上传条数 <br />List<HeartbeatData> heartBeats 表示心跳数据采集内容集合 
 <a name="CkKY7"></a>
 ### WeightUserInfo（用户体重信息）
-int productUserNumber 绑定过程中对应的用户编号<br />Int age 用户年龄 <br />float height 用户身高，单位 M <br />float weight 用户体重，单位 kg <br />SexType sex 用户性别 <br />Boolean isAthlete 是否是运动员 <br />Int athleteLevel 运动员等级 <br />
+int productUserNumber 绑定过程中对应的用户编号<br />Int age 用户年龄 <br />float height 用户身高，单位 M <br />float weight 用户体重，单位 kg <br />SexType sex 用户性别 <br />Boolean isAthlete 是否是运动员 <br />Int athleteLevel 运动员等级 
 
 <a name="mGMsi"></a>
 ### WifiInfo (设备搜索到的Wi-Fi信息)
@@ -1083,7 +1056,7 @@ WeightAppendData parseAdiposeData(SexType userSex,double weight_kg,double
 height_m,int age,double resistance_2,boolean isAthlete)
 ```
 
-<br />参数：<br />① double resistance_2,体重测量数据对象里的电阻值 resistance_2<br />② double height_m, 以 m 为测量单位的身高值，如 1.75m<br />③ double weight_kg, 以 kg 为测量单位的体重值，如 65kg<br />④ int age， 用户的年龄，如 45 ⑤ SexType sex, 用户性别 ⑥ boolean isAthlete,是否是运动员，true 为运动员，false 为非运动员<br />返回值：WeightAppendData ，记录了与脂肪测量数据相关属性的信息对象<br />**想要更多身体指标算法分析数据请接入：hezuo.lifesense.com**
+参数：<br />① double resistance_2,体重测量数据对象里的电阻值 resistance_2<br />② double height_m, 以 m 为测量单位的身高值，如 1.75m<br />③ double weight_kg, 以 kg 为测量单位的体重值，如 65kg<br />④ int age， 用户的年龄，如 45 ⑤ SexType sex, 用户性别 ⑥ boolean isAthlete,是否是运动员，true 为运动员，false 为非运动员<br />返回值：WeightAppendData ，记录了与脂肪测量数据相关属性的信息对象<br />**想要更多身体指标算法分析数据请接入：hezuo.lifesense.com**
 <a name="hOdh6"></a>
 ## 睡眠分析算法
 描述：分析 A2 手环睡眠数据<br />接口：com.lifesense.ble.LsBleInterface#analysisSleep
@@ -1091,7 +1064,7 @@ height_m,int age,double resistance_2,boolean isAthlete)
 List<SleepData> analysisSleep(List<PedometerData> dataList)
 ```
 
-<br />参数：<br />① List<PedometerData> dataList,一组计步器运动数据对象<br />返回值：List<SleepData>，记录了与睡眠状态信息相关属性对象，具体的属性定义参考<br />SleepData 的定义。Null 表示分析失败<br />**想要其它设备睡眠算法分析结果请接入：hezuo.lifesense.com**
+参数：<br />① List<PedometerData> dataList,一组计步器运动数据对象<br />返回值：List<SleepData>，记录了与睡眠状态信息相关属性对象，具体的属性定义参考<br />SleepData 的定义。Null 表示分析失败<br />**想要其它设备睡眠算法分析结果请接入：hezuo.lifesense.com**
 <a name="RYcgs"></a>
 # 混淆保护规则
 ```java
@@ -1181,6 +1154,5 @@ List<SleepData> analysisSleep(List<PedometerData> dataList)
 
 ```
 
-<br />
 
 
