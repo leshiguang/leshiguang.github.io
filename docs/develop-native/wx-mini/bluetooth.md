@@ -1,112 +1,92 @@
 <a name="JO0ZI"></a>
 # 版本更新日志
+<a name="ttWAp"></a>
+### 
+<a name="qeJP7"></a>
+### 1.1.2
 
+- fix：表盘bug
+
+<a name="jcXVw"></a>
+### 1.1.1
+
+- feat：增加初始化失败的回调
+- feat：缩小包的体积
+- fix：解决存在bug
+
+<a name="czs6M"></a>
+### 1.1.0
+
+- feat: 新增哑铃支持
 
 <a name="p0Zj5"></a>
 ### 1.0.15
 
-
 - fix：旧设备的ota升级错误
 - fix：解决旧设备可能出现数据上传不及时的问题
 
-
-
 <a name="hxxWg"></a>
 ### 1.0.14
-
 
 - feat：增加手环实时心率的设置开关
 - feat：增加型号437与460手表设备的支持
 - fix：优化体脂秤蓝牙配网 ios平台可能出现的配网实际上成功，但返回的结果是超时错误的原因
 
-
-
 <a name="XG7Ss"></a>
 ### 1.0.13
 
-
 - 增加stopBluetoothDevicesDiscovery与startBluetoothDevicesDiscovery方法，用于如果有多个蓝牙sdk的时候可能产生冲突的情况
-
-
 
 <a name="Qnkv1"></a>
 ### 1.0.12
 
-
 - 增加wx的四个可监听函数的可传参
-
-
 
 <a name="J4jdO"></a>
 ### 1.0.11
 
-
 - 优化绑定连接接口，绑定连接时增加判断微信 locationEnabled, locationAuthorized 权限是否开启，如果没有开启就直接报错
-
-
 
 <a name="RLBAm"></a>
 ### 1.0.10
 
-
 - 优化绑定接口，增加绑定失败时的错误码
-
-
 
 <a name="iLhrr"></a>
 ### 1.0.6
 
-
 - 支持更多设备型号
-
-
 
 <a name="KtaPv"></a>
 ### 1.0.5
 
-
 - 增加设备列表、设备绑定和设置项等UI模块
-
-
 
 <a name="EX7Uw"></a>
 ### 1.0.4
 
-
 - 优化连接
 - 增加连接失败的状态
 
-
-
 <a name="WLpmO"></a>
 ### 1.0.3
-
 
 - 增加体脂秤的心率开关
 - 增加体脂秤的单位设置
 - 增加体脂秤绑定时的设备数据 电量
 
-
-
 <a name="tpAMF"></a>
 ### 1.0.2
 
-
 - 优化连接问题
-
-
 
 <a name="OSYZL"></a>
 ### 1.0.1
 
-
 - 解决安卓手机无法连接的问题
-
-
 
 <a name="ZQUnI"></a>
 ### 1.0.0
-
 
 - 完成小程序插件的接入
 
@@ -115,11 +95,10 @@
 <a name="kJJpV"></a>
 # 1 插件使用说明
 
-
 <a name="tYCLi"></a>
 ## 1.1 插件声明
 
-<br />在app.json中声明插件的引用及小程序的appId:wxe3d2a6ab8dd5b49b，此时如果你之前没有使用过该插件，则会在console中报错“插件未授权 [添加插件](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxe3d2a6ab8dd5b49b&lang=zh_CN)”<br />
+在app.json中声明插件的引用及小程序的appId:wxe3d2a6ab8dd5b49b，此时如果你之前没有使用过该插件，则会在console中报错“插件未授权 [添加插件](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxe3d2a6ab8dd5b49b&lang=zh_CN)”
 
 ```json
 {
@@ -132,23 +111,20 @@
 }
 ```
 
-
 <a name="COO0u"></a>
 ## 1.2 插件引入
-
 
 ```javascript
 const lsPlugin = requirePlugin("lzbluetooth");
 ```
 
-
 <a name="jeaGu"></a>
 ## 1.3 插件初始化
 
-<br />[申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)<br />
+[申请乐心AppKey](https://docs.sghealth.cn/develop-native/apply)
 
 ```javascript
-  plugin.init({
+  ble.init({
     //用邮件乐心分配的appId替换掉下面字符串
       appId: "你申请的appkey",
       logger: null,
@@ -159,7 +135,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
     });
 ```
 
-<br />请求参数：
+请求参数：
 
 | 属性 | 类型 | 是否必要 | 说明 |
 | --- | --- | --- | --- |
@@ -178,19 +154,17 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | env | string | 否 | 接口环境：beta测试，online生产，只有在使用UI的时候需要 |
 
 
-
 <a name="nQuug"></a>
 # 2 设备相关
-
 
 <a name="C81w3"></a>
 ## 2.1 搜索&发现设备
 
-<br />蓝牙设备在绑定前，需要先通过扫描获得需要绑定的设备信息，<br />首先需要调用`startScanning`接口获取`device`对象，<br />您可能需要自己去判断释放有重复的蓝牙设备信号上报并做过滤，在实际应用过程中，<br />您可能需要经过多个扫描周期才能获得蓝牙搜索结果，调用示例：<br />
+蓝牙设备在绑定前，需要先通过扫描获得需要绑定的设备信息，<br />首先需要调用`startScanning`接口获取`device`对象，<br />您可能需要自己去判断释放有重复的蓝牙设备信号上报并做过滤，在实际应用过程中，<br />您可能需要经过多个扫描周期才能获得蓝牙搜索结果，调用示例：
 
 ```javascript
 // 开始扫描设备
-  plugin.startScanning(device => {
+  ble.startScanning(device => {
     // 将扫描到的设备保存，具体参数参考具体接口
     scanResults.push(device);
     // 刷新UI
@@ -200,14 +174,14 @@ const lsPlugin = requirePlugin("lzbluetooth");
   })
 ```
 
-<br />请求参数：
+请求参数：
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | callback(device) | func | 搜索到的设备对象的回调 |
 
 
-<br />`device` 的数据结构
+`device` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -229,26 +203,21 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | connectStatus | ConnectionState | 连接状态 |
 
 
-
 <a name="qJz3J"></a>
 ## 2.2 停止搜索
 
-<br />强制中断蓝牙搜索，执行搜索过程中中断搜索或页面销毁时，请务必调用停止搜索接口，否则会影响正常的连接流程：<br />
+强制中断蓝牙搜索，执行搜索过程中中断搜索或页面销毁时，请务必调用停止搜索接口，否则会影响正常的连接流程：
 
 ```javascript
   // 关闭搜索
   plugin.stopScanning();
 ```
 
-
 <a name="nyFn6"></a>
 ## 2.3 绑定设备
 
-
 - 如果是安卓设备，`绑定需要定位权限` 即  `locationEnabled`与`locationAuthorized` 必须都为true， `locationEnabled`与`locationAuthorized`是通过`wx.getSystemInfoSync()`
 - 搜索完成后， 向用户展示搜索到的设备列表信息， 用户选择目标设备后， 进行设备绑定操作（绑定设备是为了获取你选择设备的信息， 绑定不是必须的，如果您知道用户当前使用的设备信息， 可以不经过绑定直接调用`plugin.addMonitorDevice`去连接设备并同步数据）调用示例：
-
-
 
 ```javascript
   // 用户选择某个设备绑定
@@ -281,7 +250,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
   }
 ```
 
-<br />请求参数：`Object object`
+请求参数：`Object object`
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -289,7 +258,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | callback(`res`<br />) | func | 绑定设备的回调 |
 
 
-<br />`res` 的数据结构
+`res` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -299,7 +268,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | errorCode | number | 绑定失败的错误码 |
 
 
-<br />`res.bindState` 的可能值
+`res.bindState` 的可能值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -308,7 +277,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | Failure | 5 | 绑定失败 |
 
 
-<br />`res.errorCode` 的可能值
+`res.errorCode` 的可能值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -336,7 +305,7 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | blueNotAvailible | 21 | 蓝牙授权未开 |
 
 
-<br />`res.deviceInfo`的数据结构
+`res.deviceInfo`的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -351,47 +320,45 @@ const lsPlugin = requirePlugin("lzbluetooth");
 | battery | number | 电量 |
 
 
-
 <a name="obDvS"></a>
 ## 2.4 取消绑定
 
-<br />当前状态是正在绑定的页面，此时退出绑定页面，则需要需要绑定 调用示例：<br />
+当前状态是正在绑定的页面，此时退出绑定页面，则需要需要绑定 调用示例：
 
 ```javascript
 // 取消绑定
-plugin.cancelBind({ mac });
+ble.cancelBind({ mac });
 ```
 
-<br />请求参数：`Object object`
+请求参数：`Object object`
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | mac | String | 设备的mac |
 
 
-
 <a name="UETcX"></a>
 ## 2.5 添加用户已经绑定的设备
 
-<br />用户打开app时， 若之前已经绑定过设备， 需要将已经绑定的设备的mac地址添加到sdk，<br />sdk会自动连接设备，建议您将用户和设备的绑定关系持久化在云端， sdk初始化成功之后立即添加mac地址到sdk， 调用示例：<br />
+用户打开app时， 若之前已经绑定过设备， 需要将已经绑定的设备的mac地址添加到sdk，<br />sdk会自动连接设备，建议您将用户和设备的绑定关系持久化在云端， sdk初始化成功之后立即添加mac地址到sdk， 调用示例：
 
 ```javascript
   /// 添加监听
   // 如果是安卓设备，则需要判断位置是否可用，位置权限是否可用 let { locationEnabled, locationAuthorized } = wx.getSystemInfoSync();
   
-  plugin.addMonitorDevice({ 
+  ble.addMonitorDevice({ 
     mac: this.data.mac,
     model: this.data.model,
   })
 
   // 替换目前已监听的
-  plugin.setMonitroDevice({ 
+  ble.setMonitroDevice({ 
     mac: this.data.mac,
     model: this.data.model,
   })
 ```
 
-<br />请求参数：`Object object ｜ Object object[]`
+请求参数：`Object object ｜ Object object[]`
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -399,46 +366,41 @@ plugin.cancelBind({ mac });
 | model | String | 设备型号 |
 
 
-
 <a name="QmXvz"></a>
 ## 2.6 删除用户正在连接或者同步的设备
 
-<br />当用户需要解除监听设备或正在绑定中断绑定时，解绑后会删除SDK中的缓存的设备信息并断开蓝牙连接，建议您在解绑成功后，清除您App本地或者云端存储的设备信息，并删除和用户的绑定关系， 调用示例：<br />
+当用户需要解除监听设备或正在绑定中断绑定时，解绑后会删除SDK中的缓存的设备信息并断开蓝牙连接，建议您在解绑成功后，清除您App本地或者云端存储的设备信息，并删除和用户的绑定关系， 调用示例：
 
 ```javascript
   /// 删除某个正在监听的设备
-  plugin.deleteMonitorDevice({ 
+  ble.deleteMonitorDevice({ 
     mac: this.data.mac,
   })
 
   // 删除全部正在监听的设备
-  plugin.deleteAllMonitorDevice({ 
-    mac: this.data.mac,
-    model: this.data.model,
-  })
+  ble.deleteAllMonitorDevice();
 ```
-
 
 <a name="UFdUK"></a>
 ## 2.7 设备状态的获取
 
-<br />如果你想获取某个设备的连接状态，可以通过`getConnectionState`方法获取，如果你想蓝牙的可用状态可以调用`isBluetoothAvailable`判断是否可用，调用示例：<br />
+如果你想获取某个设备的连接状态，可以通过`getConnectionState`方法获取，如果你想蓝牙的可用状态可以调用`isBluetoothAvailable`判断是否可用，调用示例：
 
 ```javascript
 // 当前蓝牙是否可用
-  let bluetoothAvalible = plugin.isBluetoothAvailable();
+  let bluetoothAvalible = ble.isBluetoothAvailable();
   // mac 设备的唯一标识
   let state = plugin.getConnectionState({mac}});
 ```
 
-<br />请求参数：`Object object`
+请求参数：`Object object`
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | mac | String | 设备的mac |
 
 
-<br />返回值：`number state`
+返回值：`number state`
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -450,18 +412,16 @@ plugin.cancelBind({ mac });
 | Disconnected | 5 | 设备主动断开了连接，或者系统断开了连接 |
 
 
-
 <a name="DIMhe"></a>
 ## 2.8 设备数据或状态的监听
 
-<br />如果你想监听手机蓝牙是否开启，设备的连接状态，及设备同步过来的数据，则可以使用 `plugin.$on` 监听某个事件，目前支持三个事件<br />
+如果你想监听手机蓝牙是否开启，设备的连接状态，及设备同步过来的数据，则可以使用 `plugin.$on` 监听某个事件，目前支持三个事件
 
 1. 手机蓝牙的开关 eventName = "adaptorState",
-1. 蓝牙设备的连接状态 eventName = "connectionState",
-1. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
+2. 蓝牙设备的连接状态 eventName = "connectionState",
+3. 蓝牙设备发送给小程序的数据 eventName = "dataReport"
 
-
-<br />事件是通过 eventKey，同一事件的同一eventKey 回调会被覆盖<br />取消监听则使用 `plugin.$off` 参数<br />调用示例：<br />
+事件是通过 eventKey，同一事件的同一eventKey 回调会被覆盖<br />取消监听则使用 `plugin.$off` 参数<br />调用示例：
 
 ```javascript
   // 监听蓝牙是否可用
@@ -513,11 +473,10 @@ plugin.cancelBind({ mac });
   })
 ```
 
-
 <a name="uN1wY"></a>
 # 3 设置项
 
-<br />小程序向设备发送指令都是通过`pushSetting`<br />包括手环绑定时候输入随机码，蓝牙配网的时候 发送扫描指令， 发送wifi连接指令，以及一些手设备的设置项等等<br />小程序向设备获取设置项都是通过`getSetting`<br />调用示例：<br />
+小程序向设备发送指令都是通过`pushSetting`<br />包括手环绑定时候输入随机码，蓝牙配网的时候 发送扫描指令， 发送wifi连接指令，以及一些手设备的设置项等等<br />小程序向设备获取设置项都是通过`getSetting`<br />调用示例：
 
 ```javascript
   // 生产设置项的对象
@@ -543,7 +502,7 @@ plugin.cancelBind({ mac });
   });
 ```
 
-<br />设置项请求参数：`Object object`
+设置项请求参数：`Object object`
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -551,7 +510,7 @@ plugin.cancelBind({ mac });
 | setting | Object | 设置的对象，这个由 `settingFactory`<br /> 产生，不同的设置项，参数也不一样，具体参考各个设置项 |
 
 
-<br />获取设置项请求参数：
+获取设置项请求参数：
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -559,7 +518,7 @@ plugin.cancelBind({ mac });
 | settingType | number | 这个是个枚举 参考 |
 
 
-<br />`settingType` 的取值
+`settingType` 的取值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -576,7 +535,7 @@ plugin.cancelBind({ mac });
 | SportHrWarnigSetting | 10 | 运动心率预警 |
 
 
-<br />catch的 `resp` 的数据结构
+catch的 `resp` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -585,7 +544,7 @@ plugin.cancelBind({ mac });
 | extra | any | 格外的一些参数 |
 
 
-<br />`resp.code` 的枚举
+`resp.code` 的枚举
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -613,7 +572,7 @@ plugin.cancelBind({ mac });
 | blueNotAvailible | 21 | 蓝牙授权未开 |
 
 
-<br />`settingFactory`的方法列表
+`settingFactory`的方法列表
 
 | 方法名 | 类型 | 说明 |
 | --- | --- | --- |
@@ -623,11 +582,10 @@ plugin.cancelBind({ mac });
 | ConnectWifiReq | func | 连接wifi指令  参考 [5.2.2](#5.2.2 wifi数据) |
 
 
-
 <a name="Y5x1C"></a>
 # 4 数据接收
 
-<br />当你监听了dataReport 事件的时候的回调， 一般通过dataType来判断数据是什么类型<br />下表为数据类型和实例对照表
+当你监听了dataReport 事件的时候的回调， 一般通过dataType来判断数据是什么类型<br />下表为数据类型和实例对照表
 
 | 类名 | dataType | 说明 |
 | --- | --- | --- |
@@ -638,48 +596,41 @@ plugin.cancelBind({ mac });
 | WifiInfo | wifiInfo | 当前蓝牙设备配对的wifi   参考 [4.4](#4.4 WifiInfo的数据结构) |
 
 
-
 <a name="JEI09"></a>
 # 5 体脂秤相关数据的发送与接收
-
 
 <a name="C9NR3"></a>
 ## 5.1 体脂秤设置项
 
-
 <a name="GuAxq"></a>
 ### 5.1.1 体脂秤心率的开关
 
-<br />控制体脂秤测量心率的开关<br />`A6HeartRateSetting` 的参数
+控制体脂秤测量心率的开关<br />`A6HeartRateSetting` 的参数
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | enable | boolean | 开关心率 |
 
 
-
 <a name="GeWmX"></a>
 ### 5.1.2 体脂秤单位设置
 
-<br />控制体脂秤单位的显示<br />`A6UnitSetting` 的参数
+控制体脂秤单位的显示<br />`A6UnitSetting` 的参数
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | unit | number | 0表示kg 1和2 表示Lb  3表示斤 |
 
 
-
 <a name="kotgr"></a>
 ## 5.2 体脂秤蓝牙配网
 
-<br />蓝牙配网一般流程<br />
+蓝牙配网一般流程
 
 1. 监听数据的接收
-1. 向蓝牙设备发送扫描wifi指令 （扫描wifi这个动作是蓝牙设备完成的，因为手机不能扫描附近的wifi设备）
-1. 通过监听的数据得到扫描到的wifi列表
-1. 选中某个wifi 并输入密码， 然后向蓝牙设备发送指定wifi的连接指令<br />调用示例：
-
-
+2. 向蓝牙设备发送扫描wifi指令 （扫描wifi这个动作是蓝牙设备完成的，因为手机不能扫描附近的wifi设备）
+3. 通过监听的数据得到扫描到的wifi列表
+4. 选中某个wifi 并输入密码， 然后向蓝牙设备发送指定wifi的连接指令<br />调用示例：
 
 ```javascript
   let settingFactory = plugin.settingFactory;
@@ -727,16 +678,15 @@ plugin.cancelBind({ mac });
     });
 ```
 
-
 <a name="wXRIe"></a>
 ### 5.2.1 扫描wifi
 
-<br />小程序向体脂秤发起开始扫描指令，体脂秤自动发现附近可用并兼容的Wifi信息，然后回调给小程序。调用参考 [4](#4 蓝牙配网) 中的调用示例.<br />数据类型 `ScanWifiReq` 没有参数<br />
+小程序向体脂秤发起开始扫描指令，体脂秤自动发现附近可用并兼容的Wifi信息，然后回调给小程序。调用参考 [4](#4 蓝牙配网) 中的调用示例.<br />数据类型 `ScanWifiReq` 没有参数
 
 <a name="YKoEN"></a>
 ### 5.2.2 wifi数据
 
-<br />`ApInfo`的数据结构
+`ApInfo`的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -749,11 +699,10 @@ plugin.cancelBind({ mac });
 | dataType | String | 数据类型 这里固定为 `apInfo` |
 
 
-
 <a name="ATCgf"></a>
 ### 5.2.3 配置wifi
 
-<br />App发送Wifi SSID和密码到设备， 设备自动进行Wifi的连接过程， 并将连接结果回调给APP<br />数据类型 `ConnectWifiReq` 参数如下:
+App发送Wifi SSID和密码到设备， 设备自动进行Wifi的连接过程， 并将连接结果回调给APP<br />数据类型 `ConnectWifiReq` 参数如下:
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -761,11 +710,10 @@ plugin.cancelBind({ mac });
 | password | String | 输入的密码 |
 
 
-
 <a name="Cawn6"></a>
 ### 5.2.4 WifiInfo的数据结构
 
-<br />这个数据是获取当前的配网信息的信息结果（获取配网信息目前没有暴露接口）
+这个数据是获取当前的配网信息的信息结果（获取配网信息目前没有暴露接口）
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -778,18 +726,16 @@ plugin.cancelBind({ mac });
 | dataType | String | 固定值为 `wifiInfo` |
 
 
-
 <a name="w3d0n"></a>
 ### 5.2.5 ConfigStatus的数据结构
 
-<br />这个是连接wifi的结果的数据结果
+这个是连接wifi的结果的数据结果
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | cmd | number | 指令，内部使用 |
 | status | number | eturn success (0) or failed reason code (1) |
 | dataType | String | 固定值为 `configStatus` |
-
 
 
 <a name="t84yk"></a>
@@ -799,7 +745,7 @@ plugin.cancelBind({ mac });
 | remainCount | number | 剩余测量数据条数 |
 | unit | number | 0=kg,1=lb,2=st,3=斤 |
 | weight | number | 体重 (单位kg) |
-| utc | number | utc |
+| utc | number | 时间戳 注：存在断电后的时间重置，使用方需要根据使用情况进行过滤处理 |
 | resistance | number | 电阻值 |
 | userNumber | number | 用户编号 |
 | timeZone | number | 时区 （缺失，使用当前系统的时区） |
@@ -809,10 +755,8 @@ plugin.cancelBind({ mac });
 | dataType | String | 固定值为 `scale` |
 
 
-
 <a name="bBcYC"></a>
 # 6 血压计相关
-
 
 <a name="w5oOq"></a>
 ## 6.1 血压数据结构BPData
@@ -836,19 +780,16 @@ plugin.cancelBind({ mac });
 | dataType | String | 固定值为 `bloodpressure` |
 
 
-
 <a name="fZ5Ml"></a>
 # 7 手环相关
-
 
 <a name="X0511"></a>
 ## 7.1 通用枚举
 
-
 <a name="RwI1c"></a>
 ### 7.1.1 SportMode
 
-<br />`SportMode` 的取值
+`SportMode` 的取值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -953,11 +894,10 @@ plugin.cancelBind({ mac });
 | swimmingInDoor | 0x64 | 室内游泳 |
 
 
-
 <a name="aLwXv"></a>
 ### 7.1.2 SportSubMode
 
-<br />`SportSubMode` 的取值
+`SportSubMode` 的取值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -967,15 +907,13 @@ plugin.cancelBind({ mac });
 | trailrunNoGpsNotify | 3 | 轨迹跑，无gps确认通知 |
 
 
-
 <a name="YGk9A"></a>
 ## 7.2 手环设置
-
 
 <a name="aJaXp"></a>
 ### 7.2.1 有个特殊的设置项集合类 获取设置大部分是这个对象，这个对象包含多种设置项，它既是可设置的对象，也是可获取的对象，具体类型具体看对应的指令
 
-<br />`MultipleSetting` 的数据结构
+`MultipleSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -983,7 +921,7 @@ plugin.cancelBind({ mac });
 | dataType | string | SettingInfos |
 
 
-<br />`setting` 的数据结构
+`setting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -991,7 +929,7 @@ plugin.cancelBind({ mac });
 | value | number | 如果只有一个参数的情况下，value生效，如果不是，则看具体的设置类型 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
 // 快捷屏幕设置
@@ -1002,11 +940,10 @@ let value = {
   settingInfo = new settingFactory.MultipleSetting([value])
 ```
 
-
 <a name="fyP8G"></a>
 ### 7.2.2 心率检测
 
-<br />456支持获取<br />`HeartRateWarningSetting`的数据结构
+456支持获取<br />`HeartRateWarningSetting`的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1014,7 +951,7 @@ let value = {
 | generalHrSetting | object | 常规心率检测 |
 
 
-<br />`sportHrSetting` 与 `generalHrSetting` 的数据结构
+`sportHrSetting` 与 `generalHrSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1023,7 +960,7 @@ let value = {
 | enable | boolean | 是否开启 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
 let generalHr = {
@@ -1039,11 +976,10 @@ let generalHr = {
 let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 ```
 
-
 <a name="EyAjm"></a>
 ### 7.2.3 快捷屏幕 仅456支持
 
-<br />456支持获取<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
+456支持获取<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1051,7 +987,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | value | number | 参考屏幕枚举 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   let value = {
@@ -1061,11 +997,10 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
   settingInfo = new settingFactory.MultipleSetting([value])
 ```
 
-
 <a name="i7ZyR"></a>
 ### 7.2.4 睡眠血氧开关 仅456支持
 
-<br />456支持获取<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
+456支持获取<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1073,7 +1008,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | value | number | 1表示开 0表示关 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   let sleepOximetryInfo = {
@@ -1083,11 +1018,10 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
   settingInfo = new settingFactory.MultipleSetting([sleepOximetryInfo]);
 ```
 
-
 <a name="kbWmi"></a>
 ### 7.2.5 久坐提醒
 
-<br />456可支持获取<br />`SedentaryReminderSetting` 的数据结构
+456可支持获取<br />`SedentaryReminderSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1104,7 +1038,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | vibrationLevel2 | number | 震动强度 456无效 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
 /** 构建函数
@@ -1126,18 +1060,17 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
   settingInfo = new settingFactory.SedentaryReminderSetting()
 ```
 
-
 <a name="pvcpN"></a>
 ### 7.2.6 睡眠提醒计划
 
-<br />支持获取，获取的有效值 只有开关与时间<br />只能支持一次设置一个<br />`NewEventRemindSetting` 的数据结构
+支持获取，获取的有效值 只有开关与时间<br />只能支持一次设置一个<br />`NewEventRemindSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | events | EventInfo[] | 是否开关 |
 
 
-<br />`EventInfo` 的数据结构
+`EventInfo` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1154,7 +1087,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | vibrationLevel2 | number | 震动强度 456无效 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   let event = {
@@ -1173,18 +1106,17 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
   settingInfo = new settingFactory.NewEventRemindSetting([event]);
 ```
 
-
 <a name="nnzQf"></a>
 ### 7.2.7 事件提醒（闹钟）
 
-<br />支持获取<br />只能支持一次设置一个<br />`EventReminderSetting` 的数据结构
+支持获取<br />只能支持一次设置一个<br />`EventReminderSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | events | EventInfo[] | 是否开关 |
 
 
-<br />`EventInfo` 的数据结构
+`EventInfo` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1206,7 +1138,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | lightSleepAlertTime | number | 浅睡提醒时长 （分钟） |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   let event = {
@@ -1230,29 +1162,27 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
   settingInfo = new settingFactory.EventReminderSetting(Array(event));
 ```
 
-
 <a name="q8hXB"></a>
 ### 7.2.8 时间格式
 
-<br />`TimeFormatSetting` 的数据格式
+`TimeFormatSetting` 的数据格式
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | timeFormat | number | 0表示24小时制  1表示12小时制 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   // 0表示24小时制  1表示12小时制
   settingInfo = new settingFactory.TimeFormatSetting(0x01);
 ```
 
-
 <a name="fPhIW"></a>
 ### 7.2.9 表盘推送
 
-<br />456的表盘也不支持切换顺序 index 1、2、3、4表示本地表盘，5表示相册表盘，6与7表示云端表盘<br />`PushDialSetting`的数据结构
+456的表盘也不支持切换顺序 index 1、2、3、4表示本地表盘，5表示相册表盘，6与7表示云端表盘<br />`PushDialSetting`的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1268,7 +1198,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | onUpgradeComplete | func | 结果回调 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   /** 构建函数
@@ -1292,11 +1222,10 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
   setting = new settingFactory.PushDialSetting(dailIndex, id, 0, "test", "test", 0, 0, buf);
 ```
 
-
 <a name="acWl1"></a>
 ### 7.2.10 表盘选择
 
-<br />表盘位置上必须有表盘表盘选择才能成功<br />`DialEnableSetting` 的数据结构
+表盘位置上必须有表盘表盘选择才能成功<br />`DialEnableSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1304,17 +1233,16 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | dailNoList | number[] | 表盘的排序        456无效 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   let setting = new settingFactory.DialEnableSetting(dialIndex, [1, 2, 3, 4, 5, 6, 7]);
 ```
 
-
 <a name="w8Krz"></a>
 ### 7.2.11 表盘删除
 
-<br />这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
+这个使用到了一个设置项的积累类 可以参考 `MultipleSetting`<br />`setting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1322,7 +1250,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | list | DialInfo[] | 删除表盘的列表，目前只支持一个一个的删除，456只支持删除相册表盘与云端表盘， 即5、6、7 |
 
 
-<br />`DialInfo` 的数据结构
+`DialInfo` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1330,17 +1258,16 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | dialType | numnber | 表盘类型 0: 在线表盘 1: 相册表盘 2: 本地表盘 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   let setting = new settingFactory.MultipleSetting([{ tag: 0x34, list: [{ index: 7, dailType: 0 }] }]);
 ```
 
-
 <a name="TURAp"></a>
 ### 7.2.12 目标设置
 
-<br />`EncourageTargetSetting` 的数据结构
+`EncourageTargetSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1349,17 +1276,16 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | value | number | 步数 卡路里 单位：kcal 距离 单位：m 深睡眠 站立时长 单位：小时 运动时长 单位：分钟 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   settingInfo = new settingFactory.EncourageTargetSetting(true, 6, 10);
 ```
 
-
 <a name="Urfji"></a>
 ### 7.2.13 天气设置
 
-<br />`WeatherSetting` 的数据结构
+`WeatherSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1367,7 +1293,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | weathers | Weather[] | 今天，明天，后天...的天气信息 |
 
 
-<br />`Weather` 的数据结构
+`Weather` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1377,7 +1303,7 @@ let setting = new settingFactory.HeartRateWarningSetting(sportHr, generalHr);
 | aqi | number | 空气质量 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
 let weather = {
@@ -1389,11 +1315,10 @@ let weather = {
   settingInfo = new settingFactory.WeatherSetting(166666666, [weather]);
 ```
 
-
 <a name="NSvq0"></a>
 ### 7.2.14 新天气设置 456 支持
 
-<br />`NewWeatherSetting` 的数据结构
+`NewWeatherSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1402,7 +1327,7 @@ let weather = {
 | cityName | string | 城市名 |
 
 
-<br />`Weather` 的数据结构
+`Weather` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1420,7 +1345,7 @@ let weather = {
 | sunsetMinute | number | 日落时间 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
 //0x00 晴(白天);
@@ -1475,35 +1400,33 @@ let weather = {
   settingInfo = new settingFactory.NewWeatherSetting(166666666, [weather]);
 ```
 
-
 <a name="dt4fh"></a>
 ### 7.2.14 旧的表盘设置
 
-<br />`DialTypeSetting` 的数据结构
+`DialTypeSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | dialType | number | 1～6 六种样式 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
   settingInfo = new settingFactory.DialTypeSetting(1);
 ```
 
-
 <a name="RW8Kh"></a>
 ### 7.2.15 自定义一级屏幕设置
 
-<br />`CustomPagesSetting`
+`CustomPagesSetting`
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | pages | number[] | 屏幕的枚举 |
 
 
-<br />旧版的屏幕比如 memboHR2 LSBand5s LSBand 的取值
+旧版的屏幕比如 memboHR2 LSBand5s LSBand 的取值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -1539,7 +1462,7 @@ let weather = {
 | TaiChi | 0x1D | 太极 |
 
 
-<br />456等屏幕的取值
+456等屏幕的取值
 
 | 枚举 | 值 | 说明 |
 | --- | --- | --- |
@@ -1567,38 +1490,34 @@ let weather = {
 | todayOverview | 255 | 今日概览 |
 
 
-<br />实例<br />
+实例
 
 ```javascript
 
   settingInfo = new settingFactory.CustomPagesSetting([13, ...]);
 ```
 
-
 <a name="P2FQg"></a>
 ### 7.2.16 实时心率开关  RealtimeHRSetting
 
-<br />`RealtimeHRSetting` 的数据结构
+`RealtimeHRSetting` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | enable | boolean | 实时心率开关 |
 
 
-
 ```javascript
   settingInfo = new settingFactory.RealtimeHRSetting(false);
 ```
 
-
 <a name="BB0ZB"></a>
 ## 7.3 手环接收的数据结构
-
 
 <a name="tUyAK"></a>
 ### 7.3.1 总结数据 DailyData
 
-<br />`DailyData`的数据结构
+`DailyData`的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1607,7 +1526,7 @@ let weather = {
 | dataType | String | a5Daily  固定值 |
 
 
-<br />`Daily` 的数据结构
+`Daily` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1623,11 +1542,10 @@ let weather = {
 | silenceHeartRate | number | 静息心率（可能不存在） |
 
 
-
 <a name="DUpyL"></a>
 ### 7.3.2 心率数据 HeartRateData
 
-<br />`HeartRateData` 的数据结构
+`HeartRateData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1642,11 +1560,10 @@ let weather = {
 | dataType | string | 固定值 a5HR |
 
 
-
 <a name="qeKa7"></a>
 ### 7.3.3 睡眠原始数据 SleepData
 
-<br />`SleepData` 的数据结构
+`SleepData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1657,11 +1574,10 @@ let weather = {
 | dataType | string | 固定值 a5Sleep |
 
 
-
 <a name="h0i6r"></a>
 ### 7.3.4 睡眠报告 SleepReportData 456支持
 
-<br />`SleepReportData` 的数据结构
+`SleepReportData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1685,7 +1601,7 @@ let weather = {
 | dataType | string | 固定值 sleepReport |
 
 
-<br />`SleepInfo` 的数据结构
+`SleepInfo` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1695,11 +1611,10 @@ let weather = {
 | duration | number | 分钟 |
 
 
-
 <a name="eagSu"></a>
 ### 7.3.5 运动卡路里 SportCaloriesData
 
-<br />`SportCaloriesData` 的数据结构
+`SportCaloriesData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1713,11 +1628,10 @@ let weather = {
 | dataType | string | 固定值 a5SportCalories |
 
 
-
 <a name="yGpRA"></a>
 ### 7.3.6 运动记录 SportReportData
 
-<br />`SportReportData` 的数据结构
+`SportReportData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1749,7 +1663,7 @@ let weather = {
 | dataType | string | 固定值 a5SportReport |
 
 
-<br />`TimeState` 的数据结构
+`TimeState` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1757,11 +1671,10 @@ let weather = {
 | reStartUtc | number | 重新开始时间 |
 
 
-
 <a name="A8U1I"></a>
 ### 7.3.7 血氧数据与晨脉 BloodOxygenData 456支持
 
-<br />`BloodOxygenData` 的数据结构
+`BloodOxygenData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1771,7 +1684,7 @@ let weather = {
 | dataType | string | 固定值 bloodOxygen |
 
 
-<br />`BloodOxygenInfo` 的数据结构
+`BloodOxygenInfo` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1781,11 +1694,10 @@ let weather = {
 | state | string | 0x00：普通血氧数据 0x01：异常血氧数据 |
 
 
-
 <a name="QfBWX"></a>
 ### 7.3.8 运动状态 SportStatusData（发起运动）
 
-<br />`SportStatusData` 的数据结构
+`SportStatusData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1795,11 +1707,10 @@ let weather = {
 | dataType | string | 固定值 a5SportStatus |
 
 
-
 <a name="bJNex"></a>
 ### 7.3.9 闹钟开关 AlarmClockSwitchData 456支持
 
-<br />`AlarmClockSwitchData` 的数据结构
+`AlarmClockSwitchData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1808,11 +1719,10 @@ let weather = {
 | dataType | string | 固定值 AlarmClockSwitch |
 
 
-
 <a name="EsUrI"></a>
 ### 7.3.10 表盘变更数据 DailReportData 456支持
 
-<br />`DailReportData` 的数据结构
+`DailReportData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1822,11 +1732,10 @@ let weather = {
 | dataType | string | 固定值 dailReport |
 
 
-
 <a name="hFJ2y"></a>
 ### 7.3.11 表盘详情数据 DialDetailData 456 支持
 
-<br />`DialDetailData` 的数据结构
+`DialDetailData` 的数据结构
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -1837,24 +1746,21 @@ let weather = {
 | backgroundImageName | string | 背景图名称长度 最大32字节 |
 
 
-
 <a name="Ng5Hk"></a>
 # 8 跳绳相关
-
 
 <a name="oUYEJ"></a>
 ## 8.1 跳绳设置
 
-
 <a name="YrKv8"></a>
 ## 8.2 跳绳
-
 
 <a name="MdeXI"></a>
 # 9.Device UI 接入
 
-<br />为了提高设备对接效率，降低对接成本，我们在原来的sdk接入的基础上，提供了更便利的的界面接入<br />
-<br />提供的界面有：<br />
+为了提高设备对接效率，降低对接成本，我们在原来的sdk接入的基础上，提供了更便利的的界面接入
+
+提供的界面有：
 
 - 产品列表页
 - 设备绑定页
@@ -1863,12 +1769,10 @@ let weather = {
 - 设备配网页
 - 设备升级页
 
-
-
 <a name="TCFmb"></a>
 ## 9.1 插件声明
 
-<br />在app.json中声明插件的引用及小程序的appId:wxe3d2a6ab8dd5b49b，此时如果你之前没有使用过该插件，则会在console中报错“插件未授权 [添加插件](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxe3d2a6ab8dd5b49b&lang=zh_CN)”<br />
+在app.json中声明插件的引用及小程序的appId:wxe3d2a6ab8dd5b49b，此时如果你之前没有使用过该插件，则会在console中报错“插件未授权 [添加插件](https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wxe3d2a6ab8dd5b49b&lang=zh_CN)”
 
 ```json
 {
@@ -1881,20 +1785,17 @@ let weather = {
 }
 ```
 
-
 <a name="XfKYL"></a>
 ## 9.2 插件引入
-
 
 ```javascript
 const lsPlugin = requirePlugin("lzbluetooth");
 ```
 
-
 <a name="I5lNF"></a>
 ## 9.3 插件初始化页面
 
-<br />[申请乐心AppKey](https://docs.leshiguang.com/develop-native/apply)<br />
+[申请乐心AppKey](https://docs.sghealth.cn/develop-native/apply)
 
 ```javascript
   lsPlugin.initUI({
@@ -1905,21 +1806,17 @@ const lsPlugin = requirePlugin("lzbluetooth");
   });
 ```
 
-
 <a name="ymKqv"></a>
 ## 9.4 设备页面功能介绍
 
-<br />设备界面功能介绍（按照绑定设备的页面流程顺序）<br />
+设备界面功能介绍（按照绑定设备的页面流程顺序）
 
 <a name="kk229"></a>
 ### 9.4.1 产品列表页
 
-
 - 产品列表可以选择需要绑定的设备
-- 产品列表展示的设备需要由拾果工作人员进行配置
+- 产品列表展示的设备需要由乐智工作人员进行配置
 - 页面跳转
-
-
 
 ```javascript
 wx.navigateTo({
@@ -1927,21 +1824,15 @@ wx.navigateTo({
 })
 ```
 
-
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/11aa67944e214c9a9f087b0166e0c3ae.jpg#crop=0&crop=0&crop=1&crop=1&id=xwfp0&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-
-
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/11aa67944e214c9a9f087b0166e0c3ae.jpg#id=xwfp0&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="YqAOx"></a>
 ### 9.4.2 设备绑定页
-
 
 - 在产品列表页中选择设备，会根据设备的绑定类型（蓝牙/扫码/输入sn等方式）进行不同的跳转
 - 扫码类型的设备则直接唤起二维码扫描，蓝牙设备会跳转到设备绑定页进行扫描设备
 - 扫描到对应设备后可以点击绑定按钮进行设备绑定
 - 页面跳转
-
-
 
 ```javascript
 wx.navigateTo({
@@ -1949,20 +1840,14 @@ wx.navigateTo({
 })
 ```
 
-
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/f7a8257470994e138cde25ccd0aba66f.jpg#crop=0&crop=0&crop=1&crop=1&id=HmebY&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-
-
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/f7a8257470994e138cde25ccd0aba66f.jpg#id=HmebY&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="NfgfX"></a>
 ### 9.4.3 我的列表页
 
-
 - 设备绑定完成后，已绑定的设备会在我的列表页面展示
 - 点击我的列表中的设备，可以跳转到对应设备的详情页
 - 页面跳转
-
-
 
 ```javascript
 wx.navigateTo({
@@ -1970,21 +1855,15 @@ wx.navigateTo({
 })
 ```
 
-
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/7617ad3bc28440a6af77f6e2a22ba849.jpg#crop=0&crop=0&crop=1&crop=1&id=BW9Tc&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-
-
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/7617ad3bc28440a6af77f6e2a22ba849.jpg#id=BW9Tc&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="ON1qc"></a>
 ### 9.4.4 设备详情页
-
 
 - 设备详情展示设备的sn等信息，同时根据不同的设备所支持的功能提供删除设备、设备配网、设备升级等功能
 - 设备配网目前只有特定型号血压计和特定型号体脂秤支持
 - 设备升级目前只有特定型号体脂秤和特定型号手环支持
 - 页面跳转（url上携带设备id参数）
-
-
 
 ```
 wx.navigateTo({
@@ -1992,21 +1871,15 @@ wx.navigateTo({
 })
 ```
 
-
-- 页面预览（体脂秤S20为例）<br />![](https://files.lifesense.com/other/20210830/109dccf5b0a0433eb95ba968893214bf.jpg#crop=0&crop=0&crop=1&crop=1&id=h2Ish&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-
-
+- 页面预览（体脂秤S20为例）<br />![](https://files.lifesense.com/other/20210830/109dccf5b0a0433eb95ba968893214bf.jpg#id=h2Ish&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="KZgzx"></a>
 ### 9.4.5 体脂秤配网
-
 
 - 体脂秤配网是体脂秤的配网界面，通过手机让体脂秤和Wi-Fi建立关联，体脂秤的数据可以通过Wi-Fi发送到服务器
 - 进行配网页面之前，设备必须要先建立蓝牙连接。点击开始配网会先拉取搜索到的Wi-Fi列表，点击需要设置的Wi-Fi输入Wi-Fi密码，则可进行Wi-Fi配网
 - 配网结果会对应的展示出来
 - 页面跳转（url上携带设备id参数）
-
-
 
 ```
 wx.navigateTo({
@@ -2014,20 +1887,14 @@ wx.navigateTo({
 })
 ```
 
-
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/5ea2f781eb6a4ebbb3e32fa7a7684b3c.jpg#crop=0&crop=0&crop=1&crop=1&id=l6ZXI&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-
-
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/5ea2f781eb6a4ebbb3e32fa7a7684b3c.jpg#id=l6ZXI&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="U3Aek"></a>
 ### 9.4.6 设备升级（ota）
 
-
 - 设备升级是指当云端的固件版本有更新，则会拉取云端最新的固件版本，将该固件版本信息更新到设备中
 - 若云端没有最新版本，则会显示最新的固件版本号
 - 页面跳转（url上携带设备id参数）
-
-
 
 ```
 wx.navigateTo({
@@ -2035,10 +1902,7 @@ wx.navigateTo({
 })
 ```
 
-
-- 页面预览<br />![](https://files.lifesense.com/other/20210830/4b75d04f4a30427f9975ce18c7043acb.jpg#crop=0&crop=0&crop=1&crop=1&id=me37L&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-
-
+- 页面预览<br />![](https://files.lifesense.com/other/20210830/4b75d04f4a30427f9975ce18c7043acb.jpg#id=me37L&originHeight=2337&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 <a name="ab8a2303"></a>
 #### 
