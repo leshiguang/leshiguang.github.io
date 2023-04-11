@@ -1121,6 +1121,7 @@ GET /api/healthRiskEval/v2/getOneEvaluateResult
 | age | Integer | 年龄 |  |
 | headImg | String | 用户头像 |  |
 | height | String | 身高 | cm |
+| weight | Double | 体重 | Kg |
 
 <a name="6e6c39b54ec15eff687d9b5d9378f0da"></a>
 ###### 模块数据：
