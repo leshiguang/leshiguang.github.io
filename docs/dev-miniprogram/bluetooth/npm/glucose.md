@@ -1,10 +1,6 @@
 <a name="JO0ZI"></a>
 # 1、版本更新日志
-
-<a name="p0Zj5"></a>
-### 1.0.0  2022-11-02
-
-- 首页接入血糖仪
+参考 [https://www.npmjs.com/package/sg-glucose](https://www.npmjs.com/package/sg-glucose)
 
 <a name="j2iJp"></a>
 # 2、模块使用说明
@@ -85,6 +81,7 @@ RecordInfo的数据结构
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
 | glucose | number | 血糖 (单位 mmol) |
+| value | number | 测量值 |
 | utc | number | 时间戳 |
 | sample | number | 样本， 0x11 为血液 0x22 为质控液 |
 | dinnerState | number | 餐前餐后状态 0x00 无状态 0x11 FPG（餐前） 0x22 PPG（餐后） |
@@ -98,7 +95,10 @@ RecordInfo的数据结构
 | dataType | string | 固定值：GLRealtimeData |
 | glucose | number | 血糖 (单位 mmol) |
 | state | enum State {<br />  last = 0x10,<br />  testPape = 0x11,<br />  waitBlood = 0x22,<br />  alread = 0x33,<br />  result = 0x44,<br />  warn = 0x55,<br />} | <br /><br />last 表示上一笔<br />testPage 表示显示去测试<br />alread 表示已经完成<br />result 表示结果<br />warn 表示错误<br /> |
+| value | number | 测量值 |
 | errCode | number | 错误码 |
 | sample | number |  样本， 0x11 为血液 0x22 为质控液 |
+
+
 
 
